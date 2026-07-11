@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      window.addEventListener('error', function(event) {
+        let msg = "UNKNOWN ERROR";
+        try {
+          if (event.error) {
+            msg = event.error.message || String(event.error);
+          } else {
+            msg = event.message || "No message";
+          }
+          if (event.filename) msg += " at " + event.filename + ":" + event.lineno;
+        } catch (e) {
+          msg = "Error parsing error event";
+        }
+        console.error("GLOBAL_ERROR_CATCHER: " + msg);
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        let msg = "UNKNOWN REJECTION";
+        try {
+          msg = (event.reason && event.reason.message) || String(event.reason);
+        } catch(e) {}
+        console.error("GLOBAL_REJECTION_CATCHER: " + msg);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

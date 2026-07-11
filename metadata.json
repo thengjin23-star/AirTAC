@@ -1,0 +1,8 @@
+{
+  "name": "AirTAC Cross-Reference Tool",
+  "description": "A tool to cross-reference competitor pneumatic components to AirTAC models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
