@@ -3,7 +3,8 @@ import sharedOptions from './shared-options.json';
 import catalogFluid from './catalog-fluid-valves.json';
 import catalogSolenoid from './catalog-solenoid-valves.json';
 import catalogActuators from './catalog-actuators.json';
-import catalogAirPrep from './catalog-air-prep.json';import catalogAuxiliary from './catalog-auxiliary.json';
+import catalogAirPrep from './catalog-air-prep.json';
+import catalogAuxiliary from './catalog-auxiliary.json';
 import type { CatalogSeries, CatalogCategory, CatalogOption } from './types';
 
 // Extract options from sharedOptions using object path (e.g. "voltageOptions.standard5")
@@ -20,12 +21,16 @@ function resolveOptions(ref: string): CatalogOption[] {
   return current as CatalogOption[];
 }
 
-const rawCatalogs = [
-  ...(catalogFluid.series || catalogFluid),
-  ...(catalogSolenoid.series || catalogSolenoid),
-  ...(catalogActuators.series || catalogActuators),
-  ...(catalogAirPrep.series || catalogAirPrep),  ...(catalogAuxiliary.series || catalogAuxiliary)
-] as any[];
+// 型錄 JSON 可能是陣列或 { series: [...] } 包裝，統一攤平
+const toSeriesArray = (m: any): any[] => (Array.isArray(m) ? m : (m && m.series) || []);
+
+const rawCatalogs: any[] = [
+  ...toSeriesArray(catalogFluid),
+  ...toSeriesArray(catalogSolenoid),
+  ...toSeriesArray(catalogActuators),
+  ...toSeriesArray(catalogAirPrep),
+  ...toSeriesArray(catalogAuxiliary)
+];
 
 export const defaultCatalog: CatalogSeries[] = rawCatalogs.map(series => {
   return {
