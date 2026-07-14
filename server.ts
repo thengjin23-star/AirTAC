@@ -5,7 +5,7 @@ dotenvConfig({ path: [".env.local", ".env"], quiet: true });
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { crossReference } from "./src/server/crossReferenceService.js";
+import { crossReference } from "./src/server/crossReferenceService";
 
 async function startServer() {
   const app = express();

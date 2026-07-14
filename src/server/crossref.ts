@@ -6,7 +6,7 @@
  * 型錄資料進行精確匹配。最後由伺服器對 AI 回傳的訂購碼做
  * 型錄逐項驗證，防止幻覺型號流出。
  */
-import { defaultCatalog } from '../data/index.js';
+import { defaultCatalog } from '../data/index';
 import type { CatalogSeries } from '../data/types';
 
 // ---------------------------------------------------------------------------

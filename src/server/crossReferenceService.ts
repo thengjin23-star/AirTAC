@@ -14,7 +14,7 @@ import {
   heuristicMatch,
   knowledgeBaseText,
   validateRecommendation,
-} from "./crossref.js";
+} from "./crossref";
 
 // 延遲初始化，確保 dotenv (server.ts) 或平台注入的環境變數已就緒
 let aiClient: GoogleGenAI | null = null;

@@ -7,7 +7,7 @@
  * 部署需求：在 Vercel 專案的 Settings → Environment Variables 加入
  * GEMINI_API_KEY，否則會回傳「尚未設定 GEMINI_API_KEY」的錯誤。
  */
-import { crossReference } from "../src/server/crossReferenceService.js";
+import { crossReference } from "../src/server/crossReferenceService";
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
