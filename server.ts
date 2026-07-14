@@ -1,3 +1,7 @@
+import { config as dotenvConfig } from "dotenv";
+// 本地開發時從 .env.local / .env 讀取 GEMINI_API_KEY (AI Studio 部署時由平台自動注入)
+dotenvConfig({ path: [".env.local", ".env"], quiet: true });
+
 import express from "express";
 import path from "path";
 import crypto from "crypto";
@@ -21,9 +25,13 @@ const ai = new GoogleGenAI({
   }
 });
 
-// 主要匹配模型與候選篩選模型 (可用環境變數覆蓋)
-const MATCH_MODEL = process.env.GEMINI_MODEL || "gemini-3.1-pro-preview";
-const CLASSIFIER_MODEL = process.env.GEMINI_CLASSIFIER_MODEL || MATCH_MODEL;
+// 主要匹配模型與候選篩選模型 (可用環境變數覆蓋)。
+// 注意: 免費方案 (free tier) 的 Gemini Pro 系列額度為 0，只能使用 Flash 系列；
+// 若你的 key 已綁定付費帳單，建議把 GEMINI_MODEL 設成 gemini-3.1-pro-preview 以獲得最佳匹配品質。
+const MATCH_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const CLASSIFIER_MODEL = process.env.GEMINI_CLASSIFIER_MODEL || "gemini-3.1-flash-lite";
+// 額度耗盡或模型過載時的自動降級順序 (preview 模型常態性過載，放在備援位)
+const FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"];
 
 // 型錄壓縮索引只需建一次
 const catalogIndex = buildCatalogIndex();
@@ -33,27 +41,49 @@ const slimIndexJson = JSON.stringify(
   catalogIndex.map(({ id, code, name, category, group }) => ({ id, code, name, category, group }))
 );
 
-/** 對 Gemini 的呼叫加上 503/429 重試。 */
+/**
+ * 對 Gemini 的呼叫加上 503/429 重試，且在該模型額度耗盡 (429 quota)、
+ * 持續過載 (503) 或不存在 (404) 時自動降級到備援模型。
+ */
 async function generateWithRetry(params: Parameters<typeof ai.models.generateContent>[0]) {
-  let retries = 3;
-  let delay = 1000;
-  while (true) {
-    try {
-      return await ai.models.generateContent(params);
-    } catch (error: any) {
-      const errStr = String(error.message || "").toLowerCase();
-      const retriable = error.status === 503 || errStr.includes("503") || errStr.includes("high demand")
-        || error.status === 429 || errStr.includes("429") || errStr.includes("overloaded");
-      if (retriable && retries > 1) {
-        console.log(`API busy (503/429). Retrying in ${delay}ms... (${retries - 1} retries left)`);
-        await new Promise(resolve => setTimeout(resolve, delay));
-        delay += 3000;
-        retries--;
-      } else {
+  const primary = (params as any).model as string;
+  const modelChain = [primary, ...FALLBACK_MODELS.filter(m => m !== primary)];
+  let lastError: any = null;
+
+  for (const model of modelChain) {
+    let retries = 2;
+    let delay = 1500;
+    while (retries > 0) {
+      try {
+        return await ai.models.generateContent({ ...(params as any), model });
+      } catch (error: any) {
+        lastError = error;
+        const errStr = String(error.message || "").toLowerCase();
+        const quotaOrGone = error.status === 429 || errStr.includes("429") || errStr.includes("quota")
+          || error.status === 404 || errStr.includes("not found") || errStr.includes("no longer available");
+        const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
+
+        if (quotaOrGone) {
+          // 額度為 0 或模型不可用：重試同一模型沒有意義，直接換下一個
+          console.log(`Model ${model} unavailable (quota/404), falling back...`);
+          break;
+        }
+        if (overloaded && retries > 1) {
+          console.log(`Model ${model} busy (503). Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          delay += 3000;
+          retries--;
+          continue;
+        }
+        if (overloaded) {
+          console.log(`Model ${model} still busy, falling back...`);
+          break;
+        }
         throw error;
       }
     }
   }
+  throw lastError || new Error("All Gemini models failed");
 }
 
 /**
