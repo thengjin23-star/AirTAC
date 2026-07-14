@@ -6,7 +6,7 @@ import * as XLSX from 'xlsx';
 export function ProductDatabase() {
   const [catalogs, setCatalogs] = useState<CatalogSeries[]>(() => {
     try {
-      const saved = typeof window !== 'undefined' && window.localStorage ? localStorage.getItem('airtac_catalogs_v31') : null;
+      const saved = typeof window !== 'undefined' && window.localStorage ? localStorage.getItem('airtac_catalogs_v32') : null;
       if (saved) {
         const parsed: CatalogSeries[] = JSON.parse(saved);
         if (Array.isArray(parsed)) {
@@ -161,7 +161,7 @@ export function ProductDatabase() {
   React.useEffect(() => {
     try {
       if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.setItem('airtac_catalogs_v31', JSON.stringify(catalogs));
+        localStorage.setItem('airtac_catalogs_v32', JSON.stringify(catalogs));
       }
     } catch (e) {
       console.warn('Failed to save catalogs to localStorage:', e);
@@ -171,7 +171,7 @@ export function ProductDatabase() {
           const keysToRemove: string[] = [];
           for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
-            if (key && key.startsWith('airtac_catalogs_') && key !== 'airtac_catalogs_v31') {
+            if (key && key.startsWith('airtac_catalogs_') && key !== 'airtac_catalogs_v32') {
               keysToRemove.push(key);
             }
           }
@@ -181,7 +181,7 @@ export function ProductDatabase() {
             } catch (err) {}
           });
           // Try saving one more time after cleanup
-          localStorage.setItem('airtac_catalogs_v31', JSON.stringify(catalogs));
+          localStorage.setItem('airtac_catalogs_v32', JSON.stringify(catalogs));
         }
       } catch (retryError) {
         console.error('Retry saving after cleanup also failed:', retryError);
