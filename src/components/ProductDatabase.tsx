@@ -1,65 +1,72 @@
 import React, { useState } from 'react';
 import { Download, Plus, Save, Trash2, Edit2, Check, X, FileText, Settings, Copy, Code2 } from 'lucide-react';
-import { CatalogSeries, defaultCatalog, CatalogCategory } from '../data/catalog';
+import { CatalogSeries, defaultCatalog, CatalogCategory } from '../data/index';
 import * as XLSX from 'xlsx';
 
 export function ProductDatabase() {
   const [catalogs, setCatalogs] = useState<CatalogSeries[]>(() => {
-    const saved = localStorage.getItem('airtac_catalogs_v23');
-    if (saved) {
-      try {
+    try {
+      const saved = typeof window !== 'undefined' && window.localStorage ? localStorage.getItem('airtac_catalogs_v31') : null;
+      if (saved) {
         const parsed: CatalogSeries[] = JSON.parse(saved);
-        return defaultCatalog.map(defSeries => {
-          const savedSeries = parsed.find(p => p.id === defSeries.id);
-          if (savedSeries && Array.isArray(savedSeries.categories)) {
-            return {
-              ...defSeries,
-              categories: defSeries.categories.map(defCat => {
-                const savedCat = savedSeries.categories.find(c => c.id === defCat.id);
-                return savedCat && Array.isArray(savedCat.options) ? { ...defCat, options: savedCat.options } : defCat;
-              })
-            };
-          }
-          return defSeries;
-        });
-      } catch (e) {
-        console.error('Failed to parse saved catalogs', e);
+        if (Array.isArray(parsed)) {
+          return defaultCatalog.map(defSeries => {
+            if (!defSeries) return defSeries;
+            const savedSeries = parsed.find(p => p && p.id === defSeries.id);
+            if (savedSeries && Array.isArray(savedSeries.categories)) {
+              return {
+                ...defSeries,
+                categories: defSeries.categories.map(defCat => {
+                  if (!defCat) return defCat;
+                  const savedCat = savedSeries.categories.find(c => c && c.id === defCat.id);
+                  return savedCat && Array.isArray(savedCat.options) ? { ...defCat, options: savedCat.options } : defCat;
+                })
+              };
+            }
+            return defSeries;
+          }).filter(Boolean);
+        }
       }
+    } catch (e) {
+      console.error('Failed to parse saved catalogs', e);
     }
-    return defaultCatalog;
+    return defaultCatalog.filter(Boolean);
   });
   
+  // Safe filtering of catalogs to avoid null/undefined errors
+  const activeCatalogs = catalogs.filter(Boolean);
+
   // 1. Super Categories
-  const categories = Array.from(new Set(catalogs.map(c => c.category).filter(Boolean)));
+  const categories = Array.from(new Set(activeCatalogs.map(c => c.category).filter(Boolean)));
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0] || '');
   
-  const superGroups = Array.from(new Set(catalogs.filter(c => c.category === selectedCategory).map(c => c.superGroup).filter(Boolean)));
+  const superGroups = Array.from(new Set(activeCatalogs.filter(c => c.category === selectedCategory).map(c => c.superGroup).filter(Boolean)));
   const [selectedSuperGroup, setSelectedSuperGroup] = useState<string>(superGroups[0] || '');
   
   // 2. Groups (Series) within selected Super Category
-  const groupsInSuperGroup = Array.from(new Set(catalogs.filter(c => c.superGroup === selectedSuperGroup).map(c => c.group)));
+  const groupsInSuperGroup = Array.from(new Set(activeCatalogs.filter(c => c.superGroup === selectedSuperGroup).map(c => c.group)));
   const [selectedGroup, setSelectedGroup] = useState<string>(groupsInSuperGroup[0] || '');
   
   // 3. Models (Products) within selected Group
-  const modelsInGroup = catalogs.filter(c => c.superGroup === selectedSuperGroup && c.group === selectedGroup);
+  const modelsInGroup = activeCatalogs.filter(c => c.superGroup === selectedSuperGroup && c.group === selectedGroup);
   const [selectedSeriesId, setSelectedSeriesId] = useState<string>(modelsInGroup[0]?.id || '');
   
   // State for the configurator
   const [selections, setSelections] = useState<Record<string, string>>({});
 
-  const selectedSeries = catalogs.find(c => c.id === selectedSeriesId) || modelsInGroup[0] || catalogs[0];
+  const selectedSeries = activeCatalogs.find(c => c.id === selectedSeriesId) || modelsInGroup[0] || activeCatalogs[0];
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    const newSuperGroups = Array.from(new Set(catalogs.filter(c => c.category === category).map(c => c.superGroup).filter(Boolean)));
+    const newSuperGroups = Array.from(new Set(activeCatalogs.filter(c => c.category === category).map(c => c.superGroup).filter(Boolean)));
     if (newSuperGroups.length > 0) {
       const firstSuperGroup = newSuperGroups[0];
       setSelectedSuperGroup(firstSuperGroup);
-      const newGroups = Array.from(new Set(catalogs.filter(c => c.superGroup === firstSuperGroup).map(c => c.group)));
+      const newGroups = Array.from(new Set(activeCatalogs.filter(c => c.superGroup === firstSuperGroup).map(c => c.group)));
       if (newGroups.length > 0) {
         const firstGroup = newGroups[0];
         setSelectedGroup(firstGroup);
-        const newModels = catalogs.filter(c => c.superGroup === firstSuperGroup && c.group === firstGroup);
+        const newModels = activeCatalogs.filter(c => c.superGroup === firstSuperGroup && c.group === firstGroup);
         if (newModels.length > 0) {
           setSelectedSeriesId(newModels[0].id);
           setSelections({});
@@ -70,11 +77,11 @@ export function ProductDatabase() {
 
   const handleSuperGroupChange = (superGroup: string) => {
     setSelectedSuperGroup(superGroup);
-    const newGroups = Array.from(new Set(catalogs.filter(c => c.superGroup === superGroup).map(c => c.group)));
+    const newGroups = Array.from(new Set(activeCatalogs.filter(c => c.superGroup === superGroup).map(c => c.group)));
     if (newGroups.length > 0) {
       const firstGroup = newGroups[0];
       setSelectedGroup(firstGroup);
-      const newModels = catalogs.filter(c => c.superGroup === superGroup && c.group === firstGroup);
+      const newModels = activeCatalogs.filter(c => c.superGroup === superGroup && c.group === firstGroup);
       if (newModels.length > 0) {
         setSelectedSeriesId(newModels[0].id);
         setSelections({});
@@ -84,7 +91,7 @@ export function ProductDatabase() {
 
   const handleGroupChange = (group: string) => {
     setSelectedGroup(group);
-    const newModels = catalogs.filter(c => c.superGroup === selectedSuperGroup && c.group === group);
+    const newModels = activeCatalogs.filter(c => c.superGroup === selectedSuperGroup && c.group === group);
     if (newModels.length > 0) {
       setSelectedSeriesId(newModels[0].id);
       setSelections({});
@@ -95,15 +102,15 @@ export function ProductDatabase() {
     const workbook = XLSX.utils.book_new();
     
     // Export each series as a separate sheet, mapping its rules
-    catalogs.forEach(series => {
+    activeCatalogs.forEach(series => {
       const rows: any[] = [];
       
-      const maxOptions = Math.max(...series.categories.map(c => c.options.length));
+      const maxOptions = Math.max(...series.categories.map(c => c.options ? c.options.length : 0), 0);
       
       for (let i = 0; i < maxOptions; i++) {
         const row: any = {};
         series.categories.forEach(cat => {
-          const opt = cat.options[i];
+          const opt = cat.options ? cat.options[i] : undefined;
           row[`${cat.name}代碼`] = opt ? (opt.code === '' ? '(空白)' : opt.code) : '';
           row[`${cat.name}說明`] = opt ? opt.description : '';
         });
@@ -111,7 +118,7 @@ export function ProductDatabase() {
       }
       
       const worksheet = XLSX.utils.json_to_sheet(rows);
-      XLSX.utils.book_append_sheet(workbook, worksheet, series.code);
+      XLSX.utils.book_append_sheet(workbook, worksheet, series.code || series.id);
     });
     
     XLSX.writeFile(workbook, 'AirTAC_Ordering_Rules.xlsx');
@@ -119,12 +126,17 @@ export function ProductDatabase() {
 
   const generateOrderingCode = () => {
     if (!selectedSeries) return '';
-    let code = selectedSeries.format;
-    code = code.replace('{code}', selectedSeries.code);
+    let code = selectedSeries.format || selectedSeries.orderCodeFormat || '';
+    
+    // Check if there is a category with id 'code'. If not, replace {code} with series code
+    const hasCodeCategory = selectedSeries.categories.some(c => c.id === 'code');
+    if (!hasCodeCategory) {
+      code = code.replace('{code}', selectedSeries.code !== undefined ? selectedSeries.code : (selectedSeries.id || ''));
+    }
     
     selectedSeries.categories.forEach(cat => {
       const val = selections[cat.id];
-      code = code.replace(`{${cat.id}}`, val !== undefined ? val : (cat.options[0]?.code || ''));
+      code = code.replace(`{${cat.id}}`, val !== undefined ? val : (cat.options?.[0]?.code || ''));
     });
     
     // Clean up formatting
@@ -147,7 +159,34 @@ export function ProductDatabase() {
   };
 
   React.useEffect(() => {
-    localStorage.setItem('airtac_catalogs_v23', JSON.stringify(catalogs));
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('airtac_catalogs_v31', JSON.stringify(catalogs));
+      }
+    } catch (e) {
+      console.warn('Failed to save catalogs to localStorage:', e);
+      // Self-healing: Clean up older airtac keys to free up space
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          const keysToRemove: string[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('airtac_catalogs_') && key !== 'airtac_catalogs_v31') {
+              keysToRemove.push(key);
+            }
+          }
+          keysToRemove.forEach(k => {
+            try {
+              localStorage.removeItem(k);
+            } catch (err) {}
+          });
+          // Try saving one more time after cleanup
+          localStorage.setItem('airtac_catalogs_v31', JSON.stringify(catalogs));
+        }
+      } catch (retryError) {
+        console.error('Retry saving after cleanup also failed:', retryError);
+      }
+    }
   }, [catalogs]);
 
   const [editingCategoryId, setEditingCategoryId] = useState<string | null>(null);
@@ -255,7 +294,7 @@ export function ProductDatabase() {
                 }}
               >
                 {modelsInGroup.map(cat => (
-                  <option key={cat.id} value={cat.id}>{cat.code} - {cat.name}</option>
+                  <option key={cat.id} value={cat.id}>{cat.code || cat.id} - {cat.name}</option>
                 ))}
               </select>
             </div>
@@ -267,10 +306,10 @@ export function ProductDatabase() {
                 <label className="block text-sm font-medium text-slate-700 mb-2">{category.name}</label>
                 <select
                   className="w-full bg-white border border-slate-200 text-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#005a9c] focus:ring-1 focus:ring-[#005a9c]"
-                  value={selections[category.id] !== undefined ? selections[category.id] : (category.options[0]?.code || '')}
+                  value={selections[category.id] !== undefined ? selections[category.id] : (category.options?.[0]?.code || '')}
                   onChange={(e) => handleSelectionChange(category.id, e.target.value)}
                 >
-                  {category.options.map((opt, idx) => (
+                  {(category.options || []).map((opt, idx) => (
                     <option key={idx} value={opt.code}>
                       {opt.code === '' ? '(空白)' : opt.code} - {opt.description}
                     </option>
@@ -320,7 +359,7 @@ export function ProductDatabase() {
         </div>
         
         <div className="flex border-b border-slate-200 overflow-x-auto bg-slate-50/50 px-2 scrollbar-thin">
-          {catalogs.map(series => (
+          {activeCatalogs.map(series => (
             <button
               key={series.id}
               onClick={() => setSelectedSeriesId(series.id)}
@@ -330,7 +369,7 @@ export function ProductDatabase() {
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-50'
               }`}
             >
-              {series.code} 系列
+              {series.code || series.id} 系列
             </button>
           ))}
         </div>
@@ -348,6 +387,7 @@ export function ProductDatabase() {
                           const newCatalogs = [...catalogs];
                           const s = newCatalogs.find(x => x.id === selectedSeries.id)!;
                           const c = s.categories.find(x => x.id === cat.id)!;
+                          if (!c.options) c.options = [];
                           c.options.push({ code: '', description: '新增選項' });
                           setCatalogs(newCatalogs);
                         }}
@@ -369,10 +409,10 @@ export function ProductDatabase() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {Array.from({ length: Math.max(...selectedSeries.categories.map(c => c.options.length), 0) }).map((_, rowIndex) => (
+              {Array.from({ length: Math.max(...selectedSeries.categories.map(c => c.options?.length || 0), 0) }).map((_, rowIndex) => (
                 <tr key={rowIndex} className="hover:bg-slate-50/50">
                   {selectedSeries.categories.map(cat => {
-                    const opt = cat.options[rowIndex];
+                    const opt = cat.options ? cat.options[rowIndex] : undefined;
                     return (
                       <React.Fragment key={`${cat.id}-${rowIndex}`}>
                         <td className="px-2 py-1 border-r border-slate-100 relative group">
@@ -384,7 +424,9 @@ export function ProductDatabase() {
                                 const newCatalogs = [...catalogs];
                                 const s = newCatalogs.find(x => x.id === selectedSeries.id)!;
                                 const c = s.categories.find(x => x.id === cat.id)!;
-                                c.options[rowIndex].code = e.target.value;
+                                if (c.options && c.options[rowIndex]) {
+                                  c.options[rowIndex].code = e.target.value;
+                                }
                                 setCatalogs(newCatalogs);
                               }}
                               placeholder="(空白)"
@@ -401,7 +443,9 @@ export function ProductDatabase() {
                                   const newCatalogs = [...catalogs];
                                   const s = newCatalogs.find(x => x.id === selectedSeries.id)!;
                                   const c = s.categories.find(x => x.id === cat.id)!;
-                                  c.options[rowIndex].description = e.target.value;
+                                  if (c.options && c.options[rowIndex]) {
+                                    c.options[rowIndex].description = e.target.value;
+                                  }
                                   setCatalogs(newCatalogs);
                                 }}
                               />
@@ -411,7 +455,9 @@ export function ProductDatabase() {
                                   const newCatalogs = [...catalogs];
                                   const s = newCatalogs.find(x => x.id === selectedSeries.id)!;
                                   const c = s.categories.find(x => x.id === cat.id)!;
-                                  c.options = c.options.filter((_, i) => i !== rowIndex);
+                                  if (c.options) {
+                                    c.options = c.options.filter((_, i) => i !== rowIndex);
+                                  }
                                   setCatalogs(newCatalogs);
                                 }}
                                 title="刪除"

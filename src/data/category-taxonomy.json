@@ -1,0 +1,351 @@
+{
+  "_說明": "亞德客氣動元件產品分類階層,對應App下拉選單邏輯:category(大分類) -> superGroup(次分類/產品大類) -> group(系列)。實際系列資料在各自的 catalog-*.json 檔案裡,這裡只維護分類骨架和目前已建檔的系列清單,方便App做下拉選單串接與檢查『這個系列還沒建檔』。",
+  "categories": [
+    {
+      "id": "actuator",
+      "name": "執行元件",
+      "note": "氣缸、擺動氣缸、氣爪、角座閥執行器等 (角座閥本體目前歸在控制元件,但其執行器概念與氣缸類似,可視App需求調整) 已依 catalog-actuators.json (原catalog.ts轉換) 補齊17個次分類、共185個系列。",
+      "superGroups": [
+        {
+          "id": "standard-cylinder",
+          "name": "標準氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "SC", "name": "SC系列" },
+            { "id": "SAU", "name": "SAU系列" },
+            { "id": "SAI", "name": "SAI系列" },
+            { "id": "SE", "name": "SE系列" },
+            { "id": "JSI", "name": "JSI系列" },
+            { "id": "SG-SGC", "name": "SG、SGC系列" }
+          ]
+        },
+        {
+          "id": "guided-cylinder",
+          "name": "帶導向架氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "TSAI", "name": "TSAI系列" },
+            { "id": "TMI-TMIC", "name": "TMI/TMIC系列" }
+          ]
+        },
+        {
+          "id": "mini-cylinder",
+          "name": "迷你氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "MI", "name": "MI系列" },
+            { "id": "PB", "name": "PB系列" },
+            { "id": "PBR", "name": "PBR系列" },
+            { "id": "MF", "name": "MF系列" },
+            { "id": "MA", "name": "MA系列" },
+            { "id": "MG", "name": "MG系列" },
+            { "id": "MBL", "name": "MBL系列" }
+          ]
+        },
+        {
+          "id": "compact-cylinder",
+          "name": "超薄氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "ACT", "name": "ACT系列" },
+            { "id": "ACQ", "name": "ACQ系列" },
+            { "id": "SDA", "name": "SDA系列" },
+            { "id": "ACE", "name": "ACE系列緊湊型" }
+          ]
+        },
+        {
+          "id": "precision-slide-cylinder",
+          "name": "精密滑台氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "HGS", "name": "HGS系列" },
+            { "id": "HLF", "name": "HLF系列" },
+            { "id": "HLH", "name": "HLH系列" },
+            { "id": "HLQ-HLQL", "name": "HLQ/HLQL系列" },
+            { "id": "HLS-HLSL", "name": "HLS/HLSL系列" },
+            { "id": "STW", "name": "STW系列" }
+          ]
+        },
+        {
+          "id": "twin-rod-cylinder",
+          "name": "雙軸氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "TN", "name": "TN系列" },
+            { "id": "TR", "name": "TR系列" }
+          ]
+        },
+        {
+          "id": "tri-rod-cylinder",
+          "name": "三軸氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "TCL-TCM", "name": "TCL/TCM系列" }
+          ]
+        },
+        {
+          "id": "rodless-cylinder",
+          "name": "磁耦合無杆氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "RMH", "name": "RMH系列" },
+            { "id": "RMTL", "name": "RMTL系列" },
+            { "id": "RMT", "name": "RMT系列" },
+            { "id": "RMS", "name": "RMS系列" }
+          ]
+        },
+        {
+          "id": "pneumatic-finger",
+          "name": "氣動手指",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "HFT", "name": "HFT系列" },
+            { "id": "HFD", "name": "HFD系列" },
+            { "id": "HFP", "name": "HFP系列" },
+            { "id": "HFY", "name": "HFY系列" },
+            { "id": "HFR", "name": "HFR系列" },
+            { "id": "HFCQ", "name": "HFCQ系列" },
+            { "id": "HFC", "name": "HFC系列" },
+            { "id": "HFKP", "name": "HFKP系列" },
+            { "id": "HFKL", "name": "HFKL系列" },
+            { "id": "HFZ-HFK", "name": "HFZ/HFK系列" }
+          ]
+        },
+        {
+          "id": "rotary-cylinder",
+          "name": "回轉氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "HRQ", "name": "HRQ系列" },
+            { "id": "HRS", "name": "HRS系列" }
+          ]
+        },
+        {
+          "id": "compact-free-mount-cylinder",
+          "name": "小型多位置、自由安裝氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "MPE", "name": "MPE系列" },
+            { "id": "MPG", "name": "MPG系列" },
+            { "id": "MU", "name": "MU系列" },
+            { "id": "MD-MK", "name": "MD\\MK系列" }
+          ]
+        },
+        {
+          "id": "welding-clamp-cylinder",
+          "name": "焊接夾緊氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "JCK", "name": "JCK系列" },
+            { "id": "MCK", "name": "MCK系列" },
+            { "id": "JSCK", "name": "JSCK系列" },
+            { "id": "JSK", "name": "JSK系列" }
+          ]
+        },
+        {
+          "id": "rotary-clamp-cylinder",
+          "name": "旋轉夾緊氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "QDK", "name": "QDK系列" },
+            { "id": "QCK", "name": "QCK系列" },
+            { "id": "ACK", "name": "ACK系列" }
+          ]
+        },
+        {
+          "id": "tool-unclamp-cylinder",
+          "name": "打刀氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "NPM", "name": "NPM系列" }
+          ]
+        },
+        {
+          "id": "pin-cylinder",
+          "name": "銷釘氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "JQK", "name": "JQK系列" },
+            { "id": "JCP", "name": "JCP系列" },
+            { "id": "JCH", "name": "JCH系列" },
+            { "id": "AQK", "name": "AQK系列" },
+            { "id": "BAQK", "name": "BAQK系列" }
+          ]
+        },
+        {
+          "id": "stopper-cylinder",
+          "name": "阻擋氣缸",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "TWQ", "name": "TWQ系列" },
+            { "id": "TWG", "name": "TWG系列" },
+            { "id": "TWH", "name": "TWH系列" },
+            { "id": "TWM", "name": "TWM系列" }
+          ]
+        },
+        {
+          "id": "cylinder-accessories",
+          "name": "氣缸附件",
+          "catalogFile": "catalog-actuators.json",
+          "groups": [
+            { "id": "sensor-mounting-accessories", "name": "傳感器與安裝附件" },
+            { "id": "rod-end-joint-accessories", "name": "活塞杆端連接附件" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "air-prep",
+      "name": "氣源處理元件",
+      "note": "過濾器、調壓閥、油霧器、FRL三聯件、快速接頭等",
+      "superGroups": []
+    },
+    {
+      "id": "control",
+      "name": "控制元件",
+      "note": "電磁閥、流體控制閥、角座閥等各式閥類",
+      "superGroups": [
+        {
+          "id": "fluid-control-valve",
+          "name": "流體控制閥",
+          "note": "二口二位為主,直動/先導,常開/常閉;另含2V/2P小口徑閥、2J角座閥",
+          "catalogFile": "catalog-fluid-valves.json",
+          "groups": [
+            { "id": "fluid-direct-nc", "name": "直動常閉型" },
+            { "id": "fluid-direct-no", "name": "直動常開型" },
+            { "id": "fluid-pilot-nc", "name": "先導常閉型" },
+            { "id": "fluid-pilot-no", "name": "先導常開型" },
+            { "id": "fluid-2v", "name": "2V系列" },
+            { "id": "fluid-2p", "name": "2P系列" },
+            { "id": "fluid-2j", "name": "2J系列" },
+            { "id": "fluid-coil", "name": "流體控制閥線圈" }
+          ]
+        },
+        {
+          "id": "solenoid-5port",
+          "name": "電磁閥(五口二位、五口三位)",
+          "note": "主流方向控制閥,4V/6SV/7SV等系列",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "4V100", "name": "4V100系列" },
+            { "id": "4V200", "name": "4V200系列" },
+            { "id": "4V300", "name": "4V300系列" },
+            { "id": "4V400", "name": "4V400系列" },
+            { "id": "6SV", "name": "6SV系列" },
+            { "id": "7SV", "name": "7SV系列" },
+            { "id": "6D-manifold", "name": "6DM/6D/6DW系列 集成閥組派生產品" },
+            { "id": "5V", "name": "5V系列" },
+            { "id": "ESV", "name": "ESV系列 (ISO標準電磁閥)" },
+            { "id": "4M", "name": "4M系列 (NAMUR規格)" }
+          ]
+        },
+        {
+          "id": "solenoid-3port",
+          "name": "電磁閥(三口二位)",
+          "note": "3V100/3V1/3V2/3V3/6STV/4STV等系列",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "3V100", "name": "3V100系列" },
+            { "id": "3V200", "name": "3V200系列" },
+            { "id": "3V300", "name": "3V300系列" },
+            { "id": "3V1", "name": "3V1系列" },
+            { "id": "3V2", "name": "3V2系列" },
+            { "id": "3V2M", "name": "3V2M系列(帶底座型)" },
+            { "id": "3V3", "name": "3V3系列" },
+            { "id": "6STV", "name": "6STV系列" },
+            { "id": "4STV", "name": "4STV系列" }
+          ]
+        },
+        {
+          "id": "solenoid-micro",
+          "name": "微型電磁閥(三口二位)",
+          "note": "CPV10/CPV15/CPSV15 及其集成閥組",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "CPV10", "name": "CPV10系列" },
+            { "id": "CPV15", "name": "CPV15系列" },
+            { "id": "CPSV15", "name": "CPSV15系列" },
+            { "id": "CPV10S", "name": "CPV10S系列(集成閥)" },
+            { "id": "CPV15S", "name": "CPV15S系列(集成閥)" }
+          ]
+        },
+        {
+          "id": "pneumatic-5port",
+          "name": "氣控閥(五口二位、五口三位)",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "4A", "name": "4A系列" },
+            { "id": "5A", "name": "5A系列" },
+            { "id": "EAV", "name": "EAV系列" },
+            { "id": "4SA", "name": "4SA系列" },
+            { "id": "6SA", "name": "6SA系列" },
+            { "id": "7SA", "name": "7SA系列" }
+          ]
+        },
+        {
+          "id": "pneumatic-3port",
+          "name": "氣控閥(三口二位)",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "3A", "name": "3A系列" },
+            { "id": "4STA", "name": "4STA系列" },
+            { "id": "6STA", "name": "6STA系列" }
+          ]
+        },
+        {
+          "id": "manual-foot-mechanical",
+          "name": "手動閥、腳踏閥、機械閥",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "HSV", "name": "HSV系列 手滑閥" },
+            { "id": "4H", "name": "4H系列 手動閥" },
+            { "id": "3F-3FM", "name": "3F/3FM系列 腳踏閥" },
+            { "id": "M3", "name": "M3系列 機械閥" },
+            { "id": "CM3", "name": "CM3系列 機械閥" }
+          ]
+        },
+        {
+          "id": "solenoid-explosion-proof",
+          "name": "電磁閥(防爆型)",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "B03", "name": "B03防爆電磁閥" }
+          ]
+        },
+        {
+          "id": "solenoid-accessories",
+          "name": "電磁閥底座、配件與線圈",
+          "catalogFile": "catalog-solenoid-valves.json",
+          "groups": [
+            { "id": "4stv_base", "name": "4STV系列底座" },
+            { "id": "6stv_base", "name": "6STV系列底座" },
+            { "id": "7sv_base", "name": "7SV系列底座" },
+            { "id": "6sv_base", "name": "6SV系列底座" },
+            { "id": "blanking_plates", "name": "底座盲板組件" },
+            { "id": "3v-manifold", "name": "3V系列底座" },
+            { "id": "3v-blanking", "name": "3V系列底座盲板" },
+            { "id": "4v-manifold", "name": "4V系列底座" },
+            { "id": "4v-blanking", "name": "4V系列底座盲板" },
+            { "id": "esv-base", "name": "ESV系列底座與端板" },
+            { "id": "esv-blanking", "name": "ESV系列底座盲板" },
+            { "id": "coil-cd", "name": "普通線圈" },
+            { "id": "coil-cfb", "name": "防爆線圈" },
+            { "id": "cable-dsub", "name": "集成閥組配套線纜" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auxiliary",
+      "name": "輔助元件",
+      "note": "消音器、感測器、安裝支架、底座、盲板等配件",
+      "superGroups": []
+    },
+    {
+      "id": "linear-guide",
+      "name": "線軌",
+      "note": "線性滑軌、滑塊等",
+      "superGroups": []
+    }
+  ]
+}

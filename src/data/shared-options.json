@@ -1,0 +1,86 @@
+{
+  "_說明": "共用選項字典。多個系列都會用到同樣的線圈電壓、牙型代碼、接電方式,統一定義在這裡,各系列用 refId 引用,不重複複製。",
+
+  "voltageOptions": {
+    "standard5": [
+      { "code": "A", "description": "AC220V" },
+      { "code": "B", "description": "DC24V" },
+      { "code": "C", "description": "AC110V" },
+      { "code": "E", "description": "AC24V" },
+      { "code": "F", "description": "DC12V" }
+    ]
+  },
+
+  "threadOptions": {
+    "standardGT": [
+      { "code": "", "description": "空白: PT牙" },
+      { "code": "G", "description": "G牙" },
+      { "code": "T", "description": "NPT牙" }
+    ],
+    "onlyG": [
+      { "code": "G", "description": "G牙" }
+    ]
+  },
+
+  "terminalOptions": {
+    "dinOrLead": [
+      { "code": "", "description": "空白: DIN插座式" },
+      { "code": "I", "description": "出線式(出線長度約0.5m)" }
+    ],
+    "onlyLead": [
+      { "code": "I", "description": "出線式" }
+    ]
+  },
+
+  "pressureGradeOptions": {
+    "030_050系列": [
+      { "code": "", "description": "空白: 標準型" },
+      { "code": "X", "description": "X: 超高壓型" },
+      { "code": "H", "description": "H: 高壓型" },
+      { "code": "L", "description": "L: 大流量型" },
+      { "code": "T", "description": "T: 特大流量型 (僅部分口徑適用)" }
+    ]
+  },
+
+  "coilHeatGradeOptions": {
+    "standard": [
+      { "code": "", "description": "空白: F級" },
+      { "code": "H", "description": "H: H級" }
+    ]
+  },
+
+  "controlTypeOptions": {
+    "5port_2or3position": [
+      { "code": "10", "description": "雙位置單電控" },
+      { "code": "20", "description": "雙位置雙電控" },
+      { "code": "30C", "description": "三位置雙電控中位封閉型" },
+      { "code": "30E", "description": "三位置雙電控中位排氣型" },
+      { "code": "30P", "description": "三位置雙電控中位壓力型" }
+    ],
+    "3port_2position": [
+      { "code": "10", "description": "雙位置單電控" },
+      { "code": "20", "description": "雙位置雙電控" }
+    ]
+  },
+
+  "initialStateOptions": {
+    "ncNo": [
+      { "code": "NC", "description": "常閉型" },
+      { "code": "NO", "description": "常開型" }
+    ]
+  },
+
+  "pilotTypeOptions": {
+    "internalExternal": [
+      { "code": "", "description": "空白: 內部引導式" },
+      { "code": "W", "description": "W: 外部引導式(需外部氣源引導)" }
+    ]
+  },
+
+  "portConnectionTypeOptions": {
+    "threadOrQuick": [
+      { "code": "", "description": "空白: 螺紋接管" },
+      { "code": "J", "description": "J: 快插接頭型" }
+    ]
+  }
+}

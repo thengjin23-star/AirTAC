@@ -1,0 +1,660 @@
+{
+  "series": [
+    {
+      "id": "HR",
+      "category": "輔助元件",
+      "superGroup": "油壓緩衝器",
+      "group": "油壓穩速器",
+      "name": "HR系列 可調式油壓穩速器",
+      "format": "HR{model}",
+      "categories": [
+        {
+          "id": "model",
+          "name": "規格代號",
+          "options": [
+            {
+              "code": "30",
+              "description": "HR30 (最大行程30mm)"
+            },
+            {
+              "code": "60",
+              "description": "HR60 (最大行程60mm)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACA",
+      "category": "輔助元件",
+      "superGroup": "油壓緩衝器",
+      "group": "自動補償式",
+      "name": "ACA系列 標準自動補償式油壓緩衝器",
+      "format": "ACA{thread}{stroke}-{speed}{cap}",
+      "categories": [
+        {
+          "id": "thread",
+          "name": "本體外牙",
+          "options": [
+            {
+              "code": "08",
+              "description": "M8"
+            },
+            {
+              "code": "10",
+              "description": "M10"
+            },
+            {
+              "code": "12",
+              "description": "M12"
+            },
+            {
+              "code": "14",
+              "description": "M14"
+            },
+            {
+              "code": "16",
+              "description": "M16"
+            },
+            {
+              "code": "20",
+              "description": "M20"
+            },
+            {
+              "code": "25",
+              "description": "M25"
+            },
+            {
+              "code": "27",
+              "description": "M27"
+            },
+            {
+              "code": "33",
+              "description": "M33"
+            },
+            {
+              "code": "36",
+              "description": "M36"
+            }
+          ]
+        },
+        {
+          "id": "stroke",
+          "name": "行程",
+          "options": [
+            {
+              "code": "06",
+              "description": "6mm"
+            },
+            {
+              "code": "07",
+              "description": "7mm"
+            },
+            {
+              "code": "10",
+              "description": "10mm"
+            },
+            {
+              "code": "12",
+              "description": "12mm"
+            },
+            {
+              "code": "15",
+              "description": "15mm"
+            },
+            {
+              "code": "16",
+              "description": "16mm"
+            },
+            {
+              "code": "20",
+              "description": "20mm"
+            },
+            {
+              "code": "25",
+              "description": "25mm"
+            },
+            {
+              "code": "30",
+              "description": "30mm"
+            },
+            {
+              "code": "40",
+              "description": "40mm"
+            },
+            {
+              "code": "50",
+              "description": "50mm"
+            }
+          ]
+        },
+        {
+          "id": "speed",
+          "name": "速度代號",
+          "options": [
+            {
+              "code": "1",
+              "description": "高速(輕負載)"
+            },
+            {
+              "code": "2",
+              "description": "中速(中負載)"
+            },
+            {
+              "code": "3",
+              "description": "低速(重負載)"
+            }
+          ]
+        },
+        {
+          "id": "cap",
+          "name": "防撞帽代號",
+          "options": [
+            {
+              "code": "",
+              "description": "塑料防撞帽"
+            },
+            {
+              "code": "F",
+              "description": "鐵質防撞帽"
+            },
+            {
+              "code": "N",
+              "description": "無防撞帽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACJ",
+      "category": "輔助元件",
+      "superGroup": "油壓緩衝器",
+      "group": "可調自動補償式",
+      "name": "ACJ系列 可調自動補償式油壓緩衝器",
+      "format": "ACJ{thread}{stroke}-{cap}",
+      "categories": [
+        {
+          "id": "thread",
+          "name": "本體外牙",
+          "options": [
+            {
+              "code": "10",
+              "description": "M10"
+            },
+            {
+              "code": "12",
+              "description": "M12"
+            },
+            {
+              "code": "14",
+              "description": "M14"
+            },
+            {
+              "code": "20",
+              "description": "M20"
+            },
+            {
+              "code": "25",
+              "description": "M25"
+            },
+            {
+              "code": "27",
+              "description": "M27"
+            },
+            {
+              "code": "33",
+              "description": "M33"
+            },
+            {
+              "code": "36",
+              "description": "M36"
+            },
+            {
+              "code": "42",
+              "description": "M42"
+            }
+          ]
+        },
+        {
+          "id": "stroke",
+          "name": "行程",
+          "options": [
+            {
+              "code": "07",
+              "description": "7mm"
+            },
+            {
+              "code": "10",
+              "description": "10mm"
+            },
+            {
+              "code": "12",
+              "description": "12mm"
+            },
+            {
+              "code": "15",
+              "description": "15mm"
+            },
+            {
+              "code": "20",
+              "description": "20mm"
+            },
+            {
+              "code": "25",
+              "description": "25mm"
+            },
+            {
+              "code": "30",
+              "description": "30mm"
+            },
+            {
+              "code": "50",
+              "description": "50mm"
+            },
+            {
+              "code": "75",
+              "description": "75mm"
+            }
+          ]
+        },
+        {
+          "id": "cap",
+          "name": "防撞帽代號",
+          "options": [
+            {
+              "code": "",
+              "description": "塑料防撞帽"
+            },
+            {
+              "code": "F",
+              "description": "鐵質防撞帽"
+            },
+            {
+              "code": "N",
+              "description": "無防撞帽"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Fittings-PC",
+      "category": "輔助元件",
+      "superGroup": "快速接頭",
+      "group": "插管-螺紋類",
+      "name": "PC系列 螺紋直通接頭",
+      "format": "PC {port} {thread} {color}",
+      "categories": [
+        {
+          "id": "port",
+          "name": "接管口徑",
+          "options": [
+            {
+              "code": "4",
+              "description": "Φ4mm"
+            },
+            {
+              "code": "6",
+              "description": "Φ6mm"
+            },
+            {
+              "code": "8",
+              "description": "Φ8mm"
+            },
+            {
+              "code": "10",
+              "description": "Φ10mm"
+            },
+            {
+              "code": "12",
+              "description": "Φ12mm"
+            }
+          ]
+        },
+        {
+          "id": "thread",
+          "name": "連接螺紋",
+          "options": [
+            {
+              "code": "M5",
+              "description": "M5x0.8"
+            },
+            {
+              "code": "01",
+              "description": "PT1/8"
+            },
+            {
+              "code": "02",
+              "description": "PT1/4"
+            },
+            {
+              "code": "03",
+              "description": "PT3/8"
+            },
+            {
+              "code": "04",
+              "description": "PT1/2"
+            }
+          ]
+        },
+        {
+          "id": "color",
+          "name": "顏色代號",
+          "options": [
+            {
+              "code": "",
+              "description": "灰色"
+            },
+            {
+              "code": "D",
+              "description": "黑色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Fittings-PL",
+      "category": "輔助元件",
+      "superGroup": "快速接頭",
+      "group": "插管-螺紋類",
+      "name": "PL系列 L型螺紋二通",
+      "format": "PL {port} {thread} {color}",
+      "categories": [
+        {
+          "id": "port",
+          "name": "接管口徑",
+          "options": [
+            {
+              "code": "4",
+              "description": "Φ4mm"
+            },
+            {
+              "code": "6",
+              "description": "Φ6mm"
+            },
+            {
+              "code": "8",
+              "description": "Φ8mm"
+            },
+            {
+              "code": "10",
+              "description": "Φ10mm"
+            },
+            {
+              "code": "12",
+              "description": "Φ12mm"
+            }
+          ]
+        },
+        {
+          "id": "thread",
+          "name": "連接螺紋",
+          "options": [
+            {
+              "code": "M5",
+              "description": "M5x0.8"
+            },
+            {
+              "code": "01",
+              "description": "PT1/8"
+            },
+            {
+              "code": "02",
+              "description": "PT1/4"
+            },
+            {
+              "code": "03",
+              "description": "PT3/8"
+            },
+            {
+              "code": "04",
+              "description": "PT1/2"
+            }
+          ]
+        },
+        {
+          "id": "color",
+          "name": "顏色代號",
+          "options": [
+            {
+              "code": "",
+              "description": "灰色"
+            },
+            {
+              "code": "D",
+              "description": "黑色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Fittings-PU",
+      "category": "輔助元件",
+      "superGroup": "快速接頭",
+      "group": "插管-插管類",
+      "name": "PU系列 直通接頭",
+      "format": "PU {port} {color}",
+      "categories": [
+        {
+          "id": "port",
+          "name": "接管口徑",
+          "options": [
+            {
+              "code": "4",
+              "description": "Φ4mm"
+            },
+            {
+              "code": "6",
+              "description": "Φ6mm"
+            },
+            {
+              "code": "8",
+              "description": "Φ8mm"
+            },
+            {
+              "code": "10",
+              "description": "Φ10mm"
+            },
+            {
+              "code": "12",
+              "description": "Φ12mm"
+            }
+          ]
+        },
+        {
+          "id": "color",
+          "name": "顏色代號",
+          "options": [
+            {
+              "code": "",
+              "description": "灰色"
+            },
+            {
+              "code": "D",
+              "description": "黑色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Fittings-PE",
+      "category": "輔助元件",
+      "superGroup": "快速接頭",
+      "group": "插管-插管類",
+      "name": "PE系列 T型三通",
+      "format": "PE {port} {color}",
+      "categories": [
+        {
+          "id": "port",
+          "name": "接管口徑",
+          "options": [
+            {
+              "code": "4",
+              "description": "Φ4mm"
+            },
+            {
+              "code": "6",
+              "description": "Φ6mm"
+            },
+            {
+              "code": "8",
+              "description": "Φ8mm"
+            },
+            {
+              "code": "10",
+              "description": "Φ10mm"
+            },
+            {
+              "code": "12",
+              "description": "Φ12mm"
+            }
+          ]
+        },
+        {
+          "id": "color",
+          "name": "顏色代號",
+          "options": [
+            {
+              "code": "",
+              "description": "灰色"
+            },
+            {
+              "code": "D",
+              "description": "黑色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PSL",
+      "category": "輔助元件",
+      "superGroup": "調速閥",
+      "group": "L型調速閥",
+      "name": "PSL系列 L型調速閥",
+      "format": "PSL {port} {thread} {type} {color}",
+      "categories": [
+        {
+          "id": "port",
+          "name": "接管口徑",
+          "options": [
+            {
+              "code": "4",
+              "description": "Φ4mm"
+            },
+            {
+              "code": "6",
+              "description": "Φ6mm"
+            },
+            {
+              "code": "8",
+              "description": "Φ8mm"
+            },
+            {
+              "code": "10",
+              "description": "Φ10mm"
+            },
+            {
+              "code": "12",
+              "description": "Φ12mm"
+            }
+          ]
+        },
+        {
+          "id": "thread",
+          "name": "連接螺紋",
+          "options": [
+            {
+              "code": "M5",
+              "description": "M5x0.8"
+            },
+            {
+              "code": "01",
+              "description": "PT1/8"
+            },
+            {
+              "code": "02",
+              "description": "PT1/4"
+            },
+            {
+              "code": "03",
+              "description": "PT3/8"
+            },
+            {
+              "code": "04",
+              "description": "PT1/2"
+            }
+          ]
+        },
+        {
+          "id": "type",
+          "name": "節流方式",
+          "options": [
+            {
+              "code": "A",
+              "description": "排氣節流型"
+            },
+            {
+              "code": "B",
+              "description": "進氣節流型"
+            }
+          ]
+        },
+        {
+          "id": "color",
+          "name": "顏色代號",
+          "options": [
+            {
+              "code": "",
+              "description": "灰色"
+            },
+            {
+              "code": "D",
+              "description": "黑色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BSL",
+      "category": "輔助元件",
+      "superGroup": "消聲器",
+      "group": "通用型消聲器",
+      "name": "BSL系列 通用型消聲器",
+      "format": "BSL {thread}",
+      "categories": [
+        {
+          "id": "thread",
+          "name": "連接螺紋",
+          "options": [
+            {
+              "code": "M5",
+              "description": "M5x0.8"
+            },
+            {
+              "code": "01",
+              "description": "PT1/8"
+            },
+            {
+              "code": "02",
+              "description": "PT1/4"
+            },
+            {
+              "code": "03",
+              "description": "PT3/8"
+            },
+            {
+              "code": "04",
+              "description": "PT1/2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

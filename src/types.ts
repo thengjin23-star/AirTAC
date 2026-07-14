@@ -12,6 +12,7 @@ export interface AirtacRecommendation {
   fullOrderingCode: string;
   description: string;
   matchType: MatchType;
+  matchPercentage?: number;
   configurableOptions: ConfigurableOption[];
 }
 

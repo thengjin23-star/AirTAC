@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
-import { defaultCatalog } from "./src/data/catalog.js"; // Import the database
+import { defaultCatalog } from "./src/data/index.js"; // Import the database
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -74,7 +74,8 @@ async function startServer() {
         5. For EACH recommended AirTAC model, specify the "matchType" (直接替換, 相似替代, or 無直接對應型號).
         6. For EACH recommended AirTAC model, provide the EXACT FULL ORDERING CODE (完整訂購碼) in the "fullOrderingCode" field. Construct it strictly according to the \`format\` and \`categories\` options from the catalog.
         7. For EACH recommended AirTAC model, break down its configurable parameters using the EXACT categories from the catalog so the user knows exactly what options were selected. Suggest the specific option based on the competitor's specs.
-        8. Provide an overall explanation of the matching strategy and any differences.
+        8. For EACH recommended AirTAC model, provide a "matchPercentage" (0-100) indicating how accurately the recommended model matches the competitor's specifications. 100 means an exact drop-in replacement.
+        9. Provide an overall explanation of the matching strategy and any differences.
         
         Return the result in JSON format matching the schema requested. ALL detailed text output MUST be written accurately in Traditional Chinese (繁體中文).`;
 
@@ -85,7 +86,7 @@ async function startServer() {
       while (retries > 0) {
         try {
           response = await ai.models.generateContent({
-            model: "gemini-3.1-flash-lite",
+            model: "gemini-3.1-pro-preview",
             contents: prompt,
             config: {
               responseMimeType: "application/json",
@@ -126,6 +127,7 @@ async function startServer() {
                         fullOrderingCode: { type: Type.STRING, description: "完整的訂購碼 (例如: 4V210-08, PL601)。若無法組合完整，請給出最接近的完整代碼" },
                         description: { type: Type.STRING, description: "產品類型描述 (如: 雙作用氣缸, L型接頭)" },
                         matchType: { type: Type.STRING, description: "對應種類", enum: ["直接替換", "相似替代", "無直接對應型號", "無對應型號"] },
+                        matchPercentage: { type: Type.NUMBER, description: "匹配程度百分比 (0-100)，評估亞德客型號與對手規格的符合程度" },
                         configurableOptions: {
                           type: Type.ARRAY,
                           description: "該型號需要使用者挑選的細部規格與參數",
@@ -140,7 +142,7 @@ async function startServer() {
                           }
                         }
                       },
-                      required: ["baseModel", "reasoningForOrderingCode", "fullOrderingCode", "description", "matchType", "configurableOptions"]
+                      required: ["baseModel", "reasoningForOrderingCode", "fullOrderingCode", "description", "matchType", "matchPercentage", "configurableOptions"]
                     }
                   },
                   explanation: { type: Type.STRING, description: "整體搭配說明、注意事項或組合建議" }

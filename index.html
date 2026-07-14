@@ -6,6 +6,9 @@
     <title>My Google AI Studio App</title>
     <script>
       window.addEventListener('error', function(event) {
+        if (event.filename && event.filename.includes('chrome-extension://')) {
+          return; // Ignore external chrome extension errors
+        }
         let msg = "UNKNOWN ERROR";
         try {
           if (event.error) {

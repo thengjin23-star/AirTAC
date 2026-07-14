@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Search, ArrowRight, Loader2, Info, Building2, Server, Lightbulb, CheckCircle2, Database, Repeat } from 'lucide-react';
+import { Search, ArrowRight, Loader2, Info, Building2, Server, Lightbulb, CheckCircle2, Database, Repeat, Activity } from 'lucide-react';
 import type { CrossReferenceResult } from './types';
 import { ProductDatabase } from './components/ProductDatabase';
 
@@ -353,9 +353,17 @@ export default function App() {
                               <p className="text-slate-700 text-sm mt-2 font-medium">{rec.description}</p>
                             </div>
                             {rec.matchType && (
-                              <span className={`text-xs font-semibold px-2.5 py-1 rounded-md border shrink-0 ${matchBadgeClass}`}>
-                                {rec.matchType}
-                              </span>
+                              <div className="flex items-center gap-2 shrink-0">
+                                {rec.matchPercentage !== undefined && !isNoMatch && (
+                                  <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-700 rounded-md border border-slate-200 flex items-center gap-1">
+                                    <Activity className="w-3 h-3 text-slate-400" />
+                                    匹配度 {rec.matchPercentage}%
+                                  </span>
+                                )}
+                                <span className={`text-xs font-semibold px-2.5 py-1 rounded-md border ${matchBadgeClass}`}>
+                                  {rec.matchType}
+                                </span>
+                              </div>
                             )}
                           </div>
                           
