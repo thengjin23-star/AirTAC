@@ -72,6 +72,12 @@ export interface KnowledgeEntry {
   competitorSeries: string;
   airtacSeriesIds: string[];
   note: string;
+  /**
+   * 競品訂購碼「逐位解碼表」(從原廠型錄整理)。
+   * 命中時整段注入 prompt，並要求模型以此為準拆解型號，
+   * 防止模型憑印象猜測後綴意義 (例如把 SY 的電壓碼當成口徑碼)。
+   */
+  decode?: string;
 }
 
 /**
@@ -80,7 +86,17 @@ export interface KnowledgeEntry {
  */
 export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   // --- SMC 氣缸 ---
-  { brand: 'SMC', pattern: /^C?D?Q2/i, competitorSeries: 'CQ2/CDQ2 薄型氣缸', airtacSeriesIds: ['acq', 'sda', 'acqd', 'acqj'], note: 'SMC CQ2 薄型氣缸對應 AirTAC ACQ (優先) 或 SDA 系列，缸徑行程直接沿用。' },
+  {
+    brand: 'SMC', pattern: /^C?D?Q2/i, competitorSeries: 'CQ2/CDQ2 薄型氣缸', airtacSeriesIds: ['acq', 'sda', 'acqd', 'acqj'],
+    note: 'SMC CQ2 薄型氣缸對應 AirTAC ACQ (優先) 或 SDA 系列，缸徑行程直接沿用。',
+    decode: `SMC CQ2 訂購碼解碼 (格式: C(D)Q2[安裝型式][缸徑]-[行程][動作]+尾碼):
+- 開頭 CDQ2 = 內建磁石(可裝磁性開關)版本的 CQ2；CQ2 開頭若尾碼無磁石標記則無磁石
+- 安裝型式: B=通孔基本型, A=兩端牙孔型, L=腳座型, F=前法蘭, G=後法蘭, D=雙耳環
+- 缸徑: 12/16/20/25/32/40/50/63/80/100 (mm)
+- 行程: 數字直接為 mm
+- 動作: D=復動(雙作用), S=單動押出, T=單動引入; DZ/DM/DCM 等組合中 D 之後的字母屬其他選項
+- 常見尾碼: Z=附磁石(舊寫法), M9B等=隨附磁性開關型號
+→ AirTAC ACQ 對應: 缸徑/行程直接沿用 (ACQ 缸徑範圍 12~100)；附磁石→磁石代碼 S；安裝以通孔為標準。CDQ2B40-30DZ → ACQ40X30S` },
   { brand: 'SMC', pattern: /^C?D?QS/i, competitorSeries: 'CQS 小型薄型氣缸', airtacSeriesIds: ['acq', 'sda', 'ace'], note: 'SMC CQS 小缸徑薄型氣缸對應 AirTAC ACQ 小缸徑或 ACE 緊湊型。' },
   { brand: 'SMC', pattern: /^C?D?J2/i, competitorSeries: 'CJ2 針型氣缸(ISO6432)', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'SMC CJ2 迷你氣缸對應 AirTAC MI (不銹鋼迷你缸) 或 MA 系列。' },
   { brand: 'SMC', pattern: /^C?D?M2/i, competitorSeries: 'CM2 圓形氣缸', airtacSeriesIds: ['ma', 'mi', 'mbl'], note: 'SMC CM2 圓形氣缸(20~40mm)對應 AirTAC MA/MI 不銹鋼迷你缸。' },
@@ -100,7 +116,26 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'SMC', pattern: /^MY\d|^CY\d/i, competitorSeries: 'MY/CY 無桿氣缸', airtacSeriesIds: ['rmt', 'rmtl', 'rms', 'rmh'], note: 'SMC 機械/磁耦式無桿氣缸對應 AirTAC RMT (導桿型) / RMS (基本型) / RMH (滑軌型)。' },
   { brand: 'SMC', pattern: /^CU\b|^CU\d/i, competitorSeries: 'CU 自由安裝氣缸', airtacSeriesIds: ['mu', 'msu', 'md'], note: 'SMC CU 自由安裝氣缸對應 AirTAC MU 系列。' },
   // --- SMC 閥類 ---
-  { brand: 'SMC', pattern: /^SY[3579]/i, competitorSeries: 'SY3000/5000/7000 電磁閥', airtacSeriesIds: ['7SV', '6SV', '4V100', '4V200', '4V300'], note: 'SMC SY 系列五口電磁閥：SY3000→AirTAC 7SV/4V100、SY5000→6SV/4V200、SY7000→4V300。' },
+  {
+    brand: 'SMC', pattern: /^SY[3579]/i, competitorSeries: 'SY3000/5000/7000/9000 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '7SV', '6SV'],
+    note: 'SMC SY 系列五口電磁閥：SY3000→AirTAC 4V100/7SV、SY5000→4V200/6SV、SY7000→4V300。務必依下方解碼表逐位拆解。',
+    decode: `SMC SY 系列訂購碼逐位解碼 (格式: SY[系列][機能]20-[電壓][接線][燈/突波][手動]-[口徑][牙型])，此表來自 SMC 原廠型錄，具絕對權威性:
+- 第1碼 系列/閥體尺寸: 3=SY3000(M5口徑), 5=SY5000(1/8~1/4), 7=SY7000(1/4), 9=SY9000(1/4~3/8)
+- 第2碼 切換方式: 1=二位單電控, 2=二位雙電控, 3=三位中位封閉(closed center), 4=三位中位排氣(exhaust center), 5=三位中位供壓(pressure center)
+- 「20」= 單體式直接配管型 (底座式為其他代碼)
+- 破折號後第1碼 = 額定電壓 (注意!! 這一碼是電壓、不是口徑): 5=DC24V, 6=DC12V, V=DC6V, S=DC5V, R=DC3V, 1=AC100V, 2=AC200V, 3=AC110V, 4=AC220V
+- 接線取出方式: G=導線出線式300mm, H=出線式600mm, L=L形插座式附導線, LN=L形不附導線, LO=L形不附插頭, M=M形插座式附導線, MN/MO=M形變體, D=DIN插座式, DO=DIN不附接線座, W開頭=M8插座式
+- 指示燈/突波保護(緊接在接線代碼後): 無記號=皆無, S=附突波保護, Z=附指示燈+突波保護, R=突波保護(無極性), U=指示燈+突波保護(無極性)
+- 手動操作: 無記號=非鎖定按鈕式, D=起子壓下旋轉鎖定式, E=手動壓下旋轉鎖定式
+- 第二個破折號後 = A·B口接管口徑: M5=M5×0.8(SY3000), 01=1/8"(SY5000), 02=1/4"(SY5000/SY7000), 03=3/8"(SY9000), C4=Φ4快插, C6=Φ6快插, C8=Φ8快插, C10=Φ10快插, C12=Φ12快插, N開頭=英制快插
+- 牙型(緊接在口徑後): 無記號=Rc(PT牙), F=G牙, N=NPT牙, T=NPTF牙
+範例: SY5320-5LOZE-01 = SY5000系列 + 三位中位封閉(雙電控) + DC24V + L形插座不附插頭(LO) + 指示燈+突波保護(Z) + 手動旋轉鎖定(E) + 口徑1/8"(01) + Rc牙 → AirTAC 4V230C-06B (30C=三位中位封閉, 06=1/8", B=DC24V, DIN插座式與PT牙為空白代碼)。
+對應 AirTAC 4V 系列的轉換規則:
+- 機能: 1→10(二位單電控), 2→20(二位雙電控), 3→30C(中位封閉), 4→30E(中位排氣), 5→30P(中位壓力)
+- 口徑(4V200): 01(1/8")→06, 02(1/4")→08; (4V300): 02(1/4")→08, 03(3/8")→10; (4V100): M5→M5, 01(1/8)→06
+- 電壓: 5(DC24V)→B, 6(DC12V)→F, 1(AC100V)→C(AC110V最接近,需備註), 2(AC200V)→A(AC220V最接近,需備註), 3(AC110V)→C, 4(AC220V)→A
+- 接線: G/H/L/M(出線與插座附線類)→I(出線式), D(DIN插座)→空白(DIN插座式); SMC 快插接頭口徑(C4/C6等)AirTAC 4V無內建快插,需備註另配 PC 系列快插接頭
+- 牙型: 無記號(Rc)→空白(PT牙), F(G牙)→G, N(NPT)→T; 指示燈(Z/U): AirTAC DIN插座型標配指示燈,無獨立代碼,於備註說明即可` },
   { brand: 'SMC', pattern: /^VF[35]|^VZ[35]/i, competitorSeries: 'VF/VZ 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300'], note: 'SMC VF/VZ 五口電磁閥對應 AirTAC 4V 系列，依口徑選 100/200/300。' },
   { brand: 'SMC', pattern: /^VQ[Zz]?/i, competitorSeries: 'VQ 直動電磁閥', airtacSeriesIds: ['4V100', 'CPV10', 'CPV15', '7SV'], note: 'SMC VQ 小型電磁閥依尺寸對應 AirTAC CPV10/CPV15 微型閥或 4V100。' },
   { brand: 'SMC', pattern: /^VT3|^VT0|^V100/i, competitorSeries: 'VT 三口電磁閥', airtacSeriesIds: ['3V1', '3V2', '3V100'], note: 'SMC VT307 等三口二位閥對應 AirTAC 3V1/3V2 直動閥或 3V100。' },
@@ -114,11 +149,35 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'SMC', pattern: /^AL\d{2}/i, competitorSeries: 'AL 給油器', airtacSeriesIds: ['GL', 'GAL', 'AL-BL'], note: 'SMC AL 給油器(油霧器)對應 AirTAC GL 系列。' },
   { brand: 'SMC', pattern: /^IR\d/i, competitorSeries: 'IR 精密調壓閥', airtacSeriesIds: ['GPR', 'GPFR'], note: 'SMC IR 精密減壓閥對應 AirTAC GPR 精密調壓閥。' },
   { brand: 'SMC', pattern: /^AFM|^AMG|^AFD/i, competitorSeries: 'AFM 油霧分離器', airtacSeriesIds: ['GPF'], note: 'SMC AFM/AFD 油霧分離器對應 AirTAC GPF 系列。' },
-  { brand: 'SMC', pattern: /^AS\d{3,4}/i, competitorSeries: 'AS 速度控制閥', airtacSeriesIds: ['PSL'], note: 'SMC AS 調速接頭(如 AS2201F)對應 AirTAC PSL 系列 L 型調速閥。嚴禁輸出 PISCO 的 JSC。' },
+  {
+    brand: 'SMC', pattern: /^AS\d{3,4}/i, competitorSeries: 'AS 速度控制閥', airtacSeriesIds: ['PSL'],
+    note: 'SMC AS 調速接頭(如 AS2201F)對應 AirTAC PSL 系列 L 型調速閥。嚴禁輸出 PISCO 的 JSC。',
+    decode: `SMC AS 調速閥訂購碼解碼 (格式: AS[體型][口]0[節流方向][F]-[牙規]-[管徑]):
+- 體型/牙規等級: 1=M5, 2=1/8, 3=1/4, 4=3/8~1/2
+- 第3~4碼: 01=標準; 節流方向尾碼: 無/預設=排氣節流(meter-out), 1F前的數字2=排氣節流彎頭型
+- F=附快插接頭 (elbow with one-touch fitting)
+- -[數字]=螺紋尺寸: 01=1/8", 02=1/4"; -[數字]=適用管外徑: 04=Φ4, 06=Φ6, 08=Φ8
+- 尾碼 S=鋼珠內六角, A=排氣節流, B=入氣節流
+範例: AS2201F-01-06SA = 1/8"牙 + Φ6管快插 + 排氣節流 L型
+→ AirTAC PSL 對應: PSL[管徑]-[牙規], 例 → PSL6-01 (Φ6管、1/8"牙、排氣節流標準)。PSL 標準即排氣節流(A型)` },
   { brand: 'SMC', pattern: /^AN\d/i, competitorSeries: 'AN 消聲器', airtacSeriesIds: ['BSL', 'BSL-SS'], note: 'SMC AN 消聲器對應 AirTAC BSL 系列。' },
-  { brand: 'SMC', pattern: /^KQ2?([HLTUYE])/i, competitorSeries: 'KQ2 快插接頭', airtacSeriesIds: ['Fittings-PC', 'Fittings-PL', 'Fittings-PU', 'Fittings-PE'], note: 'SMC KQ2 快插接頭：KQ2H直通→PC、KQ2L彎頭→PL、KQ2T三通→PE、KQ2U Y型→PU 對應形狀選擇。管徑(公制mm)與牙規直接對應。' },
+  {
+    brand: 'SMC', pattern: /^KQ2?([HLTUYE])/i, competitorSeries: 'KQ2 快插接頭', airtacSeriesIds: ['Fittings-PC', 'Fittings-PL', 'Fittings-PU', 'Fittings-PE'],
+    note: 'SMC KQ2 快插接頭：KQ2H直通→PC、KQ2L彎頭→PL、KQ2T三通→PE、KQ2U Y型→PU 對應形狀選擇。',
+    decode: `SMC KQ2 訂購碼解碼 (格式: KQ2[形狀][管徑]-[牙規/第二管徑]+尾碼):
+- 形狀: H=直通公牙接頭, L=L型彎頭公牙, T=T型三通, U=Y型二叉, E=隔板直通, F=母牙直通, W=延長彎頭
+- 管徑: 04=Φ4, 06=Φ6, 08=Φ8, 10=Φ10, 12=Φ12 (mm)
+- 牙規: M5=M5牙, 01=1/8", 02=1/4", 03=3/8", 04=1/2"; 前綴 N (如 -01N)=NPT牙; 尾碼 S=內六角型
+→ AirTAC 對應: 形狀 H→PC(螺紋直通), L→PL(L型螺紋二通), T→PE(T型三通), U→PU(Y型/直通); 訂購碼 = [系列][管徑]-[牙規數字], 例 KQ2L06-01S → PL6-01 (Φ6管、1/8"牙)。NPT 牙需備註 AirTAC 是否有對應牙型選項` },
   { brand: 'SMC', pattern: /^RB\d{2}/i, competitorSeries: 'RB 油壓緩衝器', airtacSeriesIds: ['ACA', 'ACJ', 'HR'], note: 'SMC RB 油壓緩衝器對應 AirTAC ACA (標準自補償) / ACJ (可調) 系列，依螺紋尺寸對應。' },
-  { brand: 'SMC', pattern: /^D-[A-Z]\d|^D-M9/i, competitorSeries: 'D- 磁性開關', airtacSeriesIds: ['cms', 'dms', 'ems'], note: 'SMC D- 系列磁性開關：有接點(磁簧式)對應 CMS，無接點(電子式)對應 DMS/EMS。' },
+  {
+    brand: 'SMC', pattern: /^D-[A-Z]\d|^D-M9/i, competitorSeries: 'D- 磁性開關', airtacSeriesIds: ['cms', 'dms', 'ems'],
+    note: 'SMC D- 系列磁性開關：有接點(磁簧式)對應 CMS，無接點(電子式)對應 DMS/EMS。',
+    decode: `SMC D- 磁性開關解碼:
+- D-A9□/A5□/A6□ = 有接點磁簧式 (reed): A93=2線式, A96=3線式
+- D-M9□ = 無接點電子式 (solid state): M9B=2線式, M9N=3線式NPN, M9P=3線式PNP
+- 尾碼 V=垂直出線, W=雙色指示, 數字L=導線長(如 L=3m, Z=5m, 無記號=0.5m)
+→ AirTAC 對應: 磁簧式(A9□)→CMS 系列; 電子式(M9□)→DMS 系列 (2線/3線依型錄選項對應); 出線長依 AirTAC 選項選最接近` },
   { brand: 'SMC', pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: 'TU 氣管', airtacSeriesIds: ['PU-Tube', 'PA-Tube', 'UWS98A'], note: 'SMC TU 聚氨酯氣管對應 AirTAC US98A/UE95A PU管；尼龍管對應 PA 系列。' },
   // --- Festo ---
   { brand: 'Festo', pattern: /^DSNU|^ESNU/i, competitorSeries: 'DSNU 圓形氣缸(ISO6432)', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'Festo DSNU 圓形迷你缸對應 AirTAC MI/MA 系列(ISO6432)。' },
@@ -175,11 +234,19 @@ export function heuristicMatch(input: string, brand?: string): { entries: Knowle
   return { entries, candidateIds };
 }
 
-/** 供 prompt 使用的知識庫摘要文字。 */
+/** 供 prompt 使用的知識庫摘要文字 (命中的條目會附上逐位解碼表)。 */
 export function knowledgeBaseText(entries?: KnowledgeEntry[]): string {
-  const list = entries && entries.length > 0 ? entries : KNOWLEDGE_BASE;
+  const matched = entries && entries.length > 0;
+  const list = matched ? entries! : KNOWLEDGE_BASE;
   return list
-    .map(e => `- [${e.brand}] ${e.competitorSeries} → AirTAC 系列id: ${e.airtacSeriesIds.join(', ')}。${e.note}`)
+    .map(e => {
+      let text = `- [${e.brand}] ${e.competitorSeries} → AirTAC 系列id: ${e.airtacSeriesIds.join(', ')}。${e.note}`;
+      // 命中特定系列時注入完整解碼表；未命中(注入全庫)時省略以控制長度
+      if (matched && e.decode) {
+        text += `\n<<< 原廠型錄解碼表 (絕對權威，優先於你的任何既有認知) >>>\n${e.decode}\n<<< 解碼表結束 >>>`;
+      }
+      return text;
+    })
     .join('\n');
 }
 
