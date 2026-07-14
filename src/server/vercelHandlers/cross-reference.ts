@@ -1,13 +1,15 @@
 /**
- * Vercel Serverless Function 版的交叉比對 API。
+ * Vercel Serverless Function 版的交叉比對 API (原始碼)。
  *
- * Vercel 不會執行 server.ts 的 Express 伺服器，因此把 /api/cross-reference
- * 以檔案路由的形式提供。核心邏輯與 Express 版共用 crossReferenceService。
+ * 注意：Vercel 實際部署的是 api/cross-reference.js —— 由
+ * `npm run build:api` 用 esbuild 把這個檔案連同所有依賴
+ * (匹配邏輯 + 型錄 JSON) bundle 成單一自足檔案。
+ * 改完這裡的程式碼後務必重跑 build:api 並把 api/*.js 一起 commit。
  *
  * 部署需求：在 Vercel 專案的 Settings → Environment Variables 加入
  * GEMINI_API_KEY，否則會回傳「尚未設定 GEMINI_API_KEY」的錯誤。
  */
-import { crossReference } from "../src/server/crossReferenceService";
+import { crossReference } from "../crossReferenceService";
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
