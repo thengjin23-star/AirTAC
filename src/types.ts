@@ -51,6 +51,31 @@ export interface CrossReferenceResult {
   explanation: string;
   candidateSeries?: CandidateSeriesSummary[];
   productType?: string;
+  /** AI 無法確定、需人工核對的事項 */
+  uncertainties?: string[];
+}
+
+/** 已確認的對照項目 (確認清單，localStorage 持久化) */
+export interface ConfirmedItem {
+  id: string;
+  brand: string;
+  competitorModel: string;
+  airtacCode: string;
+  description: string;
+  matchType: string;
+  matchPercentage?: number;
+  note: string;
+  confirmedAt: number;
+}
+
+/** 批量分析的單列狀態 */
+export interface BatchRow {
+  id: string;
+  model: string;
+  brand?: string;
+  status: 'pending' | 'running' | 'done' | 'error';
+  result?: CrossReferenceResult;
+  error?: string;
 }
 
 export interface CrossReferenceRequest {

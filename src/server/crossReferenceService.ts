@@ -214,14 +214,15 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 1. NEVER HALLUCINATE AirTAC models. Only recommend series whose full data appears in the candidate series above. If no candidate fits, set "baseModel" to "無直接對應型號".
 2. MISUMI RULE: MISUMI pneumatic components are often identical to or OEM manufactured by SMC. Find the underlying SMC equivalent first, then map to AirTAC.
 3. SPEED CONTROLLER RULE: SMC "AS" series corresponds to AirTAC "PSL" series. NEVER output "JSC" (it is a PISCO product).
-4. CAREFULLY PARSE the competitor's part number BEFORE recommending. Identify every suffix: bore, stroke, thread type/size (M, R/PT, G, NPT), voltage, magnet, mounting, options.
-5. If the competitor product is an integrated assembly and AirTAC sells the features separately, recommend the combination of separate AirTAC models (one recommendation per part).
-6. ORDERING CODE GENERATION: AirTAC ordering codes MUST strictly follow the \`format\` template of the series and use ONLY option codes from that series' \`categories\`. Show your reasoning in \`reasoningForOrderingCode\`.
-7. For EVERY recommendation you MUST also return machine-readable fields: "seriesId" = the exact catalog id of the chosen series, and "selectedOptions" = the exact option codes you chose for each category id (use "" for blank codes). The server re-validates these against the catalog, so they must be exact.
-8. THOROUGH DISASSEMBLY: break down the competitor's model segment by segment in \`preAnalysis.competitorModelDisassembly\`.
-9. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
-10. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions.
-11. If the model number is completely unrecognizable, say so explicitly and use "無直接對應型號".
+4. DECODING TABLES ARE ABSOLUTE: if the knowledge above contains a 原廠型錄解碼表 for the competitor's series, you MUST decode the part number strictly position-by-position according to that table. The table OVERRIDES any of your own prior beliefs about what a suffix means. Do NOT reinterpret a decoded position (e.g. if the table says a digit is voltage, it is voltage — not port size).
+5. UNKNOWN SUFFIX RULE: if a segment of the competitor's part number is NOT covered by a decoding table and you are not confident about its meaning, DO NOT silently guess. List it in the top-level \`uncertainties\` array (e.g. "尾碼 X 的意義無法確認，AirTAC 訂購碼未反映此選項，請人工核對") and pick the most standard AirTAC option, reflecting the doubt in a lower matchPercentage.
+6. If the competitor product is an integrated assembly and AirTAC sells the features separately, recommend the combination of separate AirTAC models (one recommendation per part).
+7. ORDERING CODE GENERATION: AirTAC ordering codes MUST strictly follow the \`format\` template of the series and use ONLY option codes from that series' \`categories\`. NEVER invent or append extra letters that are not defined option codes. Show your reasoning in \`reasoningForOrderingCode\`.
+8. For EVERY recommendation you MUST also return machine-readable fields: "seriesId" = the exact catalog id of the chosen series, and "selectedOptions" = the exact option codes you chose for each category id (use "" for blank codes). The server re-validates these against the catalog, so they must be exact.
+9. THOROUGH DISASSEMBLY: break down the competitor's model segment by segment in \`preAnalysis.competitorModelDisassembly\`. When a decoding table exists, every line must come from the table.
+10. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
+11. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions, and for every uncertainty.
+12. If the model number is completely unrecognizable, say so explicitly and use "無直接對應型號".
 
 Your task:
 1. Identify the competitor's brand(s).
@@ -305,9 +306,14 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
                 required: ["baseModel", "seriesId", "reasoningForOrderingCode", "fullOrderingCode", "description", "matchType", "matchPercentage", "selectedOptions", "configurableOptions"]
               }
             },
-            explanation: { type: Type.STRING, description: "整體搭配說明、注意事項或組合建議" }
+            explanation: { type: Type.STRING, description: "整體搭配說明、注意事項或組合建議" },
+            uncertainties: {
+              type: Type.ARRAY,
+              items: { type: Type.STRING },
+              description: "無法從對手型號確定、需要人工核對的事項清單 (沒有就回傳空陣列)"
+            }
           },
-          required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation"]
+          required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation", "uncertainties"]
         }
       }
     });

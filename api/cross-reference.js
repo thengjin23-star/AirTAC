@@ -42148,7 +42148,21 @@ function isValidSeriesId(id) {
 }
 var KNOWLEDGE_BASE = [
   // --- SMC 氣缸 ---
-  { brand: "SMC", pattern: /^C?D?Q2/i, competitorSeries: "CQ2/CDQ2 \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda", "acqd", "acqj"], note: "SMC CQ2 \u8584\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ (\u512A\u5148) \u6216 SDA \u7CFB\u5217\uFF0C\u7F38\u5F91\u884C\u7A0B\u76F4\u63A5\u6CBF\u7528\u3002" },
+  {
+    brand: "SMC",
+    pattern: /^C?D?Q2/i,
+    competitorSeries: "CQ2/CDQ2 \u8584\u578B\u6C23\u7F38",
+    airtacSeriesIds: ["acq", "sda", "acqd", "acqj"],
+    note: "SMC CQ2 \u8584\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ (\u512A\u5148) \u6216 SDA \u7CFB\u5217\uFF0C\u7F38\u5F91\u884C\u7A0B\u76F4\u63A5\u6CBF\u7528\u3002",
+    decode: `SMC CQ2 \u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: C(D)Q2[\u5B89\u88DD\u578B\u5F0F][\u7F38\u5F91]-[\u884C\u7A0B][\u52D5\u4F5C]+\u5C3E\u78BC):
+- \u958B\u982D CDQ2 = \u5167\u5EFA\u78C1\u77F3(\u53EF\u88DD\u78C1\u6027\u958B\u95DC)\u7248\u672C\u7684 CQ2\uFF1BCQ2 \u958B\u982D\u82E5\u5C3E\u78BC\u7121\u78C1\u77F3\u6A19\u8A18\u5247\u7121\u78C1\u77F3
+- \u5B89\u88DD\u578B\u5F0F: B=\u901A\u5B54\u57FA\u672C\u578B, A=\u5169\u7AEF\u7259\u5B54\u578B, L=\u8173\u5EA7\u578B, F=\u524D\u6CD5\u862D, G=\u5F8C\u6CD5\u862D, D=\u96D9\u8033\u74B0
+- \u7F38\u5F91: 12/16/20/25/32/40/50/63/80/100 (mm)
+- \u884C\u7A0B: \u6578\u5B57\u76F4\u63A5\u70BA mm
+- \u52D5\u4F5C: D=\u5FA9\u52D5(\u96D9\u4F5C\u7528), S=\u55AE\u52D5\u62BC\u51FA, T=\u55AE\u52D5\u5F15\u5165; DZ/DM/DCM \u7B49\u7D44\u5408\u4E2D D \u4E4B\u5F8C\u7684\u5B57\u6BCD\u5C6C\u5176\u4ED6\u9078\u9805
+- \u5E38\u898B\u5C3E\u78BC: Z=\u9644\u78C1\u77F3(\u820A\u5BEB\u6CD5), M9B\u7B49=\u96A8\u9644\u78C1\u6027\u958B\u95DC\u578B\u865F
+\u2192 AirTAC ACQ \u5C0D\u61C9: \u7F38\u5F91/\u884C\u7A0B\u76F4\u63A5\u6CBF\u7528 (ACQ \u7F38\u5F91\u7BC4\u570D 12~100)\uFF1B\u9644\u78C1\u77F3\u2192\u78C1\u77F3\u4EE3\u78BC S\uFF1B\u5B89\u88DD\u4EE5\u901A\u5B54\u70BA\u6A19\u6E96\u3002CDQ2B40-30DZ \u2192 ACQ40X30S`
+  },
   { brand: "SMC", pattern: /^C?D?QS/i, competitorSeries: "CQS \u5C0F\u578B\u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda", "ace"], note: "SMC CQS \u5C0F\u7F38\u5F91\u8584\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ \u5C0F\u7F38\u5F91\u6216 ACE \u7DCA\u6E4A\u578B\u3002" },
   { brand: "SMC", pattern: /^C?D?J2/i, competitorSeries: "CJ2 \u91DD\u578B\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi", "ma", "mf"], note: "SMC CJ2 \u8FF7\u4F60\u6C23\u7F38\u5C0D\u61C9 AirTAC MI (\u4E0D\u92B9\u92FC\u8FF7\u4F60\u7F38) \u6216 MA \u7CFB\u5217\u3002" },
   { brand: "SMC", pattern: /^C?D?M2/i, competitorSeries: "CM2 \u5713\u5F62\u6C23\u7F38", airtacSeriesIds: ["ma", "mi", "mbl"], note: "SMC CM2 \u5713\u5F62\u6C23\u7F38(20~40mm)\u5C0D\u61C9 AirTAC MA/MI \u4E0D\u92B9\u92FC\u8FF7\u4F60\u7F38\u3002" },
@@ -42168,7 +42182,30 @@ var KNOWLEDGE_BASE = [
   { brand: "SMC", pattern: /^MY\d|^CY\d/i, competitorSeries: "MY/CY \u7121\u687F\u6C23\u7F38", airtacSeriesIds: ["rmt", "rmtl", "rms", "rmh"], note: "SMC \u6A5F\u68B0/\u78C1\u8026\u5F0F\u7121\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC RMT (\u5C0E\u687F\u578B) / RMS (\u57FA\u672C\u578B) / RMH (\u6ED1\u8ECC\u578B)\u3002" },
   { brand: "SMC", pattern: /^CU\b|^CU\d/i, competitorSeries: "CU \u81EA\u7531\u5B89\u88DD\u6C23\u7F38", airtacSeriesIds: ["mu", "msu", "md"], note: "SMC CU \u81EA\u7531\u5B89\u88DD\u6C23\u7F38\u5C0D\u61C9 AirTAC MU \u7CFB\u5217\u3002" },
   // --- SMC 閥類 ---
-  { brand: "SMC", pattern: /^SY[3579]/i, competitorSeries: "SY3000/5000/7000 \u96FB\u78C1\u95A5", airtacSeriesIds: ["7SV", "6SV", "4V100", "4V200", "4V300"], note: "SMC SY \u7CFB\u5217\u4E94\u53E3\u96FB\u78C1\u95A5\uFF1ASY3000\u2192AirTAC 7SV/4V100\u3001SY5000\u21926SV/4V200\u3001SY7000\u21924V300\u3002" },
+  {
+    brand: "SMC",
+    pattern: /^SY[3579]/i,
+    competitorSeries: "SY3000/5000/7000/9000 \u96FB\u78C1\u95A5",
+    airtacSeriesIds: ["4V100", "4V200", "4V300", "7SV", "6SV"],
+    note: "SMC SY \u7CFB\u5217\u4E94\u53E3\u96FB\u78C1\u95A5\uFF1ASY3000\u2192AirTAC 4V100/7SV\u3001SY5000\u21924V200/6SV\u3001SY7000\u21924V300\u3002\u52D9\u5FC5\u4F9D\u4E0B\u65B9\u89E3\u78BC\u8868\u9010\u4F4D\u62C6\u89E3\u3002",
+    decode: `SMC SY \u7CFB\u5217\u8A02\u8CFC\u78BC\u9010\u4F4D\u89E3\u78BC (\u683C\u5F0F: SY[\u7CFB\u5217][\u6A5F\u80FD]20-[\u96FB\u58D3][\u63A5\u7DDA][\u71C8/\u7A81\u6CE2][\u624B\u52D5]-[\u53E3\u5F91][\u7259\u578B])\uFF0C\u6B64\u8868\u4F86\u81EA SMC \u539F\u5EE0\u578B\u9304\uFF0C\u5177\u7D55\u5C0D\u6B0A\u5A01\u6027:
+- \u7B2C1\u78BC \u7CFB\u5217/\u95A5\u9AD4\u5C3A\u5BF8: 3=SY3000(M5\u53E3\u5F91), 5=SY5000(1/8~1/4), 7=SY7000(1/4), 9=SY9000(1/4~3/8)
+- \u7B2C2\u78BC \u5207\u63DB\u65B9\u5F0F: 1=\u4E8C\u4F4D\u55AE\u96FB\u63A7, 2=\u4E8C\u4F4D\u96D9\u96FB\u63A7, 3=\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589(closed center), 4=\u4E09\u4F4D\u4E2D\u4F4D\u6392\u6C23(exhaust center), 5=\u4E09\u4F4D\u4E2D\u4F4D\u4F9B\u58D3(pressure center)
+- \u300C20\u300D= \u55AE\u9AD4\u5F0F\u76F4\u63A5\u914D\u7BA1\u578B (\u5E95\u5EA7\u5F0F\u70BA\u5176\u4ED6\u4EE3\u78BC)
+- \u7834\u6298\u865F\u5F8C\u7B2C1\u78BC = \u984D\u5B9A\u96FB\u58D3 (\u6CE8\u610F!! \u9019\u4E00\u78BC\u662F\u96FB\u58D3\u3001\u4E0D\u662F\u53E3\u5F91): 5=DC24V, 6=DC12V, V=DC6V, S=DC5V, R=DC3V, 1=AC100V, 2=AC200V, 3=AC110V, 4=AC220V
+- \u63A5\u7DDA\u53D6\u51FA\u65B9\u5F0F: G=\u5C0E\u7DDA\u51FA\u7DDA\u5F0F300mm, H=\u51FA\u7DDA\u5F0F600mm, L=L\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA, LN=L\u5F62\u4E0D\u9644\u5C0E\u7DDA, LO=L\u5F62\u4E0D\u9644\u63D2\u982D, M=M\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA, MN/MO=M\u5F62\u8B8A\u9AD4, D=DIN\u63D2\u5EA7\u5F0F, DO=DIN\u4E0D\u9644\u63A5\u7DDA\u5EA7, W\u958B\u982D=M8\u63D2\u5EA7\u5F0F
+- \u6307\u793A\u71C8/\u7A81\u6CE2\u4FDD\u8B77(\u7DCA\u63A5\u5728\u63A5\u7DDA\u4EE3\u78BC\u5F8C): \u7121\u8A18\u865F=\u7686\u7121, S=\u9644\u7A81\u6CE2\u4FDD\u8B77, Z=\u9644\u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77, R=\u7A81\u6CE2\u4FDD\u8B77(\u7121\u6975\u6027), U=\u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77(\u7121\u6975\u6027)
+- \u624B\u52D5\u64CD\u4F5C: \u7121\u8A18\u865F=\u975E\u9396\u5B9A\u6309\u9215\u5F0F, D=\u8D77\u5B50\u58D3\u4E0B\u65CB\u8F49\u9396\u5B9A\u5F0F, E=\u624B\u52D5\u58D3\u4E0B\u65CB\u8F49\u9396\u5B9A\u5F0F
+- \u7B2C\u4E8C\u500B\u7834\u6298\u865F\u5F8C = A\xB7B\u53E3\u63A5\u7BA1\u53E3\u5F91: M5=M5\xD70.8(SY3000), 01=1/8"(SY5000), 02=1/4"(SY5000/SY7000), 03=3/8"(SY9000), C4=\u03A64\u5FEB\u63D2, C6=\u03A66\u5FEB\u63D2, C8=\u03A68\u5FEB\u63D2, C10=\u03A610\u5FEB\u63D2, C12=\u03A612\u5FEB\u63D2, N\u958B\u982D=\u82F1\u5236\u5FEB\u63D2
+- \u7259\u578B(\u7DCA\u63A5\u5728\u53E3\u5F91\u5F8C): \u7121\u8A18\u865F=Rc(PT\u7259), F=G\u7259, N=NPT\u7259, T=NPTF\u7259
+\u7BC4\u4F8B: SY5320-5LOZE-01 = SY5000\u7CFB\u5217 + \u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589(\u96D9\u96FB\u63A7) + DC24V + L\u5F62\u63D2\u5EA7\u4E0D\u9644\u63D2\u982D(LO) + \u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77(Z) + \u624B\u52D5\u65CB\u8F49\u9396\u5B9A(E) + \u53E3\u5F911/8"(01) + Rc\u7259 \u2192 AirTAC 4V230C-06B (30C=\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589, 06=1/8", B=DC24V, DIN\u63D2\u5EA7\u5F0F\u8207PT\u7259\u70BA\u7A7A\u767D\u4EE3\u78BC)\u3002
+\u5C0D\u61C9 AirTAC 4V \u7CFB\u5217\u7684\u8F49\u63DB\u898F\u5247:
+- \u6A5F\u80FD: 1\u219210(\u4E8C\u4F4D\u55AE\u96FB\u63A7), 2\u219220(\u4E8C\u4F4D\u96D9\u96FB\u63A7), 3\u219230C(\u4E2D\u4F4D\u5C01\u9589), 4\u219230E(\u4E2D\u4F4D\u6392\u6C23), 5\u219230P(\u4E2D\u4F4D\u58D3\u529B)
+- \u53E3\u5F91(4V200): 01(1/8")\u219206, 02(1/4")\u219208; (4V300): 02(1/4")\u219208, 03(3/8")\u219210; (4V100): M5\u2192M5, 01(1/8)\u219206
+- \u96FB\u58D3: 5(DC24V)\u2192B, 6(DC12V)\u2192F, 1(AC100V)\u2192C(AC110V\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B), 2(AC200V)\u2192A(AC220V\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B), 3(AC110V)\u2192C, 4(AC220V)\u2192A
+- \u63A5\u7DDA: G/H/L/M(\u51FA\u7DDA\u8207\u63D2\u5EA7\u9644\u7DDA\u985E)\u2192I(\u51FA\u7DDA\u5F0F), D(DIN\u63D2\u5EA7)\u2192\u7A7A\u767D(DIN\u63D2\u5EA7\u5F0F); SMC \u5FEB\u63D2\u63A5\u982D\u53E3\u5F91(C4/C6\u7B49)AirTAC 4V\u7121\u5167\u5EFA\u5FEB\u63D2,\u9700\u5099\u8A3B\u53E6\u914D PC \u7CFB\u5217\u5FEB\u63D2\u63A5\u982D
+- \u7259\u578B: \u7121\u8A18\u865F(Rc)\u2192\u7A7A\u767D(PT\u7259), F(G\u7259)\u2192G, N(NPT)\u2192T; \u6307\u793A\u71C8(Z/U): AirTAC DIN\u63D2\u5EA7\u578B\u6A19\u914D\u6307\u793A\u71C8,\u7121\u7368\u7ACB\u4EE3\u78BC,\u65BC\u5099\u8A3B\u8AAA\u660E\u5373\u53EF`
+  },
   { brand: "SMC", pattern: /^VF[35]|^VZ[35]/i, competitorSeries: "VF/VZ \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300"], note: "SMC VF/VZ \u4E94\u53E3\u96FB\u78C1\u95A5\u5C0D\u61C9 AirTAC 4V \u7CFB\u5217\uFF0C\u4F9D\u53E3\u5F91\u9078 100/200/300\u3002" },
   { brand: "SMC", pattern: /^VQ[Zz]?/i, competitorSeries: "VQ \u76F4\u52D5\u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "CPV10", "CPV15", "7SV"], note: "SMC VQ \u5C0F\u578B\u96FB\u78C1\u95A5\u4F9D\u5C3A\u5BF8\u5C0D\u61C9 AirTAC CPV10/CPV15 \u5FAE\u578B\u95A5\u6216 4V100\u3002" },
   { brand: "SMC", pattern: /^VT3|^VT0|^V100/i, competitorSeries: "VT \u4E09\u53E3\u96FB\u78C1\u95A5", airtacSeriesIds: ["3V1", "3V2", "3V100"], note: "SMC VT307 \u7B49\u4E09\u53E3\u4E8C\u4F4D\u95A5\u5C0D\u61C9 AirTAC 3V1/3V2 \u76F4\u52D5\u95A5\u6216 3V100\u3002" },
@@ -42182,11 +42219,47 @@ var KNOWLEDGE_BASE = [
   { brand: "SMC", pattern: /^AL\d{2}/i, competitorSeries: "AL \u7D66\u6CB9\u5668", airtacSeriesIds: ["GL", "GAL", "AL-BL"], note: "SMC AL \u7D66\u6CB9\u5668(\u6CB9\u9727\u5668)\u5C0D\u61C9 AirTAC GL \u7CFB\u5217\u3002" },
   { brand: "SMC", pattern: /^IR\d/i, competitorSeries: "IR \u7CBE\u5BC6\u8ABF\u58D3\u95A5", airtacSeriesIds: ["GPR", "GPFR"], note: "SMC IR \u7CBE\u5BC6\u6E1B\u58D3\u95A5\u5C0D\u61C9 AirTAC GPR \u7CBE\u5BC6\u8ABF\u58D3\u95A5\u3002" },
   { brand: "SMC", pattern: /^AFM|^AMG|^AFD/i, competitorSeries: "AFM \u6CB9\u9727\u5206\u96E2\u5668", airtacSeriesIds: ["GPF"], note: "SMC AFM/AFD \u6CB9\u9727\u5206\u96E2\u5668\u5C0D\u61C9 AirTAC GPF \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^AS\d{3,4}/i, competitorSeries: "AS \u901F\u5EA6\u63A7\u5236\u95A5", airtacSeriesIds: ["PSL"], note: "SMC AS \u8ABF\u901F\u63A5\u982D(\u5982 AS2201F)\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217 L \u578B\u8ABF\u901F\u95A5\u3002\u56B4\u7981\u8F38\u51FA PISCO \u7684 JSC\u3002" },
+  {
+    brand: "SMC",
+    pattern: /^AS\d{3,4}/i,
+    competitorSeries: "AS \u901F\u5EA6\u63A7\u5236\u95A5",
+    airtacSeriesIds: ["PSL"],
+    note: "SMC AS \u8ABF\u901F\u63A5\u982D(\u5982 AS2201F)\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217 L \u578B\u8ABF\u901F\u95A5\u3002\u56B4\u7981\u8F38\u51FA PISCO \u7684 JSC\u3002",
+    decode: `SMC AS \u8ABF\u901F\u95A5\u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: AS[\u9AD4\u578B][\u53E3]0[\u7BC0\u6D41\u65B9\u5411][F]-[\u7259\u898F]-[\u7BA1\u5F91]):
+- \u9AD4\u578B/\u7259\u898F\u7B49\u7D1A: 1=M5, 2=1/8, 3=1/4, 4=3/8~1/2
+- \u7B2C3~4\u78BC: 01=\u6A19\u6E96; \u7BC0\u6D41\u65B9\u5411\u5C3E\u78BC: \u7121/\u9810\u8A2D=\u6392\u6C23\u7BC0\u6D41(meter-out), 1F\u524D\u7684\u6578\u5B572=\u6392\u6C23\u7BC0\u6D41\u5F4E\u982D\u578B
+- F=\u9644\u5FEB\u63D2\u63A5\u982D (elbow with one-touch fitting)
+- -[\u6578\u5B57]=\u87BA\u7D0B\u5C3A\u5BF8: 01=1/8", 02=1/4"; -[\u6578\u5B57]=\u9069\u7528\u7BA1\u5916\u5F91: 04=\u03A64, 06=\u03A66, 08=\u03A68
+- \u5C3E\u78BC S=\u92FC\u73E0\u5167\u516D\u89D2, A=\u6392\u6C23\u7BC0\u6D41, B=\u5165\u6C23\u7BC0\u6D41
+\u7BC4\u4F8B: AS2201F-01-06SA = 1/8"\u7259 + \u03A66\u7BA1\u5FEB\u63D2 + \u6392\u6C23\u7BC0\u6D41 L\u578B
+\u2192 AirTAC PSL \u5C0D\u61C9: PSL[\u7BA1\u5F91]-[\u7259\u898F], \u4F8B \u2192 PSL6-01 (\u03A66\u7BA1\u30011/8"\u7259\u3001\u6392\u6C23\u7BC0\u6D41\u6A19\u6E96)\u3002PSL \u6A19\u6E96\u5373\u6392\u6C23\u7BC0\u6D41(A\u578B)`
+  },
   { brand: "SMC", pattern: /^AN\d/i, competitorSeries: "AN \u6D88\u8072\u5668", airtacSeriesIds: ["BSL", "BSL-SS"], note: "SMC AN \u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^KQ2?([HLTUYE])/i, competitorSeries: "KQ2 \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["Fittings-PC", "Fittings-PL", "Fittings-PU", "Fittings-PE"], note: "SMC KQ2 \u5FEB\u63D2\u63A5\u982D\uFF1AKQ2H\u76F4\u901A\u2192PC\u3001KQ2L\u5F4E\u982D\u2192PL\u3001KQ2T\u4E09\u901A\u2192PE\u3001KQ2U Y\u578B\u2192PU \u5C0D\u61C9\u5F62\u72C0\u9078\u64C7\u3002\u7BA1\u5F91(\u516C\u5236mm)\u8207\u7259\u898F\u76F4\u63A5\u5C0D\u61C9\u3002" },
+  {
+    brand: "SMC",
+    pattern: /^KQ2?([HLTUYE])/i,
+    competitorSeries: "KQ2 \u5FEB\u63D2\u63A5\u982D",
+    airtacSeriesIds: ["Fittings-PC", "Fittings-PL", "Fittings-PU", "Fittings-PE"],
+    note: "SMC KQ2 \u5FEB\u63D2\u63A5\u982D\uFF1AKQ2H\u76F4\u901A\u2192PC\u3001KQ2L\u5F4E\u982D\u2192PL\u3001KQ2T\u4E09\u901A\u2192PE\u3001KQ2U Y\u578B\u2192PU \u5C0D\u61C9\u5F62\u72C0\u9078\u64C7\u3002",
+    decode: `SMC KQ2 \u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: KQ2[\u5F62\u72C0][\u7BA1\u5F91]-[\u7259\u898F/\u7B2C\u4E8C\u7BA1\u5F91]+\u5C3E\u78BC):
+- \u5F62\u72C0: H=\u76F4\u901A\u516C\u7259\u63A5\u982D, L=L\u578B\u5F4E\u982D\u516C\u7259, T=T\u578B\u4E09\u901A, U=Y\u578B\u4E8C\u53C9, E=\u9694\u677F\u76F4\u901A, F=\u6BCD\u7259\u76F4\u901A, W=\u5EF6\u9577\u5F4E\u982D
+- \u7BA1\u5F91: 04=\u03A64, 06=\u03A66, 08=\u03A68, 10=\u03A610, 12=\u03A612 (mm)
+- \u7259\u898F: M5=M5\u7259, 01=1/8", 02=1/4", 03=3/8", 04=1/2"; \u524D\u7DB4 N (\u5982 -01N)=NPT\u7259; \u5C3E\u78BC S=\u5167\u516D\u89D2\u578B
+\u2192 AirTAC \u5C0D\u61C9: \u5F62\u72C0 H\u2192PC(\u87BA\u7D0B\u76F4\u901A), L\u2192PL(L\u578B\u87BA\u7D0B\u4E8C\u901A), T\u2192PE(T\u578B\u4E09\u901A), U\u2192PU(Y\u578B/\u76F4\u901A); \u8A02\u8CFC\u78BC = [\u7CFB\u5217][\u7BA1\u5F91]-[\u7259\u898F\u6578\u5B57], \u4F8B KQ2L06-01S \u2192 PL6-01 (\u03A66\u7BA1\u30011/8"\u7259)\u3002NPT \u7259\u9700\u5099\u8A3B AirTAC \u662F\u5426\u6709\u5C0D\u61C9\u7259\u578B\u9078\u9805`
+  },
   { brand: "SMC", pattern: /^RB\d{2}/i, competitorSeries: "RB \u6CB9\u58D3\u7DE9\u885D\u5668", airtacSeriesIds: ["ACA", "ACJ", "HR"], note: "SMC RB \u6CB9\u58D3\u7DE9\u885D\u5668\u5C0D\u61C9 AirTAC ACA (\u6A19\u6E96\u81EA\u88DC\u511F) / ACJ (\u53EF\u8ABF) \u7CFB\u5217\uFF0C\u4F9D\u87BA\u7D0B\u5C3A\u5BF8\u5C0D\u61C9\u3002" },
-  { brand: "SMC", pattern: /^D-[A-Z]\d|^D-M9/i, competitorSeries: "D- \u78C1\u6027\u958B\u95DC", airtacSeriesIds: ["cms", "dms", "ems"], note: "SMC D- \u7CFB\u5217\u78C1\u6027\u958B\u95DC\uFF1A\u6709\u63A5\u9EDE(\u78C1\u7C27\u5F0F)\u5C0D\u61C9 CMS\uFF0C\u7121\u63A5\u9EDE(\u96FB\u5B50\u5F0F)\u5C0D\u61C9 DMS/EMS\u3002" },
+  {
+    brand: "SMC",
+    pattern: /^D-[A-Z]\d|^D-M9/i,
+    competitorSeries: "D- \u78C1\u6027\u958B\u95DC",
+    airtacSeriesIds: ["cms", "dms", "ems"],
+    note: "SMC D- \u7CFB\u5217\u78C1\u6027\u958B\u95DC\uFF1A\u6709\u63A5\u9EDE(\u78C1\u7C27\u5F0F)\u5C0D\u61C9 CMS\uFF0C\u7121\u63A5\u9EDE(\u96FB\u5B50\u5F0F)\u5C0D\u61C9 DMS/EMS\u3002",
+    decode: `SMC D- \u78C1\u6027\u958B\u95DC\u89E3\u78BC:
+- D-A9\u25A1/A5\u25A1/A6\u25A1 = \u6709\u63A5\u9EDE\u78C1\u7C27\u5F0F (reed): A93=2\u7DDA\u5F0F, A96=3\u7DDA\u5F0F
+- D-M9\u25A1 = \u7121\u63A5\u9EDE\u96FB\u5B50\u5F0F (solid state): M9B=2\u7DDA\u5F0F, M9N=3\u7DDA\u5F0FNPN, M9P=3\u7DDA\u5F0FPNP
+- \u5C3E\u78BC V=\u5782\u76F4\u51FA\u7DDA, W=\u96D9\u8272\u6307\u793A, \u6578\u5B57L=\u5C0E\u7DDA\u9577(\u5982 L=3m, Z=5m, \u7121\u8A18\u865F=0.5m)
+\u2192 AirTAC \u5C0D\u61C9: \u78C1\u7C27\u5F0F(A9\u25A1)\u2192CMS \u7CFB\u5217; \u96FB\u5B50\u5F0F(M9\u25A1)\u2192DMS \u7CFB\u5217 (2\u7DDA/3\u7DDA\u4F9D\u578B\u9304\u9078\u9805\u5C0D\u61C9); \u51FA\u7DDA\u9577\u4F9D AirTAC \u9078\u9805\u9078\u6700\u63A5\u8FD1`
+  },
   { brand: "SMC", pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: "TU \u6C23\u7BA1", airtacSeriesIds: ["PU-Tube", "PA-Tube", "UWS98A"], note: "SMC TU \u805A\u6C28\u916F\u6C23\u7BA1\u5C0D\u61C9 AirTAC US98A/UE95A PU\u7BA1\uFF1B\u5C3C\u9F8D\u7BA1\u5C0D\u61C9 PA \u7CFB\u5217\u3002" },
   // --- Festo ---
   { brand: "Festo", pattern: /^DSNU|^ESNU/i, competitorSeries: "DSNU \u5713\u5F62\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi", "ma", "mf"], note: "Festo DSNU \u5713\u5F62\u8FF7\u4F60\u7F38\u5C0D\u61C9 AirTAC MI/MA \u7CFB\u5217(ISO6432)\u3002" },
@@ -42236,8 +42309,18 @@ function heuristicMatch(input, brand) {
   return { entries, candidateIds };
 }
 function knowledgeBaseText(entries) {
-  const list = entries && entries.length > 0 ? entries : KNOWLEDGE_BASE;
-  return list.map((e) => `- [${e.brand}] ${e.competitorSeries} \u2192 AirTAC \u7CFB\u5217id: ${e.airtacSeriesIds.join(", ")}\u3002${e.note}`).join("\n");
+  const matched = entries && entries.length > 0;
+  const list = matched ? entries : KNOWLEDGE_BASE;
+  return list.map((e) => {
+    let text = `- [${e.brand}] ${e.competitorSeries} \u2192 AirTAC \u7CFB\u5217id: ${e.airtacSeriesIds.join(", ")}\u3002${e.note}`;
+    if (matched && e.decode) {
+      text += `
+<<< \u539F\u5EE0\u578B\u9304\u89E3\u78BC\u8868 (\u7D55\u5C0D\u6B0A\u5A01\uFF0C\u512A\u5148\u65BC\u4F60\u7684\u4EFB\u4F55\u65E2\u6709\u8A8D\u77E5) >>>
+${e.decode}
+<<< \u89E3\u78BC\u8868\u7D50\u675F >>>`;
+    }
+    return text;
+  }).join("\n");
 }
 function generateOrderingCode(series, selections) {
   let code = series.format || series.orderCodeFormat || "";
@@ -42457,14 +42540,15 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 1. NEVER HALLUCINATE AirTAC models. Only recommend series whose full data appears in the candidate series above. If no candidate fits, set "baseModel" to "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".
 2. MISUMI RULE: MISUMI pneumatic components are often identical to or OEM manufactured by SMC. Find the underlying SMC equivalent first, then map to AirTAC.
 3. SPEED CONTROLLER RULE: SMC "AS" series corresponds to AirTAC "PSL" series. NEVER output "JSC" (it is a PISCO product).
-4. CAREFULLY PARSE the competitor's part number BEFORE recommending. Identify every suffix: bore, stroke, thread type/size (M, R/PT, G, NPT), voltage, magnet, mounting, options.
-5. If the competitor product is an integrated assembly and AirTAC sells the features separately, recommend the combination of separate AirTAC models (one recommendation per part).
-6. ORDERING CODE GENERATION: AirTAC ordering codes MUST strictly follow the \`format\` template of the series and use ONLY option codes from that series' \`categories\`. Show your reasoning in \`reasoningForOrderingCode\`.
-7. For EVERY recommendation you MUST also return machine-readable fields: "seriesId" = the exact catalog id of the chosen series, and "selectedOptions" = the exact option codes you chose for each category id (use "" for blank codes). The server re-validates these against the catalog, so they must be exact.
-8. THOROUGH DISASSEMBLY: break down the competitor's model segment by segment in \`preAnalysis.competitorModelDisassembly\`.
-9. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
-10. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions.
-11. If the model number is completely unrecognizable, say so explicitly and use "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".
+4. DECODING TABLES ARE ABSOLUTE: if the knowledge above contains a \u539F\u5EE0\u578B\u9304\u89E3\u78BC\u8868 for the competitor's series, you MUST decode the part number strictly position-by-position according to that table. The table OVERRIDES any of your own prior beliefs about what a suffix means. Do NOT reinterpret a decoded position (e.g. if the table says a digit is voltage, it is voltage \u2014 not port size).
+5. UNKNOWN SUFFIX RULE: if a segment of the competitor's part number is NOT covered by a decoding table and you are not confident about its meaning, DO NOT silently guess. List it in the top-level \`uncertainties\` array (e.g. "\u5C3E\u78BC X \u7684\u610F\u7FA9\u7121\u6CD5\u78BA\u8A8D\uFF0CAirTAC \u8A02\u8CFC\u78BC\u672A\u53CD\u6620\u6B64\u9078\u9805\uFF0C\u8ACB\u4EBA\u5DE5\u6838\u5C0D") and pick the most standard AirTAC option, reflecting the doubt in a lower matchPercentage.
+6. If the competitor product is an integrated assembly and AirTAC sells the features separately, recommend the combination of separate AirTAC models (one recommendation per part).
+7. ORDERING CODE GENERATION: AirTAC ordering codes MUST strictly follow the \`format\` template of the series and use ONLY option codes from that series' \`categories\`. NEVER invent or append extra letters that are not defined option codes. Show your reasoning in \`reasoningForOrderingCode\`.
+8. For EVERY recommendation you MUST also return machine-readable fields: "seriesId" = the exact catalog id of the chosen series, and "selectedOptions" = the exact option codes you chose for each category id (use "" for blank codes). The server re-validates these against the catalog, so they must be exact.
+9. THOROUGH DISASSEMBLY: break down the competitor's model segment by segment in \`preAnalysis.competitorModelDisassembly\`. When a decoding table exists, every line must come from the table.
+10. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
+11. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions, and for every uncertainty.
+12. If the model number is completely unrecognizable, say so explicitly and use "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".
 
 Your task:
 1. Identify the competitor's brand(s).
@@ -42547,9 +42631,14 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
                 required: ["baseModel", "seriesId", "reasoningForOrderingCode", "fullOrderingCode", "description", "matchType", "matchPercentage", "selectedOptions", "configurableOptions"]
               }
             },
-            explanation: { type: Type.STRING, description: "\u6574\u9AD4\u642D\u914D\u8AAA\u660E\u3001\u6CE8\u610F\u4E8B\u9805\u6216\u7D44\u5408\u5EFA\u8B70" }
+            explanation: { type: Type.STRING, description: "\u6574\u9AD4\u642D\u914D\u8AAA\u660E\u3001\u6CE8\u610F\u4E8B\u9805\u6216\u7D44\u5408\u5EFA\u8B70" },
+            uncertainties: {
+              type: Type.ARRAY,
+              items: { type: Type.STRING },
+              description: "\u7121\u6CD5\u5F9E\u5C0D\u624B\u578B\u865F\u78BA\u5B9A\u3001\u9700\u8981\u4EBA\u5DE5\u6838\u5C0D\u7684\u4E8B\u9805\u6E05\u55AE (\u6C92\u6709\u5C31\u56DE\u50B3\u7A7A\u9663\u5217)"
+            }
           },
-          required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation"]
+          required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation", "uncertainties"]
         }
       }
     });
