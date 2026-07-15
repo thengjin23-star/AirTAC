@@ -46263,30 +46263,36 @@ function getAi() {
   }
   return aiClient;
 }
-var FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"];
+var FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-3-flash-preview"];
 var catalogIndex = buildCatalogIndex();
 var catalogIndexJson = JSON.stringify(catalogIndex);
 var slimIndexJson = JSON.stringify(
   catalogIndex.map(({ id, code, name, category, group }) => ({ id, code, name, category, group }))
 );
+var modelCooldown = /* @__PURE__ */ new Map();
+var COOLDOWN_MS = 90 * 1e3;
+var isCoolingDown = (m) => (modelCooldown.get(m) || 0) > Date.now();
 async function generateWithRetry(params) {
   const ai = getAi();
   const primary = params.model;
-  const modelChain = [primary, ...FALLBACK_MODELS.filter((m) => m !== primary)];
+  const rawChain = [primary, ...FALLBACK_MODELS.filter((m) => m !== primary)];
+  const modelChain = [...rawChain.filter((m) => !isCoolingDown(m)), ...rawChain.filter(isCoolingDown)];
   let lastError = null;
   for (const model of modelChain) {
     let retries = 2;
     let delay = 1500;
     while (retries > 0) {
       try {
-        return await ai.models.generateContent({ ...params, model });
+        const config = /2\.5-flash/.test(model) ? { ...params.config, thinkingConfig: { thinkingBudget: 0 } } : params.config;
+        return await ai.models.generateContent({ ...params, model, config });
       } catch (error) {
         lastError = error;
         const errStr = String(error.message || "").toLowerCase();
         const quotaOrGone = error.status === 429 || errStr.includes("429") || errStr.includes("quota") || error.status === 404 || errStr.includes("not found") || errStr.includes("no longer available");
         const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
         if (quotaOrGone) {
-          console.log(`Model ${model} unavailable (quota/404), falling back...`);
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} unavailable (quota/404), cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
           break;
         }
         if (overloaded && retries > 1) {
@@ -46297,7 +46303,8 @@ async function generateWithRetry(params) {
           continue;
         }
         if (overloaded) {
-          console.log(`Model ${model} still busy, falling back...`);
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} still busy, cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
           break;
         }
         throw error;

@@ -49089,33 +49089,39 @@ function getAi() {
   }
   return aiClient;
 }
-var MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-2.5-flash";
+var MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 var CLASSIFIER_MODEL = () => process.env.GEMINI_CLASSIFIER_MODEL || "gemini-3.1-flash-lite";
-var FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"];
+var FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-3-flash-preview"];
 var catalogIndex = buildCatalogIndex();
 var catalogIndexJson = JSON.stringify(catalogIndex);
 var slimIndexJson = JSON.stringify(
   catalogIndex.map(({ id, code, name, category, group }) => ({ id, code, name, category, group }))
 );
 var cache = /* @__PURE__ */ new Map();
+var modelCooldown = /* @__PURE__ */ new Map();
+var COOLDOWN_MS = 90 * 1e3;
+var isCoolingDown = (m) => (modelCooldown.get(m) || 0) > Date.now();
 async function generateWithRetry(params) {
   const ai = getAi();
   const primary = params.model;
-  const modelChain = [primary, ...FALLBACK_MODELS.filter((m) => m !== primary)];
+  const rawChain = [primary, ...FALLBACK_MODELS.filter((m) => m !== primary)];
+  const modelChain = [...rawChain.filter((m) => !isCoolingDown(m)), ...rawChain.filter(isCoolingDown)];
   let lastError = null;
   for (const model of modelChain) {
     let retries = 2;
     let delay = 1500;
     while (retries > 0) {
       try {
-        return await ai.models.generateContent({ ...params, model });
+        const config = /2\.5-flash/.test(model) ? { ...params.config, thinkingConfig: { thinkingBudget: 0 } } : params.config;
+        return await ai.models.generateContent({ ...params, model, config });
       } catch (error) {
         lastError = error;
         const errStr = String(error.message || "").toLowerCase();
         const quotaOrGone = error.status === 429 || errStr.includes("429") || errStr.includes("quota") || error.status === 404 || errStr.includes("not found") || errStr.includes("no longer available");
         const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
         if (quotaOrGone) {
-          console.log(`Model ${model} unavailable (quota/404), falling back...`);
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} unavailable (quota/404), cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
           break;
         }
         if (overloaded && retries > 1) {
@@ -49126,7 +49132,8 @@ async function generateWithRetry(params) {
           continue;
         }
         if (overloaded) {
-          console.log(`Model ${model} still busy, falling back...`);
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} still busy, cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
           break;
         }
         throw error;
@@ -49218,18 +49225,22 @@ ${hints}`;
 ${hints}`;
     }
     let candidateIds = [...companyIds];
-    let classifierInfo = {};
-    try {
-      const stage1 = await selectCandidateSeries(competitorModel, brand, [...companyIds, ...heuristic.candidateIds], hints);
-      for (const id of stage1.ids) {
-        if (!candidateIds.includes(id)) candidateIds.push(id);
-      }
-      classifierInfo = stage1;
-    } catch (e) {
-      console.error("Stage-1 classifier failed, falling back to heuristics:", e.message || e);
-    }
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
+    }
+    let classifierInfo = {};
+    if (candidateIds.length < 2) {
+      try {
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints);
+        for (const id of stage1.ids) {
+          if (!candidateIds.includes(id)) candidateIds.push(id);
+        }
+        classifierInfo = stage1;
+      } catch (e) {
+        console.error("Stage-1 classifier failed, falling back to heuristics:", e.message || e);
+      }
+    } else {
+      console.log(`Stage-1 skipped: ${candidateIds.length} candidates from knowledge base / company table`);
     }
     candidateIds = candidateIds.slice(0, 15);
     const candidateSeries = getSeriesDetails(candidateIds);
@@ -49238,9 +49249,7 @@ ${hints}`;
     const catalogSection = candidateSeries.length > 0 ? `=== AIRTAC CANDIDATE SERIES (FULL CATALOG DATA) ===
 ${candidateJson}
 ===================================================
-
-Also, for context, this COMPACT INDEX lists everything AirTAC offers (so you know what exists beyond the candidates \u2014 but you may ONLY recommend series whose FULL DATA is provided above, or output "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F"):
-${slimIndexJson}` : `No candidate series were found in the AirTAC catalog for this model. Here is the compact index of everything AirTAC offers:
+You may ONLY recommend series whose FULL DATA is provided above. If none of them genuinely fits the competitor product, output "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".` : `No candidate series were found in the AirTAC catalog for this model. Here is the compact index of everything AirTAC offers:
 ${slimIndexJson}
 If truly nothing matches, set baseModel to "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".`;
     const prompt = `You are a pneumatic components expert and sales assistant strictly for AirTAC (\u4E9E\u5FB7\u5BA2).
@@ -49276,6 +49285,8 @@ Your task:
 3. Complete the pre-analysis (disassembly + AirTAC rule mapping).
 4. Recommend the equivalent AirTAC model(s) from the candidate series with matchType (\u76F4\u63A5\u66FF\u63DB, \u76F8\u4F3C\u66FF\u4EE3, or \u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F), full ordering code, seriesId + selectedOptions, configurable options with suggestions, and matchPercentage.
 5. Provide an overall explanation of the matching strategy and any spec differences the user must verify.
+
+OUTPUT LENGTH: be precise but CONCISE \u2014 each disassembly/mapping line under 40 Chinese characters; reasoningForOrderingCode under 150 characters; configurableOptions "options" field is a short summary, not a full list. Brevity speeds up the response without losing accuracy.
 
 Return JSON matching the schema. ALL text output MUST be accurate Traditional Chinese (\u7E41\u9AD4\u4E2D\u6587).`;
     const response = await generateWithRetry({
