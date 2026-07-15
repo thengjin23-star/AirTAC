@@ -4017,960 +4017,10 @@
   ]
  },
  {
-  "id": "hft",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFT系列",
-  "code": "HFT",
-  "name": "大口徑開口夾(復動型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     },
-     {
-      "code": "80",
-      "description": "80mm"
-     },
-     {
-      "code": "100",
-      "description": "100mm"
-     },
-     {
-      "code": "150",
-      "description": "150mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     },
-     {
-      "code": "T",
-      "description": "T: NPT牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfd",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFD系列",
-  "code": "HFD",
-  "name": "薄型氣動手指",
-  "format": "{code} {bore}X{stroke}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     },
-     {
-      "code": "80",
-      "description": "80mm"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfp",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFP系列",
-  "code": "HFP",
-  "name": "機械式平行型氣動手指(復動型)",
-  "format": "{code} {bore} {type}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "type",
-    "name": "夾爪可選種類",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hftp",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFP系列",
-  "code": "HFTP",
-  "name": "機械式平行型氣動手指(單動常開型)",
-  "format": "{code} {bore} {type}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "type",
-    "name": "夾爪可選種類",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfy",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFY系列",
-  "code": "HFY",
-  "name": "Y型氣動手指(標準復動型)",
-  "format": "{code} {bore}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfty",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFY系列",
-  "code": "HFTY",
-  "name": "Y型氣動手指(單動常開型)",
-  "format": "{code} {bore}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfr",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFR系列",
-  "code": "HFR",
-  "name": "180°開閉型氣動手指",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝方式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "N",
-      "description": "N: 開閉方向通孔安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfcq",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFCQ系列",
-  "code": "HFCQ",
-  "name": "平行開閉中空型氣動手指",
-  "format": "{code} {bore} {pusher}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "pusher",
-    "name": "推杆機構",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無推杆"
-     },
-     {
-      "code": "E",
-      "description": "E: 氣缸式推杆"
-     },
-     {
-      "code": "V",
-      "description": "V: 彈簧式推杆"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfc",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFC系列",
-  "code": "HFC",
-  "name": "平行開閉型氣動手指",
-  "format": "{code} {jaw} {bore}",
-  "categories": [
-   {
-    "id": "jaw",
-    "name": "夾爪可選種類",
-    "options": [
-     {
-      "code": "I",
-      "description": "I: 兩爪"
-     },
-     {
-      "code": "Y",
-      "description": "Y: 三爪"
-     },
-     {
-      "code": "X",
-      "description": "X: 四爪"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfkp",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFKP系列",
-  "code": "HFKP",
-  "name": "防塵帶導軌平行型氣動手指(滾柱型)",
-  "format": "{code} {bore}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfkl",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFKL系列",
-  "code": "HFKL",
-  "name": "帶導軌平行型氣動手指(長行程滾柱型)(復動)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfskl",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFKL系列",
-  "code": "HFSKL",
-  "name": "帶導軌平行型氣動手指(長行程滾柱型)(單動常閉)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hftkl",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFKL系列",
-  "code": "HFTKL",
-  "name": "帶導軌平行型氣動手指(長行程滾柱型)(單動常開)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfz",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
-  "code": "HFZ",
-  "name": "帶導軌平行型氣動手指(滾珠型)(復動)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hfsz",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
-  "code": "HFSZ",
-  "name": "帶導軌平行型氣動手指(滾珠型)(單動常閉)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hftz",
-  "category": "執行元件",
-  "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
-  "code": "HFTZ",
-  "name": "帶導軌平行型氣動手指(滾珠型)(單動常開)",
-  "format": "{code} {bore} {install}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "install",
-    "name": "安裝型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 標準型"
-     },
-     {
-      "code": "B",
-      "description": "B: 側面安裝型"
-     },
-     {
-      "code": "N",
-      "description": "N: 通孔安裝型"
-     },
-     {
-      "code": "F",
-      "description": "F: 底部安裝型"
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "hfk",
   "category": "執行元件",
   "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
+  "group": "HFK系列",
   "code": "HFK",
   "name": "帶導軌平行型氣動手指(滾柱型)(復動)",
   "format": "{code} {bore} {install}",
@@ -5045,7 +4095,7 @@
   "id": "hfsk",
   "category": "執行元件",
   "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
+  "group": "HFK系列",
   "code": "HFSK",
   "name": "帶導軌平行型氣動手指(滾柱型)(單動常閉)",
   "format": "{code} {bore} {install}",
@@ -5120,7 +4170,7 @@
   "id": "hftk",
   "category": "執行元件",
   "superGroup": "氣動手指",
-  "group": "HFZ/HFK系列",
+  "group": "HFK系列",
   "code": "HFTK",
   "name": "帶導軌平行型氣動手指(滾柱型)(單動常開)",
   "format": "{code} {bore} {install}",
@@ -13266,5 +12316,731 @@
   ],
   "note": "當接管為M5牙時，此項代碼為空。",
   "sourceFile": "執行元件型錄 P.344"
+ },
+ {
+  "id": "hfc",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFC系列",
+  "code": "",
+  "name": "HFC系列 平行開閉型氣動手指",
+  "format": "{series}{type}{bore}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HFC",
+      "description": "復動平行開閉型氣動手指"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "夾爪可選種類",
+    "options": [
+     {
+      "code": "I",
+      "description": "兩爪"
+     },
+     {
+      "code": "Y",
+      "description": "三爪"
+     },
+     {
+      "code": "X",
+      "description": "四爪"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   }
+  ],
+  "note": "HFC全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.327"
+ },
+ {
+  "id": "hfcq",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFCQ系列",
+  "code": "HFCQ",
+  "name": "HFCQ系列 平行開閉中空型氣動手指",
+  "format": "HFCQ{bore}{push_type}",
+  "categories": [
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "push_type",
+    "name": "推桿機構",
+    "options": [
+     {
+      "code": "",
+      "description": "無"
+     },
+     {
+      "code": "E",
+      "description": "氣缸式推桿"
+     },
+     {
+      "code": "V",
+      "description": "彈簧式推桿"
+     }
+    ]
+   }
+  ],
+  "note": "推桿機構適用於缸徑Φ32~Φ63；HFCQ全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.283"
+ },
+ {
+  "id": "hfd",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFD系列",
+  "code": "HFD",
+  "name": "HFD系列 薄型氣動手指",
+  "format": "HFD{bore}X{stroke}",
+  "categories": [
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "15",
+      "description": "15mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "60",
+      "description": "60mm"
+     },
+     {
+      "code": "80",
+      "description": "80mm"
+     }
+    ]
+   }
+  ],
+  "note": "HFD全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.275"
+ },
+ {
+  "id": "hfkl",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFKL系列",
+  "code": "",
+  "name": "HFKL系列 帶導軌平行型長行程滾柱型氣動手指",
+  "format": "{series}{bore}{type}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HFKL",
+      "description": "帶導軌平行型氣動手指(標準復動滾柱型)"
+     },
+     {
+      "code": "HFSKL",
+      "description": "帶導軌平行型氣動手指(單動常閉滾柱型)"
+     },
+     {
+      "code": "HFTKL",
+      "description": "帶導軌平行型氣動手指(單動常開滾柱型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "夾爪可選種類",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "B",
+      "description": "側面安裝型"
+     },
+     {
+      "code": "N",
+      "description": "通孔安裝型"
+     },
+     {
+      "code": "F",
+      "description": "底部安裝型"
+     },
+     {
+      "code": "R",
+      "description": "爪寬窄型"
+     },
+     {
+      "code": "W",
+      "description": "側面安裝且爪寬窄型"
+     },
+     {
+      "code": "M",
+      "description": "通孔安裝且爪寬窄型"
+     }
+    ]
+   }
+  ],
+  "note": "HFK系列均為附磁型，所配傳感器需另外訂購。",
+  "sourceFile": "執行元件型錄(氣動手指) P.304"
+ },
+ {
+  "id": "hfkp",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFKP系列",
+  "code": "HFKP",
+  "name": "HFKP系列 防塵帶導軌平行型滾柱型氣動手指",
+  "format": "HFKP{bore}{type}",
+  "categories": [
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "夾爪可選種類",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     }
+    ]
+   }
+  ],
+  "note": "HFKP全系列均為附磁型，所配傳感器需另外訂購。",
+  "sourceFile": "執行元件型錄(氣動手指) P.310"
+ },
+ {
+  "id": "hfp",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFP系列",
+  "code": "",
+  "name": "HFP系列 機械式平行氣動手指",
+  "format": "{series}{bore}{type}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HFP",
+      "description": "標準復動機械式平行氣動手指"
+     },
+     {
+      "code": "HFTP",
+      "description": "單動常開機械式平行氣動手指"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "夾爪可選種類",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "N",
+      "description": "通孔安裝型"
+     }
+    ]
+   }
+  ],
+  "note": "HFP全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.317"
+ },
+ {
+  "id": "hfy",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFY系列",
+  "code": "",
+  "name": "HFY系列 Y型氣動手指",
+  "format": "{series}{bore}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HFY",
+      "description": "標準復動Y型氣動手指"
+     },
+     {
+      "code": "HFTY",
+      "description": "單動常開Y型氣動手指"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   }
+  ],
+  "note": "HFY全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.321"
+ },
+ {
+  "id": "hfr",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFR系列",
+  "code": "HFR",
+  "name": "HFR系列 180°開閉型氣動手指",
+  "format": "HFR{bore}{type}",
+  "categories": [
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "安裝方式",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "N",
+      "description": "開閉方向通孔安裝型"
+     }
+    ]
+   }
+  ],
+  "note": "HFR全系列均為附磁型。",
+  "sourceFile": "執行元件型錄(氣動手指) P.326"
+ },
+ {
+  "id": "hft",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFT系列",
+  "code": "HFT",
+  "name": "HFT系列 大口徑開口夾",
+  "format": "HFT{bore}{stroke}{magnet}{thread}",
+  "categories": [
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "60",
+      "description": "60mm"
+     },
+     {
+      "code": "80",
+      "description": "80mm"
+     },
+     {
+      "code": "100",
+      "description": "100mm"
+     },
+     {
+      "code": "150",
+      "description": "150mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "note": "接管牙型有PT牙、G牙、NPT牙可選。",
+  "sourceFile": "執行元件型錄(氣動手指) P.334"
+ },
+ {
+  "id": "hfz",
+  "category": "執行元件",
+  "superGroup": "氣動手指",
+  "group": "HFZ系列",
+  "code": "",
+  "name": "HFZ系列 帶導軌平行型滾珠型氣動手指",
+  "format": "{series}{bore}{type}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HFZ",
+      "description": "標準復動滾珠型"
+     },
+     {
+      "code": "HFSZ",
+      "description": "單動常閉滾珠型"
+     },
+     {
+      "code": "HFTZ",
+      "description": "單動常開滾珠型"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "夾爪可選種類",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "B",
+      "description": "側面安裝型"
+     },
+     {
+      "code": "N",
+      "description": "通孔安裝型"
+     },
+     {
+      "code": "F",
+      "description": "底部安裝型"
+     }
+    ]
+   }
+  ],
+  "note": "HFZ系列均為附磁型，所配傳感器需另外訂購。",
+  "sourceFile": "執行元件型錄(氣動手指) P.301"
  }
 ]

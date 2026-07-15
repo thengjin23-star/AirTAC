@@ -9881,960 +9881,10 @@ var catalog_actuators_default = [
     ]
   },
   {
-    id: "hft",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFT\u7CFB\u5217",
-    code: "HFT",
-    name: "\u5927\u53E3\u5F91\u958B\u53E3\u593E(\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          },
-          {
-            code: "80",
-            description: "80mm"
-          },
-          {
-            code: "100",
-            description: "100mm"
-          },
-          {
-            code: "150",
-            description: "150mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          },
-          {
-            code: "T",
-            description: "T: NPT\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFD\u7CFB\u5217",
-    code: "HFD",
-    name: "\u8584\u578B\u6C23\u52D5\u624B\u6307",
-    format: "{code} {bore}X{stroke}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          },
-          {
-            code: "80",
-            description: "80mm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfp",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFP\u7CFB\u5217",
-    code: "HFP",
-    name: "\u6A5F\u68B0\u5F0F\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u5FA9\u52D5\u578B)",
-    format: "{code} {bore} {type}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "type",
-        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hftp",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFP\u7CFB\u5217",
-    code: "HFTP",
-    name: "\u6A5F\u68B0\u5F0F\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u55AE\u52D5\u5E38\u958B\u578B)",
-    format: "{code} {bore} {type}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "type",
-        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfy",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFY\u7CFB\u5217",
-    code: "HFY",
-    name: "Y\u578B\u6C23\u52D5\u624B\u6307(\u6A19\u6E96\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfty",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFY\u7CFB\u5217",
-    code: "HFTY",
-    name: "Y\u578B\u6C23\u52D5\u624B\u6307(\u55AE\u52D5\u5E38\u958B\u578B)",
-    format: "{code} {bore}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfr",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFR\u7CFB\u5217",
-    code: "HFR",
-    name: "180\xB0\u958B\u9589\u578B\u6C23\u52D5\u624B\u6307",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u958B\u9589\u65B9\u5411\u901A\u5B54\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfcq",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFCQ\u7CFB\u5217",
-    code: "HFCQ",
-    name: "\u5E73\u884C\u958B\u9589\u4E2D\u7A7A\u578B\u6C23\u52D5\u624B\u6307",
-    format: "{code} {bore} {pusher}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "pusher",
-        name: "\u63A8\u6746\u6A5F\u69CB",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u63A8\u6746"
-          },
-          {
-            code: "E",
-            description: "E: \u6C23\u7F38\u5F0F\u63A8\u6746"
-          },
-          {
-            code: "V",
-            description: "V: \u5F48\u7C27\u5F0F\u63A8\u6746"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfc",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFC\u7CFB\u5217",
-    code: "HFC",
-    name: "\u5E73\u884C\u958B\u9589\u578B\u6C23\u52D5\u624B\u6307",
-    format: "{code} {jaw} {bore}",
-    categories: [
-      {
-        id: "jaw",
-        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
-        options: [
-          {
-            code: "I",
-            description: "I: \u5169\u722A"
-          },
-          {
-            code: "Y",
-            description: "Y: \u4E09\u722A"
-          },
-          {
-            code: "X",
-            description: "X: \u56DB\u722A"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfkp",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFKP\u7CFB\u5217",
-    code: "HFKP",
-    name: "\u9632\u5875\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u67F1\u578B)",
-    format: "{code} {bore}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfkl",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFKL\u7CFB\u5217",
-    code: "HFKL",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u9577\u884C\u7A0B\u6EFE\u67F1\u578B)(\u5FA9\u52D5)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfskl",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFKL\u7CFB\u5217",
-    code: "HFSKL",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u9577\u884C\u7A0B\u6EFE\u67F1\u578B)(\u55AE\u52D5\u5E38\u9589)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hftkl",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFKL\u7CFB\u5217",
-    code: "HFTKL",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u9577\u884C\u7A0B\u6EFE\u67F1\u578B)(\u55AE\u52D5\u5E38\u958B)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfz",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
-    code: "HFZ",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u73E0\u578B)(\u5FA9\u52D5)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hfsz",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
-    code: "HFSZ",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u73E0\u578B)(\u55AE\u52D5\u5E38\u9589)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hftz",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
-    code: "HFTZ",
-    name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u73E0\u578B)(\u55AE\u52D5\u5E38\u958B)",
-    format: "{code} {bore} {install}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "install",
-        name: "\u5B89\u88DD\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5074\u9762\u5B89\u88DD\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u901A\u5B54\u5B89\u88DD\u578B"
-          },
-          {
-            code: "F",
-            description: "F: \u5E95\u90E8\u5B89\u88DD\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
     id: "hfk",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
+    group: "HFK\u7CFB\u5217",
     code: "HFK",
     name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u67F1\u578B)(\u5FA9\u52D5)",
     format: "{code} {bore} {install}",
@@ -10909,7 +9959,7 @@ var catalog_actuators_default = [
     id: "hfsk",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
+    group: "HFK\u7CFB\u5217",
     code: "HFSK",
     name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u67F1\u578B)(\u55AE\u52D5\u5E38\u9589)",
     format: "{code} {bore} {install}",
@@ -10984,7 +10034,7 @@ var catalog_actuators_default = [
     id: "hftk",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u6C23\u52D5\u624B\u6307",
-    group: "HFZ/HFK\u7CFB\u5217",
+    group: "HFK\u7CFB\u5217",
     code: "HFTK",
     name: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6EFE\u67F1\u578B)(\u55AE\u52D5\u5E38\u958B)",
     format: "{code} {bore} {install}",
@@ -19130,6 +18180,732 @@ var catalog_actuators_default = [
     ],
     note: "\u7576\u63A5\u7BA1\u70BAM5\u7259\u6642\uFF0C\u6B64\u9805\u4EE3\u78BC\u70BA\u7A7A\u3002",
     sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.344"
+  },
+  {
+    id: "hfc",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFC\u7CFB\u5217",
+    code: "",
+    name: "HFC\u7CFB\u5217 \u5E73\u884C\u958B\u9589\u578B\u6C23\u52D5\u624B\u6307",
+    format: "{series}{type}{bore}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HFC",
+            description: "\u5FA9\u52D5\u5E73\u884C\u958B\u9589\u578B\u6C23\u52D5\u624B\u6307"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
+        options: [
+          {
+            code: "I",
+            description: "\u5169\u722A"
+          },
+          {
+            code: "Y",
+            description: "\u4E09\u722A"
+          },
+          {
+            code: "X",
+            description: "\u56DB\u722A"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      }
+    ],
+    note: "HFC\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.327"
+  },
+  {
+    id: "hfcq",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFCQ\u7CFB\u5217",
+    code: "HFCQ",
+    name: "HFCQ\u7CFB\u5217 \u5E73\u884C\u958B\u9589\u4E2D\u7A7A\u578B\u6C23\u52D5\u624B\u6307",
+    format: "HFCQ{bore}{push_type}",
+    categories: [
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "push_type",
+        name: "\u63A8\u687F\u6A5F\u69CB",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "E",
+            description: "\u6C23\u7F38\u5F0F\u63A8\u687F"
+          },
+          {
+            code: "V",
+            description: "\u5F48\u7C27\u5F0F\u63A8\u687F"
+          }
+        ]
+      }
+    ],
+    note: "\u63A8\u687F\u6A5F\u69CB\u9069\u7528\u65BC\u7F38\u5F91\u03A632~\u03A663\uFF1BHFCQ\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.283"
+  },
+  {
+    id: "hfd",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFD\u7CFB\u5217",
+    code: "HFD",
+    name: "HFD\u7CFB\u5217 \u8584\u578B\u6C23\u52D5\u624B\u6307",
+    format: "HFD{bore}X{stroke}",
+    categories: [
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "15",
+            description: "15mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "60",
+            description: "60mm"
+          },
+          {
+            code: "80",
+            description: "80mm"
+          }
+        ]
+      }
+    ],
+    note: "HFD\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.275"
+  },
+  {
+    id: "hfkl",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFKL\u7CFB\u5217",
+    code: "",
+    name: "HFKL\u7CFB\u5217 \u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u9577\u884C\u7A0B\u6EFE\u67F1\u578B\u6C23\u52D5\u624B\u6307",
+    format: "{series}{bore}{type}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HFKL",
+            description: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u6A19\u6E96\u5FA9\u52D5\u6EFE\u67F1\u578B)"
+          },
+          {
+            code: "HFSKL",
+            description: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u55AE\u52D5\u5E38\u9589\u6EFE\u67F1\u578B)"
+          },
+          {
+            code: "HFTKL",
+            description: "\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6C23\u52D5\u624B\u6307(\u55AE\u52D5\u5E38\u958B\u6EFE\u67F1\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "B",
+            description: "\u5074\u9762\u5B89\u88DD\u578B"
+          },
+          {
+            code: "N",
+            description: "\u901A\u5B54\u5B89\u88DD\u578B"
+          },
+          {
+            code: "F",
+            description: "\u5E95\u90E8\u5B89\u88DD\u578B"
+          },
+          {
+            code: "R",
+            description: "\u722A\u5BEC\u7A84\u578B"
+          },
+          {
+            code: "W",
+            description: "\u5074\u9762\u5B89\u88DD\u4E14\u722A\u5BEC\u7A84\u578B"
+          },
+          {
+            code: "M",
+            description: "\u901A\u5B54\u5B89\u88DD\u4E14\u722A\u5BEC\u7A84\u578B"
+          }
+        ]
+      }
+    ],
+    note: "HFK\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\uFF0C\u6240\u914D\u50B3\u611F\u5668\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.304"
+  },
+  {
+    id: "hfkp",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFKP\u7CFB\u5217",
+    code: "HFKP",
+    name: "HFKP\u7CFB\u5217 \u9632\u5875\u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6EFE\u67F1\u578B\u6C23\u52D5\u624B\u6307",
+    format: "HFKP{bore}{type}",
+    categories: [
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          }
+        ]
+      }
+    ],
+    note: "HFKP\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\uFF0C\u6240\u914D\u50B3\u611F\u5668\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.310"
+  },
+  {
+    id: "hfp",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFP\u7CFB\u5217",
+    code: "",
+    name: "HFP\u7CFB\u5217 \u6A5F\u68B0\u5F0F\u5E73\u884C\u6C23\u52D5\u624B\u6307",
+    format: "{series}{bore}{type}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HFP",
+            description: "\u6A19\u6E96\u5FA9\u52D5\u6A5F\u68B0\u5F0F\u5E73\u884C\u6C23\u52D5\u624B\u6307"
+          },
+          {
+            code: "HFTP",
+            description: "\u55AE\u52D5\u5E38\u958B\u6A5F\u68B0\u5F0F\u5E73\u884C\u6C23\u52D5\u624B\u6307"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "N",
+            description: "\u901A\u5B54\u5B89\u88DD\u578B"
+          }
+        ]
+      }
+    ],
+    note: "HFP\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.317"
+  },
+  {
+    id: "hfy",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFY\u7CFB\u5217",
+    code: "",
+    name: "HFY\u7CFB\u5217 Y\u578B\u6C23\u52D5\u624B\u6307",
+    format: "{series}{bore}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HFY",
+            description: "\u6A19\u6E96\u5FA9\u52D5Y\u578B\u6C23\u52D5\u624B\u6307"
+          },
+          {
+            code: "HFTY",
+            description: "\u55AE\u52D5\u5E38\u958BY\u578B\u6C23\u52D5\u624B\u6307"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      }
+    ],
+    note: "HFY\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.321"
+  },
+  {
+    id: "hfr",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFR\u7CFB\u5217",
+    code: "HFR",
+    name: "HFR\u7CFB\u5217 180\xB0\u958B\u9589\u578B\u6C23\u52D5\u624B\u6307",
+    format: "HFR{bore}{type}",
+    categories: [
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u5B89\u88DD\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "N",
+            description: "\u958B\u9589\u65B9\u5411\u901A\u5B54\u5B89\u88DD\u578B"
+          }
+        ]
+      }
+    ],
+    note: "HFR\u5168\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.326"
+  },
+  {
+    id: "hft",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFT\u7CFB\u5217",
+    code: "HFT",
+    name: "HFT\u7CFB\u5217 \u5927\u53E3\u5F91\u958B\u53E3\u593E",
+    format: "HFT{bore}{stroke}{magnet}{thread}",
+    categories: [
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "60",
+            description: "60mm"
+          },
+          {
+            code: "80",
+            description: "80mm"
+          },
+          {
+            code: "100",
+            description: "100mm"
+          },
+          {
+            code: "150",
+            description: "150mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u63A5\u7BA1\u7259\u578B\u6709PT\u7259\u3001G\u7259\u3001NPT\u7259\u53EF\u9078\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.334"
+  },
+  {
+    id: "hfz",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u624B\u6307",
+    group: "HFZ\u7CFB\u5217",
+    code: "",
+    name: "HFZ\u7CFB\u5217 \u5E36\u5C0E\u8ECC\u5E73\u884C\u578B\u6EFE\u73E0\u578B\u6C23\u52D5\u624B\u6307",
+    format: "{series}{bore}{type}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HFZ",
+            description: "\u6A19\u6E96\u5FA9\u52D5\u6EFE\u73E0\u578B"
+          },
+          {
+            code: "HFSZ",
+            description: "\u55AE\u52D5\u5E38\u9589\u6EFE\u73E0\u578B"
+          },
+          {
+            code: "HFTZ",
+            description: "\u55AE\u52D5\u5E38\u958B\u6EFE\u73E0\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u593E\u722A\u53EF\u9078\u7A2E\u985E",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "B",
+            description: "\u5074\u9762\u5B89\u88DD\u578B"
+          },
+          {
+            code: "N",
+            description: "\u901A\u5B54\u5B89\u88DD\u578B"
+          },
+          {
+            code: "F",
+            description: "\u5E95\u90E8\u5B89\u88DD\u578B"
+          }
+        ]
+      }
+    ],
+    note: "HFZ\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\uFF0C\u6240\u914D\u50B3\u611F\u5668\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.301"
   }
 ];
 
