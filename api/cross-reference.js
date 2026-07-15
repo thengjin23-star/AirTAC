@@ -40545,1538 +40545,5652 @@ var catalog_air_prep_default = {
 };
 
 // src/data/catalog-auxiliary.json
-var catalog_auxiliary_default = {
-  series: [
-    {
-      id: "HR",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
-      group: "\u6CB9\u58D3\u7A69\u901F\u5668",
-      name: "HR\u7CFB\u5217 \u53EF\u8ABF\u5F0F\u6CB9\u58D3\u7A69\u901F\u5668",
-      format: "HR{model}",
-      categories: [
-        {
-          id: "model",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "30",
-              description: "HR30 (\u6700\u5927\u884C\u7A0B30mm)"
-            },
-            {
-              code: "60",
-              description: "HR60 (\u6700\u5927\u884C\u7A0B60mm)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ACA",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
-      group: "\u81EA\u52D5\u88DC\u511F\u5F0F",
-      name: "ACA\u7CFB\u5217 \u6A19\u6E96\u81EA\u52D5\u88DC\u511F\u5F0F\u6CB9\u58D3\u7DE9\u885D\u5668",
-      format: "ACA{thread}{stroke}-{speed}{cap}",
-      categories: [
-        {
-          id: "thread",
-          name: "\u672C\u9AD4\u5916\u7259",
-          options: [
-            {
-              code: "08",
-              description: "M8"
-            },
-            {
-              code: "10",
-              description: "M10"
-            },
-            {
-              code: "12",
-              description: "M12"
-            },
-            {
-              code: "14",
-              description: "M14"
-            },
-            {
-              code: "16",
-              description: "M16"
-            },
-            {
-              code: "20",
-              description: "M20"
-            },
-            {
-              code: "25",
-              description: "M25"
-            },
-            {
-              code: "27",
-              description: "M27"
-            },
-            {
-              code: "33",
-              description: "M33"
-            },
-            {
-              code: "36",
-              description: "M36"
-            }
-          ]
-        },
-        {
-          id: "stroke",
-          name: "\u884C\u7A0B",
-          options: [
-            {
-              code: "06",
-              description: "6mm"
-            },
-            {
-              code: "07",
-              description: "7mm"
-            },
-            {
-              code: "10",
-              description: "10mm"
-            },
-            {
-              code: "12",
-              description: "12mm"
-            },
-            {
-              code: "15",
-              description: "15mm"
-            },
-            {
-              code: "16",
-              description: "16mm"
-            },
-            {
-              code: "20",
-              description: "20mm"
-            },
-            {
-              code: "25",
-              description: "25mm"
-            },
-            {
-              code: "30",
-              description: "30mm"
-            },
-            {
-              code: "40",
-              description: "40mm"
-            },
-            {
-              code: "50",
-              description: "50mm"
-            }
-          ]
-        },
-        {
-          id: "speed",
-          name: "\u901F\u5EA6\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "\u9AD8\u901F(\u8F15\u8CA0\u8F09)"
-            },
-            {
-              code: "2",
-              description: "\u4E2D\u901F(\u4E2D\u8CA0\u8F09)"
-            },
-            {
-              code: "3",
-              description: "\u4F4E\u901F(\u91CD\u8CA0\u8F09)"
-            }
-          ]
-        },
-        {
-          id: "cap",
-          name: "\u9632\u649E\u5E3D\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u5851\u6599\u9632\u649E\u5E3D"
-            },
-            {
-              code: "F",
-              description: "\u9435\u8CEA\u9632\u649E\u5E3D"
-            },
-            {
-              code: "N",
-              description: "\u7121\u9632\u649E\u5E3D"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "ACJ",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
-      group: "\u53EF\u8ABF\u81EA\u52D5\u88DC\u511F\u5F0F",
-      name: "ACJ\u7CFB\u5217 \u53EF\u8ABF\u81EA\u52D5\u88DC\u511F\u5F0F\u6CB9\u58D3\u7DE9\u885D\u5668",
-      format: "ACJ{thread}{stroke}-{cap}",
-      categories: [
-        {
-          id: "thread",
-          name: "\u672C\u9AD4\u5916\u7259",
-          options: [
-            {
-              code: "10",
-              description: "M10"
-            },
-            {
-              code: "12",
-              description: "M12"
-            },
-            {
-              code: "14",
-              description: "M14"
-            },
-            {
-              code: "20",
-              description: "M20"
-            },
-            {
-              code: "25",
-              description: "M25"
-            },
-            {
-              code: "27",
-              description: "M27"
-            },
-            {
-              code: "33",
-              description: "M33"
-            },
-            {
-              code: "36",
-              description: "M36"
-            },
-            {
-              code: "42",
-              description: "M42"
-            }
-          ]
-        },
-        {
-          id: "stroke",
-          name: "\u884C\u7A0B",
-          options: [
-            {
-              code: "07",
-              description: "7mm"
-            },
-            {
-              code: "10",
-              description: "10mm"
-            },
-            {
-              code: "12",
-              description: "12mm"
-            },
-            {
-              code: "15",
-              description: "15mm"
-            },
-            {
-              code: "20",
-              description: "20mm"
-            },
-            {
-              code: "25",
-              description: "25mm"
-            },
-            {
-              code: "30",
-              description: "30mm"
-            },
-            {
-              code: "50",
-              description: "50mm"
-            },
-            {
-              code: "75",
-              description: "75mm"
-            }
-          ]
-        },
-        {
-          id: "cap",
-          name: "\u9632\u649E\u5E3D\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u5851\u6599\u9632\u649E\u5E3D"
-            },
-            {
-              code: "F",
-              description: "\u9435\u8CEA\u9632\u649E\u5E3D"
-            },
-            {
-              code: "N",
-              description: "\u7121\u9632\u649E\u5E3D"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "Fittings-PC",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u5FEB\u901F\u63A5\u982D",
-      group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
-      name: "PC\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A\u63A5\u982D",
-      format: "PC {port} {thread} {color}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "4",
-              description: "\u03A64mm"
-            },
-            {
-              code: "6",
-              description: "\u03A66mm"
-            },
-            {
-              code: "8",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7070\u8272"
-            },
-            {
-              code: "D",
-              description: "\u9ED1\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "Fittings-PL",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u5FEB\u901F\u63A5\u982D",
-      group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
-      name: "PL\u7CFB\u5217 L\u578B\u87BA\u7D0B\u4E8C\u901A",
-      format: "PL {port} {thread} {color}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "4",
-              description: "\u03A64mm"
-            },
-            {
-              code: "6",
-              description: "\u03A66mm"
-            },
-            {
-              code: "8",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7070\u8272"
-            },
-            {
-              code: "D",
-              description: "\u9ED1\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "Fittings-PU",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u5FEB\u901F\u63A5\u982D",
-      group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E",
-      name: "PU\u7CFB\u5217 \u76F4\u901A\u63A5\u982D",
-      format: "PU {port} {color}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "4",
-              description: "\u03A64mm"
-            },
-            {
-              code: "6",
-              description: "\u03A66mm"
-            },
-            {
-              code: "8",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7070\u8272"
-            },
-            {
-              code: "D",
-              description: "\u9ED1\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "Fittings-PE",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u5FEB\u901F\u63A5\u982D",
-      group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E",
-      name: "PE\u7CFB\u5217 T\u578B\u4E09\u901A",
-      format: "PE {port} {color}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "4",
-              description: "\u03A64mm"
-            },
-            {
-              code: "6",
-              description: "\u03A66mm"
-            },
-            {
-              code: "8",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7070\u8272"
-            },
-            {
-              code: "D",
-              description: "\u9ED1\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "PSL",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u8ABF\u901F\u95A5",
-      group: "L\u578B\u8ABF\u901F\u95A5",
-      name: "PSL\u7CFB\u5217 L\u578B\u8ABF\u901F\u95A5",
-      format: "PSL {port} {thread} {type} {color}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "4",
-              description: "\u03A64mm"
-            },
-            {
-              code: "6",
-              description: "\u03A66mm"
-            },
-            {
-              code: "8",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u7BC0\u6D41\u65B9\u5F0F",
-          options: [
-            {
-              code: "A",
-              description: "\u6392\u6C23\u7BC0\u6D41\u578B"
-            },
-            {
-              code: "B",
-              description: "\u9032\u6C23\u7BC0\u6D41\u578B"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7070\u8272"
-            },
-            {
-              code: "D",
-              description: "\u9ED1\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "BSL",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u6D88\u8072\u5668",
-      group: "\u901A\u7528\u578B\u6D88\u8072\u5668",
-      name: "BSL\u7CFB\u5217 \u901A\u7528\u578B\u6D88\u8072\u5668",
-      format: "BSL {thread}",
-      categories: [
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "B-SS",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
-      group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
-      name: "\u4E0D\u92B9\u92FC\u87BA\u7D0B\u76F4\u901A\u63A5\u982D (BB/BD/BU/BZ)",
-      format: "{series} {thread1} {thread2} - {type}",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "BB",
-              description: "BB: \u96D9\u5916\u87BA\u7D0B\u76F4\u901A"
-            },
-            {
-              code: "BD",
-              description: "BD: \u5167\u5916\u87BA\u7D0B\u76F4\u901A"
-            },
-            {
-              code: "BU",
-              description: "BU: \u96D9\u5167\u87BA\u7D0B\u76F4\u901A"
-            },
-            {
-              code: "BZ",
-              description: "BZ: \u5916\u516D\u89D2\u5835\u982D"
-            }
-          ]
-        },
-        {
-          id: "thread1",
-          name: "\u9023\u63A5\u87BA\u7D0BI",
-          options: [
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "thread2",
-          name: "\u9023\u63A5\u87BA\u7D0BII (BZ\u7121\u6B64\u9805)",
-          options: [
-            {
-              code: "",
-              description: "\u7121(\u9069\u7528BZ)"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u6750\u8CEA\u4EE3\u865F",
-          options: [
-            {
-              code: "S",
-              description: "\u4E0D\u92B9\u92FC304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "BKC",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
-      group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
-      name: "BKC\u7CFB\u5217 \u9396\u6BCD\u76F4\u901A",
-      format: "BKC {outer} {inner} - {thread} - {type}",
-      categories: [
-        {
-          id: "outer",
-          name: "\u63A5\u7BA1\u5916\u5F91",
-          options: [
-            {
-              code: "04",
-              description: "\u03A64mm"
-            },
-            {
-              code: "06",
-              description: "\u03A66mm"
-            },
-            {
-              code: "08",
-              description: "\u03A68mm"
-            },
-            {
-              code: "10",
-              description: "\u03A610mm"
-            },
-            {
-              code: "12",
-              description: "\u03A612mm"
-            }
-          ]
-        },
-        {
-          id: "inner",
-          name: "\u63A5\u7BA1\u5167\u5F91",
-          options: [
-            {
-              code: "25",
-              description: "\u03A62.5mm"
-            },
-            {
-              code: "04",
-              description: "\u03A64mm"
-            },
-            {
-              code: "05",
-              description: "\u03A65mm"
-            },
-            {
-              code: "06",
-              description: "\u03A66mm"
-            },
-            {
-              code: "65",
-              description: "\u03A66.5mm"
-            },
-            {
-              code: "75",
-              description: "\u03A67.5mm"
-            },
-            {
-              code: "08",
-              description: "\u03A68mm"
-            },
-            {
-              code: "09",
-              description: "\u03A69mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M3",
-              description: "M3x0.5"
-            },
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u6750\u8CEA\u4EE3\u865F",
-          options: [
-            {
-              code: "S",
-              description: "\u4E0D\u92B9\u92FC304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "BSL-SS",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
-      group: "\u6D88\u8072\u5668",
-      name: "\u4E0D\u92B9\u92FC\u6D88\u8072\u5668 (BSL/BSLM/BESL)",
-      format: "{series} {thread} - {type}",
-      categories: [
-        {
-          id: "series",
-          name: "\u6D88\u8072\u5668\u985E\u578B",
-          options: [
-            {
-              code: "BSL",
-              description: "BSL: \u901A\u7528\u578B\u6D88\u8072\u5668"
-            },
-            {
-              code: "BSLM",
-              description: "BSLM: \u5FAE\u578B\u6D88\u8072\u5668"
-            },
-            {
-              code: "BESL",
-              description: "BESL: \u7BC0\u6D41\u578B\u6D88\u8072\u5668"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u9023\u63A5\u87BA\u7D0B",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "PT1/8"
-            },
-            {
-              code: "02",
-              description: "PT1/4"
-            },
-            {
-              code: "03",
-              description: "PT3/8"
-            },
-            {
-              code: "04",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u6750\u8CEA\u4EE3\u865F",
-          options: [
-            {
-              code: "S",
-              description: "\u4E0D\u92B9\u92FC304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "PU-Tube",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "PU\u7BA1",
-      group: "PU\u7BA1",
-      name: "PU\u7BA1 (US98A/UE95A)",
-      format: "{series} {outer} {inner} {length} {color}",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "US98A",
-              description: "US98A: \u805A\u916F, \u786C\u5EA698A\xB12"
-            },
-            {
-              code: "UE95A",
-              description: "UE95A: \u805A\u919A, \u786C\u5EA695A\xB12"
-            }
-          ]
-        },
-        {
-          id: "outer",
-          name: "\u5916\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "032",
-              description: "\u03A63.2mm"
-            },
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "060",
-              description: "\u03A66.0mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            },
-            {
-              code: "100",
-              description: "\u03A610.0mm"
-            },
-            {
-              code: "120",
-              description: "\u03A612.0mm"
-            },
-            {
-              code: "160",
-              description: "\u03A616.0mm"
-            }
-          ]
-        },
-        {
-          id: "inner",
-          name: "\u5167\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "020",
-              description: "\u03A62.0mm"
-            },
-            {
-              code: "025",
-              description: "\u03A62.5mm"
-            },
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "050",
-              description: "\u03A65.0mm"
-            },
-            {
-              code: "055",
-              description: "\u03A65.5mm"
-            },
-            {
-              code: "065",
-              description: "\u03A66.5mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            },
-            {
-              code: "100",
-              description: "\u03A610.0mm"
-            },
-            {
-              code: "110",
-              description: "\u03A611.0mm"
-            },
-            {
-              code: "120",
-              description: "\u03A612.0mm"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u9577\u5EA6\u4EE3\u865F",
-          options: [
-            {
-              code: "20M",
-              description: "20m/\u5377"
-            },
-            {
-              code: "100M",
-              description: "100m/\u5377"
-            },
-            {
-              code: "200M",
-              description: "200m/\u5377"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "BU",
-              description: "\u85CD\u8272"
-            },
-            {
-              code: "BK",
-              description: "\u9ED1\u8272"
-            },
-            {
-              code: "GN",
-              description: "\u7DA0\u8272"
-            },
-            {
-              code: "GE",
-              description: "\u6A59\u8272"
-            },
-            {
-              code: "BR",
-              description: "\u68D5\u8272"
-            },
-            {
-              code: "C",
-              description: "\u900F\u660E"
-            },
-            {
-              code: "CR",
-              description: "\u900F\u660E\u7D05"
-            },
-            {
-              code: "WH",
-              description: "\u767D\u8272"
-            },
-            {
-              code: "CG",
-              description: "\u900F\u660E\u7DA0"
-            },
-            {
-              code: "CB",
-              description: "\u900F\u660E\u85CD"
-            },
-            {
-              code: "CY",
-              description: "\u900F\u660E\u9EC3"
-            },
-            {
-              code: "R",
-              description: "\u7D05\u8272"
-            },
-            {
-              code: "CE",
-              description: "\u900F\u660E\u6A59"
-            },
-            {
-              code: "Y",
-              description: "\u9EC3\u8272"
-            },
-            {
-              code: "GA",
-              description: "\u7070\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "UWS98A",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u96D9\u5C64\u963B\u71C3\u7BA1",
-      group: "\u96D9\u5C64\u963B\u71C3\u7BA1",
-      name: "UWS98A\u7CFB\u5217 \u96D9\u5C64\u963B\u71C3\u7BA1",
-      format: "UWS98A {outer} {inner} {length} {color}",
-      categories: [
-        {
-          id: "outer",
-          name: "\u5916\u5F91(\u5167\u5C64)\u4EE3\u865F",
-          options: [
-            {
-              code: "060",
-              description: "\u03A66.0mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            },
-            {
-              code: "100",
-              description: "\u03A610.0mm"
-            },
-            {
-              code: "120",
-              description: "\u03A612.0mm"
-            }
-          ]
-        },
-        {
-          id: "inner",
-          name: "\u5167\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "050",
-              description: "\u03A65.0mm"
-            },
-            {
-              code: "065",
-              description: "\u03A66.5mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u9577\u5EA6\u4EE3\u865F",
-          options: [
-            {
-              code: "050M",
-              description: "50m/\u5377"
-            },
-            {
-              code: "100M",
-              description: "100m/\u5377"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "BU",
-              description: "\u85CD\u8272"
-            },
-            {
-              code: "BK",
-              description: "\u9ED1\u8272"
-            },
-            {
-              code: "GN",
-              description: "\u7DA0\u8272"
-            },
-            {
-              code: "WH",
-              description: "\u767D\u8272"
-            },
-            {
-              code: "R",
-              description: "\u7D05\u8272"
-            },
-            {
-              code: "Y",
-              description: "\u9EC3\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "PA-Tube",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u5C3C\u9F8D\u7BA1",
-      group: "\u5C3C\u9F8D\u7BA1",
-      name: "PA\u7BA1 (PA12/PA6)",
-      format: "{series} {outer} {inner} {length} {color}",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "PA12",
-              description: "PA12: \u5C3C\u9F8D12"
-            },
-            {
-              code: "PA6",
-              description: "PA6: \u5C3C\u9F8D6"
-            }
-          ]
-        },
-        {
-          id: "outer",
-          name: "\u5916\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "060",
-              description: "\u03A66.0mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            },
-            {
-              code: "100",
-              description: "\u03A610.0mm"
-            },
-            {
-              code: "120",
-              description: "\u03A612.0mm"
-            }
-          ]
-        },
-        {
-          id: "inner",
-          name: "\u5167\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "025",
-              description: "\u03A62.5mm"
-            },
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "060",
-              description: "\u03A66.0mm"
-            },
-            {
-              code: "075",
-              description: "\u03A67.5mm"
-            },
-            {
-              code: "090",
-              description: "\u03A69.0mm"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u9577\u5EA6\u4EE3\u865F",
-          options: [
-            {
-              code: "100M",
-              description: "100m/\u5377"
-            },
-            {
-              code: "200M",
-              description: "200m/\u5377"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "BU",
-              description: "\u85CD\u8272"
-            },
-            {
-              code: "BK",
-              description: "\u9ED1\u8272"
-            },
-            {
-              code: "GE",
-              description: "\u6A59\u8272"
-            },
-            {
-              code: "N",
-              description: "\u672C\u8272"
-            },
-            {
-              code: "WH",
-              description: "\u767D\u8272"
-            },
-            {
-              code: "GN",
-              description: "\u7DA0\u8272"
-            },
-            {
-              code: "R",
-              description: "\u7D05\u8272"
-            },
-            {
-              code: "Y",
-              description: "\u9EC3\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "UN54D",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u963B\u71C3\u7BA1",
-      group: "\u963B\u71C3\u7BA1",
-      name: "UN54D\u7CFB\u5217 \u963B\u71C3\u7BA1",
-      format: "UN54D {outer} {inner} {length} {color}",
-      categories: [
-        {
-          id: "outer",
-          name: "\u5916\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "060",
-              description: "\u03A66.0mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            },
-            {
-              code: "100",
-              description: "\u03A610.0mm"
-            },
-            {
-              code: "120",
-              description: "\u03A612.0mm"
-            }
-          ]
-        },
-        {
-          id: "inner",
-          name: "\u5167\u5F91\u4EE3\u865F",
-          options: [
-            {
-              code: "040",
-              description: "\u03A64.0mm"
-            },
-            {
-              code: "050",
-              description: "\u03A65.0mm"
-            },
-            {
-              code: "065",
-              description: "\u03A66.5mm"
-            },
-            {
-              code: "080",
-              description: "\u03A68.0mm"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u9577\u5EA6\u4EE3\u865F",
-          options: [
-            {
-              code: "100M",
-              description: "100m/\u5377"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u984F\u8272\u4EE3\u865F",
-          options: [
-            {
-              code: "BU",
-              description: "\u85CD\u8272"
-            },
-            {
-              code: "BK",
-              description: "\u9ED1\u8272"
-            },
-            {
-              code: "GN",
-              description: "\u7DA0\u8272"
-            },
-            {
-              code: "WH",
-              description: "\u767D\u8272"
-            },
-            {
-              code: "R",
-              description: "\u7D05\u8272"
-            },
-            {
-              code: "Y",
-              description: "\u9EC3\u8272"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "PWC-PWL",
-      category: "\u8F14\u52A9\u5143\u4EF6",
-      superGroup: "\u6C23\u52D5\u6307\u793A\u71C8",
-      group: "\u6307\u793A\u71C8",
-      name: "\u6C23\u52D5\u6307\u793A\u71C8 (PWC/PWL)",
-      format: "{series} {port1} {port2} {color} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "PWC",
-              description: "PWC: \u4E09\u901A\u6A19\u6E96\u578B"
-            },
-            {
-              code: "PWL",
-              description: "PWL: \u4E09\u901A\u5E36\u63D2\u7BA1"
-            }
-          ]
-        },
-        {
-          id: "port1",
-          name: "\u63A5\u7BA1\u53E3\u5F91 (PWL\u7528)",
-          options: [
-            {
-              code: "",
-              description: "\u7121(\u9069\u7528PWC)"
-            },
-            {
-              code: "4",
-              description: "\u03A64 (PWL)"
-            },
-            {
-              code: "6",
-              description: "\u03A66 (PWL)"
-            },
-            {
-              code: "8",
-              description: "\u03A68 (PWL)"
-            }
-          ]
-        },
-        {
-          id: "port2",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "01",
-              description: "1/8"
-            },
-            {
-              code: "02",
-              description: "1/4"
-            }
-          ]
-        },
-        {
-          id: "color",
-          name: "\u6307\u793A\u71C8",
-          options: [
-            {
-              code: "R",
-              description: "\u7D05\u8272"
-            },
-            {
-              code: "GN",
-              description: "\u7DA0\u8272"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259(M5\u6642\u70BA\u7A7A)"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+var catalog_auxiliary_default = [
+  {
+    id: "PC",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PC\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
+    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PC",
+            description: "\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "POC",
+            description: "\u5713\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.259"
+  },
+  {
+    id: "PC-M",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E(\u8FF7\u4F60)",
+    code: "",
+    name: "PC\u8FF7\u4F60\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
+    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}-{type_suffix}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PC",
+            description: "\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "PL",
+            description: "L\u578B\u87BA\u7D0B\u4E8C\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "3.2",
+            description: "$3.2mm"
+          },
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M3",
+            description: "M3X0.5"
+          },
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "type_suffix",
+        name: "\u985E\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "M",
+            description: "\u8FF7\u4F60\u578B"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.260"
+  },
+  {
+    id: "PL",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PL\u7CFB\u5217 L\u578B\u87BA\u7D0B\u4E8C\u901A",
+    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PHW",
+            description: "F\u578B\u87BA\u7D0B\u53EF\u65CB\u4E09\u901A"
+          },
+          {
+            code: "PL",
+            description: "L\u578B\u87BA\u7D0B\u4E8C\u901A"
+          },
+          {
+            code: "PHF",
+            description: "\u4E32\u806F\u8098\u7BC0"
+          },
+          {
+            code: "PLL",
+            description: "L\u578B\u52A0\u9577\u87BA\u7D0B\u4E8C\u901A"
+          },
+          {
+            code: "PEB",
+            description: "T\u578B\u6B63\u87BA\u7D0B\u4E09\u901A"
+          },
+          {
+            code: "PLF",
+            description: "L\u578B\u5167\u87BA\u7D0B\u4E8C\u901A"
+          },
+          {
+            code: "PED",
+            description: "T\u578B\u5074\u87BA\u7D0B\u4E09\u901A"
+          },
+          {
+            code: "PCF",
+            description: "\u5167\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "PYB",
+            description: "Y\u578B\u87BA\u7D0B\u4E09\u901A"
+          },
+          {
+            code: "PMF",
+            description: "\u5167\u7259\u7A7F\u677F\u76F4\u901A"
+          },
+          {
+            code: "PZB",
+            description: "\u5341\u5B57\u87BA\u7D0B\u56DB\u901A"
+          },
+          {
+            code: "PH",
+            description: "\u5916\u516D\u89D2\u8098\u7BC0"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.261"
+  },
+  {
+    id: "PKD",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "PKD",
+    name: "PKD\u7CFB\u5217 \u6E1B\u5F91\u87BA\u7D0B\u4E94\u901A",
+    format: "{code} {tube_od_1}-{tube_od_2} {thread_spec}{color}{thread_type}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PKD",
+            description: "\u6E1B\u5F91\u87BA\u7D0B\u4E94\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od_1",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          }
+        ]
+      },
+      {
+        id: "tube_od_2",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.261"
+  },
+  {
+    id: "BPC",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u5168\u91D1\u5C6C\u985E",
+    code: "",
+    name: "BPC\u7CFB\u5217 \u5168\u91D1\u5C6C\u87BA\u7D0B\u76F4\u901A",
+    format: "{spec} {tube_od} {thread_spec}{thread_type}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BPC",
+            description: "\u5168\u91D1\u5C6C\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "BPCF",
+            description: "\u5168\u91D1\u5C6C\u5167\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "BPOC",
+            description: "\u5168\u91D1\u5C6C\u5713\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "BPMF",
+            description: "\u5168\u91D1\u5C6C\u5167\u7259\u7A7F\u677F\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "$8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~9kgf/cm\xB2(0~0.9MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: 0~150\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272, [\u6CE8]\u9AD8\u6EAB\u5834\u5408\u4F7F\u7528\u6642,\u9700\u78BA\u8A8D\u8EDF\u7BA1\u6216PU\u7BA1\u8010\u6EAB\u7B49\u7D1A\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.265"
+  },
+  {
+    id: "BPM",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u5168\u91D1\u5C6C\u985E",
+    code: "BPM",
+    name: "BPM\u7CFB\u5217 \u5168\u91D1\u5C6C\u7A7F\u677F\u76F4\u901A",
+    format: "{code} {tube_od}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BPM",
+            description: "\u5168\u91D1\u5C6C\u7A7F\u677F\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~9kgf/cm\xB2(0~0.9MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: 0~150\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272, [\u6CE8]\u9AD8\u6EAB\u5834\u5408\u4F7F\u7528\u6642,\u9700\u78BA\u8A8D\u8EDF\u7BA1\u6216PU\u7BA1\u8010\u6EAB\u7B49\u7D1A\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.265"
+  },
+  {
+    id: "PE",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E",
+    code: "",
+    name: "PE\u7CFB\u5217 T\u578B\u4E09\u901A",
+    format: "{spec} {tube_od}{color}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PM",
+            description: "\u7A7F\u677F\u76F4\u901A"
+          },
+          {
+            code: "PE",
+            description: "T\u578B\u4E09\u901A"
+          },
+          {
+            code: "PP",
+            description: "\u7BA1\u585E"
+          },
+          {
+            code: "PV",
+            description: "L\u578B\u4E8C\u901A"
+          },
+          {
+            code: "PLM",
+            description: "\u76F4\u89D2\u7A7F\u677F"
+          },
+          {
+            code: "PY",
+            description: "Y\u578B\u4E09\u901A"
+          },
+          {
+            code: "PZ",
+            description: "\u5341\u5B57\u56DB\u901A"
+          },
+          {
+            code: "PU",
+            description: "\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.267"
+  },
+  {
+    id: "PEG",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5FEB\u901F\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E(\u6E1B\u5F91/\u591A\u901A)",
+    code: "",
+    name: "PEG\u7CFB\u5217 T\u578B\u6B63\u6E1B\u5F91\u4E09\u901A",
+    format: "{spec} {tube_od_1}-{tube_od_2}{color}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PG",
+            description: "\u6E1B\u5F91\u76F4\u901A"
+          },
+          {
+            code: "PZG",
+            description: "\u5341\u5B57\u6E1B\u5F91\u56DB\u901A"
+          },
+          {
+            code: "PEW",
+            description: "T\u578B\u5074\u6E1B\u5F91\u4E09\u901A"
+          },
+          {
+            code: "PYW",
+            description: "Y\u578B\u6E1B\u5F91\u4E09\u901A"
+          },
+          {
+            code: "PGJ",
+            description: "\u63D2\u6746\u6E1B\u5F91\u76F4\u901A"
+          },
+          {
+            code: "PEG",
+            description: "T\u578B\u6B63\u6E1B\u5F91\u4E09\u901A"
+          },
+          {
+            code: "PKG",
+            description: "\u6E1B\u5F91\u4E94\u901A"
+          },
+          {
+            code: "PHK",
+            description: "\u53EF\u65CB\u6E1B\u5F91\u4E94\u901A"
+          },
+          {
+            code: "PHD",
+            description: "\u53EF\u65CB\u6E1B\u5F91\u516D\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od_1",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "$8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "tube_od_2",
+        name: "\u63A5\u7BA1\u53E3\u5F91II",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.267"
+  },
+  {
+    id: "BB",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u91D1\u5C6C\u87BA\u7D0B\u63A5\u982D",
+    group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "BB\u7CFB\u5217 \u96D9\u5916\u87BA\u7D0B\u76F4\u901A",
+    format: "{spec} {thread_spec_1} {thread_spec_2}{thread_type}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BB",
+            description: "\u96D9\u5916\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "BD",
+            description: "\u5167\u5916\u87BA\u7D0B\u76F4\u901A [\u6CE81]"
+          },
+          {
+            code: "BU",
+            description: "\u96D9\u5167\u87BA\u7D0B\u76F4\u901A"
+          },
+          {
+            code: "BZ",
+            description: "\u5916\u516D\u89D2\u5835\u982D[\u6CE82]"
+          }
+        ]
+      },
+      {
+        id: "thread_spec_1",
+        name: "\u9023\u63A5\u87BA\u7D0BI",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread_spec_2",
+        name: "\u9023\u63A5\u87BA\u7D0BII",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 3.0MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: 0~150\u2103, [\u6CE81] BD\u7CFB\u5217\u4E2D,\u9023\u63A5\u87BA\u7D0BI\u6307\u5167\u87BA\u7D0B\u898F\u683C,\u9023\u63A5\u87BA\u7D0BII\u6307\u5916\u87BA\u7D0B\u898F\u683C; [\u6CE82]BZ\u7CFB\u5217\u4E2D,\u7121\u9023\u63A5\u87BA\u7D0BII\u4EE3\u78BC\u9805,\u4E14\u9023\u63A5\u87BA\u7D0B\u6307\u5916\u87BA\u7D0B\u898F\u683C\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.271"
+  },
+  {
+    id: "BKC",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u91D1\u5C6C\u87BA\u7D0B\u63A5\u982D",
+    group: "\u9396\u6BCD\u76F4\u901A",
+    code: "BKC",
+    name: "BKC\u7CFB\u5217 \u9396\u6BCD\u76F4\u901A",
+    format: "{code} {tube_od_out} {tube_od_in}-{thread_spec}{thread_type}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BKC",
+            description: "\u9396\u6BCD\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tube_od_out",
+        name: "\u63A5\u7BA1\u5916\u5F91",
+        options: [
+          {
+            code: "04",
+            description: "4mm"
+          },
+          {
+            code: "06",
+            description: "6mm"
+          },
+          {
+            code: "08",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "tube_od_in",
+        name: "\u63A5\u7BA1\u5167\u5F91",
+        options: [
+          {
+            code: "25",
+            description: "2.5mm"
+          },
+          {
+            code: "04",
+            description: "4mm"
+          },
+          {
+            code: "05",
+            description: "5mm"
+          },
+          {
+            code: "06",
+            description: "6mm"
+          },
+          {
+            code: "65",
+            description: "6.5mm"
+          },
+          {
+            code: "75",
+            description: "7.5mm"
+          },
+          {
+            code: "08",
+            description: "8mm"
+          },
+          {
+            code: "09",
+            description: "9mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M3",
+            description: "M3X0.5"
+          },
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread_type",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 3.0MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: 0~150\u2103, [\u6CE8]\u4F7F\u75288\xD75.5\u7BA1\u5B50\u53EF\u7528BKC0806\u7684\u9396\u6BCD\u76F4\u901A\u63A5\u982D; \u9AD8\u6EAB\u5834\u5408\u4F7F\u7528\u6642,\u9700\u78BA\u8A8D\u8EDF\u7BA1\u6216PU\u7BA1\u8010\u6EAB\u7B49\u7D1A\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.272"
+  },
+  {
+    id: "BSL",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6D88\u8072\u5668",
+    group: "BSL/BSLM/BESL/PAL\u7CFB\u5217",
+    code: "",
+    name: "BSL\u7CFB\u5217 \u901A\u7528\u578B\u6D88\u8072\u5668",
+    format: "{spec} {thread_spec}{color}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u6D88\u8072\u5668\u985E\u578B",
+        options: [
+          {
+            code: "BSL",
+            description: "\u901A\u7528\u578B\u6D88\u8072\u5668"
+          },
+          {
+            code: "BSLM",
+            description: "\u5FAE\u578B\u6D88\u8072\u5668"
+          },
+          {
+            code: "BESL",
+            description: "\u7BC0\u6D41\u578B\u6D88\u8072\u5668"
+          },
+          {
+            code: "PAL",
+            description: "\u5851\u6599\u6D88\u8072\u5668"
+          },
+          {
+            code: "PALM",
+            description: "\u8FF7\u4F60\u578B\u5851\u6599\u6D88\u8072\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.311"
+  },
+  {
+    id: "PPA",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6D88\u8072\u5668",
+    group: "PPA\u7BA1\u585E\u5F0F",
+    code: "PPA",
+    name: "PPA\u7CFB\u5217 \u7BA1\u585E\u5F0F\u6D88\u8072\u5668",
+    format: "{code} {tube_od}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PPA",
+            description: "\u7BA1\u585E\u5F0F\u6D88\u8072\u5668"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "\u03A66"
+          },
+          {
+            code: "8",
+            description: "\u03A68"
+          },
+          {
+            code: "10",
+            description: "\u03A610"
+          },
+          {
+            code: "12",
+            description: "\u03A612"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.313"
+  },
+  {
+    id: "PHV",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u624B\u95A5",
+    group: "PHV\u7CFB\u5217",
+    code: "PHV",
+    name: "PHV\u7CFB\u5217 \u624B\u95A5",
+    format: "{code} {tube_od} {valve_spec}{color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PHV",
+            description: "\u624B\u95A5"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "valve_spec",
+        name: "\u95A5\u898F\u683C",
+        options: [
+          {
+            code: "A",
+            description: "\u4E09\u901A"
+          },
+          {
+            code: "B",
+            description: "\u4E8C\u901A"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272/\u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272/\u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: '\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272, [\u6CE8]"\u53E3"\u4EE3\u8868A/B\u5169\u7A2E,A\u70BA\u4E09\u901A,B\u70BA\u5169\u901A\u3002\u5169\u7A2E\u898F\u683C\u5916\u5F62\u5C3A\u5BF8\u76F8\u540C\u3002',
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.321"
+  },
+  {
+    id: "PSL",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u8ABF\u901F\u95A5",
+    group: "PSL/PSS\u7CFB\u5217",
+    code: "",
+    name: "PSL\u7CFB\u5217 L\u578B",
+    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PSL",
+            description: "L\u578B"
+          },
+          {
+            code: "PSS",
+            description: "\u842C\u5411\u578B"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "throttle_type",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: '\u6392\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"A")'
+          },
+          {
+            code: "B",
+            description: '\u9032\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"B")'
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type_suffix",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.314"
+  },
+  {
+    id: "PSA",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u8ABF\u901F\u95A5",
+    group: "PSA\u7CFB\u5217",
+    code: "PSA",
+    name: "PSA\u7CFB\u5217 \u76F4\u901A\u578B",
+    format: "{code} {tube_od}{color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PSA",
+            description: "\u76F4\u901A\u578B"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.314"
+  },
+  {
+    id: "PTL",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u8ABF\u901F\u95A5",
+    group: "PTL/PTS\u63A8\u9396\u7CFB\u5217",
+    code: "",
+    name: "PTL\u7CFB\u5217 \u63A8\u9396L\u578B\u8ABF\u901F\u95A5",
+    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PTL",
+            description: "\u63A8\u9396L\u578B\u8ABF\u901F\u95A5"
+          },
+          {
+            code: "PTS",
+            description: "\u63A8\u9396\u842C\u5411\u578B\u8ABF\u901F\u95A5"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "$6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "$10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "throttle_type",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: '\u6392\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"A")'
+          },
+          {
+            code: "B",
+            description: '\u9032\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"B")'
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type_suffix",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.320"
+  },
+  {
+    id: "PTA",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u8ABF\u901F\u95A5",
+    group: "PTA\u7CFB\u5217",
+    code: "PTA",
+    name: "PTA\u7CFB\u5217 \u76F4\u901A\u578B",
+    format: "{code} {tube_od}{color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PTA",
+            description: "\u76F4\u901A\u578B"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "$8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.320"
+  },
+  {
+    id: "PTL-M",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u8ABF\u901F\u95A5",
+    group: "PTL\u8FF7\u4F60\u7CFB\u5217",
+    code: "",
+    name: "PTL\u8FF7\u4F60\u7CFB\u5217 \u63A8\u9396\u578B\u8ABF\u901F\u95A5",
+    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}-{type_suffix}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PTL",
+            description: "\u63A8\u9396\u578B\u8ABF\u901F\u95A5"
+          }
+        ]
+      },
+      {
+        id: "tube_od",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          }
+        ]
+      },
+      {
+        id: "thread_spec",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          }
+        ]
+      },
+      {
+        id: "throttle_type",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: '\u6392\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"A")'
+          },
+          {
+            code: "B",
+            description: '\u9032\u6C23\u7BC0\u6D41\u578B (\u8ABF\u7BC0\u5E3D\u6A19\u8B58\u7B26"B")'
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272 (\u63A5\u53E3:\u7070\u8272 / \u672C\u9AD4:\u7070\u8272)"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272 (\u63A5\u53E3:\u9ED1\u8272 / \u672C\u9AD4:\u9ED1\u8272)"
+          }
+        ]
+      },
+      {
+        id: "thread_type_suffix",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "type_suffix",
+        name: "\u985E\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "M",
+            description: "\u8FF7\u4F60\u578B"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u8CA0\u58D3: -750mmHg(10Torr), \u4FDD\u8B49\u8010\u58D3\u529B: 1.5MPa, \u4F7F\u7528\u6EAB\u5EA6\u7BC4\u570D: -20~70\u2103, \u9069\u7528\u8EDF\u7BA1: \u5C3C\u9F8D\u8EDF\u7BA1\u6216PU\u7BA1, \u984F\u8272: \u7070\u8272/\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.318"
+  },
+  {
+    id: "PC-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PC\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PC",
+            description: "\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u672C\u9AD4\u6750\u8CEA\u70BA\u4E0D\u92B9\u92FC304,\u4E14\u6240\u6709\u6750\u6599\u5747\u4E0D\u542B\u9285,\u53EF\u7528\u4E8E\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.283"
+  },
+  {
+    id: "POC-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "POC\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "POC",
+            description: "\u5713\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u672C\u9AD4\u6750\u8CEA\u70BA\u4E0D\u92B9\u92FC304,\u4E14\u6240\u6709\u6750\u6599\u5747\u4E0D\u542B\u9285,\u53EF\u7528\u4E8E\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.283"
+  },
+  {
+    id: "PHW-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PHW\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PHW",
+            description: "F\u578B\u87BA\u7D0B\u53EF\u65CB\u4E09\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PZB-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PZB\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PZB",
+            description: "\u5341\u5B57\u87BA\u7D0B\u56DB\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PHF-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PHF\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PHF",
+            description: "\u4E32\u806F\u8098\u7BC0"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PL",
+            description: "L\u578B\u87BA\u7D0B\u4E8C\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PEB-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PEB\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PEB",
+            description: "T\u578B\u6B63\u87BA\u7D0B\u4E09\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PLL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PLL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PLL",
+            description: "L\u578B\u52A0\u9577\u87BA\u7D0B\u4E8C\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PED-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PED\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PED",
+            description: "T\u578B\u5074\u87BA\u7D0B\u4E09\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PH-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PH\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PH",
+            description: "\u5916\u516D\u89D2\u8098\u7BC0"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PYB-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PYB\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PYB",
+            description: "Y\u578B\u87BA\u7D0B\u4E09\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "\u03A68mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "PKD-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "PKD\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD1}-{tubeOD2}{thread}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PKD",
+            description: "\u6E1B\u5F91\u87BA\u7D0B\u4E94\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD1",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          }
+        ]
+      },
+      {
+        id: "tubeOD2",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.284"
+  },
+  {
+    id: "BB-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "BB\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{thread1}{thread2}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BB",
+            description: "\u96D9\u5916\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "thread1",
+        name: "\u9023\u63A5\u87BA\u7D0BI",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread2",
+        name: "\u9023\u63A5\u87BA\u7D0BII",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u5168\u91D1\u5C6C\u63A5\u982D\u9069\u7528\u4E8E\u9AD8\u6EAB\u74B0\u5883,\u4E0D\u92B9\u92FC304\u6750\u8CEA\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.288"
+  },
+  {
+    id: "BD-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "BD\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{thread1}{thread2}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BD",
+            description: "\u5167\u5916\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "thread1",
+        name: "\u9023\u63A5\u87BA\u7D0BI",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread2",
+        name: "\u9023\u63A5\u87BA\u7D0BII",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "[\u6CE81] BD\u7CFB\u5217\u4E2D,\u9023\u63A5\u87BA\u7D0BI\u6307\u5167\u87BA\u7D0B\u898F\u683C,\u9023\u63A5\u87BA\u7D0BII\u6307\u5916\u87BA\u7D0B\u898F\u683C; \u5168\u91D1\u5C6C\u63A5\u982D\u9069\u7528\u4E8E\u9AD8\u6EAB\u74B0\u5883,\u4E0D\u92B9\u92FC304\u6750\u8CEA\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.288"
+  },
+  {
+    id: "BU-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "BU\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{thread1}{thread2}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BU",
+            description: "\u96D9\u5167\u87BA\u7D0B\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "thread1",
+        name: "\u9023\u63A5\u87BA\u7D0BI",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread2",
+        name: "\u9023\u63A5\u87BA\u7D0BII",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u5168\u91D1\u5C6C\u63A5\u982D\u9069\u7528\u4E8E\u9AD8\u6EAB\u74B0\u5883,\u4E0D\u92B9\u92FC304\u6750\u8CEA\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.288"
+  },
+  {
+    id: "BZ-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u87BA\u7D0B-\u87BA\u7D0B\u985E",
+    code: "",
+    name: "BZ\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{thread1}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BZ",
+            description: "\u5916\u516D\u89D2\u5835\u982D"
+          }
+        ]
+      },
+      {
+        id: "thread1",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "[\u6CE82]BZ\u7CFB\u5217\u4E2D,\u7121\u9023\u63A5\u87BA\u7D0BII\u4EE3\u78BC\u9805,\u4E14\u9023\u63A5\u87BA\u7D0B\u6307\u5916\u87BA\u7D0B\u898F\u683C; \u5168\u91D1\u5C6C\u63A5\u982D\u9069\u7528\u4E8E\u9AD8\u6EAB\u74B0\u5883,\u4E0D\u92B9\u92FC304\u6750\u8CEA\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.288"
+  },
+  {
+    id: "BKC-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    group: "\u9396\u6BCD\u76F4\u901A",
+    code: "",
+    name: "BKC\u7CFB\u5217 \u4E0D\u92B9\u92FC\u7BA1\u63A5\u982D",
+    format: "{spec}{tubeOD}{tubeID}-{thread}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "BKC",
+            description: "\u9396\u6BCD\u76F4\u901A"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u5916\u5F91",
+        options: [
+          {
+            code: "04",
+            description: "4mm"
+          },
+          {
+            code: "06",
+            description: "6mm"
+          },
+          {
+            code: "08",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "tubeID",
+        name: "\u63A5\u7BA1\u5167\u5F91",
+        options: [
+          {
+            code: "25",
+            description: "2.5mm"
+          },
+          {
+            code: "04",
+            description: "\u03A64mm"
+          },
+          {
+            code: "05",
+            description: "\u03A65mm"
+          },
+          {
+            code: "06",
+            description: "\u03A66mm"
+          },
+          {
+            code: "65",
+            description: "\u03A66.5mm"
+          },
+          {
+            code: "75",
+            description: "\u03A67.5mm"
+          },
+          {
+            code: "08",
+            description: "\u03A68mm"
+          },
+          {
+            code: "09",
+            description: "9mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M3",
+            description: "M3X0.5"
+          },
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "[\u6CE8]\u4F7F\u75288\xD75.5\u7BA1\u5B50\u53EF\u7528BKC0806\u7684\u9396\u6BCD\u76F4\u901A\u63A5\u982D; [\u6CE8]\u9AD8\u6EAB\u5834\u5408\u4F7F\u7528\u6642,\u9700\u78BA\u8A8D\u8EDF\u7BA1\u6216PU\u7BA1\u8010\u6EAB\u7B49\u7D1A; \u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.289"
+  },
+  {
+    id: "PSL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    group: "PSL/PSS\u7CFB\u5217",
+    code: "",
+    name: "PSL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    format: "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PSL",
+            description: "L\u578B"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "throttleType",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: "\u6392\u6C23\u7BC0\u6D41\u578B"
+          },
+          {
+            code: "B",
+            description: "\u9032\u6C23\u7BC0\u6D41\u578B"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u6392\u6C23\u7BC0\u6D41\u578B\u548C\u9032\u6C23\u7BC0\u6D41\u578B\u53EF\u9078,\u7528\u4E8E\u5404\u7A2E\u578B\u865F\u4E4B\u57F7\u884C\u5143\u4EF6; \u87BA\u7D0B\u7AEF\u81EA\u5E36PT\u87BA\u7D0B\u81A0,\u80FD\u6709\u6548\u5BC6\u5C01\u87BA\u7D0B\u9023\u63A5\u90E8\u4F4D\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.331"
+  },
+  {
+    id: "PSS-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    group: "PSL/PSS\u7CFB\u5217",
+    code: "",
+    name: "PSS\u7CFB\u5217 \u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    format: "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PSS",
+            description: "\u842C\u5411\u578B"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "throttleType",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: "\u6392\u6C23\u7BC0\u6D41\u578B"
+          },
+          {
+            code: "B",
+            description: "\u9032\u6C23\u7BC0\u6D41\u578B"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u6392\u6C23\u7BC0\u6D41\u578B\u548C\u9032\u6C23\u7BC0\u6D41\u578B\u53EF\u9078,\u7528\u4E8E\u5404\u7A2E\u578B\u865F\u4E4B\u57F7\u884C\u5143\u4EF6; \u87BA\u7D0B\u7AEF\u81EA\u5E36PT\u87BA\u7D0B\u81A0,\u80FD\u6709\u6548\u5BC6\u5C01\u87BA\u7D0B\u9023\u63A5\u90E8\u4F4D; \u842C\u5411\u578B\u8ABF\u901F\u95A5(PSS)\u63D2\u7BA1\u65B9\u5411\u53EF360\xB0\u8ABF\u6574\u63D2\u7BA1\u65B9\u5411\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.331"
+  },
+  {
+    id: "PSA-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    group: "PSA\u7CFB\u5217",
+    code: "",
+    name: "PSA\u7CFB\u5217 \u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    format: "{spec}{tubeOD}{color}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PSA",
+            description: "\u76F4\u901A\u578B"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u87BA\u7D0B\u7AEF\u81EA\u5E36PT\u87BA\u7D0B\u81A0,\u80FD\u6709\u6548\u5BC6\u5C01\u87BA\u7D0B\u9023\u63A5\u90E8\u4F4D\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.331"
+  },
+  {
+    id: "PTL-Mini-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    group: "PTL\u8FF7\u4F60\u7CFB\u5217",
+    code: "",
+    name: "PTL\u8FF7\u4F60\u7CFB\u5217 \u4E0D\u92B9\u92FC\u63A8\u9396\u578B\u8ABF\u901F\u95A5",
+    format: "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}{type}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PTL",
+            description: "\u63A8\u9396\u578B\u8ABF\u901F\u95A5"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          }
+        ]
+      },
+      {
+        id: "throttleType",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: "\u6392\u6C23\u7BC0\u6D41\u578B"
+          },
+          {
+            code: "B",
+            description: "\u9032\u6C23\u7BC0\u6D41\u578B"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u985E\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "M",
+            description: "\u8FF7\u4F60\u578B"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "SUS304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u87BA\u7D0B\u7AEF\u81EA\u5E36PT\u87BA\u7D0B\u81A0,\u80FD\u6709\u6548\u5BC6\u5C01\u87BA\u7D0B\u9023\u63A5\u90E8\u4F4D\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.335"
+  },
+  {
+    id: "PTL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u8ABF\u901F\u95A5",
+    group: "PTL\u63A8\u9396\u7CFB\u5217",
+    code: "",
+    name: "PTL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u63A8\u9396\u578B\u8ABF\u901F\u95A5",
+    format: "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PTL",
+            description: "\u63A8\u9396\u578B\u8ABF\u901F\u95A5"
+          }
+        ]
+      },
+      {
+        id: "tubeOD",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "throttleType",
+        name: "\u7BC0\u6D41\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: "\u6392\u6C23\u7BC0\u6D41\u578B"
+          },
+          {
+            code: "B",
+            description: "\u9032\u6C23\u7BC0\u6D41\u578B"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7070\u8272"
+          },
+          {
+            code: "D",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "threadType",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "SUS304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u87BA\u7D0B\u7AEF\u81EA\u5E36PT\u87BA\u7D0B\u81A0,\u80FD\u6709\u6548\u5BC6\u5C01\u87BA\u7D0B\u9023\u63A5\u90E8\u4F4D\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.336"
+  },
+  {
+    id: "BSL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    group: "\u6D88\u8072\u5668",
+    code: "",
+    name: "BSL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    format: "{spec}{thread}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u6D88\u8072\u5668\u985E\u578B",
+        options: [
+          {
+            code: "BSL",
+            description: "\u901A\u7528\u578B\u6D88\u8072\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u6D88\u8072\u6027\u80FD\u512A\u8D8A; \u5B89\u88DD\u65B9\u4FBF\u53C8\u5FEB\u6377,\u87BA\u7D0B\u9023\u63A5\u90E8\u4EFD\u5B89\u5168\u53EF\u9760\u53C8\u8010\u7528; \u7BC0\u6D41\u578B\u6D88\u8072\u5668\u6613\u4E8E\u5FAE\u8ABF\u6392\u6C23\u91CF\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.290"
+  },
+  {
+    id: "BSLM-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    group: "\u6D88\u8072\u5668",
+    code: "",
+    name: "BSLM\u7CFB\u5217 \u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    format: "{spec}{thread}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u6D88\u8072\u5668\u985E\u578B",
+        options: [
+          {
+            code: "BSLM",
+            description: "\u5FAE\u578B\u6D88\u8072\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u6D88\u8072\u6027\u80FD\u512A\u8D8A; \u5B89\u88DD\u65B9\u4FBF\u53C8\u5FEB\u6377,\u87BA\u7D0B\u9023\u63A5\u90E8\u4EFD\u5B89\u5168\u53EF\u9760\u53C8\u8010\u7528; \u7BC0\u6D41\u578B\u6D88\u8072\u5668\u6613\u4E8E\u5FAE\u8ABF\u6392\u6C23\u91CF\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.290"
+  },
+  {
+    id: "BESL-S",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    group: "\u6D88\u8072\u5668",
+    code: "",
+    name: "BESL\u7CFB\u5217 \u4E0D\u92B9\u92FC\u6D88\u8072\u5668",
+    format: "{spec}{thread}-{material}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u6D88\u8072\u5668\u985E\u578B",
+        options: [
+          {
+            code: "BESL",
+            description: "\u7BC0\u6D41\u578B\u6D88\u8072\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u9023\u63A5\u87BA\u7D0B",
+        options: [
+          {
+            code: "M5",
+            description: "M5X0.8"
+          },
+          {
+            code: "01",
+            description: "PT1/8"
+          },
+          {
+            code: "02",
+            description: "PT1/4"
+          },
+          {
+            code: "03",
+            description: "PT3/8"
+          },
+          {
+            code: "04",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u6750\u8CEA\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FC304"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0~10kgf/cm\xB2(0~1.0MPa)",
+    note: "\u4E0D\u92B9\u92FC304\u6750\u8CEA\u7522\u54C1\u9069\u5408\u7981\u9285\u74B0\u5883; \u6D88\u8072\u6027\u80FD\u512A\u8D8A; \u5B89\u88DD\u65B9\u4FBF\u53C8\u5FEB\u6377,\u87BA\u7D0B\u9023\u63A5\u90E8\u4EFD\u5B89\u5168\u53EF\u9760\u53C8\u8010\u7528; \u7BC0\u6D41\u578B\u6D88\u8072\u5668\u6613\u4E8E\u5FAE\u8ABF\u6392\u6C23\u91CF\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.290"
+  },
+  {
+    id: "AQC",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u7BA1\u6750\u5DE5\u5177",
+    group: "\u6C23\u7BA1\u526A",
+    code: "AQC",
+    name: "\u6C23\u7BA1\u526A",
+    format: "{code}-{color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "AQC",
+            description: "\u6C23\u7BA1\u526A"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "BL",
+            description: "\u85CD\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "",
+    note: "",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.459"
+  },
+  {
+    id: "AG",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u7BA1\u6750\u5DE5\u5177",
+    group: "\u6C23\u69CD",
+    code: "AG",
+    name: "\u6C23\u69CD",
+    format: "{code}-{color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "AG",
+            description: "\u6C23\u69CD"
+          },
+          {
+            code: "AGL",
+            description: "\u9577\u5634\u6C23\u69CD"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "B",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "",
+    note: "",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.459"
+  },
+  {
+    id: "UCS-Tube",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "PU\u7BA1",
+    group: "UCS/UCE\u6372\u7BA1\u7CFB\u5217",
+    code: "",
+    name: "UCS\u7CFB\u5217 PU\u7BA1",
+    format: "{spec} {od} {id_} {color} {length} {jointType} {jointForm}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "UCS",
+            description: "\u805A\u916F"
+          }
+        ]
+      },
+      {
+        id: "od",
+        name: "\u5916\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          }
+        ]
+      },
+      {
+        id: "id_",
+        name: "\u5167\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "050",
+            description: "\u03A65.0mm"
+          },
+          {
+            code: "055",
+            description: "\u03A65.5mm"
+          },
+          {
+            code: "065",
+            description: "\u03A66.5mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F[\u6CE81]",
+        options: [
+          {
+            code: "BU",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "BK",
+            description: "\u9ED1\u8272"
+          },
+          {
+            code: "GE",
+            description: "\u6A59\u8272"
+          },
+          {
+            code: "C",
+            description: "\u900F\u660E"
+          },
+          {
+            code: "WH",
+            description: "\u767D\u8272"
+          },
+          {
+            code: "CB",
+            description: "\u900F\u660E\u85CD"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "Y",
+            description: "\u9EC3\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "BR",
+            description: "\u68D5\u8272"
+          },
+          {
+            code: "CR",
+            description: "\u900F\u660E\u7D05"
+          },
+          {
+            code: "CG",
+            description: "\u900F\u660E\u7DA0"
+          },
+          {
+            code: "CY",
+            description: "\u900F\u660E\u9EC3"
+          },
+          {
+            code: "CE",
+            description: "\u900F\u660E\u6A59"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u9577\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "030M",
+            description: "3m"
+          },
+          {
+            code: "060M",
+            description: "6m"
+          },
+          {
+            code: "090M",
+            description: "9m"
+          },
+          {
+            code: "120M",
+            description: "12m"
+          },
+          {
+            code: "150M",
+            description: "15m"
+          }
+        ]
+      },
+      {
+        id: "jointType",
+        name: "\u63A5\u982D\u985E\u578B",
+        options: [
+          {
+            code: "A",
+            description: "\u4E00\u7AEF\u957730cm,\u53E6\u4E00\u7AEF\u957710cm"
+          },
+          {
+            code: "B",
+            description: "\u4E8C\u7AEF\u63A5\u982D\u7BA1\u9577\u5747\u70BA10cm"
+          },
+          {
+            code: "C",
+            description: "\u4E8C\u7AEF\u63A5\u982D\u7BA1\u9577\u5747\u70BA0cm"
+          }
+        ]
+      },
+      {
+        id: "jointForm",
+        name: "\u63A5\u982D\u5F62\u5F0F",
+        options: [
+          {
+            code: "1",
+            description: "\u4E0D\u9644\u63A5\u982D"
+          },
+          {
+            code: "2",
+            description: "\u9644\u6BCD\u2014\u2014\u516C\u63A5\u982D"
+          },
+          {
+            code: "3",
+            description: "\u9644\u516C\u2014\u2014\u516C\u63A5\u982D"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "UCS: 0.8~1.0 MPa (23\xB0C)",
+    note: "\u2460\u85CD\u8272\u3001\u9ED1\u8272\u3001\u6A59\u8272\u3001\u900F\u660E\u70BA\u6A19\u6E96\u8272,\u5176\u5B83\u984F\u8272\u9700\u7279\u5225\u8A02\u5236\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.292"
+  },
+  {
+    id: "PU-Tube",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "PU\u7BA1",
+    group: "US98A/UE95A\u7CFB\u5217",
+    code: "",
+    name: "US98A\u3001UE95A\u7CFB\u5217 PU\u7BA1",
+    format: "{spec} {od} {id_} {length} {color}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "US98A",
+            description: "\u805A\u916F,\u786C\u5EA698A\xB12"
+          },
+          {
+            code: "UE95A",
+            description: "\u805A\u919A,\u786C\u5EA695A\xB12"
+          }
+        ]
+      },
+      {
+        id: "od",
+        name: "\u5916\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "032",
+            description: "\u03A63.2mm"
+          },
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          },
+          {
+            code: "160",
+            description: "\u03A616.0mm"
+          }
+        ]
+      },
+      {
+        id: "id_",
+        name: "\u5167\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "020",
+            description: "\u03A62.0mm"
+          },
+          {
+            code: "025",
+            description: "\u03A62.5mm"
+          },
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "050",
+            description: "\u03A65.0mm"
+          },
+          {
+            code: "055",
+            description: "\u03A65.5mm"
+          },
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "065",
+            description: "\u03A66.5mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "110",
+            description: "\u03A611.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u9577\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "100M",
+            description: "100m/\u5377"
+          },
+          {
+            code: "200M",
+            description: "200m/\u5377"
+          },
+          {
+            code: "20M",
+            description: "20m/\u5377"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F[\u6CE81]",
+        options: [
+          {
+            code: "BU",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "BK",
+            description: "\u9ED1\u8272"
+          },
+          {
+            code: "GE",
+            description: "\u6A59\u8272"
+          },
+          {
+            code: "C",
+            description: "\u900F\u660E"
+          },
+          {
+            code: "WH",
+            description: "\u767D\u8272"
+          },
+          {
+            code: "CB",
+            description: "\u900F\u660E\u85CD"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "Y",
+            description: "\u9EC3\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "BR",
+            description: "\u68D5\u8272"
+          },
+          {
+            code: "CR",
+            description: "\u900F\u660E\u7D05"
+          },
+          {
+            code: "CG",
+            description: "\u900F\u660E\u7DA0"
+          },
+          {
+            code: "CY",
+            description: "\u900F\u660E\u9EC3"
+          },
+          {
+            code: "CE",
+            description: "\u900F\u660E\u6A59"
+          },
+          {
+            code: "GA",
+            description: "\u7070\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "US98A: 0.4~1.0 MPa / UE95A: 0.8~1.0 MPa (23\xB0C)",
+    note: "\u2460\u85CD\u8272\u3001\u9ED1\u8272\u3001\u6A59\u8272\u3001\u900F\u660E\u70BA\u6A19\u6E96\u8272,\u5176\u5B83\u984F\u8272\u9700\u7279\u5225\u8A02\u5236\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.253"
+  },
+  {
+    id: "PA-Tube",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u5C3C\u9F8D\u7BA1",
+    group: "PA12/PA6\u7CFB\u5217",
+    code: "PA",
+    name: "PA12\u3001PA6\u7CFB\u5217 \u5C3C\u9F8D\u7BA1",
+    format: "{spec} {od} {id_} {length} {color}",
+    categories: [
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PA6",
+            description: "\u5C3C\u9F8D6"
+          },
+          {
+            code: "PA12",
+            description: "\u5C3C\u9F8D12"
+          }
+        ]
+      },
+      {
+        id: "od",
+        name: "\u5916\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          }
+        ]
+      },
+      {
+        id: "id_",
+        name: "\u5167\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "025",
+            description: "\u03A62.5mm"
+          },
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "075",
+            description: "\u03A67.5mm"
+          },
+          {
+            code: "090",
+            description: "\u03A69.0mm"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u9577\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "200M",
+            description: "200m/\u5377"
+          },
+          {
+            code: "100M",
+            description: "100m/\u5377"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "BU",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "BK",
+            description: "\u9ED1\u8272"
+          },
+          {
+            code: "GE",
+            description: "\u6A59\u8272"
+          },
+          {
+            code: "N",
+            description: "\u672C\u8272"
+          },
+          {
+            code: "WH",
+            description: "\u767D\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "Y",
+            description: "\u9EC3\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "PA6: 2.0~3.5MPa / PA12: 1.5~2.5MPa (23\xB0C\uFF0C\u4F9D\u7BA1\u5F91)",
+    note: "",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.255"
+  },
+  {
+    id: "UN54D",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u963B\u71C3\u7BA1",
+    group: "UN54D\u7CFB\u5217",
+    code: "UN54D",
+    name: "UN54D\u7CFB\u5217 \u963B\u71C3\u7BA1",
+    format: "{code} {od} {id_} {length} {color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "UN54D",
+            description: "\u963B\u71C3\u7BA1\u786C\u5EA654D\xB13"
+          }
+        ]
+      },
+      {
+        id: "od",
+        name: "\u5916\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          }
+        ]
+      },
+      {
+        id: "id_",
+        name: "\u5167\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "050",
+            description: "\u03A65.0mm"
+          },
+          {
+            code: "065",
+            description: "\u03A66.5mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u9577\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "100M",
+            description: "100m/\u5377"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "BU",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "BK",
+            description: "\u9ED1\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "WH",
+            description: "\u767D\u8272"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "Y",
+            description: "\u9EC3\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "1.0MPa (23\xB0C)",
+    note: "",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.256"
+  },
+  {
+    id: "UWS98A",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u96D9\u5C64\u963B\u71C3\u7BA1",
+    group: "UWS98A\u7CFB\u5217",
+    code: "UWS98A",
+    name: "UWS98A\u7CFB\u5217 \u96D9\u5C64\u963B\u71C3\u7BA1",
+    format: "{code} {od_inner} {id_inner}{length} {color}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "UWS98A",
+            description: "\u96D9\u5C64\u963B\u71C3\u7BA1"
+          }
+        ]
+      },
+      {
+        id: "od_inner",
+        name: "\u5916\u5F91(\u5167\u5C64)\u4EE3\u865F",
+        options: [
+          {
+            code: "060",
+            description: "\u03A66.0mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          },
+          {
+            code: "100",
+            description: "\u03A610.0mm"
+          },
+          {
+            code: "120",
+            description: "\u03A612.0mm"
+          }
+        ]
+      },
+      {
+        id: "id_inner",
+        name: "\u5167\u5F91\u4EE3\u865F",
+        options: [
+          {
+            code: "040",
+            description: "\u03A64.0mm"
+          },
+          {
+            code: "050",
+            description: "\u03A65.0mm"
+          },
+          {
+            code: "065",
+            description: "\u03A66.5mm"
+          },
+          {
+            code: "080",
+            description: "\u03A68.0mm"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u9577\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "050M",
+            description: "50m/\u5377"
+          },
+          {
+            code: "100M",
+            description: "100m/\u5377"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u984F\u8272\u4EE3\u865F",
+        options: [
+          {
+            code: "BU",
+            description: "\u85CD\u8272"
+          },
+          {
+            code: "BK",
+            description: "\u9ED1\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "WH",
+            description: "\u767D\u8272"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "Y",
+            description: "\u9EC3\u8272"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "1.0MPa (23\xB0C)",
+    note: "\u5167\u5C64PU\u7BA1\u5747\u70BA\u9ED1\u8272",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.295"
+  },
+  {
+    id: "HR",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
+    group: "HR\u6CB9\u58D3\u7A69\u901F\u5668",
+    code: "HR",
+    name: "HR\u7CFB\u5217 \u6CB9\u58D3\u7A69\u901F\u5668",
+    format: "{code}{stroke}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "HR",
+            description: "\u53EF\u8ABF\u5F0F\u6CB9\u58D3\u7A69\u901F\u5668"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "60",
+            description: "60mm"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: null,
+    note: null,
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.458"
+  },
+  {
+    id: "ACA",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
+    group: "ACA\u81EA\u52D5\u88DC\u511F\u5F0F",
+    code: "ACA",
+    name: "ACA\u7CFB\u5217 \u6CB9\u58D3\u7DE9\u885D\u5668",
+    format: "{code}{bodyThread}{stroke}-{speed}{cap}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "ACA",
+            description: "\u6A19\u6E96\u81EA\u52D5\u88DC\u511F\u5F0F\u6CB9\u58D3\u7DE9\u885D\u5668"
+          }
+        ]
+      },
+      {
+        id: "bodyThread",
+        name: "\u672C\u9AD4\u5916\u7259",
+        options: [
+          {
+            code: "08",
+            description: "M8"
+          },
+          {
+            code: "10",
+            description: "M10"
+          },
+          {
+            code: "12",
+            description: "M12"
+          },
+          {
+            code: "14",
+            description: "M14"
+          },
+          {
+            code: "16",
+            description: "M16"
+          },
+          {
+            code: "20",
+            description: "M20"
+          },
+          {
+            code: "25",
+            description: "M25"
+          },
+          {
+            code: "27",
+            description: "M27"
+          },
+          {
+            code: "33",
+            description: "M33"
+          },
+          {
+            code: "36",
+            description: "M36"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "3",
+            description: "3mm"
+          },
+          {
+            code: "7",
+            description: "7mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "15",
+            description: "15mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          }
+        ]
+      },
+      {
+        id: "speed",
+        name: "\u901F\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "\u9AD8\u901F(\u8F15\u8CA0\u8F09)"
+          },
+          {
+            code: "2",
+            description: "\u4E2D\u901F(\u4E2D\u8CA0\u8F09)"
+          },
+          {
+            code: "3",
+            description: "\u4F4E\u901F(\u91CD\u8CA0\u8F09)"
+          }
+        ]
+      },
+      {
+        id: "cap",
+        name: "\u9632\u649E\u5E3D\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u5851\u6599\u9632\u649E\u5E3D"
+          },
+          {
+            code: "N",
+            description: "\u7121\u9632\u649E\u5E3D"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: null,
+    note: null,
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.419"
+  },
+  {
+    id: "ACJ",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
+    group: "ACJ\u53EF\u8ABF\u5F0F",
+    code: "ACJ",
+    name: "ACJ\u7CFB\u5217 \u6CB9\u58D3\u7DE9\u885D\u5668 (M10, M12, M14)",
+    format: "{code}{bodyThread}{stroke}{cap}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "ACJ",
+            description: "\u53EF\u8ABF\u81EA\u52D5\u88DC\u511F\u5F0F\u6CB9\u58D3\u7DE9\u885D\u5668"
+          }
+        ]
+      },
+      {
+        id: "bodyThread",
+        name: "\u672C\u9AD4\u5916\u7259",
+        options: [
+          {
+            code: "10",
+            description: "M10"
+          },
+          {
+            code: "12",
+            description: "M12"
+          },
+          {
+            code: "14",
+            description: "M14"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "7",
+            description: "7mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          }
+        ]
+      },
+      {
+        id: "cap",
+        name: "\u9632\u649E\u5E3D\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u5851\u6599\u9632\u649E\u5E3D"
+          },
+          {
+            code: "F",
+            description: "\u9435\u8CEA\u9632\u649E\u5E3D"
+          },
+          {
+            code: "N",
+            description: "\u7121\u9632\u649E\u5E3D"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: null,
+    note: "\u6B64\u7CFB\u5217\u7121\u901F\u5EA6\u4EE3\u865F\u9078\u9805\u3002",
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.419"
+  },
+  {
+    id: "ACJ-L",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
+    group: "ACJ\u53EF\u8ABF\u5F0F",
+    code: "ACJ",
+    name: "ACJ\u7CFB\u5217 \u6CB9\u58D3\u7DE9\u885D\u5668 (M20\u4EE5\u4E0A)",
+    format: "{code}{bodyThread}{stroke}-{speed}{cap}",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "ACJ",
+            description: "\u53EF\u8ABF\u81EA\u52D5\u88DC\u511F\u5F0F\u6CB9\u58D3\u7DE9\u885D\u5668"
+          }
+        ]
+      },
+      {
+        id: "bodyThread",
+        name: "\u672C\u9AD4\u5916\u7259",
+        options: [
+          {
+            code: "20",
+            description: "M20"
+          },
+          {
+            code: "25",
+            description: "M25"
+          },
+          {
+            code: "27",
+            description: "M27"
+          },
+          {
+            code: "33",
+            description: "M33"
+          },
+          {
+            code: "36",
+            description: "M36"
+          },
+          {
+            code: "42",
+            description: "M42"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "75",
+            description: "75mm"
+          }
+        ]
+      },
+      {
+        id: "speed",
+        name: "\u901F\u5EA6\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "\u9AD8\u901F(\u8F15\u8CA0\u8F09)"
+          },
+          {
+            code: "2",
+            description: "\u4E2D\u901F(\u4E2D\u8CA0\u8F09)"
+          },
+          {
+            code: "3",
+            description: "\u4F4E\u901F(\u91CD\u8CA0\u8F09)"
+          }
+        ]
+      },
+      {
+        id: "cap",
+        name: "\u9632\u649E\u5E3D\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u5851\u6599\u9632\u649E\u5E3D"
+          },
+          {
+            code: "F",
+            description: "\u9435\u8CEA\u9632\u649E\u5E3D"
+          },
+          {
+            code: "N",
+            description: "\u7121\u9632\u649E\u5E3D"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: null,
+    note: null,
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.419"
+  },
+  {
+    id: "F-ACA",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6CB9\u58D3\u7DE9\u885D\u5668",
+    group: "\u5B89\u88DD\u9644\u4EF6",
+    code: "F-ACA",
+    name: "ACA\u3001ACJ\u7CFB\u5217 \u9644\u4EF6",
+    format: "{code}{spec}{thread}{accessory}",
+    categories: [
+      {
+        id: "code",
+        name: "\u9644\u4EF6\u4EE3\u865F",
+        options: [
+          {
+            code: "F-ACA",
+            description: "\u9644\u4EF6"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u7DE9\u885D\u5668\u4EE3\u865F",
+        options: [
+          {
+            code: "08",
+            description: "08"
+          },
+          {
+            code: "10",
+            description: "10"
+          },
+          {
+            code: "12",
+            description: "12"
+          },
+          {
+            code: "14",
+            description: "14"
+          },
+          {
+            code: "16",
+            description: "16"
+          },
+          {
+            code: "20",
+            description: "20"
+          },
+          {
+            code: "25",
+            description: "25"
+          },
+          {
+            code: "27",
+            description: "27"
+          },
+          {
+            code: "33",
+            description: "33"
+          },
+          {
+            code: "36",
+            description: "36"
+          },
+          {
+            code: "42",
+            description: "42"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u5167\u7259\u898F\u683C",
+        options: [
+          {
+            code: "M8",
+            description: "M8"
+          },
+          {
+            code: "M10",
+            description: "M10"
+          },
+          {
+            code: "M12",
+            description: "M12"
+          },
+          {
+            code: "M14",
+            description: "M14"
+          },
+          {
+            code: "M16",
+            description: "M16"
+          },
+          {
+            code: "M20",
+            description: "M20"
+          },
+          {
+            code: "M25",
+            description: "M25"
+          },
+          {
+            code: "M27",
+            description: "M27"
+          },
+          {
+            code: "M33",
+            description: "M33"
+          },
+          {
+            code: "M36",
+            description: "M36"
+          },
+          {
+            code: "M42",
+            description: "M42"
+          }
+        ]
+      },
+      {
+        id: "accessory",
+        name: "\u9644\u4EF6\u4EE3\u865F",
+        options: [
+          {
+            code: "LM",
+            description: "\u5B9A\u4F4D\u505C\u6B62\u87BA\u5E3D"
+          },
+          {
+            code: "FA",
+            description: "\u6CD5\u862D"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: null,
+    note: null,
+    sourceFile: "\u8F14\u52A9\u5143\u4EF6\u578B\u9304 P.421"
+  },
+  {
+    id: "PWC-PWL",
+    category: "\u8F14\u52A9\u5143\u4EF6",
+    superGroup: "\u6C23\u52D5\u6307\u793A\u71C8",
+    group: "\u6307\u793A\u71C8",
+    name: "\u6C23\u52D5\u6307\u793A\u71C8 (PWC/PWL)",
+    format: "{series} {port1} {port2} {color} {thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "PWC",
+            description: "PWC: \u4E09\u901A\u6A19\u6E96\u578B"
+          },
+          {
+            code: "PWL",
+            description: "PWL: \u4E09\u901A\u5E36\u63D2\u7BA1"
+          }
+        ]
+      },
+      {
+        id: "port1",
+        name: "\u63A5\u7BA1\u53E3\u5F91 (PWL\u7528)",
+        options: [
+          {
+            code: "",
+            description: "\u7121(\u9069\u7528PWC)"
+          },
+          {
+            code: "4",
+            description: "\u03A64 (PWL)"
+          },
+          {
+            code: "6",
+            description: "\u03A66 (PWL)"
+          },
+          {
+            code: "8",
+            description: "\u03A68 (PWL)"
+          }
+        ]
+      },
+      {
+        id: "port2",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5x0.8"
+          },
+          {
+            code: "01",
+            description: "1/8"
+          },
+          {
+            code: "02",
+            description: "1/4"
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u6307\u793A\u71C8",
+        options: [
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "GN",
+            description: "\u7DA0\u8272"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259(M5\u6642\u70BA\u7A7A)"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ]
+  }
+];
 
 // src/data/index.ts
 function resolveOptions(ref) {
@@ -42246,20 +46360,20 @@ var KNOWLEDGE_BASE = [
 \u7BC4\u4F8B: AS2201F-01-06SA = 1/8"\u7259 + \u03A66\u7BA1\u5FEB\u63D2 + \u6392\u6C23\u7BC0\u6D41 L\u578B
 \u2192 AirTAC PSL \u5C0D\u61C9: PSL[\u7BA1\u5F91]-[\u7259\u898F], \u4F8B \u2192 PSL6-01 (\u03A66\u7BA1\u30011/8"\u7259\u3001\u6392\u6C23\u7BC0\u6D41\u6A19\u6E96)\u3002PSL \u6A19\u6E96\u5373\u6392\u6C23\u7BC0\u6D41(A\u578B)`
   },
-  { brand: "SMC", pattern: /^AN\d/i, competitorSeries: "AN \u6D88\u8072\u5668", airtacSeriesIds: ["BSL", "BSL-SS"], note: "SMC AN \u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^AN\d/i, competitorSeries: "AN \u6D88\u8072\u5668", airtacSeriesIds: ["BSL", "PPA", "BSL-S"], note: "SMC AN \u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL \u7CFB\u5217 (spec \u53EF\u9078 BSL/BSLM/BESL/PAL)\uFF1B\u7BA1\u585E\u5F0F\u5C0D\u61C9 PPA\uFF1B\u4E0D\u92B9\u92FC\u7248\u5C0D\u61C9 BSL-S\u3002" },
   {
     brand: "SMC",
     pattern: /^KQ2?([HLTUYE])/i,
     competitorSeries: "KQ2 \u5FEB\u63D2\u63A5\u982D",
-    airtacSeriesIds: ["Fittings-PC", "Fittings-PL", "Fittings-PU", "Fittings-PE"],
-    note: "SMC KQ2 \u5FEB\u63D2\u63A5\u982D\uFF1AKQ2H\u76F4\u901A\u2192PC\u3001KQ2L\u5F4E\u982D\u2192PL\u3001KQ2T\u4E09\u901A\u2192PE\u3001KQ2U Y\u578B\u2192PU \u5C0D\u61C9\u5F62\u72C0\u9078\u64C7\u3002",
+    airtacSeriesIds: ["PC", "PL", "PE", "PEG", "PC-S", "PL-S"],
+    note: "SMC KQ2 \u5FEB\u63D2\u63A5\u982D\u5C0D\u61C9 AirTAC \u5FEB\u901F\u63A5\u982D\uFF1A\u76F4\u901A\u516C\u7259\u2192PC\u3001\u5F4E\u982D/\u7259\u578B\u985E\u2192PL \u7CFB\u5217\u7684 spec \u9078\u9805\u3001\u63D2\u7BA1\u5C0D\u63D2\u7BA1\u985E\u2192PE \u7CFB\u5217\u7684 spec \u9078\u9805\u3001\u6E1B\u5F91/\u591A\u901A\u2192PEG\u3002\u4E0D\u92B9\u92FC\u7248\u9078 -S \u7CFB\u5217\u3002",
     decode: `SMC KQ2 \u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: KQ2[\u5F62\u72C0][\u7BA1\u5F91]-[\u7259\u898F/\u7B2C\u4E8C\u7BA1\u5F91]+\u5C3E\u78BC):
 - \u5F62\u72C0: H=\u76F4\u901A\u516C\u7259\u63A5\u982D, L=L\u578B\u5F4E\u982D\u516C\u7259, T=T\u578B\u4E09\u901A, U=Y\u578B\u4E8C\u53C9, E=\u9694\u677F\u76F4\u901A, F=\u6BCD\u7259\u76F4\u901A, W=\u5EF6\u9577\u5F4E\u982D
 - \u7BA1\u5F91: 04=\u03A64, 06=\u03A66, 08=\u03A68, 10=\u03A610, 12=\u03A612 (mm)
 - \u7259\u898F: M5=M5\u7259, 01=1/8", 02=1/4", 03=3/8", 04=1/2"; \u524D\u7DB4 N (\u5982 -01N)=NPT\u7259; \u5C3E\u78BC S=\u5167\u516D\u89D2\u578B
-\u2192 AirTAC \u5C0D\u61C9: \u5F62\u72C0 H\u2192PC(\u87BA\u7D0B\u76F4\u901A), L\u2192PL(L\u578B\u87BA\u7D0B\u4E8C\u901A), T\u2192PE(T\u578B\u4E09\u901A), U\u2192PU(Y\u578B/\u76F4\u901A); \u8A02\u8CFC\u78BC = [\u7CFB\u5217][\u7BA1\u5F91]-[\u7259\u898F\u6578\u5B57], \u4F8B KQ2L06-01S \u2192 PL6-01 (\u03A66\u7BA1\u30011/8"\u7259)\u3002NPT \u7259\u9700\u5099\u8A3B AirTAC \u662F\u5426\u6709\u5C0D\u61C9\u7259\u578B\u9078\u9805`
+\u2192 AirTAC \u5C0D\u61C9: \u5F62\u72C0 H\u2192PC \u7CFB\u5217, L(\u5F4E\u982D)\u2192PL \u7CFB\u5217(spec \u9078 PL), T(\u7259\u4E09\u901A)\u2192PL \u7CFB\u5217(spec \u9078 PEB/PED), \u63D2\u7BA1\u4E09\u901A\u2192PE \u7CFB\u5217(spec \u9078 PE), U/Y\u2192PE \u7CFB\u5217(spec \u9078 PY), \u7BA1\u5C0D\u7BA1\u76F4\u901A\u2192PE \u7CFB\u5217(spec \u9078 PU); \u8A02\u8CFC\u78BC = [\u5F62\u72C0\u4EE3\u865F][\u7BA1\u5F91] [\u7259\u898F], \u4F8B KQ2L06-01S \u2192 PL 6 01 (\u03A66\u7BA1\u30011/8"\u7259)\u3002NPT \u7259\u9700\u5099\u8A3B`
   },
-  { brand: "SMC", pattern: /^RB\d{2}/i, competitorSeries: "RB \u6CB9\u58D3\u7DE9\u885D\u5668", airtacSeriesIds: ["ACA", "ACJ", "HR"], note: "SMC RB \u6CB9\u58D3\u7DE9\u885D\u5668\u5C0D\u61C9 AirTAC ACA (\u6A19\u6E96\u81EA\u88DC\u511F) / ACJ (\u53EF\u8ABF) \u7CFB\u5217\uFF0C\u4F9D\u87BA\u7D0B\u5C3A\u5BF8\u5C0D\u61C9\u3002" },
+  { brand: "SMC", pattern: /^RB\d{2}/i, competitorSeries: "RB \u6CB9\u58D3\u7DE9\u885D\u5668", airtacSeriesIds: ["ACA", "ACJ", "ACJ-L", "HR"], note: "SMC RB \u6CB9\u58D3\u7DE9\u885D\u5668\u5C0D\u61C9 AirTAC ACA (\u81EA\u52D5\u88DC\u511F\u5F0F) / ACJ (\u53EF\u8ABF\u5F0F, M10~M14) / ACJ-L (\u53EF\u8ABF\u5F0F, M20\u4EE5\u4E0A)\uFF0C\u4F9D\u672C\u9AD4\u87BA\u7D0B\u5C3A\u5BF8\u5C0D\u61C9\u3002" },
   {
     brand: "SMC",
     pattern: /^D-[A-Z]\d|^D-M9/i,
@@ -42272,7 +46386,7 @@ var KNOWLEDGE_BASE = [
 - \u5C3E\u78BC V=\u5782\u76F4\u51FA\u7DDA, W=\u96D9\u8272\u6307\u793A, \u6578\u5B57L=\u5C0E\u7DDA\u9577(\u5982 L=3m, Z=5m, \u7121\u8A18\u865F=0.5m)
 \u2192 AirTAC \u5C0D\u61C9: \u78C1\u7C27\u5F0F(A9\u25A1)\u2192CMS \u7CFB\u5217; \u96FB\u5B50\u5F0F(M9\u25A1)\u2192DMS \u7CFB\u5217 (2\u7DDA/3\u7DDA\u4F9D\u578B\u9304\u9078\u9805\u5C0D\u61C9); \u51FA\u7DDA\u9577\u4F9D AirTAC \u9078\u9805\u9078\u6700\u63A5\u8FD1`
   },
-  { brand: "SMC", pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: "TU \u6C23\u7BA1", airtacSeriesIds: ["PU-Tube", "PA-Tube", "UWS98A"], note: "SMC TU \u805A\u6C28\u916F\u6C23\u7BA1\u5C0D\u61C9 AirTAC US98A/UE95A PU\u7BA1\uFF1B\u5C3C\u9F8D\u7BA1\u5C0D\u61C9 PA \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: "TU \u6C23\u7BA1", airtacSeriesIds: ["PU-Tube", "UCS-Tube", "PA-Tube", "UWS98A", "UN54D"], note: "SMC TU \u805A\u6C28\u916F\u6C23\u7BA1\u5C0D\u61C9 AirTAC US98A/UE95A PU\u7BA1\uFF1B\u6372\u7BA1\u5C0D\u61C9 UCS/UCE\uFF1B\u5C3C\u9F8D\u7BA1\u5C0D\u61C9 PA12/PA6\uFF1B\u963B\u71C3\u7BA1\u5C0D\u61C9 UN54D/UWS98A\u3002" },
   // --- Festo ---
   { brand: "Festo", pattern: /^DSNU|^ESNU/i, competitorSeries: "DSNU \u5713\u5F62\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi", "ma", "mf"], note: "Festo DSNU \u5713\u5F62\u8FF7\u4F60\u7F38\u5C0D\u61C9 AirTAC MI/MA \u7CFB\u5217(ISO6432)\u3002" },
   { brand: "Festo", pattern: /^DSBC|^DNC/i, competitorSeries: "DSBC/DNC \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["sai", "se", "sc"], note: "Festo DSBC/DNC \u6A19\u6E96\u7F38\u5C0D\u61C9 AirTAC SAI (ISO15552) \u6216 SE \u7CFB\u5217\u3002" },
@@ -42284,7 +46398,7 @@ var KNOWLEDGE_BASE = [
   { brand: "Festo", pattern: /^DFSP|^STA[F]?/i, competitorSeries: "STA/DFSP \u963B\u64CB\u6C23\u7F38", airtacSeriesIds: ["twq", "twh", "twg"], note: "Festo \u963B\u64CB\u6C23\u7F38\u5C0D\u61C9 AirTAC TWQ/TWH \u7CFB\u5217\u3002" },
   { brand: "Festo", pattern: /^VUVS|^MFH|^JMFH|^VUVG/i, competitorSeries: "VUVS/MFH \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V200", "4V300", "6SV", "7SV"], note: "Festo \u4E94\u53E3\u96FB\u78C1\u95A5\u5C0D\u61C9 AirTAC 4V \u6216 6SV/7SV \u7CFB\u5217\uFF0C\u4F9D\u53E3\u5F91\u8207\u6D41\u91CF\u3002" },
   { brand: "Festo", pattern: /^GRLA|^GRL[ZO]?|^GR-/i, competitorSeries: "GRLA \u8ABF\u901F\u95A5", airtacSeriesIds: ["PSL"], note: "Festo GRLA \u8ABF\u901F\u63A5\u982D\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217\u3002" },
-  { brand: "Festo", pattern: /^QS[LTMYF]?/i, competitorSeries: "QS \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["Fittings-PC", "Fittings-PL", "Fittings-PU", "Fittings-PE"], note: "Festo QS \u5FEB\u63D2\u63A5\u982D\uFF1AQS\u76F4\u901A\u2192PC\u3001QSL\u5F4E\u982D\u2192PL\u3001QST\u4E09\u901A\u2192PE\u3002" },
+  { brand: "Festo", pattern: /^QS[LTMYF]?/i, competitorSeries: "QS \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["PC", "PL", "PE", "PEG"], note: "Festo QS \u5FEB\u63D2\u63A5\u982D\uFF1AQS\u76F4\u901A\u516C\u7259\u2192PC\u3001QSL\u5F4E\u982D\u2192PL(spec\u9078L\u578B)\u3001QST\u4E09\u901A\u2192PE(spec\u9078PE)\u3001\u6E1B\u5F91\u2192PEG\u3002" },
   { brand: "Festo", pattern: /^MS[4-9]|^FRC|^LFR/i, competitorSeries: "MS/FRC \u6C23\u6E90\u8655\u7406", airtacSeriesIds: ["GC", "GFC", "GFR", "GF", "GR"], note: "Festo MS/FRC \u7CFB\u5217 FRL \u5C0D\u61C9 AirTAC G \u7CFB\u5217\u6C23\u6E90\u8655\u7406(GFR/GC\u7B49)\u3002" },
   { brand: "Festo", pattern: /^U-\d|^AMTE/i, competitorSeries: "U \u6D88\u8072\u5668", airtacSeriesIds: ["BSL"], note: "Festo U \u7CFB\u5217\u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL\u3002" },
   // --- Mindman (金器) ---
@@ -42297,7 +46411,7 @@ var KNOWLEDGE_BASE = [
   { brand: "Mindman", pattern: /^MACP|^MAFR|^MACT/i, competitorSeries: "MACP \u6C23\u6E90\u8655\u7406", airtacSeriesIds: ["GFR", "GC", "GFC"], note: "Mindman \u6C23\u6E90\u8655\u7406(\u8ABF\u58D3\u904E\u6FFE\u5668\u7B49)\u5C0D\u61C9 AirTAC GFR/GC \u7CFB\u5217\u3002" },
   // --- PISCO ---
   { brand: "PISCO", pattern: /^JSC/i, competitorSeries: "JSC \u8ABF\u901F\u95A5", airtacSeriesIds: ["PSL"], note: "PISCO JSC \u8ABF\u901F\u63A5\u982D\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217\u3002" },
-  { brand: "PISCO", pattern: /^P[CLBEUY]\d/i, competitorSeries: "PC/PL \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["Fittings-PC", "Fittings-PL", "Fittings-PU", "Fittings-PE"], note: "PISCO \u5FEB\u63D2\u63A5\u982D\u547D\u540D\u8207 AirTAC \u5E7E\u4E4E\u76F8\u540C\uFF1APC\u76F4\u901A\u3001PL\u5F4E\u982D\u3001PE\u4E09\u901A\u3001PU\u76F4\u901A(\u7BA1\u5C0D\u7BA1)\u3002" },
+  { brand: "PISCO", pattern: /^P[CLBEUY]\d/i, competitorSeries: "PC/PL \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["PC", "PL", "PE", "PEG"], note: "PISCO \u5FEB\u63D2\u63A5\u982D\u547D\u540D\u8207 AirTAC \u5E7E\u4E4E\u76F8\u540C\uFF1APC\u76F4\u901A\u2192PC\u3001PL\u5F4E\u982D\u2192PL\u3001PE\u4E09\u901A/PU\u76F4\u901A(\u7BA1\u5C0D\u7BA1)/PY\u2192PE \u7CFB\u5217 spec \u9078\u9805\u3001\u6E1B\u5F91\u985E\u2192PEG\u3002" },
   { brand: "PISCO", pattern: /^SL[WM]?\d/i, competitorSeries: "SL \u6D88\u8072\u5668", airtacSeriesIds: ["BSL"], note: "PISCO \u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL\u3002" },
   // --- CKD (常見，雖不在下拉清單也支援自動偵測) ---
   { brand: "CKD", pattern: /^SSD/i, competitorSeries: "SSD \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda"], note: "CKD SSD \u8584\u578B\u7F38\u5C0D\u61C9 AirTAC ACQ/SDA\u3002" },

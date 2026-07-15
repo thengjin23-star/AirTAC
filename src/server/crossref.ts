@@ -168,16 +168,16 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 - 尾碼 S=鋼珠內六角, A=排氣節流, B=入氣節流
 範例: AS2201F-01-06SA = 1/8"牙 + Φ6管快插 + 排氣節流 L型
 → AirTAC PSL 對應: PSL[管徑]-[牙規], 例 → PSL6-01 (Φ6管、1/8"牙、排氣節流標準)。PSL 標準即排氣節流(A型)` },
-  { brand: 'SMC', pattern: /^AN\d/i, competitorSeries: 'AN 消聲器', airtacSeriesIds: ['BSL', 'BSL-SS'], note: 'SMC AN 消聲器對應 AirTAC BSL 系列。' },
+  { brand: 'SMC', pattern: /^AN\d/i, competitorSeries: 'AN 消聲器', airtacSeriesIds: ['BSL', 'PPA', 'BSL-S'], note: 'SMC AN 消聲器對應 AirTAC BSL 系列 (spec 可選 BSL/BSLM/BESL/PAL)；管塞式對應 PPA；不銹鋼版對應 BSL-S。' },
   {
-    brand: 'SMC', pattern: /^KQ2?([HLTUYE])/i, competitorSeries: 'KQ2 快插接頭', airtacSeriesIds: ['Fittings-PC', 'Fittings-PL', 'Fittings-PU', 'Fittings-PE'],
-    note: 'SMC KQ2 快插接頭：KQ2H直通→PC、KQ2L彎頭→PL、KQ2T三通→PE、KQ2U Y型→PU 對應形狀選擇。',
+    brand: 'SMC', pattern: /^KQ2?([HLTUYE])/i, competitorSeries: 'KQ2 快插接頭', airtacSeriesIds: ['PC', 'PL', 'PE', 'PEG', 'PC-S', 'PL-S'],
+    note: 'SMC KQ2 快插接頭對應 AirTAC 快速接頭：直通公牙→PC、彎頭/牙型類→PL 系列的 spec 選項、插管對插管類→PE 系列的 spec 選項、減徑/多通→PEG。不銹鋼版選 -S 系列。',
     decode: `SMC KQ2 訂購碼解碼 (格式: KQ2[形狀][管徑]-[牙規/第二管徑]+尾碼):
 - 形狀: H=直通公牙接頭, L=L型彎頭公牙, T=T型三通, U=Y型二叉, E=隔板直通, F=母牙直通, W=延長彎頭
 - 管徑: 04=Φ4, 06=Φ6, 08=Φ8, 10=Φ10, 12=Φ12 (mm)
 - 牙規: M5=M5牙, 01=1/8", 02=1/4", 03=3/8", 04=1/2"; 前綴 N (如 -01N)=NPT牙; 尾碼 S=內六角型
-→ AirTAC 對應: 形狀 H→PC(螺紋直通), L→PL(L型螺紋二通), T→PE(T型三通), U→PU(Y型/直通); 訂購碼 = [系列][管徑]-[牙規數字], 例 KQ2L06-01S → PL6-01 (Φ6管、1/8"牙)。NPT 牙需備註 AirTAC 是否有對應牙型選項` },
-  { brand: 'SMC', pattern: /^RB\d{2}/i, competitorSeries: 'RB 油壓緩衝器', airtacSeriesIds: ['ACA', 'ACJ', 'HR'], note: 'SMC RB 油壓緩衝器對應 AirTAC ACA (標準自補償) / ACJ (可調) 系列，依螺紋尺寸對應。' },
+→ AirTAC 對應: 形狀 H→PC 系列, L(彎頭)→PL 系列(spec 選 PL), T(牙三通)→PL 系列(spec 選 PEB/PED), 插管三通→PE 系列(spec 選 PE), U/Y→PE 系列(spec 選 PY), 管對管直通→PE 系列(spec 選 PU); 訂購碼 = [形狀代號][管徑] [牙規], 例 KQ2L06-01S → PL 6 01 (Φ6管、1/8"牙)。NPT 牙需備註` },
+  { brand: 'SMC', pattern: /^RB\d{2}/i, competitorSeries: 'RB 油壓緩衝器', airtacSeriesIds: ['ACA', 'ACJ', 'ACJ-L', 'HR'], note: 'SMC RB 油壓緩衝器對應 AirTAC ACA (自動補償式) / ACJ (可調式, M10~M14) / ACJ-L (可調式, M20以上)，依本體螺紋尺寸對應。' },
   {
     brand: 'SMC', pattern: /^D-[A-Z]\d|^D-M9/i, competitorSeries: 'D- 磁性開關', airtacSeriesIds: ['cms', 'dms', 'ems'],
     note: 'SMC D- 系列磁性開關：有接點(磁簧式)對應 CMS，無接點(電子式)對應 DMS/EMS。',
@@ -186,7 +186,7 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 - D-M9□ = 無接點電子式 (solid state): M9B=2線式, M9N=3線式NPN, M9P=3線式PNP
 - 尾碼 V=垂直出線, W=雙色指示, 數字L=導線長(如 L=3m, Z=5m, 無記號=0.5m)
 → AirTAC 對應: 磁簧式(A9□)→CMS 系列; 電子式(M9□)→DMS 系列 (2線/3線依型錄選項對應); 出線長依 AirTAC 選項選最接近` },
-  { brand: 'SMC', pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: 'TU 氣管', airtacSeriesIds: ['PU-Tube', 'PA-Tube', 'UWS98A'], note: 'SMC TU 聚氨酯氣管對應 AirTAC US98A/UE95A PU管；尼龍管對應 PA 系列。' },
+  { brand: 'SMC', pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: 'TU 氣管', airtacSeriesIds: ['PU-Tube', 'UCS-Tube', 'PA-Tube', 'UWS98A', 'UN54D'], note: 'SMC TU 聚氨酯氣管對應 AirTAC US98A/UE95A PU管；捲管對應 UCS/UCE；尼龍管對應 PA12/PA6；阻燃管對應 UN54D/UWS98A。' },
   // --- Festo ---
   { brand: 'Festo', pattern: /^DSNU|^ESNU/i, competitorSeries: 'DSNU 圓形氣缸(ISO6432)', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'Festo DSNU 圓形迷你缸對應 AirTAC MI/MA 系列(ISO6432)。' },
   { brand: 'Festo', pattern: /^DSBC|^DNC/i, competitorSeries: 'DSBC/DNC 標準氣缸(ISO15552)', airtacSeriesIds: ['sai', 'se', 'sc'], note: 'Festo DSBC/DNC 標準缸對應 AirTAC SAI (ISO15552) 或 SE 系列。' },
@@ -198,7 +198,7 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'Festo', pattern: /^DFSP|^STA[F]?/i, competitorSeries: 'STA/DFSP 阻擋氣缸', airtacSeriesIds: ['twq', 'twh', 'twg'], note: 'Festo 阻擋氣缸對應 AirTAC TWQ/TWH 系列。' },
   { brand: 'Festo', pattern: /^VUVS|^MFH|^JMFH|^VUVG/i, competitorSeries: 'VUVS/MFH 電磁閥', airtacSeriesIds: ['4V200', '4V300', '6SV', '7SV'], note: 'Festo 五口電磁閥對應 AirTAC 4V 或 6SV/7SV 系列，依口徑與流量。' },
   { brand: 'Festo', pattern: /^GRLA|^GRL[ZO]?|^GR-/i, competitorSeries: 'GRLA 調速閥', airtacSeriesIds: ['PSL'], note: 'Festo GRLA 調速接頭對應 AirTAC PSL 系列。' },
-  { brand: 'Festo', pattern: /^QS[LTMYF]?/i, competitorSeries: 'QS 快插接頭', airtacSeriesIds: ['Fittings-PC', 'Fittings-PL', 'Fittings-PU', 'Fittings-PE'], note: 'Festo QS 快插接頭：QS直通→PC、QSL彎頭→PL、QST三通→PE。' },
+  { brand: 'Festo', pattern: /^QS[LTMYF]?/i, competitorSeries: 'QS 快插接頭', airtacSeriesIds: ['PC', 'PL', 'PE', 'PEG'], note: 'Festo QS 快插接頭：QS直通公牙→PC、QSL彎頭→PL(spec選L型)、QST三通→PE(spec選PE)、減徑→PEG。' },
   { brand: 'Festo', pattern: /^MS[4-9]|^FRC|^LFR/i, competitorSeries: 'MS/FRC 氣源處理', airtacSeriesIds: ['GC', 'GFC', 'GFR', 'GF', 'GR'], note: 'Festo MS/FRC 系列 FRL 對應 AirTAC G 系列氣源處理(GFR/GC等)。' },
   { brand: 'Festo', pattern: /^U-\d|^AMTE/i, competitorSeries: 'U 消聲器', airtacSeriesIds: ['BSL'], note: 'Festo U 系列消聲器對應 AirTAC BSL。' },
   // --- Mindman (金器) ---
@@ -211,7 +211,7 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'Mindman', pattern: /^MACP|^MAFR|^MACT/i, competitorSeries: 'MACP 氣源處理', airtacSeriesIds: ['GFR', 'GC', 'GFC'], note: 'Mindman 氣源處理(調壓過濾器等)對應 AirTAC GFR/GC 系列。' },
   // --- PISCO ---
   { brand: 'PISCO', pattern: /^JSC/i, competitorSeries: 'JSC 調速閥', airtacSeriesIds: ['PSL'], note: 'PISCO JSC 調速接頭對應 AirTAC PSL 系列。' },
-  { brand: 'PISCO', pattern: /^P[CLBEUY]\d/i, competitorSeries: 'PC/PL 快插接頭', airtacSeriesIds: ['Fittings-PC', 'Fittings-PL', 'Fittings-PU', 'Fittings-PE'], note: 'PISCO 快插接頭命名與 AirTAC 幾乎相同：PC直通、PL彎頭、PE三通、PU直通(管對管)。' },
+  { brand: 'PISCO', pattern: /^P[CLBEUY]\d/i, competitorSeries: 'PC/PL 快插接頭', airtacSeriesIds: ['PC', 'PL', 'PE', 'PEG'], note: 'PISCO 快插接頭命名與 AirTAC 幾乎相同：PC直通→PC、PL彎頭→PL、PE三通/PU直通(管對管)/PY→PE 系列 spec 選項、減徑類→PEG。' },
   { brand: 'PISCO', pattern: /^SL[WM]?\d/i, competitorSeries: 'SL 消聲器', airtacSeriesIds: ['BSL'], note: 'PISCO 消聲器對應 AirTAC BSL。' },
   // --- CKD (常見，雖不在下拉清單也支援自動偵測) ---
   { brand: 'CKD', pattern: /^SSD/i, competitorSeries: 'SSD 薄型氣缸', airtacSeriesIds: ['acq', 'sda'], note: 'CKD SSD 薄型缸對應 AirTAC ACQ/SDA。' },

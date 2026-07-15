@@ -1,1532 +1,5646 @@
-{
-  "series": [
-    {
-      "id": "HR",
-      "category": "輔助元件",
-      "superGroup": "油壓緩衝器",
-      "group": "油壓穩速器",
-      "name": "HR系列 可調式油壓穩速器",
-      "format": "HR{model}",
-      "categories": [
-        {
-          "id": "model",
-          "name": "規格代號",
-          "options": [
-            {
-              "code": "30",
-              "description": "HR30 (最大行程30mm)"
-            },
-            {
-              "code": "60",
-              "description": "HR60 (最大行程60mm)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ACA",
-      "category": "輔助元件",
-      "superGroup": "油壓緩衝器",
-      "group": "自動補償式",
-      "name": "ACA系列 標準自動補償式油壓緩衝器",
-      "format": "ACA{thread}{stroke}-{speed}{cap}",
-      "categories": [
-        {
-          "id": "thread",
-          "name": "本體外牙",
-          "options": [
-            {
-              "code": "08",
-              "description": "M8"
-            },
-            {
-              "code": "10",
-              "description": "M10"
-            },
-            {
-              "code": "12",
-              "description": "M12"
-            },
-            {
-              "code": "14",
-              "description": "M14"
-            },
-            {
-              "code": "16",
-              "description": "M16"
-            },
-            {
-              "code": "20",
-              "description": "M20"
-            },
-            {
-              "code": "25",
-              "description": "M25"
-            },
-            {
-              "code": "27",
-              "description": "M27"
-            },
-            {
-              "code": "33",
-              "description": "M33"
-            },
-            {
-              "code": "36",
-              "description": "M36"
-            }
-          ]
-        },
-        {
-          "id": "stroke",
-          "name": "行程",
-          "options": [
-            {
-              "code": "06",
-              "description": "6mm"
-            },
-            {
-              "code": "07",
-              "description": "7mm"
-            },
-            {
-              "code": "10",
-              "description": "10mm"
-            },
-            {
-              "code": "12",
-              "description": "12mm"
-            },
-            {
-              "code": "15",
-              "description": "15mm"
-            },
-            {
-              "code": "16",
-              "description": "16mm"
-            },
-            {
-              "code": "20",
-              "description": "20mm"
-            },
-            {
-              "code": "25",
-              "description": "25mm"
-            },
-            {
-              "code": "30",
-              "description": "30mm"
-            },
-            {
-              "code": "40",
-              "description": "40mm"
-            },
-            {
-              "code": "50",
-              "description": "50mm"
-            }
-          ]
-        },
-        {
-          "id": "speed",
-          "name": "速度代號",
-          "options": [
-            {
-              "code": "1",
-              "description": "高速(輕負載)"
-            },
-            {
-              "code": "2",
-              "description": "中速(中負載)"
-            },
-            {
-              "code": "3",
-              "description": "低速(重負載)"
-            }
-          ]
-        },
-        {
-          "id": "cap",
-          "name": "防撞帽代號",
-          "options": [
-            {
-              "code": "",
-              "description": "塑料防撞帽"
-            },
-            {
-              "code": "F",
-              "description": "鐵質防撞帽"
-            },
-            {
-              "code": "N",
-              "description": "無防撞帽"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ACJ",
-      "category": "輔助元件",
-      "superGroup": "油壓緩衝器",
-      "group": "可調自動補償式",
-      "name": "ACJ系列 可調自動補償式油壓緩衝器",
-      "format": "ACJ{thread}{stroke}-{cap}",
-      "categories": [
-        {
-          "id": "thread",
-          "name": "本體外牙",
-          "options": [
-            {
-              "code": "10",
-              "description": "M10"
-            },
-            {
-              "code": "12",
-              "description": "M12"
-            },
-            {
-              "code": "14",
-              "description": "M14"
-            },
-            {
-              "code": "20",
-              "description": "M20"
-            },
-            {
-              "code": "25",
-              "description": "M25"
-            },
-            {
-              "code": "27",
-              "description": "M27"
-            },
-            {
-              "code": "33",
-              "description": "M33"
-            },
-            {
-              "code": "36",
-              "description": "M36"
-            },
-            {
-              "code": "42",
-              "description": "M42"
-            }
-          ]
-        },
-        {
-          "id": "stroke",
-          "name": "行程",
-          "options": [
-            {
-              "code": "07",
-              "description": "7mm"
-            },
-            {
-              "code": "10",
-              "description": "10mm"
-            },
-            {
-              "code": "12",
-              "description": "12mm"
-            },
-            {
-              "code": "15",
-              "description": "15mm"
-            },
-            {
-              "code": "20",
-              "description": "20mm"
-            },
-            {
-              "code": "25",
-              "description": "25mm"
-            },
-            {
-              "code": "30",
-              "description": "30mm"
-            },
-            {
-              "code": "50",
-              "description": "50mm"
-            },
-            {
-              "code": "75",
-              "description": "75mm"
-            }
-          ]
-        },
-        {
-          "id": "cap",
-          "name": "防撞帽代號",
-          "options": [
-            {
-              "code": "",
-              "description": "塑料防撞帽"
-            },
-            {
-              "code": "F",
-              "description": "鐵質防撞帽"
-            },
-            {
-              "code": "N",
-              "description": "無防撞帽"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "Fittings-PC",
-      "category": "輔助元件",
-      "superGroup": "快速接頭",
-      "group": "插管-螺紋類",
-      "name": "PC系列 螺紋直通接頭",
-      "format": "PC {port} {thread} {color}",
-      "categories": [
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "4",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "6",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "8",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "",
-              "description": "灰色"
-            },
-            {
-              "code": "D",
-              "description": "黑色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "Fittings-PL",
-      "category": "輔助元件",
-      "superGroup": "快速接頭",
-      "group": "插管-螺紋類",
-      "name": "PL系列 L型螺紋二通",
-      "format": "PL {port} {thread} {color}",
-      "categories": [
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "4",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "6",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "8",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "",
-              "description": "灰色"
-            },
-            {
-              "code": "D",
-              "description": "黑色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "Fittings-PU",
-      "category": "輔助元件",
-      "superGroup": "快速接頭",
-      "group": "插管-插管類",
-      "name": "PU系列 直通接頭",
-      "format": "PU {port} {color}",
-      "categories": [
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "4",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "6",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "8",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "",
-              "description": "灰色"
-            },
-            {
-              "code": "D",
-              "description": "黑色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "Fittings-PE",
-      "category": "輔助元件",
-      "superGroup": "快速接頭",
-      "group": "插管-插管類",
-      "name": "PE系列 T型三通",
-      "format": "PE {port} {color}",
-      "categories": [
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "4",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "6",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "8",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "",
-              "description": "灰色"
-            },
-            {
-              "code": "D",
-              "description": "黑色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PSL",
-      "category": "輔助元件",
-      "superGroup": "調速閥",
-      "group": "L型調速閥",
-      "name": "PSL系列 L型調速閥",
-      "format": "PSL {port} {thread} {type} {color}",
-      "categories": [
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "4",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "6",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "8",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "節流方式",
-          "options": [
-            {
-              "code": "A",
-              "description": "排氣節流型"
-            },
-            {
-              "code": "B",
-              "description": "進氣節流型"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "",
-              "description": "灰色"
-            },
-            {
-              "code": "D",
-              "description": "黑色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "BSL",
-      "category": "輔助元件",
-      "superGroup": "消聲器",
-      "group": "通用型消聲器",
-      "name": "BSL系列 通用型消聲器",
-      "format": "BSL {thread}",
-      "categories": [
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "B-SS",
-      "category": "輔助元件",
-      "superGroup": "不銹鋼管接頭",
-      "group": "螺紋-螺紋類",
-      "name": "不銹鋼螺紋直通接頭 (BB/BD/BU/BZ)",
-      "format": "{series} {thread1} {thread2} - {type}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "規格代號",
-          "options": [
-            {
-              "code": "BB",
-              "description": "BB: 雙外螺紋直通"
-            },
-            {
-              "code": "BD",
-              "description": "BD: 內外螺紋直通"
-            },
-            {
-              "code": "BU",
-              "description": "BU: 雙內螺紋直通"
-            },
-            {
-              "code": "BZ",
-              "description": "BZ: 外六角堵頭"
-            }
-          ]
-        },
-        {
-          "id": "thread1",
-          "name": "連接螺紋I",
-          "options": [
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "thread2",
-          "name": "連接螺紋II (BZ無此項)",
-          "options": [
-            {
-              "code": "",
-              "description": "無(適用BZ)"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "材質代號",
-          "options": [
-            {
-              "code": "S",
-              "description": "不銹鋼304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "BKC",
-      "category": "輔助元件",
-      "superGroup": "不銹鋼管接頭",
-      "group": "螺紋-螺紋類",
-      "name": "BKC系列 鎖母直通",
-      "format": "BKC {outer} {inner} - {thread} - {type}",
-      "categories": [
-        {
-          "id": "outer",
-          "name": "接管外徑",
-          "options": [
-            {
-              "code": "04",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "06",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "08",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "10",
-              "description": "Φ10mm"
-            },
-            {
-              "code": "12",
-              "description": "Φ12mm"
-            }
-          ]
-        },
-        {
-          "id": "inner",
-          "name": "接管內徑",
-          "options": [
-            {
-              "code": "25",
-              "description": "Φ2.5mm"
-            },
-            {
-              "code": "04",
-              "description": "Φ4mm"
-            },
-            {
-              "code": "05",
-              "description": "Φ5mm"
-            },
-            {
-              "code": "06",
-              "description": "Φ6mm"
-            },
-            {
-              "code": "65",
-              "description": "Φ6.5mm"
-            },
-            {
-              "code": "75",
-              "description": "Φ7.5mm"
-            },
-            {
-              "code": "08",
-              "description": "Φ8mm"
-            },
-            {
-              "code": "09",
-              "description": "Φ9mm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M3",
-              "description": "M3x0.5"
-            },
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "材質代號",
-          "options": [
-            {
-              "code": "S",
-              "description": "不銹鋼304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "BSL-SS",
-      "category": "輔助元件",
-      "superGroup": "不銹鋼消聲器",
-      "group": "消聲器",
-      "name": "不銹鋼消聲器 (BSL/BSLM/BESL)",
-      "format": "{series} {thread} - {type}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "消聲器類型",
-          "options": [
-            {
-              "code": "BSL",
-              "description": "BSL: 通用型消聲器"
-            },
-            {
-              "code": "BSLM",
-              "description": "BSLM: 微型消聲器"
-            },
-            {
-              "code": "BESL",
-              "description": "BESL: 節流型消聲器"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "連接螺紋",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "PT1/8"
-            },
-            {
-              "code": "02",
-              "description": "PT1/4"
-            },
-            {
-              "code": "03",
-              "description": "PT3/8"
-            },
-            {
-              "code": "04",
-              "description": "PT1/2"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "材質代號",
-          "options": [
-            {
-              "code": "S",
-              "description": "不銹鋼304"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PU-Tube",
-      "category": "輔助元件",
-      "superGroup": "PU管",
-      "group": "PU管",
-      "name": "PU管 (US98A/UE95A)",
-      "format": "{series} {outer} {inner} {length} {color}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "規格代號",
-          "options": [
-            {
-              "code": "US98A",
-              "description": "US98A: 聚酯, 硬度98A±2"
-            },
-            {
-              "code": "UE95A",
-              "description": "UE95A: 聚醚, 硬度95A±2"
-            }
-          ]
-        },
-        {
-          "id": "outer",
-          "name": "外徑代號",
-          "options": [
-            {
-              "code": "032",
-              "description": "Φ3.2mm"
-            },
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "060",
-              "description": "Φ6.0mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            },
-            {
-              "code": "100",
-              "description": "Φ10.0mm"
-            },
-            {
-              "code": "120",
-              "description": "Φ12.0mm"
-            },
-            {
-              "code": "160",
-              "description": "Φ16.0mm"
-            }
-          ]
-        },
-        {
-          "id": "inner",
-          "name": "內徑代號",
-          "options": [
-            {
-              "code": "020",
-              "description": "Φ2.0mm"
-            },
-            {
-              "code": "025",
-              "description": "Φ2.5mm"
-            },
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "050",
-              "description": "Φ5.0mm"
-            },
-            {
-              "code": "055",
-              "description": "Φ5.5mm"
-            },
-            {
-              "code": "065",
-              "description": "Φ6.5mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            },
-            {
-              "code": "100",
-              "description": "Φ10.0mm"
-            },
-            {
-              "code": "110",
-              "description": "Φ11.0mm"
-            },
-            {
-              "code": "120",
-              "description": "Φ12.0mm"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "長度代號",
-          "options": [
-            {
-              "code": "20M",
-              "description": "20m/卷"
-            },
-            {
-              "code": "100M",
-              "description": "100m/卷"
-            },
-            {
-              "code": "200M",
-              "description": "200m/卷"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "BU",
-              "description": "藍色"
-            },
-            {
-              "code": "BK",
-              "description": "黑色"
-            },
-            {
-              "code": "GN",
-              "description": "綠色"
-            },
-            {
-              "code": "GE",
-              "description": "橙色"
-            },
-            {
-              "code": "BR",
-              "description": "棕色"
-            },
-            {
-              "code": "C",
-              "description": "透明"
-            },
-            {
-              "code": "CR",
-              "description": "透明紅"
-            },
-            {
-              "code": "WH",
-              "description": "白色"
-            },
-            {
-              "code": "CG",
-              "description": "透明綠"
-            },
-            {
-              "code": "CB",
-              "description": "透明藍"
-            },
-            {
-              "code": "CY",
-              "description": "透明黃"
-            },
-            {
-              "code": "R",
-              "description": "紅色"
-            },
-            {
-              "code": "CE",
-              "description": "透明橙"
-            },
-            {
-              "code": "Y",
-              "description": "黃色"
-            },
-            {
-              "code": "GA",
-              "description": "灰色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "UWS98A",
-      "category": "輔助元件",
-      "superGroup": "雙層阻燃管",
-      "group": "雙層阻燃管",
-      "name": "UWS98A系列 雙層阻燃管",
-      "format": "UWS98A {outer} {inner} {length} {color}",
-      "categories": [
-        {
-          "id": "outer",
-          "name": "外徑(內層)代號",
-          "options": [
-            {
-              "code": "060",
-              "description": "Φ6.0mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            },
-            {
-              "code": "100",
-              "description": "Φ10.0mm"
-            },
-            {
-              "code": "120",
-              "description": "Φ12.0mm"
-            }
-          ]
-        },
-        {
-          "id": "inner",
-          "name": "內徑代號",
-          "options": [
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "050",
-              "description": "Φ5.0mm"
-            },
-            {
-              "code": "065",
-              "description": "Φ6.5mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "長度代號",
-          "options": [
-            {
-              "code": "050M",
-              "description": "50m/卷"
-            },
-            {
-              "code": "100M",
-              "description": "100m/卷"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "BU",
-              "description": "藍色"
-            },
-            {
-              "code": "BK",
-              "description": "黑色"
-            },
-            {
-              "code": "GN",
-              "description": "綠色"
-            },
-            {
-              "code": "WH",
-              "description": "白色"
-            },
-            {
-              "code": "R",
-              "description": "紅色"
-            },
-            {
-              "code": "Y",
-              "description": "黃色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PA-Tube",
-      "category": "輔助元件",
-      "superGroup": "尼龍管",
-      "group": "尼龍管",
-      "name": "PA管 (PA12/PA6)",
-      "format": "{series} {outer} {inner} {length} {color}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "規格代號",
-          "options": [
-            {
-              "code": "PA12",
-              "description": "PA12: 尼龍12"
-            },
-            {
-              "code": "PA6",
-              "description": "PA6: 尼龍6"
-            }
-          ]
-        },
-        {
-          "id": "outer",
-          "name": "外徑代號",
-          "options": [
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "060",
-              "description": "Φ6.0mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            },
-            {
-              "code": "100",
-              "description": "Φ10.0mm"
-            },
-            {
-              "code": "120",
-              "description": "Φ12.0mm"
-            }
-          ]
-        },
-        {
-          "id": "inner",
-          "name": "內徑代號",
-          "options": [
-            {
-              "code": "025",
-              "description": "Φ2.5mm"
-            },
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "060",
-              "description": "Φ6.0mm"
-            },
-            {
-              "code": "075",
-              "description": "Φ7.5mm"
-            },
-            {
-              "code": "090",
-              "description": "Φ9.0mm"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "長度代號",
-          "options": [
-            {
-              "code": "100M",
-              "description": "100m/卷"
-            },
-            {
-              "code": "200M",
-              "description": "200m/卷"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "BU",
-              "description": "藍色"
-            },
-            {
-              "code": "BK",
-              "description": "黑色"
-            },
-            {
-              "code": "GE",
-              "description": "橙色"
-            },
-            {
-              "code": "N",
-              "description": "本色"
-            },
-            {
-              "code": "WH",
-              "description": "白色"
-            },
-            {
-              "code": "GN",
-              "description": "綠色"
-            },
-            {
-              "code": "R",
-              "description": "紅色"
-            },
-            {
-              "code": "Y",
-              "description": "黃色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "UN54D",
-      "category": "輔助元件",
-      "superGroup": "阻燃管",
-      "group": "阻燃管",
-      "name": "UN54D系列 阻燃管",
-      "format": "UN54D {outer} {inner} {length} {color}",
-      "categories": [
-        {
-          "id": "outer",
-          "name": "外徑代號",
-          "options": [
-            {
-              "code": "060",
-              "description": "Φ6.0mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            },
-            {
-              "code": "100",
-              "description": "Φ10.0mm"
-            },
-            {
-              "code": "120",
-              "description": "Φ12.0mm"
-            }
-          ]
-        },
-        {
-          "id": "inner",
-          "name": "內徑代號",
-          "options": [
-            {
-              "code": "040",
-              "description": "Φ4.0mm"
-            },
-            {
-              "code": "050",
-              "description": "Φ5.0mm"
-            },
-            {
-              "code": "065",
-              "description": "Φ6.5mm"
-            },
-            {
-              "code": "080",
-              "description": "Φ8.0mm"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "長度代號",
-          "options": [
-            {
-              "code": "100M",
-              "description": "100m/卷"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "顏色代號",
-          "options": [
-            {
-              "code": "BU",
-              "description": "藍色"
-            },
-            {
-              "code": "BK",
-              "description": "黑色"
-            },
-            {
-              "code": "GN",
-              "description": "綠色"
-            },
-            {
-              "code": "WH",
-              "description": "白色"
-            },
-            {
-              "code": "R",
-              "description": "紅色"
-            },
-            {
-              "code": "Y",
-              "description": "黃色"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PWC-PWL",
-      "category": "輔助元件",
-      "superGroup": "氣動指示燈",
-      "group": "指示燈",
-      "name": "氣動指示燈 (PWC/PWL)",
-      "format": "{series} {port1} {port2} {color} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "規格代號",
-          "options": [
-            {
-              "code": "PWC",
-              "description": "PWC: 三通標準型"
-            },
-            {
-              "code": "PWL",
-              "description": "PWL: 三通帶插管"
-            }
-          ]
-        },
-        {
-          "id": "port1",
-          "name": "接管口徑 (PWL用)",
-          "options": [
-            {
-              "code": "",
-              "description": "無(適用PWC)"
-            },
-            {
-              "code": "4",
-              "description": "Φ4 (PWL)"
-            },
-            {
-              "code": "6",
-              "description": "Φ6 (PWL)"
-            },
-            {
-              "code": "8",
-              "description": "Φ8 (PWL)"
-            }
-          ]
-        },
-        {
-          "id": "port2",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "01",
-              "description": "1/8"
-            },
-            {
-              "code": "02",
-              "description": "1/4"
-            }
-          ]
-        },
-        {
-          "id": "color",
-          "name": "指示燈",
-          "options": [
-            {
-              "code": "R",
-              "description": "紅色"
-            },
-            {
-              "code": "GN",
-              "description": "綠色"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙(M5時為空)"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    }
+[
+ {
+  "id": "PC",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PC系列 螺紋直通",
+  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PC",
+      "description": "螺紋直通"
+     },
+     {
+      "code": "POC",
+      "description": "圓螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.259"
+ },
+ {
+  "id": "PC-M",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-螺紋類(迷你)",
+  "code": "",
+  "name": "PC迷你系列 螺紋直通",
+  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}-{type_suffix}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PC",
+      "description": "螺紋直通"
+     },
+     {
+      "code": "PL",
+      "description": "L型螺紋二通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "3.2",
+      "description": "$3.2mm"
+     },
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M3",
+      "description": "M3X0.5"
+     },
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "type_suffix",
+    "name": "類型代號",
+    "options": [
+     {
+      "code": "M",
+      "description": "迷你型"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.260"
+ },
+ {
+  "id": "PL",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PL系列 L型螺紋二通",
+  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PHW",
+      "description": "F型螺紋可旋三通"
+     },
+     {
+      "code": "PL",
+      "description": "L型螺紋二通"
+     },
+     {
+      "code": "PHF",
+      "description": "串聯肘節"
+     },
+     {
+      "code": "PLL",
+      "description": "L型加長螺紋二通"
+     },
+     {
+      "code": "PEB",
+      "description": "T型正螺紋三通"
+     },
+     {
+      "code": "PLF",
+      "description": "L型內螺紋二通"
+     },
+     {
+      "code": "PED",
+      "description": "T型側螺紋三通"
+     },
+     {
+      "code": "PCF",
+      "description": "內螺紋直通"
+     },
+     {
+      "code": "PYB",
+      "description": "Y型螺紋三通"
+     },
+     {
+      "code": "PMF",
+      "description": "內牙穿板直通"
+     },
+     {
+      "code": "PZB",
+      "description": "十字螺紋四通"
+     },
+     {
+      "code": "PH",
+      "description": "外六角肘節"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.261"
+ },
+ {
+  "id": "PKD",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-螺紋類",
+  "code": "PKD",
+  "name": "PKD系列 減徑螺紋五通",
+  "format": "{code} {tube_od_1}-{tube_od_2} {thread_spec}{color}{thread_type}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PKD",
+      "description": "減徑螺紋五通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_1",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_2",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.261"
+ },
+ {
+  "id": "BPC",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "全金屬類",
+  "code": "",
+  "name": "BPC系列 全金屬螺紋直通",
+  "format": "{spec} {tube_od} {thread_spec}{thread_type}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BPC",
+      "description": "全金屬螺紋直通"
+     },
+     {
+      "code": "BPCF",
+      "description": "全金屬內螺紋直通"
+     },
+     {
+      "code": "BPOC",
+      "description": "全金屬圓螺紋直通"
+     },
+     {
+      "code": "BPMF",
+      "description": "全金屬內牙穿板直通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "$8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~9kgf/cm²(0~0.9MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: 0~150℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色, [注]高溫場合使用時,需確認軟管或PU管耐溫等級。",
+  "sourceFile": "輔助元件型錄 P.265"
+ },
+ {
+  "id": "BPM",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "全金屬類",
+  "code": "BPM",
+  "name": "BPM系列 全金屬穿板直通",
+  "format": "{code} {tube_od}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BPM",
+      "description": "全金屬穿板直通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~9kgf/cm²(0~0.9MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: 0~150℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色, [注]高溫場合使用時,需確認軟管或PU管耐溫等級。",
+  "sourceFile": "輔助元件型錄 P.265"
+ },
+ {
+  "id": "PE",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-插管類",
+  "code": "",
+  "name": "PE系列 T型三通",
+  "format": "{spec} {tube_od}{color}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PM",
+      "description": "穿板直通"
+     },
+     {
+      "code": "PE",
+      "description": "T型三通"
+     },
+     {
+      "code": "PP",
+      "description": "管塞"
+     },
+     {
+      "code": "PV",
+      "description": "L型二通"
+     },
+     {
+      "code": "PLM",
+      "description": "直角穿板"
+     },
+     {
+      "code": "PY",
+      "description": "Y型三通"
+     },
+     {
+      "code": "PZ",
+      "description": "十字四通"
+     },
+     {
+      "code": "PU",
+      "description": "直通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.267"
+ },
+ {
+  "id": "PEG",
+  "category": "輔助元件",
+  "superGroup": "快速接頭",
+  "group": "插管-插管類(減徑/多通)",
+  "code": "",
+  "name": "PEG系列 T型正減徑三通",
+  "format": "{spec} {tube_od_1}-{tube_od_2}{color}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PG",
+      "description": "減徑直通"
+     },
+     {
+      "code": "PZG",
+      "description": "十字減徑四通"
+     },
+     {
+      "code": "PEW",
+      "description": "T型側減徑三通"
+     },
+     {
+      "code": "PYW",
+      "description": "Y型減徑三通"
+     },
+     {
+      "code": "PGJ",
+      "description": "插杆減徑直通"
+     },
+     {
+      "code": "PEG",
+      "description": "T型正減徑三通"
+     },
+     {
+      "code": "PKG",
+      "description": "減徑五通"
+     },
+     {
+      "code": "PHK",
+      "description": "可旋減徑五通"
+     },
+     {
+      "code": "PHD",
+      "description": "可旋減徑六通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_1",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "$8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_2",
+    "name": "接管口徑II",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.267"
+ },
+ {
+  "id": "BB",
+  "category": "輔助元件",
+  "superGroup": "金屬螺紋接頭",
+  "group": "螺紋-螺紋類",
+  "code": "",
+  "name": "BB系列 雙外螺紋直通",
+  "format": "{spec} {thread_spec_1} {thread_spec_2}{thread_type}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BB",
+      "description": "雙外螺紋直通"
+     },
+     {
+      "code": "BD",
+      "description": "內外螺紋直通 [注1]"
+     },
+     {
+      "code": "BU",
+      "description": "雙內螺紋直通"
+     },
+     {
+      "code": "BZ",
+      "description": "外六角堵頭[注2]"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec_1",
+    "name": "連接螺紋I",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec_2",
+    "name": "連接螺紋II",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 3.0MPa, 使用溫度範圍: 0~150℃, [注1] BD系列中,連接螺紋I指內螺紋規格,連接螺紋II指外螺紋規格; [注2]BZ系列中,無連接螺紋II代碼項,且連接螺紋指外螺紋規格。",
+  "sourceFile": "輔助元件型錄 P.271"
+ },
+ {
+  "id": "BKC",
+  "category": "輔助元件",
+  "superGroup": "金屬螺紋接頭",
+  "group": "鎖母直通",
+  "code": "BKC",
+  "name": "BKC系列 鎖母直通",
+  "format": "{code} {tube_od_out} {tube_od_in}-{thread_spec}{thread_type}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BKC",
+      "description": "鎖母直通"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_out",
+    "name": "接管外徑",
+    "options": [
+     {
+      "code": "04",
+      "description": "4mm"
+     },
+     {
+      "code": "06",
+      "description": "6mm"
+     },
+     {
+      "code": "08",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "tube_od_in",
+    "name": "接管內徑",
+    "options": [
+     {
+      "code": "25",
+      "description": "2.5mm"
+     },
+     {
+      "code": "04",
+      "description": "4mm"
+     },
+     {
+      "code": "05",
+      "description": "5mm"
+     },
+     {
+      "code": "06",
+      "description": "6mm"
+     },
+     {
+      "code": "65",
+      "description": "6.5mm"
+     },
+     {
+      "code": "75",
+      "description": "7.5mm"
+     },
+     {
+      "code": "08",
+      "description": "8mm"
+     },
+     {
+      "code": "09",
+      "description": "9mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M3",
+      "description": "M3X0.5"
+     },
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread_type",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 3.0MPa, 使用溫度範圍: 0~150℃, [注]使用8×5.5管子可用BKC0806的鎖母直通接頭; 高溫場合使用時,需確認軟管或PU管耐溫等級。",
+  "sourceFile": "輔助元件型錄 P.272"
+ },
+ {
+  "id": "BSL",
+  "category": "輔助元件",
+  "superGroup": "消聲器",
+  "group": "BSL/BSLM/BESL/PAL系列",
+  "code": "",
+  "name": "BSL系列 通用型消聲器",
+  "format": "{spec} {thread_spec}{color}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "消聲器類型",
+    "options": [
+     {
+      "code": "BSL",
+      "description": "通用型消聲器"
+     },
+     {
+      "code": "BSLM",
+      "description": "微型消聲器"
+     },
+     {
+      "code": "BESL",
+      "description": "節流型消聲器"
+     },
+     {
+      "code": "PAL",
+      "description": "塑料消聲器"
+     },
+     {
+      "code": "PALM",
+      "description": "迷你型塑料消聲器"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃",
+  "sourceFile": "輔助元件型錄 P.311"
+ },
+ {
+  "id": "PPA",
+  "category": "輔助元件",
+  "superGroup": "消聲器",
+  "group": "PPA管塞式",
+  "code": "PPA",
+  "name": "PPA系列 管塞式消聲器",
+  "format": "{code} {tube_od}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PPA",
+      "description": "管塞式消聲器"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "Φ6"
+     },
+     {
+      "code": "8",
+      "description": "Φ8"
+     },
+     {
+      "code": "10",
+      "description": "Φ10"
+     },
+     {
+      "code": "12",
+      "description": "Φ12"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃",
+  "sourceFile": "輔助元件型錄 P.313"
+ },
+ {
+  "id": "PHV",
+  "category": "輔助元件",
+  "superGroup": "手閥",
+  "group": "PHV系列",
+  "code": "PHV",
+  "name": "PHV系列 手閥",
+  "format": "{code} {tube_od} {valve_spec}{color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PHV",
+      "description": "手閥"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "valve_spec",
+    "name": "閥規格",
+    "options": [
+     {
+      "code": "A",
+      "description": "三通"
+     },
+     {
+      "code": "B",
+      "description": "二通"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色/本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色/本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色, [注]\"口\"代表A/B兩種,A為三通,B為兩通。兩種規格外形尺寸相同。",
+  "sourceFile": "輔助元件型錄 P.321"
+ },
+ {
+  "id": "PSL",
+  "category": "輔助元件",
+  "superGroup": "調速閥",
+  "group": "PSL/PSS系列",
+  "code": "",
+  "name": "PSL系列 L型",
+  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PSL",
+      "description": "L型"
+     },
+     {
+      "code": "PSS",
+      "description": "萬向型"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "throttle_type",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型 (調節帽標識符\"A\")"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型 (調節帽標識符\"B\")"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type_suffix",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.314"
+ },
+ {
+  "id": "PSA",
+  "category": "輔助元件",
+  "superGroup": "調速閥",
+  "group": "PSA系列",
+  "code": "PSA",
+  "name": "PSA系列 直通型",
+  "format": "{code} {tube_od}{color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PSA",
+      "description": "直通型"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.314"
+ },
+ {
+  "id": "PTL",
+  "category": "輔助元件",
+  "superGroup": "調速閥",
+  "group": "PTL/PTS推鎖系列",
+  "code": "",
+  "name": "PTL系列 推鎖L型調速閥",
+  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PTL",
+      "description": "推鎖L型調速閥"
+     },
+     {
+      "code": "PTS",
+      "description": "推鎖萬向型調速閥"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "$6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "$10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "throttle_type",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型 (調節帽標識符\"A\")"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型 (調節帽標識符\"B\")"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type_suffix",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.320"
+ },
+ {
+  "id": "PTA",
+  "category": "輔助元件",
+  "superGroup": "調速閥",
+  "group": "PTA系列",
+  "code": "PTA",
+  "name": "PTA系列 直通型",
+  "format": "{code} {tube_od}{color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PTA",
+      "description": "直通型"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "$8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.320"
+ },
+ {
+  "id": "PTL-M",
+  "category": "輔助元件",
+  "superGroup": "調速閥",
+  "group": "PTL迷你系列",
+  "code": "",
+  "name": "PTL迷你系列 推鎖型調速閥",
+  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}-{type_suffix}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PTL",
+      "description": "推鎖型調速閥"
+     }
+    ]
+   },
+   {
+    "id": "tube_od",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     }
+    ]
+   },
+   {
+    "id": "thread_spec",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     }
+    ]
+   },
+   {
+    "id": "throttle_type",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型 (調節帽標識符\"A\")"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型 (調節帽標識符\"B\")"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色 (接口:灰色 / 本體:灰色)"
+     },
+     {
+      "code": "D",
+      "description": "黑色 (接口:黑色 / 本體:黑色)"
+     }
+    ]
+   },
+   {
+    "id": "thread_type_suffix",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "type_suffix",
+    "name": "類型代號",
+    "options": [
+     {
+      "code": "M",
+      "description": "迷你型"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "負壓: -750mmHg(10Torr), 保證耐壓力: 1.5MPa, 使用溫度範圍: -20~70℃, 適用軟管: 尼龍軟管或PU管, 顏色: 灰色/黑色",
+  "sourceFile": "輔助元件型錄 P.318"
+ },
+ {
+  "id": "PC-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PC系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PC",
+      "description": "螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "本體材質為不銹鋼304,且所有材料均不含銅,可用于禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.283"
+ },
+ {
+  "id": "POC-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "POC系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "POC",
+      "description": "圓螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "本體材質為不銹鋼304,且所有材料均不含銅,可用于禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.283"
+ },
+ {
+  "id": "PHW-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PHW系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PHW",
+      "description": "F型螺紋可旋三通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PZB-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PZB系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PZB",
+      "description": "十字螺紋四通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PHF-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PHF系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PHF",
+      "description": "串聯肘節"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PL系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PL",
+      "description": "L型螺紋二通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PEB-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PEB系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PEB",
+      "description": "T型正螺紋三通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PLL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PLL系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PLL",
+      "description": "L型加長螺紋二通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PED-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PED系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PED",
+      "description": "T型側螺紋三通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PH-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PH系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PH",
+      "description": "外六角肘節"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PYB-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PYB系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PYB",
+      "description": "Y型螺紋三通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "PKD-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "插管-螺紋類",
+  "code": "",
+  "name": "PKD系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD1}-{tubeOD2}{thread}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PKD",
+      "description": "減徑螺紋五通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD1",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD2",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.284"
+ },
+ {
+  "id": "BB-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "螺紋-螺紋類",
+  "code": "",
+  "name": "BB系列 不銹鋼管接頭",
+  "format": "{spec}{thread1}{thread2}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BB",
+      "description": "雙外螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "thread1",
+    "name": "連接螺紋I",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread2",
+    "name": "連接螺紋II",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "全金屬接頭適用于高溫環境,不銹鋼304材質適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.288"
+ },
+ {
+  "id": "BD-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "螺紋-螺紋類",
+  "code": "",
+  "name": "BD系列 不銹鋼管接頭",
+  "format": "{spec}{thread1}{thread2}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BD",
+      "description": "內外螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "thread1",
+    "name": "連接螺紋I",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread2",
+    "name": "連接螺紋II",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "[注1] BD系列中,連接螺紋I指內螺紋規格,連接螺紋II指外螺紋規格; 全金屬接頭適用于高溫環境,不銹鋼304材質適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.288"
+ },
+ {
+  "id": "BU-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "螺紋-螺紋類",
+  "code": "",
+  "name": "BU系列 不銹鋼管接頭",
+  "format": "{spec}{thread1}{thread2}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BU",
+      "description": "雙內螺紋直通"
+     }
+    ]
+   },
+   {
+    "id": "thread1",
+    "name": "連接螺紋I",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "thread2",
+    "name": "連接螺紋II",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "全金屬接頭適用于高溫環境,不銹鋼304材質適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.288"
+ },
+ {
+  "id": "BZ-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "螺紋-螺紋類",
+  "code": "",
+  "name": "BZ系列 不銹鋼管接頭",
+  "format": "{spec}{thread1}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BZ",
+      "description": "外六角堵頭"
+     }
+    ]
+   },
+   {
+    "id": "thread1",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "[注2]BZ系列中,無連接螺紋II代碼項,且連接螺紋指外螺紋規格; 全金屬接頭適用于高溫環境,不銹鋼304材質適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.288"
+ },
+ {
+  "id": "BKC-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼管接頭",
+  "group": "鎖母直通",
+  "code": "",
+  "name": "BKC系列 不銹鋼管接頭",
+  "format": "{spec}{tubeOD}{tubeID}-{thread}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "BKC",
+      "description": "鎖母直通"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管外徑",
+    "options": [
+     {
+      "code": "04",
+      "description": "4mm"
+     },
+     {
+      "code": "06",
+      "description": "6mm"
+     },
+     {
+      "code": "08",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "tubeID",
+    "name": "接管內徑",
+    "options": [
+     {
+      "code": "25",
+      "description": "2.5mm"
+     },
+     {
+      "code": "04",
+      "description": "Φ4mm"
+     },
+     {
+      "code": "05",
+      "description": "Φ5mm"
+     },
+     {
+      "code": "06",
+      "description": "Φ6mm"
+     },
+     {
+      "code": "65",
+      "description": "Φ6.5mm"
+     },
+     {
+      "code": "75",
+      "description": "Φ7.5mm"
+     },
+     {
+      "code": "08",
+      "description": "Φ8mm"
+     },
+     {
+      "code": "09",
+      "description": "9mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M3",
+      "description": "M3X0.5"
+     },
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "[注]使用8×5.5管子可用BKC0806的鎖母直通接頭; [注]高溫場合使用時,需確認軟管或PU管耐溫等級; 不銹鋼304材質產品適合禁銅環境。",
+  "sourceFile": "輔助元件型錄 P.289"
+ },
+ {
+  "id": "PSL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼調速閥",
+  "group": "PSL/PSS系列",
+  "code": "",
+  "name": "PSL系列 不銹鋼調速閥",
+  "format": "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PSL",
+      "description": "L型"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "throttleType",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 排氣節流型和進氣節流型可選,用于各種型號之執行元件; 螺紋端自帶PT螺紋膠,能有效密封螺紋連接部位。",
+  "sourceFile": "輔助元件型錄 P.331"
+ },
+ {
+  "id": "PSS-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼調速閥",
+  "group": "PSL/PSS系列",
+  "code": "",
+  "name": "PSS系列 不銹鋼調速閥",
+  "format": "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PSS",
+      "description": "萬向型"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "throttleType",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 排氣節流型和進氣節流型可選,用于各種型號之執行元件; 螺紋端自帶PT螺紋膠,能有效密封螺紋連接部位; 萬向型調速閥(PSS)插管方向可360°調整插管方向。",
+  "sourceFile": "輔助元件型錄 P.331"
+ },
+ {
+  "id": "PSA-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼調速閥",
+  "group": "PSA系列",
+  "code": "",
+  "name": "PSA系列 不銹鋼調速閥",
+  "format": "{spec}{tubeOD}{color}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PSA",
+      "description": "直通型"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 螺紋端自帶PT螺紋膠,能有效密封螺紋連接部位。",
+  "sourceFile": "輔助元件型錄 P.331"
+ },
+ {
+  "id": "PTL-Mini-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼調速閥",
+  "group": "PTL迷你系列",
+  "code": "",
+  "name": "PTL迷你系列 不銹鋼推鎖型調速閥",
+  "format": "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}{type}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PTL",
+      "description": "推鎖型調速閥"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     }
+    ]
+   },
+   {
+    "id": "throttleType",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "類型代號",
+    "options": [
+     {
+      "code": "M",
+      "description": "迷你型"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "SUS304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 螺紋端自帶PT螺紋膠,能有效密封螺紋連接部位。",
+  "sourceFile": "輔助元件型錄 P.335"
+ },
+ {
+  "id": "PTL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼調速閥",
+  "group": "PTL推鎖系列",
+  "code": "",
+  "name": "PTL系列 不銹鋼推鎖型調速閥",
+  "format": "{spec}{tubeOD}{thread}{throttleType}{color}{threadType}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PTL",
+      "description": "推鎖型調速閥"
+     }
+    ]
+   },
+   {
+    "id": "tubeOD",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "throttleType",
+    "name": "節流方式",
+    "options": [
+     {
+      "code": "A",
+      "description": "排氣節流型"
+     },
+     {
+      "code": "B",
+      "description": "進氣節流型"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "",
+      "description": "灰色"
+     },
+     {
+      "code": "D",
+      "description": "黑色"
+     }
+    ]
+   },
+   {
+    "id": "threadType",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "SUS304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 螺紋端自帶PT螺紋膠,能有效密封螺紋連接部位。",
+  "sourceFile": "輔助元件型錄 P.336"
+ },
+ {
+  "id": "BSL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼消聲器",
+  "group": "消聲器",
+  "code": "",
+  "name": "BSL系列 不銹鋼消聲器",
+  "format": "{spec}{thread}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "消聲器類型",
+    "options": [
+     {
+      "code": "BSL",
+      "description": "通用型消聲器"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 消聲性能優越; 安裝方便又快捷,螺紋連接部份安全可靠又耐用; 節流型消聲器易于微調排氣量。",
+  "sourceFile": "輔助元件型錄 P.290"
+ },
+ {
+  "id": "BSLM-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼消聲器",
+  "group": "消聲器",
+  "code": "",
+  "name": "BSLM系列 不銹鋼消聲器",
+  "format": "{spec}{thread}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "消聲器類型",
+    "options": [
+     {
+      "code": "BSLM",
+      "description": "微型消聲器"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 消聲性能優越; 安裝方便又快捷,螺紋連接部份安全可靠又耐用; 節流型消聲器易于微調排氣量。",
+  "sourceFile": "輔助元件型錄 P.290"
+ },
+ {
+  "id": "BESL-S",
+  "category": "輔助元件",
+  "superGroup": "不銹鋼消聲器",
+  "group": "消聲器",
+  "code": "",
+  "name": "BESL系列 不銹鋼消聲器",
+  "format": "{spec}{thread}-{material}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "消聲器類型",
+    "options": [
+     {
+      "code": "BESL",
+      "description": "節流型消聲器"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "連接螺紋",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5X0.8"
+     },
+     {
+      "code": "01",
+      "description": "PT1/8"
+     },
+     {
+      "code": "02",
+      "description": "PT1/4"
+     },
+     {
+      "code": "03",
+      "description": "PT3/8"
+     },
+     {
+      "code": "04",
+      "description": "PT1/2"
+     }
+    ]
+   },
+   {
+    "id": "material",
+    "name": "材質代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "不銹鋼304"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "0~10kgf/cm²(0~1.0MPa)",
+  "note": "不銹鋼304材質產品適合禁銅環境; 消聲性能優越; 安裝方便又快捷,螺紋連接部份安全可靠又耐用; 節流型消聲器易于微調排氣量。",
+  "sourceFile": "輔助元件型錄 P.290"
+ },
+ {
+  "id": "AQC",
+  "category": "輔助元件",
+  "superGroup": "管材工具",
+  "group": "氣管剪",
+  "code": "AQC",
+  "name": "氣管剪",
+  "format": "{code}-{color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "AQC",
+      "description": "氣管剪"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "BL",
+      "description": "藍色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "",
+  "note": "",
+  "sourceFile": "輔助元件型錄 P.459"
+ },
+ {
+  "id": "AG",
+  "category": "輔助元件",
+  "superGroup": "管材工具",
+  "group": "氣槍",
+  "code": "AG",
+  "name": "氣槍",
+  "format": "{code}-{color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "AG",
+      "description": "氣槍"
+     },
+     {
+      "code": "AGL",
+      "description": "長嘴氣槍"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "B",
+      "description": "藍色"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "",
+  "note": "",
+  "sourceFile": "輔助元件型錄 P.459"
+ },
+ {
+  "id": "UCS-Tube",
+  "category": "輔助元件",
+  "superGroup": "PU管",
+  "group": "UCS/UCE捲管系列",
+  "code": "",
+  "name": "UCS系列 PU管",
+  "format": "{spec} {od} {id_} {color} {length} {jointType} {jointForm}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "UCS",
+      "description": "聚酯"
+     }
+    ]
+   },
+   {
+    "id": "od",
+    "name": "外徑代號",
+    "options": [
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     }
+    ]
+   },
+   {
+    "id": "id_",
+    "name": "內徑代號",
+    "options": [
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "050",
+      "description": "Φ5.0mm"
+     },
+     {
+      "code": "055",
+      "description": "Φ5.5mm"
+     },
+     {
+      "code": "065",
+      "description": "Φ6.5mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號[注1]",
+    "options": [
+     {
+      "code": "BU",
+      "description": "藍色"
+     },
+     {
+      "code": "BK",
+      "description": "黑色"
+     },
+     {
+      "code": "GE",
+      "description": "橙色"
+     },
+     {
+      "code": "C",
+      "description": "透明"
+     },
+     {
+      "code": "WH",
+      "description": "白色"
+     },
+     {
+      "code": "CB",
+      "description": "透明藍"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "Y",
+      "description": "黃色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     },
+     {
+      "code": "BR",
+      "description": "棕色"
+     },
+     {
+      "code": "CR",
+      "description": "透明紅"
+     },
+     {
+      "code": "CG",
+      "description": "透明綠"
+     },
+     {
+      "code": "CY",
+      "description": "透明黃"
+     },
+     {
+      "code": "CE",
+      "description": "透明橙"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "長度代號",
+    "options": [
+     {
+      "code": "030M",
+      "description": "3m"
+     },
+     {
+      "code": "060M",
+      "description": "6m"
+     },
+     {
+      "code": "090M",
+      "description": "9m"
+     },
+     {
+      "code": "120M",
+      "description": "12m"
+     },
+     {
+      "code": "150M",
+      "description": "15m"
+     }
+    ]
+   },
+   {
+    "id": "jointType",
+    "name": "接頭類型",
+    "options": [
+     {
+      "code": "A",
+      "description": "一端長30cm,另一端長10cm"
+     },
+     {
+      "code": "B",
+      "description": "二端接頭管長均為10cm"
+     },
+     {
+      "code": "C",
+      "description": "二端接頭管長均為0cm"
+     }
+    ]
+   },
+   {
+    "id": "jointForm",
+    "name": "接頭形式",
+    "options": [
+     {
+      "code": "1",
+      "description": "不附接頭"
+     },
+     {
+      "code": "2",
+      "description": "附母——公接頭"
+     },
+     {
+      "code": "3",
+      "description": "附公——公接頭"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "UCS: 0.8~1.0 MPa (23°C)",
+  "note": "①藍色、黑色、橙色、透明為標準色,其它顏色需特別訂制。",
+  "sourceFile": "輔助元件型錄 P.292"
+ },
+ {
+  "id": "PU-Tube",
+  "category": "輔助元件",
+  "superGroup": "PU管",
+  "group": "US98A/UE95A系列",
+  "code": "",
+  "name": "US98A、UE95A系列 PU管",
+  "format": "{spec} {od} {id_} {length} {color}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "US98A",
+      "description": "聚酯,硬度98A±2"
+     },
+     {
+      "code": "UE95A",
+      "description": "聚醚,硬度95A±2"
+     }
+    ]
+   },
+   {
+    "id": "od",
+    "name": "外徑代號",
+    "options": [
+     {
+      "code": "032",
+      "description": "Φ3.2mm"
+     },
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     },
+     {
+      "code": "160",
+      "description": "Φ16.0mm"
+     }
+    ]
+   },
+   {
+    "id": "id_",
+    "name": "內徑代號",
+    "options": [
+     {
+      "code": "020",
+      "description": "Φ2.0mm"
+     },
+     {
+      "code": "025",
+      "description": "Φ2.5mm"
+     },
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "050",
+      "description": "Φ5.0mm"
+     },
+     {
+      "code": "055",
+      "description": "Φ5.5mm"
+     },
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "065",
+      "description": "Φ6.5mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "110",
+      "description": "Φ11.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "長度代號",
+    "options": [
+     {
+      "code": "100M",
+      "description": "100m/卷"
+     },
+     {
+      "code": "200M",
+      "description": "200m/卷"
+     },
+     {
+      "code": "20M",
+      "description": "20m/卷"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號[注1]",
+    "options": [
+     {
+      "code": "BU",
+      "description": "藍色"
+     },
+     {
+      "code": "BK",
+      "description": "黑色"
+     },
+     {
+      "code": "GE",
+      "description": "橙色"
+     },
+     {
+      "code": "C",
+      "description": "透明"
+     },
+     {
+      "code": "WH",
+      "description": "白色"
+     },
+     {
+      "code": "CB",
+      "description": "透明藍"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "Y",
+      "description": "黃色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     },
+     {
+      "code": "BR",
+      "description": "棕色"
+     },
+     {
+      "code": "CR",
+      "description": "透明紅"
+     },
+     {
+      "code": "CG",
+      "description": "透明綠"
+     },
+     {
+      "code": "CY",
+      "description": "透明黃"
+     },
+     {
+      "code": "CE",
+      "description": "透明橙"
+     },
+     {
+      "code": "GA",
+      "description": "灰色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "US98A: 0.4~1.0 MPa / UE95A: 0.8~1.0 MPa (23°C)",
+  "note": "①藍色、黑色、橙色、透明為標準色,其它顏色需特別訂制。",
+  "sourceFile": "輔助元件型錄 P.253"
+ },
+ {
+  "id": "PA-Tube",
+  "category": "輔助元件",
+  "superGroup": "尼龍管",
+  "group": "PA12/PA6系列",
+  "code": "PA",
+  "name": "PA12、PA6系列 尼龍管",
+  "format": "{spec} {od} {id_} {length} {color}",
+  "categories": [
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PA6",
+      "description": "尼龍6"
+     },
+     {
+      "code": "PA12",
+      "description": "尼龍12"
+     }
+    ]
+   },
+   {
+    "id": "od",
+    "name": "外徑代號",
+    "options": [
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     }
+    ]
+   },
+   {
+    "id": "id_",
+    "name": "內徑代號",
+    "options": [
+     {
+      "code": "025",
+      "description": "Φ2.5mm"
+     },
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "075",
+      "description": "Φ7.5mm"
+     },
+     {
+      "code": "090",
+      "description": "Φ9.0mm"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "長度代號",
+    "options": [
+     {
+      "code": "200M",
+      "description": "200m/卷"
+     },
+     {
+      "code": "100M",
+      "description": "100m/卷"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "BU",
+      "description": "藍色"
+     },
+     {
+      "code": "BK",
+      "description": "黑色"
+     },
+     {
+      "code": "GE",
+      "description": "橙色"
+     },
+     {
+      "code": "N",
+      "description": "本色"
+     },
+     {
+      "code": "WH",
+      "description": "白色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "Y",
+      "description": "黃色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "PA6: 2.0~3.5MPa / PA12: 1.5~2.5MPa (23°C，依管徑)",
+  "note": "",
+  "sourceFile": "輔助元件型錄 P.255"
+ },
+ {
+  "id": "UN54D",
+  "category": "輔助元件",
+  "superGroup": "阻燃管",
+  "group": "UN54D系列",
+  "code": "UN54D",
+  "name": "UN54D系列 阻燃管",
+  "format": "{code} {od} {id_} {length} {color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "UN54D",
+      "description": "阻燃管硬度54D±3"
+     }
+    ]
+   },
+   {
+    "id": "od",
+    "name": "外徑代號",
+    "options": [
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     }
+    ]
+   },
+   {
+    "id": "id_",
+    "name": "內徑代號",
+    "options": [
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "050",
+      "description": "Φ5.0mm"
+     },
+     {
+      "code": "065",
+      "description": "Φ6.5mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "長度代號",
+    "options": [
+     {
+      "code": "100M",
+      "description": "100m/卷"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "BU",
+      "description": "藍色"
+     },
+     {
+      "code": "BK",
+      "description": "黑色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     },
+     {
+      "code": "WH",
+      "description": "白色"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "Y",
+      "description": "黃色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "1.0MPa (23°C)",
+  "note": "",
+  "sourceFile": "輔助元件型錄 P.256"
+ },
+ {
+  "id": "UWS98A",
+  "category": "輔助元件",
+  "superGroup": "雙層阻燃管",
+  "group": "UWS98A系列",
+  "code": "UWS98A",
+  "name": "UWS98A系列 雙層阻燃管",
+  "format": "{code} {od_inner} {id_inner}{length} {color}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "UWS98A",
+      "description": "雙層阻燃管"
+     }
+    ]
+   },
+   {
+    "id": "od_inner",
+    "name": "外徑(內層)代號",
+    "options": [
+     {
+      "code": "060",
+      "description": "Φ6.0mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     },
+     {
+      "code": "100",
+      "description": "Φ10.0mm"
+     },
+     {
+      "code": "120",
+      "description": "Φ12.0mm"
+     }
+    ]
+   },
+   {
+    "id": "id_inner",
+    "name": "內徑代號",
+    "options": [
+     {
+      "code": "040",
+      "description": "Φ4.0mm"
+     },
+     {
+      "code": "050",
+      "description": "Φ5.0mm"
+     },
+     {
+      "code": "065",
+      "description": "Φ6.5mm"
+     },
+     {
+      "code": "080",
+      "description": "Φ8.0mm"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "長度代號",
+    "options": [
+     {
+      "code": "050M",
+      "description": "50m/卷"
+     },
+     {
+      "code": "100M",
+      "description": "100m/卷"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "顏色代號",
+    "options": [
+     {
+      "code": "BU",
+      "description": "藍色"
+     },
+     {
+      "code": "BK",
+      "description": "黑色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     },
+     {
+      "code": "WH",
+      "description": "白色"
+     },
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "Y",
+      "description": "黃色"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": "1.0MPa (23°C)",
+  "note": "內層PU管均為黑色",
+  "sourceFile": "輔助元件型錄 P.295"
+ },
+ {
+  "id": "HR",
+  "category": "輔助元件",
+  "superGroup": "油壓緩衝器",
+  "group": "HR油壓穩速器",
+  "code": "HR",
+  "name": "HR系列 油壓穩速器",
+  "format": "{code}{stroke}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "HR",
+      "description": "可調式油壓穩速器"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "60",
+      "description": "60mm"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": null,
+  "note": null,
+  "sourceFile": "輔助元件型錄 P.458"
+ },
+ {
+  "id": "ACA",
+  "category": "輔助元件",
+  "superGroup": "油壓緩衝器",
+  "group": "ACA自動補償式",
+  "code": "ACA",
+  "name": "ACA系列 油壓緩衝器",
+  "format": "{code}{bodyThread}{stroke}-{speed}{cap}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "ACA",
+      "description": "標準自動補償式油壓緩衝器"
+     }
+    ]
+   },
+   {
+    "id": "bodyThread",
+    "name": "本體外牙",
+    "options": [
+     {
+      "code": "08",
+      "description": "M8"
+     },
+     {
+      "code": "10",
+      "description": "M10"
+     },
+     {
+      "code": "12",
+      "description": "M12"
+     },
+     {
+      "code": "14",
+      "description": "M14"
+     },
+     {
+      "code": "16",
+      "description": "M16"
+     },
+     {
+      "code": "20",
+      "description": "M20"
+     },
+     {
+      "code": "25",
+      "description": "M25"
+     },
+     {
+      "code": "27",
+      "description": "M27"
+     },
+     {
+      "code": "33",
+      "description": "M33"
+     },
+     {
+      "code": "36",
+      "description": "M36"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "3",
+      "description": "3mm"
+     },
+     {
+      "code": "7",
+      "description": "7mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "15",
+      "description": "15mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     }
+    ]
+   },
+   {
+    "id": "speed",
+    "name": "速度代號",
+    "options": [
+     {
+      "code": "1",
+      "description": "高速(輕負載)"
+     },
+     {
+      "code": "2",
+      "description": "中速(中負載)"
+     },
+     {
+      "code": "3",
+      "description": "低速(重負載)"
+     }
+    ]
+   },
+   {
+    "id": "cap",
+    "name": "防撞帽代號",
+    "options": [
+     {
+      "code": "",
+      "description": "塑料防撞帽"
+     },
+     {
+      "code": "N",
+      "description": "無防撞帽"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": null,
+  "note": null,
+  "sourceFile": "輔助元件型錄 P.419"
+ },
+ {
+  "id": "ACJ",
+  "category": "輔助元件",
+  "superGroup": "油壓緩衝器",
+  "group": "ACJ可調式",
+  "code": "ACJ",
+  "name": "ACJ系列 油壓緩衝器 (M10, M12, M14)",
+  "format": "{code}{bodyThread}{stroke}{cap}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "ACJ",
+      "description": "可調自動補償式油壓緩衝器"
+     }
+    ]
+   },
+   {
+    "id": "bodyThread",
+    "name": "本體外牙",
+    "options": [
+     {
+      "code": "10",
+      "description": "M10"
+     },
+     {
+      "code": "12",
+      "description": "M12"
+     },
+     {
+      "code": "14",
+      "description": "M14"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "7",
+      "description": "7mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     }
+    ]
+   },
+   {
+    "id": "cap",
+    "name": "防撞帽代號",
+    "options": [
+     {
+      "code": "",
+      "description": "塑料防撞帽"
+     },
+     {
+      "code": "F",
+      "description": "鐵質防撞帽"
+     },
+     {
+      "code": "N",
+      "description": "無防撞帽"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": null,
+  "note": "此系列無速度代號選項。",
+  "sourceFile": "輔助元件型錄 P.419"
+ },
+ {
+  "id": "ACJ-L",
+  "category": "輔助元件",
+  "superGroup": "油壓緩衝器",
+  "group": "ACJ可調式",
+  "code": "ACJ",
+  "name": "ACJ系列 油壓緩衝器 (M20以上)",
+  "format": "{code}{bodyThread}{stroke}-{speed}{cap}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "ACJ",
+      "description": "可調自動補償式油壓緩衝器"
+     }
+    ]
+   },
+   {
+    "id": "bodyThread",
+    "name": "本體外牙",
+    "options": [
+     {
+      "code": "20",
+      "description": "M20"
+     },
+     {
+      "code": "25",
+      "description": "M25"
+     },
+     {
+      "code": "27",
+      "description": "M27"
+     },
+     {
+      "code": "33",
+      "description": "M33"
+     },
+     {
+      "code": "36",
+      "description": "M36"
+     },
+     {
+      "code": "42",
+      "description": "M42"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "75",
+      "description": "75mm"
+     }
+    ]
+   },
+   {
+    "id": "speed",
+    "name": "速度代號",
+    "options": [
+     {
+      "code": "1",
+      "description": "高速(輕負載)"
+     },
+     {
+      "code": "2",
+      "description": "中速(中負載)"
+     },
+     {
+      "code": "3",
+      "description": "低速(重負載)"
+     }
+    ]
+   },
+   {
+    "id": "cap",
+    "name": "防撞帽代號",
+    "options": [
+     {
+      "code": "",
+      "description": "塑料防撞帽"
+     },
+     {
+      "code": "F",
+      "description": "鐵質防撞帽"
+     },
+     {
+      "code": "N",
+      "description": "無防撞帽"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": null,
+  "note": null,
+  "sourceFile": "輔助元件型錄 P.419"
+ },
+ {
+  "id": "F-ACA",
+  "category": "輔助元件",
+  "superGroup": "油壓緩衝器",
+  "group": "安裝附件",
+  "code": "F-ACA",
+  "name": "ACA、ACJ系列 附件",
+  "format": "{code}{spec}{thread}{accessory}",
+  "categories": [
+   {
+    "id": "code",
+    "name": "附件代號",
+    "options": [
+     {
+      "code": "F-ACA",
+      "description": "附件"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "緩衝器代號",
+    "options": [
+     {
+      "code": "08",
+      "description": "08"
+     },
+     {
+      "code": "10",
+      "description": "10"
+     },
+     {
+      "code": "12",
+      "description": "12"
+     },
+     {
+      "code": "14",
+      "description": "14"
+     },
+     {
+      "code": "16",
+      "description": "16"
+     },
+     {
+      "code": "20",
+      "description": "20"
+     },
+     {
+      "code": "25",
+      "description": "25"
+     },
+     {
+      "code": "27",
+      "description": "27"
+     },
+     {
+      "code": "33",
+      "description": "33"
+     },
+     {
+      "code": "36",
+      "description": "36"
+     },
+     {
+      "code": "42",
+      "description": "42"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "內牙規格",
+    "options": [
+     {
+      "code": "M8",
+      "description": "M8"
+     },
+     {
+      "code": "M10",
+      "description": "M10"
+     },
+     {
+      "code": "M12",
+      "description": "M12"
+     },
+     {
+      "code": "M14",
+      "description": "M14"
+     },
+     {
+      "code": "M16",
+      "description": "M16"
+     },
+     {
+      "code": "M20",
+      "description": "M20"
+     },
+     {
+      "code": "M25",
+      "description": "M25"
+     },
+     {
+      "code": "M27",
+      "description": "M27"
+     },
+     {
+      "code": "M33",
+      "description": "M33"
+     },
+     {
+      "code": "M36",
+      "description": "M36"
+     },
+     {
+      "code": "M42",
+      "description": "M42"
+     }
+    ]
+   },
+   {
+    "id": "accessory",
+    "name": "附件代號",
+    "options": [
+     {
+      "code": "LM",
+      "description": "定位停止螺帽"
+     },
+     {
+      "code": "FA",
+      "description": "法蘭"
+     }
+    ]
+   }
+  ],
+  "workingPressureRange": null,
+  "note": null,
+  "sourceFile": "輔助元件型錄 P.421"
+ },
+ {
+  "id": "PWC-PWL",
+  "category": "輔助元件",
+  "superGroup": "氣動指示燈",
+  "group": "指示燈",
+  "name": "氣動指示燈 (PWC/PWL)",
+  "format": "{series} {port1} {port2} {color} {thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "PWC",
+      "description": "PWC: 三通標準型"
+     },
+     {
+      "code": "PWL",
+      "description": "PWL: 三通帶插管"
+     }
+    ]
+   },
+   {
+    "id": "port1",
+    "name": "接管口徑 (PWL用)",
+    "options": [
+     {
+      "code": "",
+      "description": "無(適用PWC)"
+     },
+     {
+      "code": "4",
+      "description": "Φ4 (PWL)"
+     },
+     {
+      "code": "6",
+      "description": "Φ6 (PWL)"
+     },
+     {
+      "code": "8",
+      "description": "Φ8 (PWL)"
+     }
+    ]
+   },
+   {
+    "id": "port2",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5x0.8"
+     },
+     {
+      "code": "01",
+      "description": "1/8"
+     },
+     {
+      "code": "02",
+      "description": "1/4"
+     }
+    ]
+   },
+   {
+    "id": "color",
+    "name": "指示燈",
+    "options": [
+     {
+      "code": "R",
+      "description": "紅色"
+     },
+     {
+      "code": "GN",
+      "description": "綠色"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙(M5時為空)"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
   ]
-}
+ }
+]
