@@ -5192,2344 +5192,6 @@
   ]
  },
  {
-  "id": "hrq",
-  "category": "執行元件",
-  "superGroup": "回轉氣缸",
-  "group": "HRQ系列",
-  "code": "HRQ",
-  "name": "回轉氣缸",
-  "format": "{code} {bore} {buffer} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "規格",
-    "options": [
-     {
-      "code": "2",
-      "description": "2"
-     },
-     {
-      "code": "3",
-      "description": "3"
-     },
-     {
-      "code": "7",
-      "description": "7"
-     },
-     {
-      "code": "10",
-      "description": "10"
-     },
-     {
-      "code": "20",
-      "description": "20"
-     },
-     {
-      "code": "30",
-      "description": "30"
-     },
-     {
-      "code": "50",
-      "description": "50"
-     },
-     {
-      "code": "70",
-      "description": "70"
-     },
-     {
-      "code": "100",
-      "description": "100"
-     },
-     {
-      "code": "200",
-      "description": "200"
-     }
-    ]
-   },
-   {
-    "id": "buffer",
-    "name": "緩衝方式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 固定緩衝"
-     },
-     {
-      "code": "A",
-      "description": "A: 油壓緩衝器緩衝"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或無)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     },
-     {
-      "code": "T",
-      "description": "T: NPT牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "hrs",
-  "category": "執行元件",
-  "superGroup": "回轉氣缸",
-  "group": "HRS系列",
-  "code": "HRS",
-  "name": "超薄型回轉氣缸",
-  "format": "{code} {bore} X {angle}° {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "規格",
-    "options": [
-     {
-      "code": "10",
-      "description": "10"
-     },
-     {
-      "code": "15",
-      "description": "15"
-     },
-     {
-      "code": "20",
-      "description": "20"
-     },
-     {
-      "code": "30",
-      "description": "30"
-     },
-     {
-      "code": "40",
-      "description": "40"
-     }
-    ]
-   },
-   {
-    "id": "angle",
-    "name": "擺動角度",
-    "options": [
-     {
-      "code": "90",
-      "description": "90°"
-     },
-     {
-      "code": "180",
-      "description": "180°"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或無)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     },
-     {
-      "code": "T",
-      "description": "T: NPT牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mpe",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MPE系列",
-  "code": "MPE",
-  "name": "標準型螺紋氣缸(單動押出型)",
-  "format": "{code} {bore}X{stroke} {rod}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 外牙型"
-     },
-     {
-      "code": "N",
-      "description": "N: 無牙型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mpef",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MPE系列",
-  "code": "MPEF",
-  "name": "埋入安裝型螺紋氣缸(單動押出型)",
-  "format": "{code} {bore}X{stroke} {rod}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 外牙型"
-     },
-     {
-      "code": "N",
-      "description": "N: 無牙型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mpg",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MPG系列",
-  "code": "MPG",
-  "name": "標準面板型氣缸(復動型)",
-  "format": "{code} {bore}X{stroke} {magnet} {rod} {mounting}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 外牙型"
-     },
-     {
-      "code": "N",
-      "description": "N: 無牙型"
-     }
-    ]
-   },
-   {
-    "id": "mounting",
-    "name": "固定型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無安裝附件"
-     },
-     {
-      "code": "LB",
-      "description": "LB: 軸向固定架"
-     },
-     {
-      "code": "FA",
-      "description": "FA: 前法蘭連接板"
-     },
-     {
-      "code": "SDB",
-      "description": "SDB: 後鉸固定架"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mpgh",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MPG系列",
-  "code": "MPGH",
-  "name": "鉸鏈安裝型氣缸(復動型)",
-  "format": "{code} {bore}X{stroke} {magnet} {rod} {mounting}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 外牙型"
-     },
-     {
-      "code": "N",
-      "description": "N: 無牙型"
-     }
-    ]
-   },
-   {
-    "id": "mounting",
-    "name": "固定型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無安裝附件"
-     },
-     {
-      "code": "LB",
-      "description": "LB: 軸向固定架"
-     },
-     {
-      "code": "FA",
-      "description": "FA: 前法蘭連接板"
-     },
-     {
-      "code": "SDB",
-      "description": "SDB: 後鉸固定架"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mu",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MU系列",
-  "code": "MU",
-  "name": "小型自由安裝氣缸(復動型)",
-  "format": "{code}{mounting} {bore}X{stroke} {magnet} {rod}",
-  "categories": [
-   {
-    "id": "mounting",
-    "name": "本體安裝方式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 橫向安裝"
-     },
-     {
-      "code": "R",
-      "description": "R: 軸向安裝"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "4",
-      "description": "4mm"
-     },
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "4",
-      "description": "4mm"
-     },
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "45",
-      "description": "45mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無牙型"
-     },
-     {
-      "code": "B",
-      "description": "B: 外牙型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "msu",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MU系列",
-  "code": "MSU",
-  "name": "小型自由安裝氣缸(單動押出型)",
-  "format": "{code}{mounting} {bore}X{stroke} {magnet} {rod}",
-  "categories": [
-   {
-    "id": "mounting",
-    "name": "本體安裝方式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 橫向安裝"
-     },
-     {
-      "code": "R",
-      "description": "R: 軸向安裝"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "4",
-      "description": "4mm"
-     },
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "4",
-      "description": "4mm"
-     },
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "8",
-      "description": "8mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "45",
-      "description": "45mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "rod",
-    "name": "活塞杆牙型",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無牙型"
-     },
-     {
-      "code": "B",
-      "description": "B: 外牙型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "md",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MD",
-  "name": "多固型氣缸(復動型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "msd",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MSD",
-  "name": "多固型氣缸(單動押出型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mtd",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MTD",
-  "name": "多固型氣缸(單動引入型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mdd",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MDD",
-  "name": "多固型氣缸(雙軸復動型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mdj",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MDJ",
-  "name": "多固型氣缸(雙軸復動行程可調型)",
-  "format": "{code} {bore}X{stroke}-{adjust} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "adjust",
-    "name": "調整行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mk",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MK",
-  "name": "多固型氣缸(復動止回轉型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "msk",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MSK",
-  "name": "多固型氣缸(單動押出止回轉型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mtk",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MTK",
-  "name": "多固型氣缸(單動引入止回轉型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mkd",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MKD",
-  "name": "多固型氣缸(雙軸復動止回轉型)",
-  "format": "{code} {bore}X{stroke} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mkj",
-  "category": "執行元件",
-  "superGroup": "小型多位置、自由安裝氣缸",
-  "group": "MD\\MK系列",
-  "code": "MKJ",
-  "name": "多固型氣缸(雙軸復動行程可調止回轉型)",
-  "format": "{code} {bore}X{stroke}-{adjust} {magnet} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "6",
-      "description": "6mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     },
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "35",
-      "description": "35mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "adjust",
-    "name": "調整行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "jck",
-  "category": "執行元件",
-  "superGroup": "焊接夾緊氣缸",
-  "group": "JCK系列",
-  "code": "JCK",
-  "name": "強力焊接夾緊氣缸",
-  "format": "{code}{arm_dir} {bore}X{angle} {arm} {hand} {sensor} {thread}",
-  "categories": [
-   {
-    "id": "arm_dir",
-    "name": "夾緊臂位置",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 夾緊臂水平"
-     },
-     {
-      "code": "V",
-      "description": "V: 夾緊臂垂直"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     },
-     {
-      "code": "80",
-      "description": "80mm"
-     }
-    ]
-   },
-   {
-    "id": "angle",
-    "name": "打開角度",
-    "options": [
-     {
-      "code": "15",
-      "description": "15°"
-     },
-     {
-      "code": "30",
-      "description": "30°"
-     },
-     {
-      "code": "45",
-      "description": "45°"
-     },
-     {
-      "code": "60",
-      "description": "60°"
-     },
-     {
-      "code": "75",
-      "description": "75°"
-     },
-     {
-      "code": "90",
-      "description": "90°"
-     },
-     {
-      "code": "105",
-      "description": "105°"
-     },
-     {
-      "code": "120",
-      "description": "120°"
-     },
-     {
-      "code": "135",
-      "description": "135°"
-     }
-    ]
-   },
-   {
-    "id": "arm",
-    "name": "夾緊臂規格",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附夾緊臂"
-     },
-     {
-      "code": "AM1R",
-      "description": "AM1R: 偏置15mm(右)"
-     },
-     {
-      "code": "AM1C",
-      "description": "AM1C: 偏置15mm(中)"
-     },
-     {
-      "code": "AM1L",
-      "description": "AM1L: 偏置15mm(左)"
-     },
-     {
-      "code": "AM2R",
-      "description": "AM2R: 偏置15mm(右)"
-     },
-     {
-      "code": "AM2C",
-      "description": "AM2C: 偏置15mm(中)"
-     },
-     {
-      "code": "AM2L",
-      "description": "AM2L: 偏置15mm(左)"
-     },
-     {
-      "code": "AM3R",
-      "description": "AM3R: 偏置45mm(右)"
-     },
-     {
-      "code": "AM3C",
-      "description": "AM3C: 偏置45mm(中)"
-     },
-     {
-      "code": "AM3L",
-      "description": "AM3L: 偏置45mm(左)"
-     },
-     {
-      "code": "AM4R",
-      "description": "AM4R: 偏置45mm(右)"
-     },
-     {
-      "code": "AM4C",
-      "description": "AM4C: 偏置45mm(中)"
-     },
-     {
-      "code": "AM4L",
-      "description": "AM4L: 偏置45mm(左)"
-     }
-    ]
-   },
-   {
-    "id": "hand",
-    "name": "手柄位置",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 非手動型"
-     },
-     {
-      "code": "HL",
-      "description": "HL: 手動在左側"
-     },
-     {
-      "code": "HR",
-      "description": "HR: 手動在右側"
-     }
-    ]
-   },
-   {
-    "id": "sensor",
-    "name": "傳感器",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附傳感器"
-     },
-     {
-      "code": "K",
-      "description": "K: 附電感傳感器(PNP型)"
-     },
-     {
-      "code": "KN",
-      "description": "KN: 附電感傳感器(NPN型)"
-     },
-     {
-      "code": "KA",
-      "description": "KA: 附氣動傳感器"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "mck",
-  "category": "執行元件",
-  "superGroup": "焊接夾緊氣缸",
-  "group": "MCK系列",
-  "code": "MCK",
-  "name": "焊接夾緊氣缸",
-  "format": "{code} {open_type} {bore}X{stroke} {magnet} {acc} {thread}",
-  "categories": [
-   {
-    "id": "open_type",
-    "name": "開口型號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 前後蓋各3個進氣孔"
-     },
-     {
-      "code": "A",
-      "description": "A: 開口A型"
-     },
-     {
-      "code": "B",
-      "description": "B: 開口B型"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     },
-     {
-      "code": "80",
-      "description": "80mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "75",
-      "description": "75mm"
-     },
-     {
-      "code": "100",
-      "description": "100mm"
-     },
-     {
-      "code": "125",
-      "description": "125mm"
-     },
-     {
-      "code": "150",
-      "description": "150mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附普通磁石"
-     }
-    ]
-   },
-   {
-    "id": "acc",
-    "name": "附件",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附附件"
-     },
-     {
-      "code": "Y",
-      "description": "Y: 帶Y接頭(有M6螺孔)"
-     },
-     {
-      "code": "YW",
-      "description": "YW: 帶Y接頭(無M6螺孔)"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "jsck",
   "category": "執行元件",
   "superGroup": "焊接夾緊氣缸",
@@ -7858,388 +5520,6 @@
      {
       "code": "G",
       "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "qdk",
-  "category": "執行元件",
-  "superGroup": "旋轉夾緊氣缸",
-  "group": "QDK系列",
-  "code": "QDK",
-  "name": "平面回轉夾緊氣缸",
-  "format": "{code}{dir} {bore}X{stroke} {magnet} {cover} {thread}",
-  "categories": [
-   {
-    "id": "dir",
-    "name": "轉向",
-    "options": [
-     {
-      "code": "L",
-      "description": "L: 左旋"
-     },
-     {
-      "code": "R",
-      "description": "R: 右旋"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "夾緊行程",
-    "options": [
-     {
-      "code": "5",
-      "description": "5mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "cover",
-    "name": "前蓋型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 穿穿板型"
-     },
-     {
-      "code": "U",
-      "description": "U: 平面型"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "qck",
-  "category": "執行元件",
-  "superGroup": "旋轉夾緊氣缸",
-  "group": "QCK系列",
-  "code": "QCK",
-  "name": "回轉夾緊氣缸",
-  "format": "{code}{dir} {bore}X{stroke} {magnet} {rod_end} {mounting} {thread}",
-  "categories": [
-   {
-    "id": "dir",
-    "name": "轉向",
-    "options": [
-     {
-      "code": "L",
-      "description": "L: 左旋"
-     },
-     {
-      "code": "R",
-      "description": "R: 右旋"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "12",
-      "description": "12mm"
-     },
-     {
-      "code": "16",
-      "description": "16mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "夾緊行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "rod_end",
-    "name": "活塞杆端部型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 錐度型(帶擺臂)"
-     },
-     {
-      "code": "M",
-      "description": "M: 扁位型(不帶擺臂)"
-     }
-    ]
-   },
-   {
-    "id": "mounting",
-    "name": "固定型式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無安裝附件"
-     },
-     {
-      "code": "FB",
-      "description": "FB: 後蓋法蘭連接板"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "ack",
-  "category": "執行元件",
-  "superGroup": "旋轉夾緊氣缸",
-  "group": "ACK系列",
-  "code": "ACK",
-  "name": "轉角氣缸(單邊壓板)",
-  "format": "{code}{dir} {bore}X{angle} {thread}",
-  "categories": [
-   {
-    "id": "dir",
-    "name": "轉向",
-    "options": [
-     {
-      "code": "L",
-      "description": "L: 下壓左旋"
-     },
-     {
-      "code": "R",
-      "description": "R: 下壓右旋"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "angle",
-    "name": "轉角",
-    "options": [
-     {
-      "code": "90",
-      "description": "90°"
-     },
-     {
-      "code": "180",
-      "description": "180°"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "ackd",
-  "category": "執行元件",
-  "superGroup": "旋轉夾緊氣缸",
-  "group": "ACK系列",
-  "code": "ACKD",
-  "name": "轉角氣缸(雙邊壓板)",
-  "format": "{code}{dir} {bore}X{angle} {thread}",
-  "categories": [
-   {
-    "id": "dir",
-    "name": "轉向",
-    "options": [
-     {
-      "code": "L",
-      "description": "L: 下壓左旋"
-     },
-     {
-      "code": "R",
-      "description": "R: 下壓右旋"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "angle",
-    "name": "轉角",
-    "options": [
-     {
-      "code": "90",
-      "description": "90°"
-     },
-     {
-      "code": "180",
-      "description": "180°"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
      }
     ]
    }
@@ -14529,5 +11809,1462 @@
   ],
   "note": "選擇油壓緩衝器緩衝時，兩個調整螺絲一同附帶。",
   "sourceFile": "執行元件型錄 P.255"
+ },
+ {
+  "id": "hrq",
+  "category": "執行元件",
+  "superGroup": "回轉氣缸",
+  "group": "HRQ系列",
+  "code": "HRQ",
+  "name": "HRQ系列 回轉氣缸",
+  "format": "HRQ{size}{cushion}{thread}",
+  "categories": [
+   {
+    "id": "size",
+    "name": "規格",
+    "options": [
+     {
+      "code": "2",
+      "description": "2"
+     },
+     {
+      "code": "3",
+      "description": "3"
+     },
+     {
+      "code": "7",
+      "description": "7"
+     },
+     {
+      "code": "10",
+      "description": "10"
+     },
+     {
+      "code": "20",
+      "description": "20"
+     },
+     {
+      "code": "30",
+      "description": "30"
+     },
+     {
+      "code": "50",
+      "description": "50"
+     },
+     {
+      "code": "70",
+      "description": "70"
+     },
+     {
+      "code": "100",
+      "description": "100"
+     },
+     {
+      "code": "200",
+      "description": "200"
+     }
+    ]
+   },
+   {
+    "id": "cushion",
+    "name": "緩衝方式",
+    "options": [
+     {
+      "code": "",
+      "description": "固定緩衝"
+     },
+     {
+      "code": "A",
+      "description": "油壓緩衝器緩衝"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "note": "HRQ2/3/7僅有調整螺絲固定緩衝方式，無油壓緩衝器緩衝。",
+  "sourceFile": "執行元件型錄 P.264"
+ },
+ {
+  "id": "hrs",
+  "category": "執行元件",
+  "superGroup": "回轉氣缸",
+  "group": "HRS系列",
+  "code": "HRS",
+  "name": "HRS系列 回轉氣缸",
+  "format": "HRS{size}{angle}{thread}",
+  "categories": [
+   {
+    "id": "size",
+    "name": "規格",
+    "options": [
+     {
+      "code": "10",
+      "description": "10"
+     },
+     {
+      "code": "15",
+      "description": "15"
+     },
+     {
+      "code": "20",
+      "description": "20"
+     },
+     {
+      "code": "30",
+      "description": "30"
+     },
+     {
+      "code": "40",
+      "description": "40"
+     }
+    ]
+   },
+   {
+    "id": "angle",
+    "name": "擺動角度",
+    "options": [
+     {
+      "code": "90",
+      "description": "90°"
+     },
+     {
+      "code": "180",
+      "description": "180°"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "note": "HRS系列全部為附墊緩衝。",
+  "sourceFile": "執行元件型錄 P.273"
+ },
+ {
+  "id": "md",
+  "category": "執行元件",
+  "superGroup": "小型多位置、自由安裝氣缸",
+  "group": "MD/MK系列",
+  "code": "",
+  "name": "MD系列 多位置固定氣缸",
+  "format": "{series}{bore}x{stroke}{magnet}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "MD",
+      "description": "多型氣缸(復動型)"
+     },
+     {
+      "code": "MSD",
+      "description": "多型氣缸(單動押出型)"
+     },
+     {
+      "code": "MTD",
+      "description": "多型氣缸(單動引入型)"
+     },
+     {
+      "code": "MDD",
+      "description": "多型氣缸(雙軸復動型)"
+     },
+     {
+      "code": "MDJ",
+      "description": "多型氣缸(雙軸復動行程可調型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "單動押出型是指通氣時活塞桿伸出，前置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下縮回復位；單動引入型是指通氣時活塞桿縮回，後置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下伸出復位。",
+  "sourceFile": "執行元件型錄 P.149"
+ },
+ {
+  "id": "mk",
+  "category": "執行元件",
+  "superGroup": "小型多位置、自由安裝氣缸",
+  "group": "MD/MK系列",
+  "code": "",
+  "name": "MK系列 多位置固定氣缸",
+  "format": "{series}{bore}x{stroke}{magnet}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "MK",
+      "description": "多型氣缸(復動止回轉型)"
+     },
+     {
+      "code": "MSK",
+      "description": "多型氣缸(單動押出止回轉型)"
+     },
+     {
+      "code": "MTK",
+      "description": "多型氣缸(單動引入止回轉型)"
+     },
+     {
+      "code": "MKD",
+      "description": "多型氣缸(雙軸復動止回轉型)"
+     },
+     {
+      "code": "MKJ",
+      "description": "多型氣缸(雙軸復動行程可調止回轉型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "單動押出型是指通氣時活塞桿伸出，前置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下縮回復位；單動引入型是指通氣時活塞桿縮回，後置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下伸出復位。",
+  "sourceFile": "執行元件型錄 P.152"
+ },
+ {
+  "id": "mpe",
+  "category": "執行元件",
+  "superGroup": "小型多位置、自由安裝氣缸",
+  "group": "MPE系列",
+  "code": "",
+  "name": "MPE系列 螺紋型氣缸",
+  "format": "{series}{bore}x{stroke}{rod_type}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "MPE",
+      "description": "標準型螺紋氣缸(單動押出型)"
+     },
+     {
+      "code": "MPEF",
+      "description": "埋入安裝型螺紋氣缸(單動押出型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "5",
+      "description": "5mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "15",
+      "description": "15mm"
+     }
+    ]
+   },
+   {
+    "id": "rod_type",
+    "name": "活塞桿牙型",
+    "options": [
+     {
+      "code": "",
+      "description": "外牙型"
+     },
+     {
+      "code": "N",
+      "description": "無牙型"
+     }
+    ]
+   }
+  ],
+  "note": "單動押出型是指通氣時活塞桿伸出，前置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下縮回復位。",
+  "sourceFile": "執行元件型錄 P.159"
+ },
+ {
+  "id": "mpg",
+  "category": "執行元件",
+  "superGroup": "小型多位置、自由安裝氣缸",
+  "group": "MPG系列",
+  "code": "",
+  "name": "MPG系列 面板型氣缸",
+  "format": "{series}{bore}x{stroke}{magnet}{rod_type}{mounting}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "MPG",
+      "description": "標準面板型氣缸(復動型)"
+     },
+     {
+      "code": "MPGH",
+      "description": "鉸鏈安裝型氣缸(復動型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "rod_type",
+    "name": "活塞桿牙型",
+    "options": [
+     {
+      "code": "",
+      "description": "外牙型"
+     },
+     {
+      "code": "N",
+      "description": "無牙型"
+     }
+    ]
+   },
+   {
+    "id": "mounting",
+    "name": "固定型式",
+    "options": [
+     {
+      "code": "",
+      "description": "無安裝附件"
+     },
+     {
+      "code": "LB",
+      "description": "軸向固定架"
+     },
+     {
+      "code": "FA",
+      "description": "前法蘭連接板"
+     },
+     {
+      "code": "SDB",
+      "description": "後鉸固定架"
+     }
+    ]
+   }
+  ],
+  "note": "MPGH系列僅適用於鉸鏈安裝型。",
+  "sourceFile": "執行元件型錄 P.155"
+ },
+ {
+  "id": "mu",
+  "category": "執行元件",
+  "superGroup": "小型多位置、自由安裝氣缸",
+  "group": "MU系列",
+  "code": "",
+  "name": "MU系列 小型自由安裝氣缸",
+  "format": "{series}{mounting}{bore}x{stroke}{magnet}{rod_type}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "MU",
+      "description": "小型自由安裝氣缸(復動型)"
+     },
+     {
+      "code": "MSU",
+      "description": "小型自由安裝氣缸(單動押出型)"
+     }
+    ]
+   },
+   {
+    "id": "mounting",
+    "name": "本體安裝方式",
+    "options": [
+     {
+      "code": "",
+      "description": "標準安裝"
+     },
+     {
+      "code": "R",
+      "description": "橫向安裝"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "4",
+      "description": "4mm"
+     },
+     {
+      "code": "6",
+      "description": "6mm"
+     },
+     {
+      "code": "8",
+      "description": "8mm"
+     },
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "rod_type",
+    "name": "活塞桿牙型",
+    "options": [
+     {
+      "code": "",
+      "description": "內牙型"
+     },
+     {
+      "code": "B",
+      "description": "外牙型"
+     }
+    ]
+   }
+  ],
+  "note": "單動押出型是指通氣時活塞桿伸出，前置彈簧被壓縮，斷氣時活塞桿在彈簧復位力作用下縮回復位。",
+  "sourceFile": "執行元件型錄 P.145"
+ },
+ {
+  "id": "jck",
+  "category": "執行元件",
+  "superGroup": "焊接夾緊氣缸",
+  "group": "JCK系列",
+  "code": "JCK",
+  "name": "JCK系列 強力焊接夾緊氣缸",
+  "format": "JCK{series}{bore}{stroke}{arm_type}{sensor}{thread}{port_position}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "",
+      "description": "強力焊接夾緊氣缸"
+     },
+     {
+      "code": "V",
+      "description": "夾緊臂垂直"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     },
+     {
+      "code": "80",
+      "description": "80mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "打開角度",
+    "options": [
+     {
+      "code": "15",
+      "description": "15°"
+     },
+     {
+      "code": "30",
+      "description": "30°"
+     },
+     {
+      "code": "45",
+      "description": "45°"
+     },
+     {
+      "code": "60",
+      "description": "60°"
+     },
+     {
+      "code": "75",
+      "description": "75°"
+     },
+     {
+      "code": "90",
+      "description": "90°"
+     },
+     {
+      "code": "105",
+      "description": "105°"
+     },
+     {
+      "code": "120",
+      "description": "120°"
+     },
+     {
+      "code": "135",
+      "description": "135°"
+     }
+    ]
+   },
+   {
+    "id": "arm_type",
+    "name": "夾緊臂規格代號",
+    "options": [
+     {
+      "code": "AM1",
+      "description": "AM1: 偏置15mm"
+     },
+     {
+      "code": "AM3",
+      "description": "AM3: 偏置45mm"
+     },
+     {
+      "code": "AM2",
+      "description": "AM2: 偏置15mm"
+     },
+     {
+      "code": "AM4",
+      "description": "AM4: 偏置45mm"
+     }
+    ]
+   },
+   {
+    "id": "sensor",
+    "name": "傳感器代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附傳感器"
+     },
+     {
+      "code": "K",
+      "description": "附電感傳感器(PNP型)"
+     },
+     {
+      "code": "KN",
+      "description": "附電感傳感器(NPN型)"
+     },
+     {
+      "code": "KA",
+      "description": "附氣動傳感器"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   },
+   {
+    "id": "port_position",
+    "name": "氣孔位置",
+    "options": [
+     {
+      "code": "",
+      "description": "標準"
+     },
+     {
+      "code": "B",
+      "description": "B位置"
+     }
+    ]
+   }
+  ],
+  "note": "JCK80夾緊臂AM1和AM2偏置20mm",
+  "sourceFile": "執行元件型錄 P.20"
+ },
+ {
+  "id": "jck-m",
+  "category": "執行元件",
+  "superGroup": "焊接夾緊氣缸",
+  "group": "JCK手動系列",
+  "code": "JCK",
+  "name": "JCK系列 手動型強力焊接夾緊氣缸",
+  "format": "JCK{series}{bore}{stroke}{arm_type}{handle}{sensor}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "",
+      "description": "強力焊接夾緊氣缸"
+     },
+     {
+      "code": "V",
+      "description": "夾緊臂垂直"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "打開角度",
+    "options": [
+     {
+      "code": "15",
+      "description": "15°"
+     },
+     {
+      "code": "30",
+      "description": "30°"
+     },
+     {
+      "code": "45",
+      "description": "45°"
+     },
+     {
+      "code": "60",
+      "description": "60°"
+     },
+     {
+      "code": "75",
+      "description": "75°"
+     },
+     {
+      "code": "90",
+      "description": "90°"
+     },
+     {
+      "code": "105",
+      "description": "105°"
+     },
+     {
+      "code": "120",
+      "description": "120°"
+     }
+    ]
+   },
+   {
+    "id": "arm_type",
+    "name": "夾緊臂規格代號",
+    "options": [
+     {
+      "code": "AM1",
+      "description": "AM1: 偏置15mm"
+     },
+     {
+      "code": "AM3",
+      "description": "AM3: 偏置45mm"
+     },
+     {
+      "code": "AM2",
+      "description": "AM2: 偏置15mm"
+     },
+     {
+      "code": "AM4",
+      "description": "AM4: 偏置45mm"
+     }
+    ]
+   },
+   {
+    "id": "handle",
+    "name": "手柄位置代號",
+    "options": [
+     {
+      "code": "",
+      "description": "非手動型"
+     },
+     {
+      "code": "HL",
+      "description": "手動在左側"
+     },
+     {
+      "code": "HR",
+      "description": "手動在右側"
+     }
+    ]
+   },
+   {
+    "id": "sensor",
+    "name": "傳感器代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附傳感器"
+     },
+     {
+      "code": "K",
+      "description": "附電感傳感器(PNP型)"
+     },
+     {
+      "code": "KN",
+      "description": "附電感傳感器(NPN型)"
+     },
+     {
+      "code": "KA",
+      "description": "附氣動傳感器"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "KA型氣動傳感器不可單獨訂購且無80型",
+  "sourceFile": "執行元件型錄 P.8"
+ },
+ {
+  "id": "mck",
+  "category": "執行元件",
+  "superGroup": "焊接夾緊氣缸",
+  "group": "MCK系列",
+  "code": "MCK",
+  "name": "MCK系列 焊接夾緊氣缸",
+  "format": "MCK{opening}{bore}{stroke}{accessory}{thread}",
+  "categories": [
+   {
+    "id": "opening",
+    "name": "開口型號",
+    "options": [
+     {
+      "code": "A",
+      "description": "開口A型"
+     },
+     {
+      "code": "B",
+      "description": "開口B型"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     },
+     {
+      "code": "80",
+      "description": "80mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "75",
+      "description": "75mm"
+     },
+     {
+      "code": "100",
+      "description": "100mm"
+     },
+     {
+      "code": "125",
+      "description": "125mm"
+     },
+     {
+      "code": "150",
+      "description": "150mm"
+     }
+    ]
+   },
+   {
+    "id": "accessory",
+    "name": "附件代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附附件"
+     },
+     {
+      "code": "Y",
+      "description": "帶Y接頭(有M6螺孔)"
+     },
+     {
+      "code": "YW",
+      "description": "帶Y接頭(無M6螺孔)"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代號",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "在強磁場環境中，應選用抗幹擾型傳感器",
+  "sourceFile": "執行元件型錄 P.43"
+ },
+ {
+  "id": "ack",
+  "category": "執行元件",
+  "superGroup": "旋轉夾緊氣缸",
+  "group": "ACK系列",
+  "code": "",
+  "name": "ACK系列轉角氣缸",
+  "format": "{series}{direction}{bore}{angle}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "ACK",
+      "description": "轉角氣缸(復動型)"
+     },
+     {
+      "code": "ACKD",
+      "description": "轉角氣缸(雙邊壓板，僅供90°選用)"
+     }
+    ]
+   },
+   {
+    "id": "direction",
+    "name": "轉向代號",
+    "options": [
+     {
+      "code": "L",
+      "description": "下壓左旋"
+     },
+     {
+      "code": "R",
+      "description": "下壓右旋"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "angle",
+    "name": "轉角代號",
+    "options": [
+     {
+      "code": "90",
+      "description": "90°"
+     },
+     {
+      "code": "180",
+      "description": "180°"
+     }
+    ]
+   }
+  ],
+  "note": "當接管為M5牙時，此項代碼為空。",
+  "sourceFile": "執行元件型錄 P.340"
+ },
+ {
+  "id": "qck",
+  "category": "執行元件",
+  "superGroup": "旋轉夾緊氣缸",
+  "group": "QCK系列",
+  "code": "QCK",
+  "name": "QCK系列回轉夾緊氣缸",
+  "format": "QCK{direction}{bore}x{stroke}{magnet}{rod_end}{mounting}{thread}",
+  "categories": [
+   {
+    "id": "direction",
+    "name": "轉向代號",
+    "options": [
+     {
+      "code": "L",
+      "description": "左旋"
+     },
+     {
+      "code": "R",
+      "description": "右旋"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "12",
+      "description": "12mm"
+     },
+     {
+      "code": "16",
+      "description": "16mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "夾緊行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "rod_end",
+    "name": "活塞桿端部型式",
+    "options": [
+     {
+      "code": "",
+      "description": "錐度型(帶擺臂)"
+     },
+     {
+      "code": "M",
+      "description": "扁位型(不帶擺臂)"
+     }
+    ]
+   },
+   {
+    "id": "mounting",
+    "name": "固定形式",
+    "options": [
+     {
+      "code": "",
+      "description": "無安裝附件"
+     },
+     {
+      "code": "FB",
+      "description": "後蓋法蘭連接板"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "接管彎型有PT牙、G牙可選；另有感應器選配。",
+  "sourceFile": "執行元件型錄 P.347"
+ },
+ {
+  "id": "qdk",
+  "category": "執行元件",
+  "superGroup": "旋轉夾緊氣缸",
+  "group": "QDK系列",
+  "code": "QDK",
+  "name": "QDK系列平面回轉夾緊氣缸",
+  "format": "QDK{direction}{bore}x{stroke}{magnet}{mounting}{thread}",
+  "categories": [
+   {
+    "id": "direction",
+    "name": "轉向代號",
+    "options": [
+     {
+      "code": "L",
+      "description": "左旋"
+     },
+     {
+      "code": "R",
+      "description": "右旋"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "夾緊行程",
+    "options": [
+     {
+      "code": "5",
+      "description": "5mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "mounting",
+    "name": "前蓋型式",
+    "options": [
+     {
+      "code": "",
+      "description": "穿板型"
+     },
+     {
+      "code": "U",
+      "description": "平面型"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "當接管為M5牙時，此項代碼為空。",
+  "sourceFile": "執行元件型錄 P.344"
  }
 ]

@@ -11056,2344 +11056,6 @@ var catalog_actuators_default = [
     ]
   },
   {
-    id: "hrq",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u56DE\u8F49\u6C23\u7F38",
-    group: "HRQ\u7CFB\u5217",
-    code: "HRQ",
-    name: "\u56DE\u8F49\u6C23\u7F38",
-    format: "{code} {bore} {buffer} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u898F\u683C",
-        options: [
-          {
-            code: "2",
-            description: "2"
-          },
-          {
-            code: "3",
-            description: "3"
-          },
-          {
-            code: "7",
-            description: "7"
-          },
-          {
-            code: "10",
-            description: "10"
-          },
-          {
-            code: "20",
-            description: "20"
-          },
-          {
-            code: "30",
-            description: "30"
-          },
-          {
-            code: "50",
-            description: "50"
-          },
-          {
-            code: "70",
-            description: "70"
-          },
-          {
-            code: "100",
-            description: "100"
-          },
-          {
-            code: "200",
-            description: "200"
-          }
-        ]
-      },
-      {
-        id: "buffer",
-        name: "\u7DE9\u885D\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u56FA\u5B9A\u7DE9\u885D"
-          },
-          {
-            code: "A",
-            description: "A: \u6CB9\u58D3\u7DE9\u885D\u5668\u7DE9\u885D"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216\u7121)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          },
-          {
-            code: "T",
-            description: "T: NPT\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "hrs",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u56DE\u8F49\u6C23\u7F38",
-    group: "HRS\u7CFB\u5217",
-    code: "HRS",
-    name: "\u8D85\u8584\u578B\u56DE\u8F49\u6C23\u7F38",
-    format: "{code} {bore} X {angle}\xB0 {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u898F\u683C",
-        options: [
-          {
-            code: "10",
-            description: "10"
-          },
-          {
-            code: "15",
-            description: "15"
-          },
-          {
-            code: "20",
-            description: "20"
-          },
-          {
-            code: "30",
-            description: "30"
-          },
-          {
-            code: "40",
-            description: "40"
-          }
-        ]
-      },
-      {
-        id: "angle",
-        name: "\u64FA\u52D5\u89D2\u5EA6",
-        options: [
-          {
-            code: "90",
-            description: "90\xB0"
-          },
-          {
-            code: "180",
-            description: "180\xB0"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216\u7121)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          },
-          {
-            code: "T",
-            description: "T: NPT\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mpe",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MPE\u7CFB\u5217",
-    code: "MPE",
-    name: "\u6A19\u6E96\u578B\u87BA\u7D0B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)",
-    format: "{code} {bore}X{stroke} {rod}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u5916\u7259\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u7121\u7259\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mpef",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MPE\u7CFB\u5217",
-    code: "MPEF",
-    name: "\u57CB\u5165\u5B89\u88DD\u578B\u87BA\u7D0B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)",
-    format: "{code} {bore}X{stroke} {rod}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u5916\u7259\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u7121\u7259\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mpg",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MPG\u7CFB\u5217",
-    code: "MPG",
-    name: "\u6A19\u6E96\u9762\u677F\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {rod} {mounting}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u5916\u7259\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u7121\u7259\u578B"
-          }
-        ]
-      },
-      {
-        id: "mounting",
-        name: "\u56FA\u5B9A\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u5B89\u88DD\u9644\u4EF6"
-          },
-          {
-            code: "LB",
-            description: "LB: \u8EF8\u5411\u56FA\u5B9A\u67B6"
-          },
-          {
-            code: "FA",
-            description: "FA: \u524D\u6CD5\u862D\u9023\u63A5\u677F"
-          },
-          {
-            code: "SDB",
-            description: "SDB: \u5F8C\u9278\u56FA\u5B9A\u67B6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mpgh",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MPG\u7CFB\u5217",
-    code: "MPGH",
-    name: "\u9278\u93C8\u5B89\u88DD\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {rod} {mounting}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u5916\u7259\u578B"
-          },
-          {
-            code: "N",
-            description: "N: \u7121\u7259\u578B"
-          }
-        ]
-      },
-      {
-        id: "mounting",
-        name: "\u56FA\u5B9A\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u5B89\u88DD\u9644\u4EF6"
-          },
-          {
-            code: "LB",
-            description: "LB: \u8EF8\u5411\u56FA\u5B9A\u67B6"
-          },
-          {
-            code: "FA",
-            description: "FA: \u524D\u6CD5\u862D\u9023\u63A5\u677F"
-          },
-          {
-            code: "SDB",
-            description: "SDB: \u5F8C\u9278\u56FA\u5B9A\u67B6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mu",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MU\u7CFB\u5217",
-    code: "MU",
-    name: "\u5C0F\u578B\u81EA\u7531\u5B89\u88DD\u6C23\u7F38(\u5FA9\u52D5\u578B)",
-    format: "{code}{mounting} {bore}X{stroke} {magnet} {rod}",
-    categories: [
-      {
-        id: "mounting",
-        name: "\u672C\u9AD4\u5B89\u88DD\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A6B\u5411\u5B89\u88DD"
-          },
-          {
-            code: "R",
-            description: "R: \u8EF8\u5411\u5B89\u88DD"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "4",
-            description: "4mm"
-          },
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "4",
-            description: "4mm"
-          },
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "45",
-            description: "45mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u7259\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5916\u7259\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "msu",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MU\u7CFB\u5217",
-    code: "MSU",
-    name: "\u5C0F\u578B\u81EA\u7531\u5B89\u88DD\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)",
-    format: "{code}{mounting} {bore}X{stroke} {magnet} {rod}",
-    categories: [
-      {
-        id: "mounting",
-        name: "\u672C\u9AD4\u5B89\u88DD\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6A6B\u5411\u5B89\u88DD"
-          },
-          {
-            code: "R",
-            description: "R: \u8EF8\u5411\u5B89\u88DD"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "4",
-            description: "4mm"
-          },
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "4",
-            description: "4mm"
-          },
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "8",
-            description: "8mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "45",
-            description: "45mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "rod",
-        name: "\u6D3B\u585E\u6746\u7259\u578B",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u7259\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u5916\u7259\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "md",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MD",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "msd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MSD",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mtd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MTD",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mdd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MDD",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mdj",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MDJ",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u884C\u7A0B\u53EF\u8ABF\u578B)",
-    format: "{code} {bore}X{stroke}-{adjust} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "adjust",
-        name: "\u8ABF\u6574\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mk",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MK",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u5FA9\u52D5\u6B62\u56DE\u8F49\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "msk",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MSK",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u6B62\u56DE\u8F49\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mtk",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MTK",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u6B62\u56DE\u8F49\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mkd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MKD",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u6B62\u56DE\u8F49\u578B)",
-    format: "{code} {bore}X{stroke} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mkj",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
-    group: "MD\\MK\u7CFB\u5217",
-    code: "MKJ",
-    name: "\u591A\u56FA\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u884C\u7A0B\u53EF\u8ABF\u6B62\u56DE\u8F49\u578B)",
-    format: "{code} {bore}X{stroke}-{adjust} {magnet} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "6",
-            description: "6mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          },
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "35",
-            description: "35mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "adjust",
-        name: "\u8ABF\u6574\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "jck",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
-    group: "JCK\u7CFB\u5217",
-    code: "JCK",
-    name: "\u5F37\u529B\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
-    format: "{code}{arm_dir} {bore}X{angle} {arm} {hand} {sensor} {thread}",
-    categories: [
-      {
-        id: "arm_dir",
-        name: "\u593E\u7DCA\u81C2\u4F4D\u7F6E",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u593E\u7DCA\u81C2\u6C34\u5E73"
-          },
-          {
-            code: "V",
-            description: "V: \u593E\u7DCA\u81C2\u5782\u76F4"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          },
-          {
-            code: "80",
-            description: "80mm"
-          }
-        ]
-      },
-      {
-        id: "angle",
-        name: "\u6253\u958B\u89D2\u5EA6",
-        options: [
-          {
-            code: "15",
-            description: "15\xB0"
-          },
-          {
-            code: "30",
-            description: "30\xB0"
-          },
-          {
-            code: "45",
-            description: "45\xB0"
-          },
-          {
-            code: "60",
-            description: "60\xB0"
-          },
-          {
-            code: "75",
-            description: "75\xB0"
-          },
-          {
-            code: "90",
-            description: "90\xB0"
-          },
-          {
-            code: "105",
-            description: "105\xB0"
-          },
-          {
-            code: "120",
-            description: "120\xB0"
-          },
-          {
-            code: "135",
-            description: "135\xB0"
-          }
-        ]
-      },
-      {
-        id: "arm",
-        name: "\u593E\u7DCA\u81C2\u898F\u683C",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u593E\u7DCA\u81C2"
-          },
-          {
-            code: "AM1R",
-            description: "AM1R: \u504F\u7F6E15mm(\u53F3)"
-          },
-          {
-            code: "AM1C",
-            description: "AM1C: \u504F\u7F6E15mm(\u4E2D)"
-          },
-          {
-            code: "AM1L",
-            description: "AM1L: \u504F\u7F6E15mm(\u5DE6)"
-          },
-          {
-            code: "AM2R",
-            description: "AM2R: \u504F\u7F6E15mm(\u53F3)"
-          },
-          {
-            code: "AM2C",
-            description: "AM2C: \u504F\u7F6E15mm(\u4E2D)"
-          },
-          {
-            code: "AM2L",
-            description: "AM2L: \u504F\u7F6E15mm(\u5DE6)"
-          },
-          {
-            code: "AM3R",
-            description: "AM3R: \u504F\u7F6E45mm(\u53F3)"
-          },
-          {
-            code: "AM3C",
-            description: "AM3C: \u504F\u7F6E45mm(\u4E2D)"
-          },
-          {
-            code: "AM3L",
-            description: "AM3L: \u504F\u7F6E45mm(\u5DE6)"
-          },
-          {
-            code: "AM4R",
-            description: "AM4R: \u504F\u7F6E45mm(\u53F3)"
-          },
-          {
-            code: "AM4C",
-            description: "AM4C: \u504F\u7F6E45mm(\u4E2D)"
-          },
-          {
-            code: "AM4L",
-            description: "AM4L: \u504F\u7F6E45mm(\u5DE6)"
-          }
-        ]
-      },
-      {
-        id: "hand",
-        name: "\u624B\u67C4\u4F4D\u7F6E",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u975E\u624B\u52D5\u578B"
-          },
-          {
-            code: "HL",
-            description: "HL: \u624B\u52D5\u5728\u5DE6\u5074"
-          },
-          {
-            code: "HR",
-            description: "HR: \u624B\u52D5\u5728\u53F3\u5074"
-          }
-        ]
-      },
-      {
-        id: "sensor",
-        name: "\u50B3\u611F\u5668",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u50B3\u611F\u5668"
-          },
-          {
-            code: "K",
-            description: "K: \u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
-          },
-          {
-            code: "KN",
-            description: "KN: \u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
-          },
-          {
-            code: "KA",
-            description: "KA: \u9644\u6C23\u52D5\u50B3\u611F\u5668"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mck",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
-    group: "MCK\u7CFB\u5217",
-    code: "MCK",
-    name: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
-    format: "{code} {open_type} {bore}X{stroke} {magnet} {acc} {thread}",
-    categories: [
-      {
-        id: "open_type",
-        name: "\u958B\u53E3\u578B\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u524D\u5F8C\u84CB\u54043\u500B\u9032\u6C23\u5B54"
-          },
-          {
-            code: "A",
-            description: "A: \u958B\u53E3A\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u958B\u53E3B\u578B"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          },
-          {
-            code: "80",
-            description: "80mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "75",
-            description: "75mm"
-          },
-          {
-            code: "100",
-            description: "100mm"
-          },
-          {
-            code: "125",
-            description: "125mm"
-          },
-          {
-            code: "150",
-            description: "150mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u666E\u901A\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "acc",
-        name: "\u9644\u4EF6",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u9644\u4EF6"
-          },
-          {
-            code: "Y",
-            description: "Y: \u5E36Y\u63A5\u982D(\u6709M6\u87BA\u5B54)"
-          },
-          {
-            code: "YW",
-            description: "YW: \u5E36Y\u63A5\u982D(\u7121M6\u87BA\u5B54)"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
     id: "jsck",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
@@ -13722,388 +11384,6 @@ var catalog_actuators_default = [
           {
             code: "G",
             description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "qdk",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
-    group: "QDK\u7CFB\u5217",
-    code: "QDK",
-    name: "\u5E73\u9762\u56DE\u8F49\u593E\u7DCA\u6C23\u7F38",
-    format: "{code}{dir} {bore}X{stroke} {magnet} {cover} {thread}",
-    categories: [
-      {
-        id: "dir",
-        name: "\u8F49\u5411",
-        options: [
-          {
-            code: "L",
-            description: "L: \u5DE6\u65CB"
-          },
-          {
-            code: "R",
-            description: "R: \u53F3\u65CB"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u593E\u7DCA\u884C\u7A0B",
-        options: [
-          {
-            code: "5",
-            description: "5mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "cover",
-        name: "\u524D\u84CB\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7A7F\u7A7F\u677F\u578B"
-          },
-          {
-            code: "U",
-            description: "U: \u5E73\u9762\u578B"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "qck",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
-    group: "QCK\u7CFB\u5217",
-    code: "QCK",
-    name: "\u56DE\u8F49\u593E\u7DCA\u6C23\u7F38",
-    format: "{code}{dir} {bore}X{stroke} {magnet} {rod_end} {mounting} {thread}",
-    categories: [
-      {
-        id: "dir",
-        name: "\u8F49\u5411",
-        options: [
-          {
-            code: "L",
-            description: "L: \u5DE6\u65CB"
-          },
-          {
-            code: "R",
-            description: "R: \u53F3\u65CB"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "12",
-            description: "12mm"
-          },
-          {
-            code: "16",
-            description: "16mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u593E\u7DCA\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "rod_end",
-        name: "\u6D3B\u585E\u6746\u7AEF\u90E8\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u9310\u5EA6\u578B(\u5E36\u64FA\u81C2)"
-          },
-          {
-            code: "M",
-            description: "M: \u6241\u4F4D\u578B(\u4E0D\u5E36\u64FA\u81C2)"
-          }
-        ]
-      },
-      {
-        id: "mounting",
-        name: "\u56FA\u5B9A\u578B\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u5B89\u88DD\u9644\u4EF6"
-          },
-          {
-            code: "FB",
-            description: "FB: \u5F8C\u84CB\u6CD5\u862D\u9023\u63A5\u677F"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "ack",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
-    group: "ACK\u7CFB\u5217",
-    code: "ACK",
-    name: "\u8F49\u89D2\u6C23\u7F38(\u55AE\u908A\u58D3\u677F)",
-    format: "{code}{dir} {bore}X{angle} {thread}",
-    categories: [
-      {
-        id: "dir",
-        name: "\u8F49\u5411",
-        options: [
-          {
-            code: "L",
-            description: "L: \u4E0B\u58D3\u5DE6\u65CB"
-          },
-          {
-            code: "R",
-            description: "R: \u4E0B\u58D3\u53F3\u65CB"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "angle",
-        name: "\u8F49\u89D2",
-        options: [
-          {
-            code: "90",
-            description: "90\xB0"
-          },
-          {
-            code: "180",
-            description: "180\xB0"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "ackd",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
-    group: "ACK\u7CFB\u5217",
-    code: "ACKD",
-    name: "\u8F49\u89D2\u6C23\u7F38(\u96D9\u908A\u58D3\u677F)",
-    format: "{code}{dir} {bore}X{angle} {thread}",
-    categories: [
-      {
-        id: "dir",
-        name: "\u8F49\u5411",
-        options: [
-          {
-            code: "L",
-            description: "L: \u4E0B\u58D3\u5DE6\u65CB"
-          },
-          {
-            code: "R",
-            description: "R: \u4E0B\u58D3\u53F3\u65CB"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "angle",
-        name: "\u8F49\u89D2",
-        options: [
-          {
-            code: "90",
-            description: "90\xB0"
-          },
-          {
-            code: "180",
-            description: "180\xB0"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
           }
         ]
       }
@@ -20393,6 +17673,1463 @@ var catalog_actuators_default = [
     ],
     note: "\u9078\u64C7\u6CB9\u58D3\u7DE9\u885D\u5668\u7DE9\u885D\u6642\uFF0C\u5169\u500B\u8ABF\u6574\u87BA\u7D72\u4E00\u540C\u9644\u5E36\u3002",
     sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.255"
+  },
+  {
+    id: "hrq",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u56DE\u8F49\u6C23\u7F38",
+    group: "HRQ\u7CFB\u5217",
+    code: "HRQ",
+    name: "HRQ\u7CFB\u5217 \u56DE\u8F49\u6C23\u7F38",
+    format: "HRQ{size}{cushion}{thread}",
+    categories: [
+      {
+        id: "size",
+        name: "\u898F\u683C",
+        options: [
+          {
+            code: "2",
+            description: "2"
+          },
+          {
+            code: "3",
+            description: "3"
+          },
+          {
+            code: "7",
+            description: "7"
+          },
+          {
+            code: "10",
+            description: "10"
+          },
+          {
+            code: "20",
+            description: "20"
+          },
+          {
+            code: "30",
+            description: "30"
+          },
+          {
+            code: "50",
+            description: "50"
+          },
+          {
+            code: "70",
+            description: "70"
+          },
+          {
+            code: "100",
+            description: "100"
+          },
+          {
+            code: "200",
+            description: "200"
+          }
+        ]
+      },
+      {
+        id: "cushion",
+        name: "\u7DE9\u885D\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u56FA\u5B9A\u7DE9\u885D"
+          },
+          {
+            code: "A",
+            description: "\u6CB9\u58D3\u7DE9\u885D\u5668\u7DE9\u885D"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "HRQ2/3/7\u50C5\u6709\u8ABF\u6574\u87BA\u7D72\u56FA\u5B9A\u7DE9\u885D\u65B9\u5F0F\uFF0C\u7121\u6CB9\u58D3\u7DE9\u885D\u5668\u7DE9\u885D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.264"
+  },
+  {
+    id: "hrs",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u56DE\u8F49\u6C23\u7F38",
+    group: "HRS\u7CFB\u5217",
+    code: "HRS",
+    name: "HRS\u7CFB\u5217 \u56DE\u8F49\u6C23\u7F38",
+    format: "HRS{size}{angle}{thread}",
+    categories: [
+      {
+        id: "size",
+        name: "\u898F\u683C",
+        options: [
+          {
+            code: "10",
+            description: "10"
+          },
+          {
+            code: "15",
+            description: "15"
+          },
+          {
+            code: "20",
+            description: "20"
+          },
+          {
+            code: "30",
+            description: "30"
+          },
+          {
+            code: "40",
+            description: "40"
+          }
+        ]
+      },
+      {
+        id: "angle",
+        name: "\u64FA\u52D5\u89D2\u5EA6",
+        options: [
+          {
+            code: "90",
+            description: "90\xB0"
+          },
+          {
+            code: "180",
+            description: "180\xB0"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "HRS\u7CFB\u5217\u5168\u90E8\u70BA\u9644\u588A\u7DE9\u885D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.273"
+  },
+  {
+    id: "md",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    group: "MD/MK\u7CFB\u5217",
+    code: "",
+    name: "MD\u7CFB\u5217 \u591A\u4F4D\u7F6E\u56FA\u5B9A\u6C23\u7F38",
+    format: "{series}{bore}x{stroke}{magnet}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "MD",
+            description: "\u591A\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "MSD",
+            description: "\u591A\u578B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)"
+          },
+          {
+            code: "MTD",
+            description: "\u591A\u578B\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)"
+          },
+          {
+            code: "MDD",
+            description: "\u591A\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "MDJ",
+            description: "\u591A\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u884C\u7A0B\u53EF\u8ABF\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u62BC\u51FA\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u4F38\u51FA\uFF0C\u524D\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u7E2E\u56DE\u5FA9\u4F4D\uFF1B\u55AE\u52D5\u5F15\u5165\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u7E2E\u56DE\uFF0C\u5F8C\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u4F38\u51FA\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.149"
+  },
+  {
+    id: "mk",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    group: "MD/MK\u7CFB\u5217",
+    code: "",
+    name: "MK\u7CFB\u5217 \u591A\u4F4D\u7F6E\u56FA\u5B9A\u6C23\u7F38",
+    format: "{series}{bore}x{stroke}{magnet}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "MK",
+            description: "\u591A\u578B\u6C23\u7F38(\u5FA9\u52D5\u6B62\u56DE\u8F49\u578B)"
+          },
+          {
+            code: "MSK",
+            description: "\u591A\u578B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u6B62\u56DE\u8F49\u578B)"
+          },
+          {
+            code: "MTK",
+            description: "\u591A\u578B\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u6B62\u56DE\u8F49\u578B)"
+          },
+          {
+            code: "MKD",
+            description: "\u591A\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u6B62\u56DE\u8F49\u578B)"
+          },
+          {
+            code: "MKJ",
+            description: "\u591A\u578B\u6C23\u7F38(\u96D9\u8EF8\u5FA9\u52D5\u884C\u7A0B\u53EF\u8ABF\u6B62\u56DE\u8F49\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u62BC\u51FA\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u4F38\u51FA\uFF0C\u524D\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u7E2E\u56DE\u5FA9\u4F4D\uFF1B\u55AE\u52D5\u5F15\u5165\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u7E2E\u56DE\uFF0C\u5F8C\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u4F38\u51FA\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.152"
+  },
+  {
+    id: "mpe",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    group: "MPE\u7CFB\u5217",
+    code: "",
+    name: "MPE\u7CFB\u5217 \u87BA\u7D0B\u578B\u6C23\u7F38",
+    format: "{series}{bore}x{stroke}{rod_type}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "MPE",
+            description: "\u6A19\u6E96\u578B\u87BA\u7D0B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)"
+          },
+          {
+            code: "MPEF",
+            description: "\u57CB\u5165\u5B89\u88DD\u578B\u87BA\u7D0B\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "5",
+            description: "5mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "15",
+            description: "15mm"
+          }
+        ]
+      },
+      {
+        id: "rod_type",
+        name: "\u6D3B\u585E\u687F\u7259\u578B",
+        options: [
+          {
+            code: "",
+            description: "\u5916\u7259\u578B"
+          },
+          {
+            code: "N",
+            description: "\u7121\u7259\u578B"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u62BC\u51FA\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u4F38\u51FA\uFF0C\u524D\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u7E2E\u56DE\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.159"
+  },
+  {
+    id: "mpg",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    group: "MPG\u7CFB\u5217",
+    code: "",
+    name: "MPG\u7CFB\u5217 \u9762\u677F\u578B\u6C23\u7F38",
+    format: "{series}{bore}x{stroke}{magnet}{rod_type}{mounting}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "MPG",
+            description: "\u6A19\u6E96\u9762\u677F\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "MPGH",
+            description: "\u9278\u93C8\u5B89\u88DD\u578B\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "rod_type",
+        name: "\u6D3B\u585E\u687F\u7259\u578B",
+        options: [
+          {
+            code: "",
+            description: "\u5916\u7259\u578B"
+          },
+          {
+            code: "N",
+            description: "\u7121\u7259\u578B"
+          }
+        ]
+      },
+      {
+        id: "mounting",
+        name: "\u56FA\u5B9A\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u5B89\u88DD\u9644\u4EF6"
+          },
+          {
+            code: "LB",
+            description: "\u8EF8\u5411\u56FA\u5B9A\u67B6"
+          },
+          {
+            code: "FA",
+            description: "\u524D\u6CD5\u862D\u9023\u63A5\u677F"
+          },
+          {
+            code: "SDB",
+            description: "\u5F8C\u9278\u56FA\u5B9A\u67B6"
+          }
+        ]
+      }
+    ],
+    note: "MPGH\u7CFB\u5217\u50C5\u9069\u7528\u65BC\u9278\u93C8\u5B89\u88DD\u578B\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.155"
+  },
+  {
+    id: "mu",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u5C0F\u578B\u591A\u4F4D\u7F6E\u3001\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    group: "MU\u7CFB\u5217",
+    code: "",
+    name: "MU\u7CFB\u5217 \u5C0F\u578B\u81EA\u7531\u5B89\u88DD\u6C23\u7F38",
+    format: "{series}{mounting}{bore}x{stroke}{magnet}{rod_type}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "MU",
+            description: "\u5C0F\u578B\u81EA\u7531\u5B89\u88DD\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "MSU",
+            description: "\u5C0F\u578B\u81EA\u7531\u5B89\u88DD\u6C23\u7F38(\u55AE\u52D5\u62BC\u51FA\u578B)"
+          }
+        ]
+      },
+      {
+        id: "mounting",
+        name: "\u672C\u9AD4\u5B89\u88DD\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u5B89\u88DD"
+          },
+          {
+            code: "R",
+            description: "\u6A6B\u5411\u5B89\u88DD"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "4",
+            description: "4mm"
+          },
+          {
+            code: "6",
+            description: "6mm"
+          },
+          {
+            code: "8",
+            description: "8mm"
+          },
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "rod_type",
+        name: "\u6D3B\u585E\u687F\u7259\u578B",
+        options: [
+          {
+            code: "",
+            description: "\u5167\u7259\u578B"
+          },
+          {
+            code: "B",
+            description: "\u5916\u7259\u578B"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u62BC\u51FA\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u687F\u4F38\u51FA\uFF0C\u524D\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u687F\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u7E2E\u56DE\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.145"
+  },
+  {
+    id: "jck",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    group: "JCK\u7CFB\u5217",
+    code: "JCK",
+    name: "JCK\u7CFB\u5217 \u5F37\u529B\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    format: "JCK{series}{bore}{stroke}{arm_type}{sensor}{thread}{port_position}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u5F37\u529B\u710A\u63A5\u593E\u7DCA\u6C23\u7F38"
+          },
+          {
+            code: "V",
+            description: "\u593E\u7DCA\u81C2\u5782\u76F4"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          },
+          {
+            code: "80",
+            description: "80mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u6253\u958B\u89D2\u5EA6",
+        options: [
+          {
+            code: "15",
+            description: "15\xB0"
+          },
+          {
+            code: "30",
+            description: "30\xB0"
+          },
+          {
+            code: "45",
+            description: "45\xB0"
+          },
+          {
+            code: "60",
+            description: "60\xB0"
+          },
+          {
+            code: "75",
+            description: "75\xB0"
+          },
+          {
+            code: "90",
+            description: "90\xB0"
+          },
+          {
+            code: "105",
+            description: "105\xB0"
+          },
+          {
+            code: "120",
+            description: "120\xB0"
+          },
+          {
+            code: "135",
+            description: "135\xB0"
+          }
+        ]
+      },
+      {
+        id: "arm_type",
+        name: "\u593E\u7DCA\u81C2\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "AM1",
+            description: "AM1: \u504F\u7F6E15mm"
+          },
+          {
+            code: "AM3",
+            description: "AM3: \u504F\u7F6E45mm"
+          },
+          {
+            code: "AM2",
+            description: "AM2: \u504F\u7F6E15mm"
+          },
+          {
+            code: "AM4",
+            description: "AM4: \u504F\u7F6E45mm"
+          }
+        ]
+      },
+      {
+        id: "sensor",
+        name: "\u50B3\u611F\u5668\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u50B3\u611F\u5668"
+          },
+          {
+            code: "K",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
+          },
+          {
+            code: "KN",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
+          },
+          {
+            code: "KA",
+            description: "\u9644\u6C23\u52D5\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      },
+      {
+        id: "port_position",
+        name: "\u6C23\u5B54\u4F4D\u7F6E",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96"
+          },
+          {
+            code: "B",
+            description: "B\u4F4D\u7F6E"
+          }
+        ]
+      }
+    ],
+    note: "JCK80\u593E\u7DCA\u81C2AM1\u548CAM2\u504F\u7F6E20mm",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.20"
+  },
+  {
+    id: "jck-m",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    group: "JCK\u624B\u52D5\u7CFB\u5217",
+    code: "JCK",
+    name: "JCK\u7CFB\u5217 \u624B\u52D5\u578B\u5F37\u529B\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    format: "JCK{series}{bore}{stroke}{arm_type}{handle}{sensor}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u5F37\u529B\u710A\u63A5\u593E\u7DCA\u6C23\u7F38"
+          },
+          {
+            code: "V",
+            description: "\u593E\u7DCA\u81C2\u5782\u76F4"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u6253\u958B\u89D2\u5EA6",
+        options: [
+          {
+            code: "15",
+            description: "15\xB0"
+          },
+          {
+            code: "30",
+            description: "30\xB0"
+          },
+          {
+            code: "45",
+            description: "45\xB0"
+          },
+          {
+            code: "60",
+            description: "60\xB0"
+          },
+          {
+            code: "75",
+            description: "75\xB0"
+          },
+          {
+            code: "90",
+            description: "90\xB0"
+          },
+          {
+            code: "105",
+            description: "105\xB0"
+          },
+          {
+            code: "120",
+            description: "120\xB0"
+          }
+        ]
+      },
+      {
+        id: "arm_type",
+        name: "\u593E\u7DCA\u81C2\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "AM1",
+            description: "AM1: \u504F\u7F6E15mm"
+          },
+          {
+            code: "AM3",
+            description: "AM3: \u504F\u7F6E45mm"
+          },
+          {
+            code: "AM2",
+            description: "AM2: \u504F\u7F6E15mm"
+          },
+          {
+            code: "AM4",
+            description: "AM4: \u504F\u7F6E45mm"
+          }
+        ]
+      },
+      {
+        id: "handle",
+        name: "\u624B\u67C4\u4F4D\u7F6E\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u975E\u624B\u52D5\u578B"
+          },
+          {
+            code: "HL",
+            description: "\u624B\u52D5\u5728\u5DE6\u5074"
+          },
+          {
+            code: "HR",
+            description: "\u624B\u52D5\u5728\u53F3\u5074"
+          }
+        ]
+      },
+      {
+        id: "sensor",
+        name: "\u50B3\u611F\u5668\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u50B3\u611F\u5668"
+          },
+          {
+            code: "K",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
+          },
+          {
+            code: "KN",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
+          },
+          {
+            code: "KA",
+            description: "\u9644\u6C23\u52D5\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "KA\u578B\u6C23\u52D5\u50B3\u611F\u5668\u4E0D\u53EF\u55AE\u7368\u8A02\u8CFC\u4E14\u712180\u578B",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.8"
+  },
+  {
+    id: "mck",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    group: "MCK\u7CFB\u5217",
+    code: "MCK",
+    name: "MCK\u7CFB\u5217 \u710A\u63A5\u593E\u7DCA\u6C23\u7F38",
+    format: "MCK{opening}{bore}{stroke}{accessory}{thread}",
+    categories: [
+      {
+        id: "opening",
+        name: "\u958B\u53E3\u578B\u865F",
+        options: [
+          {
+            code: "A",
+            description: "\u958B\u53E3A\u578B"
+          },
+          {
+            code: "B",
+            description: "\u958B\u53E3B\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          },
+          {
+            code: "80",
+            description: "80mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "75",
+            description: "75mm"
+          },
+          {
+            code: "100",
+            description: "100mm"
+          },
+          {
+            code: "125",
+            description: "125mm"
+          },
+          {
+            code: "150",
+            description: "150mm"
+          }
+        ]
+      },
+      {
+        id: "accessory",
+        name: "\u9644\u4EF6\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9644\u4EF6"
+          },
+          {
+            code: "Y",
+            description: "\u5E36Y\u63A5\u982D(\u6709M6\u87BA\u5B54)"
+          },
+          {
+            code: "YW",
+            description: "\u5E36Y\u63A5\u982D(\u7121M6\u87BA\u5B54)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5728\u5F37\u78C1\u5834\u74B0\u5883\u4E2D\uFF0C\u61C9\u9078\u7528\u6297\u5E79\u64FE\u578B\u50B3\u611F\u5668",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.43"
+  },
+  {
+    id: "ack",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
+    group: "ACK\u7CFB\u5217",
+    code: "",
+    name: "ACK\u7CFB\u5217\u8F49\u89D2\u6C23\u7F38",
+    format: "{series}{direction}{bore}{angle}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "ACK",
+            description: "\u8F49\u89D2\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "ACKD",
+            description: "\u8F49\u89D2\u6C23\u7F38(\u96D9\u908A\u58D3\u677F\uFF0C\u50C5\u4F9B90\xB0\u9078\u7528)"
+          }
+        ]
+      },
+      {
+        id: "direction",
+        name: "\u8F49\u5411\u4EE3\u865F",
+        options: [
+          {
+            code: "L",
+            description: "\u4E0B\u58D3\u5DE6\u65CB"
+          },
+          {
+            code: "R",
+            description: "\u4E0B\u58D3\u53F3\u65CB"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "angle",
+        name: "\u8F49\u89D2\u4EE3\u865F",
+        options: [
+          {
+            code: "90",
+            description: "90\xB0"
+          },
+          {
+            code: "180",
+            description: "180\xB0"
+          }
+        ]
+      }
+    ],
+    note: "\u7576\u63A5\u7BA1\u70BAM5\u7259\u6642\uFF0C\u6B64\u9805\u4EE3\u78BC\u70BA\u7A7A\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.340"
+  },
+  {
+    id: "qck",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
+    group: "QCK\u7CFB\u5217",
+    code: "QCK",
+    name: "QCK\u7CFB\u5217\u56DE\u8F49\u593E\u7DCA\u6C23\u7F38",
+    format: "QCK{direction}{bore}x{stroke}{magnet}{rod_end}{mounting}{thread}",
+    categories: [
+      {
+        id: "direction",
+        name: "\u8F49\u5411\u4EE3\u865F",
+        options: [
+          {
+            code: "L",
+            description: "\u5DE6\u65CB"
+          },
+          {
+            code: "R",
+            description: "\u53F3\u65CB"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "12",
+            description: "12mm"
+          },
+          {
+            code: "16",
+            description: "16mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u593E\u7DCA\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "rod_end",
+        name: "\u6D3B\u585E\u687F\u7AEF\u90E8\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u9310\u5EA6\u578B(\u5E36\u64FA\u81C2)"
+          },
+          {
+            code: "M",
+            description: "\u6241\u4F4D\u578B(\u4E0D\u5E36\u64FA\u81C2)"
+          }
+        ]
+      },
+      {
+        id: "mounting",
+        name: "\u56FA\u5B9A\u5F62\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u5B89\u88DD\u9644\u4EF6"
+          },
+          {
+            code: "FB",
+            description: "\u5F8C\u84CB\u6CD5\u862D\u9023\u63A5\u677F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u63A5\u7BA1\u5F4E\u578B\u6709PT\u7259\u3001G\u7259\u53EF\u9078\uFF1B\u53E6\u6709\u611F\u61C9\u5668\u9078\u914D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.347"
+  },
+  {
+    id: "qdk",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u65CB\u8F49\u593E\u7DCA\u6C23\u7F38",
+    group: "QDK\u7CFB\u5217",
+    code: "QDK",
+    name: "QDK\u7CFB\u5217\u5E73\u9762\u56DE\u8F49\u593E\u7DCA\u6C23\u7F38",
+    format: "QDK{direction}{bore}x{stroke}{magnet}{mounting}{thread}",
+    categories: [
+      {
+        id: "direction",
+        name: "\u8F49\u5411\u4EE3\u865F",
+        options: [
+          {
+            code: "L",
+            description: "\u5DE6\u65CB"
+          },
+          {
+            code: "R",
+            description: "\u53F3\u65CB"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u593E\u7DCA\u884C\u7A0B",
+        options: [
+          {
+            code: "5",
+            description: "5mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "mounting",
+        name: "\u524D\u84CB\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7F\u677F\u578B"
+          },
+          {
+            code: "U",
+            description: "\u5E73\u9762\u578B"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u7576\u63A5\u7BA1\u70BAM5\u7259\u6642\uFF0C\u6B64\u9805\u4EE3\u78BC\u70BA\u7A7A\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.344"
   }
 ];
 
