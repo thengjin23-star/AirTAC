@@ -138,7 +138,15 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 - 牙型: 無記號(Rc)→空白(PT牙), F(G牙)→G, N(NPT)→T; 指示燈(Z/U): AirTAC DIN插座型標配指示燈,無獨立代碼,於備註說明即可` },
   { brand: 'SMC', pattern: /^VF[35]|^VZ[35]/i, competitorSeries: 'VF/VZ 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300'], note: 'SMC VF/VZ 五口電磁閥對應 AirTAC 4V 系列，依口徑選 100/200/300。' },
   { brand: 'SMC', pattern: /^VQ[Zz]?/i, competitorSeries: 'VQ 直動電磁閥', airtacSeriesIds: ['4V100', 'CPV10', 'CPV15', '7SV'], note: 'SMC VQ 小型電磁閥依尺寸對應 AirTAC CPV10/CPV15 微型閥或 4V100。' },
-  { brand: 'SMC', pattern: /^VT3|^VT0|^V100/i, competitorSeries: 'VT 三口電磁閥', airtacSeriesIds: ['3V1', '3V2', '3V100'], note: 'SMC VT307 等三口二位閥對應 AirTAC 3V1/3V2 直動閥或 3V100。' },
+  {
+    brand: 'SMC', pattern: /^VT3|^VV3|^VT0|^V100/i, competitorSeries: 'VT 三口電磁閥', airtacSeriesIds: ['3V1', '3V2', '3V2M', '3V100'],
+    note: 'SMC VT307 等三口二位直動閥對應 AirTAC 3V2 (公司對照表)；VV307 帶底座對應 3V2M。',
+    decode: `SMC VT307 訂購碼解碼 (格式: VT307-[電壓][接線]-[口徑]):
+- 電壓 (與 SY 系列同一套代碼): 1=AC100V, 2=AC200V, 3=AC110V, 4=AC220V, 5=DC24V, 6=DC12V, V=DC6V, S=DC5V, R=DC3V
+- 接線: G=出線式(grommet)300mm, H=出線式600mm, L=L形插座, M=M形插座, D=DIN插座; 後綴數字1=帶指示燈
+- 口徑: 01=1/8", 02=1/4"
+範例: VT307-5G1-01 = DC24V + 出線式帶燈 + 1/8"
+→ AirTAC 3V2 對應: 電壓 5(DC24V)→B, 6(DC12V)→F, 1(AC100V)→C(最接近AC110V), 4(AC220V)→A; 口徑 01(1/8")→06, 02(1/4")→08; 出線式→I` },
   { brand: 'SMC', pattern: /^VX2?\d/i, competitorSeries: 'VX 流體電磁閥', airtacSeriesIds: ['fluid-2v', 'fluid-2p', 'fluid-direct-nc', 'fluid-direct-no'], note: 'SMC VX 二口流體閥對應 AirTAC 2V (氣體) / 2P (塑膠) / 2SA·2WA (水氣油) 系列。' },
   { brand: 'SMC', pattern: /^VXZ|^VXD/i, competitorSeries: 'VXZ/VXD 先導流體閥', airtacSeriesIds: ['fluid-pilot-nc', 'fluid-pilot-no', 'fluid-2j'], note: 'SMC 先導式流體閥對應 AirTAC 2SA/2WA 先導型或 2J 角座閥。' },
   // --- SMC 氣源處理/輔助 ---
