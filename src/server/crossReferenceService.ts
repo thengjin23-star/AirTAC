@@ -15,6 +15,7 @@ import {
   knowledgeBaseText,
   validateRecommendation,
 } from "./crossref";
+import { matchCompanyTable, companyMatchCatalogIds, companyMatchesText } from "./companyCrossref";
 
 // 延遲初始化，確保 dotenv (server.ts) 或平台注入的環境變數已就緒
 let aiClient: GoogleGenAI | null = null;
@@ -55,7 +56,7 @@ const cache = new Map<string, string>();
  * 對 Gemini 的呼叫加上 503/429 重試，且在該模型額度耗盡 (429 quota)、
  * 持續過載 (503) 或不存在 (404) 時自動降級到備援模型。
  */
-async function generateWithRetry(params: Parameters<GoogleGenAI["models"]["generateContent"]>[0]) {
+export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]["generateContent"]>[0]) {
   const ai = getAi();
   const primary = (params as any).model as string;
   const modelChain = [primary, ...FALLBACK_MODELS.filter(m => m !== primary)];
@@ -157,18 +158,33 @@ export interface CrossReferenceOutcome {
   body: any;
 }
 
+/** 使用者透過「對手知識庫」餵入的型錄解碼規則 */
+interface LearnedRule {
+  brand?: string;
+  seriesName?: string;
+  decode?: string;
+}
+
+function learnedRulesText(rules: LearnedRule[]): string {
+  return rules
+    .filter(r => r && typeof r.decode === 'string' && r.decode.trim())
+    .slice(0, 10)
+    .map(r => `- [使用者知識庫${r.brand ? `/${r.brand}` : ''}] ${r.seriesName || ''}\n<<< 原廠型錄解碼表 (絕對權威，優先於你的任何既有認知) >>>\n${String(r.decode).slice(0, 6000)}\n<<< 解碼表結束 >>>`)
+    .join('\n');
+}
+
 /** 執行完整的兩階段交叉比對，回傳 HTTP 狀態碼與 JSON body。 */
 export async function crossReference(reqBody: any): Promise<CrossReferenceOutcome> {
   try {
-    const { competitorModel, brand, customRules } = reqBody || {};
+    const { competitorModel, brand, customRules, learnedRules } = reqBody || {};
 
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
     }
 
-    // cache key 需包含自訂規則的「內容」(舊版只用長度，不同規則會撞快取)
-    const rulesHash = customRules
-      ? crypto.createHash("sha1").update(String(customRules)).digest("hex").slice(0, 12)
+    // cache key 需包含自訂規則與知識庫規則的「內容」
+    const rulesHash = (customRules || (Array.isArray(learnedRules) && learnedRules.length > 0))
+      ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || [])).digest("hex").slice(0, 12)
       : "none";
     const cacheKey = `${brand || 'auto'}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
     if (cache.has(cacheKey)) {
@@ -178,13 +194,29 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
 
     // ---------- 第一階段：候選系列篩選 ----------
     const heuristic = heuristicMatch(competitorModel, brand);
-    const hints = knowledgeBaseText(heuristic.entries.length > 0 ? heuristic.entries : undefined);
+    let hints = knowledgeBaseText(heuristic.entries.length > 0 ? heuristic.entries : undefined);
 
-    let candidateIds: string[] = [];
+    // 公司對照表命中 → 權威提示 + 候選系列 (優先於一般業界知識)
+    const companyMatches = matchCompanyTable(competitorModel, brand);
+    const companyIds = companyMatchCatalogIds(companyMatches);
+    if (companyMatches.length > 0) {
+      hints = `※ 以下為公司內部對照表命中結果，權威性最高（高於後面的業界知識）:\n${companyMatchesText(companyMatches)}\n\n${hints}`;
+    }
+
+    // 使用者知識庫的型錄解碼規則 (由前端依型號字首挑選後帶上)
+    if (Array.isArray(learnedRules) && learnedRules.length > 0) {
+      const lrText = learnedRulesText(learnedRules);
+      if (lrText) hints = `${lrText}\n${hints}`;
+    }
+
+    // 公司對照表對應到的系列一定進候選 (放最前面)
+    let candidateIds: string[] = [...companyIds];
     let classifierInfo: { brandGuess?: string; productType?: string } = {};
     try {
-      const stage1 = await selectCandidateSeries(competitorModel, brand, heuristic.candidateIds, hints);
-      candidateIds = stage1.ids;
+      const stage1 = await selectCandidateSeries(competitorModel, brand, [...companyIds, ...heuristic.candidateIds], hints);
+      for (const id of stage1.ids) {
+        if (!candidateIds.includes(id)) candidateIds.push(id);
+      }
       classifierInfo = stage1;
     } catch (e: any) {
       console.error("Stage-1 classifier failed, falling back to heuristics:", e.message || e);

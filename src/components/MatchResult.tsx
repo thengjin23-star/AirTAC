@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine } from 'lucide-react';
 import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem } from '../types';
+import { defaultCatalog } from '../data/index';
+import { generateOrderingCode } from '../lib/orderingCode';
 
 export function CopyButton({ text, className = '' }: { text: string; className?: string }) {
   const [copied, setCopied] = useState(false);
@@ -48,10 +50,37 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
     ? validation.serverGeneratedCode
     : (rec.fullOrderingCode && !isNoMatch ? rec.fullOrderingCode : rec.baseModel);
 
+  // 推薦系列在型錄中有完整參數定義時，提供「產品資料庫式」的下拉配置
+  const series = useMemo(
+    () => (!isNoMatch && rec.seriesId ? defaultCatalog.find(s => s.id === rec.seriesId) : undefined),
+    [rec.seriesId, isNoMatch],
+  );
+  const canConfigure = Boolean(series && (series.categories || []).length > 0 && (series.format || series.orderCodeFormat));
+
+  const initialSelections = useMemo(() => {
+    const sel: Record<string, string> = {};
+    if (series) {
+      for (const cat of series.categories || []) {
+        const fromAI = (rec.selectedOptions || []).find(o => o.categoryId === cat.id);
+        sel[cat.id] = fromAI && (cat.options || []).some(op => op.code === fromAI.code)
+          ? fromAI.code
+          : (cat.options?.[0]?.code || '');
+      }
+    }
+    return sel;
+  }, [series, rec.selectedOptions]);
+
+  const [selections, setSelections] = useState<Record<string, string>>(initialSelections);
+  const [mode, setMode] = useState<'config' | 'manual'>(canConfigure ? 'config' : 'manual');
   const [editedCode, setEditedCode] = useState(suggestedCode);
   const [justAdded, setJustAdded] = useState(false);
-  const confirmed = isConfirmed(editedCode) || justAdded;
-  const codeModified = editedCode !== suggestedCode;
+
+  const configCode = series ? generateOrderingCode(series, selections) : '';
+  const effectiveCode = mode === 'config' && canConfigure ? configCode : editedCode;
+  const confirmed = isConfirmed(effectiveCode) || justAdded;
+  const codeModified = mode === 'config'
+    ? JSON.stringify(selections) !== JSON.stringify(initialSelections)
+    : editedCode !== suggestedCode;
 
   let matchBadgeClass = 'bg-green-50 text-green-700 border-green-200';
   if (isNoMatch) matchBadgeClass = 'bg-red-50 text-red-700 border-red-200';
@@ -61,7 +90,7 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
     onAddToList({
       brand: competitorBrand,
       competitorModel,
-      airtacCode: editedCode.trim(),
+      airtacCode: effectiveCode.trim(),
       description: rec.description,
       matchType: rec.matchType,
       matchPercentage: rec.matchPercentage,
@@ -77,11 +106,23 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
 
       <div className="p-5 pl-6">
         {/* 競品 → AirTAC 對照列 */}
-        <div className="flex flex-wrap items-center gap-2 mb-4 text-sm">
+        <div className="flex flex-wrap items-center gap-2 mb-3 text-sm">
           <span className="font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded-md border border-slate-200 break-all">{competitorModel}</span>
           <ArrowRight className="w-4 h-4 text-slate-400 shrink-0" />
           {isNoMatch ? (
             <span className="font-mono font-bold text-red-700 text-lg">無直接對應型號</span>
+          ) : mode === 'config' && canConfigure ? (
+            <div className="flex items-center gap-1 flex-1 min-w-[220px]">
+              <span className={`font-mono font-bold text-lg px-3 py-1.5 rounded-lg border flex-1 min-w-0 break-all ${codeModified ? 'text-amber-700 bg-amber-50/60 border-amber-200' : 'text-[#005a9c] bg-blue-50/50 border-blue-100'}`}>
+                {configCode}
+              </span>
+              {codeModified && (
+                <button onClick={() => setSelections(initialSelections)} className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100" title="還原為 AI 建議的參數組合">
+                  <RotateCcw className="w-4 h-4" />
+                </button>
+              )}
+              <CopyButton text={configCode} />
+            </div>
           ) : (
             <div className="flex items-center gap-1 flex-1 min-w-[220px]">
               <input
@@ -99,6 +140,55 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
             </div>
           )}
         </div>
+
+        {/* 下拉配置 / 手動輸入 切換 */}
+        {!isNoMatch && canConfigure && (
+          <div className="mb-4">
+            <div className="flex items-center gap-1 mb-3">
+              <button
+                onClick={() => setMode('config')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center ${mode === 'config' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
+              >
+                <SlidersHorizontal className="w-3.5 h-3.5 mr-1" /> 下拉配置
+              </button>
+              <button
+                onClick={() => { setEditedCode(effectiveCode); setMode('manual'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center ${mode === 'manual' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
+              >
+                <PencilLine className="w-3.5 h-3.5 mr-1" /> 手動輸入
+              </button>
+              {series && (
+                <span className="text-[11px] text-slate-400 ml-2 font-mono hidden sm:inline">格式: {series.format || series.orderCodeFormat}</span>
+              )}
+            </div>
+            {mode === 'config' && (
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 bg-slate-50/70 rounded-xl border border-slate-100 p-3">
+                {(series!.categories || []).map(cat => {
+                  const aiChoice = (rec.selectedOptions || []).find(o => o.categoryId === cat.id)?.code;
+                  const changed = aiChoice !== undefined && selections[cat.id] !== aiChoice;
+                  return (
+                    <div key={cat.id}>
+                      <label className={`block text-xs font-medium mb-1 ${changed ? 'text-amber-600' : 'text-slate-500'}`}>
+                        {cat.name}{changed && ' ✏️'}
+                      </label>
+                      <select
+                        className="w-full bg-white border border-slate-200 text-slate-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-[#005a9c] focus:ring-1 focus:ring-[#005a9c]"
+                        value={selections[cat.id] ?? (cat.options?.[0]?.code || '')}
+                        onChange={(e) => setSelections(prev => ({ ...prev, [cat.id]: e.target.value }))}
+                      >
+                        {(cat.options || []).map((opt, idx) => (
+                          <option key={idx} value={opt.code}>
+                            {opt.code === '' ? '(空白)' : opt.code} - {opt.description}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
           <div className="min-w-0">

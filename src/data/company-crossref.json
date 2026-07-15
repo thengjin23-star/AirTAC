@@ -1,0 +1,2506 @@
+[
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SE",
+  "note": "台灣不販售，ISO15552，可用SI替代",
+  "sensor": "DMSE / CMSE",
+  "competitors": {
+   "SMC": "MB1",
+   "Mindman": "MCQV2",
+   "CKD": "SCW",
+   "Festo": "DNC/DNCB/DNG",
+   "長拓": "AQ2",
+   "Norgren": "KA/RA/8000"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SE-A",
+  "note": "台灣不販售，不鏽鋼SUS420，ISO15552，可用SI替代",
+  "sensor": "DMSE / CMSE",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SE-B",
+  "note": "台灣不販售，不鏽鋼SUS304，ISO15552，可用SI替代",
+  "sensor": "DMSE / CMSE",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SI",
+  "note": "米字型氣缸  ISO15552 規格",
+  "sensor": "",
+  "competitors": {
+   "SMC": "C95",
+   "Mindman": "MCQI2",
+   "CKD": "SCW",
+   "Chelic": "DN",
+   "Festo": "DNC/DNCB/DNG",
+   "隆運": "DNB",
+   "Norgren": "KA/RA/8000"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SI-A",
+  "note": "米字型氣缸 不鏽鋼SUS420",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SI-B",
+  "note": "米字型氣缸 不鏽鋼SUS304",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SIL",
+  "note": "米字型帶鎖式氣缸 ISO 規格",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SIF",
+  "note": "米字型帶閥式氣缸 ISO 規格",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SGC",
+  "note": "台灣不販售，ISO15552，可用SI替代",
+  "sensor": "",
+  "competitors": {
+   "SMC": "CS1",
+   "Mindman": "MCQV",
+   "Chelic": "DU",
+   "Norgren": "RA/8000"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SU",
+  "note": "台灣不販售，AirTAC規格，可用SC替代",
+  "sensor": "",
+  "competitors": {
+   "Festo": "DSBC"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SC",
+  "note": "拉桿式氣缸，AirTAC規格  (Ø32~Ø100)",
+  "sensor": "F-DMSC□  +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CA1/CA2",
+   "CKD": "SCA2",
+   "Festo": "DSBG",
+   "長拓": "AS",
+   "元基": "WA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SC",
+  "note": "拉桿式氣缸，AirTAC規格  (Ø125~Ø250)，ISO6430",
+  "sensor": "F-DMSC□  +  DMSG / CMSG",
+  "competitors": {
+   "Mindman": "MCQA",
+   "Koganei": "LDA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SCL",
+  "note": "拉桿式帶鎖式氣缸，AirTAC規格",
+  "sensor": "F-DMSC□  +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CBA2"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SCF",
+  "note": "拉桿式帶閥式氣缸，AirTAC規格",
+  "sensor": "F-DMSC□  +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CBA2"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "JSI",
+  "note": "台灣不販售，米字型氣缸 JSI 規格",
+  "sensor": "",
+  "competitors": {
+   "SMC": "MB",
+   "CKD": "SCA2",
+   "Chelic": "DMB"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "BSE",
+  "note": "抱緊氣缸",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "BSC",
+  "note": "抱緊氣缸",
+  "sensor": "",
+  "competitors": {
+   "SMC": "MNB",
+   "隆運": "BNK"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SI固定座",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "SC固定座",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "標準氣缸 / 方型氣缸",
+  "airtac": "MCQA固定座",
+  "note": "針對Mindman MCQA，可使用我司JSI+非標固定座",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MI",
+  "note": "不鏽鋼  ISO6432 規格 (限Ø8~Ø25)",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "C85",
+   "Mindman": "MCMI",
+   "Chelic": "SDA",
+   "Festo": "DSN/DSNU",
+   "長拓": "MSR",
+   "隆運": "DS",
+   "Norgren": "RM/8000"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MIC",
+  "note": "不鏽鋼  ISO6432 規格 (限Ø8~Ø25)  帶緩衝",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "C85",
+   "Mindman": "MCMI",
+   "Chelic": "SDA",
+   "隆運": "DS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "PB",
+  "note": "不鏽鋼  JSI 規格",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CJ1/CJ2",
+   "Mindman": "MCMJ",
+   "CKD": "SCP*3",
+   "Chelic": "SBA",
+   "Festo": "EG-PK(僅Φ4)",
+   "Norgren": "MC"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "PBR",
+  "note": "不鏽鋼  JSI 規格，前蓋安裝型",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CJ2R"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MF",
+  "note": "不鏽鋼  JSI 規格",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CM2",
+   "Mindman": "MCMB",
+   "Chelic": "SDX",
+   "長拓": "MSR",
+   "Norgren": "RT/57200/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MFC",
+  "note": "不鏽鋼  JSI 規格，帶緩衝",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CM2",
+   "Mindman": "MCMB",
+   "Norgren": "RT/57200/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MG",
+  "note": "不鏽鋼  JSI 規格",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CG1",
+   "Mindman": "MCCG"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MGC",
+  "note": "不鏽鋼  JSI 規格，帶緩衝",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CG1",
+   "Mindman": "MCCG"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MA",
+  "note": "不鏽鋼  AirTAC規格",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "Mindman": "MCMA",
+   "長拓": "MSR",
+   "Norgren": "RT/57200/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MAC",
+  "note": "不鏽鋼  AirTAC規格，帶緩衝",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "Mindman": "MCMA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MAR",
+  "note": "不鏽鋼  AirTAC規格，前蓋安裝型，帶緩衝",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CM2R",
+   "Mindman": "MCMBR",
+   "Chelic": "DB-2",
+   "長拓": "AF"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MAL",
+  "note": "鋁合金 AirTAC規格",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CM2",
+   "Chelic": "FDA",
+   "長拓": "DA",
+   "Norgren": "RT/57200/M",
+   "元基": "WK"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MBL",
+  "note": "鋁合金",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MBLC",
+  "note": "鋁合金、帶緩衝",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "迷你氣缸 / 筆型氣缸",
+  "airtac": "MPE",
+  "note": "螺紋氣缸",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MCMJP",
+   "Koganei": "NSA",
+   "長拓": "AA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "ACE",
+  "note": "緊湊型 ISO21287",
+  "sensor": "DMSE / CMSE",
+  "competitors": {
+   "SMC": "C55",
+   "Mindman": "MCJI",
+   "Chelic": "JE",
+   "Festo": "AEN"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "TACE",
+  "note": "帶導桿面板+緊湊型 ISO21287",
+  "sensor": "DMSE / CMSE",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "ACP",
+  "note": "緊湊型 DIN標準",
+  "sensor": "DMSE / CMSE",
+  "competitors": {
+   "Chelic": "JE",
+   "Festo": "ADVU",
+   "Norgren": "RM/92000/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "ACQ",
+  "note": "治具缸 JSI 規格、不附磁石  (Ø12~Ø100)",
+  "sensor": "",
+  "competitors": {
+   "SMC": "CQ2",
+   "Mindman": "MCJQ",
+   "CKD": "SSD2",
+   "長拓": "JR",
+   "隆運": "DJA",
+   "Norgren": "RM/92000/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "ACQS",
+  "note": "治具缸 JSI 規格、附磁石      (Ø12~Ø100)",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "CQ2",
+   "Mindman": "MCJQ",
+   "CKD": "SSD2",
+   "長拓": "JR",
+   "Norgren": "RM/92000/M"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "ACQS",
+  "note": "治具缸 JSI 規格、附磁石      (Ø125、Ø140、Ø100)",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "長拓": "JR"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "TACQ",
+  "note": "帶導桿面板+治具缸 JSI 規格、附磁石      (Ø12~Ø100)",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "CQM",
+   "Mindman": "MCGI",
+   "CKD": "SSG",
+   "Chelic": "CTJ",
+   "Festo": "ADVUL"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "SDA",
+  "note": "治具缸 AirTAC規格、不附磁石  (Ø12~Ø100)",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MCJA",
+   "Chelic": "JD",
+   "Norgren": "RM/92000/M",
+   "元基": "WJ"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "超薄氣缸",
+  "airtac": "SDAS",
+  "note": "治具缸 AirTAC規格、附磁石  (Ø12~Ø100)",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "Mindman": "MCJA",
+   "Chelic": "JD",
+   "Norgren": "RM/92000/M",
+   "元基": "WJ"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "MD",
+  "note": "多位置固定氣缸",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CU",
+   "Mindman": "MCFA",
+   "CKD": "SMG",
+   "Chelic": "NQ",
+   "Festo": "DMM"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "MK",
+  "note": "多位置固定止回轉氣缸",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CUK",
+   "Mindman": "MCFA-K",
+   "CKD": "SMD2",
+   "Chelic": "NQT",
+   "Festo": "DMML",
+   "長拓": "JUK",
+   "隆運": "DUQ"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "MU",
+  "note": "小型自由安裝氣缸",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "CUJ",
+   "Mindman": "MCFB",
+   "CKD": "MDC2",
+   "Chelic": "NU"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "MPG",
+  "note": "面板型氣缸",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "CJP2",
+   "Mindman": "MCMJP",
+   "Chelic": "NB"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "MPE",
+  "note": "螺紋型氣缸  尚未上市",
+  "sensor": "",
+  "competitors": {
+   "SMC": "CJP",
+   "Mindman": "MCMJP",
+   "CKD": "CAT",
+   "Chelic": "NA",
+   "Festo": "EGZ(Φ6/10/16)"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "TN",
+  "note": "雙軸氣缸（雙側附磁）",
+  "sensor": "DMSJ / CMSJ",
+  "competitors": {
+   "Mindman": "MCDA",
+   "Chelic": "TD",
+   "Festo": "DPZ/DPZC",
+   "隆運": "GS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "TR",
+  "note": "雙軸氣缸（雙側附磁）",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CXS",
+   "CKD": "STR2",
+   "Chelic": "TDX",
+   "隆運": "GS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "TCL",
+  "note": "附導桿缸直線軸承",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "MGPL",
+   "Mindman": "MCGS",
+   "CKD": "STG-B",
+   "Chelic": "TB"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "多位置、雙軸、三軸氣缸",
+  "airtac": "TCM",
+  "note": "附導桿缸銅套軸承",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "MGPM",
+   "Mindman": "MCGS",
+   "CKD": "STG-M",
+   "Chelic": "TB"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "滑台氣缸",
+  "airtac": "STW",
+  "note": "滑台氣缸",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CXWM",
+   "Mindman": "MCDB",
+   "Chelic": "STU/STM",
+   "Koganei": "SU",
+   "Festo": "SPZ"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "滑台氣缸",
+  "airtac": "HLH",
+  "note": "側軌型精密滑台缸",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MXH",
+   "Mindman": "MCSH",
+   "Chelic": "MQX",
+   "Festo": "SLS",
+   "長拓": "DH"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "滑台氣缸",
+  "airtac": "HLQ",
+  "note": "雙軸型精密滑台缸(循環滾珠)",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MXQ",
+   "CKD": "LCR/LCG"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "滑台氣缸",
+  "airtac": "HLS",
+  "note": "雙軸型精密滑台缸(滾柱型)",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MXS",
+   "Mindman": "MCSS",
+   "CKD": "LCM",
+   "Chelic": "MDX"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "無桿氣缸",
+  "airtac": "RMS",
+  "note": "無桿缸 (不附磁石)",
+  "sensor": "",
+  "competitors": {
+   "SMC": "CY3B",
+   "Mindman": "MCRPM",
+   "CKD": "MRL2",
+   "Chelic": "MRD",
+   "Festo": "DGO",
+   "Parker": "P1Z"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "無桿氣缸",
+  "airtac": "RMT",
+  "note": "導桿型無桿缸",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CY1S",
+   "Mindman": "MCRPMS",
+   "Chelic": "MRU"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "無桿氣缸",
+  "airtac": "RMTL",
+  "note": "精密導桿型無桿缸",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "CY1L",
+   "Mindman": "MCRPMS",
+   "Chelic": "MRH",
+   "Festo": "SLM"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "旋轉氣缸",
+  "airtac": "HRQ",
+  "note": "回轉氣缸",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MSQ",
+   "Mindman": "MCRQ",
+   "CKD": "GRC",
+   "Chelic": "RTB"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "旋轉氣缸",
+  "airtac": "ACK",
+  "note": "轉角氣缸 （0~180°）",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MAS",
+   "Chelic": "HSR(L)",
+   "隆運": "TAD"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "旋轉氣缸",
+  "airtac": "QCK",
+  "note": "回轉夾緊氣缸（0~90°）",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "MK",
+   "Mindman": "MCKC",
+   "CKD": "RCC2",
+   "Chelic": "SCR(L)",
+   "Festo": "CLR",
+   "隆運": "TAS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "旋轉氣缸",
+  "airtac": "QCK",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "旋轉氣缸",
+  "airtac": "QDK",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFZ",
+  "note": "平行式夾爪缸 (導軌式)",
+  "sensor": "DMSG / CMSG / DMSH / CMSH",
+  "competitors": {
+   "SMC": "MHZ2",
+   "Mindman": "MCHC",
+   "Chelic": "HDZ",
+   "長拓": "KP"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFP",
+  "note": "平行式夾爪缸 (機械式)",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "Mindman": "MCHB",
+   "Chelic": "HDP",
+   "Koganei": "NHB",
+   "隆運": "CTU"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFY",
+  "note": "Y型夾爪缸 (支點式)",
+  "sensor": "DMSG / CMSG",
+  "competitors": {
+   "SMC": "MHC2",
+   "Mindman": "MCHA",
+   "Chelic": "HDS",
+   "Festo": "HGW",
+   "隆運": "CTV"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFR",
+  "note": "180∘夾爪缸",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MHY2",
+   "Mindman": "MCHY",
+   "Chelic": "HDM",
+   "Festo": "DHRS",
+   "隆運": "CTM"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFC",
+  "note": "圓缸二爪、三爪、四爪",
+  "sensor": "DMSH / CMSH",
+  "competitors": {
+   "SMC": "MHS",
+   "Mindman": "HCHG",
+   "Chelic": "HQD"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFK",
+  "note": "帶導軌、滾柱型",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "氣動手指 (二爪平行、三爪、四爪)",
+  "airtac": "HFT",
+  "note": "大口徑、開口夾",
+  "sensor": "",
+  "competitors": {
+   "隆運": "CHU"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "焊接夾緊氣缸",
+  "airtac": "JCK",
+  "note": "強力焊接夾緊氣缸",
+  "sensor": "DS1-KP",
+  "competitors": {
+   "SMC": "CKZ3"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "焊接夾緊氣缸",
+  "airtac": "MCK",
+  "note": "焊接夾緊氣缸",
+  "sensor": "F-DMSC□  +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "CKG1",
+   "Mindman": "MCKA",
+   "CKD": "CAC3-G4",
+   "Chelic": "DCK2",
+   "長拓": "AKS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "阻擋氣缸",
+  "airtac": "TWH",
+  "note": "阻擋缸",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "RS2H",
+   "Mindman": "MSB",
+   "Chelic": "STF",
+   "Festo": "STA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "阻擋氣缸",
+  "airtac": "TWM",
+  "note": "阻擋缸",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "RS2H",
+   "Mindman": "MSB",
+   "Chelic": "STF",
+   "Festo": "STA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "阻擋氣缸",
+  "airtac": "TWG",
+  "note": "阻擋缸",
+  "sensor": "F-DMSM-□   +  DMSG / CMSG",
+  "competitors": {
+   "SMC": "RS2H",
+   "Mindman": "MSB",
+   "Festo": "STA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "阻擋氣缸",
+  "airtac": "TWQ",
+  "note": "阻擋缸",
+  "sensor": "DMSG / CMSG / DMSJ / CMSJ",
+  "competitors": {
+   "SMC": "RS2H",
+   "Mindman": "MSB",
+   "Chelic": "ST",
+   "Festo": "STA"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "阻擋氣缸",
+  "airtac": "緩衝器",
+  "note": "阻擋氣缸專用規格",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "打刀缸",
+  "airtac": "NPM",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "Y接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "I接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "浮動接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "SMC": "JA",
+   "Mindman": "MFC",
+   "Chelic": "CJ"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "魚眼接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "PHS"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "修理包1",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "Y接頭、I接頭、魚眼接頭、浮動接頭、修理包",
+  "airtac": "修理包2",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "感應開關"
+  }
+ },
+ {
+  "sheet": "氣缸",
+  "section": "銷釘氣缸",
+  "airtac": "AOK",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B01",
+  "note": "移印機行業",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B02",
+  "note": "焊接行業",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B06",
+  "note": "電池行業",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B07",
+  "note": "TCM焊接專用",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-G",
+  "note": "PC杯+附逆流閥",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-G",
+  "note": "PC杯+不附逆流閥",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-G",
+  "note": "金屬杯+逆流閥",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-G",
+  "note": "金屬杯+不附逆流閥",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-GS",
+  "note": "壓力表(標準型/低壓型)",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業加價原則",
+  "airtac": "B52-U",
+  "note": "魚眼接頭",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "氣缸",
+  "section": "專用行業與標準品面價相同",
+  "airtac": "B52",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，直動式",
+  "airtac": "3V1",
+  "note": "直動式三口閥，作動頻率10次/秒，IP65，耐熱B級，可串連式樣",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VX31",
+   "Mindman": "MVDC",
+   "CKD": "3MA0/3MB0",
+   "Chelic": "SV310"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，直動式",
+  "airtac": "3V2",
+  "note": "直動式三口閥，作動頻率10次/秒，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VT307"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，直動式",
+  "airtac": "3V2M",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VV307"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，直動式",
+  "airtac": "3V3",
+  "note": "直動式三口閥，作動頻率10次/秒，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VT317"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，引導式(先導式)",
+  "airtac": "3V100",
+  "note": "先導式三口閥，作動頻率5次/秒，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYJ300",
+   "Mindman": "MVSC-180-3E1",
+   "CKD": "3GA1~3",
+   "Chelic": "SKU500~800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，引導式(先導式)",
+  "airtac": "3V200",
+  "note": "先導式三口閥，作動頻率5次/秒，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYJ500",
+   "Mindman": "MVSC-220-3E1",
+   "CKD": "3GA1~3",
+   "Chelic": "SKU500~800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，引導式(先導式)",
+  "airtac": "3V300",
+  "note": "先導式三口閥，作動頻率5次/秒，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYJ700",
+   "Mindman": "MVSC-300-3E1",
+   "CKD": "3GA1~3",
+   "Chelic": "SKU500~800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，三口二位，引導式(先導式)",
+  "airtac": "3V底座",
+  "note": "1F~16F",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "底座於以上資料",
+   "Chelic": "SKU500~800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4V100",
+  "note": "先導式五口閥，作動頻率5次/秒（3位置3次/秒），IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VFS1000",
+   "Mindman": "MVSC-180",
+   "CKD": "4GA1~3",
+   "Chelic": "SV500"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4V200",
+  "note": "先導式五口閥，作動頻率5次/秒（3位置3次/秒），IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VFS2000",
+   "Mindman": "MVSC-220",
+   "CKD": "4GA1~3",
+   "Chelic": "SV600"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4V300",
+  "note": "先導式五口閥，作動頻率4次/秒（3位置3次/秒），IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VFS3000",
+   "Mindman": "MVSC-300",
+   "CKD": "4GA1~3",
+   "Chelic": "SV800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4V400",
+  "note": "先導式五口閥，作動頻率3次/秒（3位置3次/秒），IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVSC-460",
+   "CKD": "4GA1~3",
+   "Chelic": "SV900"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4M",
+  "note": "NAMUR 型，先導式五口閥，作動頻率5次/秒（3分本體 3次/秒），無三位置，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVSN",
+   "Chelic": "SN"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "4V底座",
+  "note": "1F~16F",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "底座於以上資料"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "HD4V",
+  "note": "先導式五口閥，作動頻率5次/秒（3位置3次/秒），IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "5V",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7V050",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SY3*00"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7V100",
+  "note": "先導式五口閥，作動頻率8次/秒（3位置5次/秒），耐熱B級，低功率0.6W",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SY5*00",
+   "Mindman": "MVSY-156",
+   "CKD": "O",
+   "Chelic": "SR500",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7V200",
+  "note": "先導式五口閥，作動頻率8次/秒（3位置5次/秒），耐熱B級，低功率0.6W",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SY7*00",
+   "Mindman": "MVSY188",
+   "CKD": "O",
+   "Chelic": "SR700",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7MV100",
+  "note": "先導式五口閥，作動頻率8次/秒（3位置5次/秒），耐熱B級，低功率0.6W",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SY5*40",
+   "Mindman": "MVSY-156",
+   "CKD": "O",
+   "Chelic": "SRB500",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7MV200",
+  "note": "先導式五口閥，作動頻率8次/秒（3位置5次/秒），耐熱B級，低功率0.6W",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SY7*40",
+   "Mindman": "MVSY188",
+   "CKD": "O",
+   "Chelic": "SRB700",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "7V底座",
+  "note": "1F~16F",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "底座於以上資料",
+   "CKD": "O",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "ESV200",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空 ，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VQ7-6",
+   "Mindman": "MVSI",
+   "Festo": "MN1H"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "ESV300",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VQ7-6",
+   "Mindman": "MVSI",
+   "Festo": "MN1H"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "ESV400",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VQ7-6",
+   "Mindman": "MVSI",
+   "Festo": "MN1H"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO電磁閥，五口二位、五口三位，引導式(先導式)",
+  "airtac": "ESV600",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空，IP65，耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VQ7-6",
+   "Mindman": "MVSI",
+   "Festo": "MDH/JMDH"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，三口二位",
+  "airtac": "3A100",
+  "note": "外部氣控三口閥，作動頻率5次/秒，鋁合金本體",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VZA2*2",
+   "Mindman": "MVAA-180-3A"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，三口二位",
+  "airtac": "3A200",
+  "note": "外部氣控三口閥，作動頻率5次/秒，鋁合金本體",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VZA4*2",
+   "Mindman": "MVAA-220-3A"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，三口二位",
+  "airtac": "3A300",
+  "note": "外部氣控三口閥，作動頻率5次/秒，鋁合金本體",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VPA5*2",
+   "Mindman": "MVAA-300-3A"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，三口二位",
+  "airtac": "3A底座",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "底座於以上資料"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "4A100",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）M5:Cv=0.31~0.28 / 06:Cv=0.67~0.5",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA5*20",
+   "Mindman": "MVAA-180",
+   "Chelic": "PV-500"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "4A200",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）06:Cv=0.78~0.67 / 08:Cv=0.89~0.67",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA7*20",
+   "Mindman": "MVAA-220",
+   "Chelic": "PV-600"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "4A300",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）08:Cv=1.4~1 / 10:Cv=1.68~1",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VFA3*20",
+   "Mindman": "MVAA-300",
+   "Chelic": "PV-800"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "4A400",
+  "note": "外部氣控五口閥，作動頻率3次/秒 ; 15:Cv=2.79~1.68",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VFA5*20",
+   "Mindman": "MVAA-460",
+   "Chelic": "PV-900"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "4A底座",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "底座於以上資料",
+   "Chelic": "PV-底座"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "5A",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "7A1*0",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）Cv=0.55~0.48",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA5*20",
+   "CKD": "O",
+   "Chelic": "PM",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "7A2*0",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）Cv=0.83~0.65",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA5*40",
+   "CKD": "O",
+   "Chelic": "PM",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "7MA1*0",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）Cv=0.55~0.48",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA7*20",
+   "CKD": "O",
+   "Chelic": "PMB",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "氣控閥，五口二位、五口三位",
+  "airtac": "7MA2*0",
+  "note": "外部氣控五口閥，作動頻率5次/秒（3位置3次/秒）Cv=0.83~0.65",
+  "sensor": "",
+  "competitors": {
+   "SMC": "SYA7*40",
+   "CKD": "O",
+   "Chelic": "PMB",
+   "Koganei": "O",
+   "Parker": "O",
+   "TPC": "O"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO氣控閥，五口二位、五口三位",
+  "airtac": "EAV200",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO氣控閥，五口二位、五口三位",
+  "airtac": "EAV300",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO氣控閥，五口二位、五口三位",
+  "airtac": "EAV400",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "ISO氣控閥，五口二位、五口三位",
+  "airtac": "EAV600",
+  "note": "ISO外部氣控五口閥 連接面安裝尺寸為ISO5599-1，工作壓力可為0或真空",
+  "sensor": "",
+  "competitors": {
+   "Festo": "MDH/JMDH"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "4H",
+  "note": "手動式五口閥 Cv0.67~1.0 ，可面板固定或本體固定",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VZM400",
+   "Mindman": "MVHB",
+   "Chelic": "HVL"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "3L",
+  "note": "手拉式三口閥 Cv0.67~1.67 ，可面板固定或本體固定",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM200",
+   "Mindman": "MVHD"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "4L",
+  "note": "手拉式五口閥 Cv0.67~1.67 ，可面板固定或本體固定",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VZM500",
+   "Mindman": "MVHD"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "HSV",
+  "note": "手滑式三口閥 Cv1.28~21.78",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVHS",
+   "CKD": "H2V/H3V",
+   "Chelic": "MAV/MBV/MCV"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "4HV",
+  "note": "手轉式四口閥 Cv0.78~5.27",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVHC",
+   "Chelic": "HVM  /   HVT"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "S3",
+  "note": "機械式三口閥 Cv0.14~0.67",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM200",
+   "Mindman": "MVMC",
+   "Chelic": "MV200"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "M3",
+  "note": "機械式三口閥 Cv0.14~0.67",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM400",
+   "Mindman": "MVMB-3",
+   "Chelic": "MV200"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "M5",
+  "note": "機械式五口閥 Cv0.14~0.67",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VZM400",
+   "Mindman": "MVMB-4",
+   "Chelic": "MV230 / MV250"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "CM3",
+  "note": "機械式三口閥 Cv0.11 / 0.14 / 0.84 （ HD型為五口三位閥）",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM100.200\nVM130-X41",
+   "Mindman": "EPA",
+   "Chelic": "MV150"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "ZM3",
+  "note": "重載型機械式三口閥 Cv=0.34",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM800",
+   "Festo": "RW/O-3"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "3F . 3FM",
+  "note": "腳踏式三口閥",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VM230-02-40",
+   "Mindman": "MVFA",
+   "Chelic": "FVA"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "4F210",
+  "note": "腳踏式五口閥",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVFA",
+   "Chelic": "FVS"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "ASC",
+  "note": "單向節流閥",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AS",
+   "Mindman": "MSC",
+   "Chelic": "ASC/BSC/CSC"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "NRV",
+  "note": "單向閥(逆止閥）",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AK",
+   "Mindman": "MJBV"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "人控閥、機械閥、其他閥類",
+  "airtac": "PCV",
+  "note": "誘導止回閥",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2S",
+  "note": "二口二位直動常閉型流體閥 Cv=0.1~2.2  耐熱B級 IP65 本體SUS304/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VX2",
+   "Mindman": "MSUS",
+   "CKD": "AB/D/P/G",
+   "Chelic": "SBS"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2S150~500",
+  "note": "二口二位先導常閉型流體閥 Cv=5.5~49 耐熱B級 IP65 本體SUS304/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXD21~23",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KS",
+  "note": "二口二位直動常開型流體閥 (030:Cv=0.1~0.55)(050:Cv=0.34~1.4)耐熱B級 IP65 本體SUS304/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VX2",
+   "Mindman": "MSUS",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KS150~500",
+  "note": "二口二位先導常開型流體閥 Cv=5.5~49 耐熱B級 IP65 本體SUS304/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXD21~23",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2W",
+  "note": "二口二位直動常閉型流體閥 (030:Cv=0.1~1.1)(050:Cv=0.34~2.2) 耐熱B級 IP65 本體黃銅/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXE2",
+   "Mindman": "MZS",
+   "CKD": "AB/D/P/G",
+   "Chelic": "SUD"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2W150~250",
+  "note": "二口二位先導常開型流體閥 (Cv=5.5~12.5)  耐熱B級 IP65 本體黃銅/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXE2",
+   "CKD": "AB/D/P/G",
+   "Chelic": "SUW"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KW",
+  "note": "二口二位直動常開型流體閥 (030:Cv=0.1~0.55)(050:Cv=0.34~1.4) 耐熱B級 IP65 本體黃銅/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXED2.VXH",
+   "Mindman": "MZS",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KW150~250",
+  "note": "二口二位先導常開型流體閥 (Cv=5.5~12.5)  耐熱B級 IP65 本體黃銅/密封材FPM-F",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXED2",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2L",
+  "note": "二口二位直動常閉型流體閥 (030:Cv=0.18~3.3)(050:Cv=0.55~0.83) 耐熱H級 IP65 本體SUS304/密封材PTFE 耐熱183℃",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VCS2.VXH",
+   "Mindman": "MSUS",
+   "CKD": "AB/D/P/G",
+   "Chelic": "SAS"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2L150~500",
+  "note": "二口二位先導常閉型流體閥  Cv=5.5~49.0 (有效斷面積100～880mm2)耐熱H級 IP65 本體SUS304/密封材PTFE 耐熱183℃",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VND.VXP.VXR",
+   "CKD": "AB/D/P/G",
+   "Chelic": "SAS"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KL",
+  "note": "二口二位直動常開型流體閥(030:Cv=0.18~0.33)(050:Cv=0.55~0.83)耐熱H級 IP65 本體SUS304/密封材PTFE 耐熱183℃",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VND.VXH",
+   "Mindman": "MSUS-NO",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2KL150~500",
+  "note": "二口二位先導常開型流體閥Cv=5.5~49 耐熱H級 IP65 本體SUS304/密封材PTFE 耐熱183℃",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VND.VXP.VXR",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2V025",
+  "note": "二口二位直動常閉型流體閥Cv=0.23~13  耐熱B級  本體黃銅/密封材Viton 勵磁時間0.05秒以下",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXP",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2V130.250",
+  "note": "二口二位膜片先導型流體閥Cv=6.2~13  耐熱B級 本體黃銅/密封材NBR 勵磁時間0.05秒以下",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VXP",
+   "CKD": "AB/D/P/G"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2P025",
+  "note": "二口二位直動常閉流體閥/閥體尼龍66/密封材Viton，IP65耐熱B級",
+  "sensor": "",
+  "competitors": {
+   "SMC": "VDW"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "2J",
+  "note": "二口二位角座閥/閥體SUS316L及SUS304/密封材Teflon",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MY",
+   "Burkert": "2000系列",
+   "Norgren": "54530/84510/84730/84750"
+  }
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "固定座配件",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "CPV15",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "閥類",
+  "section": "流體控制電磁閥，二口二位",
+  "airtac": "CPV15S",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GC200~600",
+  "note": "過濾+調壓+給油 ，三聯式，2分無自動排水",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AC20~40",
+   "CKD": "C1000,C3000,C4000,C8000",
+   "Mindman": "MACT300~500",
+   "Chelic": "NC100~500",
+   "POSU": "PC2000~4000"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GFC200~600",
+  "note": "過濾+調壓+給油 ，二聯式，2分無自動排水",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AC20A~40A",
+   "CKD": "C1010,C2010,C3010,C4010,C8010",
+   "Mindman": "MACP200~500",
+   "Chelic": "NFC100~500",
+   "POSU": "PC2010~4010"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GFR200~600",
+  "note": "調壓過濾器 ，單聯式，2分無自動排水",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AW20~40",
+   "CKD": "W1000,W3000,W4000,W8000",
+   "Mindman": "MAFR100~500",
+   "Chelic": "NFR100~500",
+   "POSU": "PW2000~4000"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GF200~600",
+  "note": "過濾器",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AF20~40",
+   "CKD": "F1000,F3000,F4000,F8000",
+   "Mindman": "MAF200~900",
+   "Chelic": "NF100~500"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GR200~600",
+  "note": "調壓閥(調壓範圍0.05~0.9MPa; 低壓型0.05~0.4MPa)",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AR20~40",
+   "CKD": "R1000,R3000,R4000,R8000",
+   "Mindman": "MAF200~900",
+   "Chelic": "NR100~500"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GL200~600",
+  "note": "給油器",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AL20~40",
+   "CKD": "L1000,L3000,L4000,L8000",
+   "Mindman": "MAL200~900",
+   "Chelic": "NL100~500"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "G系列金屬杯",
+  "note": "過濾+調壓+給油 ，二聯式，2分無自動排水",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MACP310~410"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GV",
+  "note": "慢啟閥",
+  "sensor": "",
+  "competitors": {
+   "CKD": "V1000,V3000",
+   "Mindman": "MAVS"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GZ",
+  "note": "截止閥",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MVHT"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GA分氣塊/支架",
+  "note": "配件",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "G系列逆流閥",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GPF",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "G系列 三點組合 相關",
+  "airtac": "GPR",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AC",
+  "note": "過濾+調壓+給油 ，三聯式，無自動排水",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AC150~AC200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BC",
+  "note": "過濾+調壓+給油 ，三聯式",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BC200~CC600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AFC",
+  "note": "過濾+調壓+給油 ，二聯式，無自動排水",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AFC150~AFC200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BFC",
+  "note": "過濾+調壓+給油 ，二聯式",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BFC200~CFC600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AFR",
+  "note": "調壓過濾器 ，單聯式，無自動排水",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AFR150~AFR200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BFR",
+  "note": "調壓過濾器 ，單聯式",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BFR200~BFR600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AF",
+  "note": "過濾器，無自動排水",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AF150~AF200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BF",
+  "note": "過濾器",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BF200~CF600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AR",
+  "note": "調壓閥(調壓範圍0.05~0.9MPa; 低壓型0.05~0.4MPa)",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AR150~AR200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BR",
+  "note": "調壓閥(調壓範圍0.05~0.9MPa; 低壓型0.05~0.4MPa)",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BR200~CR600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "AL",
+  "note": "給油器",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "AL150~AL200"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "A、B系列 三點組合 相關",
+  "airtac": "BL",
+  "note": "給油器",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "BL200~CL600"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "SR",
+  "note": "調壓閥(調壓範圍0.05~0.9MPa; 低壓型0.05~0.4MPa)",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MAR200~900"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "SDR",
+  "note": "調壓閥(調壓範圍0.05~0.9MPa; 低壓型0.05~0.4MPa)",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MAR200~900"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "ADW",
+  "note": "末端排水器",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "GS",
+  "note": "圓型壓力錶，標準型",
+  "sensor": "",
+  "competitors": {
+   "SMC": "G43",
+   "Mindman": "PG"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "GF",
+  "note": "圓型壓力錶，面板安裝",
+  "sensor": "",
+  "competitors": {
+   "SMC": "G49"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "GU",
+  "note": "圓型壓力錶，崁入式安裝",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "DPS",
+  "note": "數位式壓力開關，-100~100KPa / -100~1000KPa，NPN / PNP",
+  "sensor": "",
+  "competitors": {
+   "SMC": "ISE30A",
+   "Mindman": "MP42",
+   "Chelic": "PS"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "DPC",
+  "note": "無顯示數位式壓力開關，-100~100KPa / -100~1000KPa，NPN / PNP",
+  "sensor": "",
+  "competitors": {
+   "SMC": "PS1000",
+   "Festo": "SDE5",
+   "PISCO": "SEU11",
+   "CKD": "PPE-P10",
+   "長拓": "SE",
+   "Mindman": "MP10",
+   "Chelic": "PS-05"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "PK",
+  "note": "機械式壓力開關，0.1~1.0 MPa",
+  "sensor": "",
+  "competitors": {
+   "Mindman": "MPS"
+  }
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "CTZ-2519C",
+  "note": "逆止型分氣塊 1/4",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "CTZ-2518C",
+  "note": "逆止型分氣塊 3/8",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "三點組合",
+  "section": "調壓閥、壓力表、壓力開關",
+  "airtac": "CTZ-2517C",
+  "note": "逆止型分氣塊 1/2",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "自製接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "SMC": "AS調速接頭 / KQ2快速接頭",
+   "Mindman": "PISCO調速接頭 / PISCO快速接頭",
+   "Chelic": "SQ快速接頭"
+  }
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "油壓緩衝器",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "SA"
+  }
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "PU螺旋管",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "PU管",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "Chelic": "PU管"
+  }
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "銅接頭",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "尼龍管",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "CMS",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "其他",
+  "section": "",
+  "airtac": "DMS",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "線軌跟導軌",
+  "section": "標準型線性滑軌",
+  "airtac": "LSH",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "THK": "HSR",
+   "HIWIN": "HG",
+   "PMI": "MSA",
+   "CPC": "HRC"
+  }
+ },
+ {
+  "sheet": "線軌跟導軌",
+  "section": "低安裝型線性滑軌",
+  "airtac": "LSD",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "THK": "SR",
+   "HIWIN": "EG",
+   "PMI": "MSB",
+   "CPC": "ARC"
+  }
+ },
+ {
+  "sheet": "線軌跟導軌",
+  "section": "微型線性滑軌",
+  "airtac": "LRM",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "THK": "SRS",
+   "HIWIN": "MG",
+   "PMI": "MSC",
+   "CPC": "MR",
+   "MISUMI": "SSEB"
+  }
+ },
+ {
+  "sheet": "線軌跟導軌",
+  "section": "微型線性滑軌(寬型)",
+  "airtac": "LRW",
+  "note": "",
+  "sensor": "",
+  "competitors": {}
+ },
+ {
+  "sheet": "線軌跟導軌",
+  "section": "交叉滾柱導軌",
+  "airtac": "LGC",
+  "note": "",
+  "sensor": "",
+  "competitors": {
+   "高明鐵": "GRD、GRV"
+  }
+ }
+]

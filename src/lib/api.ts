@@ -1,4 +1,5 @@
 import type { CrossReferenceResult } from '../types';
+import { matchLearnedRules } from './learnedRules';
 
 /** 呼叫後端交叉比對 API (單筆)。批量分析由前端逐筆排隊呼叫本函式。 */
 export async function analyzeModel(
@@ -10,6 +11,13 @@ export async function analyzeModel(
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
+  // 自動帶上使用者知識庫中字首命中的型錄解碼表
+  const learnedRules = matchLearnedRules(competitorModel).map(r => ({
+    brand: r.brand,
+    seriesName: r.seriesName,
+    decode: r.decode,
+  }));
+
   try {
     const response = await fetch('/api/cross-reference', {
       method: 'POST',
@@ -18,6 +26,7 @@ export async function analyzeModel(
         competitorModel,
         brand: brand && brand !== 'auto' ? brand : undefined,
         customRules: customRules?.trim() || undefined,
+        learnedRules: learnedRules.length > 0 ? learnedRules : undefined,
       }),
       signal: controller.signal,
     });

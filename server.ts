@@ -6,16 +6,24 @@ import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import { crossReference } from "./src/server/crossReferenceService";
+import { learnCatalog } from "./src/server/learnCatalogService";
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  app.use(express.json());
+  // 型錄學習支援上傳圖片 (base64)，放寬 body 限制
+  app.use(express.json({ limit: "8mb" }));
 
   // API route for cross-referencing (核心邏輯在 crossReferenceService，與 Vercel Function 共用)
   app.post("/api/cross-reference", async (req, res) => {
     const { status, body } = await crossReference(req.body);
+    res.status(status).json(body);
+  });
+
+  // 學習對手型錄：解析訂購碼說明頁 → 回傳逐位解碼表
+  app.post("/api/learn-catalog", async (req, res) => {
+    const { status, body } = await learnCatalog(req.body);
     res.status(status).json(body);
   });
 

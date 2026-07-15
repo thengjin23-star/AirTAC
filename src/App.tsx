@@ -4,12 +4,13 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Search, Loader2, Info, Building2, Lightbulb, CheckCircle2, Database, Repeat, History, Trash2, ShieldCheck, ClipboardList, User, Rows3 } from 'lucide-react';
+import { Search, Loader2, Info, Building2, Lightbulb, CheckCircle2, Database, Repeat, History, Trash2, ShieldCheck, ClipboardList, User, Rows3, BookOpen } from 'lucide-react';
 import type { CrossReferenceResult, SearchHistoryItem, ConfirmedItem, BatchRow } from './types';
 import { ProductDatabase } from './components/ProductDatabase';
 import { MatchResult } from './components/MatchResult';
 import { ConfirmedList } from './components/ConfirmedList';
 import { BatchPanel } from './components/BatchPanel';
+import { KnowledgeBase } from './components/KnowledgeBase';
 import { analyzeModel } from './lib/api';
 
 const HISTORY_KEY = 'airtac_search_history_v1';
@@ -37,7 +38,7 @@ function loadJson<T>(key: string, fallback: T): T {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'match' | 'confirmed' | 'database'>('match');
+  const [activeTab, setActiveTab] = useState<'match' | 'confirmed' | 'knowledge' | 'database'>('match');
   const [matchMode, setMatchMode] = useState<'single' | 'batch'>('single');
   const [modelInput, setModelInput] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('auto');
@@ -157,6 +158,7 @@ export default function App() {
             {([
               { key: 'match', icon: Repeat, label: '型號自動匹配' },
               { key: 'confirmed', icon: ClipboardList, label: `確認清單${confirmedItems.length > 0 ? ` (${confirmedItems.length})` : ''}` },
+              { key: 'knowledge', icon: BookOpen, label: '對手知識庫' },
               { key: 'database', icon: Database, label: '產品資料庫' },
             ] as const).map(tab => (
               <button
@@ -177,6 +179,7 @@ export default function App() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
         {activeTab === 'database' && <ProductDatabase />}
+        {activeTab === 'knowledge' && <KnowledgeBase />}
         {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} setItems={setConfirmedItems} />}
         {activeTab === 'match' && (
           <>

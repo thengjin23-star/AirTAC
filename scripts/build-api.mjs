@@ -35,4 +35,10 @@ await build({
   outfile: 'api/health.js',
 });
 
+await build({
+  ...shared,
+  entryPoints: ['src/server/vercelHandlers/learn-catalog.ts'],
+  outfile: 'api/learn-catalog.js',
+});
+
 console.log('✓ api/*.js bundles generated');
