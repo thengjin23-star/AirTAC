@@ -59,8 +59,10 @@ const prompt = `你是氣動元件型錄資料工程師。這份 PDF 是 AirTAC 
 8. 所有中文用繁體。
 9. 只輸出 JSON 陣列，不要其他文字。`;
 
+const model = process.env.EXTRACT_MODEL || 'gemini-2.5-flash';
+console.log('解析模型:', model);
 const resp = await ai.models.generateContent({
-  model: 'gemini-2.5-flash',
+  model,
   contents: [{ role: 'user', parts: [{ fileData: { fileUri: file.uri, mimeType: 'application/pdf' } }, { text: prompt }] }],
   config: { responseMimeType: 'application/json', maxOutputTokens: 65536, temperature: 0 },
 });
