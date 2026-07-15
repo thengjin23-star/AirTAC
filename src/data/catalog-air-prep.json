@@ -1,4016 +1,5125 @@
-{
-  "series": [
-    {
-      "id": "GA-Splitter",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "分氣塊",
-      "name": "GA系列 分氣塊",
-      "format": "GA{series} {port} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "GA200系列"
-            },
-            {
-              "code": "300",
-              "description": "GA300系列"
-            },
-            {
-              "code": "400",
-              "description": "GA400/500系列"
-            },
-            {
-              "code": "600",
-              "description": "GA600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAL",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "給油器",
-      "name": "GAL系列 給油器",
-      "format": "GAL{series} {cup} {port} {bracket} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAR",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "調壓閥",
-      "name": "GAR系列 調壓閥",
-      "format": "GAR{series} {port} {type} {bracket} {gauge} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAF",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "過濾器",
-      "name": "GAF系列 過濾器",
-      "format": "GAF{series} {cup} {port} {drain} {bracket} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAFR",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "調壓過濾器",
-      "name": "GAFR系列 調壓過濾器",
-      "format": "GAFR{series} {cup} {port} {drain} {type} {bracket} {gauge} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAFC",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "二聯件(F.R+L)",
-      "name": "GAFC系列 二聯件 (調壓過濾器+給油器)",
-      "format": "GAFC{series} {cup} {port} {drain} {type} {gauge} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GAC",
-      "category": "氣源處理元件",
-      "superGroup": "GA系列",
-      "group": "三聯件(F+R+L)",
-      "name": "GAC系列 三聯件 (過濾器+調壓閥+給油器)",
-      "format": "GAC{series} {cup} {port} {drain} {type} {gauge} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "500",
-              "description": "500系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5x0.8"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            },
-            {
-              "code": "20",
-              "description": "3/4\""
-            },
-            {
-              "code": "25",
-              "description": "1\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙 (M5不適用)"
-            },
-            {
-              "code": "G",
-              "description": "G牙 (M5不適用)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙 (M5不適用)"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GPFR",
-      "category": "氣源處理元件",
-      "superGroup": "GP系列",
-      "group": "調壓精密過濾器",
-      "name": "GPFR系列 調壓精密過濾器",
-      "format": "GPFR{series} {cup} {port} {drain} {type} {bracket} {gauge} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (400系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "M",
-              "description": "0.3μm級"
-            },
-            {
-              "code": "D",
-              "description": "0.01μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GPR",
-      "category": "氣源處理元件",
-      "superGroup": "GP系列",
-      "group": "精密調壓閥",
-      "name": "GPR系列 精密調壓閥",
-      "format": "GPR{series} {port} {type} {bracket} {gauge} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (400系列)"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "設定壓力範圍",
-          "options": [
-            {
-              "code": "L",
-              "description": "低壓型 0.005~0.2MPa"
-            },
-            {
-              "code": "M",
-              "description": "中壓型 0.01~0.4MPa"
-            },
-            {
-              "code": "H",
-              "description": "高壓型 0.01~0.8MPa"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "圓表卡扣式"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GPF",
-      "category": "氣源處理元件",
-      "superGroup": "GP系列",
-      "group": "油霧分離器",
-      "name": "GPF系列 油霧分離器",
-      "format": "GPF{series} {cup} {port} {drain} {bracket} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (400系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "M",
-              "description": "0.3μm"
-            },
-            {
-              "code": "D",
-              "description": "0.01μm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AR-BR",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "調壓閥",
-      "name": "AR、BR系列 調壓閥",
-      "format": "{series}{model} {gaugeMount} {type} {bracket} {gauge} {scale} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AR",
-              "description": "A系列調壓閥"
-            },
-            {
-              "code": "BR",
-              "description": "B系列調壓閥"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "gaugeMount",
-          "name": "壓力表安裝螺紋代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "單側 (1500C/2000C/3000C) / 雙側 (4000C10/4000C)"
-            },
-            {
-              "code": "D",
-              "description": "雙側 (僅適用1500C/2000C/3000C)"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表 (含壓力表及對應規格安裝架)"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            },
-            {
-              "code": "4",
-              "description": "kgf/cm² & psi"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AL-BL",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "給油器",
-      "name": "AL、BL系列 給油器",
-      "format": "{series}{model} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AL",
-              "description": "A系列給油器"
-            },
-            {
-              "code": "BL",
-              "description": "B系列給油器"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AF-BF",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "過濾器",
-      "name": "AF、BF系列 過濾器",
-      "format": "{series}{model} {drain} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AF",
-              "description": "A系列過濾器"
-            },
-            {
-              "code": "BF",
-              "description": "B系列過濾器"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AFR-BFR",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "調壓過濾器",
-      "name": "AFR、BFR系列 調壓過濾器",
-      "format": "{series}{model} {gaugeMount} {drain} {type} {bracket} {gauge} {scale} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AFR",
-              "description": "A系列調壓過濾器"
-            },
-            {
-              "code": "BFR",
-              "description": "B系列調壓過濾器"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "gaugeMount",
-          "name": "壓力表安裝螺紋代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "單側 (1500C/2000C/3000C) / 雙側 (4000C10/4000C)"
-            },
-            {
-              "code": "D",
-              "description": "雙側 (僅適用1500C/2000C/3000C)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表 (含壓力表及對應規格安裝架)"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            },
-            {
-              "code": "4",
-              "description": "kgf/cm² & psi"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AC-BC",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "三聯件(F+R+L)",
-      "name": "AC、BC系列 三聯件",
-      "format": "{series}{model} {drain} {type} {gauge} {scale} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AC",
-              "description": "A系列三聯件"
-            },
-            {
-              "code": "BC",
-              "description": "B系列三聯件"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表 (含壓力表及對應規格安裝架)"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            },
-            {
-              "code": "4",
-              "description": "kgf/cm² & psi"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "AFC-BFC",
-      "category": "氣源處理元件",
-      "superGroup": "A、B系列",
-      "group": "二聯件(F.R+L)",
-      "name": "AFC、BFC系列 二聯件",
-      "format": "{series}{model} {drain} {type} {gauge} {scale} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "AFC",
-              "description": "A系列二聯件"
-            },
-            {
-              "code": "BFC",
-              "description": "B系列二聯件"
-            }
-          ]
-        },
-        {
-          "id": "model",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "1500C",
-              "description": "1500C: 1/8\""
-            },
-            {
-              "code": "2000C",
-              "description": "2000C: 1/4\""
-            },
-            {
-              "code": "3000C",
-              "description": "3000C: 3/8\""
-            },
-            {
-              "code": "4000C10",
-              "description": "4000C10: 3/8\""
-            },
-            {
-              "code": "4000C",
-              "description": "4000C: 1/2\""
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓+手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型 (0.4MPa)"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表 (含壓力表及對應規格安裝架)"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            },
-            {
-              "code": "4",
-              "description": "kgf/cm² & psi"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GR",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "調壓閥",
-      "name": "GR系列 調壓閥",
-      "format": "GR{series} {port} {type} {bracket} {gauge} {gaugeType} {scale} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "gaugeType",
-          "name": "壓力表型式",
-          "options": [
-            {
-              "code": "F",
-              "description": "方形表"
-            },
-            {
-              "code": "C",
-              "description": "圓形表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GL",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "給油器",
-      "name": "GL系列 給油器",
-      "format": "GL{series} {port} {bracket} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GF",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "過濾器",
-      "name": "GF系列 過濾器",
-      "format": "GF{series} {port} {drain} {bracket} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓排水式"
-            },
-            {
-              "code": "M",
-              "description": "手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GFR",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "調壓過濾器",
-      "name": "GFR系列 調壓過濾器",
-      "format": "GFR{series} {port} {drain} {type} {bracket} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓排水式"
-            },
-            {
-              "code": "M",
-              "description": "手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "gaugeType",
-          "name": "壓力表型式",
-          "options": [
-            {
-              "code": "F",
-              "description": "方形表"
-            },
-            {
-              "code": "C",
-              "description": "圓形表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GC",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "三聯件(F+R+L)",
-      "name": "GC系列 三聯件",
-      "format": "GC{series} {port} {drain} {type} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓排水式"
-            },
-            {
-              "code": "M",
-              "description": "手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "gaugeType",
-          "name": "壓力表型式",
-          "options": [
-            {
-              "code": "F",
-              "description": "方形表"
-            },
-            {
-              "code": "C",
-              "description": "圓形表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GFC",
-      "category": "氣源處理元件",
-      "superGroup": "G系列",
-      "group": "二聯件(F.R+L)",
-      "name": "GFC系列 二聯件",
-      "format": "GFC{series} {port} {drain} {type} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            },
-            {
-              "code": "400",
-              "description": "400系列"
-            },
-            {
-              "code": "600",
-              "description": "600系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\" (200系列)"
-            },
-            {
-              "code": "08",
-              "description": "1/4\" (200/300系列)"
-            },
-            {
-              "code": "10",
-              "description": "3/8\" (300/400系列)"
-            },
-            {
-              "code": "15",
-              "description": "1/2\" (300/400系列)"
-            },
-            {
-              "code": "20",
-              "description": "3/4\" (600系列)"
-            },
-            {
-              "code": "25",
-              "description": "1\" (600系列)"
-            }
-          ]
-        },
-        {
-          "id": "drain",
-          "name": "排水方式",
-          "options": [
-            {
-              "code": "",
-              "description": "差壓排水式"
-            },
-            {
-              "code": "M",
-              "description": "手動排水式"
-            },
-            {
-              "code": "A",
-              "description": "自動排水式"
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "gaugeType",
-          "name": "壓力表型式",
-          "options": [
-            {
-              "code": "F",
-              "description": "方形表"
-            },
-            {
-              "code": "C",
-              "description": "圓形表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        },
-        {
-          "id": "checkValve",
-          "name": "逆流閥代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "不附逆流閥"
-            },
-            {
-              "code": "K",
-              "description": "附逆流閥"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GVF",
-      "category": "氣源處理元件",
-      "superGroup": "真空系列",
-      "group": "真空過濾器",
-      "name": "GVF系列 真空過濾器",
-      "format": "GVF{series} {cup} {port} {bracket} {filter} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            }
-          ]
-        },
-        {
-          "id": "cup",
-          "name": "杯體材質",
-          "options": [
-            {
-              "code": "",
-              "description": "PC杯"
-            },
-            {
-              "code": "C",
-              "description": "金屬杯"
-            },
-            {
-              "code": "N",
-              "description": "尼龍杯"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "filter",
-          "name": "過濾精度",
-          "options": [
-            {
-              "code": "",
-              "description": "40μm級"
-            },
-            {
-              "code": "W",
-              "description": "5μm級"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "GVR",
-      "category": "氣源處理元件",
-      "superGroup": "真空系列",
-      "group": "真空調壓閥",
-      "name": "GVR系列 真空調壓閥",
-      "format": "GVR{series} {port} {bracket} {gauge} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架附件",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架(標準配置)"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附壓力表"
-            },
-            {
-              "code": "N",
-              "description": "不附壓力表"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙(kPa & psi)"
-            },
-            {
-              "code": "G",
-              "description": "G牙(kPa & psi)"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙(kPa & psi)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "SDR",
-      "category": "氣源處理元件",
-      "superGroup": "其它系列",
-      "group": "調壓閥",
-      "name": "SDR系列 調壓閥",
-      "format": "SDR{series} {port} {type} {bracket} {gauge} {scale} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "100",
-              "description": "100系列"
-            },
-            {
-              "code": "200",
-              "description": "200系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "M5",
-              "description": "M5"
-            },
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙(M5不適用)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "SR",
-      "category": "氣源處理元件",
-      "superGroup": "其它系列",
-      "group": "調壓閥",
-      "name": "SR系列 調壓閥",
-      "format": "SR{series} {port} {type} {bracket} {gauge} {scale} {thread}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            }
-          ]
-        },
-        {
-          "id": "type",
-          "name": "型式代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準型"
-            },
-            {
-              "code": "L",
-              "description": "低壓型"
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "scale",
-          "name": "刻度單位",
-          "options": [
-            {
-              "code": "1",
-              "description": "MPa"
-            },
-            {
-              "code": "2",
-              "description": "psi"
-            },
-            {
-              "code": "3",
-              "description": "bar"
-            },
-            {
-              "code": "4",
-              "description": "kgf/cm² & psi"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "牙型代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "PT牙"
-            },
-            {
-              "code": "G",
-              "description": "G牙"
-            },
-            {
-              "code": "T",
-              "description": "NPT牙"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "SM-ARH",
-      "category": "氣源處理元件",
-      "superGroup": "其它系列",
-      "group": "潔淨減壓閥",
-      "name": "SM-ARH系列 潔淨減壓閥",
-      "format": "SM-ARH{series}-{port} {bracket} {gauge} {direction}",
-      "categories": [
-        {
-          "id": "series",
-          "name": "系列代號",
-          "options": [
-            {
-              "code": "200",
-              "description": "200系列"
-            },
-            {
-              "code": "300",
-              "description": "300系列"
-            }
-          ]
-        },
-        {
-          "id": "port",
-          "name": "接管口徑",
-          "options": [
-            {
-              "code": "06",
-              "description": "1/8\""
-            },
-            {
-              "code": "08",
-              "description": "1/4\""
-            },
-            {
-              "code": "10",
-              "description": "3/8\""
-            },
-            {
-              "code": "15",
-              "description": "1/2\""
-            }
-          ]
-        },
-        {
-          "id": "bracket",
-          "name": "支架代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附支架"
-            },
-            {
-              "code": "J",
-              "description": "不附支架"
-            }
-          ]
-        },
-        {
-          "id": "gauge",
-          "name": "壓力表代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "附表(SM-ARH4007M)"
-            },
-            {
-              "code": "N",
-              "description": "不附表"
-            }
-          ]
-        },
-        {
-          "id": "direction",
-          "name": "壓力表方向代碼",
-          "options": [
-            {
-              "code": "",
-              "description": "標準方向"
-            },
-            {
-              "code": "R",
-              "description": "背側方向"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "F-G",
-      "category": "氣源處理元件",
-      "superGroup": "輔助元件",
-      "group": "壓力表",
-      "name": "F-G系列 壓力表",
-      "format": "F-G {type} {size} {max_pressure} {unit_thread}",
-      "categories": [
-        {
-          "id": "type",
-          "name": "安裝型式",
-          "options": [
-            {
-              "code": "S",
-              "description": "標準安裝 (GS)"
-            },
-            {
-              "code": "F",
-              "description": "面板安裝 (GF)"
-            },
-            {
-              "code": "U",
-              "description": "嵌入式安裝 (GU)"
-            },
-            {
-              "code": "P",
-              "description": "不銹鋼外殼 (GP)"
-            },
-            {
-              "code": "V",
-              "description": "眞空型 (GV)"
-            }
-          ]
-        },
-        {
-          "id": "size",
-          "name": "表盤外徑",
-          "options": [
-            {
-              "code": "30",
-              "description": "外徑30"
-            },
-            {
-              "code": "40",
-              "description": "外徑40"
-            },
-            {
-              "code": "50",
-              "description": "外徑50"
-            },
-            {
-              "code": "60",
-              "description": "外徑60"
-            }
-          ]
-        },
-        {
-          "id": "max_pressure",
-          "name": "最大顯示壓力值",
-          "options": [
-            {
-              "code": "02",
-              "description": "0.2MPa (僅限P型)"
-            },
-            {
-              "code": "04",
-              "description": "0.4MPa"
-            },
-            {
-              "code": "10",
-              "description": "1.0MPa / -100kPa(V型)"
-            }
-          ]
-        },
-        {
-          "id": "unit_thread",
-          "name": "壓力刻度單位與牙型",
-          "options": [
-            {
-              "code": "M",
-              "description": "MPa (PT牙) - 適用S/F/U"
-            },
-            {
-              "code": "P",
-              "description": "psi (NPT牙) / MPa&psi (PT牙, P型) / kPa&psi (PT牙, V型)"
-            },
-            {
-              "code": "B",
-              "description": "bar (G牙) - 適用S/F/U"
-            },
-            {
-              "code": "Z",
-              "description": "kgf/cm² & psi (PT牙) - 適用S/F/U"
-            },
-            {
-              "code": "G",
-              "description": "MPa&bar(G牙, P型) / kPa&psi(G牙, V型)"
-            },
-            {
-              "code": "T",
-              "description": "bar&psi(NPT牙, P型) / kPa&psi(NPT牙, V型)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DPH",
-      "category": "氣源處理元件",
-      "superGroup": "輔助元件",
-      "group": "壓力傳感器",
-      "name": "DPH系列 壓力傳感器",
-      "format": "DPH {output}{connection} - {range} {length} {thread}",
-      "categories": [
-        {
-          "id": "output",
-          "name": "輸出型式",
-          "options": [
-            {
-              "code": "N2",
-              "description": "NPN+類比電壓輸出(1~5V)"
-            },
-            {
-              "code": "P2",
-              "description": "PNP+類比電壓輸出(1~5V)"
-            },
-            {
-              "code": "N3",
-              "description": "NPN+類比電流輸出(4~20mA)"
-            },
-            {
-              "code": "P3",
-              "description": "PNP+類比電流輸出(4~20mA)"
-            }
-          ]
-        },
-        {
-          "id": "connection",
-          "name": "接電方式",
-          "options": [
-            {
-              "code": "",
-              "description": "端子式接電"
-            },
-            {
-              "code": "B",
-              "description": "後出線式接電"
-            }
-          ]
-        },
-        {
-          "id": "range",
-          "name": "量測壓力範圍",
-          "options": [
-            {
-              "code": "01",
-              "description": "-100kPa~100kPa"
-            },
-            {
-              "code": "10",
-              "description": "-100kPa~1,000kPa"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "出線長度",
-          "options": [
-            {
-              "code": "020",
-              "description": "線長2m"
-            },
-            {
-              "code": "030",
-              "description": "線長3m"
-            },
-            {
-              "code": "050",
-              "description": "線長5m"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "壓力氣孔型式",
-          "options": [
-            {
-              "code": "",
-              "description": "外牙PT1/8; 內牙: M5"
-            },
-            {
-              "code": "T",
-              "description": "外牙NPT1/8; 內牙: 10-32UNF"
-            },
-            {
-              "code": "G",
-              "description": "外牙G1/8; 內牙: M5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DPS",
-      "category": "氣源處理元件",
-      "superGroup": "輔助元件",
-      "group": "壓力傳感器",
-      "name": "DPS系列 壓力傳感器",
-      "format": "DPS {output}{connection} - {range} {length} {thread}",
-      "categories": [
-        {
-          "id": "output",
-          "name": "輸出型式",
-          "options": [
-            {
-              "code": "N1",
-              "description": "NPN"
-            },
-            {
-              "code": "P1",
-              "description": "PNP"
-            }
-          ]
-        },
-        {
-          "id": "connection",
-          "name": "接電方式",
-          "options": [
-            {
-              "code": "",
-              "description": "端子式接電"
-            },
-            {
-              "code": "B",
-              "description": "後出線式接電"
-            },
-            {
-              "code": "D",
-              "description": "下出式接電"
-            }
-          ]
-        },
-        {
-          "id": "range",
-          "name": "量測壓力範圍",
-          "options": [
-            {
-              "code": "01",
-              "description": "-100kPa~100kPa"
-            },
-            {
-              "code": "10",
-              "description": "-100kPa~1,000kPa"
-            }
-          ]
-        },
-        {
-          "id": "length",
-          "name": "出線長度",
-          "options": [
-            {
-              "code": "020",
-              "description": "線長2m"
-            },
-            {
-              "code": "030",
-              "description": "線長3m"
-            },
-            {
-              "code": "050",
-              "description": "線長5m"
-            },
-            {
-              "code": "M08",
-              "description": "M8快遞公接頭+300mm"
-            }
-          ]
-        },
-        {
-          "id": "thread",
-          "name": "壓力氣孔型式",
-          "options": [
-            {
-              "code": "",
-              "description": "外牙PT1/8; 內牙: M5"
-            },
-            {
-              "code": "T",
-              "description": "外牙NPT1/8; 內牙: 10-32UNF"
-            },
-            {
-              "code": "G",
-              "description": "外牙G1/8; 內牙: M5"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+ {
+  "id": "SDR",
+  "category": "氣源處理元件",
+  "superGroup": "其它系列",
+  "group": "SDR調壓閥",
+  "code": "SDR",
+  "name": "SDR系列 調壓閥",
+  "format": "SDR{series}{port}{type}{bracket}{gauge}{scale}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "100",
+      "description": "100系列"
+     },
+     {
+      "code": "200",
+      "description": "200系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.3"
+ },
+ {
+  "id": "SM-ARH",
+  "category": "氣源處理元件",
+  "superGroup": "其它系列",
+  "group": "SM-ARH潔淨減壓閥",
+  "code": "SM-ARH",
+  "name": "SM-ARH系列 潔淨減壓閥",
+  "format": "SM-ARH{series}{port}{bracket}{gauge}{direction}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "direction",
+    "name": "壓力表方向",
+    "options": [
+     {
+      "code": "",
+      "description": "標準方向"
+     },
+     {
+      "code": "R",
+      "description": "背側方向"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.5"
+ },
+ {
+  "id": "SR",
+  "category": "氣源處理元件",
+  "superGroup": "其它系列",
+  "group": "SR調壓閥",
+  "code": "SR",
+  "name": "SR系列 調壓閥",
+  "format": "SR{series}{port}{type}{bracket}{gauge}{scale}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     },
+     {
+      "code": "4",
+      "description": "kgf/cm²"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.8"
+ },
+ {
+  "id": "GVF",
+  "category": "氣源處理元件",
+  "superGroup": "真空系列",
+  "group": "真空過濾器",
+  "code": "GVF",
+  "name": "GVF系列 真空過濾器",
+  "format": "GVF{series}{cup}{port}{bracket}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.11"
+ },
+ {
+  "id": "GVR",
+  "category": "氣源處理元件",
+  "superGroup": "真空系列",
+  "group": "真空調壓閥",
+  "code": "GVR",
+  "name": "GVR系列 真空調壓閥",
+  "format": "GVR{series}{port}{bracket}{gauge}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "安裝附件",
+    "options": [
+     {
+      "code": "",
+      "description": "不附支架"
+     },
+     {
+      "code": "J",
+      "description": "附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附壓力表"
+     },
+     {
+      "code": "N",
+      "description": "不附壓力表"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.14"
+ },
+ {
+  "id": "DPH",
+  "category": "氣源處理元件",
+  "superGroup": "壓力傳感器",
+  "group": "DPH電子式數顯",
+  "code": "DPH",
+  "name": "DPH系列 電子式數顯壓力傳感器",
+  "format": "DPH{output}{connection}{range}{length}{port}",
+  "categories": [
+   {
+    "id": "output",
+    "name": "輸出型式",
+    "options": [
+     {
+      "code": "N2",
+      "description": "NPN+類比電壓輸出(1-5V)"
+     },
+     {
+      "code": "P2",
+      "description": "PNP+類比電壓輸出(1-5V)"
+     },
+     {
+      "code": "N3",
+      "description": "NPN+類比電流輸出(4-20mA)"
+     },
+     {
+      "code": "P3",
+      "description": "PNP+類比電流輸出(4-20mA)"
+     }
+    ]
+   },
+   {
+    "id": "connection",
+    "name": "接電方式",
+    "options": [
+     {
+      "code": "",
+      "description": "端子式接電"
+     },
+     {
+      "code": "B",
+      "description": "後出線式接電"
+     }
+    ]
+   },
+   {
+    "id": "range",
+    "name": "量測壓力範圍",
+    "options": [
+     {
+      "code": "01",
+      "description": "-100kPa~100kPa"
+     },
+     {
+      "code": "10",
+      "description": "-100kPa~1000kPa"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "出線長度",
+    "options": [
+     {
+      "code": "020",
+      "description": "線長2m"
+     },
+     {
+      "code": "030",
+      "description": "線長3m"
+     },
+     {
+      "code": "050",
+      "description": "線長5m"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "壓力氣孔型式",
+    "options": [
+     {
+      "code": "",
+      "description": "外牙PT1/8; 內牙M5"
+     },
+     {
+      "code": "T",
+      "description": "外牙NPT1/8; 內牙10-32UNF"
+     },
+     {
+      "code": "G",
+      "description": "外牙G1/8; 內牙M5"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.15"
+ },
+ {
+  "id": "DPS",
+  "category": "氣源處理元件",
+  "superGroup": "壓力傳感器",
+  "group": "DPS系列",
+  "code": "DPS",
+  "name": "DPS系列 電子式數顯壓力傳感器",
+  "format": "DPS{output}{connection}{range}{length}{port}",
+  "categories": [
+   {
+    "id": "output",
+    "name": "輸出型式",
+    "options": [
+     {
+      "code": "N1",
+      "description": "NPN"
+     },
+     {
+      "code": "P1",
+      "description": "PNP"
+     }
+    ]
+   },
+   {
+    "id": "connection",
+    "name": "接電方式",
+    "options": [
+     {
+      "code": "",
+      "description": "端子式接電"
+     },
+     {
+      "code": "B",
+      "description": "後出線式接電"
+     },
+     {
+      "code": "D",
+      "description": "下出線式接電"
+     }
+    ]
+   },
+   {
+    "id": "range",
+    "name": "量測壓力範圍",
+    "options": [
+     {
+      "code": "01",
+      "description": "-100kPa~100kPa"
+     },
+     {
+      "code": "10",
+      "description": "-100kPa~1000kPa"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "出線長度",
+    "options": [
+     {
+      "code": "020",
+      "description": "線長2m"
+     },
+     {
+      "code": "030",
+      "description": "線長3m"
+     },
+     {
+      "code": "050",
+      "description": "線長5m"
+     },
+     {
+      "code": "M08",
+      "description": "M8快速接頭+300mm"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "壓力氣孔型式",
+    "options": [
+     {
+      "code": "",
+      "description": "外牙PT1/8; 內牙M5"
+     },
+     {
+      "code": "T",
+      "description": "外牙NPT1/8; 內牙10-32UNF"
+     },
+     {
+      "code": "G",
+      "description": "外牙G1/8; 內牙M5"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.21"
+ },
+ {
+  "id": "AC-BC",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "三聯件(F+R+L)",
+  "code": "AC",
+  "name": "AC、BC系列三聯件",
+  "format": "AC{series}{port}{drain}{type}{gauge}{scale}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     },
+     {
+      "code": "4",
+      "description": "kgf/cm²"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.25"
+ },
+ {
+  "id": "AF-BF",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "過濾器",
+  "code": "AF",
+  "name": "AF、BF系列過濾器",
+  "format": "AF{series}{port}{drain}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.28"
+ },
+ {
+  "id": "AFC-BFC",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "二聯件(F.R+L)",
+  "code": "AFC",
+  "name": "AFC、BFC系列二聯件",
+  "format": "AFC{series}{port}{drain}{type}{gauge}{scale}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     },
+     {
+      "code": "4",
+      "description": "kgf/cm²"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.31"
+ },
+ {
+  "id": "AFR-BFR",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "調壓過濾器",
+  "code": "AFR",
+  "name": "AFR、BFR系列調壓過濾器",
+  "format": "AFR{series}{port}{mount}{drain}{type}{bracket}{gauge}{scale}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "mount",
+    "name": "壓力表安裝螺紋代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "單側"
+     },
+     {
+      "code": "D",
+      "description": "雙側"
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     },
+     {
+      "code": "4",
+      "description": "kgf/cm²"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.34"
+ },
+ {
+  "id": "AL-BL",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "給油器",
+  "code": "AL",
+  "name": "AL、BL系列給油器",
+  "format": "AL{series}{port}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.37"
+ },
+ {
+  "id": "AR-BR",
+  "category": "氣源處理元件",
+  "superGroup": "A、B系列",
+  "group": "調壓閥",
+  "code": "AR",
+  "name": "AR、BR系列調壓閥",
+  "format": "AR{series}{port}{mount}{type}{bracket}{gauge}{scale}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1500系列"
+     },
+     {
+      "code": "2000C",
+      "description": "2000系列"
+     },
+     {
+      "code": "3000C",
+      "description": "3000系列"
+     },
+     {
+      "code": "4000C10",
+      "description": "4000系列"
+     },
+     {
+      "code": "4000C",
+      "description": "4000系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "1500C",
+      "description": "1/8\""
+     },
+     {
+      "code": "2000C",
+      "description": "1/4\""
+     },
+     {
+      "code": "3000C",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C10",
+      "description": "3/8\""
+     },
+     {
+      "code": "4000C",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "mount",
+    "name": "壓力表安裝螺紋代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "單側"
+     },
+     {
+      "code": "D",
+      "description": "雙側"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     },
+     {
+      "code": "4",
+      "description": "kgf/cm²"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.39"
+ },
+ {
+  "id": "GC",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "三聯件(F+R+L)",
+  "code": "GC",
+  "name": "GC系列三聯件",
+  "format": "GC{series}{port}{drain}{type}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓排水"
+     },
+     {
+      "code": "M",
+      "description": "手動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "gauge_type",
+    "name": "壓力表型式",
+    "options": [
+     {
+      "code": "F",
+      "description": "方形表"
+     },
+     {
+      "code": "C",
+      "description": "圓形表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.41"
+ },
+ {
+  "id": "GF",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "過濾器",
+  "code": "GF",
+  "name": "GF系列過濾器",
+  "format": "GF{series}{port}{drain}{bracket}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓排水"
+     },
+     {
+      "code": "M",
+      "description": "手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.43"
+ },
+ {
+  "id": "GFC",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "二聯件(F.R+L)",
+  "code": "GFC",
+  "name": "GFC系列二聯件",
+  "format": "GFC{series}{port}{drain}{type}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓排水"
+     },
+     {
+      "code": "M",
+      "description": "手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "gauge_type",
+    "name": "壓力表型式",
+    "options": [
+     {
+      "code": "F",
+      "description": "方形表"
+     },
+     {
+      "code": "C",
+      "description": "圓形表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.45"
+ },
+ {
+  "id": "GFR",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "調壓過濾器",
+  "code": "GFR",
+  "name": "GFR系列調壓過濾器",
+  "format": "GFR{series}{port}{drain}{type}{bracket}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓排水"
+     },
+     {
+      "code": "M",
+      "description": "手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "gauge_type",
+    "name": "壓力表型式",
+    "options": [
+     {
+      "code": "F",
+      "description": "方形表"
+     },
+     {
+      "code": "C",
+      "description": "圓形表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.47"
+ },
+ {
+  "id": "GL",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "給油器",
+  "code": "GL",
+  "name": "GL系列給油器",
+  "format": "GL{series}{port}{bracket}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.49"
+ },
+ {
+  "id": "GR",
+  "category": "氣源處理元件",
+  "superGroup": "G系列",
+  "group": "調壓閥",
+  "code": "GR",
+  "name": "GR系列調壓閥",
+  "format": "GR{series}{port}{type}{bracket}{gauge}{gauge_type}{scale}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "gauge_type",
+    "name": "壓力表型式",
+    "options": [
+     {
+      "code": "F",
+      "description": "方形表"
+     },
+     {
+      "code": "C",
+      "description": "圓形表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.51"
+ },
+ {
+  "id": "GPF",
+  "category": "氣源處理元件",
+  "superGroup": "GP系列",
+  "group": "油霧分離器",
+  "code": "GPF",
+  "name": "GPF系列油霧分離器",
+  "format": "GPF{series}{cup}{port}{drain}{bracket}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "M",
+      "description": "0.3μm"
+     },
+     {
+      "code": "D",
+      "description": "0.01μm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.53"
+ },
+ {
+  "id": "GPFR",
+  "category": "氣源處理元件",
+  "superGroup": "GP系列",
+  "group": "調壓精密過濾器",
+  "code": "GPFR",
+  "name": "GPFR系列調壓精密過濾器",
+  "format": "GPFR{series}{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "M",
+      "description": "0.3μm"
+     },
+     {
+      "code": "D",
+      "description": "0.01μm"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.55"
+ },
+ {
+  "id": "GPR",
+  "category": "氣源處理元件",
+  "superGroup": "GP系列",
+  "group": "精密調壓閥",
+  "code": "GPR",
+  "name": "GPR系列精密調壓閥",
+  "format": "GPR{series}{port}{range}{bracket}{gauge}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "range",
+    "name": "設定壓力範圍",
+    "options": [
+     {
+      "code": "L",
+      "description": "0.005~0.2MPa"
+     },
+     {
+      "code": "M",
+      "description": "0.01~0.4MPa"
+     },
+     {
+      "code": "H",
+      "description": "0.01~0.8MPa"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附壓力表"
+     },
+     {
+      "code": "N",
+      "description": "不附壓力表"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.58"
+ },
+ {
+  "id": "GA200",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "分氣塊",
+  "code": "GA200",
+  "name": "GA系列分氣塊",
+  "format": "GA200{port}{thread}",
+  "categories": [
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "08",
+      "description": "1/4\""
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.63"
+ },
+ {
+  "id": "GAC100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "三聯件(100系列)",
+  "code": "GAC100",
+  "name": "GAC100系列三聯件",
+  "format": "GAC100{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "圓表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.65"
+ },
+ {
+  "id": "GAC",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "三聯件(F+R+L)",
+  "code": "GAC",
+  "name": "GAC系列三聯件",
+  "format": "GAC{series}{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.66"
+ },
+ {
+  "id": "GAF100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "過濾器(100系列)",
+  "code": "GAF100",
+  "name": "GAF100系列過濾器",
+  "format": "GAF100{cup}{port}{drain}{bracket}{precision}{thread}",
+  "categories": [
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.68"
+ },
+ {
+  "id": "GAF",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "過濾器",
+  "code": "GAF",
+  "name": "GAF系列過濾器",
+  "format": "GAF{series}{cup}{port}{drain}{bracket}{precision}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.69"
+ },
+ {
+  "id": "GAFC100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "二聯件(100系列)",
+  "code": "GAFC100",
+  "name": "GAFC100系列二聯件",
+  "format": "GAFC100{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "圓表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.71"
+ },
+ {
+  "id": "GAFC",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "二聯件(F.R+L)",
+  "code": "GAFC",
+  "name": "GAFC系列二聯件",
+  "format": "GAFC{series}{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.72"
+ },
+ {
+  "id": "GAFR100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "調壓過濾器(100系列)",
+  "code": "GAFR100",
+  "name": "GAFR100系列調壓過濾器",
+  "format": "GAFR100{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "圓表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.74"
+ },
+ {
+  "id": "GAFR",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "調壓過濾器",
+  "code": "GAFR",
+  "name": "GAFR系列調壓過濾器",
+  "format": "GAFR{series}{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "drain",
+    "name": "排水方式",
+    "options": [
+     {
+      "code": "",
+      "description": "差壓+手動排水"
+     },
+     {
+      "code": "A",
+      "description": "自動排水"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.75"
+ },
+ {
+  "id": "GAL100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "給油器(100系列)",
+  "code": "GAL100",
+  "name": "GAL100系列給油器",
+  "format": "GAL100{cup}{port}{bracket}{thread}",
+  "categories": [
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.77"
+ },
+ {
+  "id": "GAL",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "給油器",
+  "code": "GAL",
+  "name": "GAL系列給油器",
+  "format": "GAL{series}{cup}{port}{bracket}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "cup",
+    "name": "杯體材質",
+    "options": [
+     {
+      "code": "",
+      "description": "PC杯"
+     },
+     {
+      "code": "C",
+      "description": "金屬杯"
+     },
+     {
+      "code": "N",
+      "description": "尼龍杯"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.78"
+ },
+ {
+  "id": "GTC-GTFC-GTFR",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "GT組合(GTC/GTFC/GTFR)",
+  "code": "GTC200",
+  "name": "GTC、GTFC、GTFR系列(短款PC杯)",
+  "format": "GTC200{port}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "precision",
+    "name": "過濾精度",
+    "options": [
+     {
+      "code": "",
+      "description": "40μm級"
+     },
+     {
+      "code": "W",
+      "description": "5μm級"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.81"
+ },
+ {
+  "id": "GAR100",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "調壓閥(100系列)",
+  "code": "GAR100",
+  "name": "GAR100系列調壓閥",
+  "format": "GAR100{port}{type}{bracket}{gauge}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "M5",
+      "description": "M5"
+     },
+     {
+      "code": "06",
+      "description": "1/8\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "圓表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.83"
+ },
+ {
+  "id": "GAR",
+  "category": "氣源處理元件",
+  "superGroup": "GA系列",
+  "group": "調壓閥",
+  "code": "GAR",
+  "name": "GAR系列調壓閥",
+  "format": "GAR{series}{port}{type}{bracket}{gauge}{thread}{check_valve}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     },
+     {
+      "code": "500",
+      "description": "500系列"
+     },
+     {
+      "code": "600",
+      "description": "600系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     },
+     {
+      "code": "20",
+      "description": "3/4\""
+     },
+     {
+      "code": "25",
+      "description": "1\""
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "型式代碼",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準型"
+     },
+     {
+      "code": "L",
+      "description": "低壓型"
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "表卡扣"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   },
+   {
+    "id": "check_valve",
+    "name": "逆流閥代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附逆流閥"
+     },
+     {
+      "code": "K",
+      "description": "附逆流閥"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.84"
+ },
+ {
+  "id": "GV-Slow",
+  "category": "氣源處理元件",
+  "superGroup": "其它系列",
+  "group": "GV緩啟動閥",
+  "code": "GV",
+  "name": "GV系列慢啟閥",
+  "format": "GV{series}{port}{bracket}{gauge}{gauge_type}{scale}{voltage}{connection}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "gauge",
+    "name": "壓力表代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附表"
+     },
+     {
+      "code": "N",
+      "description": "不附表"
+     }
+    ]
+   },
+   {
+    "id": "gauge_type",
+    "name": "壓力表型式",
+    "options": [
+     {
+      "code": "F",
+      "description": "方形表"
+     },
+     {
+      "code": "C",
+      "description": "圓形表"
+     }
+    ]
+   },
+   {
+    "id": "scale",
+    "name": "刻度單位",
+    "options": [
+     {
+      "code": "1",
+      "description": "MPa"
+     },
+     {
+      "code": "2",
+      "description": "psi"
+     },
+     {
+      "code": "3",
+      "description": "bar"
+     }
+    ]
+   },
+   {
+    "id": "voltage",
+    "name": "線圈電壓",
+    "options": [
+     {
+      "code": "A",
+      "description": "AC220V"
+     },
+     {
+      "code": "B",
+      "description": "DC24V"
+     },
+     {
+      "code": "C",
+      "description": "AC110V"
+     },
+     {
+      "code": "E",
+      "description": "AC24V"
+     },
+     {
+      "code": "F",
+      "description": "DC12V"
+     }
+    ]
+   },
+   {
+    "id": "connection",
+    "name": "接電方式",
+    "options": [
+     {
+      "code": "",
+      "description": "DIN插座式"
+     },
+     {
+      "code": "I",
+      "description": "出線式"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.86"
+ },
+ {
+  "id": "GZ",
+  "category": "氣源處理元件",
+  "superGroup": "其它系列",
+  "group": "GZ系列",
+  "code": "GZ",
+  "name": "GZ系列截止閥",
+  "format": "GZ{series}{port}{bracket}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "200",
+      "description": "200系列"
+     },
+     {
+      "code": "300",
+      "description": "300系列"
+     },
+     {
+      "code": "400",
+      "description": "400系列"
+     }
+    ]
+   },
+   {
+    "id": "port",
+    "name": "接管口徑",
+    "options": [
+     {
+      "code": "06",
+      "description": "1/8\""
+     },
+     {
+      "code": "08",
+      "description": "1/4\""
+     },
+     {
+      "code": "10",
+      "description": "3/8\""
+     },
+     {
+      "code": "15",
+      "description": "1/2\""
+     }
+    ]
+   },
+   {
+    "id": "bracket",
+    "name": "支架代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "附支架"
+     },
+     {
+      "code": "J",
+      "description": "不附支架"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     },
+     {
+      "code": "T",
+      "description": "NPT牙"
+     }
+    ]
+   }
+  ],
+  "sourceFile": "氣源處理元件型錄 P.88"
+ },
+ {
+  "id": "F-G-Gauge",
+  "category": "氣源處理元件",
+  "superGroup": "壓力表",
+  "group": "GS/GF/GU系列 壓力表",
+  "code": "",
+  "name": "GS、GF、GU系列 壓力表",
+  "format": "F-G{installation}{dial}{display}{unit}",
+  "categories": [
+   {
+    "id": "installation",
+    "name": "安裝型式",
+    "options": [
+     {
+      "code": "S",
+      "description": "標準安裝"
+     },
+     {
+      "code": "F",
+      "description": "面板安裝"
+     },
+     {
+      "code": "U",
+      "description": "嵌入式安裝"
+     }
+    ]
+   },
+   {
+    "id": "dial",
+    "name": "表盤規格",
+    "options": [
+     {
+      "code": "30",
+      "description": "外徑30"
+     },
+     {
+      "code": "40",
+      "description": "外徑40"
+     },
+     {
+      "code": "50",
+      "description": "外徑50"
+     },
+     {
+      "code": "60",
+      "description": "外徑60"
+     }
+    ]
+   },
+   {
+    "id": "display",
+    "name": "最大顯示壓力值",
+    "options": [
+     {
+      "code": "04",
+      "description": "0.4MPa (低壓型)"
+     },
+     {
+      "code": "10",
+      "description": "1.0MPa (標準型)"
+     }
+    ]
+   },
+   {
+    "id": "unit",
+    "name": "壓力刻度單位與牙型",
+    "options": [
+     {
+      "code": "M",
+      "description": "MPa (PT牙)"
+     },
+     {
+      "code": "B",
+      "description": "bar (G牙)"
+     },
+     {
+      "code": "P",
+      "description": "psi (NPT牙)"
+     },
+     {
+      "code": "Z",
+      "description": "kgf/cm² & psi (PT牙)"
+     }
+    ]
+   }
+  ],
+  "note": "訂購碼範例 F-GS4010M。表盤/口徑對應：GS-30/40/50、GF-40/50/60、GU-40/50/60。",
+  "sourceFile": "氣源處理元件型錄 P.287"
+ },
+ {
+  "id": "F-GP-Gauge",
+  "category": "氣源處理元件",
+  "superGroup": "壓力表",
+  "group": "GP系列 壓力表",
+  "code": "",
+  "name": "GP系列 壓力表",
+  "format": "F-GP{dial}{display}{unit}",
+  "categories": [
+   {
+    "id": "dial",
+    "name": "表盤規格",
+    "options": [
+     {
+      "code": "30",
+      "description": "外徑30"
+     },
+     {
+      "code": "40",
+      "description": "外徑40"
+     }
+    ]
+   },
+   {
+    "id": "display",
+    "name": "最大顯示壓力值",
+    "options": [
+     {
+      "code": "02",
+      "description": "0.2MPa (低壓型)"
+     },
+     {
+      "code": "04",
+      "description": "0.4MPa (低壓型)"
+     },
+     {
+      "code": "10",
+      "description": "1.0MPa (標準型)"
+     }
+    ]
+   },
+   {
+    "id": "unit",
+    "name": "壓力刻度單位與牙型",
+    "options": [
+     {
+      "code": "G",
+      "description": "MPa & bar (G牙)"
+     },
+     {
+      "code": "P",
+      "description": "MPa & psi (PT牙)"
+     },
+     {
+      "code": "T",
+      "description": "bar & psi (NPT牙)"
+     }
+    ]
+   }
+  ],
+  "note": "訂購碼範例 F-GP4010P。",
+  "sourceFile": "氣源處理元件型錄 P.287"
+ },
+ {
+  "id": "F-GV-Gauge",
+  "category": "氣源處理元件",
+  "superGroup": "真空系列",
+  "group": "GV系列 真空壓力表",
+  "code": "",
+  "name": "F-GV系列 真空壓力表",
+  "format": "F-GV{dial}{display}{unit}",
+  "categories": [
+   {
+    "id": "dial",
+    "name": "表盤規格",
+    "options": [
+     {
+      "code": "40",
+      "description": "外徑40"
+     }
+    ]
+   },
+   {
+    "id": "display",
+    "name": "最大顯示壓力值",
+    "options": [
+     {
+      "code": "10",
+      "description": "-100kPa"
+     }
+    ]
+   },
+   {
+    "id": "unit",
+    "name": "壓力刻度單位與牙型",
+    "options": [
+     {
+      "code": "G",
+      "description": "kPa & psi (G牙)"
+     },
+     {
+      "code": "P",
+      "description": "kPa & psi (PT牙)"
+     },
+     {
+      "code": "T",
+      "description": "kPa & psi (NPT牙)"
+     }
+    ]
+   }
+  ],
+  "note": "訂購碼範例 F-GV4010P。",
+  "sourceFile": "氣源處理元件型錄 P.273"
+ }
+]

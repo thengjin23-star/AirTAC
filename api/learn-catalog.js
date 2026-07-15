@@ -36529,4022 +36529,5131 @@ var catalog_actuators_default = [
 ];
 
 // src/data/catalog-air-prep.json
-var catalog_air_prep_default = {
-  series: [
-    {
-      id: "GA-Splitter",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u5206\u6C23\u584A",
-      name: "GA\u7CFB\u5217 \u5206\u6C23\u584A",
-      format: "GA{series} {port} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "GA200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "GA300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "GA400/500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "GA600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAL",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u7D66\u6CB9\u5668",
-      name: "GAL\u7CFB\u5217 \u7D66\u6CB9\u5668",
-      format: "GAL{series} {cup} {port} {bracket} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u95A5",
-      name: "GAR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
-      format: "GAR{series} {port} {type} {bracket} {gauge} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAF",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u904E\u6FFE\u5668",
-      name: "GAF\u7CFB\u5217 \u904E\u6FFE\u5668",
-      format: "GAF{series} {cup} {port} {drain} {bracket} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAFR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
-      name: "GAFR\u7CFB\u5217 \u8ABF\u58D3\u904E\u6FFE\u5668",
-      format: "GAFR{series} {cup} {port} {drain} {type} {bracket} {gauge} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAFC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u4E8C\u806F\u4EF6(F.R+L)",
-      name: "GAFC\u7CFB\u5217 \u4E8C\u806F\u4EF6 (\u8ABF\u58D3\u904E\u6FFE\u5668+\u7D66\u6CB9\u5668)",
-      format: "GAFC{series} {cup} {port} {drain} {type} {gauge} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GAC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GA\u7CFB\u5217",
-      group: "\u4E09\u806F\u4EF6(F+R+L)",
-      name: "GAC\u7CFB\u5217 \u4E09\u806F\u4EF6 (\u904E\u6FFE\u5668+\u8ABF\u58D3\u95A5+\u7D66\u6CB9\u5668)",
-      format: "GAC{series} {cup} {port} {drain} {type} {gauge} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "500",
-              description: "500\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5x0.8"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            },
-            {
-              code: "20",
-              description: '3/4"'
-            },
-            {
-              code: "25",
-              description: '1"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.15~0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "G",
-              description: "G\u7259 (M5\u4E0D\u9069\u7528)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259 (M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GPFR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GP\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u7CBE\u5BC6\u904E\u6FFE\u5668",
-      name: "GPFR\u7CFB\u5217 \u8ABF\u58D3\u7CBE\u5BC6\u904E\u6FFE\u5668",
-      format: "GPFR{series} {cup} {port} {drain} {type} {bracket} {gauge} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (400\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "M",
-              description: "0.3\u03BCm\u7D1A"
-            },
-            {
-              code: "D",
-              description: "0.01\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GPR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GP\u7CFB\u5217",
-      group: "\u7CBE\u5BC6\u8ABF\u58D3\u95A5",
-      name: "GPR\u7CFB\u5217 \u7CBE\u5BC6\u8ABF\u58D3\u95A5",
-      format: "GPR{series} {port} {type} {bracket} {gauge} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (400\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u8A2D\u5B9A\u58D3\u529B\u7BC4\u570D",
-          options: [
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B 0.005~0.2MPa"
-            },
-            {
-              code: "M",
-              description: "\u4E2D\u58D3\u578B 0.01~0.4MPa"
-            },
-            {
-              code: "H",
-              description: "\u9AD8\u58D3\u578B 0.01~0.8MPa"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u5713\u8868\u5361\u6263\u5F0F"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GPF",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "GP\u7CFB\u5217",
-      group: "\u6CB9\u9727\u5206\u96E2\u5668",
-      name: "GPF\u7CFB\u5217 \u6CB9\u9727\u5206\u96E2\u5668",
-      format: "GPF{series} {cup} {port} {drain} {bracket} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (400\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "M",
-              description: "0.3\u03BCm"
-            },
-            {
-              code: "D",
-              description: "0.01\u03BCm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AR-BR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u95A5",
-      name: "AR\u3001BR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
-      format: "{series}{model} {gaugeMount} {type} {bracket} {gauge} {scale} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AR",
-              description: "A\u7CFB\u5217\u8ABF\u58D3\u95A5"
-            },
-            {
-              code: "BR",
-              description: "B\u7CFB\u5217\u8ABF\u58D3\u95A5"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "gaugeMount",
-          name: "\u58D3\u529B\u8868\u5B89\u88DD\u87BA\u7D0B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u55AE\u5074 (1500C/2000C/3000C) / \u96D9\u5074 (4000C10/4000C)"
-            },
-            {
-              code: "D",
-              description: "\u96D9\u5074 (\u50C5\u9069\u75281500C/2000C/3000C)"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868 (\u542B\u58D3\u529B\u8868\u53CA\u5C0D\u61C9\u898F\u683C\u5B89\u88DD\u67B6)"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            },
-            {
-              code: "4",
-              description: "kgf/cm\xB2 & psi"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AL-BL",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u7D66\u6CB9\u5668",
-      name: "AL\u3001BL\u7CFB\u5217 \u7D66\u6CB9\u5668",
-      format: "{series}{model} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AL",
-              description: "A\u7CFB\u5217\u7D66\u6CB9\u5668"
-            },
-            {
-              code: "BL",
-              description: "B\u7CFB\u5217\u7D66\u6CB9\u5668"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AF-BF",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u904E\u6FFE\u5668",
-      name: "AF\u3001BF\u7CFB\u5217 \u904E\u6FFE\u5668",
-      format: "{series}{model} {drain} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AF",
-              description: "A\u7CFB\u5217\u904E\u6FFE\u5668"
-            },
-            {
-              code: "BF",
-              description: "B\u7CFB\u5217\u904E\u6FFE\u5668"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AFR-BFR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
-      name: "AFR\u3001BFR\u7CFB\u5217 \u8ABF\u58D3\u904E\u6FFE\u5668",
-      format: "{series}{model} {gaugeMount} {drain} {type} {bracket} {gauge} {scale} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AFR",
-              description: "A\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668"
-            },
-            {
-              code: "BFR",
-              description: "B\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "gaugeMount",
-          name: "\u58D3\u529B\u8868\u5B89\u88DD\u87BA\u7D0B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u55AE\u5074 (1500C/2000C/3000C) / \u96D9\u5074 (4000C10/4000C)"
-            },
-            {
-              code: "D",
-              description: "\u96D9\u5074 (\u50C5\u9069\u75281500C/2000C/3000C)"
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868 (\u542B\u58D3\u529B\u8868\u53CA\u5C0D\u61C9\u898F\u683C\u5B89\u88DD\u67B6)"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            },
-            {
-              code: "4",
-              description: "kgf/cm\xB2 & psi"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AC-BC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u4E09\u806F\u4EF6(F+R+L)",
-      name: "AC\u3001BC\u7CFB\u5217 \u4E09\u806F\u4EF6",
-      format: "{series}{model} {drain} {type} {gauge} {scale} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AC",
-              description: "A\u7CFB\u5217\u4E09\u806F\u4EF6"
-            },
-            {
-              code: "BC",
-              description: "B\u7CFB\u5217\u4E09\u806F\u4EF6"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868 (\u542B\u58D3\u529B\u8868\u53CA\u5C0D\u61C9\u898F\u683C\u5B89\u88DD\u67B6)"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            },
-            {
-              code: "4",
-              description: "kgf/cm\xB2 & psi"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "AFC-BFC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "A\u3001B\u7CFB\u5217",
-      group: "\u4E8C\u806F\u4EF6(F.R+L)",
-      name: "AFC\u3001BFC\u7CFB\u5217 \u4E8C\u806F\u4EF6",
-      format: "{series}{model} {drain} {type} {gauge} {scale} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "AFC",
-              description: "A\u7CFB\u5217\u4E8C\u806F\u4EF6"
-            },
-            {
-              code: "BFC",
-              description: "B\u7CFB\u5217\u4E8C\u806F\u4EF6"
-            }
-          ]
-        },
-        {
-          id: "model",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "1500C",
-              description: '1500C: 1/8"'
-            },
-            {
-              code: "2000C",
-              description: '2000C: 1/4"'
-            },
-            {
-              code: "3000C",
-              description: '3000C: 3/8"'
-            },
-            {
-              code: "4000C10",
-              description: '4000C10: 3/8"'
-            },
-            {
-              code: "4000C",
-              description: '4000C: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B (0.4MPa)"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868 (\u542B\u58D3\u529B\u8868\u53CA\u5C0D\u61C9\u898F\u683C\u5B89\u88DD\u67B6)"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            },
-            {
-              code: "4",
-              description: "kgf/cm\xB2 & psi"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u95A5",
-      name: "GR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
-      format: "GR{series} {port} {type} {bracket} {gauge} {gaugeType} {scale} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "gaugeType",
-          name: "\u58D3\u529B\u8868\u578B\u5F0F",
-          options: [
-            {
-              code: "F",
-              description: "\u65B9\u5F62\u8868"
-            },
-            {
-              code: "C",
-              description: "\u5713\u5F62\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GL",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u7D66\u6CB9\u5668",
-      name: "GL\u7CFB\u5217 \u7D66\u6CB9\u5668",
-      format: "GL{series} {port} {bracket} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GF",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u904E\u6FFE\u5668",
-      name: "GF\u7CFB\u5217 \u904E\u6FFE\u5668",
-      format: "GF{series} {port} {drain} {bracket} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "M",
-              description: "\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GFR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
-      name: "GFR\u7CFB\u5217 \u8ABF\u58D3\u904E\u6FFE\u5668",
-      format: "GFR{series} {port} {drain} {type} {bracket} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "M",
-              description: "\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "gaugeType",
-          name: "\u58D3\u529B\u8868\u578B\u5F0F",
-          options: [
-            {
-              code: "F",
-              description: "\u65B9\u5F62\u8868"
-            },
-            {
-              code: "C",
-              description: "\u5713\u5F62\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u4E09\u806F\u4EF6(F+R+L)",
-      name: "GC\u7CFB\u5217 \u4E09\u806F\u4EF6",
-      format: "GC{series} {port} {drain} {type} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "M",
-              description: "\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "gaugeType",
-          name: "\u58D3\u529B\u8868\u578B\u5F0F",
-          options: [
-            {
-              code: "F",
-              description: "\u65B9\u5F62\u8868"
-            },
-            {
-              code: "C",
-              description: "\u5713\u5F62\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GFC",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "G\u7CFB\u5217",
-      group: "\u4E8C\u806F\u4EF6(F.R+L)",
-      name: "GFC\u7CFB\u5217 \u4E8C\u806F\u4EF6",
-      format: "GFC{series} {port} {drain} {type} {gauge} {gaugeType} {scale} {filter} {thread} {checkValve}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "400",
-              description: "400\u7CFB\u5217"
-            },
-            {
-              code: "600",
-              description: "600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8" (200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4" (200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2" (300/400\u7CFB\u5217)'
-            },
-            {
-              code: "20",
-              description: '3/4" (600\u7CFB\u5217)'
-            },
-            {
-              code: "25",
-              description: '1" (600\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "drain",
-          name: "\u6392\u6C34\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5DEE\u58D3\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "M",
-              description: "\u624B\u52D5\u6392\u6C34\u5F0F"
-            },
-            {
-              code: "A",
-              description: "\u81EA\u52D5\u6392\u6C34\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "gaugeType",
-          name: "\u58D3\u529B\u8868\u578B\u5F0F",
-          options: [
-            {
-              code: "F",
-              description: "\u65B9\u5F62\u8868"
-            },
-            {
-              code: "C",
-              description: "\u5713\u5F62\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        },
-        {
-          id: "checkValve",
-          name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u4E0D\u9644\u9006\u6D41\u95A5"
-            },
-            {
-              code: "K",
-              description: "\u9644\u9006\u6D41\u95A5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GVF",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u771F\u7A7A\u7CFB\u5217",
-      group: "\u771F\u7A7A\u904E\u6FFE\u5668",
-      name: "GVF\u7CFB\u5217 \u771F\u7A7A\u904E\u6FFE\u5668",
-      format: "GVF{series} {cup} {port} {bracket} {filter} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "cup",
-          name: "\u676F\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "",
-              description: "PC\u676F"
-            },
-            {
-              code: "C",
-              description: "\u91D1\u5C6C\u676F"
-            },
-            {
-              code: "N",
-              description: "\u5C3C\u9F8D\u676F"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "filter",
-          name: "\u904E\u6FFE\u7CBE\u5EA6",
-          options: [
-            {
-              code: "",
-              description: "40\u03BCm\u7D1A"
-            },
-            {
-              code: "W",
-              description: "5\u03BCm\u7D1A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "GVR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u771F\u7A7A\u7CFB\u5217",
-      group: "\u771F\u7A7A\u8ABF\u58D3\u95A5",
-      name: "GVR\u7CFB\u5217 \u771F\u7A7A\u8ABF\u58D3\u95A5",
-      format: "GVR{series} {port} {bracket} {gauge} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u9644\u4EF6",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6(\u6A19\u6E96\u914D\u7F6E)"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u58D3\u529B\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u58D3\u529B\u8868"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259(kPa & psi)"
-            },
-            {
-              code: "G",
-              description: "G\u7259(kPa & psi)"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259(kPa & psi)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "SDR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u5176\u5B83\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u95A5",
-      name: "SDR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
-      format: "SDR{series} {port} {type} {bracket} {gauge} {scale} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "100",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259(M5\u4E0D\u9069\u7528)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "SR",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u5176\u5B83\u7CFB\u5217",
-      group: "\u8ABF\u58D3\u95A5",
-      name: "SR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
-      format: "SR{series} {port} {type} {bracket} {gauge} {scale} {thread}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "\u4F4E\u58D3\u578B"
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "scale",
-          name: "\u523B\u5EA6\u55AE\u4F4D",
-          options: [
-            {
-              code: "1",
-              description: "MPa"
-            },
-            {
-              code: "2",
-              description: "psi"
-            },
-            {
-              code: "3",
-              description: "bar"
-            },
-            {
-              code: "4",
-              description: "kgf/cm\xB2 & psi"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G\u7259"
-            },
-            {
-              code: "T",
-              description: "NPT\u7259"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "SM-ARH",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u5176\u5B83\u7CFB\u5217",
-      group: "\u6F54\u6DE8\u6E1B\u58D3\u95A5",
-      name: "SM-ARH\u7CFB\u5217 \u6F54\u6DE8\u6E1B\u58D3\u95A5",
-      format: "SM-ARH{series}-{port} {bracket} {gauge} {direction}",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "200",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "300",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            }
-          ]
-        },
-        {
-          id: "bracket",
-          name: "\u652F\u67B6\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u652F\u67B6"
-            },
-            {
-              code: "J",
-              description: "\u4E0D\u9644\u652F\u67B6"
-            }
-          ]
-        },
-        {
-          id: "gauge",
-          name: "\u58D3\u529B\u8868\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u9644\u8868(SM-ARH4007M)"
-            },
-            {
-              code: "N",
-              description: "\u4E0D\u9644\u8868"
-            }
-          ]
-        },
-        {
-          id: "direction",
-          name: "\u58D3\u529B\u8868\u65B9\u5411\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96\u65B9\u5411"
-            },
-            {
-              code: "R",
-              description: "\u80CC\u5074\u65B9\u5411"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "F-G",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u8F14\u52A9\u5143\u4EF6",
-      group: "\u58D3\u529B\u8868",
-      name: "F-G\u7CFB\u5217 \u58D3\u529B\u8868",
-      format: "F-G {type} {size} {max_pressure} {unit_thread}",
-      categories: [
-        {
-          id: "type",
-          name: "\u5B89\u88DD\u578B\u5F0F",
-          options: [
-            {
-              code: "S",
-              description: "\u6A19\u6E96\u5B89\u88DD (GS)"
-            },
-            {
-              code: "F",
-              description: "\u9762\u677F\u5B89\u88DD (GF)"
-            },
-            {
-              code: "U",
-              description: "\u5D4C\u5165\u5F0F\u5B89\u88DD (GU)"
-            },
-            {
-              code: "P",
-              description: "\u4E0D\u92B9\u92FC\u5916\u6BBC (GP)"
-            },
-            {
-              code: "V",
-              description: "\u771E\u7A7A\u578B (GV)"
-            }
-          ]
-        },
-        {
-          id: "size",
-          name: "\u8868\u76E4\u5916\u5F91",
-          options: [
-            {
-              code: "30",
-              description: "\u5916\u5F9130"
-            },
-            {
-              code: "40",
-              description: "\u5916\u5F9140"
-            },
-            {
-              code: "50",
-              description: "\u5916\u5F9150"
-            },
-            {
-              code: "60",
-              description: "\u5916\u5F9160"
-            }
-          ]
-        },
-        {
-          id: "max_pressure",
-          name: "\u6700\u5927\u986F\u793A\u58D3\u529B\u503C",
-          options: [
-            {
-              code: "02",
-              description: "0.2MPa (\u50C5\u9650P\u578B)"
-            },
-            {
-              code: "04",
-              description: "0.4MPa"
-            },
-            {
-              code: "10",
-              description: "1.0MPa / -100kPa(V\u578B)"
-            }
-          ]
-        },
-        {
-          id: "unit_thread",
-          name: "\u58D3\u529B\u523B\u5EA6\u55AE\u4F4D\u8207\u7259\u578B",
-          options: [
-            {
-              code: "M",
-              description: "MPa (PT\u7259) - \u9069\u7528S/F/U"
-            },
-            {
-              code: "P",
-              description: "psi (NPT\u7259) / MPa&psi (PT\u7259, P\u578B) / kPa&psi (PT\u7259, V\u578B)"
-            },
-            {
-              code: "B",
-              description: "bar (G\u7259) - \u9069\u7528S/F/U"
-            },
-            {
-              code: "Z",
-              description: "kgf/cm\xB2 & psi (PT\u7259) - \u9069\u7528S/F/U"
-            },
-            {
-              code: "G",
-              description: "MPa&bar(G\u7259, P\u578B) / kPa&psi(G\u7259, V\u578B)"
-            },
-            {
-              code: "T",
-              description: "bar&psi(NPT\u7259, P\u578B) / kPa&psi(NPT\u7259, V\u578B)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "DPH",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u8F14\u52A9\u5143\u4EF6",
-      group: "\u58D3\u529B\u50B3\u611F\u5668",
-      name: "DPH\u7CFB\u5217 \u58D3\u529B\u50B3\u611F\u5668",
-      format: "DPH {output}{connection} - {range} {length} {thread}",
-      categories: [
-        {
-          id: "output",
-          name: "\u8F38\u51FA\u578B\u5F0F",
-          options: [
-            {
-              code: "N2",
-              description: "NPN+\u985E\u6BD4\u96FB\u58D3\u8F38\u51FA(1~5V)"
-            },
-            {
-              code: "P2",
-              description: "PNP+\u985E\u6BD4\u96FB\u58D3\u8F38\u51FA(1~5V)"
-            },
-            {
-              code: "N3",
-              description: "NPN+\u985E\u6BD4\u96FB\u6D41\u8F38\u51FA(4~20mA)"
-            },
-            {
-              code: "P3",
-              description: "PNP+\u985E\u6BD4\u96FB\u6D41\u8F38\u51FA(4~20mA)"
-            }
-          ]
-        },
-        {
-          id: "connection",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7AEF\u5B50\u5F0F\u63A5\u96FB"
-            },
-            {
-              code: "B",
-              description: "\u5F8C\u51FA\u7DDA\u5F0F\u63A5\u96FB"
-            }
-          ]
-        },
-        {
-          id: "range",
-          name: "\u91CF\u6E2C\u58D3\u529B\u7BC4\u570D",
-          options: [
-            {
-              code: "01",
-              description: "-100kPa~100kPa"
-            },
-            {
-              code: "10",
-              description: "-100kPa~1,000kPa"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u51FA\u7DDA\u9577\u5EA6",
-          options: [
-            {
-              code: "020",
-              description: "\u7DDA\u95772m"
-            },
-            {
-              code: "030",
-              description: "\u7DDA\u95773m"
-            },
-            {
-              code: "050",
-              description: "\u7DDA\u95775m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u58D3\u529B\u6C23\u5B54\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5916\u7259PT1/8; \u5167\u7259: M5"
-            },
-            {
-              code: "T",
-              description: "\u5916\u7259NPT1/8; \u5167\u7259: 10-32UNF"
-            },
-            {
-              code: "G",
-              description: "\u5916\u7259G1/8; \u5167\u7259: M5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "DPS",
-      category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
-      superGroup: "\u8F14\u52A9\u5143\u4EF6",
-      group: "\u58D3\u529B\u50B3\u611F\u5668",
-      name: "DPS\u7CFB\u5217 \u58D3\u529B\u50B3\u611F\u5668",
-      format: "DPS {output}{connection} - {range} {length} {thread}",
-      categories: [
-        {
-          id: "output",
-          name: "\u8F38\u51FA\u578B\u5F0F",
-          options: [
-            {
-              code: "N1",
-              description: "NPN"
-            },
-            {
-              code: "P1",
-              description: "PNP"
-            }
-          ]
-        },
-        {
-          id: "connection",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7AEF\u5B50\u5F0F\u63A5\u96FB"
-            },
-            {
-              code: "B",
-              description: "\u5F8C\u51FA\u7DDA\u5F0F\u63A5\u96FB"
-            },
-            {
-              code: "D",
-              description: "\u4E0B\u51FA\u5F0F\u63A5\u96FB"
-            }
-          ]
-        },
-        {
-          id: "range",
-          name: "\u91CF\u6E2C\u58D3\u529B\u7BC4\u570D",
-          options: [
-            {
-              code: "01",
-              description: "-100kPa~100kPa"
-            },
-            {
-              code: "10",
-              description: "-100kPa~1,000kPa"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u51FA\u7DDA\u9577\u5EA6",
-          options: [
-            {
-              code: "020",
-              description: "\u7DDA\u95772m"
-            },
-            {
-              code: "030",
-              description: "\u7DDA\u95773m"
-            },
-            {
-              code: "050",
-              description: "\u7DDA\u95775m"
-            },
-            {
-              code: "M08",
-              description: "M8\u5FEB\u905E\u516C\u63A5\u982D+300mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u58D3\u529B\u6C23\u5B54\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u5916\u7259PT1/8; \u5167\u7259: M5"
-            },
-            {
-              code: "T",
-              description: "\u5916\u7259NPT1/8; \u5167\u7259: 10-32UNF"
-            },
-            {
-              code: "G",
-              description: "\u5916\u7259G1/8; \u5167\u7259: M5"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+var catalog_air_prep_default = [
+  {
+    id: "SDR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u5176\u5B83\u7CFB\u5217",
+    group: "SDR\u8ABF\u58D3\u95A5",
+    code: "SDR",
+    name: "SDR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
+    format: "SDR{series}{port}{type}{bracket}{gauge}{scale}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "100",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.3"
+  },
+  {
+    id: "SM-ARH",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u5176\u5B83\u7CFB\u5217",
+    group: "SM-ARH\u6F54\u6DE8\u6E1B\u58D3\u95A5",
+    code: "SM-ARH",
+    name: "SM-ARH\u7CFB\u5217 \u6F54\u6DE8\u6E1B\u58D3\u95A5",
+    format: "SM-ARH{series}{port}{bracket}{gauge}{direction}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "direction",
+        name: "\u58D3\u529B\u8868\u65B9\u5411",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u65B9\u5411"
+          },
+          {
+            code: "R",
+            description: "\u80CC\u5074\u65B9\u5411"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.5"
+  },
+  {
+    id: "SR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u5176\u5B83\u7CFB\u5217",
+    group: "SR\u8ABF\u58D3\u95A5",
+    code: "SR",
+    name: "SR\u7CFB\u5217 \u8ABF\u58D3\u95A5",
+    format: "SR{series}{port}{type}{bracket}{gauge}{scale}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          },
+          {
+            code: "4",
+            description: "kgf/cm\xB2"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.8"
+  },
+  {
+    id: "GVF",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u771F\u7A7A\u7CFB\u5217",
+    group: "\u771F\u7A7A\u904E\u6FFE\u5668",
+    code: "GVF",
+    name: "GVF\u7CFB\u5217 \u771F\u7A7A\u904E\u6FFE\u5668",
+    format: "GVF{series}{cup}{port}{bracket}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.11"
+  },
+  {
+    id: "GVR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u771F\u7A7A\u7CFB\u5217",
+    group: "\u771F\u7A7A\u8ABF\u58D3\u95A5",
+    code: "GVR",
+    name: "GVR\u7CFB\u5217 \u771F\u7A7A\u8ABF\u58D3\u95A5",
+    format: "GVR{series}{port}{bracket}{gauge}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u5B89\u88DD\u9644\u4EF6",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u58D3\u529B\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u58D3\u529B\u8868"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.14"
+  },
+  {
+    id: "DPH",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u58D3\u529B\u50B3\u611F\u5668",
+    group: "DPH\u96FB\u5B50\u5F0F\u6578\u986F",
+    code: "DPH",
+    name: "DPH\u7CFB\u5217 \u96FB\u5B50\u5F0F\u6578\u986F\u58D3\u529B\u50B3\u611F\u5668",
+    format: "DPH{output}{connection}{range}{length}{port}",
+    categories: [
+      {
+        id: "output",
+        name: "\u8F38\u51FA\u578B\u5F0F",
+        options: [
+          {
+            code: "N2",
+            description: "NPN+\u985E\u6BD4\u96FB\u58D3\u8F38\u51FA(1-5V)"
+          },
+          {
+            code: "P2",
+            description: "PNP+\u985E\u6BD4\u96FB\u58D3\u8F38\u51FA(1-5V)"
+          },
+          {
+            code: "N3",
+            description: "NPN+\u985E\u6BD4\u96FB\u6D41\u8F38\u51FA(4-20mA)"
+          },
+          {
+            code: "P3",
+            description: "PNP+\u985E\u6BD4\u96FB\u6D41\u8F38\u51FA(4-20mA)"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7AEF\u5B50\u5F0F\u63A5\u96FB"
+          },
+          {
+            code: "B",
+            description: "\u5F8C\u51FA\u7DDA\u5F0F\u63A5\u96FB"
+          }
+        ]
+      },
+      {
+        id: "range",
+        name: "\u91CF\u6E2C\u58D3\u529B\u7BC4\u570D",
+        options: [
+          {
+            code: "01",
+            description: "-100kPa~100kPa"
+          },
+          {
+            code: "10",
+            description: "-100kPa~1000kPa"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u51FA\u7DDA\u9577\u5EA6",
+        options: [
+          {
+            code: "020",
+            description: "\u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u7DDA\u95775m"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u58D3\u529B\u6C23\u5B54\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5916\u7259PT1/8; \u5167\u7259M5"
+          },
+          {
+            code: "T",
+            description: "\u5916\u7259NPT1/8; \u5167\u725910-32UNF"
+          },
+          {
+            code: "G",
+            description: "\u5916\u7259G1/8; \u5167\u7259M5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.15"
+  },
+  {
+    id: "DPS",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u58D3\u529B\u50B3\u611F\u5668",
+    group: "DPS\u7CFB\u5217",
+    code: "DPS",
+    name: "DPS\u7CFB\u5217 \u96FB\u5B50\u5F0F\u6578\u986F\u58D3\u529B\u50B3\u611F\u5668",
+    format: "DPS{output}{connection}{range}{length}{port}",
+    categories: [
+      {
+        id: "output",
+        name: "\u8F38\u51FA\u578B\u5F0F",
+        options: [
+          {
+            code: "N1",
+            description: "NPN"
+          },
+          {
+            code: "P1",
+            description: "PNP"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7AEF\u5B50\u5F0F\u63A5\u96FB"
+          },
+          {
+            code: "B",
+            description: "\u5F8C\u51FA\u7DDA\u5F0F\u63A5\u96FB"
+          },
+          {
+            code: "D",
+            description: "\u4E0B\u51FA\u7DDA\u5F0F\u63A5\u96FB"
+          }
+        ]
+      },
+      {
+        id: "range",
+        name: "\u91CF\u6E2C\u58D3\u529B\u7BC4\u570D",
+        options: [
+          {
+            code: "01",
+            description: "-100kPa~100kPa"
+          },
+          {
+            code: "10",
+            description: "-100kPa~1000kPa"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u51FA\u7DDA\u9577\u5EA6",
+        options: [
+          {
+            code: "020",
+            description: "\u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u7DDA\u95775m"
+          },
+          {
+            code: "M08",
+            description: "M8\u5FEB\u901F\u63A5\u982D+300mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u58D3\u529B\u6C23\u5B54\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5916\u7259PT1/8; \u5167\u7259M5"
+          },
+          {
+            code: "T",
+            description: "\u5916\u7259NPT1/8; \u5167\u725910-32UNF"
+          },
+          {
+            code: "G",
+            description: "\u5916\u7259G1/8; \u5167\u7259M5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.21"
+  },
+  {
+    id: "AC-BC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u4E09\u806F\u4EF6(F+R+L)",
+    code: "AC",
+    name: "AC\u3001BC\u7CFB\u5217\u4E09\u806F\u4EF6",
+    format: "AC{series}{port}{drain}{type}{gauge}{scale}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          },
+          {
+            code: "4",
+            description: "kgf/cm\xB2"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.25"
+  },
+  {
+    id: "AF-BF",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u904E\u6FFE\u5668",
+    code: "AF",
+    name: "AF\u3001BF\u7CFB\u5217\u904E\u6FFE\u5668",
+    format: "AF{series}{port}{drain}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.28"
+  },
+  {
+    id: "AFC-BFC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u4E8C\u806F\u4EF6(F.R+L)",
+    code: "AFC",
+    name: "AFC\u3001BFC\u7CFB\u5217\u4E8C\u806F\u4EF6",
+    format: "AFC{series}{port}{drain}{type}{gauge}{scale}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          },
+          {
+            code: "4",
+            description: "kgf/cm\xB2"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.31"
+  },
+  {
+    id: "AFR-BFR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
+    code: "AFR",
+    name: "AFR\u3001BFR\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668",
+    format: "AFR{series}{port}{mount}{drain}{type}{bracket}{gauge}{scale}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "mount",
+        name: "\u58D3\u529B\u8868\u5B89\u88DD\u87BA\u7D0B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u55AE\u5074"
+          },
+          {
+            code: "D",
+            description: "\u96D9\u5074"
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          },
+          {
+            code: "4",
+            description: "kgf/cm\xB2"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.34"
+  },
+  {
+    id: "AL-BL",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u7D66\u6CB9\u5668",
+    code: "AL",
+    name: "AL\u3001BL\u7CFB\u5217\u7D66\u6CB9\u5668",
+    format: "AL{series}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.37"
+  },
+  {
+    id: "AR-BR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "A\u3001B\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u95A5",
+    code: "AR",
+    name: "AR\u3001BR\u7CFB\u5217\u8ABF\u58D3\u95A5",
+    format: "AR{series}{port}{mount}{type}{bracket}{gauge}{scale}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1500C",
+            description: "1500\u7CFB\u5217"
+          },
+          {
+            code: "2000C",
+            description: "2000\u7CFB\u5217"
+          },
+          {
+            code: "3000C",
+            description: "3000\u7CFB\u5217"
+          },
+          {
+            code: "4000C10",
+            description: "4000\u7CFB\u5217"
+          },
+          {
+            code: "4000C",
+            description: "4000\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "1500C",
+            description: '1/8"'
+          },
+          {
+            code: "2000C",
+            description: '1/4"'
+          },
+          {
+            code: "3000C",
+            description: '3/8"'
+          },
+          {
+            code: "4000C10",
+            description: '3/8"'
+          },
+          {
+            code: "4000C",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "mount",
+        name: "\u58D3\u529B\u8868\u5B89\u88DD\u87BA\u7D0B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u55AE\u5074"
+          },
+          {
+            code: "D",
+            description: "\u96D9\u5074"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          },
+          {
+            code: "4",
+            description: "kgf/cm\xB2"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.39"
+  },
+  {
+    id: "GC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u4E09\u806F\u4EF6(F+R+L)",
+    code: "GC",
+    name: "GC\u7CFB\u5217\u4E09\u806F\u4EF6",
+    format: "GC{series}{port}{drain}{type}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3\u6392\u6C34"
+          },
+          {
+            code: "M",
+            description: "\u624B\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "gauge_type",
+        name: "\u58D3\u529B\u8868\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "\u65B9\u5F62\u8868"
+          },
+          {
+            code: "C",
+            description: "\u5713\u5F62\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.41"
+  },
+  {
+    id: "GF",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u904E\u6FFE\u5668",
+    code: "GF",
+    name: "GF\u7CFB\u5217\u904E\u6FFE\u5668",
+    format: "GF{series}{port}{drain}{bracket}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3\u6392\u6C34"
+          },
+          {
+            code: "M",
+            description: "\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.43"
+  },
+  {
+    id: "GFC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u4E8C\u806F\u4EF6(F.R+L)",
+    code: "GFC",
+    name: "GFC\u7CFB\u5217\u4E8C\u806F\u4EF6",
+    format: "GFC{series}{port}{drain}{type}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3\u6392\u6C34"
+          },
+          {
+            code: "M",
+            description: "\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "gauge_type",
+        name: "\u58D3\u529B\u8868\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "\u65B9\u5F62\u8868"
+          },
+          {
+            code: "C",
+            description: "\u5713\u5F62\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.45"
+  },
+  {
+    id: "GFR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
+    code: "GFR",
+    name: "GFR\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668",
+    format: "GFR{series}{port}{drain}{type}{bracket}{gauge}{gauge_type}{scale}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3\u6392\u6C34"
+          },
+          {
+            code: "M",
+            description: "\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "gauge_type",
+        name: "\u58D3\u529B\u8868\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "\u65B9\u5F62\u8868"
+          },
+          {
+            code: "C",
+            description: "\u5713\u5F62\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.47"
+  },
+  {
+    id: "GL",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u7D66\u6CB9\u5668",
+    code: "GL",
+    name: "GL\u7CFB\u5217\u7D66\u6CB9\u5668",
+    format: "GL{series}{port}{bracket}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.49"
+  },
+  {
+    id: "GR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "G\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u95A5",
+    code: "GR",
+    name: "GR\u7CFB\u5217\u8ABF\u58D3\u95A5",
+    format: "GR{series}{port}{type}{bracket}{gauge}{gauge_type}{scale}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "gauge_type",
+        name: "\u58D3\u529B\u8868\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "\u65B9\u5F62\u8868"
+          },
+          {
+            code: "C",
+            description: "\u5713\u5F62\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.51"
+  },
+  {
+    id: "GPF",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GP\u7CFB\u5217",
+    group: "\u6CB9\u9727\u5206\u96E2\u5668",
+    code: "GPF",
+    name: "GPF\u7CFB\u5217\u6CB9\u9727\u5206\u96E2\u5668",
+    format: "GPF{series}{cup}{port}{drain}{bracket}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "M",
+            description: "0.3\u03BCm"
+          },
+          {
+            code: "D",
+            description: "0.01\u03BCm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.53"
+  },
+  {
+    id: "GPFR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GP\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u7CBE\u5BC6\u904E\u6FFE\u5668",
+    code: "GPFR",
+    name: "GPFR\u7CFB\u5217\u8ABF\u58D3\u7CBE\u5BC6\u904E\u6FFE\u5668",
+    format: "GPFR{series}{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "M",
+            description: "0.3\u03BCm"
+          },
+          {
+            code: "D",
+            description: "0.01\u03BCm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.55"
+  },
+  {
+    id: "GPR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GP\u7CFB\u5217",
+    group: "\u7CBE\u5BC6\u8ABF\u58D3\u95A5",
+    code: "GPR",
+    name: "GPR\u7CFB\u5217\u7CBE\u5BC6\u8ABF\u58D3\u95A5",
+    format: "GPR{series}{port}{range}{bracket}{gauge}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "range",
+        name: "\u8A2D\u5B9A\u58D3\u529B\u7BC4\u570D",
+        options: [
+          {
+            code: "L",
+            description: "0.005~0.2MPa"
+          },
+          {
+            code: "M",
+            description: "0.01~0.4MPa"
+          },
+          {
+            code: "H",
+            description: "0.01~0.8MPa"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u58D3\u529B\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u58D3\u529B\u8868"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.58"
+  },
+  {
+    id: "GA200",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u5206\u6C23\u584A",
+    code: "GA200",
+    name: "GA\u7CFB\u5217\u5206\u6C23\u584A",
+    format: "GA200{port}{thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.63"
+  },
+  {
+    id: "GAC100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u4E09\u806F\u4EF6(100\u7CFB\u5217)",
+    code: "GAC100",
+    name: "GAC100\u7CFB\u5217\u4E09\u806F\u4EF6",
+    format: "GAC100{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u5713\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.65"
+  },
+  {
+    id: "GAC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u4E09\u806F\u4EF6(F+R+L)",
+    code: "GAC",
+    name: "GAC\u7CFB\u5217\u4E09\u806F\u4EF6",
+    format: "GAC{series}{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.66"
+  },
+  {
+    id: "GAF100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u904E\u6FFE\u5668(100\u7CFB\u5217)",
+    code: "GAF100",
+    name: "GAF100\u7CFB\u5217\u904E\u6FFE\u5668",
+    format: "GAF100{cup}{port}{drain}{bracket}{precision}{thread}",
+    categories: [
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.68"
+  },
+  {
+    id: "GAF",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u904E\u6FFE\u5668",
+    code: "GAF",
+    name: "GAF\u7CFB\u5217\u904E\u6FFE\u5668",
+    format: "GAF{series}{cup}{port}{drain}{bracket}{precision}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.69"
+  },
+  {
+    id: "GAFC100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u4E8C\u806F\u4EF6(100\u7CFB\u5217)",
+    code: "GAFC100",
+    name: "GAFC100\u7CFB\u5217\u4E8C\u806F\u4EF6",
+    format: "GAFC100{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u5713\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.71"
+  },
+  {
+    id: "GAFC",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u4E8C\u806F\u4EF6(F.R+L)",
+    code: "GAFC",
+    name: "GAFC\u7CFB\u5217\u4E8C\u806F\u4EF6",
+    format: "GAFC{series}{cup}{port}{drain}{type}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.72"
+  },
+  {
+    id: "GAFR100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u904E\u6FFE\u5668(100\u7CFB\u5217)",
+    code: "GAFR100",
+    name: "GAFR100\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668",
+    format: "GAFR100{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u5713\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.74"
+  },
+  {
+    id: "GAFR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u904E\u6FFE\u5668",
+    code: "GAFR",
+    name: "GAFR\u7CFB\u5217\u8ABF\u58D3\u904E\u6FFE\u5668",
+    format: "GAFR{series}{cup}{port}{drain}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "drain",
+        name: "\u6392\u6C34\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5DEE\u58D3+\u624B\u52D5\u6392\u6C34"
+          },
+          {
+            code: "A",
+            description: "\u81EA\u52D5\u6392\u6C34"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.75"
+  },
+  {
+    id: "GAL100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u7D66\u6CB9\u5668(100\u7CFB\u5217)",
+    code: "GAL100",
+    name: "GAL100\u7CFB\u5217\u7D66\u6CB9\u5668",
+    format: "GAL100{cup}{port}{bracket}{thread}",
+    categories: [
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.77"
+  },
+  {
+    id: "GAL",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u7D66\u6CB9\u5668",
+    code: "GAL",
+    name: "GAL\u7CFB\u5217\u7D66\u6CB9\u5668",
+    format: "GAL{series}{cup}{port}{bracket}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "cup",
+        name: "\u676F\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "",
+            description: "PC\u676F"
+          },
+          {
+            code: "C",
+            description: "\u91D1\u5C6C\u676F"
+          },
+          {
+            code: "N",
+            description: "\u5C3C\u9F8D\u676F"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.78"
+  },
+  {
+    id: "GTC-GTFC-GTFR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "GT\u7D44\u5408(GTC/GTFC/GTFR)",
+    code: "GTC200",
+    name: "GTC\u3001GTFC\u3001GTFR\u7CFB\u5217(\u77ED\u6B3EPC\u676F)",
+    format: "GTC200{port}{type}{bracket}{gauge}{precision}{thread}{check_valve}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "precision",
+        name: "\u904E\u6FFE\u7CBE\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "40\u03BCm\u7D1A"
+          },
+          {
+            code: "W",
+            description: "5\u03BCm\u7D1A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.81"
+  },
+  {
+    id: "GAR100",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u95A5(100\u7CFB\u5217)",
+    code: "GAR100",
+    name: "GAR100\u7CFB\u5217\u8ABF\u58D3\u95A5",
+    format: "GAR100{port}{type}{bracket}{gauge}{thread}{check_valve}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u5713\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.83"
+  },
+  {
+    id: "GAR",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "GA\u7CFB\u5217",
+    group: "\u8ABF\u58D3\u95A5",
+    code: "GAR",
+    name: "GAR\u7CFB\u5217\u8ABF\u58D3\u95A5",
+    format: "GAR{series}{port}{type}{bracket}{gauge}{thread}{check_valve}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          },
+          {
+            code: "500",
+            description: "500\u7CFB\u5217"
+          },
+          {
+            code: "600",
+            description: "600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u4F4E\u58D3\u578B"
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u8868\u5361\u6263"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      },
+      {
+        id: "check_valve",
+        name: "\u9006\u6D41\u95A5\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9006\u6D41\u95A5"
+          },
+          {
+            code: "K",
+            description: "\u9644\u9006\u6D41\u95A5"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.84"
+  },
+  {
+    id: "GV-Slow",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u5176\u5B83\u7CFB\u5217",
+    group: "GV\u7DE9\u555F\u52D5\u95A5",
+    code: "GV",
+    name: "GV\u7CFB\u5217\u6162\u555F\u95A5",
+    format: "GV{series}{port}{bracket}{gauge}{gauge_type}{scale}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "gauge",
+        name: "\u58D3\u529B\u8868\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u8868"
+          },
+          {
+            code: "N",
+            description: "\u4E0D\u9644\u8868"
+          }
+        ]
+      },
+      {
+        id: "gauge_type",
+        name: "\u58D3\u529B\u8868\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "\u65B9\u5F62\u8868"
+          },
+          {
+            code: "C",
+            description: "\u5713\u5F62\u8868"
+          }
+        ]
+      },
+      {
+        id: "scale",
+        name: "\u523B\u5EA6\u55AE\u4F4D",
+        options: [
+          {
+            code: "1",
+            description: "MPa"
+          },
+          {
+            code: "2",
+            description: "psi"
+          },
+          {
+            code: "3",
+            description: "bar"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.86"
+  },
+  {
+    id: "GZ",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u5176\u5B83\u7CFB\u5217",
+    group: "GZ\u7CFB\u5217",
+    code: "GZ",
+    name: "GZ\u7CFB\u5217\u622A\u6B62\u95A5",
+    format: "GZ{series}{port}{bracket}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "400",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "bracket",
+        name: "\u652F\u67B6\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u9644\u652F\u67B6"
+          },
+          {
+            code: "J",
+            description: "\u4E0D\u9644\u652F\u67B6"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.88"
+  },
+  {
+    id: "F-G-Gauge",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u58D3\u529B\u8868",
+    group: "GS/GF/GU\u7CFB\u5217 \u58D3\u529B\u8868",
+    code: "",
+    name: "GS\u3001GF\u3001GU\u7CFB\u5217 \u58D3\u529B\u8868",
+    format: "F-G{installation}{dial}{display}{unit}",
+    categories: [
+      {
+        id: "installation",
+        name: "\u5B89\u88DD\u578B\u5F0F",
+        options: [
+          {
+            code: "S",
+            description: "\u6A19\u6E96\u5B89\u88DD"
+          },
+          {
+            code: "F",
+            description: "\u9762\u677F\u5B89\u88DD"
+          },
+          {
+            code: "U",
+            description: "\u5D4C\u5165\u5F0F\u5B89\u88DD"
+          }
+        ]
+      },
+      {
+        id: "dial",
+        name: "\u8868\u76E4\u898F\u683C",
+        options: [
+          {
+            code: "30",
+            description: "\u5916\u5F9130"
+          },
+          {
+            code: "40",
+            description: "\u5916\u5F9140"
+          },
+          {
+            code: "50",
+            description: "\u5916\u5F9150"
+          },
+          {
+            code: "60",
+            description: "\u5916\u5F9160"
+          }
+        ]
+      },
+      {
+        id: "display",
+        name: "\u6700\u5927\u986F\u793A\u58D3\u529B\u503C",
+        options: [
+          {
+            code: "04",
+            description: "0.4MPa (\u4F4E\u58D3\u578B)"
+          },
+          {
+            code: "10",
+            description: "1.0MPa (\u6A19\u6E96\u578B)"
+          }
+        ]
+      },
+      {
+        id: "unit",
+        name: "\u58D3\u529B\u523B\u5EA6\u55AE\u4F4D\u8207\u7259\u578B",
+        options: [
+          {
+            code: "M",
+            description: "MPa (PT\u7259)"
+          },
+          {
+            code: "B",
+            description: "bar (G\u7259)"
+          },
+          {
+            code: "P",
+            description: "psi (NPT\u7259)"
+          },
+          {
+            code: "Z",
+            description: "kgf/cm\xB2 & psi (PT\u7259)"
+          }
+        ]
+      }
+    ],
+    note: "\u8A02\u8CFC\u78BC\u7BC4\u4F8B F-GS4010M\u3002\u8868\u76E4/\u53E3\u5F91\u5C0D\u61C9\uFF1AGS-30/40/50\u3001GF-40/50/60\u3001GU-40/50/60\u3002",
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.287"
+  },
+  {
+    id: "F-GP-Gauge",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u58D3\u529B\u8868",
+    group: "GP\u7CFB\u5217 \u58D3\u529B\u8868",
+    code: "",
+    name: "GP\u7CFB\u5217 \u58D3\u529B\u8868",
+    format: "F-GP{dial}{display}{unit}",
+    categories: [
+      {
+        id: "dial",
+        name: "\u8868\u76E4\u898F\u683C",
+        options: [
+          {
+            code: "30",
+            description: "\u5916\u5F9130"
+          },
+          {
+            code: "40",
+            description: "\u5916\u5F9140"
+          }
+        ]
+      },
+      {
+        id: "display",
+        name: "\u6700\u5927\u986F\u793A\u58D3\u529B\u503C",
+        options: [
+          {
+            code: "02",
+            description: "0.2MPa (\u4F4E\u58D3\u578B)"
+          },
+          {
+            code: "04",
+            description: "0.4MPa (\u4F4E\u58D3\u578B)"
+          },
+          {
+            code: "10",
+            description: "1.0MPa (\u6A19\u6E96\u578B)"
+          }
+        ]
+      },
+      {
+        id: "unit",
+        name: "\u58D3\u529B\u523B\u5EA6\u55AE\u4F4D\u8207\u7259\u578B",
+        options: [
+          {
+            code: "G",
+            description: "MPa & bar (G\u7259)"
+          },
+          {
+            code: "P",
+            description: "MPa & psi (PT\u7259)"
+          },
+          {
+            code: "T",
+            description: "bar & psi (NPT\u7259)"
+          }
+        ]
+      }
+    ],
+    note: "\u8A02\u8CFC\u78BC\u7BC4\u4F8B F-GP4010P\u3002",
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.287"
+  },
+  {
+    id: "F-GV-Gauge",
+    category: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6",
+    superGroup: "\u771F\u7A7A\u7CFB\u5217",
+    group: "GV\u7CFB\u5217 \u771F\u7A7A\u58D3\u529B\u8868",
+    code: "",
+    name: "F-GV\u7CFB\u5217 \u771F\u7A7A\u58D3\u529B\u8868",
+    format: "F-GV{dial}{display}{unit}",
+    categories: [
+      {
+        id: "dial",
+        name: "\u8868\u76E4\u898F\u683C",
+        options: [
+          {
+            code: "40",
+            description: "\u5916\u5F9140"
+          }
+        ]
+      },
+      {
+        id: "display",
+        name: "\u6700\u5927\u986F\u793A\u58D3\u529B\u503C",
+        options: [
+          {
+            code: "10",
+            description: "-100kPa"
+          }
+        ]
+      },
+      {
+        id: "unit",
+        name: "\u58D3\u529B\u523B\u5EA6\u55AE\u4F4D\u8207\u7259\u578B",
+        options: [
+          {
+            code: "G",
+            description: "kPa & psi (G\u7259)"
+          },
+          {
+            code: "P",
+            description: "kPa & psi (PT\u7259)"
+          },
+          {
+            code: "T",
+            description: "kPa & psi (NPT\u7259)"
+          }
+        ]
+      }
+    ],
+    note: "\u8A02\u8CFC\u78BC\u7BC4\u4F8B F-GV4010P\u3002",
+    sourceFile: "\u6C23\u6E90\u8655\u7406\u5143\u4EF6\u578B\u9304 P.273"
+  }
+];
 
 // src/data/catalog-auxiliary.json
 var catalog_auxiliary_default = [
