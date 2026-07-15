@@ -36,10 +36,13 @@ function getAi(): GoogleGenAI {
 // 主要匹配模型與候選篩選模型 (可用環境變數覆蓋)。
 // 注意: 免費方案 (free tier) 的 Gemini Pro 系列額度為 0，只能使用 Flash 系列；
 // 若你的 key 已綁定付費帳單，建議把 GEMINI_MODEL 設成 gemini-3.1-pro-preview 以獲得最佳匹配品質。
-const MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-2.5-flash";
+// 免費方案實測：gemini-3.1-flash-lite 最快最穩 (~3s)，且有解碼表+型錄驗證兜底品質；
+// gemini-2.5-flash 較「聰明」但免費額度易耗盡，留在備援鏈給複雜案例。
+// 付費帳號建議把 GEMINI_MODEL 設成 gemini-2.5-flash 或 gemini-3.1-pro-preview。
+const MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 const CLASSIFIER_MODEL = () => process.env.GEMINI_CLASSIFIER_MODEL || "gemini-3.1-flash-lite";
-// 額度耗盡或模型過載時的自動降級順序 (preview 模型常態性過載，放在備援位)
-const FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"];
+// 額度耗盡或模型過載時的自動降級順序 (preview 模型常態性過載，放在最後)
+const FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-3-flash-preview"];
 
 // 型錄壓縮索引只需建一次
 const catalogIndex = buildCatalogIndex();
@@ -52,14 +55,23 @@ const slimIndexJson = JSON.stringify(
 // 簡易記憶體快取 (serverless 環境僅在同一實例存活期間有效，屬於加分而非必要)
 const cache = new Map<string, string>();
 
+// 模型冷卻表：某模型剛因額度/過載失敗時記下到期時間，冷卻期內的請求直接跳過它，
+// 避免每次都重付「先試已知失效的主模型 → 失敗 → 才降級」的時間代價。
+const modelCooldown = new Map<string, number>();
+const COOLDOWN_MS = 90 * 1000;
+const isCoolingDown = (m: string) => (modelCooldown.get(m) || 0) > Date.now();
+
 /**
  * 對 Gemini 的呼叫加上 503/429 重試，且在該模型額度耗盡 (429 quota)、
  * 持續過載 (503) 或不存在 (404) 時自動降級到備援模型。
+ * 近期失敗過的模型 (冷卻中) 會被排到鏈尾，讓請求優先打健康的模型。
  */
 export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]["generateContent"]>[0]) {
   const ai = getAi();
   const primary = (params as any).model as string;
-  const modelChain = [primary, ...FALLBACK_MODELS.filter(m => m !== primary)];
+  const rawChain = [primary, ...FALLBACK_MODELS.filter(m => m !== primary)];
+  // 健康的模型排前面、冷卻中的排後面 (但仍保留為最終備援，以防全部冷卻)
+  const modelChain = [...rawChain.filter(m => !isCoolingDown(m)), ...rawChain.filter(isCoolingDown)];
   let lastError: any = null;
 
   for (const model of modelChain) {
@@ -67,7 +79,12 @@ export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]
     let delay = 1500;
     while (retries > 0) {
       try {
-        return await ai.models.generateContent({ ...(params as any), model });
+        // 2.5 系列 flash 預設會先「思考」，關閉可大幅縮短回應時間；
+        // 我們已提供解碼表 + 型錄資料 + 事後驗證，不依賴模型長考。
+        const config = /2\.5-flash/.test(model)
+          ? { ...(params as any).config, thinkingConfig: { thinkingBudget: 0 } }
+          : (params as any).config;
+        return await ai.models.generateContent({ ...(params as any), model, config });
       } catch (error: any) {
         lastError = error;
         const errStr = String(error.message || "").toLowerCase();
@@ -76,8 +93,9 @@ export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]
         const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
 
         if (quotaOrGone) {
-          // 額度為 0 或模型不可用：重試同一模型沒有意義，直接換下一個
-          console.log(`Model ${model} unavailable (quota/404), falling back...`);
+          // 額度為 0 或模型不可用：重試同一模型沒有意義，直接換下一個並設冷卻
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} unavailable (quota/404), cooling down ${COOLDOWN_MS / 1000}s, falling back...`);
           break;
         }
         if (overloaded && retries > 1) {
@@ -88,7 +106,8 @@ export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]
           continue;
         }
         if (overloaded) {
-          console.log(`Model ${model} still busy, falling back...`);
+          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
+          console.log(`Model ${model} still busy, cooling down ${COOLDOWN_MS / 1000}s, falling back...`);
           break;
         }
         throw error;
@@ -211,19 +230,25 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
 
     // 公司對照表對應到的系列一定進候選 (放最前面)
     let candidateIds: string[] = [...companyIds];
-    let classifierInfo: { brandGuess?: string; productType?: string } = {};
-    try {
-      const stage1 = await selectCandidateSeries(competitorModel, brand, [...companyIds, ...heuristic.candidateIds], hints);
-      for (const id of stage1.ids) {
-        if (!candidateIds.includes(id)) candidateIds.push(id);
-      }
-      classifierInfo = stage1;
-    } catch (e: any) {
-      console.error("Stage-1 classifier failed, falling back to heuristics:", e.message || e);
-    }
-    // 分類器沒有結果時退回啟發式候選
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
+    }
+    let classifierInfo: { brandGuess?: string; productType?: string } = {};
+
+    // 提速：知識庫/公司對照表已給出足夠候選 (≥2) 時，直接跳過第一階段的
+    // AI 分類呼叫；只有陌生型號才需要 AI 從全庫索引裡挑候選。
+    if (candidateIds.length < 2) {
+      try {
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints);
+        for (const id of stage1.ids) {
+          if (!candidateIds.includes(id)) candidateIds.push(id);
+        }
+        classifierInfo = stage1;
+      } catch (e: any) {
+        console.error("Stage-1 classifier failed, falling back to heuristics:", e.message || e);
+      }
+    } else {
+      console.log(`Stage-1 skipped: ${candidateIds.length} candidates from knowledge base / company table`);
     }
     // 控制第二階段的資料量
     candidateIds = candidateIds.slice(0, 15);
@@ -233,8 +258,9 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     console.log(`Cross-reference "${competitorModel}": ${candidateIds.length} candidate series [${candidateIds.join(', ')}]`);
 
     // ---------- 第二階段：精確匹配與訂購碼生成 ----------
+    // 提速：有候選時不再附全庫索引 (省 ~10K tokens 輸入)；只有無候選時才給總覽
     const catalogSection = candidateSeries.length > 0
-      ? `=== AIRTAC CANDIDATE SERIES (FULL CATALOG DATA) ===\n${candidateJson}\n===================================================\n\nAlso, for context, this COMPACT INDEX lists everything AirTAC offers (so you know what exists beyond the candidates — but you may ONLY recommend series whose FULL DATA is provided above, or output "無直接對應型號"):\n${slimIndexJson}`
+      ? `=== AIRTAC CANDIDATE SERIES (FULL CATALOG DATA) ===\n${candidateJson}\n===================================================\nYou may ONLY recommend series whose FULL DATA is provided above. If none of them genuinely fits the competitor product, output "無直接對應型號".`
       : `No candidate series were found in the AirTAC catalog for this model. Here is the compact index of everything AirTAC offers:\n${slimIndexJson}\nIf truly nothing matches, set baseModel to "無直接對應型號".`;
 
     const prompt = `You are a pneumatic components expert and sales assistant strictly for AirTAC (亞德客).
@@ -262,6 +288,8 @@ Your task:
 3. Complete the pre-analysis (disassembly + AirTAC rule mapping).
 4. Recommend the equivalent AirTAC model(s) from the candidate series with matchType (直接替換, 相似替代, or 無直接對應型號), full ordering code, seriesId + selectedOptions, configurable options with suggestions, and matchPercentage.
 5. Provide an overall explanation of the matching strategy and any spec differences the user must verify.
+
+OUTPUT LENGTH: be precise but CONCISE — each disassembly/mapping line under 40 Chinese characters; reasoningForOrderingCode under 150 characters; configurableOptions "options" field is a short summary, not a full list. Brevity speeds up the response without losing accuracy.
 
 Return JSON matching the schema. ALL text output MUST be accurate Traditional Chinese (繁體中文).`;
 

@@ -65,8 +65,8 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
       const finished = await processRow(row);
       setRows(prev => prev.map(r => (r.id === row.id ? finished : r)));
       if (finished.status === 'done') onDone?.(finished);
-      // 每筆之間停 2 秒，避免免費方案 rate limit (每筆分析內含 2 次模型呼叫)
-      if (!cancelRef.current) await new Promise(r => setTimeout(r, 2000));
+      // 每筆之間短暫間隔，避免免費方案 rate limit；失敗(多半是額度)時多等一下
+      if (!cancelRef.current) await new Promise(r => setTimeout(r, finished.status === 'error' ? 3000 : 800));
     }
     setRunning(false);
   };
