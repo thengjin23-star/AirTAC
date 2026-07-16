@@ -140,7 +140,65 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.230"
+  "sourceFile": "控制元件型錄 P.230",
+  "specs": [
+   {
+    "model": "2JS150-10",
+    "port": "G3/8",
+    "orifice": "15mm",
+    "kv": "4.4",
+    "weightG": "700"
+   },
+   {
+    "model": "2JS150-15",
+    "port": "G1/2",
+    "orifice": "15mm",
+    "kv": "4.8",
+    "weightG": "700"
+   },
+   {
+    "model": "2JS200-20",
+    "port": "G3/4",
+    "orifice": "20mm",
+    "kv": "7.9",
+    "weightG": "900"
+   },
+   {
+    "model": "2JS200-20",
+    "port": "G3/4",
+    "orifice": "20mm",
+    "kv": "8",
+    "weightG": "950"
+   },
+   {
+    "model": "2JS250-25",
+    "port": "G1",
+    "orifice": "25mm",
+    "kv": "19",
+    "weightG": "1900"
+   },
+   {
+    "model": "2JS250-25",
+    "port": "G1",
+    "orifice": "25mm",
+    "kv": "20",
+    "weightG": "2500"
+   },
+   {
+    "model": "2JS320-32",
+    "port": "G1 1/4",
+    "orifice": "32mm",
+    "kv": "27",
+    "weightG": "2500"
+   },
+   {
+    "model": "2JS320-32",
+    "port": "G1 1/4",
+    "orifice": "32mm",
+    "kv": "28",
+    "weightG": "3000"
+   }
+  ]
  },
  {
   "id": "2KLA",
@@ -323,7 +381,121 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.197"
+  "sourceFile": "控制元件型錄 P.197",
+  "specs": [
+   {
+    "model": "2KLA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "243.5"
+   },
+   {
+    "model": "2KLA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "233.5"
+   },
+   {
+    "model": "2KLA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "243.5"
+   },
+   {
+    "model": "2KLA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "233.5"
+   },
+   {
+    "model": "2KLA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "528"
+   },
+   {
+    "model": "2KLA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "508"
+   },
+   {
+    "model": "2KLA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "528"
+   },
+   {
+    "model": "2KLA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "508"
+   },
+   {
+    "model": "2KLA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "weightG": "569"
+   },
+   {
+    "model": "2KLA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "weightG": "722"
+   },
+   {
+    "model": "2KLA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "weightG": "1026"
+   },
+   {
+    "model": "2KLA320-32",
+    "port": "PT1 1/4",
+    "orifice": "35.0mm",
+    "cv": "23.00",
+    "flowS": "420.0",
+    "weightG": "2261"
+   },
+   {
+    "model": "2KLA400-40",
+    "port": "PT1 1/2",
+    "orifice": "40.0mm",
+    "cv": "31.00",
+    "flowS": "560.0",
+    "weightG": "2641"
+   },
+   {
+    "model": "2KLA500-50",
+    "port": "PT2",
+    "orifice": "50.0mm",
+    "cv": "49.00",
+    "flowS": "880.0",
+    "weightG": "3508"
+   }
+  ]
  },
  {
   "id": "2KSA",
@@ -514,7 +686,171 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.189"
+  "sourceFile": "控制元件型錄 P.189",
+  "specs": [
+   {
+    "model": "2KSA030-06",
+    "port": "PT1/8",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2KSA030-08",
+    "port": "PT1/4",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2KSA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2KSA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2KSA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2KSA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2KSA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2KSA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2KSA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2KSA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2KSA050-10",
+    "port": "PT3/8",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2KSA050-15",
+    "port": "PT1/2",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2KSA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "575"
+   },
+   {
+    "model": "2KSA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "735"
+   },
+   {
+    "model": "2KSA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "1035"
+   },
+   {
+    "model": "2KSA320-32",
+    "port": "PT1 1/4",
+    "orifice": "35.0mm",
+    "cv": "23.00",
+    "flowS": "420.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2287"
+   },
+   {
+    "model": "2KSA400-40",
+    "port": "PT1 1/2",
+    "orifice": "40.0mm",
+    "cv": "31.00",
+    "flowS": "560.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2677"
+   },
+   {
+    "model": "2KSA500-50",
+    "port": "PT2",
+    "orifice": "50.0mm",
+    "cv": "49.00",
+    "flowS": "880.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "3557"
+   }
+  ]
  },
  {
   "id": "2KWA",
@@ -677,7 +1013,132 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.181"
+  "sourceFile": "控制元件型錄 P.181",
+  "specs": [
+   {
+    "model": "2KWA030-06",
+    "port": "PT1/8",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "weightG": "245"
+   },
+   {
+    "model": "2KWA030-08",
+    "port": "PT1/4",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "weightG": "235"
+   },
+   {
+    "model": "2KWA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "245"
+   },
+   {
+    "model": "2KWA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "235"
+   },
+   {
+    "model": "2KWA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "245"
+   },
+   {
+    "model": "2KWA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "235"
+   },
+   {
+    "model": "2KWA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2KWA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2KWA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2KWA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2KWA050-10",
+    "port": "PT3/8",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2KWA050-15",
+    "port": "PT1/2",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2KWA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "575"
+   },
+   {
+    "model": "2KWA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "735"
+   },
+   {
+    "model": "2KWA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "1035"
+   }
+  ]
  },
  {
   "id": "2LA",
@@ -856,7 +1317,127 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.193"
+  "sourceFile": "控制元件型錄 P.193",
+  "specs": [
+   {
+    "model": "2LA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "244.5"
+   },
+   {
+    "model": "2LA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "234.5"
+   },
+   {
+    "model": "2LA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "244.5"
+   },
+   {
+    "model": "2LA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "234.5"
+   },
+   {
+    "model": "2LA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "529"
+   },
+   {
+    "model": "2LA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "509"
+   },
+   {
+    "model": "2LA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "529"
+   },
+   {
+    "model": "2LA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "509"
+   },
+   {
+    "model": "2LA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "570"
+   },
+   {
+    "model": "2LA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "723"
+   },
+   {
+    "model": "2LA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "1027"
+   },
+   {
+    "model": "2LA320-32",
+    "port": "PT1 1/4",
+    "orifice": "35.0mm",
+    "cv": "23.00",
+    "flowS": "420.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2262"
+   },
+   {
+    "model": "2LA400-40",
+    "port": "PT1 1/2",
+    "orifice": "40.0mm",
+    "cv": "31.00",
+    "flowS": "560.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2642"
+   },
+   {
+    "model": "2LA500-50",
+    "port": "PT2",
+    "orifice": "50.0mm",
+    "cv": "49.00",
+    "flowS": "880.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "3508"
+   }
+  ]
  },
  {
   "id": "2SA",
@@ -1047,7 +1628,189 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.185"
+  "sourceFile": "控制元件型錄 P.185",
+  "specs": [
+   {
+    "model": "2SA030-06",
+    "port": "PT1/8",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2SA030-08",
+    "port": "PT1/4",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2SA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2SA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2SA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "245"
+   },
+   {
+    "model": "2SA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "235"
+   },
+   {
+    "model": "2SA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2SA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2SA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2SA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2SA050-10",
+    "port": "PT3/8",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2SA050-15",
+    "port": "PT1/2",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2SA050-10",
+    "port": "PT3/8",
+    "orifice": "10.0mm",
+    "cv": "2.20",
+    "flowS": "40.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "530"
+   },
+   {
+    "model": "2SA050-15",
+    "port": "PT1/2",
+    "orifice": "10.0mm",
+    "cv": "2.20",
+    "flowS": "40.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "510"
+   },
+   {
+    "model": "2SA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "575"
+   },
+   {
+    "model": "2SA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "735"
+   },
+   {
+    "model": "2SA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "1035"
+   },
+   {
+    "model": "2SA320-32",
+    "port": "PT1 1/4",
+    "orifice": "35.0mm",
+    "cv": "23.00",
+    "flowS": "420.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2288"
+   },
+   {
+    "model": "2SA400-40",
+    "port": "PT1 1/2",
+    "orifice": "40.0mm",
+    "cv": "31.00",
+    "flowS": "560.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "2678"
+   },
+   {
+    "model": "2SA500-50",
+    "port": "PT2",
+    "orifice": "50.0mm",
+    "cv": "49.00",
+    "flowS": "880.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "3558"
+   }
+  ]
  },
  {
   "id": "2V",
@@ -1176,7 +1939,51 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.206"
+  "sourceFile": "控制元件型錄 P.206",
+  "specs": [
+   {
+    "model": "2V025-06",
+    "port": "1/8\"",
+    "orifice": "2.5mm",
+    "cv": "0.23",
+    "workingPressure": "0.05~1.0MPa"
+   },
+   {
+    "model": "2V025-08",
+    "port": "1/4\"",
+    "orifice": "2.5mm",
+    "cv": "0.25",
+    "workingPressure": "0.05~1.0MPa"
+   },
+   {
+    "model": "2V130-10",
+    "port": "3/8\"",
+    "orifice": "13mm",
+    "cv": "6.20",
+    "workingPressure": "0.05~1.0MPa"
+   },
+   {
+    "model": "2V130-15",
+    "port": "1/2\"",
+    "orifice": "13mm",
+    "cv": "6.20",
+    "workingPressure": "0.05~1.0MPa"
+   },
+   {
+    "model": "2V250-20",
+    "port": "3/4\"",
+    "orifice": "25mm",
+    "cv": "13.00",
+    "workingPressure": "0.05~1.0MPa"
+   },
+   {
+    "model": "2V250-25",
+    "port": "1\"",
+    "orifice": "25mm",
+    "cv": "13.00",
+    "workingPressure": "0.05~1.0MPa"
+   }
+  ]
  },
  {
   "id": "2P",
@@ -1273,7 +2080,23 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.208"
+  "sourceFile": "控制元件型錄 P.208",
+  "specs": [
+   {
+    "model": "2P025-06",
+    "port": "G1/8",
+    "orifice": "2.5mm",
+    "cv": "0.23",
+    "workingPressure": "0~0.7MPa"
+   },
+   {
+    "model": "2P025-08",
+    "port": "G1/4",
+    "orifice": "2.5mm",
+    "cv": "0.23",
+    "workingPressure": "0~0.7MPa"
+   }
+  ]
  },
  {
   "id": "2WA",
@@ -1432,6 +2255,131 @@
    }
   ],
   "note": "",
-  "sourceFile": "控制元件型錄 P.178"
+  "sourceFile": "控制元件型錄 P.178",
+  "specs": [
+   {
+    "model": "2WA030-06",
+    "port": "PT1/8",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "weightG": "245"
+   },
+   {
+    "model": "2WA030-08",
+    "port": "PT1/4",
+    "orifice": "1.5mm",
+    "cv": "0.10",
+    "flowS": "1.8",
+    "weightG": "235"
+   },
+   {
+    "model": "2WA030-06",
+    "port": "PT1/8",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "245"
+   },
+   {
+    "model": "2WA030-08",
+    "port": "PT1/4",
+    "orifice": "2.0mm",
+    "cv": "0.18",
+    "flowS": "3.0",
+    "weightG": "235"
+   },
+   {
+    "model": "2WA030-06",
+    "port": "PT1/8",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "245"
+   },
+   {
+    "model": "2WA030-08",
+    "port": "PT1/4",
+    "orifice": "3.0mm",
+    "cv": "0.33",
+    "flowS": "6.0",
+    "weightG": "235"
+   },
+   {
+    "model": "2WA050-10",
+    "port": "PT3/8",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2WA050-15",
+    "port": "PT1/2",
+    "orifice": "4.0mm",
+    "cv": "0.55",
+    "flowS": "10.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2WA050-10",
+    "port": "PT3/8",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2WA050-15",
+    "port": "PT1/2",
+    "orifice": "5.0mm",
+    "cv": "0.83",
+    "flowS": "15.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2WA050-10",
+    "port": "PT3/8",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "weightG": "530"
+   },
+   {
+    "model": "2WA050-15",
+    "port": "PT1/2",
+    "orifice": "7.0mm",
+    "cv": "1.40",
+    "flowS": "25.0",
+    "weightG": "510"
+   },
+   {
+    "model": "2WA150-15",
+    "port": "PT1/2",
+    "orifice": "15.0mm",
+    "cv": "5.50",
+    "flowS": "100.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "575"
+   },
+   {
+    "model": "2WA200-20",
+    "port": "PT3/4",
+    "orifice": "20.0mm",
+    "cv": "9.50",
+    "flowS": "170.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "735"
+   },
+   {
+    "model": "2WA250-25",
+    "port": "PT1",
+    "orifice": "25.0mm",
+    "cv": "12.50",
+    "flowS": "220.0",
+    "workingPressure": "0.05~0.7MPa",
+    "weightG": "1035"
+   }
+  ]
  }
 ]
