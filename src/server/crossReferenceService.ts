@@ -281,6 +281,8 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 10. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
 11. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions, and for every uncertainty.
 12. If the model number is completely unrecognizable, say so explicitly and use "無直接對應型號".
+13. VALVE FLOW (Cv) RULE: for solenoid/pneumatic/fluid valves, flow capacity is a critical spec. The candidate series data includes a \`specs\` array with \`cv\` (flow coefficient) values. You MUST compare the competitor valve's port size / flow class against the AirTAC candidate's \`cv\` in \`specs\`, prefer the candidate whose Cv is closest, mention the Cv comparison in \`reasoningForOrderingCode\`, and if Cv differs noticeably add it to \`uncertainties\` and lower matchPercentage. Never ignore Cv when matching valves.
+14. WIRE/LEAD LENGTH RULE: for lead-wire type valves (e.g. 6SV/7SV series that have a \`leadLength\` category), the ordering code ends with the lead length code. If the competitor specifies a lead/cable length, select the matching \`leadLength\` option; otherwise use the standard (blank/0.5m) and note it. Do not drop the lead length position for series that define it.
 
 Your task:
 1. Identify the competitor's brand(s).

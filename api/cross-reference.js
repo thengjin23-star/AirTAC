@@ -34666,18 +34666,31 @@ function matchCompanyTable(input, brand) {
   }
   return out.slice(0, 8);
 }
+var variantCodeToId = /* @__PURE__ */ new Map();
+for (const s of defaultCatalog) {
+  const seriesCat = (s.categories || []).find((c) => c.id === "series" || c.id === "type" || c.id === "spec");
+  for (const opt of seriesCat?.options || []) {
+    const c = (opt.code || "").toUpperCase().replace(/[^A-Z0-9-]/g, "");
+    if (c.length >= 2 && !variantCodeToId.has(c)) variantCodeToId.set(c, s.id);
+  }
+}
 function companyMatchCatalogIds(matches) {
   const ids = [];
+  const add = (id) => {
+    if (!ids.includes(id)) ids.push(id);
+  };
   for (const m of matches) {
     for (const raw of m.entry.airtac.split(/[\/,，、\s]+/)) {
       const token = raw.trim().split("~")[0].toUpperCase().replace(/[^A-Z0-9-]/g, "");
       if (token.length < 2) continue;
       const ap = alphaPrefix(token);
+      if (variantCodeToId.has(token)) add(variantCodeToId.get(token));
+      else if (ap.length >= 2 && variantCodeToId.has(ap)) add(variantCodeToId.get(ap));
       for (const s of defaultCatalog) {
         const code = (s.code || "").toUpperCase().replace(/\s+/g, "");
         const id = s.id.toUpperCase();
         if (code === token || id === token || ap.length >= 2 && (code === ap || id === ap)) {
-          if (!ids.includes(s.id)) ids.push(s.id);
+          add(s.id);
         }
       }
     }
@@ -34897,6 +34910,8 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 10. RIGOROUS MAPPING: establish the exact AirTAC naming rule mapping using ONLY the catalog's categories in \`preAnalysis.airtacRuleMapping\`.
 11. matchPercentage must honestly reflect spec coverage: 100 = perfect drop-in replacement; deduct for differences in bore/stroke availability, mounting, thread, electrical specs, dimensions, and for every uncertainty.
 12. If the model number is completely unrecognizable, say so explicitly and use "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".
+13. VALVE FLOW (Cv) RULE: for solenoid/pneumatic/fluid valves, flow capacity is a critical spec. The candidate series data includes a \`specs\` array with \`cv\` (flow coefficient) values. You MUST compare the competitor valve's port size / flow class against the AirTAC candidate's \`cv\` in \`specs\`, prefer the candidate whose Cv is closest, mention the Cv comparison in \`reasoningForOrderingCode\`, and if Cv differs noticeably add it to \`uncertainties\` and lower matchPercentage. Never ignore Cv when matching valves.
+14. WIRE/LEAD LENGTH RULE: for lead-wire type valves (e.g. 6SV/7SV series that have a \`leadLength\` category), the ordering code ends with the lead length code. If the competitor specifies a lead/cable length, select the matching \`leadLength\` option; otherwise use the standard (blank/0.5m) and note it. Do not drop the lead length position for series that define it.
 
 Your task:
 1. Identify the competitor's brand(s).

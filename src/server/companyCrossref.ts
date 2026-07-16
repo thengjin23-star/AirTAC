@@ -81,19 +81,34 @@ export function matchCompanyTable(input: string, brand?: string): CompanyMatch[]
   return out.slice(0, 8);
 }
 
-/** 把命中的 AirTAC 系列字串 (如 "SE"、"GFR200~600"、"3V2M") 對回型錄系列 id。 */
+// 預先建立「系列變體選項代碼 → 系列 id」索引 (整併後 MAC/TCM/TWM 等變體已成為
+// series 下拉選項，不再是獨立 id，需靠此索引才能把公司表的變體代碼對回系列)。
+const variantCodeToId = new Map<string, string>();
+for (const s of defaultCatalog) {
+  const seriesCat = (s.categories || []).find(c => c.id === 'series' || c.id === 'type' || c.id === 'spec');
+  for (const opt of seriesCat?.options || []) {
+    const c = (opt.code || '').toUpperCase().replace(/[^A-Z0-9-]/g, '');
+    if (c.length >= 2 && !variantCodeToId.has(c)) variantCodeToId.set(c, s.id);
+  }
+}
+
+/** 把命中的 AirTAC 系列字串 (如 "SE"、"GFR200~600"、"3V2M"、"MAC") 對回型錄系列 id。 */
 export function companyMatchCatalogIds(matches: CompanyMatch[]): string[] {
   const ids: string[] = [];
+  const add = (id: string) => { if (!ids.includes(id)) ids.push(id); };
   for (const m of matches) {
     for (const raw of m.entry.airtac.split(/[\/,，、\s]+/)) {
       const token = raw.trim().split('~')[0].toUpperCase().replace(/[^A-Z0-9-]/g, '');
       if (token.length < 2) continue;
       const ap = alphaPrefix(token);
+      // 先比對系列變體選項 (整併後的 MAC/TCM/TWM 等)
+      if (variantCodeToId.has(token)) add(variantCodeToId.get(token)!);
+      else if (ap.length >= 2 && variantCodeToId.has(ap)) add(variantCodeToId.get(ap)!);
       for (const s of defaultCatalog) {
         const code = (s.code || '').toUpperCase().replace(/\s+/g, '');
         const id = s.id.toUpperCase();
         if (code === token || id === token || (ap.length >= 2 && (code === ap || id === ap))) {
-          if (!ids.includes(s.id)) ids.push(s.id);
+          add(s.id);
         }
       }
     }
