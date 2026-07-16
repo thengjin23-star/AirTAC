@@ -227,7 +227,65 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.230"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.230",
+    specs: [
+      {
+        model: "2JS150-10",
+        port: "G3/8",
+        orifice: "15mm",
+        kv: "4.4",
+        weightG: "700"
+      },
+      {
+        model: "2JS150-15",
+        port: "G1/2",
+        orifice: "15mm",
+        kv: "4.8",
+        weightG: "700"
+      },
+      {
+        model: "2JS200-20",
+        port: "G3/4",
+        orifice: "20mm",
+        kv: "7.9",
+        weightG: "900"
+      },
+      {
+        model: "2JS200-20",
+        port: "G3/4",
+        orifice: "20mm",
+        kv: "8",
+        weightG: "950"
+      },
+      {
+        model: "2JS250-25",
+        port: "G1",
+        orifice: "25mm",
+        kv: "19",
+        weightG: "1900"
+      },
+      {
+        model: "2JS250-25",
+        port: "G1",
+        orifice: "25mm",
+        kv: "20",
+        weightG: "2500"
+      },
+      {
+        model: "2JS320-32",
+        port: "G1 1/4",
+        orifice: "32mm",
+        kv: "27",
+        weightG: "2500"
+      },
+      {
+        model: "2JS320-32",
+        port: "G1 1/4",
+        orifice: "32mm",
+        kv: "28",
+        weightG: "3000"
+      }
+    ]
   },
   {
     id: "2KLA",
@@ -410,7 +468,121 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.197"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.197",
+    specs: [
+      {
+        model: "2KLA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "243.5"
+      },
+      {
+        model: "2KLA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "233.5"
+      },
+      {
+        model: "2KLA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "243.5"
+      },
+      {
+        model: "2KLA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "233.5"
+      },
+      {
+        model: "2KLA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "528"
+      },
+      {
+        model: "2KLA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "508"
+      },
+      {
+        model: "2KLA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "528"
+      },
+      {
+        model: "2KLA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "508"
+      },
+      {
+        model: "2KLA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        weightG: "569"
+      },
+      {
+        model: "2KLA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        weightG: "722"
+      },
+      {
+        model: "2KLA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        weightG: "1026"
+      },
+      {
+        model: "2KLA320-32",
+        port: "PT1 1/4",
+        orifice: "35.0mm",
+        cv: "23.00",
+        flowS: "420.0",
+        weightG: "2261"
+      },
+      {
+        model: "2KLA400-40",
+        port: "PT1 1/2",
+        orifice: "40.0mm",
+        cv: "31.00",
+        flowS: "560.0",
+        weightG: "2641"
+      },
+      {
+        model: "2KLA500-50",
+        port: "PT2",
+        orifice: "50.0mm",
+        cv: "49.00",
+        flowS: "880.0",
+        weightG: "3508"
+      }
+    ]
   },
   {
     id: "2KSA",
@@ -601,7 +773,171 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.189"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.189",
+    specs: [
+      {
+        model: "2KSA030-06",
+        port: "PT1/8",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2KSA030-08",
+        port: "PT1/4",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2KSA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2KSA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2KSA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2KSA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2KSA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2KSA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2KSA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2KSA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2KSA050-10",
+        port: "PT3/8",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2KSA050-15",
+        port: "PT1/2",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2KSA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "575"
+      },
+      {
+        model: "2KSA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "735"
+      },
+      {
+        model: "2KSA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "1035"
+      },
+      {
+        model: "2KSA320-32",
+        port: "PT1 1/4",
+        orifice: "35.0mm",
+        cv: "23.00",
+        flowS: "420.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2287"
+      },
+      {
+        model: "2KSA400-40",
+        port: "PT1 1/2",
+        orifice: "40.0mm",
+        cv: "31.00",
+        flowS: "560.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2677"
+      },
+      {
+        model: "2KSA500-50",
+        port: "PT2",
+        orifice: "50.0mm",
+        cv: "49.00",
+        flowS: "880.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "3557"
+      }
+    ]
   },
   {
     id: "2KWA",
@@ -764,7 +1100,132 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.181"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.181",
+    specs: [
+      {
+        model: "2KWA030-06",
+        port: "PT1/8",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        weightG: "245"
+      },
+      {
+        model: "2KWA030-08",
+        port: "PT1/4",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        weightG: "235"
+      },
+      {
+        model: "2KWA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "245"
+      },
+      {
+        model: "2KWA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "235"
+      },
+      {
+        model: "2KWA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "245"
+      },
+      {
+        model: "2KWA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "235"
+      },
+      {
+        model: "2KWA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "530"
+      },
+      {
+        model: "2KWA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "510"
+      },
+      {
+        model: "2KWA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "530"
+      },
+      {
+        model: "2KWA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "510"
+      },
+      {
+        model: "2KWA050-10",
+        port: "PT3/8",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        weightG: "530"
+      },
+      {
+        model: "2KWA050-15",
+        port: "PT1/2",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        weightG: "510"
+      },
+      {
+        model: "2KWA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "575"
+      },
+      {
+        model: "2KWA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "735"
+      },
+      {
+        model: "2KWA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "1035"
+      }
+    ]
   },
   {
     id: "2LA",
@@ -943,7 +1404,127 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.193"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.193",
+    specs: [
+      {
+        model: "2LA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "244.5"
+      },
+      {
+        model: "2LA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "234.5"
+      },
+      {
+        model: "2LA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "244.5"
+      },
+      {
+        model: "2LA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "234.5"
+      },
+      {
+        model: "2LA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "529"
+      },
+      {
+        model: "2LA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "509"
+      },
+      {
+        model: "2LA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "529"
+      },
+      {
+        model: "2LA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "509"
+      },
+      {
+        model: "2LA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "570"
+      },
+      {
+        model: "2LA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "723"
+      },
+      {
+        model: "2LA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "1027"
+      },
+      {
+        model: "2LA320-32",
+        port: "PT1 1/4",
+        orifice: "35.0mm",
+        cv: "23.00",
+        flowS: "420.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2262"
+      },
+      {
+        model: "2LA400-40",
+        port: "PT1 1/2",
+        orifice: "40.0mm",
+        cv: "31.00",
+        flowS: "560.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2642"
+      },
+      {
+        model: "2LA500-50",
+        port: "PT2",
+        orifice: "50.0mm",
+        cv: "49.00",
+        flowS: "880.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "3508"
+      }
+    ]
   },
   {
     id: "2SA",
@@ -1134,7 +1715,189 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.185"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.185",
+    specs: [
+      {
+        model: "2SA030-06",
+        port: "PT1/8",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2SA030-08",
+        port: "PT1/4",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2SA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2SA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2SA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "245"
+      },
+      {
+        model: "2SA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "235"
+      },
+      {
+        model: "2SA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2SA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2SA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2SA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2SA050-10",
+        port: "PT3/8",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2SA050-15",
+        port: "PT1/2",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2SA050-10",
+        port: "PT3/8",
+        orifice: "10.0mm",
+        cv: "2.20",
+        flowS: "40.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "530"
+      },
+      {
+        model: "2SA050-15",
+        port: "PT1/2",
+        orifice: "10.0mm",
+        cv: "2.20",
+        flowS: "40.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "510"
+      },
+      {
+        model: "2SA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "575"
+      },
+      {
+        model: "2SA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "735"
+      },
+      {
+        model: "2SA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "1035"
+      },
+      {
+        model: "2SA320-32",
+        port: "PT1 1/4",
+        orifice: "35.0mm",
+        cv: "23.00",
+        flowS: "420.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2288"
+      },
+      {
+        model: "2SA400-40",
+        port: "PT1 1/2",
+        orifice: "40.0mm",
+        cv: "31.00",
+        flowS: "560.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "2678"
+      },
+      {
+        model: "2SA500-50",
+        port: "PT2",
+        orifice: "50.0mm",
+        cv: "49.00",
+        flowS: "880.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "3558"
+      }
+    ]
   },
   {
     id: "2V",
@@ -1263,7 +2026,51 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.206"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.206",
+    specs: [
+      {
+        model: "2V025-06",
+        port: '1/8"',
+        orifice: "2.5mm",
+        cv: "0.23",
+        workingPressure: "0.05~1.0MPa"
+      },
+      {
+        model: "2V025-08",
+        port: '1/4"',
+        orifice: "2.5mm",
+        cv: "0.25",
+        workingPressure: "0.05~1.0MPa"
+      },
+      {
+        model: "2V130-10",
+        port: '3/8"',
+        orifice: "13mm",
+        cv: "6.20",
+        workingPressure: "0.05~1.0MPa"
+      },
+      {
+        model: "2V130-15",
+        port: '1/2"',
+        orifice: "13mm",
+        cv: "6.20",
+        workingPressure: "0.05~1.0MPa"
+      },
+      {
+        model: "2V250-20",
+        port: '3/4"',
+        orifice: "25mm",
+        cv: "13.00",
+        workingPressure: "0.05~1.0MPa"
+      },
+      {
+        model: "2V250-25",
+        port: '1"',
+        orifice: "25mm",
+        cv: "13.00",
+        workingPressure: "0.05~1.0MPa"
+      }
+    ]
   },
   {
     id: "2P",
@@ -1360,7 +2167,23 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.208"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.208",
+    specs: [
+      {
+        model: "2P025-06",
+        port: "G1/8",
+        orifice: "2.5mm",
+        cv: "0.23",
+        workingPressure: "0~0.7MPa"
+      },
+      {
+        model: "2P025-08",
+        port: "G1/4",
+        orifice: "2.5mm",
+        cv: "0.23",
+        workingPressure: "0~0.7MPa"
+      }
+    ]
   },
   {
     id: "2WA",
@@ -1519,7 +2342,132 @@ var catalog_fluid_valves_default = [
       }
     ],
     note: "",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.178"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.178",
+    specs: [
+      {
+        model: "2WA030-06",
+        port: "PT1/8",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        weightG: "245"
+      },
+      {
+        model: "2WA030-08",
+        port: "PT1/4",
+        orifice: "1.5mm",
+        cv: "0.10",
+        flowS: "1.8",
+        weightG: "235"
+      },
+      {
+        model: "2WA030-06",
+        port: "PT1/8",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "245"
+      },
+      {
+        model: "2WA030-08",
+        port: "PT1/4",
+        orifice: "2.0mm",
+        cv: "0.18",
+        flowS: "3.0",
+        weightG: "235"
+      },
+      {
+        model: "2WA030-06",
+        port: "PT1/8",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "245"
+      },
+      {
+        model: "2WA030-08",
+        port: "PT1/4",
+        orifice: "3.0mm",
+        cv: "0.33",
+        flowS: "6.0",
+        weightG: "235"
+      },
+      {
+        model: "2WA050-10",
+        port: "PT3/8",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "530"
+      },
+      {
+        model: "2WA050-15",
+        port: "PT1/2",
+        orifice: "4.0mm",
+        cv: "0.55",
+        flowS: "10.0",
+        weightG: "510"
+      },
+      {
+        model: "2WA050-10",
+        port: "PT3/8",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "530"
+      },
+      {
+        model: "2WA050-15",
+        port: "PT1/2",
+        orifice: "5.0mm",
+        cv: "0.83",
+        flowS: "15.0",
+        weightG: "510"
+      },
+      {
+        model: "2WA050-10",
+        port: "PT3/8",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        weightG: "530"
+      },
+      {
+        model: "2WA050-15",
+        port: "PT1/2",
+        orifice: "7.0mm",
+        cv: "1.40",
+        flowS: "25.0",
+        weightG: "510"
+      },
+      {
+        model: "2WA150-15",
+        port: "PT1/2",
+        orifice: "15.0mm",
+        cv: "5.50",
+        flowS: "100.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "575"
+      },
+      {
+        model: "2WA200-20",
+        port: "PT3/4",
+        orifice: "20.0mm",
+        cv: "9.50",
+        flowS: "170.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "735"
+      },
+      {
+        model: "2WA250-25",
+        port: "PT1",
+        orifice: "25.0mm",
+        cv: "12.50",
+        flowS: "220.0",
+        workingPressure: "0.05~0.7MPa",
+        weightG: "1035"
+      }
+    ]
   }
 ];
 
@@ -3305,7 +4253,177 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "5A\u7CFB\u5217\u6C23\u63A7\u95A5202303011040044526.pdf (\u51713\u9801)"
+    sourceFile: "5A\u7CFB\u5217\u6C23\u63A7\u95A5202303011040044526.pdf (\u51713\u9801)",
+    specs: [
+      {
+        model: "5A110-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "85"
+      },
+      {
+        model: "5A120-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "140"
+      },
+      {
+        model: "5A130-M5",
+        port: "M5",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "5A110-06",
+        port: "PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "85"
+      },
+      {
+        model: "5A120-06",
+        port: "PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "140"
+      },
+      {
+        model: "5A130-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "5A210-06",
+        port: "PT1/8",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "185"
+      },
+      {
+        model: "5A220-06",
+        port: "PT1/8",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "285"
+      },
+      {
+        model: "5A230-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "5A210-08",
+        port: "PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "185"
+      },
+      {
+        model: "5A220-08",
+        port: "PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "285"
+      },
+      {
+        model: "5A230-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "5A310-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "275"
+      },
+      {
+        model: "5A320-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "5A330-08",
+        port: "PT1/4",
+        cv: "1.35",
+        flowS: "23.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "5A310-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "275"
+      },
+      {
+        model: "5A320-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "5A330-10",
+        port: "PT3/8",
+        cv: "1.35",
+        flowS: "23.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "5A410-15",
+        port: "PT1/2",
+        cv: "2.82",
+        flowS: "48.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "555"
+      },
+      {
+        model: "5A420-15",
+        port: "PT1/2",
+        cv: "2.82",
+        flowS: "48.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "685"
+      },
+      {
+        model: "5A430-15",
+        port: "PT1/2",
+        cv: "2.35",
+        flowS: "40.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "735"
+      }
+    ]
   },
   {
     id: "eav",
@@ -3359,7 +4477,33 @@ var catalog_solenoid_valves_default = [
     ],
     note: "\u53E6\u6709\u642D\u914D\u5E95\u5EA7\u3001\u7AEF\u677F\u7B49\u7D44\u4EF6,\u8A02\u8CFC\u78BC\u7D50\u69CB\u8207ESV\u7CFB\u5217\u5E95\u5EA7\u7D44\u4EF6(ESV{\u7CFB\u5217}{\u578B\u5F0F\u4EE3\u865F})\u76F8\u540C,\u8A73\u898B\u578B\u9304P3-8",
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "EAV\u7CFB\u5217\u6A19\u6E96\u6C23\u63A7\u95A5202303011043369046.pdf (\u51718\u9801)"
+    sourceFile: "EAV\u7CFB\u5217\u6A19\u6E96\u6C23\u63A7\u95A5202303011043369046.pdf (\u51718\u9801)",
+    specs: [
+      {
+        model: "200\u7CFB\u5217",
+        cv: "1.8",
+        flowS: "32",
+        workingPressure: "0.2~1.0MPa"
+      },
+      {
+        model: "300\u7CFB\u5217",
+        cv: "2.32",
+        flowS: "42",
+        workingPressure: "0.2~1.0MPa"
+      },
+      {
+        model: "400\u7CFB\u5217",
+        cv: "3.85",
+        flowS: "69",
+        workingPressure: "0.2~1.0MPa"
+      },
+      {
+        model: "600\u7CFB\u5217",
+        cv: "6.0",
+        flowS: "108",
+        workingPressure: "0.2~1.0MPa"
+      }
+    ]
   },
   {
     id: "4sa",
@@ -3429,7 +4573,105 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "4SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202602240320587106.pdf (\u51714\u9801)"
+    sourceFile: "4SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202602240320587106.pdf (\u51714\u9801)",
+    specs: [
+      {
+        model: "4SA110",
+        port: "M5/PT1/8",
+        cv: "0.6",
+        flowS: "10.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "69"
+      },
+      {
+        model: "4SA120",
+        port: "M5/PT1/8",
+        cv: "0.6",
+        flowS: "10.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "81"
+      },
+      {
+        model: "4SA130",
+        port: "M5/PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "90"
+      },
+      {
+        model: "4SA210",
+        port: "PT1/8/PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "123"
+      },
+      {
+        model: "4SA220",
+        port: "PT1/8/PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "149"
+      },
+      {
+        model: "4SA230",
+        port: "PT1/8/PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "168.5"
+      },
+      {
+        model: "4SA310",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "31.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "216"
+      },
+      {
+        model: "4SA320",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "31.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "254"
+      },
+      {
+        model: "4SA330",
+        port: "PT1/4/PT3/8",
+        cv: "1.4",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "280"
+      },
+      {
+        model: "4SA410",
+        port: "PT1/2",
+        cv: "3.2",
+        flowS: "57.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "436.5"
+      },
+      {
+        model: "4SA420",
+        port: "PT1/2",
+        cv: "3.2",
+        flowS: "57.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "519"
+      },
+      {
+        model: "4SA430",
+        port: "PT1/2",
+        cv: "3.0",
+        flowS: "54.1",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "566.5"
+      }
+    ]
   },
   {
     id: "6sa",
@@ -3503,7 +4745,129 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "6SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512110941149896.pdf (\u51714\u9801)"
+    sourceFile: "6SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512110941149896.pdf (\u51714\u9801)",
+    specs: [
+      {
+        model: "6SA0510",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "22.5"
+      },
+      {
+        model: "6SA0520",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "26.5"
+      },
+      {
+        model: "6SA0530",
+        port: "M5",
+        cv: "0.2",
+        flowS: "3.7",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "28.5"
+      },
+      {
+        model: "6SA110",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "54"
+      },
+      {
+        model: "6SA120",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "62.5"
+      },
+      {
+        model: "6SA130",
+        port: "M5/PT1/8",
+        cv: "0.5",
+        flowS: "10.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "67.5"
+      },
+      {
+        model: "6SA210",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "101.5"
+      },
+      {
+        model: "6SA220",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "121"
+      },
+      {
+        model: "6SA230",
+        port: "PT1/8/PT1/4",
+        cv: "0.9",
+        flowS: "16.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "130"
+      },
+      {
+        model: "6SA310",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "247.5"
+      },
+      {
+        model: "6SA320",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "286.5"
+      },
+      {
+        model: "6SA330",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "30.5",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "332"
+      },
+      {
+        model: "6SA410",
+        port: "PT1/2",
+        cv: "3.2",
+        flowS: "57.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "396"
+      },
+      {
+        model: "6SA420",
+        port: "PT1/2",
+        cv: "3.2",
+        flowS: "57.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "458.5"
+      },
+      {
+        model: "6SA430",
+        port: "PT1/2",
+        cv: "3.0",
+        flowS: "54.1",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "535"
+      }
+    ]
   },
   {
     id: "7sa",
@@ -3578,7 +4942,105 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "7SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512150946419976.pdf (\u51714\u9801)"
+    sourceFile: "7SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512150946419976.pdf (\u51714\u9801)",
+    specs: [
+      {
+        model: "7SA0510",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "22.5"
+      },
+      {
+        model: "7SA0520",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "26.5"
+      },
+      {
+        model: "7SA0530",
+        port: "M5",
+        cv: "0.2",
+        flowS: "3.7",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "28.5"
+      },
+      {
+        model: "7SA110",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "54"
+      },
+      {
+        model: "7SA120",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "62.5"
+      },
+      {
+        model: "7SA130",
+        port: "M5/PT1/8",
+        cv: "0.5",
+        flowS: "10.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "67.5"
+      },
+      {
+        model: "7SA210",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "101.5"
+      },
+      {
+        model: "7SA220",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "121"
+      },
+      {
+        model: "7SA230",
+        port: "PT1/8/PT1/4",
+        cv: "0.9",
+        flowS: "16.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "130"
+      },
+      {
+        model: "7SA310",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "247.5"
+      },
+      {
+        model: "7SA320",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "286.5"
+      },
+      {
+        model: "7SA330",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "30.5",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "332"
+      }
+    ]
   },
   {
     id: "4sta",
@@ -3654,7 +5116,57 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "4STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202602240321205236.pdf (\u51713\u9801)"
+    sourceFile: "4STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202602240321205236.pdf (\u51713\u9801)",
+    specs: [
+      {
+        model: "4STA110",
+        port: "M5/PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "58.5"
+      },
+      {
+        model: "4STA120",
+        port: "M5/PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "70.5"
+      },
+      {
+        model: "4STA210",
+        port: "PT1/8/PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "111.5"
+      },
+      {
+        model: "4STA220",
+        port: "PT1/8/PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "137"
+      },
+      {
+        model: "4STA310",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "31.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "180"
+      },
+      {
+        model: "4STA320",
+        port: "PT1/4/PT3/8",
+        cv: "1.8",
+        flowS: "31.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "218"
+      }
+    ]
   },
   {
     id: "6sta",
@@ -3734,7 +5246,73 @@ var catalog_solenoid_valves_default = [
       }
     ],
     workingPressureRange: "0.15~0.8MPa(21~114psi)",
-    sourceFile: "6STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202512110940087246.pdf (\u51714\u9801)"
+    sourceFile: "6STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202512110940087246.pdf (\u51714\u9801)",
+    specs: [
+      {
+        model: "6STA0510",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "18.5"
+      },
+      {
+        model: "6STA0520",
+        port: "M5",
+        cv: "0.25",
+        flowS: "4.25",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "22.5"
+      },
+      {
+        model: "6STA110",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "45"
+      },
+      {
+        model: "6STA120",
+        port: "M5/PT1/8",
+        cv: "0.7",
+        flowS: "12.3",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "53.5"
+      },
+      {
+        model: "6STA210",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "94"
+      },
+      {
+        model: "6STA220",
+        port: "PT1/8/PT1/4",
+        cv: "1.05",
+        flowS: "17.9",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "113.5"
+      },
+      {
+        model: "6STA310",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "180"
+      },
+      {
+        model: "6STA320",
+        port: "PT1/4/PT3/8",
+        cv: "2.25",
+        flowS: "38.4",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "218"
+      }
+    ]
   },
   {
     id: "hsv",
@@ -6525,7 +8103,37 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.113"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.113",
+    specs: [
+      {
+        model: "3A110-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A120-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A110-06",
+        port: "PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A120-06",
+        port: "PT1/8",
+        cv: "0.6",
+        flowS: "10.2",
+        workingPressure: "0.15~0.8MPa"
+      }
+    ]
   },
   {
     id: "3A200",
@@ -6612,7 +8220,37 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.114"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.114",
+    specs: [
+      {
+        model: "3A210-06",
+        port: "PT1/8",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A220-06",
+        port: "PT1/8",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A210-08",
+        port: "PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A220-08",
+        port: "PT1/4",
+        cv: "1.0",
+        flowS: "17.0",
+        workingPressure: "0.15~0.8MPa"
+      }
+    ]
   },
   {
     id: "3A300",
@@ -6699,7 +8337,37 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.115"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.115",
+    specs: [
+      {
+        model: "3A310-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A320-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A310-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa"
+      },
+      {
+        model: "3A320-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa"
+      }
+    ]
   },
   {
     id: "4A100",
@@ -6780,7 +8448,89 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.123"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.123",
+    specs: [
+      {
+        model: "4A110-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "140"
+      },
+      {
+        model: "4A120-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130C-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130E-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130P-M5",
+        port: "M5",
+        cv: "0.6",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A110-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "140"
+      },
+      {
+        model: "4A120-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130C-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130E-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      },
+      {
+        model: "4A130P-06",
+        port: "PT1/8",
+        cv: "0.51",
+        flowS: "8.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "165"
+      }
+    ]
   },
   {
     id: "4A200",
@@ -6861,7 +8611,89 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.125"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.125",
+    specs: [
+      {
+        model: "4A210-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "185"
+      },
+      {
+        model: "4A220-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "285"
+      },
+      {
+        model: "4A230C-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A230E-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A230P-06",
+        port: "PT1/8",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A210-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "185"
+      },
+      {
+        model: "4A220-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "285"
+      },
+      {
+        model: "4A230C-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A230E-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A230P-08",
+        port: "PT1/4",
+        cv: "0.8",
+        flowS: "13.6",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      }
+    ]
   },
   {
     id: "4A300",
@@ -6942,7 +8774,89 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.127"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.127",
+    specs: [
+      {
+        model: "4A310-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "275"
+      },
+      {
+        model: "4A320-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A330C-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "4A330E-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "4A330P-08",
+        port: "PT1/4",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "4A310-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "275"
+      },
+      {
+        model: "4A320-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "365"
+      },
+      {
+        model: "4A330C-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "4A330E-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      },
+      {
+        model: "4A330P-10",
+        port: "PT3/8",
+        cv: "1.65",
+        flowS: "28.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "505"
+      }
+    ]
   },
   {
     id: "4A400",
@@ -7019,7 +8933,49 @@ var catalog_solenoid_valves_default = [
       }
     ],
     note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.129"
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.129",
+    specs: [
+      {
+        model: "4A410-15",
+        port: "PT1/2",
+        cv: "2.82",
+        flowS: "48.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "555"
+      },
+      {
+        model: "4A420-15",
+        port: "PT1/2",
+        cv: "2.82",
+        flowS: "48.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "685"
+      },
+      {
+        model: "4A430C-15",
+        port: "PT1/2",
+        cv: "2.35",
+        flowS: "40.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "735"
+      },
+      {
+        model: "4A430E-15",
+        port: "PT1/2",
+        cv: "2.35",
+        flowS: "40.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "735"
+      },
+      {
+        model: "4A430P-15",
+        port: "PT1/2",
+        cv: "2.35",
+        flowS: "40.0",
+        workingPressure: "0.15~0.8MPa",
+        weightG: "735"
+      }
+    ]
   },
   {
     id: "4F210",
