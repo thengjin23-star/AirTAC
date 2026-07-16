@@ -4576,398 +4576,6 @@
   ]
  },
  {
-  "id": "npm",
-  "category": "執行元件",
-  "superGroup": "打刀氣缸",
-  "group": "NPM系列",
-  "code": "NPM",
-  "name": "打刀氣缸",
-  "format": "{code} {output} {bore_stroke} {voltage} {connection} {switch}",
-  "categories": [
-   {
-    "id": "output",
-    "name": "出力",
-    "options": [
-     {
-      "code": "35T",
-      "description": "35T: 出力3.5噸"
-     },
-     {
-      "code": "45T",
-      "description": "45T: 出力4.5噸"
-     },
-     {
-      "code": "60T",
-      "description": "60T: 出力6.0噸"
-     }
-    ]
-   },
-   {
-    "id": "bore_stroke",
-    "name": "液壓缸徑X打刀行程",
-    "options": [
-     {
-      "code": "63x13",
-      "description": "63x13: 液壓缸徑63mm；打刀行程13mm"
-     },
-     {
-      "code": "63x15",
-      "description": "63x15: 液壓缸徑63mm；打刀行程15mm"
-     },
-     {
-      "code": "70x15",
-      "description": "70x15: 液壓缸徑70mm；打刀行程15mm"
-     }
-    ]
-   },
-   {
-    "id": "voltage",
-    "name": "標準電壓",
-    "options": [
-     {
-      "code": "A",
-      "description": "A: AC220V"
-     },
-     {
-      "code": "B",
-      "description": "B: DC24V"
-     },
-     {
-      "code": "C",
-      "description": "C: AC110V"
-     },
-     {
-      "code": "E",
-      "description": "E: AC24V"
-     },
-     {
-      "code": "F",
-      "description": "F: DC12V"
-     }
-    ]
-   },
-   {
-    "id": "connection",
-    "name": "接電方式",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: DIN插座式"
-     },
-     {
-      "code": "I",
-      "description": "I: 出線式"
-     }
-    ]
-   },
-   {
-    "id": "switch",
-    "name": "微動開關",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附微動開關"
-     },
-     {
-      "code": "L",
-      "description": "L: 2個微動開關"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "jqk",
-  "category": "執行元件",
-  "superGroup": "銷釘氣缸",
-  "group": "JQK系列",
-  "code": "JQK",
-  "name": "底板夾緊氣缸",
-  "format": "{code} {bore} {rod_dir} - {pin_dia} {boss_height} {clamp_thickness} {sensor} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "rod_dir",
-    "name": "拉杆方向",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 正向"
-     },
-     {
-      "code": "R",
-      "description": "R: 反向"
-     }
-    ]
-   },
-   {
-    "id": "pin_dia",
-    "name": "導向銷直徑",
-    "options": [
-     {
-      "code": "17",
-      "description": "17: Φ17.x"
-     },
-     {
-      "code": "19",
-      "description": "19: Φ19.x"
-     },
-     {
-      "code": "24",
-      "description": "24: Φ24.x"
-     },
-     {
-      "code": "29",
-      "description": "29: Φ29.x"
-     }
-    ]
-   },
-   {
-    "id": "boss_height",
-    "name": "凸臺高度",
-    "options": [
-     {
-      "code": "L45",
-      "description": "L45: 45mm"
-     }
-    ]
-   },
-   {
-    "id": "clamp_thickness",
-    "name": "夾緊厚度",
-    "options": [
-     {
-      "code": "T16",
-      "description": "T16: 1.6mm"
-     }
-    ]
-   },
-   {
-    "id": "sensor",
-    "name": "傳感器",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附傳感器"
-     },
-     {
-      "code": "K",
-      "description": "K: 附電感傳感器(PNP型)"
-     },
-     {
-      "code": "KN",
-      "description": "KN: 附電感傳感器(NPN型)"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "jcp",
-  "category": "執行元件",
-  "superGroup": "銷釘氣缸",
-  "group": "JCP系列",
-  "code": "JCP",
-  "name": "單伸縮銷",
-  "format": "{code} {bore}X{stroke} {pin_type} {sensor} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "pin_type",
-    "name": "銷釘類型",
-    "options": [
-     {
-      "code": "A",
-      "description": "A型"
-     },
-     {
-      "code": "B",
-      "description": "B型"
-     },
-     {
-      "code": "C",
-      "description": "C型"
-     },
-     {
-      "code": "D",
-      "description": "D型"
-     }
-    ]
-   },
-   {
-    "id": "sensor",
-    "name": "傳感器",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附傳感器"
-     },
-     {
-      "code": "K",
-      "description": "K: 附電感傳感器(PNP型)"
-     },
-     {
-      "code": "KN",
-      "description": "KN: 附電感傳感器(NPN型)"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "jch",
-  "category": "執行元件",
-  "superGroup": "銷釘氣缸",
-  "group": "JCH系列",
-  "code": "JCH",
-  "name": "雙伸縮銷",
-  "format": "{code} {bore}X{stroke} {pin_type} {sensor} {thread}",
-  "categories": [
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "60",
-      "description": "60mm"
-     }
-    ]
-   },
-   {
-    "id": "pin_type",
-    "name": "銷釘類型",
-    "options": [
-     {
-      "code": "A",
-      "description": "A型"
-     },
-     {
-      "code": "B",
-      "description": "B型"
-     }
-    ]
-   },
-   {
-    "id": "sensor",
-    "name": "傳感器",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附傳感器"
-     },
-     {
-      "code": "K",
-      "description": "K: 附電感傳感器(PNP型)"
-     },
-     {
-      "code": "KN",
-      "description": "KN: 附電感傳感器(NPN型)"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     },
-     {
-      "code": "G",
-      "description": "G: G牙"
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "aqk",
   "category": "執行元件",
   "superGroup": "銷釘氣缸",
@@ -5282,506 +4890,6 @@
   ]
  },
  {
-  "id": "twq",
-  "category": "執行元件",
-  "superGroup": "阻擋氣缸",
-  "group": "TWQ系列",
-  "code": "TWQ",
-  "name": "阻擋氣缸",
-  "format": "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "種類",
-    "options": [
-     {
-      "code": "TWQ",
-      "description": "TWQ: 阻擋氣缸(高度固定複動型)"
-     },
-     {
-      "code": "TTQ",
-      "description": "TTQ: 阻擋氣缸(高度固定單動引入型)"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "block_type",
-    "name": "阻擋方式",
-    "options": [
-     {
-      "code": "C",
-      "description": "C: 圓柱型"
-     },
-     {
-      "code": "B",
-      "description": "B: 扁柱型"
-     },
-     {
-      "code": "R",
-      "description": "R: 滾輪型"
-     },
-     {
-      "code": "K",
-      "description": "K: 杠杆式滾輪型(帶可調油壓緩衝器)"
-     }
-    ]
-   },
-   {
-    "id": "self_lock",
-    "name": "自鎖功能",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無自鎖"
-     },
-     {
-      "code": "F",
-      "description": "F: 帶自鎖"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "twg",
-  "category": "執行元件",
-  "superGroup": "阻擋氣缸",
-  "group": "TWG系列",
-  "code": "TWG",
-  "name": "阻擋氣缸",
-  "format": "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "種類",
-    "options": [
-     {
-      "code": "TWG",
-      "description": "TWG: 阻擋氣缸(高度可調複動型)"
-     },
-     {
-      "code": "TTG",
-      "description": "TTG: 阻擋氣缸(高度可調單動引入型)"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "10",
-      "description": "10mm"
-     },
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "block_type",
-    "name": "阻擋方式",
-    "options": [
-     {
-      "code": "C",
-      "description": "C: 圓柱型"
-     },
-     {
-      "code": "B",
-      "description": "B: 扁柱型"
-     },
-     {
-      "code": "R",
-      "description": "R: 滾輪型"
-     },
-     {
-      "code": "K",
-      "description": "K: 杠杆式滾輪型(帶可調油壓緩衝器)"
-     }
-    ]
-   },
-   {
-    "id": "self_lock",
-    "name": "自鎖功能",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無自鎖"
-     },
-     {
-      "code": "F",
-      "description": "F: 帶自鎖"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "twh",
-  "category": "執行元件",
-  "superGroup": "阻擋氣缸",
-  "group": "TWH系列",
-  "code": "TWH",
-  "name": "阻擋氣缸",
-  "format": "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "種類",
-    "options": [
-     {
-      "code": "TWH",
-      "description": "TWH: 阻擋氣缸(複動型)"
-     },
-     {
-      "code": "TDH",
-      "description": "TDH: 阻擋氣缸(內置彈簧複動型)"
-     },
-     {
-      "code": "TTH",
-      "description": "TTH: 阻擋氣缸(單動引入型)"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "25",
-      "description": "25mm"
-     },
-     {
-      "code": "32",
-      "description": "32mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     },
-     {
-      "code": "50",
-      "description": "50mm"
-     },
-     {
-      "code": "63",
-      "description": "63mm"
-     },
-     {
-      "code": "80",
-      "description": "80mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "15",
-      "description": "15mm"
-     },
-     {
-      "code": "20",
-      "description": "20mm"
-     },
-     {
-      "code": "30",
-      "description": "30mm"
-     },
-     {
-      "code": "40",
-      "description": "40mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "block_type",
-    "name": "阻擋方式",
-    "options": [
-     {
-      "code": "L",
-      "description": "L: 杠杆式滾輪型(不可調油壓緩衝器)"
-     },
-     {
-      "code": "K",
-      "description": "K: 杠杆式滾輪型(可調油壓緩衝器)"
-     }
-    ]
-   },
-   {
-    "id": "self_lock",
-    "name": "自鎖功能",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無自鎖"
-     },
-     {
-      "code": "F",
-      "description": "F: 帶自鎖"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙(或M5)"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "twm",
-  "category": "執行元件",
-  "superGroup": "阻擋氣缸",
-  "group": "TWM系列",
-  "code": "TWM",
-  "name": "阻擋氣缸",
-  "format": "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "種類",
-    "options": [
-     {
-      "code": "TWM",
-      "description": "TWM: 阻擋氣缸(複動型)"
-     },
-     {
-      "code": "TDM",
-      "description": "TDM: 阻擋氣缸(內置彈簧複動型)"
-     },
-     {
-      "code": "TTM",
-      "description": "TTM: 阻擋氣缸(單動引入型)"
-     }
-    ]
-   },
-   {
-    "id": "bore",
-    "name": "缸徑",
-    "options": [
-     {
-      "code": "50",
-      "description": "50mm"
-     }
-    ]
-   },
-   {
-    "id": "stroke",
-    "name": "行程",
-    "options": [
-     {
-      "code": "30",
-      "description": "30mm"
-     }
-    ]
-   },
-   {
-    "id": "magnet",
-    "name": "磁石代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 不附磁石"
-     },
-     {
-      "code": "S",
-      "description": "S: 附磁石"
-     }
-    ]
-   },
-   {
-    "id": "block_type",
-    "name": "阻擋方式",
-    "options": [
-     {
-      "code": "K",
-      "description": "K: 杠杆式滾輪型(可調油壓緩衝器)"
-     }
-    ]
-   },
-   {
-    "id": "self_lock",
-    "name": "自鎖功能",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 無自鎖"
-     },
-     {
-      "code": "F",
-      "description": "F: 帶自鎖"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: PT牙"
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "f_mq",
   "category": "執行元件",
   "superGroup": "氣缸附件",
@@ -5964,302 +5072,6 @@
      {
       "code": "250",
       "description": "250"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "dms",
-  "category": "執行元件",
-  "superGroup": "氣缸附件",
-  "group": "傳感器與安裝附件",
-  "code": "DMS",
-  "name": "DMS系列電子式傳感器",
-  "format": "{code}{type} - {output} {wire}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "系列代號",
-    "options": [
-     {
-      "code": "G",
-      "description": "G型"
-     },
-     {
-      "code": "H",
-      "description": "H型"
-     },
-     {
-      "code": "E",
-      "description": "E型"
-     },
-     {
-      "code": "J",
-      "description": "J型"
-     }
-    ]
-   },
-   {
-    "id": "output",
-    "name": "輸出型式與接線",
-    "options": [
-     {
-      "code": "020",
-      "description": "020: 二線式/三線式 線長2m"
-     },
-     {
-      "code": "030",
-      "description": "030: 二線式/三線式 線長3m"
-     },
-     {
-      "code": "050",
-      "description": "050: 二線式/三線式 線長5m"
-     },
-     {
-      "code": "100",
-      "description": "100: 二線式/三線式 線長10m"
-     },
-     {
-      "code": "M08",
-      "description": "M08: M8快速公接頭+0.5m線長"
-     },
-     {
-      "code": "M12",
-      "description": "M12: M12快速公接頭+0.5m線長"
-     }
-    ]
-   },
-   {
-    "id": "wire",
-    "name": "特規代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 一般型"
-     },
-     {
-      "code": "RW",
-      "description": "RW: 防水耐油抗撓曲型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "ems",
-  "category": "執行元件",
-  "superGroup": "氣缸附件",
-  "group": "傳感器與安裝附件",
-  "code": "EMS",
-  "name": "EMS系列電子式傳感器",
-  "format": "{code}{type} - {output} {wire}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "系列代號",
-    "options": [
-     {
-      "code": "G",
-      "description": "G型"
-     },
-     {
-      "code": "H",
-      "description": "H型"
-     }
-    ]
-   },
-   {
-    "id": "output",
-    "name": "輸出型式與接線",
-    "options": [
-     {
-      "code": "020",
-      "description": "020: 二線式/三線式 線長2m"
-     },
-     {
-      "code": "030",
-      "description": "030: 二線式/三線式 線長3m"
-     },
-     {
-      "code": "050",
-      "description": "050: 二線式/三線式 線長5m"
-     },
-     {
-      "code": "100",
-      "description": "100: 二線式/三線式 線長10m"
-     },
-     {
-      "code": "M08",
-      "description": "M08: M8快速公接頭+0.5m線長"
-     },
-     {
-      "code": "M12",
-      "description": "M12: M12快速公接頭+0.5m線長"
-     }
-    ]
-   },
-   {
-    "id": "wire",
-    "name": "特規代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 一般型"
-     },
-     {
-      "code": "RW",
-      "description": "RW: 防水耐油抗撓曲型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "cms",
-  "category": "執行元件",
-  "superGroup": "氣缸附件",
-  "group": "傳感器與安裝附件",
-  "code": "CMS",
-  "name": "CMS系列磁簧式傳感器",
-  "format": "{code}{type} - {output} {wire}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "系列代號",
-    "options": [
-     {
-      "code": "G",
-      "description": "G型"
-     },
-     {
-      "code": "H",
-      "description": "H型"
-     },
-     {
-      "code": "E",
-      "description": "E型"
-     },
-     {
-      "code": "J",
-      "description": "J型"
-     }
-    ]
-   },
-   {
-    "id": "output",
-    "name": "輸出型式與接線",
-    "options": [
-     {
-      "code": "020",
-      "description": "020: 二線式/三線式 線長2m"
-     },
-     {
-      "code": "030",
-      "description": "030: 二線式/三線式 線長3m"
-     },
-     {
-      "code": "050",
-      "description": "050: 二線式/三線式 線長5m"
-     },
-     {
-      "code": "100",
-      "description": "100: 二線式/三線式 線長10m"
-     },
-     {
-      "code": "M08",
-      "description": "M08: M8快速公接頭+0.5m線長"
-     },
-     {
-      "code": "M12",
-      "description": "M12: M12快速公接頭+0.5m線長"
-     }
-    ]
-   },
-   {
-    "id": "wire",
-    "name": "特規代號",
-    "options": [
-     {
-      "code": "",
-      "description": "空白: 一般型"
-     },
-     {
-      "code": "H",
-      "description": "H: 高溫型"
-     }
-    ]
-   }
-  ]
- },
- {
-  "id": "prsu",
-  "category": "執行元件",
-  "superGroup": "氣缸附件",
-  "group": "傳感器與安裝附件",
-  "code": "PRSU",
-  "name": "PRSU系列槽型光電傳感器",
-  "format": "{code} {type} - {output} {length}",
-  "categories": [
-   {
-    "id": "type",
-    "name": "系列代號",
-    "options": [
-     {
-      "code": "T",
-      "description": "T型"
-     },
-     {
-      "code": "F",
-      "description": "F型"
-     },
-     {
-      "code": "R",
-      "description": "R型"
-     },
-     {
-      "code": "K",
-      "description": "K型"
-     },
-     {
-      "code": "L",
-      "description": "L型"
-     },
-     {
-      "code": "Y",
-      "description": "Y型"
-     }
-    ]
-   },
-   {
-    "id": "output",
-    "name": "輸出型式",
-    "options": [
-     {
-      "code": "N",
-      "description": "N: NPN"
-     },
-     {
-      "code": "P",
-      "description": "P: PNP"
-     }
-    ]
-   },
-   {
-    "id": "length",
-    "name": "接線型式",
-    "options": [
-     {
-      "code": "020",
-      "description": "020: 線長2m"
-     },
-     {
-      "code": "030",
-      "description": "030: 線長3m"
-     },
-     {
-      "code": "050",
-      "description": "050: 線長5m"
      }
     ]
    }
@@ -13042,5 +11854,1278 @@
   ],
   "note": "HFZ系列均為附磁型，所配傳感器需另外訂購。",
   "sourceFile": "執行元件型錄(氣動手指) P.301"
+ },
+ {
+  "id": "npm",
+  "category": "執行元件",
+  "superGroup": "打刀氣缸",
+  "group": "NPM系列",
+  "code": "",
+  "name": "NPM系列 打刀氣缸",
+  "format": "{series}{output}{spec}{voltage}{connection}{switch}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "NPM",
+      "description": "打刀氣缸"
+     }
+    ]
+   },
+   {
+    "id": "output",
+    "name": "出力",
+    "options": [
+     {
+      "code": "35T",
+      "description": "出力3.5噸"
+     },
+     {
+      "code": "45T",
+      "description": "出力4.5噸"
+     },
+     {
+      "code": "60T",
+      "description": "出力6.0噸"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "液壓缸徑X打刀行程",
+    "options": [
+     {
+      "code": "63X13",
+      "description": "液壓缸徑63mm；打刀行程13mm"
+     },
+     {
+      "code": "63X15",
+      "description": "液壓缸徑63mm；打刀行程15mm"
+     },
+     {
+      "code": "70X15",
+      "description": "液壓缸徑70mm；打刀行程15mm"
+     }
+    ]
+   },
+   {
+    "id": "voltage",
+    "name": "標準電壓",
+    "options": [
+     {
+      "code": "A",
+      "description": "AC220V"
+     },
+     {
+      "code": "B",
+      "description": "DC24V"
+     },
+     {
+      "code": "C",
+      "description": "AC110V"
+     },
+     {
+      "code": "E",
+      "description": "AC24V"
+     },
+     {
+      "code": "F",
+      "description": "DC12V"
+     }
+    ]
+   },
+   {
+    "id": "connection",
+    "name": "接電方式",
+    "options": [
+     {
+      "code": "",
+      "description": "DIN插座式"
+     },
+     {
+      "code": "I",
+      "description": "出線式"
+     }
+    ]
+   },
+   {
+    "id": "switch",
+    "name": "微動開關",
+    "options": [
+     {
+      "code": "",
+      "description": "不附微動開關"
+     },
+     {
+      "code": "L",
+      "description": "2個微動開關"
+     }
+    ]
+   }
+  ],
+  "note": "打刀缸主體規格共四款，微動開關、電壓和接電方式可選。我司使用電磁閥型號為4M310。",
+  "sourceFile": "執行元件型錄 P.387"
+ },
+ {
+  "id": "jch",
+  "category": "執行元件",
+  "superGroup": "銷釘氣缸",
+  "group": "JCH系列",
+  "code": "",
+  "name": "JCH系列 雙伸縮銷",
+  "format": "{series}{bore}{stroke}{pin_type}{sensor}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "JCH",
+      "description": "雙伸縮銷"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "60",
+      "description": "60mm"
+     }
+    ]
+   },
+   {
+    "id": "pin_type",
+    "name": "銷釘類型",
+    "options": [
+     {
+      "code": "A",
+      "description": "A型"
+     },
+     {
+      "code": "B",
+      "description": "B型"
+     }
+    ]
+   },
+   {
+    "id": "sensor",
+    "name": "傳感器代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附傳感器"
+     },
+     {
+      "code": "K",
+      "description": "附電感傳感器(PNP型)"
+     },
+     {
+      "code": "KN",
+      "description": "附電感傳感器(NPN型)"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "",
+  "sourceFile": "執行元件型錄 P.70"
+ },
+ {
+  "id": "jcp",
+  "category": "執行元件",
+  "superGroup": "銷釘氣缸",
+  "group": "JCP系列",
+  "code": "",
+  "name": "JCP系列 單伸縮銷",
+  "format": "{series}{bore}{stroke}{pin_type}{sensor}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "JCP",
+      "description": "單伸縮銷"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "60",
+      "description": "60mm"
+     }
+    ]
+   },
+   {
+    "id": "pin_type",
+    "name": "銷釘類型",
+    "options": [
+     {
+      "code": "A",
+      "description": "A型"
+     },
+     {
+      "code": "B",
+      "description": "B型"
+     },
+     {
+      "code": "C",
+      "description": "C型"
+     },
+     {
+      "code": "D",
+      "description": "D型"
+     }
+    ]
+   },
+   {
+    "id": "sensor",
+    "name": "傳感器代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附傳感器"
+     },
+     {
+      "code": "K",
+      "description": "附電感傳感器(PNP型)"
+     },
+     {
+      "code": "KN",
+      "description": "附電感傳感器(NPN型)"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "",
+  "sourceFile": "執行元件型錄 P.67"
+ },
+ {
+  "id": "jqk",
+  "category": "執行元件",
+  "superGroup": "銷釘氣缸",
+  "group": "JQK系列",
+  "code": "",
+  "name": "JQK系列 底板夾緊缸",
+  "format": "{series}{bore}{direction}-{pin_diameter}{height}{clamping_thickness}{sensor}{thread}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "JQK",
+      "description": "底板夾緊缸"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "direction",
+    "name": "拉杆方向",
+    "options": [
+     {
+      "code": "",
+      "description": "正向"
+     },
+     {
+      "code": "R",
+      "description": "反向"
+     }
+    ]
+   },
+   {
+    "id": "pin_diameter",
+    "name": "導向銷直徑",
+    "options": [
+     {
+      "code": "17",
+      "description": "Φ17"
+     },
+     {
+      "code": "19",
+      "description": "Φ19"
+     },
+     {
+      "code": "24",
+      "description": "Φ24"
+     },
+     {
+      "code": "29",
+      "description": "Φ29"
+     }
+    ]
+   },
+   {
+    "id": "height",
+    "name": "凸臺高度",
+    "options": [
+     {
+      "code": "L45",
+      "description": "45mm"
+     }
+    ]
+   },
+   {
+    "id": "clamping_thickness",
+    "name": "夾緊厚度",
+    "options": [
+     {
+      "code": "T16",
+      "description": "1.6mm"
+     }
+    ]
+   },
+   {
+    "id": "sensor",
+    "name": "傳感器代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "不附傳感器"
+     },
+     {
+      "code": "K",
+      "description": "附電感傳感器(PNP型)"
+     },
+     {
+      "code": "KN",
+      "description": "附電感傳感器(NPN型)"
+     }
+    ]
+   },
+   {
+    "id": "thread",
+    "name": "牙型代碼",
+    "options": [
+     {
+      "code": "",
+      "description": "PT牙"
+     },
+     {
+      "code": "G",
+      "description": "G牙"
+     }
+    ]
+   }
+  ],
+  "note": "",
+  "sourceFile": "執行元件型錄 P.65"
+ },
+ {
+  "id": "twg",
+  "category": "執行元件",
+  "superGroup": "阻擋氣缸",
+  "group": "TWG系列",
+  "code": "",
+  "name": "TWG系列 阻擋氣缸",
+  "format": "{series}{bore}{stroke}{magnet}{cushion}{function}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "TWG",
+      "description": "阻擋氣缸(高度可調復動型)"
+     },
+     {
+      "code": "TTG",
+      "description": "阻擋氣缸(高度可調單動引入型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "15",
+      "description": "15mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "cushion",
+    "name": "阻擋方式",
+    "options": [
+     {
+      "code": "C",
+      "description": "圓柱型"
+     },
+     {
+      "code": "B",
+      "description": "扁柱型"
+     },
+     {
+      "code": "R",
+      "description": "滾輪型"
+     },
+     {
+      "code": "K",
+      "description": "杆式滾輪型(帶可調油壓緩衝器)"
+     }
+    ]
+   },
+   {
+    "id": "function",
+    "name": "自鎖功能",
+    "options": [
+     {
+      "code": "",
+      "description": "無自鎖"
+     },
+     {
+      "code": "F",
+      "description": "帶自鎖"
+     }
+    ]
+   }
+  ],
+  "note": "單動引入型是指通氣時活塞杆縮回，後置彈簧被壓縮，斷氣時活塞杆在彈簧復位力作用下伸出復位。",
+  "sourceFile": "執行元件型錄 P.395"
+ },
+ {
+  "id": "twh",
+  "category": "執行元件",
+  "superGroup": "阻擋氣缸",
+  "group": "TWH/TWM系列",
+  "code": "",
+  "name": "TWH、TWM系列 阻擋氣缸",
+  "format": "{series}{bore}{stroke}{magnet}{cushion}{function}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "TWH",
+      "description": "阻擋氣缸(復動型)"
+     },
+     {
+      "code": "TDH",
+      "description": "阻擋氣缸(內置彈簧復動型)"
+     },
+     {
+      "code": "TTH",
+      "description": "阻擋氣缸(單動引入型)"
+     },
+     {
+      "code": "TWM",
+      "description": "阻擋氣缸(復動型)"
+     },
+     {
+      "code": "TDM",
+      "description": "阻擋氣缸(內置彈簧復動型)"
+     },
+     {
+      "code": "TTM",
+      "description": "阻擋氣缸(單動引入型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     },
+     {
+      "code": "80",
+      "description": "80mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "15",
+      "description": "15mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "63",
+      "description": "63mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "cushion",
+    "name": "阻擋方式",
+    "options": [
+     {
+      "code": "L",
+      "description": "杆式滾輪型(不可調油壓緩衝器)"
+     },
+     {
+      "code": "K",
+      "description": "杆式滾輪型(可調油壓緩衝器)"
+     }
+    ]
+   },
+   {
+    "id": "function",
+    "name": "自鎖功能",
+    "options": [
+     {
+      "code": "",
+      "description": "無自鎖"
+     },
+     {
+      "code": "F",
+      "description": "帶自鎖"
+     }
+    ]
+   }
+  ],
+  "note": "單動引入型是指通氣時活塞杆縮回，後置彈簧被壓縮，斷氣時活塞杆在彈簧復位力作用下伸出復位。缸徑20、25油壓緩衝器為不可調；32以上油壓緩衝器為可調。",
+  "sourceFile": "執行元件型錄 P.391"
+ },
+ {
+  "id": "twq",
+  "category": "執行元件",
+  "superGroup": "阻擋氣缸",
+  "group": "TWQ系列",
+  "code": "",
+  "name": "TWQ系列 阻擋氣缸",
+  "format": "{series}{bore}{stroke}{magnet}{cushion}{function}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "TWQ",
+      "description": "阻擋氣缸(高度可調復動型)"
+     },
+     {
+      "code": "TTQ",
+      "description": "阻擋氣缸(高度可調單動引入型)"
+     }
+    ]
+   },
+   {
+    "id": "bore",
+    "name": "缸徑",
+    "options": [
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "32",
+      "description": "32mm"
+     },
+     {
+      "code": "40",
+      "description": "40mm"
+     },
+     {
+      "code": "50",
+      "description": "50mm"
+     }
+    ]
+   },
+   {
+    "id": "stroke",
+    "name": "行程",
+    "options": [
+     {
+      "code": "10",
+      "description": "10mm"
+     },
+     {
+      "code": "15",
+      "description": "15mm"
+     },
+     {
+      "code": "20",
+      "description": "20mm"
+     },
+     {
+      "code": "25",
+      "description": "25mm"
+     },
+     {
+      "code": "30",
+      "description": "30mm"
+     }
+    ]
+   },
+   {
+    "id": "magnet",
+    "name": "磁石代號",
+    "options": [
+     {
+      "code": "",
+      "description": "不附磁石"
+     },
+     {
+      "code": "S",
+      "description": "附磁石"
+     }
+    ]
+   },
+   {
+    "id": "cushion",
+    "name": "阻擋方式",
+    "options": [
+     {
+      "code": "C",
+      "description": "圓柱型"
+     },
+     {
+      "code": "B",
+      "description": "扁柱型"
+     },
+     {
+      "code": "R",
+      "description": "滾輪型"
+     },
+     {
+      "code": "K",
+      "description": "杆式滾輪型(帶可調油壓緩衝器)"
+     }
+    ]
+   },
+   {
+    "id": "function",
+    "name": "自鎖功能",
+    "options": [
+     {
+      "code": "",
+      "description": "無自鎖"
+     },
+     {
+      "code": "F",
+      "description": "帶自鎖"
+     }
+    ]
+   }
+  ],
+  "note": "單動引入型是指通氣時活塞杆縮回，後置彈簧被壓縮，斷氣時活塞杆在彈簧復位力作用下伸出復位。",
+  "sourceFile": "執行元件型錄 P.402"
+ },
+ {
+  "id": "dms",
+  "category": "執行元件",
+  "superGroup": "氣缸附件",
+  "group": "傳感器與安裝附件",
+  "code": "",
+  "name": "DMS系列電子式傳感器",
+  "format": "{series}-{spec}-{type}-{length}{special}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "DMS",
+      "description": "電子式傳感器"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "G",
+      "description": "G型"
+     },
+     {
+      "code": "H",
+      "description": "H型"
+     },
+     {
+      "code": "E",
+      "description": "E型"
+     },
+     {
+      "code": "J",
+      "description": "J型"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "輸出型式",
+    "options": [
+     {
+      "code": "",
+      "description": "二線式"
+     },
+     {
+      "code": "N",
+      "description": "NPN三線式"
+     },
+     {
+      "code": "P",
+      "description": "PNP三線式"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "接線型式",
+    "options": [
+     {
+      "code": "020",
+      "description": "直接出線 線長2m"
+     },
+     {
+      "code": "030",
+      "description": "直接出線 線長3m"
+     },
+     {
+      "code": "050",
+      "description": "直接出線 線長5m"
+     },
+     {
+      "code": "100",
+      "description": "直接出線 線長10m"
+     },
+     {
+      "code": "M08",
+      "description": "M8快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M08010",
+      "description": "M8快速公接頭+1m線長"
+     },
+     {
+      "code": "M08020",
+      "description": "M8快速公接頭+2m線長"
+     },
+     {
+      "code": "M08030",
+      "description": "M8快速公接頭+3m線長"
+     },
+     {
+      "code": "M12",
+      "description": "M12快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M12010",
+      "description": "M12快速公接頭+1m線長"
+     },
+     {
+      "code": "M12020",
+      "description": "M12快速公接頭+2m線長"
+     },
+     {
+      "code": "M12030",
+      "description": "M12快速公接頭+3m線長"
+     }
+    ]
+   },
+   {
+    "id": "special",
+    "name": "特規代號",
+    "options": [
+     {
+      "code": "",
+      "description": "一般型"
+     },
+     {
+      "code": "RW",
+      "description": "防水耐油抗撓曲型"
+     }
+    ]
+   }
+  ],
+  "note": "全系列M08、M12快速公接頭無防水耐油抗撓曲型可選。M08、M12快速公接頭配套之母接頭需另外訂購。",
+  "sourceFile": "執行元件型錄 P.408"
+ },
+ {
+  "id": "ems",
+  "category": "執行元件",
+  "superGroup": "氣缸附件",
+  "group": "傳感器與安裝附件",
+  "code": "",
+  "name": "EMS系列電子式傳感器",
+  "format": "{series}-{spec}--{length}{special}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "EMS",
+      "description": "電子式傳感器"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "G",
+      "description": "G型"
+     },
+     {
+      "code": "H",
+      "description": "H型"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "接線型式",
+    "options": [
+     {
+      "code": "020",
+      "description": "直接出線 線長2m"
+     },
+     {
+      "code": "030",
+      "description": "直接出線 線長3m"
+     },
+     {
+      "code": "050",
+      "description": "直接出線 線長5m"
+     },
+     {
+      "code": "100",
+      "description": "直接出線 線長10m"
+     },
+     {
+      "code": "M08",
+      "description": "M8快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M08010",
+      "description": "M8快速公接頭+1m線長"
+     },
+     {
+      "code": "M08020",
+      "description": "M8快速公接頭+2m線長"
+     },
+     {
+      "code": "M08030",
+      "description": "M8快速公接頭+3m線長"
+     },
+     {
+      "code": "M12",
+      "description": "M12快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M12010",
+      "description": "M12快速公接頭+1m線長"
+     },
+     {
+      "code": "M12020",
+      "description": "M12快速公接頭+2m線長"
+     },
+     {
+      "code": "M12030",
+      "description": "M12快速公接頭+3m線長"
+     }
+    ]
+   },
+   {
+    "id": "special",
+    "name": "特規代號",
+    "options": [
+     {
+      "code": "",
+      "description": "一般型"
+     },
+     {
+      "code": "RW",
+      "description": "防水耐油抗撓曲型"
+     }
+    ]
+   }
+  ],
+  "note": "全系列M08、M12快速公接頭無防水耐油抗撓曲型可選。M08、M12快速公接頭配套之母接頭需另外訂購。",
+  "sourceFile": "執行元件型錄 P.409"
+ },
+ {
+  "id": "cms",
+  "category": "執行元件",
+  "superGroup": "氣缸附件",
+  "group": "傳感器與安裝附件",
+  "code": "",
+  "name": "CMS系列磁簧式傳感器",
+  "format": "{series}-{spec}-{length}{special}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "CMS",
+      "description": "磁簧式傳感器"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "G",
+      "description": "G型"
+     },
+     {
+      "code": "H",
+      "description": "H型"
+     },
+     {
+      "code": "E",
+      "description": "E型"
+     },
+     {
+      "code": "J",
+      "description": "J型"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "接線型式",
+    "options": [
+     {
+      "code": "020",
+      "description": "直接出線 線長2m"
+     },
+     {
+      "code": "030",
+      "description": "直接出線 線長3m"
+     },
+     {
+      "code": "050",
+      "description": "直接出線 線長5m"
+     },
+     {
+      "code": "100",
+      "description": "直接出線 線長10m"
+     },
+     {
+      "code": "M08",
+      "description": "M8快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M08010",
+      "description": "M8快速公接頭+1m線長"
+     },
+     {
+      "code": "M08020",
+      "description": "M8快速公接頭+2m線長"
+     },
+     {
+      "code": "M08030",
+      "description": "M8快速公接頭+3m線長"
+     },
+     {
+      "code": "M12",
+      "description": "M12快速公接頭+0.5m線長"
+     },
+     {
+      "code": "M12010",
+      "description": "M12快速公接頭+1m線長"
+     },
+     {
+      "code": "M12020",
+      "description": "M12快速公接頭+2m線長"
+     },
+     {
+      "code": "M12030",
+      "description": "M12快速公接頭+3m線長"
+     }
+    ]
+   },
+   {
+    "id": "special",
+    "name": "特規代號",
+    "options": [
+     {
+      "code": "",
+      "description": "一般型"
+     },
+     {
+      "code": "H",
+      "description": "高溫型"
+     }
+    ]
+   }
+  ],
+  "note": "高溫型無M08、M12快速公接頭可選。M08、M12快速公接頭配套之母接頭需另外訂購。",
+  "sourceFile": "執行元件型錄 P.410"
+ },
+ {
+  "id": "prsu",
+  "category": "執行元件",
+  "superGroup": "氣缸附件",
+  "group": "傳感器與安裝附件",
+  "code": "",
+  "name": "PRSU系列槽型光電傳感器",
+  "format": "{series}-{spec}-{type}-{length}",
+  "categories": [
+   {
+    "id": "series",
+    "name": "系列代號",
+    "options": [
+     {
+      "code": "PRSU",
+      "description": "槽型光電傳感器"
+     }
+    ]
+   },
+   {
+    "id": "spec",
+    "name": "規格代號",
+    "options": [
+     {
+      "code": "T",
+      "description": "T型"
+     },
+     {
+      "code": "F",
+      "description": "F型"
+     },
+     {
+      "code": "R",
+      "description": "R型"
+     },
+     {
+      "code": "K",
+      "description": "K型"
+     },
+     {
+      "code": "L",
+      "description": "L型"
+     },
+     {
+      "code": "Y",
+      "description": "Y型"
+     }
+    ]
+   },
+   {
+    "id": "type",
+    "name": "輸出型式",
+    "options": [
+     {
+      "code": "N",
+      "description": "NPN"
+     },
+     {
+      "code": "P",
+      "description": "PNP"
+     }
+    ]
+   },
+   {
+    "id": "length",
+    "name": "接線型式",
+    "options": [
+     {
+      "code": "020",
+      "description": "線長2m"
+     },
+     {
+      "code": "030",
+      "description": "線長3m"
+     },
+     {
+      "code": "050",
+      "description": "線長5m"
+     }
+    ]
+   }
+  ],
+  "note": "",
+  "sourceFile": "執行元件型錄 P.423"
  }
 ]
