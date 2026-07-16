@@ -87,5781 +87,7823 @@ var shared_options_default = {
 };
 
 // src/data/catalog-fluid-valves.json
-var catalog_fluid_valves_default = {
-  _\u8AAA\u660E: "\u4F86\u6E90: catalog.ts (\u539FTypeScript\u8CC7\u6599\u6A94,\u5DF2\u8F49\u63DB\u70BAJSON)\u3002\u6DB5\u84CB\u63A7\u5236\u5143\u4EF6->\u6D41\u9AD4\u63A7\u5236\u95A5\u5927\u985E:2SA/2WA/2LA\u7CFB\u5217(\u76F4\u52D5\u5E38\u9589\u578B\u3001\u5148\u5C0E\u5E38\u9589\u578B)\u30012KSA/2KWA/2KLA\u7CFB\u5217(\u76F4\u52D5\u5E38\u958B\u578B\u3001\u5148\u5C0E\u5E38\u958B\u578B)\u30012V\u7CFB\u5217\u30012P\u7CFB\u5217\u30012J\u7CFB\u5217\u89D2\u5EA7\u95A5\u3001\u6D41\u9AD4\u63A7\u5236\u95A5\u7DDA\u5708\u53CA\u914D\u4EF6\u3002\u6B64\u6A94\u6848\u586B\u88DC category-taxonomy.json \u4E2D superGroup 'fluid-control-valve' \u539F\u5148\u7F3A\u5C11\u7684 catalogFile \u5167\u5BB9\u3002",
-  series: [
-    {
-      id: "fluid-direct-nc",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "\u76F4\u52D5\u5E38\u9589\u578B",
-      code: "",
-      name: "2SA/2WA/2LA\u7CFB\u5217 \u76F4\u52D5\u5E38\u9589\u578B (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "2SA",
-              description: "2SA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u9589\u578B(\u4E0D\u92B9\u92FC\u95A5\u9AD4)"
-            },
-            {
-              code: "2WA",
-              description: "2WA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u9589\u578B(\u9EC3\u9285\u95A5\u9AD4)"
-            },
-            {
-              code: "2LA",
-              description: "2LA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u9589\u578B(\u9EC3\u9285\u95A5\u9AD4, \u9069\u7528\u84B8\u6C23)"
-            }
-          ]
-        },
-        {
-          id: "pressure",
-          name: "\u58D3\u529B\u689D\u4EF6",
-          options: [
-            {
-              code: "X",
-              description: "X: \u8D85\u9AD8\u58D3\u578B"
-            },
-            {
-              code: "H",
-              description: "H: \u9AD8\u58D3\u578B"
-            },
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "L: \u5927\u6D41\u91CF\u578B"
-            },
-            {
-              code: "T",
-              description: "T: \u7279\u5927\u6D41\u91CF\u578B"
-            }
-          ]
-        },
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "030",
-              description: "030: 030\u7CFB\u5217"
-            },
-            {
-              code: "050",
-              description: "050: 050\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            },
-            {
-              code: "10",
-              description: '10: 3/8"'
-            },
-            {
-              code: "15",
-              description: '15: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{pressure} {series} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-direct-no",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "\u76F4\u52D5\u5E38\u958B\u578B",
-      code: "",
-      name: "2KSA/2KWA/2KLA\u7CFB\u5217 \u76F4\u52D5\u5E38\u958B\u578B (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "2KSA",
-              description: "2KSA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u958B\u578B(\u4E0D\u92B9\u92FC\u95A5\u9AD4)"
-            },
-            {
-              code: "2KWA",
-              description: "2KWA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u958B\u578B(\u9EC3\u9285\u95A5\u9AD4)"
-            },
-            {
-              code: "2KLA",
-              description: "2KLA: \u4E8C\u53E3\u4E8C\u4F4D\u76F4\u52D5\u5E38\u958B\u578B(\u9EC3\u9285\u95A5\u9AD4, \u9069\u7528\u84B8\u6C23)"
-            }
-          ]
-        },
-        {
-          id: "pressure",
-          name: "\u58D3\u529B\u689D\u4EF6",
-          options: [
-            {
-              code: "X",
-              description: "X: \u8D85\u9AD8\u58D3\u578B"
-            },
-            {
-              code: "H",
-              description: "H: \u9AD8\u58D3\u578B"
-            },
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u6A19\u6E96\u578B"
-            },
-            {
-              code: "L",
-              description: "L: \u5927\u6D41\u91CF\u578B"
-            }
-          ]
-        },
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "030",
-              description: "030: 030\u7CFB\u5217"
-            },
-            {
-              code: "050",
-              description: "050: 050\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            },
-            {
-              code: "10",
-              description: '10: 3/8"'
-            },
-            {
-              code: "15",
-              description: '15: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{pressure} {series} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-pilot-nc",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "\u5148\u5C0E\u5E38\u9589\u578B",
-      code: "",
-      name: "2SA/2WA/2LA\u7CFB\u5217 \u5148\u5C0E\u5E38\u9589\u578B (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "2SA",
-              description: "2SA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u9589\u578B(\u4E0D\u92B9\u92FC\u95A5\u9AD4)"
-            },
-            {
-              code: "2WA",
-              description: "2WA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u9589\u578B(\u9EC3\u9285\u95A5\u9AD4)"
-            },
-            {
-              code: "2LA",
-              description: "2LA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u9589\u578B(\u9EC3\u9285\u95A5\u9AD4, \u9069\u7528\u84B8\u6C23)"
-            }
-          ]
-        },
-        {
-          id: "diameter",
-          name: "\u6A19\u7A31\u901A\u5F91",
-          options: [
-            {
-              code: "150",
-              description: "150: \u03A615mm"
-            },
-            {
-              code: "200",
-              description: "200: \u03A620mm"
-            },
-            {
-              code: "250",
-              description: "250: \u03A625mm"
-            },
-            {
-              code: "320",
-              description: "320: \u03A635mm"
-            },
-            {
-              code: "400",
-              description: "400: \u03A640mm"
-            },
-            {
-              code: "500",
-              description: "500: \u03A650mm"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "15",
-              description: '15: 1/2"'
-            },
-            {
-              code: "20",
-              description: '20: 3/4"'
-            },
-            {
-              code: "25",
-              description: '25: 1"'
-            },
-            {
-              code: "32",
-              description: '32: 1 1/4"'
-            },
-            {
-              code: "40",
-              description: '40: 1 1/2"'
-            },
-            {
-              code: "50",
-              description: '50: 2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-pilot-no",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "\u5148\u5C0E\u5E38\u958B\u578B",
-      code: "",
-      name: "2KSA/2KWA/2KLA\u7CFB\u5217 \u5148\u5C0E\u5E38\u958B\u578B (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "2KSA",
-              description: "2KSA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u958B\u578B(\u4E0D\u92B9\u92FC\u95A5\u9AD4)"
-            },
-            {
-              code: "2KWA",
-              description: "2KWA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u958B\u578B(\u9EC3\u9285\u95A5\u9AD4)"
-            },
-            {
-              code: "2KLA",
-              description: "2KLA: \u4E8C\u53E3\u4E8C\u4F4D\u5148\u5C0E\u5E38\u958B\u578B(\u9EC3\u9285\u95A5\u9AD4, \u9069\u7528\u84B8\u6C23)"
-            }
-          ]
-        },
-        {
-          id: "diameter",
-          name: "\u6A19\u7A31\u901A\u5F91",
-          options: [
-            {
-              code: "150",
-              description: "150: \u03A615mm"
-            },
-            {
-              code: "200",
-              description: "200: \u03A620mm"
-            },
-            {
-              code: "250",
-              description: "250: \u03A625mm"
-            },
-            {
-              code: "320",
-              description: "320: \u03A635mm"
-            },
-            {
-              code: "400",
-              description: "400: \u03A640mm"
-            },
-            {
-              code: "500",
-              description: "500: \u03A650mm"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "15",
-              description: '15: 1/2"'
-            },
-            {
-              code: "20",
-              description: '20: 3/4"'
-            },
-            {
-              code: "25",
-              description: '25: 1"'
-            },
-            {
-              code: "32",
-              description: '32: 1 1/4"'
-            },
-            {
-              code: "40",
-              description: '40: 1 1/2"'
-            },
-            {
-              code: "50",
-              description: '50: 2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-2v",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "2V\u7CFB\u5217",
-      code: "2V",
-      name: "2V\u7CFB\u5217 \u6D41\u9AD4\u63A7\u5236\u95A5 (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "diameter",
-          name: "\u6A19\u7A31\u901A\u5F91",
-          options: [
-            {
-              code: "025",
-              description: "025: \u03A62.5mm"
-            },
-            {
-              code: "130",
-              description: "130: \u03A613mm"
-            },
-            {
-              code: "250",
-              description: "250: \u03A625mm"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '06: 1/8" (\u50C5\u9069\u7528025)'
-            },
-            {
-              code: "08",
-              description: '08: 1/4" (\u50C5\u9069\u7528025)'
-            },
-            {
-              code: "10",
-              description: '10: 3/8" (\u50C5\u9069\u7528130)'
-            },
-            {
-              code: "15",
-              description: '15: 1/2" (\u50C5\u9069\u7528130)'
-            },
-            {
-              code: "20",
-              description: '20: 3/4" (\u50C5\u9069\u7528250)'
-            },
-            {
-              code: "25",
-              description: '25: 1" (\u50C5\u9069\u7528250)'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-2p",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "2P\u7CFB\u5217",
-      code: "2P",
-      name: "2P\u7CFB\u5217 \u6D41\u9AD4\u63A7\u5236\u95A5 (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "diameter",
-          name: "\u6A19\u7A31\u901A\u5F91",
-          options: [
-            {
-              code: "025",
-              description: "025: \u03A62.5mm"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "G",
-              description: "G: G\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "fluid-2j",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "2J\u7CFB\u5217",
-      code: "2J",
-      name: "2J\u7CFB\u5217 \u89D2\u5EA7\u95A5 (\u4E8C\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "material",
-          name: "\u95A5\u9AD4\u6750\u8CEA",
-          options: [
-            {
-              code: "S",
-              description: "S: \u4E0D\u92B9\u92FCSUS316L"
-            },
-            {
-              code: "W",
-              description: "W: \u4E0D\u92B9\u92FCSUS304"
-            }
-          ]
-        },
-        {
-          id: "initial",
-          name: "\u521D\u59CB\u72C0\u614B",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u5E38\u9589\u7121\u6C34\u9318\u578B (\u5DE5\u4F5C\u4ECB\u8CEA\u6D41\u5411\u95A5\u53E3\u4E0B\u65B9)"
-            },
-            {
-              code: "Y",
-              description: "Y: \u5E38\u9589\u6709\u6C34\u9318\u578B (\u5DE5\u4F5C\u4ECB\u8CEA\u6D41\u5411\u95A5\u53E3\u4E0A\u65B9)"
-            },
-            {
-              code: "K",
-              description: "K: \u5E38\u958B\u578B (\u5DE5\u4F5C\u4ECB\u8CEA\u6D41\u5411\u95A5\u53E3\u4E0B\u65B9)"
-            }
-          ]
-        },
-        {
-          id: "diameter",
-          name: "\u6A19\u7A31\u901A\u5F91",
-          options: [
-            {
-              code: "150",
-              description: "150: \u03A615mm"
-            },
-            {
-              code: "200",
-              description: "200: \u03A620mm"
-            },
-            {
-              code: "250",
-              description: "250: \u03A625mm"
-            },
-            {
-              code: "320",
-              description: "320: \u03A632mm"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "10",
-              description: '10: 3/8"'
-            },
-            {
-              code: "15",
-              description: '15: 1/2"'
-            },
-            {
-              code: "20",
-              description: '20: 3/4"'
-            },
-            {
-              code: "25",
-              description: '25: 1"'
-            },
-            {
-              code: "32",
-              description: '32: 1 1/4"'
-            }
-          ]
-        },
-        {
-          id: "actuator",
-          name: "\u57F7\u884C\u5668\u7F38\u5F91",
-          options: [
-            {
-              code: "Q40",
-              description: "Q40: \u03A640mm"
-            },
-            {
-              code: "Q50",
-              description: "Q50: \u03A650mm"
-            },
-            {
-              code: "Q63",
-              description: "Q63: \u03A663mm"
-            },
-            {
-              code: "Q80",
-              description: "Q80: \u03A680mm"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {material} {initial} {diameter} {port} {actuator} {thread}"
-    },
-    {
-      id: "fluid-coil",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
-      group: "\u6D41\u9AD4\u63A7\u5236\u95A5\u7DDA\u5708",
-      code: "",
-      name: "\u6D41\u9AD4\u63A7\u5236\u95A5\u7DDA\u5708\u53CA\u914D\u4EF6",
-      categories: [
-        {
-          id: "code",
-          name: "\u7DDA\u5708\u985E\u5225",
-          options: [
-            {
-              code: "CD",
-              description: "CD: DIN\u63D2\u5EA7\u5F0F\u7DDA\u5708"
-            },
-            {
-              code: "CL",
-              description: "CL: \u51FA\u7DDA\u5F0F\u7DDA\u5708"
-            }
-          ]
-        },
-        {
-          id: "diameter",
-          name: "\u7DDA\u5708\u5167\u5F91",
-          options: [
-            {
-              code: "A110",
-              description: "A110: \u7DDA\u5708\u5167\u5F91\u03A611.0mm"
-            },
-            {
-              code: "A160",
-              description: "A160: \u7DDA\u5708\u5167\u5F91\u03A616.0mm"
-            }
-          ]
-        },
-        {
-          id: "valve_type",
-          name: "\u914D\u5408\u95A5\u9AD4",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u5E38\u9589\u578B\u5C08\u7528"
-            },
-            {
-              code: "K",
-              description: "K: \u5E38\u958B\u578B\u5C08\u7528"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u7DDA\u5708\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "heat",
-          name: "\u8010\u71B1\u7B49\u7D1A",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: F\u7D1A"
-            },
-            {
-              code: "H",
-              description: "H: H\u7D1A"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {valve_type} {voltage} {heat}"
-    }
-  ]
-};
+var catalog_fluid_valves_default = [
+  {
+    id: "2J",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2J\u89D2\u5EA7\u95A5",
+    code: "",
+    name: "2J\u7CFB\u5217 \u89D2\u5EA7\u95A5",
+    format: "2J{series}{material}{state}{bore}{port}{actuator}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FCSUS316L"
+          },
+          {
+            code: "W",
+            description: "\u4E0D\u92B9\u92FCSUS304"
+          }
+        ]
+      },
+      {
+        id: "material",
+        name: "\u95A5\u9AD4\u6750\u8CEA",
+        options: [
+          {
+            code: "S",
+            description: "\u4E0D\u92B9\u92FCSUS316L"
+          },
+          {
+            code: "W",
+            description: "\u4E0D\u92B9\u92FCSUS304"
+          }
+        ]
+      },
+      {
+        id: "state",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "",
+            description: "\u5E38\u9589\u7121\u6C34\u9318\u578B"
+          },
+          {
+            code: "Y",
+            description: "\u5E38\u9589\u6709\u6C34\u9318\u578B"
+          },
+          {
+            code: "K",
+            description: "\u5E38\u958B\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          },
+          {
+            code: "320",
+            description: "\u03A632mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          },
+          {
+            code: "32",
+            description: '1 1/4"'
+          }
+        ]
+      },
+      {
+        id: "actuator",
+        name: "\u57F7\u884C\u5668\u7F38\u5F91",
+        options: [
+          {
+            code: "Q40",
+            description: "\u03A640mm"
+          },
+          {
+            code: "Q50",
+            description: "\u03A650mm"
+          },
+          {
+            code: "Q63",
+            description: "\u03A663mm"
+          },
+          {
+            code: "Q80",
+            description: "\u03A680mm"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.230"
+  },
+  {
+    id: "2KLA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2KLA\u5E38\u958B\u578B(\u6CB9)",
+    code: "2KLA",
+    name: "2KLA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "2KLA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u5927\u6D41\u91CF\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          },
+          {
+            code: "320",
+            description: "\u03A635mm"
+          },
+          {
+            code: "400",
+            description: "\u03A640mm"
+          },
+          {
+            code: "500",
+            description: "\u03A650mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          },
+          {
+            code: "32",
+            description: '1 1/4"'
+          },
+          {
+            code: "40",
+            description: '1 1/2"'
+          },
+          {
+            code: "50",
+            description: '2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.197"
+  },
+  {
+    id: "2KSA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2KSA\u5E38\u958B\u578B(\u6C23\u9AD4)",
+    code: "2KSA",
+    name: "2KSA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u958B\u578B\u96FB\u78C1\u95A5",
+    format: "2KSA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u958B\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u958B\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "X",
+            description: "\u8D85\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u5927\u6D41\u91CF\u578B"
+          },
+          {
+            code: "T",
+            description: "\u7279\u5927\u6D41\u91CF\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          },
+          {
+            code: "320",
+            description: "\u03A635mm"
+          },
+          {
+            code: "400",
+            description: "\u03A640mm"
+          },
+          {
+            code: "500",
+            description: "\u03A650mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          },
+          {
+            code: "32",
+            description: '1 1/4"'
+          },
+          {
+            code: "40",
+            description: '1 1/2"'
+          },
+          {
+            code: "50",
+            description: '2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.189"
+  },
+  {
+    id: "2KWA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2KWA\u5E38\u958B\u578B(\u6C34)",
+    code: "2KWA",
+    name: "2KWA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u958B\u578B\u96FB\u78C1\u95A5",
+    format: "2KWA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u958B\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u958B\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "X",
+            description: "\u8D85\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u5927\u6D41\u91CF\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.181"
+  },
+  {
+    id: "2LA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2LA\u7CFB\u5217(\u6CB9)",
+    code: "2LA",
+    name: "2LA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "2LA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          },
+          {
+            code: "320",
+            description: "\u03A635mm"
+          },
+          {
+            code: "400",
+            description: "\u03A640mm"
+          },
+          {
+            code: "500",
+            description: "\u03A650mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          },
+          {
+            code: "32",
+            description: '1 1/4"'
+          },
+          {
+            code: "40",
+            description: '1 1/2"'
+          },
+          {
+            code: "50",
+            description: '2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.193"
+  },
+  {
+    id: "2SA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2SA\u7CFB\u5217(\u6C23\u9AD4)",
+    code: "2SA",
+    name: "2SA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "2SA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "X",
+            description: "\u8D85\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u5927\u6D41\u91CF\u578B"
+          },
+          {
+            code: "T",
+            description: "\u7279\u5927\u6D41\u91CF\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          },
+          {
+            code: "320",
+            description: "\u03A635mm"
+          },
+          {
+            code: "400",
+            description: "\u03A640mm"
+          },
+          {
+            code: "500",
+            description: "\u03A650mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          },
+          {
+            code: "32",
+            description: '1 1/4"'
+          },
+          {
+            code: "40",
+            description: '1 1/2"'
+          },
+          {
+            code: "50",
+            description: '2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.185"
+  },
+  {
+    id: "2V",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2V\u7CFB\u5217",
+    code: "2V",
+    name: "2V\u7CFB\u5217 \u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "{type}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "2V",
+            description: "\u4E8C\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "025",
+            description: "\u03A62.5mm"
+          },
+          {
+            code: "130",
+            description: "\u03A613mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.206"
+  },
+  {
+    id: "2P",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2P\u7CFB\u5217",
+    code: "2P",
+    name: "2P\u7CFB\u5217 \u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "{type}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "2P",
+            description: "\u4E8C\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "025",
+            description: "\u03A62.5mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "A",
+            description: "\u7AEF\u5B50\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.208"
+  },
+  {
+    id: "2WA",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6D41\u9AD4\u63A7\u5236\u95A5",
+    group: "2WA\u7CFB\u5217(\u6C34)",
+    code: "2WA",
+    name: "2WA\u7CFB\u5217 \u76F4\u52D5/\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5",
+    format: "2WA{type}{function}{bore}{port}{voltage}{connection}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u76F4\u52D5\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "150",
+            description: "\u5148\u5C0E\u5E38\u9589\u578B\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u58D3\u529B\u689D\u4EF6",
+        options: [
+          {
+            code: "H",
+            description: "\u9AD8\u58D3\u578B"
+          },
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u5927\u6D41\u91CF\u578B"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u6A19\u7A31\u901A\u5F91",
+        options: [
+          {
+            code: "030",
+            description: "\u03A615mm"
+          },
+          {
+            code: "050",
+            description: "\u03A620mm"
+          },
+          {
+            code: "150",
+            description: "\u03A615mm"
+          },
+          {
+            code: "200",
+            description: "\u03A620mm"
+          },
+          {
+            code: "250",
+            description: "\u03A625mm"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u7DDA\u5708\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.178"
+  }
+];
 
 // src/data/catalog-solenoid-valves.json
-var catalog_solenoid_valves_default = {
-  _\u8AAA\u660E: "\u4F86\u6E90: 12\u4EFD AirTAC \u96FB\u78C1\u95A5\u578B\u9304 + 14\u4EFD AirTAC \u6C23\u63A7\u95A5/\u624B\u52D5\u95A5/\u8173\u8E0F\u95A5/\u6A5F\u68B0\u95A5\u578B\u9304(\u517126\u4EFD)\u3002category/superGroup/group \u5C0D\u61C9 category-taxonomy.json \u7684\u5206\u985E\u7BC0\u9EDE,\u65B9\u4FBFApp\u505A\u4E0B\u62C9\u9078\u55AE\u7BE9\u9078\u3002voltageOptions/threadOptions/terminalOptions/controlTypeOptions/initialStateOptions/pilotTypeOptions/portConnectionTypeOptions \u8ACB\u5C0D\u7167 shared-options.json \u7684 refId\u3002\u5176\u4E2D\u6C23\u63A7\u95A5(3A/4A/5A/EAV/4SA/6SA/7SA/4STA/6STA)\u70BA\u96FB\u78C1\u95A5\u5C0D\u61C9\u7CFB\u5217\u7684\u6C23\u5C0E\u7248\u672C,\u7D50\u69CB\u76F4\u63A5\u6CBF\u7528\u540C\u7CFB\u96FB\u78C1\u95A5\u7684\u9078\u9805\u8A2D\u8A08,\u53EF\u4FE1\u5EA6\u9AD8;\u624B\u52D5\u95A5/\u8173\u8E0F\u95A5/\u6A5F\u68B0\u95A5(HSV/4H/3F\u20273FM/M3/CM3)\u56E0\u539F\u59CB\u578B\u9304\u70BA\u6383\u63CF\u5F71\u50CF\u6A94\u4E14\u7121\u65E2\u6709\u96FB\u63A7\u95A5\u7D50\u69CB\u53EF\u5C0D\u7167,\u5176\u9078\u9805\u4EE3\u865F\u5C6C\u521D\u6B65\u5224\u8B80,\u5DF2\u65BC\u5404\u81EA\u7684 note \u6B04\u4F4D\u6A19\u8A3B,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304PDF\u5716\u793A\u78BA\u8A8D\u3002 \u53E6\u88DC\u5145\u4F86\u81EAcatalog.ts\u768418\u500B\u96FB\u78C1\u95A5\u914D\u4EF6/\u65B0\u7CFB\u5217\u9805\u76EE(4STV/6STV/7SV/6SV\u7CFB\u5217\u5E95\u5EA7\u3001\u5E95\u5EA7\u76F2\u677F\u7D44\u4EF6\u30014M NAMUR\u898F\u683C\u30013V/4V\u7CFB\u5217\u5E95\u5EA7\u8207\u76F2\u677F\u30015V\u7CFB\u5217\u3001ESV\u7CFB\u5217ISO\u6A19\u6E96\u96FB\u78C1\u95A5\u8207\u5176\u5E95\u5EA7\u7AEF\u677F\u76F2\u677F\u3001\u666E\u901A\u7DDA\u5708\u3001\u9632\u7206\u7DDA\u5708\u3001B03\u9632\u7206\u96FB\u78C1\u95A5\u3001F-DSUB\u914D\u5957\u7DDA\u7E9C),\u7D93\u6BD4\u5C0D\u5F8C\u7565\u904E\u8207\u65E2\u6709\u7CFB\u5217\u91CD\u8907\u7684\u7C21\u5316\u7248\u672C(\u59824sv/3v/4v/7v/6d_valve/cpv10_base/cpv15_base/3v2_base\u7B49)\u3002",
-  series: [
-    {
-      id: "4V100",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4V100\u7CFB\u5217",
-      name: "4V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      orderCodeFormat: "4V 1 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal",
-          note: "M5\u53E3\u5F91\u7121\u5916\u90E8\u5F15\u5C0E\u5B54\u898F\u683C"
-        }
-      ],
-      specs: [
-        {
-          model: "4V110-M5/4V120-M5/4V130C-M5/4V130E-M5/4V130P-M5",
-          port: "M5",
-          cv: 0.6,
-          weightG: "120/200"
-        },
-        {
-          model: "4V110-06/4V120-06/4V130C-06/4V130E-06/4V130P-06",
-          port: '1/8"',
-          cv: 0.51,
-          weightG: "120~175/200"
-        }
-      ],
-      electrical: {
-        voltageOptions: "AC220V/AC110V/AC24V/DC24V/DC12V",
-        protectionGrade: "IP65(DIN40050)",
-        heatGrade: "B\u7D1A",
-        maxOperateFreq: "5\u6B21/\u79D2(\u55AE\u96FB\u63A7) / 3\u6B21/\u79D2(\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7)"
+var catalog_solenoid_valves_default = [
+  {
+    id: "4V100",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4V100\u7CFB\u5217",
+    name: "4V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    orderCodeFormat: "4V 1 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          }
+        ]
       },
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      workingFluid: "\u7A7A\u6C23(\u7D9340\u03BCm\u4EE5\u4E0A\u6FFE\u7DB2\u904E\u6FFE)",
-      sourceFile: "4V-202303011022369106.pdf (P80)"
-    },
-    {
-      id: "4V200",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4V200\u7CFB\u5217",
-      name: "4V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      orderCodeFormat: "4V 2 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "4V210-06/4V220-06/4V230C-06/4V230E-06/4V230P-06",
-          port: '1/8"',
-          cv: 1,
-          weightG: "220/360"
-        },
-        {
-          model: "4V210-08/4V220-08/4V230C-08/4V230E-08/4V230P-08",
-          port: '1/4"',
-          cv: 0.8,
-          weightG: "220~320/360"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4V-202303011022369106.pdf (P82)"
-    },
-    {
-      id: "4V300",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4V300\u7CFB\u5217",
-      name: "4V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      orderCodeFormat: "4V 3 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "4V310-08/4V320-08/4V330C-08/4V330E-08/4V330P-08",
-          port: '1/4"',
-          cv: 1.65,
-          weightG: "310~400/450"
-        },
-        {
-          model: "4V310-10/4V320-10/4V330C-10/4V330E-10/4V330P-10",
-          port: '3/8"',
-          cv: 1.25,
-          weightG: "310~400/450"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4V-202303011022369106.pdf (P84)"
-    },
-    {
-      id: "4V400",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4V400\u7CFB\u5217",
-      name: "4V400\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      orderCodeFormat: "4V 4 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "4",
-              description: "400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "15",
-              description: '1/2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "4V410-15/4V420-15",
-          port: '1/2"',
-          cv: 2.82,
-          weightG: 590
-        },
-        {
-          model: "4V430C-15/4V430E-15",
-          port: '1/2"',
-          cv: 2.35,
-          weightG: 720
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4V-202303011022369106.pdf (P86)"
-    },
-    {
-      id: "6SV",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "6SV\u7CFB\u5217",
-      name: "6SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F)",
-      orderCodeFormat: "6SV {seriesCode} {controlType} {port} {voltage} {terminal} {leadLength} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5(0500\u7CFB\u5217)"
-            },
-            {
-              code: "06",
-              description: "PT1/8(100\u7CFB\u5217\u62160500\u7279\u6B8A\u898F\u683C)"
-            },
-            {
-              code: "08",
-              description: "PT1/4(200\u7CFB\u5217)"
-            },
-            {
-              code: "10",
-              description: "PT3/8(300\u7CFB\u5217)"
-            },
-            {
-              code: "15",
-              description: "PT1/2(400\u7CFB\u5217)"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            },
-            {
-              code: "D",
-              description: "D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "M",
-              description: "M: M8\u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7AEF\u5B50\u7DDA\u9577",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: 0.5m"
-            },
-            {
-              code: "200",
-              description: "200: 2m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "6SV0510/6SV0520/6SV0530",
-          port: "M5",
-          cv: "0.2~0.25",
-          weightG: "31.5~48"
-        },
-        {
-          model: "6SV110/6SV120/6SV130",
-          port: "PT1/8",
-          cv: "0.5~0.7",
-          weightG: "69.5~101.5"
-        },
-        {
-          model: "6SV210/6SV220/6SV230",
-          port: "PT1/4\u62161/8",
-          cv: "0.9~1.05",
-          weightG: "105~143"
-        },
-        {
-          model: "6SV310/6SV320/6SV330",
-          port: "PT3/8",
-          cv: "1.8~2.25",
-          weightG: "240~317.5"
-        },
-        {
-          model: "6SV410/6SV420/6SV430",
-          port: "PT1/2",
-          cv: "3~3.2",
-          weightG: "368~487.5"
-        }
-      ],
-      note: "6SV0500\u7CFB\u5217\u96FB\u78C1\u95A5\u4F7F\u7528CPSV10\u5148\u5C0E\u95A5,\u63A5\u96FB\u5F62\u5F0F\u7121DIN\u63D2\u5EA7\u5F0F,\u96FB\u58D3\u898F\u683C\u70BADC24V/DC12V/AC220V/AC110V",
-      workingPressureRange: "\u4E09\u4F4D\u7F6E\u578B0.2~0.8MPa(29~114psi); \u5176\u5B83\u578B0.15~0.8MPa(21~114psi)",
-      electrical: {
-        protectionGrade: "IP65",
-        heatGrade: "F\u7D1A"
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
       },
-      sourceFile: "6SV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D_-202603240400409696.pdf"
-    },
-    {
-      id: "7SV",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "7SV\u7CFB\u5217",
-      name: "7SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F, \u63D2\u63A5\u5F0F\u63A5\u96FB)",
-      orderCodeFormat: "7V {seriesCode} {controlType} {portConnType} {port} {voltage} {leadLength} {thread}",
-      note: "7V/7SV\u70BA\u540C\u6B3E\u7522\u54C1\u5728\u4E0D\u540C\u578B\u9304\u4E2D\u7684\u6A19\u793A,\u8A02\u8CFC\u78BC\u7D50\u69CB\u76F8\u540C",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "portConnType",
-          name: "\u63A5\u7BA1\u578B\u5F0F",
-          optionsRef: "portConnectionTypeOptions.threadOrQuick"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91(\u87BA\u7D0B)/\u7BA1\u63A5\u53E3\u5F91(\u5FEB\u63D2)",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "04",
-              description: "\u03A64mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "06",
-              description: "PT1/8 \u6216 \u03A66mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "08",
-              description: "PT1/4 \u6216 \u03A68mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "10",
-              description: "PT3/8 \u6216 \u03A610mm(\u5FEB\u63D2)"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "AC220V"
-            },
-            {
-              code: "B",
-              description: "DC24V"
-            },
-            {
-              code: "C",
-              description: "AC110V"
-            },
-            {
-              code: "F",
-              description: "DC12V"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7AEF\u5B50\u7E10\u9577",
-          options: [
-            {
-              code: "050",
-              description: "0.5m"
-            },
-            {
-              code: "200",
-              description: "2.0m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "7V0510/7V0520/7V0530",
-          port: "M5",
-          cv: "0.13~0.2",
-          weightG: "30~50"
-        },
-        {
-          model: "7V110/7V120/7V130",
-          port: "PT1/8",
-          cv: "0.41~0.47",
-          weightG: "80~100"
-        },
-        {
-          model: "7V210/7V220/7V230",
-          port: "PT1/4",
-          cv: "0.64~0.87",
-          weightG: "120~145"
-        },
-        {
-          model: "7V310/7V320/7V330",
-          port: "PT3/8",
-          cv: "1.25~1.8",
-          weightG: "230~305"
-        }
-      ],
-      workingPressureRange: "\u4E09\u4F4D\u7F6E\u578B0.2~0.8MPa(29~114psi); \u5176\u5B83\u578B0.15~0.8MPa(21~114psi)",
-      electrical: {
-        \u8017\u96FB\u91CF: "1.1VA(AC) / 0.7W(DC)",
-        protectionGrade: "\u9632\u5875",
-        heatGrade: "F\u7D1A"
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
       },
-      accessories: "\u914D\u5957\u7528\u5E95\u5EA7 7V0500M/7V100M/7V200M/7V300M(\u53EF1~20\u9023), \u5074\u9762/\u5E95\u90E8\u5B89\u88DD\u652F\u67B6 F-7V\u7CFB\u5217LB/LBD",
-      sourceFile: "7V\u7CFB\u5217\u96FB\u78C1\u95A5-202507101002293446.pdf"
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal",
+        note: "M5\u53E3\u5F91\u7121\u5916\u90E8\u5F15\u5C0E\u5B54\u898F\u683C"
+      }
+    ],
+    specs: [
+      {
+        model: "4V110-M5/4V120-M5/4V130C-M5/4V130E-M5/4V130P-M5",
+        port: "M5",
+        cv: 0.6,
+        weightG: "120/200"
+      },
+      {
+        model: "4V110-06/4V120-06/4V130C-06/4V130E-06/4V130P-06",
+        port: '1/8"',
+        cv: 0.51,
+        weightG: "120~175/200"
+      }
+    ],
+    electrical: {
+      voltageOptions: "AC220V/AC110V/AC24V/DC24V/DC12V",
+      protectionGrade: "IP65(DIN40050)",
+      heatGrade: "B\u7D1A",
+      maxOperateFreq: "5\u6B21/\u79D2(\u55AE\u96FB\u63A7) / 3\u6B21/\u79D2(\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7)"
     },
-    {
-      id: "3V100",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V100\u7CFB\u5217",
-      name: "3V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-      orderCodeFormat: "3V 1 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "3V110-M5/3V120-M5",
-          port: "M5",
-          cv: null
-        },
-        {
-          model: "3V110-06/3V120-06",
-          port: '1/8"',
-          cv: 0.6
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      maxOperateFreq: "5\u6B21/\u79D2(\u7A7A\u8F09)",
-      sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P42)"
-    },
-    {
-      id: "3V200",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V200\u7CFB\u5217",
-      name: "3V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-      orderCodeFormat: "3V 2 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "3V210-06/3V220-06",
-          port: '1/8"',
-          cv: null
-        },
-        {
-          model: "3V210-08/3V220-08",
-          port: '1/4"',
-          cv: 1
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P44)"
-    },
-    {
-      id: "3V300",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V300\u7CFB\u5217",
-      name: "3V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-      orderCodeFormat: "3V 3 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      specs: [
-        {
-          model: "3V310-08/3V320-08",
-          port: '1/4"',
-          cv: null
-        },
-        {
-          model: "3V310-10/3V320-10",
-          port: '3/8"',
-          cv: 1.65
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P46)"
-    },
-    {
-      id: "3V1",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V1\u7CFB\u5217",
-      name: "3V1\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F\u5E38\u9589\u578B)",
-      orderCodeFormat: "3V1 {port} {voltage} {terminal} {thread}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "3V1-M5 / 3V1-06",
-          flowDiameterMm: 1.2,
-          note: "\u76F4\u52D5\u5F0F,\u7121\u9700\u52A0\u6CB9\u6F64\u6ED1,\u53EF\u591A\u95A5\u96C6\u6210\u4F7F\u7528"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      maxOperateFreq: "10\u6B21/\u79D2(\u7A7A\u8F09)",
-      sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P31)"
-    },
-    {
-      id: "3V2",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V2\u7CFB\u5217",
-      name: "3V2\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-      orderCodeFormat: "3V2 {port} {initialState} {voltage} {terminal} {thread}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "3V206",
-          port: '1/8"',
-          cv: 0.18
-        },
-        {
-          model: "3V208",
-          port: '1/4"',
-          cv: 0.19
-        }
-      ],
-      workingPressureRange: "\u666E\u901A0~0.8MPa(0~114psi); \u771F\u7A7A-102.2kPa~0.1MPa(-14.5~14.2psi)",
-      features: "\u540C\u8EF8\u622A\u6B62\u5F0F\u7D50\u69CB,\u5BC6\u5C01\u6027\u597D,\u6D41\u91CF\u5927,\u53EF\u7528\u65BC\u771F\u7A7A(\u8CA0\u58D3)",
-      accessories: "\u5B89\u88DD\u9644\u4EF6\u8A02\u8CFC\u78BC F-3V2 FA (FA\u578B\u5B89\u88DD\u677F)",
-      sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P33)"
-    },
-    {
-      id: "3V2M",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V2M\u7CFB\u5217(\u5E36\u5E95\u5EA7\u578B)",
-      name: "3V2M\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5E36\u5E95\u5EA7\u578B, \u53EF\u96C6\u6210\u64F4\u5145)",
-      orderCodeFormat: "\u95A5\u9AD4: 3V2M {initialState} {voltage} {terminal} | \u5E95\u5EA7: 3V2M {manifoldStations} {exhaustType} {thread}",
-      categories: [
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "manifoldStations",
-          name: "\u5E95\u5EA7\u9023\u6578",
-          options: [
-            {
-              code: "1F",
-              description: "1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2\u9023"
-            },
-            {
-              code: "20F",
-              description: "\u2026\u6700\u592720\u9023"
-            }
-          ]
-        },
-        {
-          id: "exhaustType",
-          name: "\u6392\u6C23\u985E\u578B",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u96C6\u4E2D\u6392\u6C23\u578B"
-            },
-            {
-              code: "D",
-              description: "D: \u7368\u7ACB\u6392\u6C23\u578B"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "3V2M",
-          cv: 0.1,
-          port: '1/8"(\u5E95\u5EA7\u50C5\u6B64\u4E00\u7A2E)'
-        }
-      ],
-      note: "\u8A02\u8CFC\u78BC\u5206\u4E09\u7A2E: \u95A5\u9AD4\u8A02\u8CFC\u78BC\u3001\u5E95\u5EA7\u8A02\u8CFC\u78BC\u3001\u7D44\u5408(\u95A5\u7D44)\u8A02\u8CFC\u78BC\u3001\u76F2\u677F\u8A02\u8CFC\u78BC(P-3V2M-R2)",
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P35)"
-    },
-    {
-      id: "3V3",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3V3\u7CFB\u5217",
-      name: "3V3\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-      orderCodeFormat: "3V3 {port} {initialState} {voltage} {terminal} {thread}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          optionsRef: "terminalOptions.dinOrLead"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "3V308",
-          port: '1/4"',
-          cv: 0.62
-        }
-      ],
-      workingPressureRange: "\u666E\u901A0~0.8MPa; \u771F\u7A7A-102.2kPa~0.1MPa",
-      sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P37)"
-    },
-    {
-      id: "6STV",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "6STV\u7CFB\u5217",
-      name: "6STV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5148\u5C0E\u5F0F)",
-      orderCodeFormat: "6STV {seriesCode} {controlType} {port} {initialState} {voltage} {terminal} {leadLength} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: "PT1/8"
-            },
-            {
-              code: "08",
-              description: "PT1/4"
-            },
-            {
-              code: "10",
-              description: "PT3/8"
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          options: [
-            {
-              code: "NC",
-              description: "\u5E38\u9589\u578B"
-            },
-            {
-              code: "NO",
-              description: "\u5E38\u958B\u578B"
-            },
-            {
-              code: "B",
-              description: "\u58D3; \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u7121\u521D\u59CB\u72C0\u614B\u53EF\u6E2C"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            },
-            {
-              code: "D",
-              description: "D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "M",
-              description: "M: M8\u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7AEF\u5B50\u7DDA\u9577",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: 0.5m"
-            },
-            {
-              code: "200",
-              description: "200: 2.0m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "6STV0510/6STV0520",
-          port: "M5",
-          cv: 0.25,
-          weightG: "28/42"
-        },
-        {
-          model: "6STV110/6STV120",
-          port: "M5\u6216PT1/8",
-          cv: 0.7,
-          weightG: "63/89.5"
-        },
-        {
-          model: "6STV210/6STV220",
-          port: "PT1/8\u62161/4",
-          cv: "1.05",
-          weightG: "101.5/129"
-        },
-        {
-          model: "6STV310/6STV320",
-          port: "PT3/8\u62161/4",
-          cv: 2.25,
-          weightG: "196.5/227"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "6STV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202603240359446146.pdf"
-    },
-    {
-      id: "4STV",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "4STV\u7CFB\u5217",
-      name: "4STV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5148\u5C0E\u5F0F)",
-      orderCodeFormat: "4STV {seriesCode} {controlType} {port} {initialState} {voltage} {terminal} {leadLength} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: "PT1/8"
-            },
-            {
-              code: "08",
-              description: "PT1/4"
-            },
-            {
-              code: "10",
-              description: "PT3/8"
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          options: [
-            {
-              code: "NC",
-              description: "\u5E38\u9589\u578B"
-            },
-            {
-              code: "NO",
-              description: "\u5E38\u958B\u578B(\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            },
-            {
-              code: "D",
-              description: "D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "M",
-              description: "M: M8\u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7AEF\u5B50\u7DDA\u9577",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: 0.5m"
-            },
-            {
-              code: "200",
-              description: "200: 2.0m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      specs: [
-        {
-          model: "4STV110/4STV120",
-          port: "M5\u6216PT1/8",
-          cv: 0.6,
-          weightG: "74/102"
-        },
-        {
-          model: "4STV210/4STV220",
-          port: "PT1/8\u62161/4",
-          cv: 1,
-          weightG: "114/144"
-        },
-        {
-          model: "4STV310",
-          port: "PT1/4",
-          cv: 1.8,
-          weightG: 171
-        },
-        {
-          model: "4STV320",
-          port: "PT3/8",
-          cv: 1.8,
-          weightG: 203
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4STV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202602240320286216.pdf"
-    },
-    {
-      id: "CPV10",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "CPV10\u7CFB\u5217",
-      name: "CPV10\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F)",
-      orderCodeFormat: "CPV 10 {voltage} {manualPin}-{leadLength}",
-      categories: [
-        {
-          id: "bodyWidth",
-          name: "\u95A5\u9AD4\u5BEC\u5EA6",
-          options: [
-            {
-              code: "10",
-              description: "10mm"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "manualPin",
-          name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
-          options: [
-            {
-              code: "P",
-              description: "P: \u6709\u624B\u52D5\u92B7"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7DDA\u9577",
-          options: [
-            {
-              code: "050",
-              description: "0.5m"
-            },
-            {
-              code: "200",
-              description: "2.0m"
-            }
-          ]
-        }
-      ],
-      specs: [
-        {
-          model: "CPV10",
-          flowDiameterMm: 0.55,
-          cvPA: 0.014,
-          cvAR: 0.02,
-          weightG: 15
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      protectionGrade: "\u9632\u5875",
-      features: "DC\u96FB\u8DEF\u7121\u6975\u6027\u8F38\u5165\u8A2D\u8A08, \u6A4B\u5F0F\u6574\u6D41\u5668\u5168\u6CE2\u6574\u6D41, \u555F\u52D5\u96FB\u58D3\u4F4E\u58FD\u547D\u9577",
-      accessories: "\u914D\u5957\u7528\u5E95\u5EA7 CPV10M(2\u9023~20\u9023), \u7AEF\u5B50\u7DDA\u53EF\u53E6\u8CFC CPV T 050/200",
-      sourceFile: "CPV10\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240402288946.pdf"
-    },
-    {
-      id: "CPV15",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "CPV15\u7CFB\u5217",
-      name: "CPV15\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F)",
-      orderCodeFormat: "CPV 15 {voltage} {manualPin}-{leadLength}",
-      categories: [
-        {
-          id: "bodyWidth",
-          name: "\u95A5\u9AD4\u5BEC\u5EA6",
-          options: [
-            {
-              code: "15",
-              description: "15mm"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "manualPin",
-          name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
-          options: [
-            {
-              code: "P",
-              description: "P: \u6709\u624B\u52D5\u92B7"
-            }
-          ]
-        },
-        {
-          id: "leadLength",
-          name: "\u7DDA\u9577",
-          options: [
-            {
-              code: "050",
-              description: "0.5m"
-            },
-            {
-              code: "200",
-              description: "2.0m"
-            }
-          ]
-        }
-      ],
-      specs: [
-        {
-          model: "CPV15",
-          flowDiameterMm: 0.8,
-          cvPA: 0.024,
-          cvAR: 0.03,
-          weightG: "33.2(\u95A5\u9AD4)"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      \u53CD\u61C9\u6642\u9593: "on<10ms; off<10ms",
-      accessories: "\u914D\u5957\u7528\u5E95\u5EA7 CPV15M(2\u9023~20\u9023), \u7AEF\u5B50\u7DDA\u53EF\u53E6\u8CFC CPV T 050/200",
-      sourceFile: "CPV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240403450406.pdf"
-    },
-    {
-      id: "CPSV15",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "CPSV15\u7CFB\u5217",
-      name: "CPSV15\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u591A\u7A2E\u63A5\u96FB\u5F62\u5F0F)",
-      orderCodeFormat: "CPSV {connType} 15 {voltage} - {leadLength}",
-      categories: [
-        {
-          id: "connType",
-          name: "\u63A5\u96FB\u5F62\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            },
-            {
-              code: "D",
-              description: "D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "M",
-              description: "M: M8\u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "15",
-              description: "15\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          optionsRef: "voltageOptions.standard5"
-        },
-        {
-          id: "leadLength",
-          name: "\u7AEF\u5B50\u7DDA\u7DDA\u9577",
-          options: [
-            {
-              code: "050",
-              description: "0.5m"
-            },
-            {
-              code: "200",
-              description: "2.0m"
-            }
-          ]
-        }
-      ],
-      specs: [
-        {
-          model: "CPSV15",
-          flowDiameterMm: 0.65,
-          cvPA: 0.019,
-          cvAR: 0.025,
-          weightG: "22~36(\u4F9D\u63A5\u96FB\u5F62\u5F0F)"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    workingFluid: "\u7A7A\u6C23(\u7D9340\u03BCm\u4EE5\u4E0A\u6FFE\u7DB2\u904E\u6FFE)",
+    sourceFile: "4V-202303011022369106.pdf (P80)"
+  },
+  {
+    id: "4V200",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4V200\u7CFB\u5217",
+    name: "4V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    orderCodeFormat: "4V 2 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "4V210-06/4V220-06/4V230C-06/4V230E-06/4V230P-06",
+        port: '1/8"',
+        cv: 1,
+        weightG: "220/360"
+      },
+      {
+        model: "4V210-08/4V220-08/4V230C-08/4V230E-08/4V230P-08",
+        port: '1/4"',
+        cv: 0.8,
+        weightG: "220~320/360"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4V-202303011022369106.pdf (P82)"
+  },
+  {
+    id: "4V300",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4V300\u7CFB\u5217",
+    name: "4V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    orderCodeFormat: "4V 3 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "4V310-08/4V320-08/4V330C-08/4V330E-08/4V330P-08",
+        port: '1/4"',
+        cv: 1.65,
+        weightG: "310~400/450"
+      },
+      {
+        model: "4V310-10/4V320-10/4V330C-10/4V330E-10/4V330P-10",
+        port: '3/8"',
+        cv: 1.25,
+        weightG: "310~400/450"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4V-202303011022369106.pdf (P84)"
+  },
+  {
+    id: "4V400",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4V400\u7CFB\u5217",
+    name: "4V400\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    orderCodeFormat: "4V 4 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "4",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "4V410-15/4V420-15",
+        port: '1/2"',
+        cv: 2.82,
+        weightG: 590
+      },
+      {
+        model: "4V430C-15/4V430E-15",
+        port: '1/2"',
+        cv: 2.35,
+        weightG: 720
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4V-202303011022369106.pdf (P86)"
+  },
+  {
+    id: "6SV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "6SV\u7CFB\u5217",
+    name: "6SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F)",
+    orderCodeFormat: "6SV {seriesCode} {controlType} {port} {voltage} {terminal} {leadLength} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5(0500\u7CFB\u5217)"
+          },
+          {
+            code: "06",
+            description: "PT1/8(100\u7CFB\u5217\u62160500\u7279\u6B8A\u898F\u683C)"
+          },
+          {
+            code: "08",
+            description: "PT1/4(200\u7CFB\u5217)"
+          },
+          {
+            code: "10",
+            description: "PT3/8(300\u7CFB\u5217)"
+          },
+          {
+            code: "15",
+            description: "PT1/2(400\u7CFB\u5217)"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          },
+          {
+            code: "D",
+            description: "D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "M",
+            description: "M: M8\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: 0.5m"
+          },
+          {
+            code: "200",
+            description: "200: 2m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "6SV0510/6SV0520/6SV0530",
+        port: "M5",
+        cv: "0.2~0.25",
+        weightG: "31.5~48"
+      },
+      {
+        model: "6SV110/6SV120/6SV130",
+        port: "PT1/8",
+        cv: "0.5~0.7",
+        weightG: "69.5~101.5"
+      },
+      {
+        model: "6SV210/6SV220/6SV230",
+        port: "PT1/4\u62161/8",
+        cv: "0.9~1.05",
+        weightG: "105~143"
+      },
+      {
+        model: "6SV310/6SV320/6SV330",
+        port: "PT3/8",
+        cv: "1.8~2.25",
+        weightG: "240~317.5"
+      },
+      {
+        model: "6SV410/6SV420/6SV430",
+        port: "PT1/2",
+        cv: "3~3.2",
+        weightG: "368~487.5"
+      }
+    ],
+    note: "6SV0500\u7CFB\u5217\u96FB\u78C1\u95A5\u4F7F\u7528CPSV10\u5148\u5C0E\u95A5,\u63A5\u96FB\u5F62\u5F0F\u7121DIN\u63D2\u5EA7\u5F0F,\u96FB\u58D3\u898F\u683C\u70BADC24V/DC12V/AC220V/AC110V",
+    workingPressureRange: "\u4E09\u4F4D\u7F6E\u578B0.2~0.8MPa(29~114psi); \u5176\u5B83\u578B0.15~0.8MPa(21~114psi)",
+    electrical: {
       protectionGrade: "IP65",
-      sourceFile: "CPSV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202603240401261836.pdf"
+      heatGrade: "F\u7D1A"
     },
-    {
-      id: "CPV10S",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "CPV10S\u7CFB\u5217(\u96C6\u6210\u95A5)",
-      name: "CPV10S\u7CFB\u5217 \u96C6\u6210\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, CPV10\u5FAE\u578B\u96FB\u78C1\u95A5\u7684\u96C6\u6210\u95A5\u7D44)",
-      orderCodeFormat: "\u5E95\u5EA7: CPV10S {port} {leadCode} {voltage} {manifoldStations}",
-      categories: [
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "J03",
-              description: "\u03A63.2mm(\u5FEB\u63D2\u63A5\u982D)"
-            },
-            {
-              code: "J04",
-              description: "\u03A64.0mm(\u5FEB\u63D2\u63A5\u982D)"
-            }
-          ]
-        },
-        {
-          id: "leadCode",
-          name: "\u51FA\u7DDA\u65B9\u5F0F",
-          options: [
-            {
-              code: "T",
-              description: "\u96C6\u4E2D\u51FA\u7DDA"
-            },
-            {
-              code: "L",
-              description: "D-Sub\u63D2\u5EA7(\u50C5\u914D\u540824V DC)"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "B",
-              description: "DC24V"
-            },
-            {
-              code: "F",
-              description: "DC12V"
-            }
-          ]
-        },
-        {
-          id: "manifoldStations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "4F",
-              description: "4\u9023"
-            },
-            {
-              code: "24F",
-              description: "\u2026\u6700\u592724\u9023"
-            }
-          ]
-        }
-      ],
-      specs: [
-        {
-          model: "CPV10S",
-          \u63A5\u96FB\u65B9\u5F0F: "\u63D2\u63A5\u5F0F, 25pin D-Sub",
-          \u5B89\u88DD\u9023\u6578: "4\u9023~24\u9023"
-        }
-      ],
-      note: "\u8A02\u8CFC\u78BC\u5206\u5E95\u5EA7(P\u5B54M5/A\u5B54\u03A63.2mm\u6216\u03A64mm\u5FEB\u63D2)\u3001\u96FB\u78C1\u95A5\u3001\u76F2\u677F\u4E09\u90E8\u5206,\u8A73\u898B\u578B\u9304P18-19",
-      sourceFile: "CPV10\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240402288946.pdf (P18-19)"
+    sourceFile: "6SV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D_-202603240400409696.pdf"
+  },
+  {
+    id: "7SV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "7SV\u7CFB\u5217",
+    name: "7SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F, \u63D2\u63A5\u5F0F\u63A5\u96FB)",
+    orderCodeFormat: "7V {seriesCode} {controlType} {portConnType} {port} {voltage} {leadLength} {thread}",
+    note: "7V/7SV\u70BA\u540C\u6B3E\u7522\u54C1\u5728\u4E0D\u540C\u578B\u9304\u4E2D\u7684\u6A19\u793A,\u8A02\u8CFC\u78BC\u7D50\u69CB\u76F8\u540C",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "portConnType",
+        name: "\u63A5\u7BA1\u578B\u5F0F",
+        optionsRef: "portConnectionTypeOptions.threadOrQuick"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91(\u87BA\u7D0B)/\u7BA1\u63A5\u53E3\u5F91(\u5FEB\u63D2)",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "04",
+            description: "\u03A64mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "06",
+            description: "PT1/8 \u6216 \u03A66mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "08",
+            description: "PT1/4 \u6216 \u03A68mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "10",
+            description: "PT3/8 \u6216 \u03A610mm(\u5FEB\u63D2)"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7AEF\u5B50\u7E10\u9577",
+        options: [
+          {
+            code: "050",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "7V0510/7V0520/7V0530",
+        port: "M5",
+        cv: "0.13~0.2",
+        weightG: "30~50"
+      },
+      {
+        model: "7V110/7V120/7V130",
+        port: "PT1/8",
+        cv: "0.41~0.47",
+        weightG: "80~100"
+      },
+      {
+        model: "7V210/7V220/7V230",
+        port: "PT1/4",
+        cv: "0.64~0.87",
+        weightG: "120~145"
+      },
+      {
+        model: "7V310/7V320/7V330",
+        port: "PT3/8",
+        cv: "1.25~1.8",
+        weightG: "230~305"
+      }
+    ],
+    workingPressureRange: "\u4E09\u4F4D\u7F6E\u578B0.2~0.8MPa(29~114psi); \u5176\u5B83\u578B0.15~0.8MPa(21~114psi)",
+    electrical: {
+      \u8017\u96FB\u91CF: "1.1VA(AC) / 0.7W(DC)",
+      protectionGrade: "\u9632\u5875",
+      heatGrade: "F\u7D1A"
     },
-    {
-      id: "CPV15S",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "CPV15S\u7CFB\u5217(\u96C6\u6210\u95A5)",
-      name: "CPV15S\u7CFB\u5217 \u96C6\u6210\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, CPV15\u5FAE\u578B\u96FB\u78C1\u95A5\u7684\u96C6\u6210\u95A5\u7D44)",
-      orderCodeFormat: "\u5E95\u5EA7: CPV15S {manifoldStations} {thread} | \u96FB\u78C1\u95A5: CPV15 {voltage} {manualPin} | \u76F2\u677F: P-CPV15S-R2",
-      categories: [
-        {
-          id: "manifoldStations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "2F",
-              description: "2\u9023"
-            },
-            {
-              code: "20F",
-              description: "\u2026\u6700\u592720\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC(\u5E95\u5EA7P\u5B54/R\u5B54)",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "portA",
-          name: "A\u5B54\u53E3\u5F91(\u4F9D\u7259\u578B)",
-          options: [
-            {
-              code: "PT/G\u7259",
-              description: "\u03A64mm\u5FEB\u63D2\u63A5\u982D"
-            },
-            {
-              code: "NPT\u7259",
-              description: '\u03A65/32"\u5FEB\u63D2\u63A5\u982D'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3(\u96FB\u78C1\u95A5)",
-          options: [
-            {
-              code: "B",
-              description: "DC24V"
-            },
-            {
-              code: "F",
-              description: "DC12V"
-            }
-          ]
-        },
-        {
-          id: "manualPin",
-          name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
-          options: [
-            {
-              code: "P",
-              description: "P: \u6709\u624B\u52D5\u92B7"
-            }
-          ]
-        }
-      ],
-      specs: [
-        {
-          model: "CPV15SB/CPV15SF",
-          \u63A5\u96FB\u65B9\u5F0F: "\u63D2\u63A5\u5F0F, 25pin D-Sub, \u6BCF\u7D442\u9023\u4E00\u7D1A",
-          \u5B89\u88DD\u9023\u6578: "2\u9023~20\u9023"
-        }
-      ],
-      sourceFile: "CPV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240403450406.pdf (P24-27)"
-    },
-    {
-      id: "3a",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "3A\u7CFB\u5217",
-      name: "3A\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5/\u5148\u5C0E\u5F0F, \u6C23\u5C0E\u8A0A\u865F\u53D6\u4EE3\u96FB\u78C1\u7DDA\u5708, \u5C0D\u61C93V\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "3A {seriesCode}{controlType} {port} {initialState} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position",
-          note: "\u6B64\u865510/20\u4EE3\u8868\u55AE\u6C23\u5C0E\u8A0A\u865F/\u96D9\u6C23\u5C0E\u8A0A\u865F\u53D6\u4EE3\u55AE\u96FB\u63A7/\u96D9\u96FB\u63A7"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5(100\u7CFB\u5217)"
-            },
-            {
-              code: "06",
-              description: '1/8"(100/200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4"(200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8"(300\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      note: "\u6C23\u63A7\u8A0A\u865F\u58D3\u529B\u9700\u6C42\u8ACB\u53C3\u7167\u578B\u9304P2\u898F\u683C\u8868;\u672A\u9644\u96FB\u6C23\u898F\u683C(\u7121\u7DDA\u5708/\u7121\u96FB\u58D3\u9700\u6C42)",
-      sourceFile: "3A202303011029559806.pdf (\u51713\u9801)"
-    },
-    {
-      id: "4a",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4A\u7CFB\u5217",
-      name: "4A\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u6C23\u5C0E\u8A0A\u865F\u53D6\u4EE3\u96FB\u78C1\u7DDA\u5708, \u5C0D\u61C94V\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "4A {seriesCode}{controlType} {port} {thread} - {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position",
-          note: "10/20/30C/30E/30P\u4EE3\u8868\u55AE\u6C23\u5C0E/\u96D9\u6C23\u5C0E/\u4E09\u4F4D\u7F6E\u96D9\u6C23\u5C0E(\u4E2D\u5C01\u9589/\u4E2D\u6392\u6C23/\u4E2D\u58D3\u529B)"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5(100\u7CFB\u5217)"
-            },
-            {
-              code: "06",
-              description: '1/8"(100/200\u7CFB\u5217)'
-            },
-            {
-              code: "08",
-              description: '1/4"(200/300\u7CFB\u5217)'
-            },
-            {
-              code: "10",
-              description: '3/8"(300\u7CFB\u5217)'
-            },
-            {
-              code: "15",
-              description: '1/2"(400\u7CFB\u5217)'
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          optionsRef: "pilotTypeOptions.internalExternal"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4A202303011041045726.pdf (\u517110\u9801, \u542B\u5404\u53E3\u5F91\u5C3A\u5BF8\u5716)"
-    },
-    {
-      id: "5a",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "5A\u7CFB\u5217",
-      name: "5A\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C95V\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "5A {seriesCode}{controlType} {port} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            },
-            {
-              code: "15",
-              description: '1/2"'
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259\u6216\u7121\u6B64\u4EE3\u78BC(M5)"
-            }
-          ]
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "5A\u7CFB\u5217\u6C23\u63A7\u95A5202303011040044526.pdf (\u51713\u9801)"
-    },
-    {
-      id: "eav",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "EAV\u7CFB\u5217",
-      name: "EAV\u7CFB\u5217 \u6A19\u6E96\u6C23\u63A7\u95A5 (ISO\u6A19\u6E96\u5B89\u88DD\u5C3A\u5BF8, \u5C0D\u61C9ESV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "EAV {seriesCode} {controlType} {pilotType}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            },
-            {
-              code: "6",
-              description: "6: 600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "pilotType",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u5167\u90E8\u5F15\u5C0E\u5F0F"
-            },
-            {
-              code: "W",
-              description: "W: \u5916\u90E8\u5F15\u5C0E\u5F0F"
-            }
-          ]
-        }
-      ],
-      note: "\u53E6\u6709\u642D\u914D\u5E95\u5EA7\u3001\u7AEF\u677F\u7B49\u7D44\u4EF6,\u8A02\u8CFC\u78BC\u7D50\u69CB\u8207ESV\u7CFB\u5217\u5E95\u5EA7\u7D44\u4EF6(ESV{\u7CFB\u5217}{\u578B\u5F0F\u4EE3\u865F})\u76F8\u540C,\u8A73\u898B\u578B\u9304P3-8",
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "EAV\u7CFB\u5217\u6A19\u6E96\u6C23\u63A7\u95A5202303011043369046.pdf (\u51718\u9801)"
-    },
-    {
-      id: "4sa",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "4SA\u7CFB\u5217",
-      name: "4SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, Cv: 0.51~3.0, \u5C0D\u61C94SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "4SA {seriesCode} {controlType} {port} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217 (Cv~0.6)"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217 (Cv~1.0)"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217 (Cv~1.8)"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217 (Cv~3.0)"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: "PT1/8"
-            },
-            {
-              code: "08",
-              description: "PT1/4"
-            },
-            {
-              code: "10",
-              description: "PT3/8"
-            },
-            {
-              code: "15",
-              description: "PT1/2"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202602240320587106.pdf (\u51714\u9801)"
-    },
-    {
-      id: "6sa",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "6SA\u7CFB\u5217",
-      name: "6SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C96SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "6SA {seriesCode}{controlType} {port} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "05: 0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5(0500\u7CFB\u5217)"
-            },
-            {
-              code: "06",
-              description: "PT1/8(100\u7CFB\u5217)"
-            },
-            {
-              code: "08",
-              description: "PT1/4(200\u7CFB\u5217)"
-            },
-            {
-              code: "10",
-              description: "PT3/8(300\u7CFB\u5217)"
-            },
-            {
-              code: "15",
-              description: "PT1/2(400\u7CFB\u5217)"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "6SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512110941149896.pdf (\u51714\u9801)"
-    },
-    {
-      id: "7sa",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "7SA\u7CFB\u5217",
-      name: "7SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C97SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB, \u87BA\u7D0B/\u5FEB\u63D2\u63A5\u7BA1\u53EF\u9078)",
-      orderCodeFormat: "7SA {seriesCode}{controlType} {portConnType} {port} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "05: 0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.5port_2or3position"
-        },
-        {
-          id: "portConnType",
-          name: "\u63A5\u7BA1\u578B\u5F0F",
-          optionsRef: "portConnectionTypeOptions.threadOrQuick"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91(\u87BA\u7D0B)/\u7BA1\u63A5\u53E3\u5F91(\u5FEB\u63D2)",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "04",
-              description: "\u03A64mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "06",
-              description: "PT1/8 \u6216 \u03A66mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "08",
-              description: "PT1/4 \u6216 \u03A68mm(\u5FEB\u63D2)"
-            },
-            {
-              code: "10",
-              description: "PT3/8 \u6216 \u03A610mm(\u5FEB\u63D2)"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "7SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512150946419976.pdf (\u51714\u9801)"
-    },
-    {
-      id: "4sta",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "4STA\u7CFB\u5217",
-      name: "4STA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5C0D\u61C94STV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "4STA {seriesCode}{controlType} {port} {initialState} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: "PT1/8"
-            },
-            {
-              code: "08",
-              description: "PT1/4"
-            },
-            {
-              code: "10",
-              description: "PT3/8"
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          options: [
-            {
-              code: "NC",
-              description: "NC: \u5E38\u9589\u578B"
-            },
-            {
-              code: "NO",
-              description: "NO: \u5E38\u958B\u578B(\u96D9\u6C23\u5C0E\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "4STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202602240321205236.pdf (\u51713\u9801)"
-    },
-    {
-      id: "6sta",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
-      group: "6STA\u7CFB\u5217",
-      name: "6STA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5C0D\u61C96STV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
-      orderCodeFormat: "6STA {seriesCode}{controlType} {port} {initialState} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "05: 0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u6C23\u63A7\u65B9\u5F0F",
-          optionsRef: "controlTypeOptions.3port_2position"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: "PT1/8"
-            },
-            {
-              code: "08",
-              description: "PT1/4"
-            },
-            {
-              code: "10",
-              description: "PT3/8"
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          options: [
-            {
-              code: "NC",
-              description: "NC: \u5E38\u9589\u578B"
-            },
-            {
-              code: "NO",
-              description: "NO: \u5E38\u958B\u578B(\u96D9\u6C23\u5C0E\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0.15~0.8MPa(21~114psi)",
-      sourceFile: "6STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202512110940087246.pdf (\u51714\u9801)"
-    },
-    {
-      id: "hsv",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
-      group: "HSV\u7CFB\u5217",
-      name: "HSV\u7CFB\u5217 \u624B\u6ED1\u95A5 (\u624B\u52D5\u6ED1\u52D5\u64CD\u4F5C\u5F0F)",
-      orderCodeFormat: "HSV {controlType} {port} {thread}",
-      categories: [
-        {
-          id: "controlType",
-          name: "\u4F4D\u7F6E\u6578/\u64CD\u4F5C\u65B9\u5F0F",
-          options: [
-            {
-              code: "20",
-              description: "20: \u4E8C\u4F4D\u7F6E\u624B\u6ED1\u95A5"
-            },
-            {
-              code: "30C",
-              description: "30C: \u4E09\u4F4D\u7F6E\u624B\u6ED1\u95A5(\u4E2D\u5C01\u9589\u578B)"
-            },
-            {
-              code: "30E",
-              description: "30E: \u4E09\u4F4D\u7F6E\u624B\u6ED1\u95A5(\u4E2D\u6392\u6C23\u578B)"
-            }
-          ],
-          note: "\u6B64\u70BA\u4F9D\u578B\u9304\u5716\u793A\u521D\u6B65\u5224\u8B80\u4E4B\u63A7\u5236\u65B9\u5F0F\u4EE3\u865F,\u5BE6\u969B\u4EE3\u865F\u8ACB\u4EE5\u578B\u9304P1-3\u70BA\u6E96"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      note: "\u624B\u52D5\u6ED1\u52D5\u95A5,\u7121\u9700\u96FB\u6E90\u6216\u6C23\u6E90\u5F15\u5C0E,\u9069\u5408\u624B\u52D5\u63A7\u5236\u5834\u5408\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
-      sourceFile: "HSV\u7CFB\u5217\u624B\u6ED1\u95A5202303011047200906.pdf (\u51713\u9801)"
-    },
-    {
-      id: "4h",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
-      group: "4H\u7CFB\u5217",
-      name: "4H\u7CFB\u5217 \u624B\u52D5\u95A5 (\u624B\u67C4\u6273\u52D5\u64CD\u4F5C\u5F0F, \u4E94\u53E3\u4E8C\u4F4D/\u4E09\u53E3\u4E8C\u4F4D)",
-      orderCodeFormat: "4H {seriesCode}{controlType} {port} {handleType} {thread}",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u4F4D\u7F6E\u6578",
-          options: [
-            {
-              code: "10",
-              description: "10: \u4E8C\u4F4D\u7F6E(\u81EA\u52D5\u56DE\u4F4D\u578B)"
-            },
-            {
-              code: "20",
-              description: "20: \u4E8C\u4F4D\u7F6E(\u5B9A\u4F4D\u578B)"
-            }
-          ],
-          note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            },
-            {
-              code: "10",
-              description: '3/8"'
-            }
-          ]
-        },
-        {
-          id: "handleType",
-          name: "\u624B\u67C4\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u6273\u52D5\u5F0F(\u5F48\u7C27\u81EA\u5FA9\u4F4D)"
-            },
-            {
-              code: "D",
-              description: "D: \u6273\u52D5\u5F0F(\u5B9A\u4F4D\u5361\u56FA\u578B)"
-            }
-          ],
-          note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      note: "\u624B\u67C4\u64CD\u4F5C,\u7121\u9700\u96FB\u6E90\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
-      sourceFile: "4H\u7CFB\u5217\u624B\u52D5\u95A5202303011045197796.pdf (\u51714\u9801)"
-    },
-    {
-      id: "3f-3fm",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
-      group: "3F/3FM\u7CFB\u5217",
-      name: "3F/3FM\u7CFB\u5217 \u8173\u8E0F\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u8173\u8E0F\u64CD\u4F5C\u5F0F)",
-      orderCodeFormat: "{code} {port} {initialState} {thread}",
-      categories: [
-        {
-          id: "code",
-          name: "\u578B\u5F0F\u4EE3\u865F",
-          options: [
-            {
-              code: "3F",
-              description: "3F: \u9644\u4FDD\u8B77\u84CB\u578B"
-            },
-            {
-              code: "3FM",
-              description: "3FM: \u7121\u4FDD\u8B77\u84CB\u578B"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      note: "\u8173\u8E0F\u64CD\u4F5C,\u7121\u9700\u96FB\u6E90,\u9069\u5408\u96D9\u624B\u4F5C\u696D\u6642\u7684\u8173\u8E0F\u63A7\u5236\u5834\u5408\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
-      sourceFile: "3F3FM\u7CFB\u5217\u8173\u8E0F\u95A5_\u4E09\u53E3\u4E8C\u4F4D_202303011052072856.pdf (\u51716\u9801)"
-    },
-    {
-      id: "m3",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
-      group: "M3\u7CFB\u5217",
-      name: "M3\u7CFB\u5217 \u6A5F\u68B0\u95A5 (\u6EFE\u8F2A\u6416\u81C2\u5F0F/\u9802\u687F\u5F0F, \u9650\u4F4D\u89F8\u767C\u7528\u9014)",
-      orderCodeFormat: "M3 {actuatorType} {port} {initialState} {thread}",
-      categories: [
-        {
-          id: "actuatorType",
-          name: "\u89F8\u767C\u6A5F\u69CB\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u6EFE\u8F2A\u6416\u81C2\u578B(\u96D9\u5411\u89F8\u767C)"
-            },
-            {
-              code: "H",
-              description: "H: \u55AE\u5411\u6EFE\u8F2A\u6416\u81C2\u578B"
-            },
-            {
-              code: "P",
-              description: "P: \u9802\u687F\u578B"
-            },
-            {
-              code: "L",
-              description: "L: \u9577\u884C\u7A0B\u6EFE\u8F2A\u578B"
-            }
-          ],
-          note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304P1-2\u78BA\u8A8D\u5BE6\u969B\u578B\u5F0F\u8207\u4EE3\u865F"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            },
-            {
-              code: "08",
-              description: '1/4"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      note: "\u6A5F\u68B0\u5F0F\u9650\u4F4D\u95A5,\u7531\u6A5F\u69CB(\u51F8\u8F2A\u3001\u884C\u7A0B\u6A94\u584A\u7B49)\u78B0\u89F8\u6EFE\u8F2A\u6216\u9802\u687F\u89F8\u767C,\u7121\u9700\u96FB\u6E90\u6216\u6C23\u6E90\u5F15\u5C0E\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
-      sourceFile: "M3\u7CFB\u5217\u6A5F\u68B0\u95A5202303011048141406.pdf (\u51719\u9801)"
-    },
-    {
-      id: "cm3",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
-      group: "CM3\u7CFB\u5217",
-      name: "CM3\u7CFB\u5217 \u6A5F\u68B0\u95A5 (\u5C0F\u578B\u5316\u6EFE\u8F2A\u6416\u81C2\u5F0F/\u9802\u687F\u5F0F, \u9650\u4F4D\u89F8\u767C\u7528\u9014)",
-      orderCodeFormat: "CM3 {actuatorType} {port} {initialState} {thread}",
-      categories: [
-        {
-          id: "actuatorType",
-          name: "\u89F8\u767C\u6A5F\u69CB\u578B\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u6EFE\u8F2A\u6416\u81C2\u578B(\u96D9\u5411\u89F8\u767C)"
-            },
-            {
-              code: "H",
-              description: "H: \u55AE\u5411\u6EFE\u8F2A\u6416\u81C2\u578B"
-            },
-            {
-              code: "P",
-              description: "P: \u9802\u687F\u578B"
-            }
-          ],
-          note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304P1-2\u78BA\u8A8D\u5BE6\u969B\u578B\u5F0F\u8207\u4EE3\u865F"
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5"
-            },
-            {
-              code: "06",
-              description: '1/8"'
-            }
-          ]
-        },
-        {
-          id: "initialState",
-          name: "\u521D\u59CB\u72C0\u614B",
-          optionsRef: "initialStateOptions.ncNo"
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          optionsRef: "threadOptions.standardGT"
-        }
-      ],
-      workingPressureRange: "0~0.8MPa(0~114psi)",
-      note: "M3\u7CFB\u5217\u7684\u5C0F\u578B\u5316\u7248\u672C,\u9AD4\u7A4D\u66F4\u7DCA\u6E4A\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
-      sourceFile: "CM3\u7CFB\u5217\u6A5F\u68B0\u95A5202303011050148176.pdf (\u51717\u9801)"
-    },
-    {
-      id: "4stv_base",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "4STV\u7CFB\u5217\u5E95\u5EA7",
-      code: "4STV",
-      name: "4STV\u7CFB\u5217\u7528\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "4STV100M",
-              description: "4STV100M: 4STV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4STV200M",
-              description: "4STV200M: 4STV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4STV300M",
-              description: "4STV300M: 4STV300\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "20F",
-              description: "20F: 20\u9023"
-            },
-            {
-              code: "30F",
-              description: "30F: 30\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "6stv_base",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "6STV\u7CFB\u5217\u5E95\u5EA7",
-      code: "6STV",
-      name: "6STV\u7CFB\u5217\u7528\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "6STV0500M",
-              description: "6STV0500M: 6STV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV100M",
-              description: "6STV100M: 6STV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV200M",
-              description: "6STV200M: 6STV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV300M",
-              description: "6STV300M: 6STV300\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "20F",
-              description: "20F: 20\u9023"
-            },
-            {
-              code: "30F",
-              description: "30F: 30\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "7sv_base",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "7SV\u7CFB\u5217\u5E95\u5EA7",
-      code: "7SV",
-      name: "7SV\u7CFB\u5217\u7528\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "7SV0500M",
-              description: "7SV0500M: 7SV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV100M",
-              description: "7SV100M: 7SV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV200M",
-              description: "7SV200M: 7SV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV300M",
-              description: "7SV300M: 7SV300\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "20F",
-              description: "20F: 20\u9023"
-            },
-            {
-              code: "30F",
-              description: "30F: 30\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "6sv_base",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "6SV\u7CFB\u5217\u5E95\u5EA7",
-      code: "6SV",
-      name: "6SV\u7CFB\u5217\u7528\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "6SV0500M",
-              description: "6SV0500M: 6SV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV100M",
-              description: "6SV100M: 6SV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV200M",
-              description: "6SV200M: 6SV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV300M",
-              description: "6SV300M: 6SV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV400M",
-              description: "6SV400M: 6SV400\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "20F",
-              description: "20F: 20\u9023"
-            },
-            {
-              code: "30F",
-              description: "30F: 30\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "blanking_plates",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "\u5E95\u5EA7\u76F2\u677F\u7D44\u4EF6",
-      code: "P-",
-      name: "\u5E95\u5EA7\u76F2\u677F\u7D44\u4EF6",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "4SV100M",
-              description: "4SV100M: 4SV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4SV200M",
-              description: "4SV200M: 4SV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4SV300M",
-              description: "4SV300M: 4SV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4SV400M",
-              description: "4SV400M: 4SV400\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4STV100M",
-              description: "4STV100M: 4STV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4STV200M",
-              description: "4STV200M: 4STV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "4STV300M",
-              description: "4STV300M: 4STV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV0500M",
-              description: "6STV0500M: 6STV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV100M",
-              description: "6STV100M: 6STV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV200M",
-              description: "6STV200M: 6STV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6STV300M",
-              description: "6STV300M: 6STV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV0500M",
-              description: "7SV0500M: 7SV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV100M",
-              description: "7SV100M: 7SV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV200M",
-              description: "7SV200M: 7SV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "7SV300M",
-              description: "7SV300M: 7SV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV0500M",
-              description: "6SV0500M: 6SV0500\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV100M",
-              description: "6SV100M: 6SV100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV200M",
-              description: "6SV200M: 6SV200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV300M",
-              description: "6SV300M: 6SV300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "6SV400M",
-              description: "6SV400M: 6SV400\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "CPV10M",
-              description: "CPV10M: CPV10\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "CPV15S",
-              description: "CPV15S: CPV15S\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "3V2M",
-              description: "3V2M: 3V2\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "P-{code}-R2",
-      note: '\u898F\u683C\u4EE3\u865F\u5217\u8868\u4E2D\u7684\u300E4SV100M/200M/300M/400M\u300F\u70BA\u539F\u59CB\u8CC7\u6599\u6A19\u793A,\u8207\u672C\u6A94\u6848\u51674V100~400\u7CFB\u5217(orderCodeFormat\u4EE5"4V ..."\u958B\u982D)\u5BE6\u70BA\u540C\u4E00\u7522\u54C1\u7DDA,\u5E95\u5EA7\u4EE3\u865F\u5EFA\u8B70\u4E0B\u55AE\u524D\u518D\u6838\u5C0D\u6B63\u78BA\u524D\u7DB4(4V\u62164SV)\u3002'
-    },
-    {
-      id: "4m",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5",
-      group: "4M\u7CFB\u5217",
-      code: "4M",
-      name: "4M\u7CFB\u5217 NAMUR\u898F\u683C (\u4E94\u53E3\u4E8C\u4F4D)",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "control",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          options: [
-            {
-              code: "10",
-              description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-            },
-            {
-              code: "20",
-              description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5: M5"
-            },
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            },
-            {
-              code: "10",
-              description: '10: 3/8"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7121\u6B64\u4EE3\u78BC (M5)"
-            },
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {series} {control} {port} {voltage} {terminal} {thread}"
-    },
-    {
-      id: "3v-manifold",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "3V\u7CFB\u5217\u5E95\u5EA7",
-      code: "",
-      name: "3V100~300\u7CFB\u5217\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "3V100M",
-              description: "3V100M: 100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "3V200M",
-              description: "3V200M: 200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "3V300M",
-              description: "3V300M: 300\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "11F",
-              description: "11F: 11\u9023"
-            },
-            {
-              code: "12F",
-              description: "12F: 12\u9023"
-            },
-            {
-              code: "13F",
-              description: "13F: 13\u9023"
-            },
-            {
-              code: "14F",
-              description: "14F: 14\u9023"
-            },
-            {
-              code: "15F",
-              description: "15F: 15\u9023"
-            },
-            {
-              code: "16F",
-              description: "16F: 16\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "3v-blanking",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "3V\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
-      code: "P-",
-      name: "3V100~300\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "3V100M",
-              description: "3V100M: 100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "3V200M",
-              description: "3V200M: 200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "3V300M",
-              description: "3V300M: 300\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{series} - R2"
-    },
-    {
-      id: "4v-manifold",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "4V\u7CFB\u5217\u5E95\u5EA7",
-      code: "",
-      name: "4V100~400\u7CFB\u5217\u5E95\u5EA7",
-      categories: [
-        {
-          id: "code",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "100M",
-              description: "100M: 100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "200M",
-              description: "200M: 200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "300M",
-              description: "300M: 300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "400M",
-              description: "400M: 400\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "1F",
-              description: "1F: 1\u9023"
-            },
-            {
-              code: "2F",
-              description: "2F: 2\u9023"
-            },
-            {
-              code: "3F",
-              description: "3F: 3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4F: 4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5F: 5\u9023"
-            },
-            {
-              code: "6F",
-              description: "6F: 6\u9023"
-            },
-            {
-              code: "7F",
-              description: "7F: 7\u9023"
-            },
-            {
-              code: "8F",
-              description: "8F: 8\u9023"
-            },
-            {
-              code: "9F",
-              description: "9F: 9\u9023"
-            },
-            {
-              code: "10F",
-              description: "10F: 10\u9023"
-            },
-            {
-              code: "11F",
-              description: "11F: 11\u9023"
-            },
-            {
-              code: "12F",
-              description: "12F: 12\u9023"
-            },
-            {
-              code: "13F",
-              description: "13F: 13\u9023"
-            },
-            {
-              code: "14F",
-              description: "14F: 14\u9023"
-            },
-            {
-              code: "15F",
-              description: "15F: 15\u9023"
-            },
-            {
-              code: "16F",
-              description: "16F: 16\u9023"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            },
-            {
-              code: "T",
-              description: "T: NPT\u7259"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {stations} {thread}"
-    },
-    {
-      id: "4v-blanking",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "4V\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
-      code: "P-",
-      name: "4V100~400\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
-      categories: [
-        {
-          id: "series",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "100M",
-              description: "100M: 100\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "200M",
-              description: "200M: 200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "300M",
-              description: "300M: 300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "400M",
-              description: "400M: 400\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{series} - R2"
-    },
-    {
-      id: "5v",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5",
-      group: "5V\u7CFB\u5217",
-      code: "5V",
-      name: "5V\u7CFB\u5217\u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "control",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          options: [
-            {
-              code: "10",
-              description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-            },
-            {
-              code: "20",
-              description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-            },
-            {
-              code: "30C",
-              description: "30C: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
-            },
-            {
-              code: "30E",
-              description: "30E: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
-            },
-            {
-              code: "30P",
-              description: "30P: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5: M5"
-            },
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            },
-            {
-              code: "10",
-              description: '10: 3/8"'
-            },
-            {
-              code: "15",
-              description: '15: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u7AEF\u5B50\u7DDA\u9577",
-          options: [
-            {
-              code: "050",
-              description: "050: 0.5m"
-            },
-            {
-              code: "200",
-              description: "200: 2.0m"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259\u6216\u7121\u6B64\u4EE3\u78BC(M5)"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{series}{control} {port} {voltage} {length} {thread}"
-    },
-    {
-      id: "esv-valve",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5",
-      group: "ESV\u7CFB\u5217",
-      code: "ESV",
-      name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217"
-            },
-            {
-              code: "6",
-              description: "6: 600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "control",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          options: [
-            {
-              code: "10",
-              description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-            },
-            {
-              code: "20",
-              description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-            },
-            {
-              code: "30C",
-              description: "30C: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
-            },
-            {
-              code: "30E",
-              description: "30E: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
-            },
-            {
-              code: "30P",
-              description: "30P: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        },
-        {
-          id: "terminal",
-          name: "\u63A5\u96FB\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-            },
-            {
-              code: "I",
-              description: "I: \u51FA\u7DDA\u5F0F"
-            }
-          ]
-        },
-        {
-          id: "pilot",
-          name: "\u5F15\u5C0E\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u5167\u90E8\u5F15\u5C0E\u5F0F"
-            },
-            {
-              code: "W",
-              description: "W: \u5916\u90E8\u5F15\u5C0E\u5F0F"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {series} {control} {voltage} {terminal} {pilot}"
-    },
-    {
-      id: "esv-base",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "ESV\u7CFB\u5217\u5E95\u5EA7\u8207\u7AEF\u677F",
-      code: "ESV",
-      name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 \u5E95\u5EA7\u8207\u7AEF\u677F\u7D44\u4EF6",
-      categories: [
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "20",
-              description: "20: 200\u7CFB\u5217"
-            },
-            {
-              code: "30",
-              description: "30: 300\u7CFB\u5217"
-            },
-            {
-              code: "40",
-              description: "40: 400\u7CFB\u5217"
-            },
-            {
-              code: "60",
-              description: "60: 600\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u578B\u5F0F\u4EE3\u865F",
-          options: [
-            {
-              code: "1M",
-              description: "1M: \u55AE\u9AD4\u578B\u5E95\u5EA7"
-            },
-            {
-              code: "2M",
-              description: "2M: \u591A\u806F\u578B\u5E95\u5EA7"
-            },
-            {
-              code: "3M",
-              description: "3M: \u7AEF\u677F\u7D44\u4EF6"
-            },
-            {
-              code: "4M",
-              description: "4M: \u591A\u806F\u578B\u5E95\u5EA7\u8F49\u63A5\u584A"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259"
-            },
-            {
-              code: "G",
-              description: "G: G\u7259"
-            }
-          ]
-        },
-        {
-          id: "pilot",
-          name: "\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3\u65B9\u5F0F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u7368\u7ACB\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3"
-            },
-            {
-              code: "W",
-              description: "W: \u96C6\u4E2D\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3"
-            }
-          ]
-        },
-        {
-          id: "port_pos",
-          name: "\u6C23\u53E3\u65B9\u4F4D\u4EE3\u865F",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u5074\u9762\u5DE5\u4F5C\u6C23\u53E3 / \u5DE6\u5074\u5DE5\u4F5C\u6C23\u53E3"
-            },
-            {
-              code: "B",
-              description: "B: \u5E95\u9762\u5DE5\u4F5C\u6C23\u53E3"
-            },
-            {
-              code: "R",
-              description: "R: \u53F3\u5074\u5DE5\u4F5C\u6C23\u53E3"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {series} {type} {thread} {pilot} {port_pos}"
-    },
-    {
-      id: "esv-blanking",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "ESV\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
-      code: "P-",
-      name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 \u9644\u4EF6\u8A02\u8CFC\u78BC (\u76F2\u677F)",
-      categories: [
-        {
-          id: "series",
-          name: "\u9069\u7528\u7522\u54C1\u4EE3\u865F",
-          options: [
-            {
-              code: "ESV200M",
-              description: "ESV200M: 200\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "ESV300M",
-              description: "ESV300M: 300\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "ESV400M",
-              description: "ESV400M: 400\u7CFB\u5217\u5E95\u5EA7"
-            },
-            {
-              code: "ESV600M",
-              description: "ESV600M: 600\u7CFB\u5217\u5E95\u5EA7"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{series} - R2"
-    },
-    {
-      id: "coil-cd",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "\u666E\u901A\u7DDA\u5708",
-      code: "",
-      name: "\u666E\u901A\u7DDA\u5708 (080, 092\u7CFB\u5217)",
-      categories: [
-        {
-          id: "code",
-          name: "\u7DDA\u5708\u985E\u5225",
-          options: [
-            {
-              code: "CD",
-              description: "CD: DIN\u63D2\u5EA7\u5F0F\u7DDA\u5708"
-            },
-            {
-              code: "CL",
-              description: "CL: \u51FA\u7DDA\u5F0F\u7DDA\u5708"
-            }
-          ]
-        },
-        {
-          id: "diameter",
-          name: "\u7DDA\u5708\u5167\u5F91",
-          options: [
-            {
-              code: "A080",
-              description: "A080: \u5167\u5F91 \u03A68.0mm"
-            },
-            {
-              code: "A092",
-              description: "A092: \u5167\u5F91 \u03A69.0mm"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            },
-            {
-              code: "C",
-              description: "C: AC110V"
-            },
-            {
-              code: "E",
-              description: "E: AC24V"
-            },
-            {
-              code: "F",
-              description: "F: DC12V"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {voltage}"
-    },
-    {
-      id: "coil-cfb",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "\u9632\u7206\u7DDA\u5708",
-      code: "CFB",
-      name: "\u9632\u7206\u578B\u7DDA\u5708\u90E8\u54C1",
-      categories: [
-        {
-          id: "diameter",
-          name: "\u7DDA\u5708\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "092",
-              description: "092: \u9069\u7528\u65BC\u9632\u7206\u95A5"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {diameter} {voltage}"
-    },
-    {
-      id: "b03-valve",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5",
-      group: "B03\u9632\u7206\u96FB\u78C1\u95A5",
-      code: "B03-",
-      name: "B03\u9632\u7206\u578B\u96FB\u78C1\u95A5",
-      categories: [
-        {
-          id: "type",
-          name: "\u898F\u683C\u4EE3\u865F",
-          options: [
-            {
-              code: "3V",
-              description: "3V: \u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5"
-            },
-            {
-              code: "4V",
-              description: "4V: \u4E94\u53E3\u4E8C\u4F4D\u4E94\u53E3\u4E09\u4F4D"
-            },
-            {
-              code: "4M",
-              description: "4M: \u4E94\u53E3\u4E8C\u4F4D(NAMUR\u898F\u683C)"
-            }
-          ]
-        },
-        {
-          id: "series",
-          name: "\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "1",
-              description: "1: 100\u7CFB\u5217 (\u50C53V)"
-            },
-            {
-              code: "2",
-              description: "2: 200\u7CFB\u5217"
-            },
-            {
-              code: "3",
-              description: "3: 300\u7CFB\u5217"
-            },
-            {
-              code: "4",
-              description: "4: 400\u7CFB\u5217 (\u50C54V)"
-            }
-          ]
-        },
-        {
-          id: "control",
-          name: "\u96FB\u63A7\u65B9\u5F0F",
-          options: [
-            {
-              code: "10",
-              description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-            },
-            {
-              code: "20",
-              description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-            },
-            {
-              code: "30C",
-              description: "30C: \u4E09\u4F4D\u7F6E\u4E2D\u5C01\u578B (\u50C54V)"
-            },
-            {
-              code: "30E",
-              description: "30E: \u4E09\u4F4D\u7F6E\u4E2D\u6392\u578B (\u50C54V)"
-            },
-            {
-              code: "30P",
-              description: "30P: \u4E09\u4F4D\u7F6E\u4E2D\u58D3\u578B (\u50C54V)"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u63A5\u7BA1\u53E3\u5F91",
-          options: [
-            {
-              code: "M5",
-              description: "M5: M5"
-            },
-            {
-              code: "06",
-              description: '06: 1/8"'
-            },
-            {
-              code: "08",
-              description: '08: 1/4"'
-            },
-            {
-              code: "10",
-              description: '10: 3/8"'
-            },
-            {
-              code: "15",
-              description: '15: 1/2"'
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "A",
-              description: "A: AC220V"
-            },
-            {
-              code: "B",
-              description: "B: DC24V"
-            }
-          ]
-        },
-        {
-          id: "thread",
-          name: "\u7259\u578B\u4EE3\u78BC",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: PT\u7259 \u6216 \u7121\u6B64\u4EE3\u78BC"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code}{type} {series} {control} {port} {voltage} {thread}"
-    },
-    {
-      id: "cable-dsub",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-      group: "\u96C6\u6210\u95A5\u7D44\u914D\u5957\u7DDA\u7E9C",
-      code: "F-DSUB",
-      name: "F-DSUB\u7CFB\u5217\u914D\u5957\u7DDA\u7E9C",
-      categories: [
-        {
-          id: "pins",
-          name: "\u91DD\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "15",
-              description: "15: 15PIN"
-            },
-            {
-              code: "25",
-              description: "25: 25PIN"
-            },
-            {
-              code: "37",
-              description: "37: 37PIN"
-            }
-          ]
-        },
-        {
-          id: "type",
-          name: "\u7DDA\u7AEF\u9023\u63A5\u5668\u578B\u5F0F",
-          options: [
-            {
-              code: "F",
-              description: "F: \u5169\u7AEF\u70BA\u540C\u578B\u6BCD\u63A5\u982D"
-            },
-            {
-              code: "M",
-              description: "M: \u4E00\u7AEF\u516C\u63A5\u982D\u4E00\u7AEF\u6BCD\u63A5\u982D"
-            },
-            {
-              code: "S",
-              description: "S: \u4E00\u7AEF\u6BCD\u63A5\u982D\u4E00\u7AEF\u76F4\u63A5\u51FA\u7DDA"
-            }
-          ]
-        },
-        {
-          id: "length",
-          name: "\u7DDA\u9577",
-          options: [
-            {
-              code: "150",
-              description: "150: 1.5m (\u50C515PIN)"
-            },
-            {
-              code: "200",
-              description: "200: 2m"
-            },
-            {
-              code: "300",
-              description: "300: 3m"
-            },
-            {
-              code: "500",
-              description: "500: 5m"
-            },
-            {
-              code: "800",
-              description: "800: 8m"
-            },
-            {
-              code: "1000",
-              description: "1000: 10m"
-            }
-          ]
-        }
-      ],
-      orderCodeFormat: "{code} {pins} {type} {length}"
-    },
-    {
-      id: "6D-manifold",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "6DM/6D/6DW\u7CFB\u5217 \u96C6\u6210\u95A5\u7D44\u6D3E\u751F\u7522\u54C1",
-      name: "6D/6DM/6DW\u7CFB\u5217 \u96C6\u6210\u95A5\u7D44 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      orderCodeFormat: "{seriesCode} {stations}-{port} {voltage} {singleCtrl} {doubleCtrl} {midClosed} {midExhaust} {midPressure} {commModule} {specialValve}",
-      note: "\u6B64\u70BA\u8907\u5408\u5F0F\u96C6\u6210\u95A5\u7D44\u8A02\u8CFC\u78BC\u3002\u5305\u542B 6D\u7CFB\u5217(25pin D-SUB), 6DM\u7CFB\u5217(15pin D-SUB), 6DW\u7CFB\u5217(37pin D-SUB)\u3002",
-      categories: [
-        {
-          id: "seriesCode",
-          name: "\u2460\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "6D05H",
-              description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
-            },
-            {
-              code: "6D1H",
-              description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
-            },
-            {
-              code: "6D2H",
-              description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
-            },
-            {
-              code: "6DM05H",
-              description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
-            },
-            {
-              code: "6DM1H",
-              description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
-            },
-            {
-              code: "6DM2H",
-              description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
-            },
-            {
-              code: "6DW05H",
-              description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
-            },
-            {
-              code: "6DW1H",
-              description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
-            },
-            {
-              code: "6DW2H",
-              description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
-            }
-          ]
-        },
-        {
-          id: "stations",
-          name: "\u2461\u7E3D\u9023\u6578\u4EE3\u865F",
-          options: [
-            {
-              code: "3F",
-              description: "3\u9023"
-            },
-            {
-              code: "4F",
-              description: "4\u9023"
-            },
-            {
-              code: "5F",
-              description: "5\u9023"
-            },
-            {
-              code: "12F",
-              description: "12\u9023"
-            },
-            {
-              code: "21F",
-              description: "21\u9023 (\u50C5\u7279\u5B9A\u578B\u865F\u652F\u63F4)"
-            }
-          ]
-        },
-        {
-          id: "port",
-          name: "\u2462\u63A5\u7BA1\u53E3\u5F91(A/B\u53E3)",
-          options: [
-            {
-              code: "J04",
-              description: "\u03A64\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
-            },
-            {
-              code: "J06",
-              description: "\u03A66\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
-            },
-            {
-              code: "J08",
-              description: "\u03A68\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
-            },
-            {
-              code: "J10",
-              description: "\u03A610\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u2463\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "B",
-              description: "DC24V"
-            },
-            {
-              code: "F",
-              description: "DC12V"
-            }
-          ]
-        },
-        {
-          id: "singleCtrl",
-          name: "\u2464\u55AE\u63A7\u96FB\u78C1\u95A5\u6578",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "S1",
-              description: "1\u500B"
-            },
-            {
-              code: "S2",
-              description: "2\u500B"
-            },
-            {
-              code: "S21",
-              description: "21\u500B"
-            }
-          ]
-        },
-        {
-          id: "doubleCtrl",
-          name: "\u2465\u96D9\u63A7\u96FB\u78C1\u95A5\u6578",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "D1",
-              description: "1\u500B"
-            },
-            {
-              code: "D2",
-              description: "2\u500B"
-            },
-            {
-              code: "D12",
-              description: "12\u500B"
-            }
-          ]
-        },
-        {
-          id: "midClosed",
-          name: "\u2466\u4E09\u4F4D\u4E2D\u5C01\u5F0F\u96FB\u78C1\u95A5\u6578",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "C1",
-              description: "1\u500B"
-            },
-            {
-              code: "C2",
-              description: "2\u500B"
-            },
-            {
-              code: "C12",
-              description: "12\u500B"
-            }
-          ]
-        },
-        {
-          id: "midExhaust",
-          name: "\u2467\u4E09\u4F4D\u4E2D\u6CC4\u5F0F\u96FB\u78C1\u95A5\u6578",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "E1",
-              description: "1\u500B"
-            },
-            {
-              code: "E2",
-              description: "2\u500B"
-            },
-            {
-              code: "E12",
-              description: "12\u500B"
-            }
-          ]
-        },
-        {
-          id: "midPressure",
-          name: "\u2468\u4E09\u4F4D\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A5\u6578",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "P1",
-              description: "1\u500B"
-            },
-            {
-              code: "P2",
-              description: "2\u500B"
-            },
-            {
-              code: "P12",
-              description: "12\u500B"
-            }
-          ]
-        },
-        {
-          id: "commModule",
-          name: "\u2469\u9644\u901A\u4FE1\u5354\u8B70\u6A21\u584A\u898F\u683C",
-          options: [
-            {
-              code: "",
-              description: "\u7A7A\u767D: \u4E0D\u9644\u901A\u4FE1\u5354\u8B70\u6A21\u584A"
-            },
-            {
-              code: "CPN1",
-              description: "\u9644Profinet\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
-            },
-            {
-              code: "CEN1",
-              description: "\u9644EtherNet/IP\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
-            },
-            {
-              code: "CEA1",
-              description: "\u9644EtherCAT\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
-            },
-            {
-              code: "CLK1",
-              description: "\u9644IO-Link\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
-            },
-            {
-              code: "CPN2",
-              description: "\u9644Profinet\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
-            },
-            {
-              code: "CEN2",
-              description: "\u9644EtherNet/IP\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
-            },
-            {
-              code: "CEA2",
-              description: "\u9644EtherCAT\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
-            }
-          ]
-        },
-        {
-          id: "specialValve",
-          name: "\u246A\u7279\u6B8A\u6D3E\u751F\u95A5\u6578\u91CF",
-          options: [
-            {
-              code: "",
-              description: "\u7121"
-            },
-            {
-              code: "SE1",
-              description: "\u7368\u7ACB\u9032\u6C23\u7684\u55AE\u63A7\u96FB\u78C1\u95A51\u500B (\u53EF\u589E\u6578\u91CF\u5982 SE2)"
-            },
-            {
-              code: "DE1",
-              description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u96FB\u78C1\u95A51\u500B (\u53EF\u589E\u6578\u91CF\u5982 DE2)"
-            },
-            {
-              code: "EE1",
-              description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "PE1",
-              description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "SR1",
-              description: "\u7368\u7ACB\u6392\u6C23\u7684\u55AE\u63A7\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "DR1",
-              description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "ER1",
-              description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "PR1",
-              description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "SW1",
-              description: "\u5916\u90E8\u5148\u5C0E\u55AE\u63A7\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "DW1",
-              description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "CW1",
-              description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u5C01\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "EW1",
-              description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "PW1",
-              description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
-            },
-            {
-              code: "DNC1",
-              description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5(NC-NC)1\u500B (\u53EF\u589E\u6578\u91CF\u5982 DNC2)"
-            },
-            {
-              code: "DNO1",
-              description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5(NO-NO)1\u500B (\u53EF\u589E\u6578\u91CF\u5982 DNO2)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "6D-single",
-      category: "\u63A7\u5236\u5143\u4EF6",
-      superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-      group: "6D\u7CFB\u5217\u55AE\u9AD4",
-      name: "6D\u7CFB\u5217 \u96D9\u4E09\u53E3\u4E8C\u4F4D/\u4E0D\u540C\u9032\u6C23\u65B9\u5F0F\u96FB\u78C1\u95A5\u55AE\u9AD4",
-      orderCodeFormat: "6D {series} {controlType} {voltage} {pilotType}",
-      categories: [
-        {
-          id: "series",
-          name: "\u2460\u898F\u683C\u4EE3\u865F & \u2461\u7CFB\u5217\u4EE3\u865F",
-          options: [
-            {
-              code: "05",
-              description: "6D 0500\u7CFB\u5217"
-            },
-            {
-              code: "1",
-              description: "6D 100\u7CFB\u5217"
-            },
-            {
-              code: "2",
-              description: "6D 200\u7CFB\u5217"
-            }
-          ]
-        },
-        {
-          id: "controlType",
-          name: "\u2462\u96FB\u63A7\u65B9\u5F0F",
-          options: [
-            {
-              code: "10",
-              description: "\u55AE\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-            },
-            {
-              code: "20",
-              description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-            },
-            {
-              code: "30C",
-              description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
-            },
-            {
-              code: "30E",
-              description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
-            },
-            {
-              code: "30P",
-              description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
-            },
-            {
-              code: "20NC",
-              description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5NC-NC"
-            },
-            {
-              code: "20NO",
-              description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5NO-NO"
-            }
-          ]
-        },
-        {
-          id: "voltage",
-          name: "\u2463\u6A19\u6E96\u96FB\u58D3",
-          options: [
-            {
-              code: "B",
-              description: "DC24V"
-            },
-            {
-              code: "F",
-              description: "DC12V"
-            }
-          ]
-        },
-        {
-          id: "pilotType",
-          name: "\u2464\u5F15\u5C0E\u65B9\u5F0F/\u9032\u6392\u6C23\u985E\u578B",
-          options: [
-            {
-              code: "",
-              description: "\u6A19\u6E96(\u5167\u90E8\u5F15\u5C0E)"
-            },
-            {
-              code: "-W",
-              description: "\u5916\u90E8\u5F15\u5C0E\u5F0F"
-            },
-            {
-              code: "-E",
-              description: "\u7368\u7ACB\u9032\u6C23"
-            },
-            {
-              code: "-R",
-              description: "\u7368\u7ACB\u6392\u6C23"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+    accessories: "\u914D\u5957\u7528\u5E95\u5EA7 7V0500M/7V100M/7V200M/7V300M(\u53EF1~20\u9023), \u5074\u9762/\u5E95\u90E8\u5B89\u88DD\u652F\u67B6 F-7V\u7CFB\u5217LB/LBD",
+    sourceFile: "7V\u7CFB\u5217\u96FB\u78C1\u95A5-202507101002293446.pdf"
+  },
+  {
+    id: "3V100",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V100\u7CFB\u5217",
+    name: "3V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
+    orderCodeFormat: "3V 1 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "3V110-M5/3V120-M5",
+        port: "M5",
+        cv: null
+      },
+      {
+        model: "3V110-06/3V120-06",
+        port: '1/8"',
+        cv: 0.6
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    maxOperateFreq: "5\u6B21/\u79D2(\u7A7A\u8F09)",
+    sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P42)"
+  },
+  {
+    id: "3V200",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V200\u7CFB\u5217",
+    name: "3V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
+    orderCodeFormat: "3V 2 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "3V210-06/3V220-06",
+        port: '1/8"',
+        cv: null
+      },
+      {
+        model: "3V210-08/3V220-08",
+        port: '1/4"',
+        cv: 1
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P44)"
+  },
+  {
+    id: "3V300",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V300\u7CFB\u5217",
+    name: "3V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
+    orderCodeFormat: "3V 3 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        optionsRef: "pilotTypeOptions.internalExternal"
+      }
+    ],
+    specs: [
+      {
+        model: "3V310-08/3V320-08",
+        port: '1/4"',
+        cv: null
+      },
+      {
+        model: "3V310-10/3V320-10",
+        port: '3/8"',
+        cv: 1.65
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "3V100\u7CFB\u5217-202303011011382166.pdf (P46)"
+  },
+  {
+    id: "3V1",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V1\u7CFB\u5217",
+    name: "3V1\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F\u5E38\u9589\u578B)",
+    orderCodeFormat: "3V1 {port} {voltage} {terminal} {thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "3V1-M5 / 3V1-06",
+        flowDiameterMm: 1.2,
+        note: "\u76F4\u52D5\u5F0F,\u7121\u9700\u52A0\u6CB9\u6F64\u6ED1,\u53EF\u591A\u95A5\u96C6\u6210\u4F7F\u7528"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    maxOperateFreq: "10\u6B21/\u79D2(\u7A7A\u8F09)",
+    sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P31)"
+  },
+  {
+    id: "3V2",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V2\u7CFB\u5217",
+    name: "3V2\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
+    orderCodeFormat: "3V2 {port} {initialState} {voltage} {terminal} {thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "3V206",
+        port: '1/8"',
+        cv: 0.18
+      },
+      {
+        model: "3V208",
+        port: '1/4"',
+        cv: 0.19
+      }
+    ],
+    workingPressureRange: "\u666E\u901A0~0.8MPa(0~114psi); \u771F\u7A7A-102.2kPa~0.1MPa(-14.5~14.2psi)",
+    features: "\u540C\u8EF8\u622A\u6B62\u5F0F\u7D50\u69CB,\u5BC6\u5C01\u6027\u597D,\u6D41\u91CF\u5927,\u53EF\u7528\u65BC\u771F\u7A7A(\u8CA0\u58D3)",
+    accessories: "\u5B89\u88DD\u9644\u4EF6\u8A02\u8CFC\u78BC F-3V2 FA (FA\u578B\u5B89\u88DD\u677F)",
+    sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P33)"
+  },
+  {
+    id: "3V2M",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V2M\u7CFB\u5217(\u5E36\u5E95\u5EA7\u578B)",
+    name: "3V2M\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5E36\u5E95\u5EA7\u578B, \u53EF\u96C6\u6210\u64F4\u5145)",
+    orderCodeFormat: "\u95A5\u9AD4: 3V2M {initialState} {voltage} {terminal} | \u5E95\u5EA7: 3V2M {manifoldStations} {exhaustType} {thread}",
+    categories: [
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "manifoldStations",
+        name: "\u5E95\u5EA7\u9023\u6578",
+        options: [
+          {
+            code: "1F",
+            description: "1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2\u9023"
+          },
+          {
+            code: "20F",
+            description: "\u2026\u6700\u592720\u9023"
+          }
+        ]
+      },
+      {
+        id: "exhaustType",
+        name: "\u6392\u6C23\u985E\u578B",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u96C6\u4E2D\u6392\u6C23\u578B"
+          },
+          {
+            code: "D",
+            description: "D: \u7368\u7ACB\u6392\u6C23\u578B"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "3V2M",
+        cv: 0.1,
+        port: '1/8"(\u5E95\u5EA7\u50C5\u6B64\u4E00\u7A2E)'
+      }
+    ],
+    note: "\u8A02\u8CFC\u78BC\u5206\u4E09\u7A2E: \u95A5\u9AD4\u8A02\u8CFC\u78BC\u3001\u5E95\u5EA7\u8A02\u8CFC\u78BC\u3001\u7D44\u5408(\u95A5\u7D44)\u8A02\u8CFC\u78BC\u3001\u76F2\u677F\u8A02\u8CFC\u78BC(P-3V2M-R2)",
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P35)"
+  },
+  {
+    id: "3V3",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3V3\u7CFB\u5217",
+    name: "3V3\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
+    orderCodeFormat: "3V3 {port} {initialState} {voltage} {terminal} {thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        optionsRef: "terminalOptions.dinOrLead"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "3V308",
+        port: '1/4"',
+        cv: 0.62
+      }
+    ],
+    workingPressureRange: "\u666E\u901A0~0.8MPa; \u771F\u7A7A-102.2kPa~0.1MPa",
+    sourceFile: "3V1\u7CFB\u5217-\u96FB\u78C1\u95A5-202303011004205466.pdf (P37)"
+  },
+  {
+    id: "6STV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "6STV\u7CFB\u5217",
+    name: "6STV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5148\u5C0E\u5F0F)",
+    orderCodeFormat: "6STV {seriesCode} {controlType} {port} {initialState} {voltage} {terminal} {leadLength} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: "PT1/8"
+          },
+          {
+            code: "08",
+            description: "PT1/4"
+          },
+          {
+            code: "10",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "\u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "\u5E38\u958B\u578B"
+          },
+          {
+            code: "B",
+            description: "\u58D3; \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u7121\u521D\u59CB\u72C0\u614B\u53EF\u6E2C"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          },
+          {
+            code: "D",
+            description: "D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "M",
+            description: "M: M8\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: 0.5m"
+          },
+          {
+            code: "200",
+            description: "200: 2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "6STV0510/6STV0520",
+        port: "M5",
+        cv: 0.25,
+        weightG: "28/42"
+      },
+      {
+        model: "6STV110/6STV120",
+        port: "M5\u6216PT1/8",
+        cv: 0.7,
+        weightG: "63/89.5"
+      },
+      {
+        model: "6STV210/6STV220",
+        port: "PT1/8\u62161/4",
+        cv: "1.05",
+        weightG: "101.5/129"
+      },
+      {
+        model: "6STV310/6STV320",
+        port: "PT3/8\u62161/4",
+        cv: 2.25,
+        weightG: "196.5/227"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "6STV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202603240359446146.pdf"
+  },
+  {
+    id: "4STV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "4STV\u7CFB\u5217",
+    name: "4STV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5148\u5C0E\u5F0F)",
+    orderCodeFormat: "4STV {seriesCode} {controlType} {port} {initialState} {voltage} {terminal} {leadLength} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: "PT1/8"
+          },
+          {
+            code: "08",
+            description: "PT1/4"
+          },
+          {
+            code: "10",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "\u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "\u5E38\u958B\u578B(\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          },
+          {
+            code: "D",
+            description: "D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "M",
+            description: "M: M8\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: 0.5m"
+          },
+          {
+            code: "200",
+            description: "200: 2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    specs: [
+      {
+        model: "4STV110/4STV120",
+        port: "M5\u6216PT1/8",
+        cv: 0.6,
+        weightG: "74/102"
+      },
+      {
+        model: "4STV210/4STV220",
+        port: "PT1/8\u62161/4",
+        cv: 1,
+        weightG: "114/144"
+      },
+      {
+        model: "4STV310",
+        port: "PT1/4",
+        cv: 1.8,
+        weightG: 171
+      },
+      {
+        model: "4STV320",
+        port: "PT3/8",
+        cv: 1.8,
+        weightG: 203
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4STV\u7CFB\u5217\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202602240320286216.pdf"
+  },
+  {
+    id: "CPV10",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "CPV10\u7CFB\u5217",
+    name: "CPV10\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F)",
+    orderCodeFormat: "CPV 10 {voltage} {manualPin}-{leadLength}",
+    categories: [
+      {
+        id: "bodyWidth",
+        name: "\u95A5\u9AD4\u5BEC\u5EA6",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "manualPin",
+        name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
+        options: [
+          {
+            code: "P",
+            description: "P: \u6709\u624B\u52D5\u92B7"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7DDA\u9577",
+        options: [
+          {
+            code: "050",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      }
+    ],
+    specs: [
+      {
+        model: "CPV10",
+        flowDiameterMm: 0.55,
+        cvPA: 0.014,
+        cvAR: 0.02,
+        weightG: 15
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    protectionGrade: "\u9632\u5875",
+    features: "DC\u96FB\u8DEF\u7121\u6975\u6027\u8F38\u5165\u8A2D\u8A08, \u6A4B\u5F0F\u6574\u6D41\u5668\u5168\u6CE2\u6574\u6D41, \u555F\u52D5\u96FB\u58D3\u4F4E\u58FD\u547D\u9577",
+    accessories: "\u914D\u5957\u7528\u5E95\u5EA7 CPV10M(2\u9023~20\u9023), \u7AEF\u5B50\u7DDA\u53EF\u53E6\u8CFC CPV T 050/200",
+    sourceFile: "CPV10\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240402288946.pdf"
+  },
+  {
+    id: "CPV15",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "CPV15\u7CFB\u5217",
+    name: "CPV15\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F)",
+    orderCodeFormat: "CPV 15 {voltage} {manualPin}-{leadLength}",
+    categories: [
+      {
+        id: "bodyWidth",
+        name: "\u95A5\u9AD4\u5BEC\u5EA6",
+        options: [
+          {
+            code: "15",
+            description: "15mm"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "manualPin",
+        name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
+        options: [
+          {
+            code: "P",
+            description: "P: \u6709\u624B\u52D5\u92B7"
+          }
+        ]
+      },
+      {
+        id: "leadLength",
+        name: "\u7DDA\u9577",
+        options: [
+          {
+            code: "050",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      }
+    ],
+    specs: [
+      {
+        model: "CPV15",
+        flowDiameterMm: 0.8,
+        cvPA: 0.024,
+        cvAR: 0.03,
+        weightG: "33.2(\u95A5\u9AD4)"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    \u53CD\u61C9\u6642\u9593: "on<10ms; off<10ms",
+    accessories: "\u914D\u5957\u7528\u5E95\u5EA7 CPV15M(2\u9023~20\u9023), \u7AEF\u5B50\u7DDA\u53EF\u53E6\u8CFC CPV T 050/200",
+    sourceFile: "CPV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240403450406.pdf"
+  },
+  {
+    id: "CPSV15",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "CPSV15\u7CFB\u5217",
+    name: "CPSV15\u7CFB\u5217 \u5FAE\u578B\u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u591A\u7A2E\u63A5\u96FB\u5F62\u5F0F)",
+    orderCodeFormat: "CPSV {connType} 15 {voltage} - {leadLength}",
+    categories: [
+      {
+        id: "connType",
+        name: "\u63A5\u96FB\u5F62\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u63D2\u63A5\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          },
+          {
+            code: "D",
+            description: "D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "M",
+            description: "M: M8\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "15",
+            description: "15\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        optionsRef: "voltageOptions.standard5"
+      },
+      {
+        id: "leadLength",
+        name: "\u7AEF\u5B50\u7DDA\u7DDA\u9577",
+        options: [
+          {
+            code: "050",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      }
+    ],
+    specs: [
+      {
+        model: "CPSV15",
+        flowDiameterMm: 0.65,
+        cvPA: 0.019,
+        cvAR: 0.025,
+        weightG: "22~36(\u4F9D\u63A5\u96FB\u5F62\u5F0F)"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    protectionGrade: "IP65",
+    sourceFile: "CPSV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5_\u4E09\u53E3\u4E8C\u4F4D_-202603240401261836.pdf"
+  },
+  {
+    id: "CPV10S",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "CPV10S\u7CFB\u5217(\u96C6\u6210\u95A5)",
+    name: "CPV10S\u7CFB\u5217 \u96C6\u6210\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, CPV10\u5FAE\u578B\u96FB\u78C1\u95A5\u7684\u96C6\u6210\u95A5\u7D44)",
+    orderCodeFormat: "\u5E95\u5EA7: CPV10S {port} {leadCode} {voltage} {manifoldStations}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "J03",
+            description: "\u03A63.2mm(\u5FEB\u63D2\u63A5\u982D)"
+          },
+          {
+            code: "J04",
+            description: "\u03A64.0mm(\u5FEB\u63D2\u63A5\u982D)"
+          }
+        ]
+      },
+      {
+        id: "leadCode",
+        name: "\u51FA\u7DDA\u65B9\u5F0F",
+        options: [
+          {
+            code: "T",
+            description: "\u96C6\u4E2D\u51FA\u7DDA"
+          },
+          {
+            code: "L",
+            description: "D-Sub\u63D2\u5EA7(\u50C5\u914D\u540824V DC)"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "manifoldStations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "4F",
+            description: "4\u9023"
+          },
+          {
+            code: "24F",
+            description: "\u2026\u6700\u592724\u9023"
+          }
+        ]
+      }
+    ],
+    specs: [
+      {
+        model: "CPV10S",
+        \u63A5\u96FB\u65B9\u5F0F: "\u63D2\u63A5\u5F0F, 25pin D-Sub",
+        \u5B89\u88DD\u9023\u6578: "4\u9023~24\u9023"
+      }
+    ],
+    note: "\u8A02\u8CFC\u78BC\u5206\u5E95\u5EA7(P\u5B54M5/A\u5B54\u03A63.2mm\u6216\u03A64mm\u5FEB\u63D2)\u3001\u96FB\u78C1\u95A5\u3001\u76F2\u677F\u4E09\u90E8\u5206,\u8A73\u898B\u578B\u9304P18-19",
+    sourceFile: "CPV10\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240402288946.pdf (P18-19)"
+  },
+  {
+    id: "CPV15S",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u5FAE\u578B\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "CPV15S\u7CFB\u5217(\u96C6\u6210\u95A5)",
+    name: "CPV15S\u7CFB\u5217 \u96C6\u6210\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, CPV15\u5FAE\u578B\u96FB\u78C1\u95A5\u7684\u96C6\u6210\u95A5\u7D44)",
+    orderCodeFormat: "\u5E95\u5EA7: CPV15S {manifoldStations} {thread} | \u96FB\u78C1\u95A5: CPV15 {voltage} {manualPin} | \u76F2\u677F: P-CPV15S-R2",
+    categories: [
+      {
+        id: "manifoldStations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "2F",
+            description: "2\u9023"
+          },
+          {
+            code: "20F",
+            description: "\u2026\u6700\u592720\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC(\u5E95\u5EA7P\u5B54/R\u5B54)",
+        optionsRef: "threadOptions.standardGT"
+      },
+      {
+        id: "portA",
+        name: "A\u5B54\u53E3\u5F91(\u4F9D\u7259\u578B)",
+        options: [
+          {
+            code: "PT/G\u7259",
+            description: "\u03A64mm\u5FEB\u63D2\u63A5\u982D"
+          },
+          {
+            code: "NPT\u7259",
+            description: '\u03A65/32"\u5FEB\u63D2\u63A5\u982D'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3(\u96FB\u78C1\u95A5)",
+        options: [
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "manualPin",
+        name: "\u624B\u52D5\u92B7\u4EE3\u78BC",
+        options: [
+          {
+            code: "P",
+            description: "P: \u6709\u624B\u52D5\u92B7"
+          }
+        ]
+      }
+    ],
+    specs: [
+      {
+        model: "CPV15SB/CPV15SF",
+        \u63A5\u96FB\u65B9\u5F0F: "\u63D2\u63A5\u5F0F, 25pin D-Sub, \u6BCF\u7D442\u9023\u4E00\u7D1A",
+        \u5B89\u88DD\u9023\u6578: "2\u9023~20\u9023"
+      }
+    ],
+    sourceFile: "CPV15\u7CFB\u5217\u5FAE\u578B\u96FB\u78C1\u95A5-202603240403450406.pdf (P24-27)"
+  },
+  {
+    id: "5a",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "5A\u7CFB\u5217",
+    name: "5A\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C95V\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "5A {seriesCode}{controlType} {port} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259\u6216\u7121\u6B64\u4EE3\u78BC(M5)"
+          }
+        ]
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "5A\u7CFB\u5217\u6C23\u63A7\u95A5202303011040044526.pdf (\u51713\u9801)"
+  },
+  {
+    id: "eav",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "EAV\u7CFB\u5217",
+    name: "EAV\u7CFB\u5217 \u6A19\u6E96\u6C23\u63A7\u95A5 (ISO\u6A19\u6E96\u5B89\u88DD\u5C3A\u5BF8, \u5C0D\u61C9ESV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "EAV {seriesCode} {controlType} {pilotType}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217"
+          },
+          {
+            code: "6",
+            description: "6: 600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "pilotType",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u5167\u90E8\u5F15\u5C0E\u5F0F"
+          },
+          {
+            code: "W",
+            description: "W: \u5916\u90E8\u5F15\u5C0E\u5F0F"
+          }
+        ]
+      }
+    ],
+    note: "\u53E6\u6709\u642D\u914D\u5E95\u5EA7\u3001\u7AEF\u677F\u7B49\u7D44\u4EF6,\u8A02\u8CFC\u78BC\u7D50\u69CB\u8207ESV\u7CFB\u5217\u5E95\u5EA7\u7D44\u4EF6(ESV{\u7CFB\u5217}{\u578B\u5F0F\u4EE3\u865F})\u76F8\u540C,\u8A73\u898B\u578B\u9304P3-8",
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "EAV\u7CFB\u5217\u6A19\u6E96\u6C23\u63A7\u95A5202303011043369046.pdf (\u51718\u9801)"
+  },
+  {
+    id: "4sa",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4SA\u7CFB\u5217",
+    name: "4SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, Cv: 0.51~3.0, \u5C0D\u61C94SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "4SA {seriesCode} {controlType} {port} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217 (Cv~0.6)"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217 (Cv~1.0)"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217 (Cv~1.8)"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217 (Cv~3.0)"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: "PT1/8"
+          },
+          {
+            code: "08",
+            description: "PT1/4"
+          },
+          {
+            code: "10",
+            description: "PT3/8"
+          },
+          {
+            code: "15",
+            description: "PT1/2"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202602240320587106.pdf (\u51714\u9801)"
+  },
+  {
+    id: "6sa",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "6SA\u7CFB\u5217",
+    name: "6SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C96SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "6SA {seriesCode}{controlType} {port} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "05: 0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5(0500\u7CFB\u5217)"
+          },
+          {
+            code: "06",
+            description: "PT1/8(100\u7CFB\u5217)"
+          },
+          {
+            code: "08",
+            description: "PT1/4(200\u7CFB\u5217)"
+          },
+          {
+            code: "10",
+            description: "PT3/8(300\u7CFB\u5217)"
+          },
+          {
+            code: "15",
+            description: "PT1/2(400\u7CFB\u5217)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "6SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512110941149896.pdf (\u51714\u9801)"
+  },
+  {
+    id: "7sa",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "7SA\u7CFB\u5217",
+    name: "7SA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5C0D\u61C97SV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB, \u87BA\u7D0B/\u5FEB\u63D2\u63A5\u7BA1\u53EF\u9078)",
+    orderCodeFormat: "7SA {seriesCode}{controlType} {portConnType} {port} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "05: 0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.5port_2or3position"
+      },
+      {
+        id: "portConnType",
+        name: "\u63A5\u7BA1\u578B\u5F0F",
+        optionsRef: "portConnectionTypeOptions.threadOrQuick"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91(\u87BA\u7D0B)/\u7BA1\u63A5\u53E3\u5F91(\u5FEB\u63D2)",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "04",
+            description: "\u03A64mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "06",
+            description: "PT1/8 \u6216 \u03A66mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "08",
+            description: "PT1/4 \u6216 \u03A68mm(\u5FEB\u63D2)"
+          },
+          {
+            code: "10",
+            description: "PT3/8 \u6216 \u03A610mm(\u5FEB\u63D2)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "7SA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E94\u53E3\u4E8C\u4F4D_\u4E94\u53E3\u4E09\u4F4D202512150946419976.pdf (\u51714\u9801)"
+  },
+  {
+    id: "4sta",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "4STA\u7CFB\u5217",
+    name: "4STA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5C0D\u61C94STV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "4STA {seriesCode}{controlType} {port} {initialState} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: "PT1/8"
+          },
+          {
+            code: "08",
+            description: "PT1/4"
+          },
+          {
+            code: "10",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "NC: \u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "NO: \u5E38\u958B\u578B(\u96D9\u6C23\u5C0E\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "4STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202602240321205236.pdf (\u51713\u9801)"
+  },
+  {
+    id: "6sta",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "6STA\u7CFB\u5217",
+    name: "6STA\u7CFB\u5217 \u6C23\u63A7\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u5C0D\u61C96STV\u7CFB\u5217\u96FB\u63A7\u95A5\u7D50\u69CB)",
+    orderCodeFormat: "6STA {seriesCode}{controlType} {port} {initialState} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "05: 0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        optionsRef: "controlTypeOptions.3port_2position"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: "PT1/8"
+          },
+          {
+            code: "08",
+            description: "PT1/4"
+          },
+          {
+            code: "10",
+            description: "PT3/8"
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "NC: \u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "NO: \u5E38\u958B\u578B(\u96D9\u6C23\u5C0E\u7121\u521D\u59CB\u72C0\u614B\u53EF\u9078)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0.15~0.8MPa(21~114psi)",
+    sourceFile: "6STA\u7CFB\u5217\u6C23\u63A7\u95A5\u4E09\u53E3\u4E8C\u4F4D202512110940087246.pdf (\u51714\u9801)"
+  },
+  {
+    id: "hsv",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "HSV\u7CFB\u5217",
+    name: "HSV\u7CFB\u5217 \u624B\u6ED1\u95A5 (\u624B\u52D5\u6ED1\u52D5\u64CD\u4F5C\u5F0F)",
+    orderCodeFormat: "HSV {controlType} {port} {thread}",
+    categories: [
+      {
+        id: "controlType",
+        name: "\u4F4D\u7F6E\u6578/\u64CD\u4F5C\u65B9\u5F0F",
+        options: [
+          {
+            code: "20",
+            description: "20: \u4E8C\u4F4D\u7F6E\u624B\u6ED1\u95A5"
+          },
+          {
+            code: "30C",
+            description: "30C: \u4E09\u4F4D\u7F6E\u624B\u6ED1\u95A5(\u4E2D\u5C01\u9589\u578B)"
+          },
+          {
+            code: "30E",
+            description: "30E: \u4E09\u4F4D\u7F6E\u624B\u6ED1\u95A5(\u4E2D\u6392\u6C23\u578B)"
+          }
+        ],
+        note: "\u6B64\u70BA\u4F9D\u578B\u9304\u5716\u793A\u521D\u6B65\u5224\u8B80\u4E4B\u63A7\u5236\u65B9\u5F0F\u4EE3\u865F,\u5BE6\u969B\u4EE3\u865F\u8ACB\u4EE5\u578B\u9304P1-3\u70BA\u6E96"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    note: "\u624B\u52D5\u6ED1\u52D5\u95A5,\u7121\u9700\u96FB\u6E90\u6216\u6C23\u6E90\u5F15\u5C0E,\u9069\u5408\u624B\u52D5\u63A7\u5236\u5834\u5408\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
+    sourceFile: "HSV\u7CFB\u5217\u624B\u6ED1\u95A5202303011047200906.pdf (\u51713\u9801)"
+  },
+  {
+    id: "4h",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "4H\u7CFB\u5217",
+    name: "4H\u7CFB\u5217 \u624B\u52D5\u95A5 (\u624B\u67C4\u6273\u52D5\u64CD\u4F5C\u5F0F, \u4E94\u53E3\u4E8C\u4F4D/\u4E09\u53E3\u4E8C\u4F4D)",
+    orderCodeFormat: "4H {seriesCode}{controlType} {port} {handleType} {thread}",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u4F4D\u7F6E\u6578",
+        options: [
+          {
+            code: "10",
+            description: "10: \u4E8C\u4F4D\u7F6E(\u81EA\u52D5\u56DE\u4F4D\u578B)"
+          },
+          {
+            code: "20",
+            description: "20: \u4E8C\u4F4D\u7F6E(\u5B9A\u4F4D\u578B)"
+          }
+        ],
+        note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "handleType",
+        name: "\u624B\u67C4\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u6273\u52D5\u5F0F(\u5F48\u7C27\u81EA\u5FA9\u4F4D)"
+          },
+          {
+            code: "D",
+            description: "D: \u6273\u52D5\u5F0F(\u5B9A\u4F4D\u5361\u56FA\u578B)"
+          }
+        ],
+        note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    note: "\u624B\u67C4\u64CD\u4F5C,\u7121\u9700\u96FB\u6E90\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
+    sourceFile: "4H\u7CFB\u5217\u624B\u52D5\u95A5202303011045197796.pdf (\u51714\u9801)"
+  },
+  {
+    id: "3f-3fm",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "3F/3FM\u7CFB\u5217",
+    name: "3F/3FM\u7CFB\u5217 \u8173\u8E0F\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u8173\u8E0F\u64CD\u4F5C\u5F0F)",
+    orderCodeFormat: "{code} {port} {initialState} {thread}",
+    categories: [
+      {
+        id: "code",
+        name: "\u578B\u5F0F\u4EE3\u865F",
+        options: [
+          {
+            code: "3F",
+            description: "3F: \u9644\u4FDD\u8B77\u84CB\u578B"
+          },
+          {
+            code: "3FM",
+            description: "3FM: \u7121\u4FDD\u8B77\u84CB\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    note: "\u8173\u8E0F\u64CD\u4F5C,\u7121\u9700\u96FB\u6E90,\u9069\u5408\u96D9\u624B\u4F5C\u696D\u6642\u7684\u8173\u8E0F\u63A7\u5236\u5834\u5408\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
+    sourceFile: "3F3FM\u7CFB\u5217\u8173\u8E0F\u95A5_\u4E09\u53E3\u4E8C\u4F4D_202303011052072856.pdf (\u51716\u9801)"
+  },
+  {
+    id: "m3",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "M3\u7CFB\u5217",
+    name: "M3\u7CFB\u5217 \u6A5F\u68B0\u95A5 (\u6EFE\u8F2A\u6416\u81C2\u5F0F/\u9802\u687F\u5F0F, \u9650\u4F4D\u89F8\u767C\u7528\u9014)",
+    orderCodeFormat: "M3 {actuatorType} {port} {initialState} {thread}",
+    categories: [
+      {
+        id: "actuatorType",
+        name: "\u89F8\u767C\u6A5F\u69CB\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u6EFE\u8F2A\u6416\u81C2\u578B(\u96D9\u5411\u89F8\u767C)"
+          },
+          {
+            code: "H",
+            description: "H: \u55AE\u5411\u6EFE\u8F2A\u6416\u81C2\u578B"
+          },
+          {
+            code: "P",
+            description: "P: \u9802\u687F\u578B"
+          },
+          {
+            code: "L",
+            description: "L: \u9577\u884C\u7A0B\u6EFE\u8F2A\u578B"
+          }
+        ],
+        note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304P1-2\u78BA\u8A8D\u5BE6\u969B\u578B\u5F0F\u8207\u4EE3\u865F"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    note: "\u6A5F\u68B0\u5F0F\u9650\u4F4D\u95A5,\u7531\u6A5F\u69CB(\u51F8\u8F2A\u3001\u884C\u7A0B\u6A94\u584A\u7B49)\u78B0\u89F8\u6EFE\u8F2A\u6216\u9802\u687F\u89F8\u767C,\u7121\u9700\u96FB\u6E90\u6216\u6C23\u6E90\u5F15\u5C0E\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
+    sourceFile: "M3\u7CFB\u5217\u6A5F\u68B0\u95A5202303011048141406.pdf (\u51719\u9801)"
+  },
+  {
+    id: "cm3",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "CM3\u7CFB\u5217",
+    name: "CM3\u7CFB\u5217 \u6A5F\u68B0\u95A5 (\u5C0F\u578B\u5316\u6EFE\u8F2A\u6416\u81C2\u5F0F/\u9802\u687F\u5F0F, \u9650\u4F4D\u89F8\u767C\u7528\u9014)",
+    orderCodeFormat: "CM3 {actuatorType} {port} {initialState} {thread}",
+    categories: [
+      {
+        id: "actuatorType",
+        name: "\u89F8\u767C\u6A5F\u69CB\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u6EFE\u8F2A\u6416\u81C2\u578B(\u96D9\u5411\u89F8\u767C)"
+          },
+          {
+            code: "H",
+            description: "H: \u55AE\u5411\u6EFE\u8F2A\u6416\u81C2\u578B"
+          },
+          {
+            code: "P",
+            description: "P: \u9802\u687F\u578B"
+          }
+        ],
+        note: "\u521D\u6B65\u5224\u8B80,\u5EFA\u8B70\u6838\u5C0D\u578B\u9304P1-2\u78BA\u8A8D\u5BE6\u969B\u578B\u5F0F\u8207\u4EE3\u865F"
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "initialState",
+        name: "\u521D\u59CB\u72C0\u614B",
+        optionsRef: "initialStateOptions.ncNo"
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        optionsRef: "threadOptions.standardGT"
+      }
+    ],
+    workingPressureRange: "0~0.8MPa(0~114psi)",
+    note: "M3\u7CFB\u5217\u7684\u5C0F\u578B\u5316\u7248\u672C,\u9AD4\u7A4D\u66F4\u7DCA\u6E4A\u3002\u8A02\u8CFC\u78BC\u4EE3\u865F\u70BA\u521D\u6B65\u6574\u7406,\u5EFA\u8B70\u4E0B\u55AE\u524D\u6838\u5C0D\u539F\u59CB\u578B\u9304\u3002",
+    sourceFile: "CM3\u7CFB\u5217\u6A5F\u68B0\u95A5202303011050148176.pdf (\u51717\u9801)"
+  },
+  {
+    id: "4stv_base",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "4STV\u7CFB\u5217\u5E95\u5EA7",
+    code: "4STV",
+    name: "4STV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "4STV100M",
+            description: "4STV100M: 4STV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4STV200M",
+            description: "4STV200M: 4STV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4STV300M",
+            description: "4STV300M: 4STV300\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "20F",
+            description: "20F: 20\u9023"
+          },
+          {
+            code: "30F",
+            description: "30F: 30\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "6stv_base",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "6STV\u7CFB\u5217\u5E95\u5EA7",
+    code: "6STV",
+    name: "6STV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "6STV0500M",
+            description: "6STV0500M: 6STV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV100M",
+            description: "6STV100M: 6STV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV200M",
+            description: "6STV200M: 6STV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV300M",
+            description: "6STV300M: 6STV300\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "20F",
+            description: "20F: 20\u9023"
+          },
+          {
+            code: "30F",
+            description: "30F: 30\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "7sv_base",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "7SV\u7CFB\u5217\u5E95\u5EA7",
+    code: "7SV",
+    name: "7SV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "7SV0500M",
+            description: "7SV0500M: 7SV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV100M",
+            description: "7SV100M: 7SV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV200M",
+            description: "7SV200M: 7SV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV300M",
+            description: "7SV300M: 7SV300\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "20F",
+            description: "20F: 20\u9023"
+          },
+          {
+            code: "30F",
+            description: "30F: 30\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "6sv_base",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "6SV\u7CFB\u5217\u5E95\u5EA7",
+    code: "6SV",
+    name: "6SV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "6SV0500M",
+            description: "6SV0500M: 6SV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV100M",
+            description: "6SV100M: 6SV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV200M",
+            description: "6SV200M: 6SV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV300M",
+            description: "6SV300M: 6SV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV400M",
+            description: "6SV400M: 6SV400\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "20F",
+            description: "20F: 20\u9023"
+          },
+          {
+            code: "30F",
+            description: "30F: 30\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "blanking_plates",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "\u5E95\u5EA7\u76F2\u677F\u7D44\u4EF6",
+    code: "P-",
+    name: "\u5E95\u5EA7\u76F2\u677F\u7D44\u4EF6",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "4SV100M",
+            description: "4SV100M: 4SV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4SV200M",
+            description: "4SV200M: 4SV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4SV300M",
+            description: "4SV300M: 4SV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4SV400M",
+            description: "4SV400M: 4SV400\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4STV100M",
+            description: "4STV100M: 4STV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4STV200M",
+            description: "4STV200M: 4STV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "4STV300M",
+            description: "4STV300M: 4STV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV0500M",
+            description: "6STV0500M: 6STV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV100M",
+            description: "6STV100M: 6STV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV200M",
+            description: "6STV200M: 6STV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6STV300M",
+            description: "6STV300M: 6STV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV0500M",
+            description: "7SV0500M: 7SV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV100M",
+            description: "7SV100M: 7SV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV200M",
+            description: "7SV200M: 7SV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "7SV300M",
+            description: "7SV300M: 7SV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV0500M",
+            description: "6SV0500M: 6SV0500\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV100M",
+            description: "6SV100M: 6SV100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV200M",
+            description: "6SV200M: 6SV200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV300M",
+            description: "6SV300M: 6SV300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "6SV400M",
+            description: "6SV400M: 6SV400\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "CPV10M",
+            description: "CPV10M: CPV10\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "CPV15S",
+            description: "CPV15S: CPV15S\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "3V2M",
+            description: "3V2M: 3V2\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "P-{code}-R2",
+    note: '\u898F\u683C\u4EE3\u865F\u5217\u8868\u4E2D\u7684\u300E4SV100M/200M/300M/400M\u300F\u70BA\u539F\u59CB\u8CC7\u6599\u6A19\u793A,\u8207\u672C\u6A94\u6848\u51674V100~400\u7CFB\u5217(orderCodeFormat\u4EE5"4V ..."\u958B\u982D)\u5BE6\u70BA\u540C\u4E00\u7522\u54C1\u7DDA,\u5E95\u5EA7\u4EE3\u865F\u5EFA\u8B70\u4E0B\u55AE\u524D\u518D\u6838\u5C0D\u6B63\u78BA\u524D\u7DB4(4V\u62164SV)\u3002'
+  },
+  {
+    id: "4m",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5",
+    group: "4M\u7CFB\u5217",
+    code: "4M",
+    name: "4M\u7CFB\u5217 NAMUR\u898F\u683C (\u4E94\u53E3\u4E8C\u4F4D)",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5: M5"
+          },
+          {
+            code: "06",
+            description: '06: 1/8"'
+          },
+          {
+            code: "08",
+            description: '08: 1/4"'
+          },
+          {
+            code: "10",
+            description: '10: 3/8"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          },
+          {
+            code: "C",
+            description: "C: AC110V"
+          },
+          {
+            code: "E",
+            description: "E: AC24V"
+          },
+          {
+            code: "F",
+            description: "F: DC12V"
+          }
+        ]
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC (M5)"
+          },
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {series} {control} {port} {voltage} {terminal} {thread}"
+  },
+  {
+    id: "3v-manifold",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "3V\u7CFB\u5217\u5E95\u5EA7",
+    code: "",
+    name: "3V100~300\u7CFB\u5217\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "3V100M",
+            description: "3V100M: 100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "3V200M",
+            description: "3V200M: 200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "3V300M",
+            description: "3V300M: 300\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "11F",
+            description: "11F: 11\u9023"
+          },
+          {
+            code: "12F",
+            description: "12F: 12\u9023"
+          },
+          {
+            code: "13F",
+            description: "13F: 13\u9023"
+          },
+          {
+            code: "14F",
+            description: "14F: 14\u9023"
+          },
+          {
+            code: "15F",
+            description: "15F: 15\u9023"
+          },
+          {
+            code: "16F",
+            description: "16F: 16\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "3v-blanking",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "3V\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
+    code: "P-",
+    name: "3V100~300\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "3V100M",
+            description: "3V100M: 100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "3V200M",
+            description: "3V200M: 200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "3V300M",
+            description: "3V300M: 300\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code}{series} - R2"
+  },
+  {
+    id: "4v-manifold",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "4V\u7CFB\u5217\u5E95\u5EA7",
+    code: "",
+    name: "4V100~400\u7CFB\u5217\u5E95\u5EA7",
+    categories: [
+      {
+        id: "code",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "100M",
+            description: "100M: 100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "200M",
+            description: "200M: 200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "300M",
+            description: "300M: 300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "400M",
+            description: "400M: 400\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "1F",
+            description: "1F: 1\u9023"
+          },
+          {
+            code: "2F",
+            description: "2F: 2\u9023"
+          },
+          {
+            code: "3F",
+            description: "3F: 3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4F: 4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5F: 5\u9023"
+          },
+          {
+            code: "6F",
+            description: "6F: 6\u9023"
+          },
+          {
+            code: "7F",
+            description: "7F: 7\u9023"
+          },
+          {
+            code: "8F",
+            description: "8F: 8\u9023"
+          },
+          {
+            code: "9F",
+            description: "9F: 9\u9023"
+          },
+          {
+            code: "10F",
+            description: "10F: 10\u9023"
+          },
+          {
+            code: "11F",
+            description: "11F: 11\u9023"
+          },
+          {
+            code: "12F",
+            description: "12F: 12\u9023"
+          },
+          {
+            code: "13F",
+            description: "13F: 13\u9023"
+          },
+          {
+            code: "14F",
+            description: "14F: 14\u9023"
+          },
+          {
+            code: "15F",
+            description: "15F: 15\u9023"
+          },
+          {
+            code: "16F",
+            description: "16F: 16\u9023"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          },
+          {
+            code: "T",
+            description: "T: NPT\u7259"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {stations} {thread}"
+  },
+  {
+    id: "4v-blanking",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "4V\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
+    code: "P-",
+    name: "4V100~400\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "100M",
+            description: "100M: 100\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "200M",
+            description: "200M: 200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "300M",
+            description: "300M: 300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "400M",
+            description: "400M: 400\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code}{series} - R2"
+  },
+  {
+    id: "5v",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5",
+    group: "5V\u7CFB\u5217",
+    code: "5V",
+    name: "5V\u7CFB\u5217\u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "30C: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "30E: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "30P: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5: M5"
+          },
+          {
+            code: "06",
+            description: '06: 1/8"'
+          },
+          {
+            code: "08",
+            description: '08: 1/4"'
+          },
+          {
+            code: "10",
+            description: '10: 3/8"'
+          },
+          {
+            code: "15",
+            description: '15: 1/2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          },
+          {
+            code: "C",
+            description: "C: AC110V"
+          },
+          {
+            code: "E",
+            description: "E: AC24V"
+          },
+          {
+            code: "F",
+            description: "F: DC12V"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "050",
+            description: "050: 0.5m"
+          },
+          {
+            code: "200",
+            description: "200: 2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259\u6216\u7121\u6B64\u4EE3\u78BC(M5)"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code}{series}{control} {port} {voltage} {length} {thread}"
+  },
+  {
+    id: "esv-valve",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5",
+    group: "ESV\u7CFB\u5217",
+    code: "ESV",
+    name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217"
+          },
+          {
+            code: "6",
+            description: "6: 600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "30C: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "30E: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "30P: \u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          },
+          {
+            code: "C",
+            description: "C: AC110V"
+          },
+          {
+            code: "E",
+            description: "E: AC24V"
+          },
+          {
+            code: "F",
+            description: "F: DC12V"
+          }
+        ]
+      },
+      {
+        id: "terminal",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "I: \u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "pilot",
+        name: "\u5F15\u5C0E\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u5167\u90E8\u5F15\u5C0E\u5F0F"
+          },
+          {
+            code: "W",
+            description: "W: \u5916\u90E8\u5F15\u5C0E\u5F0F"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {series} {control} {voltage} {terminal} {pilot}"
+  },
+  {
+    id: "esv-base",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "ESV\u7CFB\u5217\u5E95\u5EA7\u8207\u7AEF\u677F",
+    code: "ESV",
+    name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 \u5E95\u5EA7\u8207\u7AEF\u677F\u7D44\u4EF6",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "20",
+            description: "20: 200\u7CFB\u5217"
+          },
+          {
+            code: "30",
+            description: "30: 300\u7CFB\u5217"
+          },
+          {
+            code: "40",
+            description: "40: 400\u7CFB\u5217"
+          },
+          {
+            code: "60",
+            description: "60: 600\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u865F",
+        options: [
+          {
+            code: "1M",
+            description: "1M: \u55AE\u9AD4\u578B\u5E95\u5EA7"
+          },
+          {
+            code: "2M",
+            description: "2M: \u591A\u806F\u578B\u5E95\u5EA7"
+          },
+          {
+            code: "3M",
+            description: "3M: \u7AEF\u677F\u7D44\u4EF6"
+          },
+          {
+            code: "4M",
+            description: "4M: \u591A\u806F\u578B\u5E95\u5EA7\u8F49\u63A5\u584A"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G: G\u7259"
+          }
+        ]
+      },
+      {
+        id: "pilot",
+        name: "\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u7368\u7ACB\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3"
+          },
+          {
+            code: "W",
+            description: "W: \u96C6\u4E2D\u5916\u90E8\u5F15\u5C0E\u6C23\u53E3"
+          }
+        ]
+      },
+      {
+        id: "port_pos",
+        name: "\u6C23\u53E3\u65B9\u4F4D\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u5074\u9762\u5DE5\u4F5C\u6C23\u53E3 / \u5DE6\u5074\u5DE5\u4F5C\u6C23\u53E3"
+          },
+          {
+            code: "B",
+            description: "B: \u5E95\u9762\u5DE5\u4F5C\u6C23\u53E3"
+          },
+          {
+            code: "R",
+            description: "R: \u53F3\u5074\u5DE5\u4F5C\u6C23\u53E3"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {series} {type} {thread} {pilot} {port_pos}"
+  },
+  {
+    id: "esv-blanking",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "ESV\u7CFB\u5217\u5E95\u5EA7\u76F2\u677F",
+    code: "P-",
+    name: "ISO\u6A19\u6E96\u96FB\u78C1\u95A5 \u9644\u4EF6\u8A02\u8CFC\u78BC (\u76F2\u677F)",
+    categories: [
+      {
+        id: "series",
+        name: "\u9069\u7528\u7522\u54C1\u4EE3\u865F",
+        options: [
+          {
+            code: "ESV200M",
+            description: "ESV200M: 200\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "ESV300M",
+            description: "ESV300M: 300\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "ESV400M",
+            description: "ESV400M: 400\u7CFB\u5217\u5E95\u5EA7"
+          },
+          {
+            code: "ESV600M",
+            description: "ESV600M: 600\u7CFB\u5217\u5E95\u5EA7"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code}{series} - R2"
+  },
+  {
+    id: "coil-cd",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "\u666E\u901A\u7DDA\u5708",
+    code: "",
+    name: "\u666E\u901A\u7DDA\u5708 (080, 092\u7CFB\u5217)",
+    categories: [
+      {
+        id: "code",
+        name: "\u7DDA\u5708\u985E\u5225",
+        options: [
+          {
+            code: "CD",
+            description: "CD: DIN\u63D2\u5EA7\u5F0F\u7DDA\u5708"
+          },
+          {
+            code: "CL",
+            description: "CL: \u51FA\u7DDA\u5F0F\u7DDA\u5708"
+          }
+        ]
+      },
+      {
+        id: "diameter",
+        name: "\u7DDA\u5708\u5167\u5F91",
+        options: [
+          {
+            code: "A080",
+            description: "A080: \u5167\u5F91 \u03A68.0mm"
+          },
+          {
+            code: "A092",
+            description: "A092: \u5167\u5F91 \u03A69.0mm"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          },
+          {
+            code: "C",
+            description: "C: AC110V"
+          },
+          {
+            code: "E",
+            description: "E: AC24V"
+          },
+          {
+            code: "F",
+            description: "F: DC12V"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {diameter} {voltage}"
+  },
+  {
+    id: "coil-cfb",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "\u9632\u7206\u7DDA\u5708",
+    code: "CFB",
+    name: "\u9632\u7206\u578B\u7DDA\u5708\u90E8\u54C1",
+    categories: [
+      {
+        id: "diameter",
+        name: "\u7DDA\u5708\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "092",
+            description: "092: \u9069\u7528\u65BC\u9632\u7206\u95A5"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {diameter} {voltage}"
+  },
+  {
+    id: "b03-valve",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5",
+    group: "B03\u9632\u7206\u96FB\u78C1\u95A5",
+    code: "B03-",
+    name: "B03\u9632\u7206\u578B\u96FB\u78C1\u95A5",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "3V",
+            description: "3V: \u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5"
+          },
+          {
+            code: "4V",
+            description: "4V: \u4E94\u53E3\u4E8C\u4F4D\u4E94\u53E3\u4E09\u4F4D"
+          },
+          {
+            code: "4M",
+            description: "4M: \u4E94\u53E3\u4E8C\u4F4D(NAMUR\u898F\u683C)"
+          }
+        ]
+      },
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "1: 100\u7CFB\u5217 (\u50C53V)"
+          },
+          {
+            code: "2",
+            description: "2: 200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3: 300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4: 400\u7CFB\u5217 (\u50C54V)"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "10: \u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "20: \u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "30C: \u4E09\u4F4D\u7F6E\u4E2D\u5C01\u578B (\u50C54V)"
+          },
+          {
+            code: "30E",
+            description: "30E: \u4E09\u4F4D\u7F6E\u4E2D\u6392\u578B (\u50C54V)"
+          },
+          {
+            code: "30P",
+            description: "30P: \u4E09\u4F4D\u7F6E\u4E2D\u58D3\u578B (\u50C54V)"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5: M5"
+          },
+          {
+            code: "06",
+            description: '06: 1/8"'
+          },
+          {
+            code: "08",
+            description: '08: 1/4"'
+          },
+          {
+            code: "10",
+            description: '10: 3/8"'
+          },
+          {
+            code: "15",
+            description: '15: 1/2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "A: AC220V"
+          },
+          {
+            code: "B",
+            description: "B: DC24V"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: PT\u7259 \u6216 \u7121\u6B64\u4EE3\u78BC"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code}{type} {series} {control} {port} {voltage} {thread}"
+  },
+  {
+    id: "cable-dsub",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
+    group: "\u96C6\u6210\u95A5\u7D44\u914D\u5957\u7DDA\u7E9C",
+    code: "F-DSUB",
+    name: "F-DSUB\u7CFB\u5217\u914D\u5957\u7DDA\u7E9C",
+    categories: [
+      {
+        id: "pins",
+        name: "\u91DD\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "15",
+            description: "15: 15PIN"
+          },
+          {
+            code: "25",
+            description: "25: 25PIN"
+          },
+          {
+            code: "37",
+            description: "37: 37PIN"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u7DDA\u7AEF\u9023\u63A5\u5668\u578B\u5F0F",
+        options: [
+          {
+            code: "F",
+            description: "F: \u5169\u7AEF\u70BA\u540C\u578B\u6BCD\u63A5\u982D"
+          },
+          {
+            code: "M",
+            description: "M: \u4E00\u7AEF\u516C\u63A5\u982D\u4E00\u7AEF\u6BCD\u63A5\u982D"
+          },
+          {
+            code: "S",
+            description: "S: \u4E00\u7AEF\u6BCD\u63A5\u982D\u4E00\u7AEF\u76F4\u63A5\u51FA\u7DDA"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u7DDA\u9577",
+        options: [
+          {
+            code: "150",
+            description: "150: 1.5m (\u50C515PIN)"
+          },
+          {
+            code: "200",
+            description: "200: 2m"
+          },
+          {
+            code: "300",
+            description: "300: 3m"
+          },
+          {
+            code: "500",
+            description: "500: 5m"
+          },
+          {
+            code: "800",
+            description: "800: 8m"
+          },
+          {
+            code: "1000",
+            description: "1000: 10m"
+          }
+        ]
+      }
+    ],
+    orderCodeFormat: "{code} {pins} {type} {length}"
+  },
+  {
+    id: "6D-manifold",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "6DM/6D/6DW\u7CFB\u5217 \u96C6\u6210\u95A5\u7D44\u6D3E\u751F\u7522\u54C1",
+    name: "6D/6DM/6DW\u7CFB\u5217 \u96C6\u6210\u95A5\u7D44 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    orderCodeFormat: "{seriesCode} {stations}-{port} {voltage} {singleCtrl} {doubleCtrl} {midClosed} {midExhaust} {midPressure} {commModule} {specialValve}",
+    note: "\u6B64\u70BA\u8907\u5408\u5F0F\u96C6\u6210\u95A5\u7D44\u8A02\u8CFC\u78BC\u3002\u5305\u542B 6D\u7CFB\u5217(25pin D-SUB), 6DM\u7CFB\u5217(15pin D-SUB), 6DW\u7CFB\u5217(37pin D-SUB)\u3002",
+    categories: [
+      {
+        id: "seriesCode",
+        name: "\u2460\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "6D05H",
+            description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
+          },
+          {
+            code: "6D1H",
+            description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
+          },
+          {
+            code: "6D2H",
+            description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (25pin D-SUB)"
+          },
+          {
+            code: "6DM05H",
+            description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
+          },
+          {
+            code: "6DM1H",
+            description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
+          },
+          {
+            code: "6DM2H",
+            description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (15pin D-SUB)"
+          },
+          {
+            code: "6DW05H",
+            description: "6D0500\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
+          },
+          {
+            code: "6DW1H",
+            description: "6D100\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
+          },
+          {
+            code: "6DW2H",
+            description: "6D200\u7CFB\u5217 \u5074\u51FA\u578B (37pin D-SUB)"
+          }
+        ]
+      },
+      {
+        id: "stations",
+        name: "\u2461\u7E3D\u9023\u6578\u4EE3\u865F",
+        options: [
+          {
+            code: "3F",
+            description: "3\u9023"
+          },
+          {
+            code: "4F",
+            description: "4\u9023"
+          },
+          {
+            code: "5F",
+            description: "5\u9023"
+          },
+          {
+            code: "12F",
+            description: "12\u9023"
+          },
+          {
+            code: "21F",
+            description: "21\u9023 (\u50C5\u7279\u5B9A\u578B\u865F\u652F\u63F4)"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u2462\u63A5\u7BA1\u53E3\u5F91(A/B\u53E3)",
+        options: [
+          {
+            code: "J04",
+            description: "\u03A64\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
+          },
+          {
+            code: "J06",
+            description: "\u03A66\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
+          },
+          {
+            code: "J08",
+            description: "\u03A68\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
+          },
+          {
+            code: "J10",
+            description: "\u03A610\u5FEB\u63D2\u63A5\u982D\u63A5\u7BA1"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u2463\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "singleCtrl",
+        name: "\u2464\u55AE\u63A7\u96FB\u78C1\u95A5\u6578",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "S1",
+            description: "1\u500B"
+          },
+          {
+            code: "S2",
+            description: "2\u500B"
+          },
+          {
+            code: "S21",
+            description: "21\u500B"
+          }
+        ]
+      },
+      {
+        id: "doubleCtrl",
+        name: "\u2465\u96D9\u63A7\u96FB\u78C1\u95A5\u6578",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "D1",
+            description: "1\u500B"
+          },
+          {
+            code: "D2",
+            description: "2\u500B"
+          },
+          {
+            code: "D12",
+            description: "12\u500B"
+          }
+        ]
+      },
+      {
+        id: "midClosed",
+        name: "\u2466\u4E09\u4F4D\u4E2D\u5C01\u5F0F\u96FB\u78C1\u95A5\u6578",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "C1",
+            description: "1\u500B"
+          },
+          {
+            code: "C2",
+            description: "2\u500B"
+          },
+          {
+            code: "C12",
+            description: "12\u500B"
+          }
+        ]
+      },
+      {
+        id: "midExhaust",
+        name: "\u2467\u4E09\u4F4D\u4E2D\u6CC4\u5F0F\u96FB\u78C1\u95A5\u6578",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "E1",
+            description: "1\u500B"
+          },
+          {
+            code: "E2",
+            description: "2\u500B"
+          },
+          {
+            code: "E12",
+            description: "12\u500B"
+          }
+        ]
+      },
+      {
+        id: "midPressure",
+        name: "\u2468\u4E09\u4F4D\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A5\u6578",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "P1",
+            description: "1\u500B"
+          },
+          {
+            code: "P2",
+            description: "2\u500B"
+          },
+          {
+            code: "P12",
+            description: "12\u500B"
+          }
+        ]
+      },
+      {
+        id: "commModule",
+        name: "\u2469\u9644\u901A\u4FE1\u5354\u8B70\u6A21\u584A\u898F\u683C",
+        options: [
+          {
+            code: "",
+            description: "\u7A7A\u767D: \u4E0D\u9644\u901A\u4FE1\u5354\u8B70\u6A21\u584A"
+          },
+          {
+            code: "CPN1",
+            description: "\u9644Profinet\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
+          },
+          {
+            code: "CEN1",
+            description: "\u9644EtherNet/IP\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
+          },
+          {
+            code: "CEA1",
+            description: "\u9644EtherCAT\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
+          },
+          {
+            code: "CLK1",
+            description: "\u9644IO-Link\u901A\u4FE1\u5354\u8B70\u6A21\u584APNP\u578B"
+          },
+          {
+            code: "CPN2",
+            description: "\u9644Profinet\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
+          },
+          {
+            code: "CEN2",
+            description: "\u9644EtherNet/IP\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
+          },
+          {
+            code: "CEA2",
+            description: "\u9644EtherCAT\u901A\u4FE1\u5354\u8B70\u6A21\u584ANPN\u578B"
+          }
+        ]
+      },
+      {
+        id: "specialValve",
+        name: "\u246A\u7279\u6B8A\u6D3E\u751F\u95A5\u6578\u91CF",
+        options: [
+          {
+            code: "",
+            description: "\u7121"
+          },
+          {
+            code: "SE1",
+            description: "\u7368\u7ACB\u9032\u6C23\u7684\u55AE\u63A7\u96FB\u78C1\u95A51\u500B (\u53EF\u589E\u6578\u91CF\u5982 SE2)"
+          },
+          {
+            code: "DE1",
+            description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u96FB\u78C1\u95A51\u500B (\u53EF\u589E\u6578\u91CF\u5982 DE2)"
+          },
+          {
+            code: "EE1",
+            description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "PE1",
+            description: "\u7368\u7ACB\u9032\u6C23\u7684\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "SR1",
+            description: "\u7368\u7ACB\u6392\u6C23\u7684\u55AE\u63A7\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "DR1",
+            description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "ER1",
+            description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "PR1",
+            description: "\u7368\u7ACB\u6392\u6C23\u7684\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "SW1",
+            description: "\u5916\u90E8\u5148\u5C0E\u55AE\u63A7\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "DW1",
+            description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "CW1",
+            description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u5C01\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "EW1",
+            description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u6392\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "PW1",
+            description: "\u5916\u90E8\u5148\u5C0E\u96D9\u63A7\u4E2D\u58D3\u5F0F\u96FB\u78C1\u95A51\u500B"
+          },
+          {
+            code: "DNC1",
+            description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5(NC-NC)1\u500B (\u53EF\u589E\u6578\u91CF\u5982 DNC2)"
+          },
+          {
+            code: "DNO1",
+            description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5(NO-NO)1\u500B (\u53EF\u589E\u6578\u91CF\u5982 DNO2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "6D-single",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "6D\u7CFB\u5217\u55AE\u9AD4",
+    name: "6D\u7CFB\u5217 \u96D9\u4E09\u53E3\u4E8C\u4F4D/\u4E0D\u540C\u9032\u6C23\u65B9\u5F0F\u96FB\u78C1\u95A5\u55AE\u9AD4",
+    orderCodeFormat: "6D {series} {controlType} {voltage} {pilotType}",
+    categories: [
+      {
+        id: "series",
+        name: "\u2460\u898F\u683C\u4EE3\u865F & \u2461\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "05",
+            description: "6D 0500\u7CFB\u5217"
+          },
+          {
+            code: "1",
+            description: "6D 100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "6D 200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "controlType",
+        name: "\u2462\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u55AE\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          },
+          {
+            code: "20NC",
+            description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5NC-NC"
+          },
+          {
+            code: "20NO",
+            description: "\u96D9\u4E09\u53E3\u4E8C\u4F4D\u96FB\u78C1\u95A5NO-NO"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u2463\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "pilotType",
+        name: "\u2464\u5F15\u5C0E\u65B9\u5F0F/\u9032\u6392\u6C23\u985E\u578B",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96(\u5167\u90E8\u5F15\u5C0E)"
+          },
+          {
+            code: "-W",
+            description: "\u5916\u90E8\u5F15\u5C0E\u5F0F"
+          },
+          {
+            code: "-E",
+            description: "\u7368\u7ACB\u9032\u6C23"
+          },
+          {
+            code: "-R",
+            description: "\u7368\u7ACB\u6392\u6C23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "4SV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4SV\u7CFB\u5217",
+    code: "",
+    name: "4SV\u7CFB\u5217 \u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D\u96FB\u78C1\u95A5",
+    format: "{series}{port}{control}{connection}{voltage}{connection_type}{wire_length}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "4SV",
+            description: "4SV\u7CFB\u5217\u96FB\u78C1\u95A5"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection_type",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          },
+          {
+            code: "D",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "M",
+            description: "M8\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "wire_length",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u7AEF\u5B50\u7DDA\u9577\u91DD\u5C0D\u63D2\u5EA7\u5F0F\uFF0C\u53EF\u90780.5m/2m\u7AEF\u5B50\u7DDA\uFF1B\u51FA\u7DDA\u5F0F\u548CM8\u51FA\u7DDA\u5F0F\u7684\u51FA\u7DDA\u9577\u5EA6\u70BA0.5m\u3002",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.23"
+  },
+  {
+    id: "7V",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "7V\u7CFB\u5217",
+    code: "",
+    name: "7V\u7CFB\u5217\u96FB\u78C1\u95A5",
+    format: "7V{series}{control}{port}{voltage}{electrical}{length}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "control",
+        name: "\u96FB\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: "M5, PT1/8, PT1/4, PT3/8"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "electrical",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u87BA\u7D0B\u63A5\u7BA1"
+          },
+          {
+            code: "J",
+            description: "\u5FEB\u63D2\u63A5\u982D"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u7AEF\u5B50\u7DDA\u9577",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          },
+          {
+            code: "050",
+            description: "0.5m"
+          },
+          {
+            code: "200",
+            description: "2.0m"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5FEB\u63D2\u63A5\u982D\u578B\u96FB\u78C1\u95A5\u5E95\u5EA7\u70BA\u7121\u7259\u578B",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.92"
+  },
+  {
+    id: "3A100",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3A\u7CFB\u5217",
+    code: "",
+    name: "3A100\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "3A{series}{type}{port}{state}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "state",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "\u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "\u5E38\u958B\u578B"
+          },
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.113"
+  },
+  {
+    id: "3A200",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3A\u7CFB\u5217",
+    code: "",
+    name: "3A200\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "3A{series}{type}{port}{state}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "state",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "\u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "\u5E38\u958B\u578B"
+          },
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.114"
+  },
+  {
+    id: "3A300",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
+    group: "3A\u7CFB\u5217",
+    code: "",
+    name: "3A300\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "3A{series}{type}{port}{state}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "state",
+        name: "\u521D\u59CB\u72C0\u614B",
+        options: [
+          {
+            code: "NC",
+            description: "\u5E38\u9589\u578B"
+          },
+          {
+            code: "NO",
+            description: "\u5E38\u958B\u578B"
+          },
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P131\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.115"
+  },
+  {
+    id: "4A100",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4A\u7CFB\u5217",
+    code: "",
+    name: "4A100\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "4A{series}{type}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "M5",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.123"
+  },
+  {
+    id: "4A200",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4A\u7CFB\u5217",
+    code: "",
+    name: "4A200\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "4A{series}{type}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.125"
+  },
+  {
+    id: "4A300",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4A\u7CFB\u5217",
+    code: "",
+    name: "4A300\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "4A{series}{type}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.127"
+  },
+  {
+    id: "4A400",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u6C23\u63A7\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
+    group: "4A\u7CFB\u5217",
+    code: "",
+    name: "4A400\u7CFB\u5217 \u6C23\u63A7\u95A5",
+    format: "4A{series}{type}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "4",
+            description: "400\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u6C23\u63A7\u65B9\u5F0F",
+        options: [
+          {
+            code: "10",
+            description: "\u96D9\u4F4D\u7F6E\u55AE\u6C23\u63A7"
+          },
+          {
+            code: "20",
+            description: "\u96D9\u4F4D\u7F6E\u96D9\u6C23\u63A7"
+          },
+          {
+            code: "30C",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
+          },
+          {
+            code: "30E",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
+          },
+          {
+            code: "30P",
+            description: "\u4E09\u4F4D\u7F6E\u96D9\u6C23\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5E95\u5EA7\u898F\u683C\u53CA\u8A02\u8CA8\u65B9\u5F0F\u8ACB\u53C3\u8003P132\u9801",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.129"
+  },
+  {
+    id: "4F210",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "4F\u8173\u8E0F\u95A5",
+    code: "4F210",
+    name: "4F\u7CFB\u5217 \u4E94\u53E3\u4E8C\u4F4D\u8173\u8E0F\u95A5",
+    format: "4F210{port}{type}{thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u578B\u5F0F\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "L",
+            description: "\u9644\u9396\u578B"
+          },
+          {
+            code: "F",
+            description: "\u9644\u9396\u53CA\u8B77\u7F69\u578B"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u9644\u9396\u578B\u61C9\u5B9A\u671F\u6DFB\u52A0\u6F64\u6ED1\u8102",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.166"
+  },
+  {
+    id: "ASC",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u55AE\u5411\u95A5\u3001\u6B62\u56DE\u95A5",
+    group: "ASC\u55AE\u5411\u7BC0\u6D41\u95A5",
+    code: "",
+    name: "ASC\u7CFB\u5217 \u55AE\u5411\u7BC0\u6D41\u95A5",
+    format: "ASC{series}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "100",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "200",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "300",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "ASC100\u50C5\u63D0\u4F9B06\u53E3\u5F91\uFF1BASC200\u50C5\u63D0\u4F9B08\u53E3\u5F91\uFF1BASC300\u63D0\u4F9B10\u53CA15\u53E3\u5F91",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.167"
+  },
+  {
+    id: "NRV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u55AE\u5411\u95A5\u3001\u6B62\u56DE\u95A5",
+    group: "NRV\u55AE\u5411\u95A5",
+    code: "NRV",
+    name: "NRV\u7CFB\u5217 \u55AE\u5411\u95A5",
+    format: "NRV{port}{thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          },
+          {
+            code: "25",
+            description: '1"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5167\u82AF\u63A1\u7528POM\u6CE8\u5851",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.168"
+  },
+  {
+    id: "PCV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u55AE\u5411\u95A5\u3001\u6B62\u56DE\u95A5",
+    group: "PCV\u8A98\u5C0E\u6B62\u56DE\u95A5",
+    code: "PCV",
+    name: "PCV\u7CFB\u5217 \u8A98\u5C0E\u6B62\u56DE\u95A5",
+    format: "PCV{port}{type}{pilot_port}{thread}",
+    categories: [
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u5148\u5C0E\u53E3\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u5167\u87BA\u7D0B\u5F0F"
+          },
+          {
+            code: "F",
+            description: "\u5FEB\u63D2\u63A5\u982D"
+          }
+        ]
+      },
+      {
+        id: "pilot_port",
+        name: "\u5148\u5C0E\u53E3\u898F\u683C\u5C3A\u5BF8",
+        options: [
+          {
+            code: "M5",
+            description: "M5x0.8"
+          },
+          {
+            code: "01",
+            description: '1/8"'
+          },
+          {
+            code: "02",
+            description: '1/4"'
+          },
+          {
+            code: "06",
+            description: "\u03A66"
+          },
+          {
+            code: "08",
+            description: "\u03A68"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5148\u5C0E\u53E3\u898F\u683C\u8207\u63A5\u7BA1\u53E3\u5F91\u5C0D\u61C9\u95DC\u4FC2\u8ACB\u53C3\u95B1\u578B\u9304\u8868\u683C",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.169"
+  },
+  {
+    id: "3L",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "3L\u624B\u62C9\u95A5",
+    code: "",
+    name: "3L\u7CFB\u5217 \u4E09\u53E3\u4E8C\u4F4D\u624B\u62C9\u95A5",
+    format: "3L{series}{function}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u529F\u80FD\u4EE3\u865F",
+        options: [
+          {
+            code: "10",
+            description: "\u4E8C\u4F4D"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "3L100\u50C5\u63D0\u4F9B06\u53E3\u5F91\uFF1B3L200\u63D0\u4F9B06\u53CA08\u53E3\u5F91\uFF1B3L300\u63D0\u4F9B08\u53CA10\u53E3\u5F91",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.144"
+  },
+  {
+    id: "4L",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "4L\u624B\u62C9\u95A5",
+    code: "",
+    name: "4L\u7CFB\u5217 \u4E94\u53E3\u4E8C\u4F4D\u624B\u62C9\u95A5",
+    format: "4L{series}{function}{port}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "1",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "2",
+            description: "200\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "300\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u529F\u80FD\u4EE3\u865F",
+        options: [
+          {
+            code: "10",
+            description: "\u4E8C\u4F4D"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "4L100\u50C5\u63D0\u4F9B06\u53E3\u5F91\uFF1B4L200\u63D0\u4F9B06\u53CA08\u53E3\u5F91\uFF1B4L300\u63D0\u4F9B08\u53CA10\u53E3\u5F91",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.145"
+  },
+  {
+    id: "ZM3",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "ZM3\u91CD\u8F09\u6A5F\u68B0\u95A5",
+    code: "ZM3",
+    name: "ZM3\u7CFB\u5217 \u91CD\u8F09\u578B\u6A5F\u68B0\u95A5",
+    format: "ZM3{type}{port}{angle}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "R",
+            description: "\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "J",
+            description: "\u53EF\u8ABF\u5F0F\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "P",
+            description: "\u89F8\u91DD\u53EF\u8ABF\u578B\u6A5F\u68B0\u95A5"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          }
+        ]
+      },
+      {
+        id: "angle",
+        name: "\u6309\u9215\u982D\u958B\u95DC\u6975\u9650\u89D2\u5EA6",
+        options: [
+          {
+            code: "",
+            description: "\u6A19\u6E96\u578B"
+          },
+          {
+            code: "W",
+            description: "\u5927\u89D2\u5EA6\u578B"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5982\u9700\u52A0\u6CB9\u6F64\u6ED1\uFF0C\u5EFA\u8B70\u4F7F\u7528ISO VG32\u6216\u540C\u7D1A\u7528\u6CB9",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.163"
+  },
+  {
+    id: "4HV",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "4HV\u624B\u8F49\u95A5",
+    code: "",
+    name: "4HV\u30014HVL\u7CFB\u5217 \u56DB\u53E3\u4E8C\u4F4D\u3001\u56DB\u53E3\u4E09\u4F4D\u624B\u8F49\u95A5",
+    format: "4HV{series}{function}{port}{type}{accessory}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "2",
+            description: "2\u7CFB\u5217"
+          },
+          {
+            code: "3",
+            description: "3\u7CFB\u5217"
+          },
+          {
+            code: "4",
+            description: "4\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u4F4D\u7F6E\u6578",
+        options: [
+          {
+            code: "10",
+            description: "\u56DB\u53E3\u4E8C\u4F4D"
+          },
+          {
+            code: "30",
+            description: "\u56DB\u53E3\u4E09\u4F4D"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          },
+          {
+            code: "10",
+            description: '3/8"'
+          },
+          {
+            code: "15",
+            description: '1/2"'
+          },
+          {
+            code: "20",
+            description: '3/4"'
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u5B89\u88DD\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u95A5\u9AD4\u5B89\u88DD"
+          },
+          {
+            code: "S",
+            description: "\u9762\u677F\u5B89\u88DD"
+          }
+        ]
+      },
+      {
+        id: "accessory",
+        name: "\u9644\u9396\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u9396"
+          },
+          {
+            code: "L",
+            description: "\u9644\u9396"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u56DB\u53E3\u4E09\u4F4D\u6709\u4E2D\u5C01\u9589\u578B",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.147"
+  },
+  {
+    id: "S3",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "S3\u6A5F\u68B0\u95A5",
+    code: "S3",
+    name: "S3\u7CFB\u5217 \u4E09\u53E3\u4E8C\u4F4D\u6A5F\u68B0\u95A5",
+    format: "S3{type}{port}{color}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "B",
+            description: "\u57FA\u672C\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "C",
+            description: "\u9577\u67C4\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "D",
+            description: "\u77ED\u67C4\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "Y",
+            description: "\u6416\u81C2\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "R",
+            description: "\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "L",
+            description: "\u55AE\u5411\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "V",
+            description: "\u5782\u76F4\u6EFE\u8F2A\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "PL",
+            description: "\u505C\u99D0\u65CB\u8F49\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PP",
+            description: "\u51F8\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PF",
+            description: "\u5E73\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PM",
+            description: "\u8611\u83C7\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "HS",
+            description: "\u65CB\u9215\u578B\u624B\u52D5\u95A5"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "05",
+            description: "M5"
+          },
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u6309\u9215\u984F\u8272",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "G",
+            description: "\u7DA0\u8272"
+          },
+          {
+            code: "B",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u5982\u9700\u52A0\u6CB9\u6F64\u6ED1\uFF0C\u5EFA\u8B70\u4F7F\u7528ISO VG32\u6216\u540C\u7D1A\u7528\u6CB9",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.149"
+  },
+  {
+    id: "M5",
+    category: "\u63A7\u5236\u5143\u4EF6",
+    superGroup: "\u624B\u52D5\u95A5\u3001\u8173\u8E0F\u95A5\u3001\u6A5F\u68B0\u95A5",
+    group: "M5\u6A5F\u68B0\u95A5",
+    code: "",
+    name: "M5\u7CFB\u5217 \u4E94\u53E3\u4E8C\u4F4D\u6A5F\u68B0\u95A5",
+    format: "M5{type}{series}{port}{color}{thread}",
+    categories: [
+      {
+        id: "type",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "B",
+            description: "\u57FA\u672C\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "C",
+            description: "\u9577\u67C4\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "D",
+            description: "\u77ED\u67C4\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "Y",
+            description: "\u6416\u81C2\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "R",
+            description: "\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "L",
+            description: "\u55AE\u5411\u6EFE\u8F2A\u69D3\u687F\u578B\u6A5F\u68B0\u95A5"
+          },
+          {
+            code: "PL",
+            description: "\u505C\u99D0\u65CB\u8F49\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PP",
+            description: "\u51F8\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PF",
+            description: "\u5E73\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "PM",
+            description: "\u8611\u83C7\u982D\u6309\u9215\u578B\u624B\u52D5\u95A5"
+          },
+          {
+            code: "HS",
+            description: "\u65CB\u9215\u578B\u624B\u52D5\u95A5"
+          }
+        ]
+      },
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "110",
+            description: "100\u7CFB\u5217"
+          },
+          {
+            code: "210",
+            description: "200\u7CFB\u5217"
+          }
+        ]
+      },
+      {
+        id: "port",
+        name: "\u63A5\u7BA1\u53E3\u5F91",
+        options: [
+          {
+            code: "06",
+            description: '1/8"'
+          },
+          {
+            code: "08",
+            description: '1/4"'
+          }
+        ]
+      },
+      {
+        id: "color",
+        name: "\u6309\u9215\u984F\u8272",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u6B64\u4EE3\u78BC"
+          },
+          {
+            code: "R",
+            description: "\u7D05\u8272"
+          },
+          {
+            code: "B",
+            description: "\u9ED1\u8272"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          },
+          {
+            code: "T",
+            description: "NPT\u7259"
+          }
+        ]
+      }
+    ],
+    note: "\u53E6\u6709\u8FF7\u4F60\u578BM5R05/M5B05",
+    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.155"
+  }
+];
 
 // src/data/catalog-actuators.json
 var catalog_actuators_default = [
