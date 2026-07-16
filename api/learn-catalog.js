@@ -31867,6 +31867,16 @@ function buildCatalogIndex() {
   }));
 }
 
+// src/server/companyCrossref.ts
+var variantCodeToId = /* @__PURE__ */ new Map();
+for (const s of defaultCatalog) {
+  const seriesCat = (s.categories || []).find((c) => c.id === "series" || c.id === "type" || c.id === "spec");
+  for (const opt of seriesCat?.options || []) {
+    const c = (opt.code || "").toUpperCase().replace(/[^A-Z0-9-]/g, "");
+    if (c.length >= 2 && !variantCodeToId.has(c)) variantCodeToId.set(c, s.id);
+  }
+}
+
 // src/server/crossReferenceService.ts
 var aiClient = null;
 function getAi() {
