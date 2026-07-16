@@ -10440,398 +10440,6 @@ var catalog_actuators_default = [
     ]
   },
   {
-    id: "npm",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6253\u5200\u6C23\u7F38",
-    group: "NPM\u7CFB\u5217",
-    code: "NPM",
-    name: "\u6253\u5200\u6C23\u7F38",
-    format: "{code} {output} {bore_stroke} {voltage} {connection} {switch}",
-    categories: [
-      {
-        id: "output",
-        name: "\u51FA\u529B",
-        options: [
-          {
-            code: "35T",
-            description: "35T: \u51FA\u529B3.5\u5678"
-          },
-          {
-            code: "45T",
-            description: "45T: \u51FA\u529B4.5\u5678"
-          },
-          {
-            code: "60T",
-            description: "60T: \u51FA\u529B6.0\u5678"
-          }
-        ]
-      },
-      {
-        id: "bore_stroke",
-        name: "\u6DB2\u58D3\u7F38\u5F91X\u6253\u5200\u884C\u7A0B",
-        options: [
-          {
-            code: "63x13",
-            description: "63x13: \u6DB2\u58D3\u7F38\u5F9163mm\uFF1B\u6253\u5200\u884C\u7A0B13mm"
-          },
-          {
-            code: "63x15",
-            description: "63x15: \u6DB2\u58D3\u7F38\u5F9163mm\uFF1B\u6253\u5200\u884C\u7A0B15mm"
-          },
-          {
-            code: "70x15",
-            description: "70x15: \u6DB2\u58D3\u7F38\u5F9170mm\uFF1B\u6253\u5200\u884C\u7A0B15mm"
-          }
-        ]
-      },
-      {
-        id: "voltage",
-        name: "\u6A19\u6E96\u96FB\u58D3",
-        options: [
-          {
-            code: "A",
-            description: "A: AC220V"
-          },
-          {
-            code: "B",
-            description: "B: DC24V"
-          },
-          {
-            code: "C",
-            description: "C: AC110V"
-          },
-          {
-            code: "E",
-            description: "E: AC24V"
-          },
-          {
-            code: "F",
-            description: "F: DC12V"
-          }
-        ]
-      },
-      {
-        id: "connection",
-        name: "\u63A5\u96FB\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: DIN\u63D2\u5EA7\u5F0F"
-          },
-          {
-            code: "I",
-            description: "I: \u51FA\u7DDA\u5F0F"
-          }
-        ]
-      },
-      {
-        id: "switch",
-        name: "\u5FAE\u52D5\u958B\u95DC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u5FAE\u52D5\u958B\u95DC"
-          },
-          {
-            code: "L",
-            description: "L: 2\u500B\u5FAE\u52D5\u958B\u95DC"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "jqk",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u92B7\u91D8\u6C23\u7F38",
-    group: "JQK\u7CFB\u5217",
-    code: "JQK",
-    name: "\u5E95\u677F\u593E\u7DCA\u6C23\u7F38",
-    format: "{code} {bore} {rod_dir} - {pin_dia} {boss_height} {clamp_thickness} {sensor} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "rod_dir",
-        name: "\u62C9\u6746\u65B9\u5411",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u6B63\u5411"
-          },
-          {
-            code: "R",
-            description: "R: \u53CD\u5411"
-          }
-        ]
-      },
-      {
-        id: "pin_dia",
-        name: "\u5C0E\u5411\u92B7\u76F4\u5F91",
-        options: [
-          {
-            code: "17",
-            description: "17: \u03A617.x"
-          },
-          {
-            code: "19",
-            description: "19: \u03A619.x"
-          },
-          {
-            code: "24",
-            description: "24: \u03A624.x"
-          },
-          {
-            code: "29",
-            description: "29: \u03A629.x"
-          }
-        ]
-      },
-      {
-        id: "boss_height",
-        name: "\u51F8\u81FA\u9AD8\u5EA6",
-        options: [
-          {
-            code: "L45",
-            description: "L45: 45mm"
-          }
-        ]
-      },
-      {
-        id: "clamp_thickness",
-        name: "\u593E\u7DCA\u539A\u5EA6",
-        options: [
-          {
-            code: "T16",
-            description: "T16: 1.6mm"
-          }
-        ]
-      },
-      {
-        id: "sensor",
-        name: "\u50B3\u611F\u5668",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u50B3\u611F\u5668"
-          },
-          {
-            code: "K",
-            description: "K: \u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
-          },
-          {
-            code: "KN",
-            description: "KN: \u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "jcp",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u92B7\u91D8\u6C23\u7F38",
-    group: "JCP\u7CFB\u5217",
-    code: "JCP",
-    name: "\u55AE\u4F38\u7E2E\u92B7",
-    format: "{code} {bore}X{stroke} {pin_type} {sensor} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "pin_type",
-        name: "\u92B7\u91D8\u985E\u578B",
-        options: [
-          {
-            code: "A",
-            description: "A\u578B"
-          },
-          {
-            code: "B",
-            description: "B\u578B"
-          },
-          {
-            code: "C",
-            description: "C\u578B"
-          },
-          {
-            code: "D",
-            description: "D\u578B"
-          }
-        ]
-      },
-      {
-        id: "sensor",
-        name: "\u50B3\u611F\u5668",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u50B3\u611F\u5668"
-          },
-          {
-            code: "K",
-            description: "K: \u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
-          },
-          {
-            code: "KN",
-            description: "KN: \u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "jch",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u92B7\u91D8\u6C23\u7F38",
-    group: "JCH\u7CFB\u5217",
-    code: "JCH",
-    name: "\u96D9\u4F38\u7E2E\u92B7",
-    format: "{code} {bore}X{stroke} {pin_type} {sensor} {thread}",
-    categories: [
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "60",
-            description: "60mm"
-          }
-        ]
-      },
-      {
-        id: "pin_type",
-        name: "\u92B7\u91D8\u985E\u578B",
-        options: [
-          {
-            code: "A",
-            description: "A\u578B"
-          },
-          {
-            code: "B",
-            description: "B\u578B"
-          }
-        ]
-      },
-      {
-        id: "sensor",
-        name: "\u50B3\u611F\u5668",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u50B3\u611F\u5668"
-          },
-          {
-            code: "K",
-            description: "K: \u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
-          },
-          {
-            code: "KN",
-            description: "KN: \u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          },
-          {
-            code: "G",
-            description: "G: G\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
     id: "aqk",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u92B7\u91D8\u6C23\u7F38",
@@ -11146,506 +10754,6 @@ var catalog_actuators_default = [
     ]
   },
   {
-    id: "twq",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u963B\u64CB\u6C23\u7F38",
-    group: "TWQ\u7CFB\u5217",
-    code: "TWQ",
-    name: "\u963B\u64CB\u6C23\u7F38",
-    format: "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7A2E\u985E",
-        options: [
-          {
-            code: "TWQ",
-            description: "TWQ: \u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u56FA\u5B9A\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TTQ",
-            description: "TTQ: \u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u56FA\u5B9A\u55AE\u52D5\u5F15\u5165\u578B)"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "block_type",
-        name: "\u963B\u64CB\u65B9\u5F0F",
-        options: [
-          {
-            code: "C",
-            description: "C: \u5713\u67F1\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u6241\u67F1\u578B"
-          },
-          {
-            code: "R",
-            description: "R: \u6EFE\u8F2A\u578B"
-          },
-          {
-            code: "K",
-            description: "K: \u6760\u6746\u5F0F\u6EFE\u8F2A\u578B(\u5E36\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
-          }
-        ]
-      },
-      {
-        id: "self_lock",
-        name: "\u81EA\u9396\u529F\u80FD",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u81EA\u9396"
-          },
-          {
-            code: "F",
-            description: "F: \u5E36\u81EA\u9396"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "twg",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u963B\u64CB\u6C23\u7F38",
-    group: "TWG\u7CFB\u5217",
-    code: "TWG",
-    name: "\u963B\u64CB\u6C23\u7F38",
-    format: "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7A2E\u985E",
-        options: [
-          {
-            code: "TWG",
-            description: "TWG: \u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TTG",
-            description: "TTG: \u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u55AE\u52D5\u5F15\u5165\u578B)"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "10",
-            description: "10mm"
-          },
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "block_type",
-        name: "\u963B\u64CB\u65B9\u5F0F",
-        options: [
-          {
-            code: "C",
-            description: "C: \u5713\u67F1\u578B"
-          },
-          {
-            code: "B",
-            description: "B: \u6241\u67F1\u578B"
-          },
-          {
-            code: "R",
-            description: "R: \u6EFE\u8F2A\u578B"
-          },
-          {
-            code: "K",
-            description: "K: \u6760\u6746\u5F0F\u6EFE\u8F2A\u578B(\u5E36\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
-          }
-        ]
-      },
-      {
-        id: "self_lock",
-        name: "\u81EA\u9396\u529F\u80FD",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u81EA\u9396"
-          },
-          {
-            code: "F",
-            description: "F: \u5E36\u81EA\u9396"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "twh",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u963B\u64CB\u6C23\u7F38",
-    group: "TWH\u7CFB\u5217",
-    code: "TWH",
-    name: "\u963B\u64CB\u6C23\u7F38",
-    format: "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7A2E\u985E",
-        options: [
-          {
-            code: "TWH",
-            description: "TWH: \u963B\u64CB\u6C23\u7F38(\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TDH",
-            description: "TDH: \u963B\u64CB\u6C23\u7F38(\u5167\u7F6E\u5F48\u7C27\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TTH",
-            description: "TTH: \u963B\u64CB\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "25",
-            description: "25mm"
-          },
-          {
-            code: "32",
-            description: "32mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          },
-          {
-            code: "50",
-            description: "50mm"
-          },
-          {
-            code: "63",
-            description: "63mm"
-          },
-          {
-            code: "80",
-            description: "80mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "15",
-            description: "15mm"
-          },
-          {
-            code: "20",
-            description: "20mm"
-          },
-          {
-            code: "30",
-            description: "30mm"
-          },
-          {
-            code: "40",
-            description: "40mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "block_type",
-        name: "\u963B\u64CB\u65B9\u5F0F",
-        options: [
-          {
-            code: "L",
-            description: "L: \u6760\u6746\u5F0F\u6EFE\u8F2A\u578B(\u4E0D\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
-          },
-          {
-            code: "K",
-            description: "K: \u6760\u6746\u5F0F\u6EFE\u8F2A\u578B(\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
-          }
-        ]
-      },
-      {
-        id: "self_lock",
-        name: "\u81EA\u9396\u529F\u80FD",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u81EA\u9396"
-          },
-          {
-            code: "F",
-            description: "F: \u5E36\u81EA\u9396"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259(\u6216M5)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "twm",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u963B\u64CB\u6C23\u7F38",
-    group: "TWM\u7CFB\u5217",
-    code: "TWM",
-    name: "\u963B\u64CB\u6C23\u7F38",
-    format: "{type} {bore}X{stroke} {magnet} {block_type} {self_lock} {thread}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7A2E\u985E",
-        options: [
-          {
-            code: "TWM",
-            description: "TWM: \u963B\u64CB\u6C23\u7F38(\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TDM",
-            description: "TDM: \u963B\u64CB\u6C23\u7F38(\u5167\u7F6E\u5F48\u7C27\u8907\u52D5\u578B)"
-          },
-          {
-            code: "TTM",
-            description: "TTM: \u963B\u64CB\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)"
-          }
-        ]
-      },
-      {
-        id: "bore",
-        name: "\u7F38\u5F91",
-        options: [
-          {
-            code: "50",
-            description: "50mm"
-          }
-        ]
-      },
-      {
-        id: "stroke",
-        name: "\u884C\u7A0B",
-        options: [
-          {
-            code: "30",
-            description: "30mm"
-          }
-        ]
-      },
-      {
-        id: "magnet",
-        name: "\u78C1\u77F3\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E0D\u9644\u78C1\u77F3"
-          },
-          {
-            code: "S",
-            description: "S: \u9644\u78C1\u77F3"
-          }
-        ]
-      },
-      {
-        id: "block_type",
-        name: "\u963B\u64CB\u65B9\u5F0F",
-        options: [
-          {
-            code: "K",
-            description: "K: \u6760\u6746\u5F0F\u6EFE\u8F2A\u578B(\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
-          }
-        ]
-      },
-      {
-        id: "self_lock",
-        name: "\u81EA\u9396\u529F\u80FD",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u7121\u81EA\u9396"
-          },
-          {
-            code: "F",
-            description: "F: \u5E36\u81EA\u9396"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: PT\u7259"
-          }
-        ]
-      }
-    ]
-  },
-  {
     id: "f_mq",
     category: "\u57F7\u884C\u5143\u4EF6",
     superGroup: "\u6C23\u7F38\u9644\u4EF6",
@@ -11828,302 +10936,6 @@ var catalog_actuators_default = [
           {
             code: "250",
             description: "250"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "dms",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u7F38\u9644\u4EF6",
-    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
-    code: "DMS",
-    name: "DMS\u7CFB\u5217\u96FB\u5B50\u5F0F\u50B3\u611F\u5668",
-    format: "{code}{type} - {output} {wire}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "G",
-            description: "G\u578B"
-          },
-          {
-            code: "H",
-            description: "H\u578B"
-          },
-          {
-            code: "E",
-            description: "E\u578B"
-          },
-          {
-            code: "J",
-            description: "J\u578B"
-          }
-        ]
-      },
-      {
-        id: "output",
-        name: "\u8F38\u51FA\u578B\u5F0F\u8207\u63A5\u7DDA",
-        options: [
-          {
-            code: "020",
-            description: "020: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95772m"
-          },
-          {
-            code: "030",
-            description: "030: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95773m"
-          },
-          {
-            code: "050",
-            description: "050: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95775m"
-          },
-          {
-            code: "100",
-            description: "100: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u957710m"
-          },
-          {
-            code: "M08",
-            description: "M08: M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          },
-          {
-            code: "M12",
-            description: "M12: M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          }
-        ]
-      },
-      {
-        id: "wire",
-        name: "\u7279\u898F\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E00\u822C\u578B"
-          },
-          {
-            code: "RW",
-            description: "RW: \u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "ems",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u7F38\u9644\u4EF6",
-    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
-    code: "EMS",
-    name: "EMS\u7CFB\u5217\u96FB\u5B50\u5F0F\u50B3\u611F\u5668",
-    format: "{code}{type} - {output} {wire}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "G",
-            description: "G\u578B"
-          },
-          {
-            code: "H",
-            description: "H\u578B"
-          }
-        ]
-      },
-      {
-        id: "output",
-        name: "\u8F38\u51FA\u578B\u5F0F\u8207\u63A5\u7DDA",
-        options: [
-          {
-            code: "020",
-            description: "020: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95772m"
-          },
-          {
-            code: "030",
-            description: "030: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95773m"
-          },
-          {
-            code: "050",
-            description: "050: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95775m"
-          },
-          {
-            code: "100",
-            description: "100: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u957710m"
-          },
-          {
-            code: "M08",
-            description: "M08: M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          },
-          {
-            code: "M12",
-            description: "M12: M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          }
-        ]
-      },
-      {
-        id: "wire",
-        name: "\u7279\u898F\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E00\u822C\u578B"
-          },
-          {
-            code: "RW",
-            description: "RW: \u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "cms",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u7F38\u9644\u4EF6",
-    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
-    code: "CMS",
-    name: "CMS\u7CFB\u5217\u78C1\u7C27\u5F0F\u50B3\u611F\u5668",
-    format: "{code}{type} - {output} {wire}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "G",
-            description: "G\u578B"
-          },
-          {
-            code: "H",
-            description: "H\u578B"
-          },
-          {
-            code: "E",
-            description: "E\u578B"
-          },
-          {
-            code: "J",
-            description: "J\u578B"
-          }
-        ]
-      },
-      {
-        id: "output",
-        name: "\u8F38\u51FA\u578B\u5F0F\u8207\u63A5\u7DDA",
-        options: [
-          {
-            code: "020",
-            description: "020: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95772m"
-          },
-          {
-            code: "030",
-            description: "030: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95773m"
-          },
-          {
-            code: "050",
-            description: "050: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u95775m"
-          },
-          {
-            code: "100",
-            description: "100: \u4E8C\u7DDA\u5F0F/\u4E09\u7DDA\u5F0F \u7DDA\u957710m"
-          },
-          {
-            code: "M08",
-            description: "M08: M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          },
-          {
-            code: "M12",
-            description: "M12: M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
-          }
-        ]
-      },
-      {
-        id: "wire",
-        name: "\u7279\u898F\u4EE3\u865F",
-        options: [
-          {
-            code: "",
-            description: "\u7A7A\u767D: \u4E00\u822C\u578B"
-          },
-          {
-            code: "H",
-            description: "H: \u9AD8\u6EAB\u578B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: "prsu",
-    category: "\u57F7\u884C\u5143\u4EF6",
-    superGroup: "\u6C23\u7F38\u9644\u4EF6",
-    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
-    code: "PRSU",
-    name: "PRSU\u7CFB\u5217\u69FD\u578B\u5149\u96FB\u50B3\u611F\u5668",
-    format: "{code} {type} - {output} {length}",
-    categories: [
-      {
-        id: "type",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "T",
-            description: "T\u578B"
-          },
-          {
-            code: "F",
-            description: "F\u578B"
-          },
-          {
-            code: "R",
-            description: "R\u578B"
-          },
-          {
-            code: "K",
-            description: "K\u578B"
-          },
-          {
-            code: "L",
-            description: "L\u578B"
-          },
-          {
-            code: "Y",
-            description: "Y\u578B"
-          }
-        ]
-      },
-      {
-        id: "output",
-        name: "\u8F38\u51FA\u578B\u5F0F",
-        options: [
-          {
-            code: "N",
-            description: "N: NPN"
-          },
-          {
-            code: "P",
-            description: "P: PNP"
-          }
-        ]
-      },
-      {
-        id: "length",
-        name: "\u63A5\u7DDA\u578B\u5F0F",
-        options: [
-          {
-            code: "020",
-            description: "020: \u7DDA\u95772m"
-          },
-          {
-            code: "030",
-            description: "030: \u7DDA\u95773m"
-          },
-          {
-            code: "050",
-            description: "050: \u7DDA\u95775m"
           }
         ]
       }
@@ -18906,6 +17718,1279 @@ var catalog_actuators_default = [
     ],
     note: "HFZ\u7CFB\u5217\u5747\u70BA\u9644\u78C1\u578B\uFF0C\u6240\u914D\u50B3\u611F\u5668\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
     sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304(\u6C23\u52D5\u624B\u6307) P.301"
+  },
+  {
+    id: "npm",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6253\u5200\u6C23\u7F38",
+    group: "NPM\u7CFB\u5217",
+    code: "",
+    name: "NPM\u7CFB\u5217 \u6253\u5200\u6C23\u7F38",
+    format: "{series}{output}{spec}{voltage}{connection}{switch}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "NPM",
+            description: "\u6253\u5200\u6C23\u7F38"
+          }
+        ]
+      },
+      {
+        id: "output",
+        name: "\u51FA\u529B",
+        options: [
+          {
+            code: "35T",
+            description: "\u51FA\u529B3.5\u5678"
+          },
+          {
+            code: "45T",
+            description: "\u51FA\u529B4.5\u5678"
+          },
+          {
+            code: "60T",
+            description: "\u51FA\u529B6.0\u5678"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u6DB2\u58D3\u7F38\u5F91X\u6253\u5200\u884C\u7A0B",
+        options: [
+          {
+            code: "63X13",
+            description: "\u6DB2\u58D3\u7F38\u5F9163mm\uFF1B\u6253\u5200\u884C\u7A0B13mm"
+          },
+          {
+            code: "63X15",
+            description: "\u6DB2\u58D3\u7F38\u5F9163mm\uFF1B\u6253\u5200\u884C\u7A0B15mm"
+          },
+          {
+            code: "70X15",
+            description: "\u6DB2\u58D3\u7F38\u5F9170mm\uFF1B\u6253\u5200\u884C\u7A0B15mm"
+          }
+        ]
+      },
+      {
+        id: "voltage",
+        name: "\u6A19\u6E96\u96FB\u58D3",
+        options: [
+          {
+            code: "A",
+            description: "AC220V"
+          },
+          {
+            code: "B",
+            description: "DC24V"
+          },
+          {
+            code: "C",
+            description: "AC110V"
+          },
+          {
+            code: "E",
+            description: "AC24V"
+          },
+          {
+            code: "F",
+            description: "DC12V"
+          }
+        ]
+      },
+      {
+        id: "connection",
+        name: "\u63A5\u96FB\u65B9\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "DIN\u63D2\u5EA7\u5F0F"
+          },
+          {
+            code: "I",
+            description: "\u51FA\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "switch",
+        name: "\u5FAE\u52D5\u958B\u95DC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u5FAE\u52D5\u958B\u95DC"
+          },
+          {
+            code: "L",
+            description: "2\u500B\u5FAE\u52D5\u958B\u95DC"
+          }
+        ]
+      }
+    ],
+    note: "\u6253\u5200\u7F38\u4E3B\u9AD4\u898F\u683C\u5171\u56DB\u6B3E\uFF0C\u5FAE\u52D5\u958B\u95DC\u3001\u96FB\u58D3\u548C\u63A5\u96FB\u65B9\u5F0F\u53EF\u9078\u3002\u6211\u53F8\u4F7F\u7528\u96FB\u78C1\u95A5\u578B\u865F\u70BA4M310\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.387"
+  },
+  {
+    id: "jch",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u92B7\u91D8\u6C23\u7F38",
+    group: "JCH\u7CFB\u5217",
+    code: "",
+    name: "JCH\u7CFB\u5217 \u96D9\u4F38\u7E2E\u92B7",
+    format: "{series}{bore}{stroke}{pin_type}{sensor}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "JCH",
+            description: "\u96D9\u4F38\u7E2E\u92B7"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "60",
+            description: "60mm"
+          }
+        ]
+      },
+      {
+        id: "pin_type",
+        name: "\u92B7\u91D8\u985E\u578B",
+        options: [
+          {
+            code: "A",
+            description: "A\u578B"
+          },
+          {
+            code: "B",
+            description: "B\u578B"
+          }
+        ]
+      },
+      {
+        id: "sensor",
+        name: "\u50B3\u611F\u5668\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u50B3\u611F\u5668"
+          },
+          {
+            code: "K",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
+          },
+          {
+            code: "KN",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.70"
+  },
+  {
+    id: "jcp",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u92B7\u91D8\u6C23\u7F38",
+    group: "JCP\u7CFB\u5217",
+    code: "",
+    name: "JCP\u7CFB\u5217 \u55AE\u4F38\u7E2E\u92B7",
+    format: "{series}{bore}{stroke}{pin_type}{sensor}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "JCP",
+            description: "\u55AE\u4F38\u7E2E\u92B7"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "60",
+            description: "60mm"
+          }
+        ]
+      },
+      {
+        id: "pin_type",
+        name: "\u92B7\u91D8\u985E\u578B",
+        options: [
+          {
+            code: "A",
+            description: "A\u578B"
+          },
+          {
+            code: "B",
+            description: "B\u578B"
+          },
+          {
+            code: "C",
+            description: "C\u578B"
+          },
+          {
+            code: "D",
+            description: "D\u578B"
+          }
+        ]
+      },
+      {
+        id: "sensor",
+        name: "\u50B3\u611F\u5668\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u50B3\u611F\u5668"
+          },
+          {
+            code: "K",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
+          },
+          {
+            code: "KN",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.67"
+  },
+  {
+    id: "jqk",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u92B7\u91D8\u6C23\u7F38",
+    group: "JQK\u7CFB\u5217",
+    code: "",
+    name: "JQK\u7CFB\u5217 \u5E95\u677F\u593E\u7DCA\u7F38",
+    format: "{series}{bore}{direction}-{pin_diameter}{height}{clamping_thickness}{sensor}{thread}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "JQK",
+            description: "\u5E95\u677F\u593E\u7DCA\u7F38"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "direction",
+        name: "\u62C9\u6746\u65B9\u5411",
+        options: [
+          {
+            code: "",
+            description: "\u6B63\u5411"
+          },
+          {
+            code: "R",
+            description: "\u53CD\u5411"
+          }
+        ]
+      },
+      {
+        id: "pin_diameter",
+        name: "\u5C0E\u5411\u92B7\u76F4\u5F91",
+        options: [
+          {
+            code: "17",
+            description: "\u03A617"
+          },
+          {
+            code: "19",
+            description: "\u03A619"
+          },
+          {
+            code: "24",
+            description: "\u03A624"
+          },
+          {
+            code: "29",
+            description: "\u03A629"
+          }
+        ]
+      },
+      {
+        id: "height",
+        name: "\u51F8\u81FA\u9AD8\u5EA6",
+        options: [
+          {
+            code: "L45",
+            description: "45mm"
+          }
+        ]
+      },
+      {
+        id: "clamping_thickness",
+        name: "\u593E\u7DCA\u539A\u5EA6",
+        options: [
+          {
+            code: "T16",
+            description: "1.6mm"
+          }
+        ]
+      },
+      {
+        id: "sensor",
+        name: "\u50B3\u611F\u5668\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u50B3\u611F\u5668"
+          },
+          {
+            code: "K",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(PNP\u578B)"
+          },
+          {
+            code: "KN",
+            description: "\u9644\u96FB\u611F\u50B3\u611F\u5668(NPN\u578B)"
+          }
+        ]
+      },
+      {
+        id: "thread",
+        name: "\u7259\u578B\u4EE3\u78BC",
+        options: [
+          {
+            code: "",
+            description: "PT\u7259"
+          },
+          {
+            code: "G",
+            description: "G\u7259"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.65"
+  },
+  {
+    id: "twg",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u963B\u64CB\u6C23\u7F38",
+    group: "TWG\u7CFB\u5217",
+    code: "",
+    name: "TWG\u7CFB\u5217 \u963B\u64CB\u6C23\u7F38",
+    format: "{series}{bore}{stroke}{magnet}{cushion}{function}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "TWG",
+            description: "\u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TTG",
+            description: "\u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u55AE\u52D5\u5F15\u5165\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "15",
+            description: "15mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "cushion",
+        name: "\u963B\u64CB\u65B9\u5F0F",
+        options: [
+          {
+            code: "C",
+            description: "\u5713\u67F1\u578B"
+          },
+          {
+            code: "B",
+            description: "\u6241\u67F1\u578B"
+          },
+          {
+            code: "R",
+            description: "\u6EFE\u8F2A\u578B"
+          },
+          {
+            code: "K",
+            description: "\u6746\u5F0F\u6EFE\u8F2A\u578B(\u5E36\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u81EA\u9396\u529F\u80FD",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u81EA\u9396"
+          },
+          {
+            code: "F",
+            description: "\u5E36\u81EA\u9396"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u5F15\u5165\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u6746\u7E2E\u56DE\uFF0C\u5F8C\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u6746\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u4F38\u51FA\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.395"
+  },
+  {
+    id: "twh",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u963B\u64CB\u6C23\u7F38",
+    group: "TWH/TWM\u7CFB\u5217",
+    code: "",
+    name: "TWH\u3001TWM\u7CFB\u5217 \u963B\u64CB\u6C23\u7F38",
+    format: "{series}{bore}{stroke}{magnet}{cushion}{function}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "TWH",
+            description: "\u963B\u64CB\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TDH",
+            description: "\u963B\u64CB\u6C23\u7F38(\u5167\u7F6E\u5F48\u7C27\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TTH",
+            description: "\u963B\u64CB\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)"
+          },
+          {
+            code: "TWM",
+            description: "\u963B\u64CB\u6C23\u7F38(\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TDM",
+            description: "\u963B\u64CB\u6C23\u7F38(\u5167\u7F6E\u5F48\u7C27\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TTM",
+            description: "\u963B\u64CB\u6C23\u7F38(\u55AE\u52D5\u5F15\u5165\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          },
+          {
+            code: "80",
+            description: "80mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "15",
+            description: "15mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "63",
+            description: "63mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "cushion",
+        name: "\u963B\u64CB\u65B9\u5F0F",
+        options: [
+          {
+            code: "L",
+            description: "\u6746\u5F0F\u6EFE\u8F2A\u578B(\u4E0D\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
+          },
+          {
+            code: "K",
+            description: "\u6746\u5F0F\u6EFE\u8F2A\u578B(\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u81EA\u9396\u529F\u80FD",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u81EA\u9396"
+          },
+          {
+            code: "F",
+            description: "\u5E36\u81EA\u9396"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u5F15\u5165\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u6746\u7E2E\u56DE\uFF0C\u5F8C\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u6746\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u4F38\u51FA\u5FA9\u4F4D\u3002\u7F38\u5F9120\u300125\u6CB9\u58D3\u7DE9\u885D\u5668\u70BA\u4E0D\u53EF\u8ABF\uFF1B32\u4EE5\u4E0A\u6CB9\u58D3\u7DE9\u885D\u5668\u70BA\u53EF\u8ABF\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.391"
+  },
+  {
+    id: "twq",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u963B\u64CB\u6C23\u7F38",
+    group: "TWQ\u7CFB\u5217",
+    code: "",
+    name: "TWQ\u7CFB\u5217 \u963B\u64CB\u6C23\u7F38",
+    format: "{series}{bore}{stroke}{magnet}{cushion}{function}",
+    categories: [
+      {
+        id: "series",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "TWQ",
+            description: "\u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u5FA9\u52D5\u578B)"
+          },
+          {
+            code: "TTQ",
+            description: "\u963B\u64CB\u6C23\u7F38(\u9AD8\u5EA6\u53EF\u8ABF\u55AE\u52D5\u5F15\u5165\u578B)"
+          }
+        ]
+      },
+      {
+        id: "bore",
+        name: "\u7F38\u5F91",
+        options: [
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "32",
+            description: "32mm"
+          },
+          {
+            code: "40",
+            description: "40mm"
+          },
+          {
+            code: "50",
+            description: "50mm"
+          }
+        ]
+      },
+      {
+        id: "stroke",
+        name: "\u884C\u7A0B",
+        options: [
+          {
+            code: "10",
+            description: "10mm"
+          },
+          {
+            code: "15",
+            description: "15mm"
+          },
+          {
+            code: "20",
+            description: "20mm"
+          },
+          {
+            code: "25",
+            description: "25mm"
+          },
+          {
+            code: "30",
+            description: "30mm"
+          }
+        ]
+      },
+      {
+        id: "magnet",
+        name: "\u78C1\u77F3\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E0D\u9644\u78C1\u77F3"
+          },
+          {
+            code: "S",
+            description: "\u9644\u78C1\u77F3"
+          }
+        ]
+      },
+      {
+        id: "cushion",
+        name: "\u963B\u64CB\u65B9\u5F0F",
+        options: [
+          {
+            code: "C",
+            description: "\u5713\u67F1\u578B"
+          },
+          {
+            code: "B",
+            description: "\u6241\u67F1\u578B"
+          },
+          {
+            code: "R",
+            description: "\u6EFE\u8F2A\u578B"
+          },
+          {
+            code: "K",
+            description: "\u6746\u5F0F\u6EFE\u8F2A\u578B(\u5E36\u53EF\u8ABF\u6CB9\u58D3\u7DE9\u885D\u5668)"
+          }
+        ]
+      },
+      {
+        id: "function",
+        name: "\u81EA\u9396\u529F\u80FD",
+        options: [
+          {
+            code: "",
+            description: "\u7121\u81EA\u9396"
+          },
+          {
+            code: "F",
+            description: "\u5E36\u81EA\u9396"
+          }
+        ]
+      }
+    ],
+    note: "\u55AE\u52D5\u5F15\u5165\u578B\u662F\u6307\u901A\u6C23\u6642\u6D3B\u585E\u6746\u7E2E\u56DE\uFF0C\u5F8C\u7F6E\u5F48\u7C27\u88AB\u58D3\u7E2E\uFF0C\u65B7\u6C23\u6642\u6D3B\u585E\u6746\u5728\u5F48\u7C27\u5FA9\u4F4D\u529B\u4F5C\u7528\u4E0B\u4F38\u51FA\u5FA9\u4F4D\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.402"
+  },
+  {
+    id: "dms",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u7F38\u9644\u4EF6",
+    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
+    code: "",
+    name: "DMS\u7CFB\u5217\u96FB\u5B50\u5F0F\u50B3\u611F\u5668",
+    format: "{series}-{spec}-{type}-{length}{special}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "DMS",
+            description: "\u96FB\u5B50\u5F0F\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "G",
+            description: "G\u578B"
+          },
+          {
+            code: "H",
+            description: "H\u578B"
+          },
+          {
+            code: "E",
+            description: "E\u578B"
+          },
+          {
+            code: "J",
+            description: "J\u578B"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u8F38\u51FA\u578B\u5F0F",
+        options: [
+          {
+            code: "",
+            description: "\u4E8C\u7DDA\u5F0F"
+          },
+          {
+            code: "N",
+            description: "NPN\u4E09\u7DDA\u5F0F"
+          },
+          {
+            code: "P",
+            description: "PNP\u4E09\u7DDA\u5F0F"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u63A5\u7DDA\u578B\u5F0F",
+        options: [
+          {
+            code: "020",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95775m"
+          },
+          {
+            code: "100",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u957710m"
+          },
+          {
+            code: "M08",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M08010",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M08020",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M08030",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          },
+          {
+            code: "M12",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M12010",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M12020",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M12030",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          }
+        ]
+      },
+      {
+        id: "special",
+        name: "\u7279\u898F\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E00\u822C\u578B"
+          },
+          {
+            code: "RW",
+            description: "\u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B"
+          }
+        ]
+      }
+    ],
+    note: "\u5168\u7CFB\u5217M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u7121\u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B\u53EF\u9078\u3002M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u914D\u5957\u4E4B\u6BCD\u63A5\u982D\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.408"
+  },
+  {
+    id: "ems",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u7F38\u9644\u4EF6",
+    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
+    code: "",
+    name: "EMS\u7CFB\u5217\u96FB\u5B50\u5F0F\u50B3\u611F\u5668",
+    format: "{series}-{spec}--{length}{special}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "EMS",
+            description: "\u96FB\u5B50\u5F0F\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "G",
+            description: "G\u578B"
+          },
+          {
+            code: "H",
+            description: "H\u578B"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u63A5\u7DDA\u578B\u5F0F",
+        options: [
+          {
+            code: "020",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95775m"
+          },
+          {
+            code: "100",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u957710m"
+          },
+          {
+            code: "M08",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M08010",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M08020",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M08030",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          },
+          {
+            code: "M12",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M12010",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M12020",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M12030",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          }
+        ]
+      },
+      {
+        id: "special",
+        name: "\u7279\u898F\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E00\u822C\u578B"
+          },
+          {
+            code: "RW",
+            description: "\u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B"
+          }
+        ]
+      }
+    ],
+    note: "\u5168\u7CFB\u5217M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u7121\u9632\u6C34\u8010\u6CB9\u6297\u6493\u66F2\u578B\u53EF\u9078\u3002M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u914D\u5957\u4E4B\u6BCD\u63A5\u982D\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.409"
+  },
+  {
+    id: "cms",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u7F38\u9644\u4EF6",
+    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
+    code: "",
+    name: "CMS\u7CFB\u5217\u78C1\u7C27\u5F0F\u50B3\u611F\u5668",
+    format: "{series}-{spec}-{length}{special}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "CMS",
+            description: "\u78C1\u7C27\u5F0F\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "G",
+            description: "G\u578B"
+          },
+          {
+            code: "H",
+            description: "H\u578B"
+          },
+          {
+            code: "E",
+            description: "E\u578B"
+          },
+          {
+            code: "J",
+            description: "J\u578B"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u63A5\u7DDA\u578B\u5F0F",
+        options: [
+          {
+            code: "020",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u95775m"
+          },
+          {
+            code: "100",
+            description: "\u76F4\u63A5\u51FA\u7DDA \u7DDA\u957710m"
+          },
+          {
+            code: "M08",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M08010",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M08020",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M08030",
+            description: "M8\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          },
+          {
+            code: "M12",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+0.5m\u7DDA\u9577"
+          },
+          {
+            code: "M12010",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+1m\u7DDA\u9577"
+          },
+          {
+            code: "M12020",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+2m\u7DDA\u9577"
+          },
+          {
+            code: "M12030",
+            description: "M12\u5FEB\u901F\u516C\u63A5\u982D+3m\u7DDA\u9577"
+          }
+        ]
+      },
+      {
+        id: "special",
+        name: "\u7279\u898F\u4EE3\u865F",
+        options: [
+          {
+            code: "",
+            description: "\u4E00\u822C\u578B"
+          },
+          {
+            code: "H",
+            description: "\u9AD8\u6EAB\u578B"
+          }
+        ]
+      }
+    ],
+    note: "\u9AD8\u6EAB\u578B\u7121M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u53EF\u9078\u3002M08\u3001M12\u5FEB\u901F\u516C\u63A5\u982D\u914D\u5957\u4E4B\u6BCD\u63A5\u982D\u9700\u53E6\u5916\u8A02\u8CFC\u3002",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.410"
+  },
+  {
+    id: "prsu",
+    category: "\u57F7\u884C\u5143\u4EF6",
+    superGroup: "\u6C23\u7F38\u9644\u4EF6",
+    group: "\u50B3\u611F\u5668\u8207\u5B89\u88DD\u9644\u4EF6",
+    code: "",
+    name: "PRSU\u7CFB\u5217\u69FD\u578B\u5149\u96FB\u50B3\u611F\u5668",
+    format: "{series}-{spec}-{type}-{length}",
+    categories: [
+      {
+        id: "series",
+        name: "\u7CFB\u5217\u4EE3\u865F",
+        options: [
+          {
+            code: "PRSU",
+            description: "\u69FD\u578B\u5149\u96FB\u50B3\u611F\u5668"
+          }
+        ]
+      },
+      {
+        id: "spec",
+        name: "\u898F\u683C\u4EE3\u865F",
+        options: [
+          {
+            code: "T",
+            description: "T\u578B"
+          },
+          {
+            code: "F",
+            description: "F\u578B"
+          },
+          {
+            code: "R",
+            description: "R\u578B"
+          },
+          {
+            code: "K",
+            description: "K\u578B"
+          },
+          {
+            code: "L",
+            description: "L\u578B"
+          },
+          {
+            code: "Y",
+            description: "Y\u578B"
+          }
+        ]
+      },
+      {
+        id: "type",
+        name: "\u8F38\u51FA\u578B\u5F0F",
+        options: [
+          {
+            code: "N",
+            description: "NPN"
+          },
+          {
+            code: "P",
+            description: "PNP"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "\u63A5\u7DDA\u578B\u5F0F",
+        options: [
+          {
+            code: "020",
+            description: "\u7DDA\u95772m"
+          },
+          {
+            code: "030",
+            description: "\u7DDA\u95773m"
+          },
+          {
+            code: "050",
+            description: "\u7DDA\u95775m"
+          }
+        ]
+      }
+    ],
+    note: "",
+    sourceFile: "\u57F7\u884C\u5143\u4EF6\u578B\u9304 P.423"
   }
 ];
 
