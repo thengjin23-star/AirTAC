@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Trash2, ClipboardList, Copy, Check, AlertTriangle } from 'lucide-react';
+import { Download, Trash2, ClipboardList, Copy, Check, AlertTriangle, Cloud, HardDrive } from 'lucide-react';
 import type { ConfirmedItem } from '../types';
 import * as XLSX from 'xlsx';
 
@@ -9,21 +9,21 @@ const MATCH_TYPE_BADGE: Record<string, string> = {
 };
 
 /** 確認清單：所有經人工確認的對照項目，支援編輯備註/訂購碼、刪除與匯出 Excel */
-export function ConfirmedList({ items, setItems }: {
+export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }: {
   items: ConfirmedItem[];
-  setItems: React.Dispatch<React.SetStateAction<ConfirmedItem[]>>;
+  onUpdate: (id: string, patch: Partial<ConfirmedItem>) => void;
+  onRemove: (id: string) => void;
+  onClear: () => void;
+  cloudMode?: boolean;
 }) {
   const [copiedAll, setCopiedAll] = useState(false);
 
-  const updateItem = (id: string, patch: Partial<ConfirmedItem>) => {
-    setItems(prev => prev.map(it => (it.id === id ? { ...it, ...patch } : it)));
-  };
-
-  const removeItem = (id: string) => setItems(prev => prev.filter(it => it.id !== id));
+  const updateItem = onUpdate;
+  const removeItem = onRemove;
 
   const clearAll = () => {
     if (window.confirm(`確定要清空全部 ${items.length} 筆確認清單嗎？此動作無法復原。`)) {
-      setItems([]);
+      onClear();
     }
   };
 
@@ -162,8 +162,12 @@ export function ConfirmedList({ items, setItems }: {
         </table>
       </div>
 
-      <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100 text-xs text-slate-400">
-        清單儲存在本機瀏覽器 (localStorage)，換裝置不會同步；重要清單請匯出 Excel 保存。
+      <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100 text-xs text-slate-400 flex items-center gap-1.5">
+        {cloudMode ? (
+          <><Cloud className="w-3.5 h-3.5 text-[#005a9c]" /> <span className="text-[#005a9c] font-medium">雲端共用模式</span>：全公司共用同一份清單，跨裝置同步。</>
+        ) : (
+          <><HardDrive className="w-3.5 h-3.5" /> 本機模式：清單只存在此瀏覽器，換裝置不會同步；重要清單請匯出 Excel。</>
+        )}
       </div>
     </div>
   );

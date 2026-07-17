@@ -4,7 +4,7 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Search, Loader2, Info, Building2, Lightbulb, CheckCircle2, Database, Repeat, History, Trash2, ShieldCheck, ClipboardList, User, Rows3, BookOpen } from 'lucide-react';
+import { Search, Loader2, Info, Building2, Lightbulb, CheckCircle2, Database, Repeat, History, Trash2, ShieldCheck, ClipboardList, User, Rows3, BookOpen, Cloud } from 'lucide-react';
 import type { CrossReferenceResult, SearchHistoryItem, ConfirmedItem, BatchRow } from './types';
 import { ProductDatabase } from './components/ProductDatabase';
 import { MatchResult } from './components/MatchResult';
@@ -12,6 +12,7 @@ import { ConfirmedList } from './components/ConfirmedList';
 import { BatchPanel } from './components/BatchPanel';
 import { KnowledgeBase } from './components/KnowledgeBase';
 import { analyzeModel } from './lib/api';
+import { isCloudConfigured, loadItems, putItem, deleteItem, clearItems, saveCorrection } from './lib/cloudStore';
 
 const HISTORY_KEY = 'airtac_search_history_v1';
 const CONFIRMED_KEY = 'airtac_confirmed_list_v1';
@@ -50,15 +51,22 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [history, setHistory] = useState<SearchHistoryItem[]>(() => loadJson(HISTORY_KEY, [] as SearchHistoryItem[]));
   const [confirmedItems, setConfirmedItems] = useState<ConfirmedItem[]>(() => loadJson(CONFIRMED_KEY, [] as ConfirmedItem[]));
+  const [cloudMode, setCloudMode] = useState(false);
   const stageTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch (e) {}
   }, [history]);
 
+  // 確認清單：雲端優先載入 (未設定雲端則等同讀 localStorage)
   useEffect(() => {
-    try { localStorage.setItem(CONFIRMED_KEY, JSON.stringify(confirmedItems)); } catch (e) {}
-  }, [confirmedItems]);
+    (async () => {
+      const cloud = await isCloudConfigured();
+      setCloudMode(cloud);
+      const { items } = await loadItems<ConfirmedItem>('confirmed');
+      if (items && items.length) setConfirmedItems(items);
+    })();
+  }, []);
 
   useEffect(() => () => { if (stageTimerRef.current) clearInterval(stageTimerRef.current); }, []);
 
@@ -76,21 +84,48 @@ export default function App() {
     });
   };
 
-  /** 加入確認清單 (供單筆與批量的 MatchResult 共用) */
-  const addToConfirmedList = (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'>) => {
-    setConfirmedItems(prev => {
-      // 同一個競品型號 + 同一個訂購碼 視為重複，不重覆加入
-      if (prev.some(p => p.competitorModel === item.competitorModel && p.airtacCode === item.airtacCode)) return prev;
-      return [...prev, {
-        ...item,
-        id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-        confirmedAt: Date.now(),
-      }];
+  /** 加入確認清單 (供單筆與批量的 MatchResult 共用) — 同步雲端 + 觸發自我學習 */
+  const addToConfirmedList = (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'> & { seriesId?: string }) => {
+    // 同一個競品型號 + 同一個訂購碼 視為重複，不重覆加入
+    if (confirmedItems.some(p => p.competitorModel === item.competitorModel && p.airtacCode === item.airtacCode)) return;
+    const full: ConfirmedItem = {
+      ...item,
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      confirmedAt: Date.now(),
+    };
+    setConfirmedItems(prev => [...prev, full]);
+    putItem('confirmed', full);
+    // 自我學習：把這筆人工確認記為修正，未來同型號優先採用 (只在雲端模式)
+    saveCorrection({
+      competitorModel: item.competitorModel,
+      brand: item.brand,
+      airtacCode: item.airtacCode,
+      seriesId: (item as any).seriesId,
+      description: item.description,
+      note: item.note,
     });
   };
 
   const isConfirmed = (competitorModel: string, code: string) =>
     confirmedItems.some(p => p.competitorModel === competitorModel && p.airtacCode === code);
+
+  // 確認清單的雲端同步操作 (傳給 ConfirmedList)
+  const updateConfirmed = (id: string, patch: Partial<ConfirmedItem>) => {
+    setConfirmedItems(prev => {
+      const next = prev.map(it => (it.id === id ? { ...it, ...patch } : it));
+      const updated = next.find(it => it.id === id);
+      if (updated) putItem('confirmed', updated);
+      return next;
+    });
+  };
+  const removeConfirmed = (id: string) => {
+    setConfirmedItems(prev => prev.filter(it => it.id !== id));
+    deleteItem('confirmed', id);
+  };
+  const clearConfirmed = () => {
+    setConfirmedItems([]);
+    clearItems('confirmed');
+  };
 
   const restoreHistory = (item: SearchHistoryItem) => {
     setMatchMode('single');
@@ -149,9 +184,16 @@ export default function App() {
                 <p className="text-xs text-blue-100 opacity-90 mt-0.5 tracking-wide">亞德客競品對應與產品資料庫</p>
               </div>
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-xs text-blue-100 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              AI 推薦均經型錄資料庫驗證
+            <div className="hidden sm:flex items-center gap-2">
+              {cloudMode && (
+                <div className="flex items-center gap-1.5 text-xs text-white bg-white/15 px-3 py-1.5 rounded-full border border-white/20" title="團隊雲端共用模式：確認清單、知識庫、自我學習全公司共用">
+                  <Cloud className="w-3.5 h-3.5" /> 團隊共用
+                </div>
+              )}
+              <div className="flex items-center gap-2 text-xs text-blue-100 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                AI 推薦均經型錄驗證
+              </div>
             </div>
           </div>
           <div className="flex space-x-1 overflow-x-auto">
@@ -180,7 +222,7 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-6 py-8">
         {activeTab === 'database' && <ProductDatabase />}
         {activeTab === 'knowledge' && <KnowledgeBase />}
-        {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} setItems={setConfirmedItems} />}
+        {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} onUpdate={updateConfirmed} onRemove={removeConfirmed} onClear={clearConfirmed} cloudMode={cloudMode} />}
         {activeTab === 'match' && (
           <>
             {/* 單筆 / 批量 模式切換 */}

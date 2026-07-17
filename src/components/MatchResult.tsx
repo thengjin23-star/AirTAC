@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine } from 'lucide-react';
+import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users } from 'lucide-react';
 import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem } from '../types';
 import { defaultCatalog } from '../data/index';
 import { generateOrderingCode } from '../lib/orderingCode';
@@ -95,7 +95,8 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
       matchType: rec.matchType,
       matchPercentage: rec.matchPercentage,
       note: codeModified ? '訂購碼經人工修改' : '',
-    });
+      seriesId: rec.seriesId,
+    } as any);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 2500);
   };
@@ -202,6 +203,11 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
           </div>
           <div className="flex flex-col items-start sm:items-end gap-2 shrink-0">
             <div className="flex items-center gap-2 flex-wrap">
+              {rec.fromTeamCorrection && (
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-md border bg-violet-50 text-violet-700 border-violet-200 flex items-center gap-1" title="此對照由團隊過去人工確認過，優先採用">
+                  <Users className="w-3.5 h-3.5" /> 團隊已確認
+                </span>
+              )}
               {rec.matchType && (
                 <span className={`text-xs font-semibold px-2.5 py-1 rounded-md border ${matchBadgeClass}`}>{rec.matchType}</span>
               )}

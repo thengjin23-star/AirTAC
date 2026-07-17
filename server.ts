@@ -7,6 +7,7 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import { crossReference } from "./src/server/crossReferenceService";
 import { learnCatalog } from "./src/server/learnCatalogService";
+import { handleStore } from "./src/server/storeService";
 
 async function startServer() {
   const app = express();
@@ -24,6 +25,12 @@ async function startServer() {
   // 學習對手型錄：解析訂購碼說明頁 → 回傳逐位解碼表
   app.post("/api/learn-catalog", async (req, res) => {
     const { status, body } = await learnCatalog(req.body);
+    res.status(status).json(body);
+  });
+
+  // 團隊共用儲存 (確認清單 / 知識庫 / 自我學習修正)
+  app.all("/api/store", async (req, res) => {
+    const { status, body } = await handleStore(req.method, req.query, req.body);
     res.status(status).json(body);
   });
 

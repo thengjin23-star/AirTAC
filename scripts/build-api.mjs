@@ -41,4 +41,10 @@ await build({
   outfile: 'api/learn-catalog.js',
 });
 
+await build({
+  ...shared,
+  entryPoints: ['src/server/vercelHandlers/store.ts'],
+  outfile: 'api/store.js',
+});
+
 console.log('✓ api/*.js bundles generated');
