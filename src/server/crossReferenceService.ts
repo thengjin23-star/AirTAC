@@ -16,6 +16,7 @@ import {
   validateRecommendation,
 } from "./crossref";
 import { matchCompanyTable, companyMatchCatalogIds, companyMatchesText } from "./companyCrossref";
+import { get as storeGet, isConfigured as storeConfigured, normalizeModel } from "./store";
 
 // 延遲初始化，確保 dotenv (server.ts) 或平台注入的環境變數已就緒
 let aiClient: GoogleGenAI | null = null;
@@ -201,9 +202,17 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
       return { status: 400, body: { error: "competitorModel is required" } };
     }
 
-    // cache key 需包含自訂規則與知識庫規則的「內容」
-    const rulesHash = (customRules || (Array.isArray(learnedRules) && learnedRules.length > 0))
-      ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || [])).digest("hex").slice(0, 12)
+    // 自我學習：查團隊過去確認/修正過的對照 (最高權威，高於公司表)
+    let teamCorrection: any = null;
+    if (storeConfigured()) {
+      try {
+        teamCorrection = await storeGet('corrections', normalizeModel(competitorModel, brand));
+      } catch (e: any) { console.error('correction lookup failed:', e.message || e); }
+    }
+
+    // cache key 需包含自訂規則、知識庫規則與團隊修正的「內容」
+    const rulesHash = (customRules || (Array.isArray(learnedRules) && learnedRules.length > 0) || teamCorrection)
+      ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || '')).digest("hex").slice(0, 12)
       : "none";
     const cacheKey = `${brand || 'auto'}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
     if (cache.has(cacheKey)) {
@@ -214,6 +223,15 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     // ---------- 第一階段：候選系列篩選 ----------
     const heuristic = heuristicMatch(competitorModel, brand);
     let hints = knowledgeBaseText(heuristic.entries.length > 0 ? heuristic.entries : undefined);
+
+    if (teamCorrection && teamCorrection.airtacCode) {
+      hints = `※※ 團隊已確認過此競品型號的對照 (最高權威，優先於一切其他來源)：`
+        + `\n競品「${competitorModel}」→ AirTAC「${teamCorrection.airtacCode}」`
+        + `${teamCorrection.seriesId ? ` (系列 ${teamCorrection.seriesId})` : ''}`
+        + `${teamCorrection.description ? `，${teamCorrection.description}` : ''}`
+        + `${teamCorrection.note ? `。備註：${teamCorrection.note}` : ''}`
+        + `\n除非使用者的自訂規則另有指示，否則請直接以此對照為主要推薦。\n\n${hints}`;
+    }
 
     // 公司對照表命中 → 權威提示 + 候選系列 (優先於一般業界知識)
     const companyMatches = matchCompanyTable(competitorModel, brand);
@@ -228,8 +246,10 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
       if (lrText) hints = `${lrText}\n${hints}`;
     }
 
-    // 公司對照表對應到的系列一定進候選 (放最前面)
-    let candidateIds: string[] = [...companyIds];
+    // 團隊修正 + 公司對照表對應到的系列一定進候選 (放最前面)
+    let candidateIds: string[] = [];
+    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
+    for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
@@ -401,6 +421,38 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
     }));
     if (classifierInfo.productType) {
       result.productType = classifierInfo.productType;
+    }
+    // 標示並「確定性地」採用團隊過去的確認：若 AI 沒有輸出相同的訂購碼，
+    // 由伺服器把團隊確認的對照直接放到推薦第一筆 (自我學習=權威，不依賴 AI 意願)。
+    if (teamCorrection && teamCorrection.airtacCode) {
+      result.teamCorrection = {
+        airtacCode: teamCorrection.airtacCode,
+        confirmedAt: teamCorrection.updatedAt || teamCorrection.confirmedAt,
+      };
+      const norm = (s: string) => String(s || '').replace(/[\s\-–—]+/g, '').toUpperCase();
+      const recs = Array.isArray(result.airtacRecommendations) ? result.airtacRecommendations : (result.airtacRecommendations = []);
+      const already = recs.find((r: any) => norm(r.fullOrderingCode) === norm(teamCorrection.airtacCode) || norm(r.baseModel) === norm(teamCorrection.airtacCode));
+      if (already) {
+        already.matchType = '直接替換';
+        already.matchPercentage = 100;
+        already.fromTeamCorrection = true;
+        recs.splice(recs.indexOf(already), 1);
+        recs.unshift(already);
+      } else {
+        recs.unshift({
+          baseModel: teamCorrection.seriesId || teamCorrection.airtacCode,
+          seriesId: teamCorrection.seriesId || '',
+          fullOrderingCode: teamCorrection.airtacCode,
+          description: teamCorrection.description || '團隊確認的對照型號',
+          matchType: '直接替換',
+          matchPercentage: 100,
+          reasoningForOrderingCode: `此對照由團隊人工確認過${teamCorrection.note ? `（備註：${teamCorrection.note}）` : ''}，已作為權威答案優先採用。`,
+          selectedOptions: [],
+          configurableOptions: [],
+          fromTeamCorrection: true,
+          validation: { catalogVerified: true, seriesFound: true, warnings: [] },
+        });
+      }
     }
 
     const finalText = JSON.stringify(result);

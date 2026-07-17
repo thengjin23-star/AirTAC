@@ -36662,6 +36662,62 @@ function companyMatchesText(matches) {
   }).join("\n");
 }
 
+// src/server/store.ts
+var KEYS = {
+  confirmed: "airtac:confirmed",
+  rules: "airtac:rules",
+  corrections: "airtac:corrections"
+};
+function redisUrl() {
+  return process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
+}
+function redisToken() {
+  return process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
+}
+function useRedis() {
+  return Boolean(redisUrl() && redisToken());
+}
+function useMemory() {
+  return !useRedis() && process.env.LOCAL_MEMORY_STORE === "1";
+}
+var memory = {
+  confirmed: /* @__PURE__ */ new Map(),
+  rules: /* @__PURE__ */ new Map(),
+  corrections: /* @__PURE__ */ new Map()
+};
+function isConfigured() {
+  return useRedis() || useMemory();
+}
+async function redis(cmd) {
+  const resp = await fetch(redisUrl(), {
+    method: "POST",
+    headers: { Authorization: `Bearer ${redisToken()}`, "Content-Type": "application/json" },
+    body: JSON.stringify(cmd)
+  });
+  if (!resp.ok) throw new Error(`Redis ${cmd[0]} \u5931\u6557: ${resp.status} ${await resp.text().catch(() => "")}`);
+  const data = await resp.json();
+  if (data.error) throw new Error(`Redis ${cmd[0]}: ${data.error}`);
+  return data.result;
+}
+async function get(kind, field) {
+  if (useRedis()) {
+    const v = await redis(["HGET", KEYS[kind], field]);
+    if (!v) return null;
+    try {
+      return JSON.parse(v);
+    } catch (e) {
+      return null;
+    }
+  }
+  if (useMemory()) return memory[kind].get(field) ?? null;
+  return null;
+}
+function normalizeModel(model, brand) {
+  const m = String(model || "").toUpperCase().replace(/[\s\-–—_]+/g, "");
+  const b = String(brand || "").toUpperCase().replace(/\s+/g, "");
+  return b && b !== "AUTO" ? `${b}::${m}` : m;
+}
+
 // src/server/crossReferenceService.ts
 var aiClient = null;
 function getAi() {
@@ -36791,7 +36847,15 @@ async function crossReference(reqBody) {
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
     }
-    const rulesHash = customRules || Array.isArray(learnedRules) && learnedRules.length > 0 ? crypto.createHash("sha1").update(String(customRules || "") + JSON.stringify(learnedRules || [])).digest("hex").slice(0, 12) : "none";
+    let teamCorrection = null;
+    if (isConfigured()) {
+      try {
+        teamCorrection = await get("corrections", normalizeModel(competitorModel, brand));
+      } catch (e) {
+        console.error("correction lookup failed:", e.message || e);
+      }
+    }
+    const rulesHash = customRules || Array.isArray(learnedRules) && learnedRules.length > 0 || teamCorrection ? crypto.createHash("sha1").update(String(customRules || "") + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || "")).digest("hex").slice(0, 12) : "none";
     const cacheKey = `${brand || "auto"}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
     if (cache.has(cacheKey)) {
       console.log(`Cache hit for ${cacheKey}`);
@@ -36799,6 +36863,13 @@ async function crossReference(reqBody) {
     }
     const heuristic = heuristicMatch(competitorModel, brand);
     let hints = knowledgeBaseText(heuristic.entries.length > 0 ? heuristic.entries : void 0);
+    if (teamCorrection && teamCorrection.airtacCode) {
+      hints = `\u203B\u203B \u5718\u968A\u5DF2\u78BA\u8A8D\u904E\u6B64\u7AF6\u54C1\u578B\u865F\u7684\u5C0D\u7167 (\u6700\u9AD8\u6B0A\u5A01\uFF0C\u512A\u5148\u65BC\u4E00\u5207\u5176\u4ED6\u4F86\u6E90)\uFF1A
+\u7AF6\u54C1\u300C${competitorModel}\u300D\u2192 AirTAC\u300C${teamCorrection.airtacCode}\u300D${teamCorrection.seriesId ? ` (\u7CFB\u5217 ${teamCorrection.seriesId})` : ""}${teamCorrection.description ? `\uFF0C${teamCorrection.description}` : ""}${teamCorrection.note ? `\u3002\u5099\u8A3B\uFF1A${teamCorrection.note}` : ""}
+\u9664\u975E\u4F7F\u7528\u8005\u7684\u81EA\u8A02\u898F\u5247\u53E6\u6709\u6307\u793A\uFF0C\u5426\u5247\u8ACB\u76F4\u63A5\u4EE5\u6B64\u5C0D\u7167\u70BA\u4E3B\u8981\u63A8\u85A6\u3002
+
+${hints}`;
+    }
     const companyMatches = matchCompanyTable(competitorModel, brand);
     const companyIds = companyMatchCatalogIds(companyMatches);
     if (companyMatches.length > 0) {
@@ -36812,7 +36883,9 @@ ${hints}`;
       if (lrText) hints = `${lrText}
 ${hints}`;
     }
-    let candidateIds = [...companyIds];
+    let candidateIds = [];
+    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
+    for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
@@ -36980,6 +37053,36 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
     }));
     if (classifierInfo.productType) {
       result.productType = classifierInfo.productType;
+    }
+    if (teamCorrection && teamCorrection.airtacCode) {
+      result.teamCorrection = {
+        airtacCode: teamCorrection.airtacCode,
+        confirmedAt: teamCorrection.updatedAt || teamCorrection.confirmedAt
+      };
+      const norm = (s) => String(s || "").replace(/[\s\-–—]+/g, "").toUpperCase();
+      const recs = Array.isArray(result.airtacRecommendations) ? result.airtacRecommendations : result.airtacRecommendations = [];
+      const already = recs.find((r) => norm(r.fullOrderingCode) === norm(teamCorrection.airtacCode) || norm(r.baseModel) === norm(teamCorrection.airtacCode));
+      if (already) {
+        already.matchType = "\u76F4\u63A5\u66FF\u63DB";
+        already.matchPercentage = 100;
+        already.fromTeamCorrection = true;
+        recs.splice(recs.indexOf(already), 1);
+        recs.unshift(already);
+      } else {
+        recs.unshift({
+          baseModel: teamCorrection.seriesId || teamCorrection.airtacCode,
+          seriesId: teamCorrection.seriesId || "",
+          fullOrderingCode: teamCorrection.airtacCode,
+          description: teamCorrection.description || "\u5718\u968A\u78BA\u8A8D\u7684\u5C0D\u7167\u578B\u865F",
+          matchType: "\u76F4\u63A5\u66FF\u63DB",
+          matchPercentage: 100,
+          reasoningForOrderingCode: `\u6B64\u5C0D\u7167\u7531\u5718\u968A\u4EBA\u5DE5\u78BA\u8A8D\u904E${teamCorrection.note ? `\uFF08\u5099\u8A3B\uFF1A${teamCorrection.note}\uFF09` : ""}\uFF0C\u5DF2\u4F5C\u70BA\u6B0A\u5A01\u7B54\u6848\u512A\u5148\u63A1\u7528\u3002`,
+          selectedOptions: [],
+          configurableOptions: [],
+          fromTeamCorrection: true,
+          validation: { catalogVerified: true, seriesFound: true, warnings: [] }
+        });
+      }
     }
     const finalText = JSON.stringify(result);
     cache.set(cacheKey, finalText);

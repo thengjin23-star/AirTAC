@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { BookOpen, Upload, Loader2, Trash2, Save, X, FileDown, FileUp, Sparkles, Image as ImageIcon, AlertTriangle } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { BookOpen, Upload, Loader2, Trash2, Save, X, FileDown, FileUp, Sparkles, Image as ImageIcon, AlertTriangle, Cloud, HardDrive } from 'lucide-react';
 import { LearnedRule, loadLearnedRules, saveLearnedRules } from '../lib/learnedRules';
+import { isCloudConfigured, loadItems, putItem, deleteItem } from '../lib/cloudStore';
 
 /**
  * 對手知識庫：上傳競品型錄的「訂購碼說明頁」(圖片或文字)，
@@ -8,6 +9,7 @@ import { LearnedRule, loadLearnedRules, saveLearnedRules } from '../lib/learnedR
  */
 export function KnowledgeBase() {
   const [rules, setRules] = useState<LearnedRule[]>(loadLearnedRules);
+  const [cloudMode, setCloudMode] = useState(false);
   const [brand, setBrand] = useState('');
   const [seriesHint, setSeriesHint] = useState('');
   const [text, setText] = useState('');
@@ -19,6 +21,17 @@ export function KnowledgeBase() {
   const fileRef = useRef<HTMLInputElement>(null);
   const importRef = useRef<HTMLInputElement>(null);
 
+  // 雲端優先載入知識庫規則 (未設定雲端則等同讀 localStorage)
+  useEffect(() => {
+    (async () => {
+      const cloud = await isCloudConfigured();
+      setCloudMode(cloud);
+      const { items } = await loadItems<LearnedRule>('rules');
+      if (items && items.length) { setRules(items); saveLearnedRules(items); }
+    })();
+  }, []);
+
+  // 更新本機快取 (供 lib/api 的 matchLearnedRules 附帶規則使用)
   const persist = (next: LearnedRule[]) => {
     setRules(next);
     saveLearnedRules(next);
@@ -84,11 +97,13 @@ export function KnowledgeBase() {
 
   const saveDraft = () => {
     if (!draft || !draft.decode.trim() || !draft.pattern.trim()) return;
-    persist([...rules, {
+    const rule: LearnedRule = {
       ...draft,
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       createdAt: Date.now(),
-    }]);
+    };
+    persist([...rules, rule]);
+    putItem('rules', rule); // 同步雲端 (全公司共用)
     setDraft(null);
     setText('');
     setImage(null);
@@ -113,7 +128,9 @@ export function KnowledgeBase() {
         if (!Array.isArray(parsed)) throw new Error('格式不正確');
         const valid = parsed.filter((r: any) => r && r.decode && r.pattern);
         const existing = new Set(rules.map(r => r.id));
-        persist([...rules, ...valid.filter((r: any) => !existing.has(r.id))]);
+        const toAdd = valid.filter((r: any) => !existing.has(r.id));
+        persist([...rules, ...toAdd]);
+        toAdd.forEach((r: LearnedRule) => putItem('rules', r)); // 同步雲端
       } catch (e) {
         setError('匯入失敗：檔案不是有效的知識庫 JSON。');
       }
@@ -258,7 +275,12 @@ export function KnowledgeBase() {
             </div>
             <div>
               <h2 className="text-lg font-semibold text-slate-800">已學習的編碼規則 ({rules.length})</h2>
-              <p className="text-slate-500 text-sm mt-0.5">分析型號時字首命中就會自動套用 (儲存於本機瀏覽器，可匯出備份)</p>
+              <p className="text-slate-500 text-sm mt-0.5 flex items-center gap-1">
+                分析型號時字首命中就會自動套用
+                {cloudMode
+                  ? <span className="inline-flex items-center gap-0.5 text-[#005a9c] font-medium"><Cloud className="w-3.5 h-3.5" />雲端共用</span>
+                  : <span className="inline-flex items-center gap-0.5 text-slate-400"><HardDrive className="w-3.5 h-3.5" />本機儲存，可匯出備份</span>}
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -291,7 +313,7 @@ export function KnowledgeBase() {
                       </div>
                       <div className="text-xs text-slate-400 mt-1 font-mono">適用字首: {rule.pattern}</div>
                     </button>
-                    <button onClick={() => persist(rules.filter(r => r.id !== rule.id))} className="text-slate-300 hover:text-red-500 p-1.5 rounded hover:bg-red-50 transition-colors shrink-0" title="刪除此規則">
+                    <button onClick={() => { persist(rules.filter(r => r.id !== rule.id)); deleteItem('rules', rule.id); }} className="text-slate-300 hover:text-red-500 p-1.5 rounded hover:bg-red-50 transition-colors shrink-0" title="刪除此規則">
                       <Trash2 className="w-4 h-4" />
                     </button>
                   </div>

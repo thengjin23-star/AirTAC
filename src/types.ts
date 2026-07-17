@@ -30,6 +30,8 @@ export interface AirtacRecommendation {
   selectedOptions?: SelectedOption[];
   configurableOptions: ConfigurableOption[];
   validation?: RecommendationValidation;
+  /** 此推薦來自團隊過去人工確認的修正 (自我學習) */
+  fromTeamCorrection?: boolean;
 }
 
 /** AI 第一階段挑出的候選系列摘要 */
