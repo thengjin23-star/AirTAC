@@ -68,6 +68,8 @@ export interface ConfirmedItem {
   matchPercentage?: number;
   note: string;
   confirmedAt: number;
+  /** 最終採用的亞德客系列 id（含人工改選後的系列），供雲端學習與回溯 */
+  seriesId?: string;
 }
 
 /** 批量分析的單列狀態 */
