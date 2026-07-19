@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Download, Trash2, ClipboardList, Copy, Check, AlertTriangle, Cloud, HardDrive } from 'lucide-react';
 import type { ConfirmedItem } from '../types';
-import * as XLSX from 'xlsx';
+import { exportConfirmedExcel } from '../lib/exportConfirmed';
 
 const MATCH_TYPE_BADGE: Record<string, string> = {
   '直接替換': 'bg-green-50 text-green-700 border-green-200',
@@ -27,28 +27,7 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
     }
   };
 
-  const exportExcel = () => {
-    const rows = items.map((it, idx) => ({
-      '序號': idx + 1,
-      '競品品牌': it.brand,
-      '競品型號': it.competitorModel,
-      'AirTAC 訂購碼': it.airtacCode,
-      '產品描述': it.description,
-      '匹配類型': it.matchType,
-      '匹配度(%)': it.matchPercentage ?? '',
-      '備註': it.note,
-      '確認時間': new Date(it.confirmedAt).toLocaleString('zh-TW'),
-    }));
-    const ws = XLSX.utils.json_to_sheet(rows);
-    ws['!cols'] = [
-      { wch: 6 }, { wch: 10 }, { wch: 26 }, { wch: 26 },
-      { wch: 30 }, { wch: 10 }, { wch: 10 }, { wch: 30 }, { wch: 20 },
-    ];
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, '對照確認清單');
-    const dateStr = new Date().toISOString().slice(0, 10);
-    XLSX.writeFile(wb, `AirTAC_對照確認清單_${dateStr}.xlsx`);
-  };
+  const exportExcel = () => exportConfirmedExcel(items);
 
   const copyAsTable = () => {
     const header = ['競品品牌', '競品型號', 'AirTAC 訂購碼', '產品描述', '匹配類型', '備註'].join('\t');

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users } from 'lucide-react';
-import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem } from '../types';
+import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users, Repeat } from 'lucide-react';
+import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem, CandidateSeriesSummary } from '../types';
 import { defaultCatalog } from '../data/index';
 import { generateOrderingCode } from '../lib/orderingCode';
 
@@ -37,10 +37,11 @@ function MatchBar({ percentage }: { percentage: number }) {
 }
 
 /** 單張推薦卡：訂購碼可編輯、確認後加入清單 */
-function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirmed }: {
+function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAddToList, isConfirmed }: {
   rec: AirtacRecommendation;
   competitorModel: string;
   competitorBrand: string;
+  candidateSeries?: CandidateSeriesSummary[];
   onAddToList: (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'>) => void;
   isConfirmed: (code: string) => boolean;
 }) {
@@ -50,53 +51,78 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
     ? validation.serverGeneratedCode
     : (rec.fullOrderingCode && !isNoMatch ? rec.fullOrderingCode : rec.baseModel);
 
-  // 推薦系列在型錄中有完整參數定義時，提供「產品資料庫式」的下拉配置
+  // 目前選定的系列 (AI 推薦為初始值，使用者可手動切換成別的系列)
+  const [activeSeriesId, setActiveSeriesId] = useState(rec.seriesId || '');
+  const switched = activeSeriesId !== (rec.seriesId || '');
   const series = useMemo(
-    () => (!isNoMatch && rec.seriesId ? defaultCatalog.find(s => s.id === rec.seriesId) : undefined),
-    [rec.seriesId, isNoMatch],
+    () => (activeSeriesId ? defaultCatalog.find(s => s.id === activeSeriesId) : undefined),
+    [activeSeriesId],
   );
   const canConfigure = Boolean(series && (series.categories || []).length > 0 && (series.format || series.orderCodeFormat));
 
-  const initialSelections = useMemo(() => {
+  // 該系列的預設選項：未切換時沿用 AI 的選擇，切換後全用該系列第一個選項
+  const defaultSelectionsFor = (s: typeof series, useAI: boolean): Record<string, string> => {
     const sel: Record<string, string> = {};
-    if (series) {
-      for (const cat of series.categories || []) {
-        const fromAI = (rec.selectedOptions || []).find(o => o.categoryId === cat.id);
-        sel[cat.id] = fromAI && (cat.options || []).some(op => op.code === fromAI.code)
-          ? fromAI.code
-          : (cat.options?.[0]?.code || '');
-      }
+    if (s) for (const cat of s.categories || []) {
+      const fromAI = useAI ? (rec.selectedOptions || []).find(o => o.categoryId === cat.id) : undefined;
+      sel[cat.id] = fromAI && (cat.options || []).some(op => op.code === fromAI.code) ? fromAI.code : (cat.options?.[0]?.code || '');
     }
     return sel;
-  }, [series, rec.selectedOptions]);
+  };
+  const initialSelections = useMemo(() => defaultSelectionsFor(series, !switched), [series, switched]);
 
   const [selections, setSelections] = useState<Record<string, string>>(initialSelections);
   const [mode, setMode] = useState<'config' | 'manual'>(canConfigure ? 'config' : 'manual');
   const [editedCode, setEditedCode] = useState(suggestedCode);
   const [justAdded, setJustAdded] = useState(false);
 
+  // 切換系列 → 重建參數下拉、訂購碼與模式
+  const switchSeries = (id: string) => {
+    setActiveSeriesId(id);
+    const s = defaultCatalog.find(x => x.id === id);
+    const cfg = Boolean(s && (s.categories || []).length > 0 && (s.format || s.orderCodeFormat));
+    const sel = defaultSelectionsFor(s, id === rec.seriesId);
+    setSelections(sel);
+    setMode(cfg ? 'config' : 'manual');
+    if (s && cfg) setEditedCode(generateOrderingCode(s, sel));
+  };
+
   const configCode = series ? generateOrderingCode(series, selections) : '';
   const effectiveCode = mode === 'config' && canConfigure ? configCode : editedCode;
   const confirmed = isConfirmed(effectiveCode) || justAdded;
-  const codeModified = mode === 'config'
+  const codeModified = switched || (mode === 'config'
     ? JSON.stringify(selections) !== JSON.stringify(initialSelections)
-    : editedCode !== suggestedCode;
+    : editedCode !== suggestedCode);
 
   let matchBadgeClass = 'bg-green-50 text-green-700 border-green-200';
   if (isNoMatch) matchBadgeClass = 'bg-red-50 text-red-700 border-red-200';
   else if (rec.matchType === '相似替代') matchBadgeClass = 'bg-amber-50 text-amber-700 border-amber-200';
+
+  // 系列切換選單資料：AI 候選在前，其餘依 超大類 分組
+  const switchGroups = useMemo(() => {
+    const candIds = new Set((candidateSeries || []).map(c => c.id));
+    const cands = defaultCatalog.filter(s => candIds.has(s.id));
+    const bySuper: Record<string, typeof defaultCatalog> = {};
+    for (const s of defaultCatalog) {
+      if (!bySuper[s.superGroup]) bySuper[s.superGroup] = [];
+      bySuper[s.superGroup].push(s);
+    }
+    return { cands, bySuper };
+  }, [candidateSeries]);
 
   const handleAdd = () => {
     onAddToList({
       brand: competitorBrand,
       competitorModel,
       airtacCode: effectiveCode.trim(),
-      description: rec.description,
-      matchType: rec.matchType,
-      matchPercentage: rec.matchPercentage,
-      note: codeModified ? '訂購碼經人工修改' : '',
-      seriesId: rec.seriesId,
-    } as any);
+      description: series ? series.name : rec.description,
+      matchType: switched ? '相似替代' : rec.matchType,
+      matchPercentage: switched ? undefined : rec.matchPercentage,
+      note: switched
+        ? `系列經人工改選為 ${series?.code || activeSeriesId}`
+        : (codeModified ? '訂購碼經人工修改' : ''),
+      seriesId: activeSeriesId,
+    });
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 2500);
   };
@@ -141,6 +167,46 @@ function RecCard({ rec, competitorModel, competitorBrand, onAddToList, isConfirm
             </div>
           )}
         </div>
+
+        {/* 系列切換 (人為改選對應系列，如 4V → 7V) */}
+        {!isNoMatch && (
+          <div className="mb-3 flex items-center gap-2 flex-wrap">
+            <label className="text-xs font-medium text-slate-500 flex items-center gap-1">
+              <Repeat className="w-3.5 h-3.5" /> 對應系列
+            </label>
+            <select
+              value={activeSeriesId}
+              onChange={(e) => switchSeries(e.target.value)}
+              className={`text-sm rounded-lg border px-2.5 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-[#005a9c]/20 focus:border-[#005a9c] max-w-full ${switched ? 'border-amber-300 bg-amber-50/50 text-amber-800 font-medium' : 'border-slate-200 text-slate-700'}`}
+              title="AI 對到的系列若不符需求，可在此改選其他系列"
+            >
+              {!activeSeriesId && <option value="">（AI 未指定系列）</option>}
+              {switchGroups.cands.length > 0 && (
+                <optgroup label="AI 推薦候選">
+                  {switchGroups.cands.map(s => (
+                    <option key={s.id} value={s.id}>{s.code || s.id} — {s.name}</option>
+                  ))}
+                </optgroup>
+              )}
+              {Object.entries(switchGroups.bySuper).map(([sg, list]) => (
+                <optgroup key={sg} label={sg}>
+                  {list.map(s => (
+                    <option key={s.id} value={s.id}>{s.code || s.id} — {s.name}</option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+            {switched && (
+              <button
+                onClick={() => switchSeries(rec.seriesId || '')}
+                className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-0.5"
+                title="還原為 AI 推薦的系列"
+              >
+                <RotateCcw className="w-3.5 h-3.5" /> 還原 AI 系列
+              </button>
+            )}
+          </div>
+        )}
 
         {/* 下拉配置 / 手動輸入 切換 */}
         {!isNoMatch && canConfigure && (
@@ -422,6 +488,7 @@ export function MatchResult({ model, result, onAddToList, isConfirmed, compact =
               rec={rec}
               competitorModel={model}
               competitorBrand={result.competitorBrand}
+              candidateSeries={result.candidateSeries}
               onAddToList={onAddToList}
               isConfirmed={(code) => isConfirmed(model, code)}
             />
