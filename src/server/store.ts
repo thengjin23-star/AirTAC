@@ -96,6 +96,28 @@ export async function get(kind: StoreKind, field: string): Promise<any | null> {
   return null;
 }
 
+/**
+ * 端到端連線自我測試：實際對後端寫入→讀回→刪除一筆探測資料，
+ * 確認團隊雲端不只是「有設定」，而是真的能讀寫 (抓出 token 失效/網路阻擋等問題)。
+ */
+export async function selfTest(): Promise<{ ok: boolean; backend: 'redis' | 'memory' | 'none'; error?: string }> {
+  const backend = storeBackend();
+  if (backend === 'none') return { ok: false, backend };
+  try {
+    if (useRedis()) {
+      const key = 'airtac:__selftest';
+      const token = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      await redis(['HSET', key, 'probe', token]);
+      const got = await redis(['HGET', key, 'probe']);
+      await redis(['DEL', key]);
+      if (got !== token) return { ok: false, backend, error: '寫入後讀回結果不一致' };
+    }
+    return { ok: true, backend };
+  } catch (e: any) {
+    return { ok: false, backend, error: e?.message || String(e) };
+  }
+}
+
 /** 正規化競品型號作為 correction 的鍵 (去空白/破折號、轉大寫)。 */
 export function normalizeModel(model: string, brand?: string): string {
   const m = String(model || '').toUpperCase().replace(/[\s\-–—_]+/g, '');

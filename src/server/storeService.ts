@@ -2,7 +2,7 @@
  * /api/store 的框架無關處理邏輯 (Express 與 Vercel Function 共用)。
  * 提供團隊共用的 confirmed / rules / corrections 讀寫。
  */
-import { StoreKind, listAll, put, remove, clear, isConfigured, storeBackend, normalizeModel } from './store';
+import { StoreKind, listAll, put, remove, clear, isConfigured, storeBackend, normalizeModel, selfTest } from './store';
 
 const VALID: StoreKind[] = ['confirmed', 'rules', 'corrections'];
 
@@ -21,6 +21,12 @@ export async function handleStore(method: string, query: any, body: any): Promis
   // 前端探測: 是否已設定雲端
   if (method === 'GET' && (query.kind === undefined || query.kind === 'status')) {
     return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
+  }
+
+  // 端到端連線自我測試 (實際讀寫一筆探測資料)
+  if (method === 'GET' && (query.selftest === '1' || query.selftest === 'true')) {
+    const r = await selfTest();
+    return { status: 200, body: { configured: isConfigured(), ...r } };
   }
 
   const kind = parseKind(query.kind);

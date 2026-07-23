@@ -29,6 +29,41 @@ export function cloudBackendLabel(): boolean {
   return cloudConfigured === true;
 }
 
+/** 清掉探測快取，強制下次重新向後端確認 (供「重新檢查」按鈕使用)。 */
+export function resetCloudProbe() {
+  cloudConfigured = null;
+}
+
+export interface CloudStatus {
+  configured: boolean;
+  backend: 'redis' | 'memory' | 'none';
+}
+
+/** 取得雲端狀態 (是否設定 + 後端種類)，同時更新探測快取。 */
+export async function fetchCloudStatus(): Promise<CloudStatus> {
+  try {
+    const r = await fetch('/api/store?kind=status');
+    const j = await r.json();
+    cloudConfigured = Boolean(j.configured);
+    return { configured: cloudConfigured, backend: j.backend || 'none' };
+  } catch (e) {
+    cloudConfigured = false;
+    return { configured: false, backend: 'none' };
+  }
+}
+
+/** 端到端連線自我測試：請後端實際寫入→讀回→刪除一筆探測資料，確認真的能共用。 */
+export async function cloudSelfTest(): Promise<{ configured: boolean; ok: boolean; backend: string; error?: string }> {
+  try {
+    const r = await fetch('/api/store?selftest=1');
+    const j = await r.json();
+    if (typeof j.configured === 'boolean') cloudConfigured = j.configured;
+    return { configured: Boolean(j.configured), ok: Boolean(j.ok), backend: j.backend || 'none', error: j.error };
+  } catch (e: any) {
+    return { configured: false, ok: false, backend: 'none', error: e?.message || String(e) };
+  }
+}
+
 const LS_KEY: Record<StoreKind, string> = {
   confirmed: 'airtac_confirmed_list_v1',
   rules: 'airtac_learned_rules_v1',

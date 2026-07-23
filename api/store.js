@@ -86,6 +86,23 @@ async function clear(kind) {
     return;
   }
 }
+async function selfTest() {
+  const backend = storeBackend();
+  if (backend === "none") return { ok: false, backend };
+  try {
+    if (useRedis()) {
+      const key = "airtac:__selftest";
+      const token = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      await redis(["HSET", key, "probe", token]);
+      const got = await redis(["HGET", key, "probe"]);
+      await redis(["DEL", key]);
+      if (got !== token) return { ok: false, backend, error: "\u5BEB\u5165\u5F8C\u8B80\u56DE\u7D50\u679C\u4E0D\u4E00\u81F4" };
+    }
+    return { ok: true, backend };
+  } catch (e) {
+    return { ok: false, backend, error: e?.message || String(e) };
+  }
+}
 function normalizeModel(model, brand) {
   const m = String(model || "").toUpperCase().replace(/[\s\-–—_]+/g, "");
   const b = String(brand || "").toUpperCase().replace(/\s+/g, "");
@@ -100,6 +117,10 @@ function parseKind(k) {
 async function handleStore(method, query, body) {
   if (method === "GET" && (query.kind === void 0 || query.kind === "status")) {
     return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
+  }
+  if (method === "GET" && (query.selftest === "1" || query.selftest === "true")) {
+    const r = await selfTest();
+    return { status: 200, body: { configured: isConfigured(), ...r } };
   }
   const kind = parseKind(query.kind);
   if (!kind) return { status: 400, body: { error: "invalid kind" } };
