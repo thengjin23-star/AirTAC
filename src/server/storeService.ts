@@ -18,15 +18,17 @@ function parseKind(k: any): StoreKind | null {
  * @param body    PUT: 單筆物件 (需含 id 或 corrections 用 model)
  */
 export async function handleStore(method: string, query: any, body: any): Promise<StoreOutcome> {
-  // 前端探測: 是否已設定雲端
-  if (method === 'GET' && (query.kind === undefined || query.kind === 'status')) {
-    return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
-  }
-
-  // 端到端連線自我測試 (實際讀寫一筆探測資料)
+  // 端到端連線自我測試 (實際讀寫一筆探測資料)。
+  // 必須排在 status 探測之前：selftest 請求沒有 kind，會被下方 kind===undefined 的
+  // status 分支搶先攔截，導致回傳沒有 ok 欄位、前端誤判為「連線失敗」。
   if (method === 'GET' && (query.selftest === '1' || query.selftest === 'true')) {
     const r = await selfTest();
     return { status: 200, body: { configured: isConfigured(), ...r } };
+  }
+
+  // 前端探測: 是否已設定雲端
+  if (method === 'GET' && (query.kind === undefined || query.kind === 'status')) {
+    return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
   }
 
   const kind = parseKind(query.kind);
