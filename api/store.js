@@ -115,12 +115,12 @@ function parseKind(k) {
   return VALID.includes(k) ? k : null;
 }
 async function handleStore(method, query, body) {
-  if (method === "GET" && (query.kind === void 0 || query.kind === "status")) {
-    return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
-  }
   if (method === "GET" && (query.selftest === "1" || query.selftest === "true")) {
     const r = await selfTest();
     return { status: 200, body: { configured: isConfigured(), ...r } };
+  }
+  if (method === "GET" && (query.kind === void 0 || query.kind === "status")) {
+    return { status: 200, body: { configured: isConfigured(), backend: storeBackend() } };
   }
   const kind = parseKind(query.kind);
   if (!kind) return { status: 400, body: { error: "invalid kind" } };
