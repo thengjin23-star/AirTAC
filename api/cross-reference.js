@@ -36741,6 +36741,22 @@ var catalogIndexJson = JSON.stringify(catalogIndex);
 var slimIndexJson = JSON.stringify(
   catalogIndex.map(({ id, code, name, category, group }) => ({ id, code, name, category, group }))
 );
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function mentionedSeriesIds(text) {
+  if (!text || !text.trim()) return [];
+  const hay = ` ${text.toUpperCase()} `;
+  const out = [];
+  for (const s of catalogIndex) {
+    const id = String(s.id || "").toUpperCase();
+    const code = String(s.code || "").toUpperCase();
+    const idHit = id.length >= 2 && new RegExp(`(^|[^A-Z0-9])${escapeRegExp(id)}([^A-Z0-9]|$)`).test(hay);
+    const codeHit = code.length >= 2 && new RegExp(`(^|[^A-Z0-9])${escapeRegExp(code)}[A-Z]?([0-9]|[^A-Z0-9]|$)`).test(hay);
+    if (idHit || codeHit) out.push(s.id);
+  }
+  return out;
+}
 var cache = /* @__PURE__ */ new Map();
 var modelCooldown = /* @__PURE__ */ new Map();
 var COOLDOWN_MS = 90 * 1e3;
@@ -36786,7 +36802,7 @@ async function generateWithRetry(params) {
   }
   throw lastError || new Error("All Gemini models failed");
 }
-async function selectCandidateSeries(competitorModel, brand, heuristicIds, hints) {
+async function selectCandidateSeries(competitorModel, brand, heuristicIds, hints, customRules) {
   const prompt = `You are a pneumatic components classification expert for AirTAC (\u4E9E\u5FB7\u5BA2).
 A user provided a competitor's model (or an assembly of models): "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
@@ -36795,7 +36811,12 @@ Below is a COMPACT INDEX of the entire AirTAC catalog (id, name, category, order
 ${catalogIndexJson}
 =====================
 
-${hints ? `KNOWN CROSS-REFERENCE RULES (industry knowledge, prioritize these):
+${customRules ? `USER'S CUSTOM INSTRUCTION (HIGHEST PRIORITY \u2014 the user is explicitly steering the match; if it names or implies a specific AirTAC series/product type, you MUST include those series ids in your selection even if heuristics suggest otherwise):
+"""
+${customRules}
+"""
+
+` : ""}${hints ? `KNOWN CROSS-REFERENCE RULES (industry knowledge, prioritize these):
 ${hints}
 ` : ""}${heuristicIds.length > 0 ? `Heuristic pre-match suggests these series ids are likely relevant: ${heuristicIds.join(", ")}
 ` : ""}
@@ -36803,7 +36824,9 @@ Your task: identify what kind of product(s) the competitor model is, and select 
 1. Return ONLY series ids that exist in the index above ("id" field, exact string).
 2. Select every series needed to cover ALL parts if the input is an assembly (e.g. cylinder + sensor + fitting).
 3. Include 2-6 closely related alternatives per part (e.g. both ACQ and SDA for a compact cylinder) so the next stage can compare details.
-4. If nothing in the catalog could possibly match, return an empty array.
+4. ADJUSTABLE STROKE: if the competitor cylinder is an adjustable-stroke type (\u884C\u7A0B\u53EF\u8ABF, often a trailing "J"), also include the AirTAC adjustable-stroke variant series so the next stage can pick it.
+5. If the user's custom instruction points to a product type/series, that takes precedence over heuristic suggestions.
+6. If nothing in the catalog could possibly match, return an empty array.
 Respond in JSON.`;
   const response = await generateWithRetry({
     model: CLASSIFIER_MODEL(),
@@ -36857,7 +36880,7 @@ async function crossReference(reqBody) {
     }
     const rulesHash = customRules || Array.isArray(learnedRules) && learnedRules.length > 0 || teamCorrection ? crypto.createHash("sha1").update(String(customRules || "") + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || "")).digest("hex").slice(0, 12) : "none";
     const cacheKey = `${brand || "auto"}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
-    if (cache.has(cacheKey)) {
+    if (!customRules && cache.has(cacheKey)) {
       console.log(`Cache hit for ${cacheKey}`);
       return { status: 200, body: JSON.parse(cache.get(cacheKey)) };
     }
@@ -36883,16 +36906,18 @@ ${hints}`;
       if (lrText) hints = `${lrText}
 ${hints}`;
     }
+    const ruleSeriesIds = mentionedSeriesIds(customRules).filter(isValidSeriesId);
     let candidateIds = [];
-    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
+    for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
     let classifierInfo = {};
-    if (candidateIds.length < 2) {
+    if (candidateIds.length < 2 || customRules) {
       try {
-        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints);
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules);
         for (const id of stage1.ids) {
           if (!candidateIds.includes(id)) candidateIds.push(id);
         }
@@ -36916,7 +36941,7 @@ If truly nothing matches, set baseModel to "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B
     const prompt = `You are a pneumatic components expert and sales assistant strictly for AirTAC (\u4E9E\u5FB7\u5BA2).
 A user has provided a competitor's product model or a combination/assembly of models: "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
-${customRules ? `USER PROVIDED CUSTOM RULES OR KNOWLEDGE (HIGHEST PRIORITY, OVERRIDE EVERYTHING ELSE):
+${customRules ? `USER PROVIDED CUSTOM RULES OR KNOWLEDGE \u2014 HIGHEST PRIORITY, OVERRIDES EVERYTHING ELSE (including team corrections, the company table, industry hints, and your own prior beliefs). If the user tells you to use a specific AirTAC series or to change a previous answer, you MUST follow it and pick that series from the candidate data below; do NOT fall back to a previously matched series:
 """
 ${customRules}
 """
@@ -36941,6 +36966,7 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 12. If the model number is completely unrecognizable, say so explicitly and use "\u7121\u76F4\u63A5\u5C0D\u61C9\u578B\u865F".
 13. VALVE FLOW (Cv) RULE: for solenoid/pneumatic/fluid valves, flow capacity is a critical spec. The candidate series data includes a \`specs\` array with \`cv\` (flow coefficient) values. You MUST compare the competitor valve's port size / flow class against the AirTAC candidate's \`cv\` in \`specs\`, prefer the candidate whose Cv is closest, mention the Cv comparison in \`reasoningForOrderingCode\`, and if Cv differs noticeably add it to \`uncertainties\` and lower matchPercentage. Never ignore Cv when matching valves.
 14. WIRE/LEAD LENGTH RULE: for lead-wire type valves (e.g. 6SV/7SV series that have a \`leadLength\` category), the ordering code ends with the lead length code. If the competitor specifies a lead/cable length, select the matching \`leadLength\` option; otherwise use the standard (blank/0.5m) and note it. Do not drop the lead length position for series that define it.
+15. ADJUSTABLE-STROKE (\u884C\u7A0B\u53EF\u8ABF) RULE: many AirTAC cylinders offer an adjustable-stroke variant. If the competitor cylinder is an adjustable-stroke type \u2014 signalled by a trailing "J", "-J", or wording like \u884C\u7A0B\u53EF\u8ABF/adjustable stroke/stroke adjustable \u2014 you MUST reflect it in the AirTAC ordering code, NEVER silently drop it. Two encodings exist in the catalog, use whichever the chosen series defines: (a) a variant code inside the \u898F\u683C\u4EE3\u865F/series category ending in J (e.g. SC\u2192SCJ, SE\u2192SEJ, SAI\u2192SAIJ, SAU\u2192SAUJ, SG\u2192SGJ, MA\u2192MAJ) \u2014 select that J variant instead of the standard one; (b) a dedicated adjustment/{adjustment} category (e.g. HGS's "J", or the \u8ABF\u6574\u884C\u7A0B mm value, or TCL's adjustment position) \u2014 select the adjustable option there. If the adjustable range (mm) is unknown, still pick the adjustable variant and note the exact range in \`uncertainties\`. Confirm the J/adjustment position actually appears in the generated \`fullOrderingCode\`.
 
 Your task:
 1. Identify the competitor's brand(s).
@@ -37054,7 +37080,7 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
     if (classifierInfo.productType) {
       result.productType = classifierInfo.productType;
     }
-    if (teamCorrection && teamCorrection.airtacCode) {
+    if (teamCorrection && teamCorrection.airtacCode && !customRules) {
       result.teamCorrection = {
         airtacCode: teamCorrection.airtacCode,
         confirmedAt: teamCorrection.updatedAt || teamCorrection.confirmedAt

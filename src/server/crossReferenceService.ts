@@ -53,6 +53,28 @@ const slimIndexJson = JSON.stringify(
   catalogIndex.map(({ id, code, name, category, group }) => ({ id, code, name, category, group }))
 );
 
+/**
+ * 從文字 (自訂規則) 掃出有提到的 AirTAC 系列 id，讓使用者能用一句話
+ * 把指定系列「強制」帶進候選 (否則第二階段被鎖在候選系列內，無法採用)。
+ * - id 需以完整 token 出現 (前後皆非英數) → 避免 se 命中 SENSOR
+ * - code 需為字首且後接數字或邊界 (SC32 / SC系列) → 避免 SC 命中 SCREW
+ */
+function escapeRegExp(s: string): string { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function mentionedSeriesIds(text?: string): string[] {
+  if (!text || !text.trim()) return [];
+  const hay = ` ${text.toUpperCase()} `;
+  const out: string[] = [];
+  for (const s of catalogIndex) {
+    const id = String(s.id || '').toUpperCase();
+    const code = String(s.code || '').toUpperCase();
+    const idHit = id.length >= 2 && new RegExp(`(^|[^A-Z0-9])${escapeRegExp(id)}([^A-Z0-9]|$)`).test(hay);
+    // code 後可接一個變體字母 (如 SC→SCJ/SCD) 再接數字或邊界，仍算命中該系列
+    const codeHit = code.length >= 2 && new RegExp(`(^|[^A-Z0-9])${escapeRegExp(code)}[A-Z]?([0-9]|[^A-Z0-9]|$)`).test(hay);
+    if (idHit || codeHit) out.push(s.id);
+  }
+  return out;
+}
+
 // 簡易記憶體快取 (serverless 環境僅在同一實例存活期間有效，屬於加分而非必要)
 const cache = new Map<string, string>();
 
@@ -122,7 +144,7 @@ export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]
  * 第一階段：用壓縮索引 + 知識庫讓模型挑出候選系列。
  * 回傳合法的系列 id 陣列 (已過濾不存在的 id)。
  */
-async function selectCandidateSeries(competitorModel: string, brand: string | undefined, heuristicIds: string[], hints: string): Promise<{ ids: string[]; brandGuess?: string; productType?: string }> {
+async function selectCandidateSeries(competitorModel: string, brand: string | undefined, heuristicIds: string[], hints: string, customRules?: string): Promise<{ ids: string[]; brandGuess?: string; productType?: string }> {
   const prompt = `You are a pneumatic components classification expert for AirTAC (亞德客).
 A user provided a competitor's model (or an assembly of models): "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
@@ -131,12 +153,14 @@ Below is a COMPACT INDEX of the entire AirTAC catalog (id, name, category, order
 ${catalogIndexJson}
 =====================
 
-${hints ? `KNOWN CROSS-REFERENCE RULES (industry knowledge, prioritize these):\n${hints}\n` : ""}${heuristicIds.length > 0 ? `Heuristic pre-match suggests these series ids are likely relevant: ${heuristicIds.join(', ')}\n` : ""}
+${customRules ? `USER'S CUSTOM INSTRUCTION (HIGHEST PRIORITY — the user is explicitly steering the match; if it names or implies a specific AirTAC series/product type, you MUST include those series ids in your selection even if heuristics suggest otherwise):\n"""\n${customRules}\n"""\n\n` : ""}${hints ? `KNOWN CROSS-REFERENCE RULES (industry knowledge, prioritize these):\n${hints}\n` : ""}${heuristicIds.length > 0 ? `Heuristic pre-match suggests these series ids are likely relevant: ${heuristicIds.join(', ')}\n` : ""}
 Your task: identify what kind of product(s) the competitor model is, and select the AirTAC series from the index that are the MOST LIKELY equivalents. Rules:
 1. Return ONLY series ids that exist in the index above ("id" field, exact string).
 2. Select every series needed to cover ALL parts if the input is an assembly (e.g. cylinder + sensor + fitting).
 3. Include 2-6 closely related alternatives per part (e.g. both ACQ and SDA for a compact cylinder) so the next stage can compare details.
-4. If nothing in the catalog could possibly match, return an empty array.
+4. ADJUSTABLE STROKE: if the competitor cylinder is an adjustable-stroke type (行程可調, often a trailing "J"), also include the AirTAC adjustable-stroke variant series so the next stage can pick it.
+5. If the user's custom instruction points to a product type/series, that takes precedence over heuristic suggestions.
+6. If nothing in the catalog could possibly match, return an empty array.
 Respond in JSON.`;
 
   const response = await generateWithRetry({
@@ -215,7 +239,8 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
       ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || '')).digest("hex").slice(0, 12)
       : "none";
     const cacheKey = `${brand || 'auto'}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
-    if (cache.has(cacheKey)) {
+    // 有自訂規則時一律重新分析 (使用者正在調整指示，不吃舊快取，避免「鬼打牆」)
+    if (!customRules && cache.has(cacheKey)) {
       console.log(`Cache hit for ${cacheKey}`);
       return { status: 200, body: JSON.parse(cache.get(cacheKey)!) };
     }
@@ -246,20 +271,26 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
       if (lrText) hints = `${lrText}\n${hints}`;
     }
 
-    // 團隊修正 + 公司對照表對應到的系列一定進候選 (放最前面)
+    // 使用者自訂規則裡明確點到的 AirTAC 系列 → 強制帶進候選 (最高優先，
+    // 讓「請改用 XX 系列」這類指示真的能生效，而非被鎖在既有候選裡)
+    const ruleSeriesIds = mentionedSeriesIds(customRules).filter(isValidSeriesId);
+
+    // 候選組裝順序 = 使用者指定 → 團隊修正 → 公司對照表 → 啟發式 (放最前面者最不會被 slice 掉)
     let candidateIds: string[] = [];
-    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
+    for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
     let classifierInfo: { brandGuess?: string; productType?: string } = {};
 
-    // 提速：知識庫/公司對照表已給出足夠候選 (≥2) 時，直接跳過第一階段的
-    // AI 分類呼叫；只有陌生型號才需要 AI 從全庫索引裡挑候選。
-    if (candidateIds.length < 2) {
+    // 提速：知識庫/公司對照表已給出足夠候選 (≥2) 時可跳過第一階段 AI 分類。
+    // 但只要使用者有下自訂規則，就一定跑第一階段並把規則餵進去，
+    // 讓使用者的指示能左右「候選系列」的挑選 (這是之前鬼打牆的主因)。
+    if (candidateIds.length < 2 || customRules) {
       try {
-        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints);
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules);
         for (const id of stage1.ids) {
           if (!candidateIds.includes(id)) candidateIds.push(id);
         }
@@ -286,7 +317,7 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     const prompt = `You are a pneumatic components expert and sales assistant strictly for AirTAC (亞德客).
 A user has provided a competitor's product model or a combination/assembly of models: "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
-${customRules ? `USER PROVIDED CUSTOM RULES OR KNOWLEDGE (HIGHEST PRIORITY, OVERRIDE EVERYTHING ELSE):\n"""\n${customRules}\n"""\n\n` : ""}${hints ? `INDUSTRY CROSS-REFERENCE KNOWLEDGE (trusted hints):\n${hints}\n\n` : ""}${catalogSection}
+${customRules ? `USER PROVIDED CUSTOM RULES OR KNOWLEDGE — HIGHEST PRIORITY, OVERRIDES EVERYTHING ELSE (including team corrections, the company table, industry hints, and your own prior beliefs). If the user tells you to use a specific AirTAC series or to change a previous answer, you MUST follow it and pick that series from the candidate data below; do NOT fall back to a previously matched series:\n"""\n${customRules}\n"""\n\n` : ""}${hints ? `INDUSTRY CROSS-REFERENCE KNOWLEDGE (trusted hints):\n${hints}\n\n` : ""}${catalogSection}
 
 CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 1. NEVER HALLUCINATE AirTAC models. Only recommend series whose full data appears in the candidate series above. If no candidate fits, set "baseModel" to "無直接對應型號".
@@ -303,6 +334,7 @@ CRITICAL RULES FOR AIRTAC EQUIVALENTS:
 12. If the model number is completely unrecognizable, say so explicitly and use "無直接對應型號".
 13. VALVE FLOW (Cv) RULE: for solenoid/pneumatic/fluid valves, flow capacity is a critical spec. The candidate series data includes a \`specs\` array with \`cv\` (flow coefficient) values. You MUST compare the competitor valve's port size / flow class against the AirTAC candidate's \`cv\` in \`specs\`, prefer the candidate whose Cv is closest, mention the Cv comparison in \`reasoningForOrderingCode\`, and if Cv differs noticeably add it to \`uncertainties\` and lower matchPercentage. Never ignore Cv when matching valves.
 14. WIRE/LEAD LENGTH RULE: for lead-wire type valves (e.g. 6SV/7SV series that have a \`leadLength\` category), the ordering code ends with the lead length code. If the competitor specifies a lead/cable length, select the matching \`leadLength\` option; otherwise use the standard (blank/0.5m) and note it. Do not drop the lead length position for series that define it.
+15. ADJUSTABLE-STROKE (行程可調) RULE: many AirTAC cylinders offer an adjustable-stroke variant. If the competitor cylinder is an adjustable-stroke type — signalled by a trailing "J", "-J", or wording like 行程可調/adjustable stroke/stroke adjustable — you MUST reflect it in the AirTAC ordering code, NEVER silently drop it. Two encodings exist in the catalog, use whichever the chosen series defines: (a) a variant code inside the 規格代號/series category ending in J (e.g. SC→SCJ, SE→SEJ, SAI→SAIJ, SAU→SAUJ, SG→SGJ, MA→MAJ) — select that J variant instead of the standard one; (b) a dedicated adjustment/{adjustment} category (e.g. HGS's "J", or the 調整行程 mm value, or TCL's adjustment position) — select the adjustable option there. If the adjustable range (mm) is unknown, still pick the adjustable variant and note the exact range in \`uncertainties\`. Confirm the J/adjustment position actually appears in the generated \`fullOrderingCode\`.
 
 Your task:
 1. Identify the competitor's brand(s).
@@ -424,7 +456,9 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
     }
     // 標示並「確定性地」採用團隊過去的確認：若 AI 沒有輸出相同的訂購碼，
     // 由伺服器把團隊確認的對照直接放到推薦第一筆 (自我學習=權威，不依賴 AI 意願)。
-    if (teamCorrection && teamCorrection.airtacCode) {
+    // 使用者下了自訂規則時，不再「強制」把團隊舊答案插到第一筆 —
+    // 尊重使用者的覆寫意圖 (仍保留 badge 資訊供參考)，這是修掉鬼打牆的關鍵。
+    if (teamCorrection && teamCorrection.airtacCode && !customRules) {
       result.teamCorrection = {
         airtacCode: teamCorrection.airtacCode,
         confirmedAt: teamCorrection.updatedAt || teamCorrection.confirmedAt,
