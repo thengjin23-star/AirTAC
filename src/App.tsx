@@ -11,8 +11,9 @@ import { MatchResult } from './components/MatchResult';
 import { ConfirmedList } from './components/ConfirmedList';
 import { BatchPanel } from './components/BatchPanel';
 import { KnowledgeBase } from './components/KnowledgeBase';
+import { CloudStatusBanner } from './components/CloudStatusBanner';
 import { analyzeModel } from './lib/api';
-import { isCloudConfigured, loadItems, putItem, deleteItem, clearItems, saveCorrection } from './lib/cloudStore';
+import { loadItems, putItem, deleteItem, clearItems, saveCorrection } from './lib/cloudStore';
 
 const HISTORY_KEY = 'airtac_search_history_v1';
 const CONFIRMED_KEY = 'airtac_confirmed_list_v1';
@@ -58,11 +59,10 @@ export default function App() {
     try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch (e) {}
   }, [history]);
 
-  // 確認清單：雲端優先載入 (未設定雲端則等同讀 localStorage)
+  // 確認清單：雲端優先載入 (未設定雲端則等同讀 localStorage)。
+  // cloudMode 由 CloudStatusBanner 的端到端自我測試決定 (較 isCloudConfigured 更嚴謹)。
   useEffect(() => {
     (async () => {
-      const cloud = await isCloudConfigured();
-      setCloudMode(cloud);
       const { items } = await loadItems<ConfirmedItem>('confirmed');
       if (items && items.length) setConfirmedItems(items);
     })();
@@ -220,6 +220,7 @@ export default function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
+        <CloudStatusBanner onStatus={setCloudMode} />
         {activeTab === 'database' && <ProductDatabase />}
         {activeTab === 'knowledge' && <KnowledgeBase />}
         {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} onUpdate={updateConfirmed} onRemove={removeConfirmed} onClear={clearConfirmed} cloudMode={cloudMode} />}
