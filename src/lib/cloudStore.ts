@@ -126,6 +126,18 @@ export async function clearItems(kind: StoreKind): Promise<void> {
   }
 }
 
+/** 已對照參考資料庫的一筆 (competitor → AirTAC)。 */
+export interface CorrectionRow {
+  key?: string;
+  competitorModel: string;
+  brand?: string;
+  airtacCode: string;
+  seriesId?: string;
+  description?: string;
+  note?: string;
+  updatedAt?: number;
+}
+
 /** 自我學習：把一筆確認的對照記為修正 (只在雲端有設定時送出)。 */
 export async function saveCorrection(correction: {
   competitorModel: string; brand?: string; airtacCode: string; seriesId?: string; description?: string; note?: string;
@@ -136,4 +148,54 @@ export async function saveCorrection(correction: {
       method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(correction),
     });
   } catch (e) {}
+}
+
+/** 讀取整個「已對照參考資料庫」(corrections)。僅雲端模式有資料。 */
+export async function loadCorrections(): Promise<{ items: CorrectionRow[]; cloud: boolean }> {
+  if (await isCloudConfigured()) {
+    try {
+      const r = await fetch('/api/store?kind=corrections');
+      const j = await r.json();
+      if (j.configured && Array.isArray(j.items)) return { items: j.items, cloud: true };
+    } catch (e) { /* 退回空 */ }
+  }
+  return { items: [], cloud: false };
+}
+
+/** 刪除參考資料庫中的一筆 (以正規化後的 key)。 */
+export async function deleteCorrection(key: string): Promise<void> {
+  if (!(await isCloudConfigured())) return;
+  try { await fetch(`/api/store?kind=corrections&id=${encodeURIComponent(key)}`, { method: 'DELETE' }); } catch (e) {}
+}
+
+/** 清空整個參考資料庫。 */
+export async function clearCorrections(): Promise<void> {
+  if (!(await isCloudConfigured())) return;
+  try { await fetch('/api/store?kind=corrections&clear=true', { method: 'DELETE' }); } catch (e) {}
+}
+
+/**
+ * 批次匯入歷史對照 (逐筆寫入雲端 corrections)。回傳成功/失敗筆數。
+ * onProgress 供 UI 顯示進度。
+ */
+export async function importCorrections(
+  rows: CorrectionRow[],
+  onProgress?: (done: number, total: number) => void,
+): Promise<{ ok: number; fail: number }> {
+  if (!(await isCloudConfigured())) return { ok: 0, fail: rows.length };
+  let ok = 0, fail = 0;
+  const CONCURRENCY = 5;
+  for (let i = 0; i < rows.length; i += CONCURRENCY) {
+    const batch = rows.slice(i, i + CONCURRENCY);
+    await Promise.all(batch.map(async row => {
+      try {
+        const r = await fetch('/api/store?kind=corrections', {
+          method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(row),
+        });
+        if (r.ok) ok++; else fail++;
+      } catch (e) { fail++; }
+    }));
+    onProgress?.(Math.min(i + CONCURRENCY, rows.length), rows.length);
+  }
+  return { ok, fail };
 }
