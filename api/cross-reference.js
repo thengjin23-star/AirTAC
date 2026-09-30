@@ -2479,7 +2479,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V100\u7CFB\u5217",
     name: "4V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 1 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V1{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2562,7 +2562,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V200\u7CFB\u5217",
     name: "4V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 2 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V2{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2637,7 +2637,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V300\u7CFB\u5217",
     name: "4V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 3 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V3{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2712,7 +2712,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V400\u7CFB\u5217",
     name: "4V400\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 4 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V4{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2783,7 +2783,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "6SV\u7CFB\u5217",
     name: "6SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F)",
-    orderCodeFormat: "6SV {seriesCode} {controlType} {port} {voltage} {terminal} {leadLength} {thread}",
+    orderCodeFormat: "6SV{seriesCode}{controlType}-{port}{voltage}{terminal}{leadLength}{thread}",
     categories: [
       {
         id: "seriesCode",
@@ -2933,9 +2933,9 @@ var catalog_solenoid_valves_default = [
     id: "7SV",
     category: "\u63A7\u5236\u5143\u4EF6",
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    group: "7SV\u7CFB\u5217",
-    name: "7SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F, \u63D2\u63A5\u5F0F\u63A5\u96FB)",
-    orderCodeFormat: "7V {seriesCode} {controlType} {portConnType} {port} {voltage} {leadLength} {thread}",
+    group: "7V\u7CFB\u5217",
+    name: "7V\u7CFB\u5217 \u96FB\u78C1\u95A5 (7V050/7V100/7V200/7V300\uFF0C\u4E94\u53E3\u4E8C\u4F4D/\u4E09\u4F4D\uFF0C\u63D2\u63A5\u5F0F\uFF1B\u5C0D\u61C9 SMC SY3000/5000/7000/9000)",
+    orderCodeFormat: "7V{seriesCode}{controlType}{portConnType}-{port}{voltage}{leadLength}{thread}",
     note: "7V/7SV\u70BA\u540C\u6B3E\u7522\u54C1\u5728\u4E0D\u540C\u578B\u9304\u4E2D\u7684\u6A19\u793A,\u8A02\u8CFC\u78BC\u7D50\u69CB\u76F8\u540C",
     categories: [
       {
@@ -3079,7 +3079,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V100\u7CFB\u5217",
     name: "3V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 1 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V1{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3158,7 +3158,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V200\u7CFB\u5217",
     name: "3V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 2 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V2{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3236,7 +3236,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V300\u7CFB\u5217",
     name: "3V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 3 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V3{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3314,7 +3314,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V1\u7CFB\u5217",
     name: "3V1\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F\u5E38\u9589\u578B)",
-    orderCodeFormat: "3V1 {port} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V1-{port}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -3363,7 +3363,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V2\u7CFB\u5217",
     name: "3V2\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-    orderCodeFormat: "3V2 {port} {initialState} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V2{port}{initialState}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -3495,7 +3495,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V3\u7CFB\u5217",
     name: "3V3\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-    orderCodeFormat: "3V3 {port} {initialState} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V3{port}{initialState}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -5846,9 +5846,9 @@ var catalog_solenoid_valves_default = [
     id: "7sv_base",
     category: "\u63A7\u5236\u5143\u4EF6",
     superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-    group: "7SV\u7CFB\u5217\u5E95\u5EA7",
+    group: "7V\u7CFB\u5217\u5E95\u5EA7",
     code: "7SV",
-    name: "7SV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    name: "7V\u7CFB\u5217\u7528\u5E95\u5EA7",
     categories: [
       {
         id: "code",
@@ -7886,137 +7886,6 @@ var catalog_solenoid_valves_default = [
     ],
     note: "\u7AEF\u5B50\u7DDA\u9577\u91DD\u5C0D\u63D2\u5EA7\u5F0F\uFF0C\u53EF\u90780.5m/2m\u7AEF\u5B50\u7DDA\uFF1B\u51FA\u7DDA\u5F0F\u548CM8\u51FA\u7DDA\u5F0F\u7684\u51FA\u7DDA\u9577\u5EA6\u70BA0.5m\u3002",
     sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.23"
-  },
-  {
-    id: "7V",
-    category: "\u63A7\u5236\u5143\u4EF6",
-    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    group: "7V\u7CFB\u5217",
-    code: "",
-    name: "7V\u7CFB\u5217\u96FB\u78C1\u95A5",
-    format: "7V{series}{control}{port}{voltage}{electrical}{length}{thread}",
-    categories: [
-      {
-        id: "series",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "2",
-            description: "200\u7CFB\u5217"
-          }
-        ]
-      },
-      {
-        id: "control",
-        name: "\u96FB\u63A7\u65B9\u5F0F",
-        options: [
-          {
-            code: "10",
-            description: "\u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-          },
-          {
-            code: "20",
-            description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-          },
-          {
-            code: "30C",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
-          },
-          {
-            code: "30E",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
-          },
-          {
-            code: "30P",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
-          }
-        ]
-      },
-      {
-        id: "port",
-        name: "\u63A5\u7BA1\u53E3\u5F91",
-        options: [
-          {
-            code: "08",
-            description: "M5, PT1/8, PT1/4, PT3/8"
-          }
-        ]
-      },
-      {
-        id: "voltage",
-        name: "\u6A19\u6E96\u96FB\u58D3",
-        options: [
-          {
-            code: "A",
-            description: "AC220V"
-          },
-          {
-            code: "B",
-            description: "DC24V"
-          },
-          {
-            code: "C",
-            description: "AC110V"
-          },
-          {
-            code: "F",
-            description: "DC12V"
-          }
-        ]
-      },
-      {
-        id: "electrical",
-        name: "\u63A5\u96FB\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u87BA\u7D0B\u63A5\u7BA1"
-          },
-          {
-            code: "J",
-            description: "\u5FEB\u63D2\u63A5\u982D"
-          }
-        ]
-      },
-      {
-        id: "length",
-        name: "\u7AEF\u5B50\u7DDA\u9577",
-        options: [
-          {
-            code: "",
-            description: "\u7121\u6B64\u4EE3\u78BC"
-          },
-          {
-            code: "050",
-            description: "0.5m"
-          },
-          {
-            code: "200",
-            description: "2.0m"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7121\u6B64\u4EE3\u78BC"
-          },
-          {
-            code: "G",
-            description: "G\u7259"
-          },
-          {
-            code: "T",
-            description: "NPT\u7259"
-          }
-        ]
-      }
-    ],
-    note: "\u5FEB\u63D2\u63A5\u982D\u578B\u96FB\u78C1\u95A5\u5E95\u5EA7\u70BA\u7121\u7259\u578B",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.92"
   },
   {
     id: "3A100",
@@ -18987,7 +18856,7 @@ var catalog_actuators_default = [
     group: "TN\u7CFB\u5217",
     code: "TN",
     name: "TN\u7CFB\u5217 \u96D9\u8EF8\u6C23\u7F38",
-    format: "TN{bore}{stroke}{magnet}{thread}",
+    format: "TN{bore}x{stroke}{magnet}{thread}",
     categories: [
       {
         id: "bore",
@@ -19108,7 +18977,7 @@ var catalog_actuators_default = [
     group: "TR\u7CFB\u5217",
     code: "TR",
     name: "TR\u7CFB\u5217 \u96D9\u8EF8\u6C23\u7F38",
-    format: "TR{bore}{stroke}{magnet}{thread}",
+    format: "TR{bore}x{stroke}{magnet}{thread}",
     categories: [
       {
         id: "bore",
@@ -28128,7 +27997,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
     code: "",
     name: "PC\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28232,7 +28101,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E(\u8FF7\u4F60)",
     code: "",
     name: "PC\u8FF7\u4F60\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}-{type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}-{type_suffix}",
     categories: [
       {
         id: "spec",
@@ -28330,7 +28199,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
     code: "",
     name: "PL\u7CFB\u5217 L\u578B\u87BA\u7D0B\u4E8C\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28576,7 +28445,7 @@ var catalog_auxiliary_default = [
     group: "\u5168\u91D1\u5C6C\u985E",
     code: "",
     name: "BPC\u7CFB\u5217 \u5168\u91D1\u5C6C\u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28674,7 +28543,7 @@ var catalog_auxiliary_default = [
     group: "\u5168\u91D1\u5C6C\u985E",
     code: "BPM",
     name: "BPM\u7CFB\u5217 \u5168\u91D1\u5C6C\u7A7F\u677F\u76F4\u901A",
-    format: "{code} {tube_od}",
+    format: "{code}{tube_od}",
     categories: [
       {
         id: "code",
@@ -28724,7 +28593,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E",
     code: "",
     name: "PE\u7CFB\u5217 T\u578B\u4E09\u901A",
-    format: "{spec} {tube_od}{color}",
+    format: "{spec}{tube_od}{color}",
     categories: [
       {
         id: "spec",
@@ -28816,7 +28685,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E(\u6E1B\u5F91/\u591A\u901A)",
     code: "",
     name: "PEG\u7CFB\u5217 T\u578B\u6B63\u6E1B\u5F91\u4E09\u901A",
-    format: "{spec} {tube_od_1}-{tube_od_2}{color}",
+    format: "{spec}{tube_od_1}-{tube_od_2}{color}",
     categories: [
       {
         id: "spec",
@@ -29152,7 +29021,7 @@ var catalog_auxiliary_default = [
     group: "BSL/BSLM/BESL/PAL\u7CFB\u5217",
     code: "",
     name: "BSL\u7CFB\u5217 \u901A\u7528\u578B\u6D88\u8072\u5668",
-    format: "{spec} {thread_spec}{color}",
+    format: "{spec}-{thread_spec}{color}",
     categories: [
       {
         id: "spec",
@@ -29232,7 +29101,7 @@ var catalog_auxiliary_default = [
     group: "PPA\u7BA1\u585E\u5F0F",
     code: "PPA",
     name: "PPA\u7CFB\u5217 \u7BA1\u585E\u5F0F\u6D88\u8072\u5668",
-    format: "{code} {tube_od}",
+    format: "{code}{tube_od}",
     categories: [
       {
         id: "code",
@@ -29352,7 +29221,7 @@ var catalog_auxiliary_default = [
     group: "PSL/PSS\u7CFB\u5217",
     code: "",
     name: "PSL\u7CFB\u5217 L\u578B",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
     categories: [
       {
         id: "spec",
@@ -29470,7 +29339,7 @@ var catalog_auxiliary_default = [
     group: "PSA\u7CFB\u5217",
     code: "PSA",
     name: "PSA\u7CFB\u5217 \u76F4\u901A\u578B",
-    format: "{code} {tube_od}{color}",
+    format: "{code}{tube_od}{color}",
     categories: [
       {
         id: "code",
@@ -29534,7 +29403,7 @@ var catalog_auxiliary_default = [
     group: "PTL/PTS\u63A8\u9396\u7CFB\u5217",
     code: "",
     name: "PTL\u7CFB\u5217 \u63A8\u9396L\u578B\u8ABF\u901F\u95A5",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
     categories: [
       {
         id: "spec",
@@ -29652,7 +29521,7 @@ var catalog_auxiliary_default = [
     group: "PTA\u7CFB\u5217",
     code: "PTA",
     name: "PTA\u7CFB\u5217 \u76F4\u901A\u578B",
-    format: "{code} {tube_od}{color}",
+    format: "{code}{tube_od}{color}",
     categories: [
       {
         id: "code",
@@ -29716,7 +29585,7 @@ var catalog_auxiliary_default = [
     group: "PTL\u8FF7\u4F60\u7CFB\u5217",
     code: "",
     name: "PTL\u8FF7\u4F60\u7CFB\u5217 \u63A8\u9396\u578B\u8ABF\u901F\u95A5",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}-{type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}-{type_suffix}",
     categories: [
       {
         id: "spec",
@@ -33259,11 +33128,11 @@ var catalog_auxiliary_default = [
         name: "\u884C\u7A0B",
         options: [
           {
-            code: "3",
+            code: "03",
             description: "3mm"
           },
           {
-            code: "7",
+            code: "07",
             description: "7mm"
           },
           {
@@ -33383,7 +33252,7 @@ var catalog_auxiliary_default = [
         name: "\u884C\u7A0B",
         options: [
           {
-            code: "7",
+            code: "07",
             description: "7mm"
           },
           {
@@ -33818,6 +33687,10 @@ function generateOrderingCode(series, selections) {
   if (code.endsWith("-")) code = code.slice(0, -1);
   return code;
 }
+function isFreeValueCategory(cat) {
+  const opts = cat.options || [];
+  return opts.length > 0 && opts.length <= 2 && opts.some((o) => /數值/.test(o.description || ""));
+}
 
 // src/server/crossref.ts
 var seriesById = /* @__PURE__ */ new Map();
@@ -33857,7 +33730,7 @@ var KNOWLEDGE_BASE = [
     brand: "SMC",
     pattern: /^C?D?Q2/i,
     competitorSeries: "CQ2/CDQ2 \u8584\u578B\u6C23\u7F38",
-    airtacSeriesIds: ["acq", "sda", "acqd", "acqj"],
+    airtacSeriesIds: ["acq", "sda"],
     note: "SMC CQ2 \u8584\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ (\u512A\u5148) \u6216 SDA \u7CFB\u5217\uFF0C\u7F38\u5F91\u884C\u7A0B\u76F4\u63A5\u6CBF\u7528\u3002",
     decode: `SMC CQ2 \u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: C(D)Q2[\u5B89\u88DD\u578B\u5F0F][\u7F38\u5F91]-[\u884C\u7A0B][\u52D5\u4F5C]+\u5C3E\u78BC):
 - \u958B\u982D CDQ2 = \u5167\u5EFA\u78C1\u77F3(\u53EF\u88DD\u78C1\u6027\u958B\u95DC)\u7248\u672C\u7684 CQ2\uFF1BCQ2 \u958B\u982D\u82E5\u5C3E\u78BC\u7121\u78C1\u77F3\u6A19\u8A18\u5247\u7121\u78C1\u77F3
@@ -33869,49 +33742,64 @@ var KNOWLEDGE_BASE = [
 \u2192 AirTAC ACQ \u5C0D\u61C9: \u7F38\u5F91/\u884C\u7A0B\u76F4\u63A5\u6CBF\u7528 (ACQ \u7F38\u5F91\u7BC4\u570D 12~100)\uFF1B\u9644\u78C1\u77F3\u2192\u78C1\u77F3\u4EE3\u78BC S\uFF1B\u5B89\u88DD\u4EE5\u901A\u5B54\u70BA\u6A19\u6E96\u3002CDQ2B40-30DZ \u2192 ACQ40X30S`
   },
   { brand: "SMC", pattern: /^C?D?QS/i, competitorSeries: "CQS \u5C0F\u578B\u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda", "ace"], note: "SMC CQS \u5C0F\u7F38\u5F91\u8584\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ \u5C0F\u7F38\u5F91\u6216 ACE \u7DCA\u6E4A\u578B\u3002" },
-  { brand: "SMC", pattern: /^C?D?J2/i, competitorSeries: "CJ2 \u91DD\u578B\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi", "ma", "mf"], note: "SMC CJ2 \u8FF7\u4F60\u6C23\u7F38\u5C0D\u61C9 AirTAC MI (\u4E0D\u92B9\u92FC\u8FF7\u4F60\u7F38) \u6216 MA \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^C?D?M2/i, competitorSeries: "CM2 \u5713\u5F62\u6C23\u7F38", airtacSeriesIds: ["ma", "mi", "mbl"], note: "SMC CM2 \u5713\u5F62\u6C23\u7F38(20~40mm)\u5C0D\u61C9 AirTAC MA/MI \u4E0D\u92B9\u92FC\u8FF7\u4F60\u7F38\u3002" },
-  { brand: "SMC", pattern: /^MB\d?/i, competitorSeries: "MB \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["se", "sai", "sc"], note: "SMC MB \u6A19\u6E96\u6C23\u7F38\u5C0D\u61C9 AirTAC SE \u6216 SAI (ISO15552) \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^C?D?J2|^C?D?J1/i, competitorSeries: "CJ1/CJ2 \u7B46\u578B\u6C23\u7F38", airtacSeriesIds: ["pb", "pbr"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CJ1/CJ2 \u7B46\u578B\u4E0D\u92B9\u92FC\u6C23\u7F38 \u2192 AirTAC PB \u7CFB\u5217 (CJ2R\u2192PBR)\u3002CD \u958B\u982D=\u9644\u78C1\u77F3\u2192magnet S\uFF1B\u7F38\u5F91 6/10/16 \u76F4\u63A5\u5C0D\u61C9\u3002\u4E0D\u8981\u5C0D\u5230 MI (MI \u5C0D\u61C9\u7684\u662F SMC C85)\u3002" },
+  { brand: "SMC", pattern: /^C?D?M2/i, competitorSeries: "CM2 \u5713\u5F62\u6C23\u7F38", airtacSeriesIds: ["mf", "mbl"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CM2 \u5713\u5F62\u6C23\u7F38(20~40mm) \u2192 AirTAC MF / MFC (\u7DE9\u885D\u53EF\u8ABF) \u6216 MAL(\u92C1\u88FD\uFF0C\u578B\u9304\u4EE5 MBL \u8868\u793A)\uFF1BCM2R\u2192MAR\u3002CD \u958B\u982D=\u9644\u78C1\u77F3\u2192S\u3002" },
+  { brand: "SMC", pattern: /^C?D?85|^C85/i, competitorSeries: "C85 \u8FF7\u4F60\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC C85 (ISO6432) \u2192 AirTAC MI / MIC (\u7DE9\u885D\u53EF\u8ABF)\u3002" },
+  { brand: "SMC", pattern: /^C?D?G1/i, competitorSeries: "CG1 \u5713\u5F62\u6C23\u7F38", airtacSeriesIds: ["mg"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CG1 \u2192 AirTAC MG / MGC\u3002" },
+  { brand: "SMC", pattern: /^C?D?MB1/i, competitorSeries: "MB1 \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC MB1 \u2192 AirTAC SE (ISO15552)\u3002" },
+  { brand: "SMC", pattern: /^C?D?MB\b|^C?D?MB[A-Z]?\d/i, competitorSeries: "MB \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["jsi", "se"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC MB \u2192 AirTAC JSI\u3002" },
+  { brand: "SMC", pattern: /^C?P?9[56]/i, competitorSeries: "C95/C96 \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC C95 \u2192 AirTAC SI (\u76EE\u524D\u578B\u9304\u8CC7\u6599\u672A\u6536\u9304 SI\uFF0C\u66AB\u4EE5 SE/SAI \u66FF\u4EE3\u4E26\u5728\u8AAA\u660E\u4E2D\u8A3B\u660E)\u3002" },
   { brand: "SMC", pattern: /^C?D?A2/i, competitorSeries: "CA2 \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc", "se", "sau"], note: "SMC CA2 \u62C9\u687F\u5F0F\u6A19\u6E96\u6C23\u7F38\u5C0D\u61C9 AirTAC SC \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^MGP/i, competitorSeries: "MGP \u5E36\u5C0E\u687F\u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["tcl", "tcm", "tclj", "tcmj"], note: "SMC MGP \u4E09\u8EF8\u5E36\u5C0E\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC TCL (\u76F4\u7DDA\u8EF8\u627F) / TCM (\u9285\u5957\u8EF8\u627F)\u3002MGPL\u2192TCL\u3001MGPM\u2192TCM\u3002" },
-  { brand: "SMC", pattern: /^CXS/i, competitorSeries: "CXS \u96D9\u806F\u6C23\u7F38", airtacSeriesIds: ["tn", "tr"], note: "SMC CXS \u96D9\u806F\u6C23\u7F38\u5C0D\u61C9 AirTAC TN \u96D9\u8EF8\u6C23\u7F38\u3002" },
-  { brand: "SMC", pattern: /^MXQ/i, competitorSeries: "MXQ \u6C23\u52D5\u6ED1\u53F0", airtacSeriesIds: ["hlq", "hlql", "hls"], note: "SMC MXQ \u7CBE\u5BC6\u6ED1\u53F0\u5C0D\u61C9 AirTAC HLQ (\u5FAA\u74B0\u6EFE\u73E0) \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^MXS/i, competitorSeries: "MXS \u6C23\u52D5\u6ED1\u53F0", airtacSeriesIds: ["hls", "hlsl", "hlq"], note: "SMC MXS \u7CBE\u5BC6\u6ED1\u53F0\u5C0D\u61C9 AirTAC HLS (\u6EFE\u67F1\u578B) \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^MHZ2?/i, competitorSeries: "MHZ2 \u5E73\u884C\u958B\u9589\u6C23\u722A", airtacSeriesIds: ["hfz", "hfk", "hfsz", "hftz"], note: "SMC MHZ2 \u5E73\u884C\u6C23\u722A\u5C0D\u61C9 AirTAC HFZ (\u6EFE\u73E0\u5C0E\u8ECC\u5E73\u884C\u6C23\u722A)\uFF0CMHZL2 \u9577\u884C\u7A0B\u5C0D\u61C9 HFKL\u3002" },
+  { brand: "SMC", pattern: /^MGP/i, competitorSeries: "MGP \u5E36\u5C0E\u687F\u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["tcl"], note: "SMC MGP \u4E09\u8EF8\u5E36\u5C0E\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC TCL (\u76F4\u7DDA\u8EF8\u627F) / TCM (\u9285\u5957\u8EF8\u627F)\u3002MGPL\u2192TCL\u3001MGPM\u2192TCM\u3002" },
+  { brand: "SMC", pattern: /^CXS/i, competitorSeries: "CXS \u96D9\u806F\u6C23\u7F38", airtacSeriesIds: ["tr", "tn"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CXS \u2192 AirTAC TR \u96D9\u8EF8\u6C23\u7F38 (CXSM \u6ED1\u52D5\u8EF8\u627F/CXSL \u6EFE\u73E0\u8EF8\u627F\u7686\u5148\u5C0D TR)\u3002" },
+  { brand: "SMC", pattern: /^MXH/i, competitorSeries: "MXH \u6ED1\u53F0", airtacSeriesIds: ["hlh"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC MXH \u2192 AirTAC HLH\u3002" },
+  { brand: "SMC", pattern: /^CXWM|^CXW/i, competitorSeries: "CXW \u96D9\u687F\u6ED1\u53F0", airtacSeriesIds: ["stw"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CXWM \u2192 AirTAC STW\u3002" },
+  { brand: "SMC", pattern: /^MXQ/i, competitorSeries: "MXQ \u6C23\u52D5\u6ED1\u53F0", airtacSeriesIds: ["hlq", "hls"], note: "SMC MXQ \u7CBE\u5BC6\u6ED1\u53F0\u5C0D\u61C9 AirTAC HLQ (\u5FAA\u74B0\u6EFE\u73E0) \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^MXS/i, competitorSeries: "MXS \u6C23\u52D5\u6ED1\u53F0", airtacSeriesIds: ["hls", "hlq"], note: "SMC MXS \u7CBE\u5BC6\u6ED1\u53F0\u5C0D\u61C9 AirTAC HLS (\u6EFE\u67F1\u578B) \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^MHZ2?/i, competitorSeries: "MHZ2 \u5E73\u884C\u958B\u9589\u6C23\u722A", airtacSeriesIds: ["hfz", "hfk"], note: "SMC MHZ2 \u5E73\u884C\u6C23\u722A\u5C0D\u61C9 AirTAC HFZ (\u6EFE\u73E0\u5C0E\u8ECC\u5E73\u884C\u6C23\u722A)\uFF0CMHZL2 \u9577\u884C\u7A0B\u5C0D\u61C9 HFKL\u3002" },
   { brand: "SMC", pattern: /^MHY2?/i, competitorSeries: "MHY2 180\xB0\u958B\u9589\u6C23\u722A", airtacSeriesIds: ["hfr"], note: "SMC MHY2 180\xB0\u958B\u9589\u6C23\u722A\u5C0D\u61C9 AirTAC HFR \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^MHC2?/i, competitorSeries: "MHC2 \u652F\u9EDE\u958B\u9589\u6C23\u722A", airtacSeriesIds: ["hfy", "hfty"], note: "SMC MHC2 \u652F\u9EDE\u958B\u9589(Y\u578B)\u6C23\u722A\u5C0D\u61C9 AirTAC HFY \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^MHS/i, competitorSeries: "MHS \u591A\u722A\u6C23\u722A", airtacSeriesIds: ["hfp", "hfc"], note: "SMC MHS \u6C23\u722A\u53EF\u6BD4\u5C0D AirTAC HFP/HFC \u5E73\u884C\u958B\u9589\u578B\u6C23\u722A\u3002" },
+  { brand: "SMC", pattern: /^MHC2?/i, competitorSeries: "MHC2 \u652F\u9EDE\u958B\u9589\u6C23\u722A", airtacSeriesIds: ["hfy"], note: "SMC MHC2 \u652F\u9EDE\u958B\u9589(Y\u578B)\u6C23\u722A\u5C0D\u61C9 AirTAC HFY \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^MHS/i, competitorSeries: "MHS \u4E09\u722A\u6C23\u722A", airtacSeriesIds: ["hfc"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC MHS \u2192 AirTAC HFC\u3002" },
   { brand: "SMC", pattern: /^CRB|^MSQ|^CRQ/i, competitorSeries: "CRB/MSQ \u64FA\u52D5\u6C23\u7F38", airtacSeriesIds: ["hrq", "hrs"], note: "SMC \u64FA\u52D5\u6C23\u7F38(\u8449\u7247\u5F0FCRB\u3001\u9F52\u689D\u5F0FMSQ)\u5C0D\u61C9 AirTAC HRQ \u56DE\u8F49\u6C23\u7F38(\u9F52\u689D\u9F52\u8F2A\u5F0F)\u3002" },
-  { brand: "SMC", pattern: /^MK\d?/i, competitorSeries: "MK \u56DE\u8F49\u593E\u7DCA\u6C23\u7F38", airtacSeriesIds: ["ack", "ackd", "qck", "qdk"], note: "SMC MK \u56DE\u8F49\u593E\u7DCA\u6C23\u7F38\u5C0D\u61C9 AirTAC ACK \u8F49\u89D2\u7F38\u6216 QCK \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^RS[QDH]/i, competitorSeries: "RSQ/RSD \u963B\u64CB\u6C23\u7F38", airtacSeriesIds: ["twq", "twg", "twh", "twm"], note: "SMC RSQ \u963B\u64CB\u6C23\u7F38\u5C0D\u61C9 AirTAC TWQ/TWH \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^C?D?MK\d?/i, competitorSeries: "MK \u56DE\u8F49\u593E\u7DCA\u6C23\u7F38", airtacSeriesIds: ["qck", "qdk", "ack"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC MK \u2192 AirTAC QCK\u3002" },
+  { brand: "SMC", pattern: /^CKG|^CKZ/i, competitorSeries: "CKG/CKZ \u593E\u7DCA\u6C23\u7F38", airtacSeriesIds: ["mck", "jck"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CKG1 \u2192 AirTAC MCK\uFF1BCKZ3 \u2192 JCK\u3002" },
+  { brand: "SMC", pattern: /^RS[QDH]/i, competitorSeries: "RSQ/RSD \u963B\u64CB\u6C23\u7F38", airtacSeriesIds: ["twq", "twg", "twh"], note: "SMC RSQ \u963B\u64CB\u6C23\u7F38\u5C0D\u61C9 AirTAC TWQ/TWH \u7CFB\u5217\u3002" },
   { brand: "SMC", pattern: /^MY\d|^CY\d/i, competitorSeries: "MY/CY \u7121\u687F\u6C23\u7F38", airtacSeriesIds: ["rmt", "rmtl", "rms", "rmh"], note: "SMC \u6A5F\u68B0/\u78C1\u8026\u5F0F\u7121\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC RMT (\u5C0E\u687F\u578B) / RMS (\u57FA\u672C\u578B) / RMH (\u6ED1\u8ECC\u578B)\u3002" },
-  { brand: "SMC", pattern: /^CU\b|^CU\d/i, competitorSeries: "CU \u81EA\u7531\u5B89\u88DD\u6C23\u7F38", airtacSeriesIds: ["mu", "msu", "md"], note: "SMC CU \u81EA\u7531\u5B89\u88DD\u6C23\u7F38\u5C0D\u61C9 AirTAC MU \u7CFB\u5217\u3002" },
+  { brand: "SMC", pattern: /^C?D?U[KJ]?\d/i, competitorSeries: "CU/CUK/CUJ \u81EA\u7531\u5B89\u88DD\u6C23\u7F38", airtacSeriesIds: ["md", "mk", "mu"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CU \u2192 AirTAC MD\uFF1BCUK(\u4E0D\u56DE\u8F49) \u2192 MK\uFF1BCUJ(\u8FF7\u4F60) \u2192 MU\u3002" },
+  { brand: "SMC", pattern: /^C?D?JP/i, competitorSeries: "CJP \u91DD\u578B\u6C23\u7F38", airtacSeriesIds: ["mpe", "mpg"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC CJP \u2192 AirTAC MPE\uFF1BCJP2 \u2192 MPG\u3002" },
   // --- SMC 閥類 ---
   {
     brand: "SMC",
     pattern: /^SY[3579]/i,
     competitorSeries: "SY3000/5000/7000/9000 \u96FB\u78C1\u95A5",
-    airtacSeriesIds: ["4V100", "4V200", "4V300", "7SV", "6SV"],
-    note: "SMC SY \u7CFB\u5217\u4E94\u53E3\u96FB\u78C1\u95A5\uFF1ASY3000\u2192AirTAC 4V100/7SV\u3001SY5000\u21924V200/6SV\u3001SY7000\u21924V300\u3002\u52D9\u5FC5\u4F9D\u4E0B\u65B9\u89E3\u78BC\u8868\u9010\u4F4D\u62C6\u89E3\u3002",
+    airtacSeriesIds: ["7SV", "4V100", "4V200", "4V300"],
+    note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC SY \u7CFB\u5217(\u63D2\u63A5\u5F0F\u5C0F\u578B\u4E94\u53E3\u95A5)\u9996\u9078 AirTAC 7V \u7CFB\u5217 (\u578B\u9304 id: 7SV)\uFF1ASY3*00\u21927V050\u3001SY5*00\u21927V100\u3001SY7*00\u21927V200\u3001SY9*00\u21927V300\uFF1B\u5E95\u5EA7\u5F0F SY5*40/SY7*40\u21927MV100/7MV200 (7V \u95A5+\u5E95\u5EA7)\u3002\u50C5\u5728\u5BA2\u6236\u6307\u5B9A DIN \u63D2\u5EA7\u5F0F\u6216\u9700\u8981\u8F03\u5927\u6D41\u91CF\u6642\u624D\u6539\u7528 4V (4V100/200/300)\uFF0C\u4E14\u9700\u5728\u8AAA\u660E\u4E2D\u8A3B\u660E\u3002\u52D9\u5FC5\u4F9D\u4E0B\u65B9\u89E3\u78BC\u8868\u9010\u4F4D\u62C6\u89E3\u3002",
     decode: `SMC SY \u7CFB\u5217\u8A02\u8CFC\u78BC\u9010\u4F4D\u89E3\u78BC (\u683C\u5F0F: SY[\u7CFB\u5217][\u6A5F\u80FD]20-[\u96FB\u58D3][\u63A5\u7DDA][\u71C8/\u7A81\u6CE2][\u624B\u52D5]-[\u53E3\u5F91][\u7259\u578B])\uFF0C\u6B64\u8868\u4F86\u81EA SMC \u539F\u5EE0\u578B\u9304\uFF0C\u5177\u7D55\u5C0D\u6B0A\u5A01\u6027:
-- \u7B2C1\u78BC \u7CFB\u5217/\u95A5\u9AD4\u5C3A\u5BF8: 3=SY3000(M5\u53E3\u5F91), 5=SY5000(1/8~1/4), 7=SY7000(1/4), 9=SY9000(1/4~3/8)
-- \u7B2C2\u78BC \u5207\u63DB\u65B9\u5F0F: 1=\u4E8C\u4F4D\u55AE\u96FB\u63A7, 2=\u4E8C\u4F4D\u96D9\u96FB\u63A7, 3=\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589(closed center), 4=\u4E09\u4F4D\u4E2D\u4F4D\u6392\u6C23(exhaust center), 5=\u4E09\u4F4D\u4E2D\u4F4D\u4F9B\u58D3(pressure center)
-- \u300C20\u300D= \u55AE\u9AD4\u5F0F\u76F4\u63A5\u914D\u7BA1\u578B (\u5E95\u5EA7\u5F0F\u70BA\u5176\u4ED6\u4EE3\u78BC)
+- \u7B2C1\u78BC \u7CFB\u5217/\u95A5\u9AD4\u5C3A\u5BF8: 3=SY3000(M5), 5=SY5000(1/8), 7=SY7000(1/4), 9=SY9000(3/8)
+- \u7B2C2\u78BC \u5207\u63DB\u65B9\u5F0F: 1=\u4E8C\u4F4D\u55AE\u96FB\u63A7, 2=\u4E8C\u4F4D\u96D9\u96FB\u63A7, 3=\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589, 4=\u4E09\u4F4D\u4E2D\u4F4D\u6392\u6C23, 5=\u4E09\u4F4D\u4E2D\u4F4D\u4F9B\u58D3
+- \u7B2C3~4\u78BC: 20=\u55AE\u9AD4\u76F4\u63A5\u914D\u7BA1\u578B (\u672C\u9AD4\u914D\u7BA1)\uFF1B40=\u5E95\u5EA7\u914D\u7BA1\u578B (\u9700\u642D\u914D\u5E95\u5EA7)
 - \u7834\u6298\u865F\u5F8C\u7B2C1\u78BC = \u984D\u5B9A\u96FB\u58D3 (\u6CE8\u610F!! \u9019\u4E00\u78BC\u662F\u96FB\u58D3\u3001\u4E0D\u662F\u53E3\u5F91): 5=DC24V, 6=DC12V, V=DC6V, S=DC5V, R=DC3V, 1=AC100V, 2=AC200V, 3=AC110V, 4=AC220V
-- \u63A5\u7DDA\u53D6\u51FA\u65B9\u5F0F: G=\u5C0E\u7DDA\u51FA\u7DDA\u5F0F300mm, H=\u51FA\u7DDA\u5F0F600mm, L=L\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA, LN=L\u5F62\u4E0D\u9644\u5C0E\u7DDA, LO=L\u5F62\u4E0D\u9644\u63D2\u982D, M=M\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA, MN/MO=M\u5F62\u8B8A\u9AD4, D=DIN\u63D2\u5EA7\u5F0F, DO=DIN\u4E0D\u9644\u63A5\u7DDA\u5EA7, W\u958B\u982D=M8\u63D2\u5EA7\u5F0F
+- \u63A5\u7DDA\u53D6\u51FA\u65B9\u5F0F: G=\u5C0E\u7DDA\u51FA\u7DDA\u5F0F300mm, H=\u51FA\u7DDA\u5F0F600mm, L=L\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA(300mm), LN=L\u5F62\u4E0D\u9644\u5C0E\u7DDA, LO=L\u5F62\u4E0D\u9644\u63D2\u982D, M=M\u5F62\u63D2\u5EA7\u5F0F\u9644\u5C0E\u7DDA(300mm), MN/MO=M\u5F62\u8B8A\u9AD4, D=DIN\u63D2\u5EA7\u5F0F, DO=DIN\u4E0D\u9644\u63A5\u7DDA\u5EA7, W\u958B\u982D=M8\u63D2\u5EA7\u5F0F
 - \u6307\u793A\u71C8/\u7A81\u6CE2\u4FDD\u8B77(\u7DCA\u63A5\u5728\u63A5\u7DDA\u4EE3\u78BC\u5F8C): \u7121\u8A18\u865F=\u7686\u7121, S=\u9644\u7A81\u6CE2\u4FDD\u8B77, Z=\u9644\u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77, R=\u7A81\u6CE2\u4FDD\u8B77(\u7121\u6975\u6027), U=\u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77(\u7121\u6975\u6027)
 - \u624B\u52D5\u64CD\u4F5C: \u7121\u8A18\u865F=\u975E\u9396\u5B9A\u6309\u9215\u5F0F, D=\u8D77\u5B50\u58D3\u4E0B\u65CB\u8F49\u9396\u5B9A\u5F0F, E=\u624B\u52D5\u58D3\u4E0B\u65CB\u8F49\u9396\u5B9A\u5F0F
-- \u7B2C\u4E8C\u500B\u7834\u6298\u865F\u5F8C = A\xB7B\u53E3\u63A5\u7BA1\u53E3\u5F91: M5=M5\xD70.8(SY3000), 01=1/8"(SY5000), 02=1/4"(SY5000/SY7000), 03=3/8"(SY9000), C4=\u03A64\u5FEB\u63D2, C6=\u03A66\u5FEB\u63D2, C8=\u03A68\u5FEB\u63D2, C10=\u03A610\u5FEB\u63D2, C12=\u03A612\u5FEB\u63D2, N\u958B\u982D=\u82F1\u5236\u5FEB\u63D2
+- \u7B2C\u4E8C\u500B\u7834\u6298\u865F\u5F8C = A\xB7B\u53E3\u63A5\u7BA1\u53E3\u5F91: M5=M5\xD70.8, 01=1/8", 02=1/4", 03=3/8", C4=\u03A64\u5FEB\u63D2, C6=\u03A66\u5FEB\u63D2, C8=\u03A68\u5FEB\u63D2, C10=\u03A610\u5FEB\u63D2, C12=\u03A612\u5FEB\u63D2, N\u958B\u982D=\u82F1\u5236\u5FEB\u63D2
 - \u7259\u578B(\u7DCA\u63A5\u5728\u53E3\u5F91\u5F8C): \u7121\u8A18\u865F=Rc(PT\u7259), F=G\u7259, N=NPT\u7259, T=NPTF\u7259
-\u7BC4\u4F8B: SY5320-5LOZE-01 = SY5000\u7CFB\u5217 + \u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589(\u96D9\u96FB\u63A7) + DC24V + L\u5F62\u63D2\u5EA7\u4E0D\u9644\u63D2\u982D(LO) + \u6307\u793A\u71C8+\u7A81\u6CE2\u4FDD\u8B77(Z) + \u624B\u52D5\u65CB\u8F49\u9396\u5B9A(E) + \u53E3\u5F911/8"(01) + Rc\u7259 \u2192 AirTAC 4V230C-06B (30C=\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589, 06=1/8", B=DC24V, DIN\u63D2\u5EA7\u5F0F\u8207PT\u7259\u70BA\u7A7A\u767D\u4EE3\u78BC)\u3002
-\u5C0D\u61C9 AirTAC 4V \u7CFB\u5217\u7684\u8F49\u63DB\u898F\u5247:
-- \u6A5F\u80FD: 1\u219210(\u4E8C\u4F4D\u55AE\u96FB\u63A7), 2\u219220(\u4E8C\u4F4D\u96D9\u96FB\u63A7), 3\u219230C(\u4E2D\u4F4D\u5C01\u9589), 4\u219230E(\u4E2D\u4F4D\u6392\u6C23), 5\u219230P(\u4E2D\u4F4D\u58D3\u529B)
-- \u53E3\u5F91(4V200): 01(1/8")\u219206, 02(1/4")\u219208; (4V300): 02(1/4")\u219208, 03(3/8")\u219210; (4V100): M5\u2192M5, 01(1/8)\u219206
-- \u96FB\u58D3: 5(DC24V)\u2192B, 6(DC12V)\u2192F, 1(AC100V)\u2192C(AC110V\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B), 2(AC200V)\u2192A(AC220V\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B), 3(AC110V)\u2192C, 4(AC220V)\u2192A
-- \u63A5\u7DDA: G/H/L/M(\u51FA\u7DDA\u8207\u63D2\u5EA7\u9644\u7DDA\u985E)\u2192I(\u51FA\u7DDA\u5F0F), D(DIN\u63D2\u5EA7)\u2192\u7A7A\u767D(DIN\u63D2\u5EA7\u5F0F); SMC \u5FEB\u63D2\u63A5\u982D\u53E3\u5F91(C4/C6\u7B49)AirTAC 4V\u7121\u5167\u5EFA\u5FEB\u63D2,\u9700\u5099\u8A3B\u53E6\u914D PC \u7CFB\u5217\u5FEB\u63D2\u63A5\u982D
-- \u7259\u578B: \u7121\u8A18\u865F(Rc)\u2192\u7A7A\u767D(PT\u7259), F(G\u7259)\u2192G, N(NPT)\u2192T; \u6307\u793A\u71C8(Z/U): AirTAC DIN\u63D2\u5EA7\u578B\u6A19\u914D\u6307\u793A\u71C8,\u7121\u7368\u7ACB\u4EE3\u78BC,\u65BC\u5099\u8A3B\u8AAA\u660E\u5373\u53EF`
+
+\u5C0D\u61C9 AirTAC 7V \u7CFB\u5217 (\u578B\u9304 id 7SV\uFF0C\u683C\u5F0F 7V{seriesCode}{controlType}{portConnType}-{port}{voltage}{leadLength}{thread}):
+- seriesCode: SY3\u219205, SY5\u21921, SY7\u21922, SY9\u21923
+- controlType: 1\u219210, 2\u219220, 3\u219230C, 4\u219230E, 5\u219230P
+- \u53E3\u5F91: M5\u2192port M5\uFF1B01(1/8")\u219206\uFF1B02(1/4")\u219208\uFF1B03(3/8")\u219210 (portConnType \u7A7A\u767D=\u87BA\u7D0B)
+- SMC \u5FEB\u63D2\u53E3\u5F91 C4/C6/C8/C10 \u2192 portConnType=J (\u5FEB\u63D2\u63A5\u982D\u578B) + port 04/06/08/10 (7V \u6709\u5167\u5EFA\u5FEB\u63D2\uFF0C\u4E0D\u9700\u53E6\u914D\u63A5\u982D)
+- \u96FB\u58D3: 5(DC24V)\u2192B, 6(DC12V)\u2192F, 3(AC110V)\u2192C, 4(AC220V)\u2192A, 1(AC100V)\u2192C(\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B), 2(AC200V)\u2192A(\u6700\u63A5\u8FD1,\u9700\u5099\u8A3B)
+- \u7AEF\u5B50\u7DDA\u9577 leadLength: SMC \u9644\u5C0E\u7DDA G/L/M(300mm)\u2192050(0.5m)\uFF1BH(600mm)\u2192050 \u4E26\u5099\u8A3B\uFF1B\u9700\u9577\u7DDA\u2192200(2.0m)\u3002DIN \u63D2\u5EA7\u5F0F(D)\u21927V \u7121 DIN\uFF0C\u6539\u63A8 4V \u7CFB\u5217\u4E26\u8AAA\u660E
+- \u7259\u578B: \u7121\u8A18\u865F(Rc)\u2192\u7A7A\u767D(PT\u7259), F\u2192G, N\u2192T\uFF1B\u6307\u793A\u71C8/\u7A81\u6CE2/\u624B\u52D5\u9215 AirTAC \u7121\u7368\u7ACB\u4EE3\u78BC\uFF0C\u65BC\u8AAA\u660E\u4E2D\u8A3B\u660E\u5373\u53EF
+\u7BC4\u4F8B: SY5120-5LZD-01 = SY5000 + \u4E8C\u4F4D\u55AE\u96FB\u63A7 + \u672C\u9AD4\u914D\u7BA1 + DC24V + L\u5F62\u63D2\u5EA7\u9644\u7DDA + \u6307\u793A\u71C8\u7A81\u6CE2 + \u624B\u52D5\u65CB\u8F49\u9396\u5B9A + 1/8" + Rc \u2192 AirTAC 7V110-06B050
+\u7BC4\u4F8B: SY3220-5LZ-M5 \u2192 7V0520-M5B050\uFF1BSY7320-5GZ-C8 \u2192 7V230CJ-08B050 (C8 \u5FEB\u63D2\u2192J+08)
+\u82E5\u6539\u7528 4V \u7CFB\u5217: \u6A5F\u80FD\u78BC\u540C\u4E0A\uFF0C\u53E3\u5F91 4V100: M5/06\uFF1B4V200: 06(1/8)/08(1/4)\uFF1B4V300: 08/10\uFF1BDIN(D)\u2192terminal \u7A7A\u767D\uFF0C\u51FA\u7DDA(G/H/L/M)\u2192terminal I`
   },
-  { brand: "SMC", pattern: /^VF[35]|^VZ[35]/i, competitorSeries: "VF/VZ \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300"], note: "SMC VF/VZ \u4E94\u53E3\u96FB\u78C1\u95A5\u5C0D\u61C9 AirTAC 4V \u7CFB\u5217\uFF0C\u4F9D\u53E3\u5F91\u9078 100/200/300\u3002" },
+  { brand: "SMC", pattern: /^VFS?[1-5]|^VZ[35]/i, competitorSeries: "VF/VFS/VZ \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300", "4V400"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC VFS1000\u21924V100\u3001VFS2000\u21924V200\u3001VFS3000\u21924V300 (VF3000 \u540C\u70BA 1/4~3/8 \u7D1A\u8DDD\u21924V300)\u3002\u6A5F\u80FD\u78BC: 1=\u55AE\u96FB\u63A7\u219210, 2=\u96D9\u96FB\u63A7\u219220, 3/4/5\u219230C/30E/30P\uFF1B\u96FB\u58D3 5=DC24V\u2192B\uFF1B\u53E3\u5F91 01\u219206, 02\u219208, 03\u219210\u3002" },
+  { brand: "SMC", pattern: /^SYJ[357]/i, competitorSeries: "SYJ \u4E09\u53E3\u96FB\u78C1\u95A5", airtacSeriesIds: ["3V100", "3V200", "3V300"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC SYJ300\u21923V100\u3001SYJ500\u21923V200\u3001SYJ700\u21923V300\u3002" },
+  { brand: "SMC", pattern: /^VX3|^VT317/i, competitorSeries: "VX31/VT317 \u4E09\u53E3\u95A5", airtacSeriesIds: ["3V1", "3V3"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC VX31\u21923V1\uFF1BVT317\u21923V3\u3002" },
   { brand: "SMC", pattern: /^VQ[Zz]?/i, competitorSeries: "VQ \u76F4\u52D5\u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "CPV10", "CPV15", "7SV"], note: "SMC VQ \u5C0F\u578B\u96FB\u78C1\u95A5\u4F9D\u5C3A\u5BF8\u5C0D\u61C9 AirTAC CPV10/CPV15 \u5FAE\u578B\u95A5\u6216 4V100\u3002" },
   {
     brand: "SMC",
@@ -33926,8 +33814,8 @@ var KNOWLEDGE_BASE = [
 \u7BC4\u4F8B: VT307-5G1-01 = DC24V + \u51FA\u7DDA\u5F0F\u5E36\u71C8 + 1/8"
 \u2192 AirTAC 3V2 \u5C0D\u61C9: \u96FB\u58D3 5(DC24V)\u2192B, 6(DC12V)\u2192F, 1(AC100V)\u2192C(\u6700\u63A5\u8FD1AC110V), 4(AC220V)\u2192A; \u53E3\u5F91 01(1/8")\u219206, 02(1/4")\u219208; \u51FA\u7DDA\u5F0F\u2192I`
   },
-  { brand: "SMC", pattern: /^VX2?\d/i, competitorSeries: "VX \u6D41\u9AD4\u96FB\u78C1\u95A5", airtacSeriesIds: ["fluid-2v", "fluid-2p", "fluid-direct-nc", "fluid-direct-no"], note: "SMC VX \u4E8C\u53E3\u6D41\u9AD4\u95A5\u5C0D\u61C9 AirTAC 2V (\u6C23\u9AD4) / 2P (\u5851\u81A0) / 2SA\xB72WA (\u6C34\u6C23\u6CB9) \u7CFB\u5217\u3002" },
-  { brand: "SMC", pattern: /^VXZ|^VXD/i, competitorSeries: "VXZ/VXD \u5148\u5C0E\u6D41\u9AD4\u95A5", airtacSeriesIds: ["fluid-pilot-nc", "fluid-pilot-no", "fluid-2j"], note: "SMC \u5148\u5C0E\u5F0F\u6D41\u9AD4\u95A5\u5C0D\u61C9 AirTAC 2SA/2WA \u5148\u5C0E\u578B\u6216 2J \u89D2\u5EA7\u95A5\u3002" },
+  { brand: "SMC", pattern: /^VX2?\d/i, competitorSeries: "VX \u6D41\u9AD4\u96FB\u78C1\u95A5", airtacSeriesIds: ["2SA", "2KSA", "2WA", "2LA", "2V"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ASMC VX2 \u2192 AirTAC 2S(\u5E38\u9589,\u578B\u9304 2SA)/2KS(\u5E38\u958B,2KSA)\uFF1BVXE2\u21922W(2WA)\uFF1BVCS2/VXH\u21922L(2LA)\uFF1BVXP\u21922V\uFF1BVDW\u21922P\u3002" },
+  { brand: "SMC", pattern: /^VXZ|^VXD/i, competitorSeries: "VXZ/VXD \u5148\u5C0E\u6D41\u9AD4\u95A5", airtacSeriesIds: ["2SA", "2KSA", "2J"], note: "SMC \u5148\u5C0E\u5F0F\u6D41\u9AD4\u95A5\u5C0D\u61C9 AirTAC 2SA/2WA \u5148\u5C0E\u578B\u6216 2J \u89D2\u5EA7\u95A5\u3002" },
   // --- SMC 氣源處理/輔助 ---
   { brand: "SMC", pattern: /^AC\d{2}/i, competitorSeries: "AC FRL\u7D44\u5408", airtacSeriesIds: ["GC", "GAC", "GFC", "GAFC", "AC-BC"], note: "SMC AC \u7CFB\u5217\u4E09\u806F\u4EF6/\u4E8C\u806F\u4EF6\u5C0D\u61C9 AirTAC GC (\u4E09\u806F) / GFC (\u4E8C\u806F) \u7CFB\u5217\uFF0C\u53E3\u5F91\u5C0D\u9F4A\u3002" },
   { brand: "SMC", pattern: /^AW\d{2}/i, competitorSeries: "AW \u8ABF\u58D3\u904E\u6FFE\u5668", airtacSeriesIds: ["GFR", "GAFR", "AFR-BFR"], note: "SMC AW \u8ABF\u58D3\u904E\u6FFE\u5668(\u6FFE\u58D3\u4E00\u9AD4)\u5C0D\u61C9 AirTAC GFR \u7CFB\u5217\u3002" },
@@ -33940,8 +33828,8 @@ var KNOWLEDGE_BASE = [
     brand: "SMC",
     pattern: /^AS\d{3,4}/i,
     competitorSeries: "AS \u901F\u5EA6\u63A7\u5236\u95A5",
-    airtacSeriesIds: ["PSL"],
-    note: "SMC AS \u8ABF\u901F\u63A5\u982D(\u5982 AS2201F)\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217 L \u578B\u8ABF\u901F\u95A5\u3002\u56B4\u7981\u8F38\u51FA PISCO \u7684 JSC\u3002",
+    airtacSeriesIds: ["PSL", "ASC"],
+    note: "\u5206\u5169\u985E\uFF0C\u52D9\u5FC5\u5148\u5224\u65B7\uFF1A(1) \u578B\u865F\u5E36 F (\u9644\u5FEB\u63D2) \u7684\u842C\u5411/\u5F4E\u982D\u578B\u8ABF\u901F\u63A5\u982D\uFF0C\u5982 AS1201F\u3001AS2201F\u3001AS2211F\u3001AS3201F \u2192 AirTAC PSL (L \u578B\u8ABF\u901F\u63A5\u982D)\uFF1B(2) \u4E0D\u5E36\u5FEB\u63D2\u7684\u7BA1\u8DEF\u76F4\u901A\u578B AS1000/AS2000/AS3000 (\u5982 AS2000-02) \u2192 AirTAC ASC (\u516C\u53F8\u5C0D\u7167\u8868\u7684 AS\u2192ASC \u6307\u7684\u662F\u9019\u4E00\u985E)\u3002\u56B4\u7981\u8F38\u51FA PISCO \u7684 JSC\u3002",
     decode: `SMC AS \u8ABF\u901F\u95A5\u8A02\u8CFC\u78BC\u89E3\u78BC (\u683C\u5F0F: AS[\u9AD4\u578B][\u53E3]0[\u7BC0\u6D41\u65B9\u5411][F]-[\u7259\u898F]-[\u7BA1\u5F91]):
 - \u9AD4\u578B/\u7259\u898F\u7B49\u7D1A: 1=M5, 2=1/8, 3=1/4, 4=3/8~1/2
 - \u7B2C3~4\u78BC: 01=\u6A19\u6E96; \u7BC0\u6D41\u65B9\u5411\u5C3E\u78BC: \u7121/\u9810\u8A2D=\u6392\u6C23\u7BC0\u6D41(meter-out), 1F\u524D\u7684\u6578\u5B572=\u6392\u6C23\u7BC0\u6D41\u5F4E\u982D\u578B
@@ -33979,10 +33867,22 @@ var KNOWLEDGE_BASE = [
   },
   { brand: "SMC", pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: "TU \u6C23\u7BA1", airtacSeriesIds: ["PU-Tube", "UCS-Tube", "PA-Tube", "UWS98A", "UN54D"], note: "SMC TU \u805A\u6C28\u916F\u6C23\u7BA1\u5C0D\u61C9 AirTAC US98A/UE95A PU\u7BA1\uFF1B\u6372\u7BA1\u5C0D\u61C9 UCS/UCE\uFF1B\u5C3C\u9F8D\u7BA1\u5C0D\u61C9 PA12/PA6\uFF1B\u963B\u71C3\u7BA1\u5C0D\u61C9 UN54D/UWS98A\u3002" },
   // --- Festo ---
-  { brand: "Festo", pattern: /^DSNU|^ESNU/i, competitorSeries: "DSNU \u5713\u5F62\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi", "ma", "mf"], note: "Festo DSNU \u5713\u5F62\u8FF7\u4F60\u7F38\u5C0D\u61C9 AirTAC MI/MA \u7CFB\u5217(ISO6432)\u3002" },
-  { brand: "Festo", pattern: /^DSBC|^DNC/i, competitorSeries: "DSBC/DNC \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["sai", "se", "sc"], note: "Festo DSBC/DNC \u6A19\u6E96\u7F38\u5C0D\u61C9 AirTAC SAI (ISO15552) \u6216 SE \u7CFB\u5217\u3002" },
-  { brand: "Festo", pattern: /^ADVU|^ADN|^AEVC|^ADVC/i, competitorSeries: "ADVU/ADN \u7DCA\u6E4A\u6C23\u7F38", airtacSeriesIds: ["acq", "sda", "ace", "act"], note: "Festo ADVU/ADN \u7DCA\u6E4A\u578B\u6C23\u7F38\u5C0D\u61C9 AirTAC ACQ/SDA \u8D85\u8584\u7F38\u3002" },
-  { brand: "Festo", pattern: /^DFM/i, competitorSeries: "DFM \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl", "tcm", "tsai"], note: "Festo DFM \u5E36\u5C0E\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC TCL/TCM \u4E09\u8EF8\u7F38\u3002" },
+  { brand: "Festo", pattern: /^DSNU|^ESNU|^DSN\b|^DSN-/i, competitorSeries: "DSNU \u5713\u5F62\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DSN/DSNU \u2192 AirTAC MI (PPV=\u5169\u7AEF\u7DE9\u885D\u53EF\u8ABF\u2192MIC\uFF1BA=\u9644\u78C1\u2192S)\u3002" },
+  { brand: "Festo", pattern: /^DNC|^DNG/i, competitorSeries: "DNC/DNCB/DNG \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DNC/DNCB/DNG \u2192 AirTAC SE (\u6216 SI\uFF0C\u578B\u9304\u672A\u6536\u9304 SI \u6642\u4EE5 SE \u70BA\u6E96)\u3002" },
+  { brand: "Festo", pattern: /^DSBC/i, competitorSeries: "DSBC \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["sai", "se"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DSBC \u2192 AirTAC SU (\u578B\u9304\u8CC7\u6599\u672A\u6536\u9304 SU\uFF0C\u66AB\u4EE5 SAI/SE \u66FF\u4EE3\u4E26\u52D9\u5FC5\u5728\u8AAA\u660E\u4E2D\u8A3B\u660E)\u3002" },
+  { brand: "Festo", pattern: /^DSBG/i, competitorSeries: "DSBG \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DSBG \u2192 AirTAC SC\u3002" },
+  { brand: "Festo", pattern: /^AEN/i, competitorSeries: "AEN \u7DCA\u6E4A\u6C23\u7F38", airtacSeriesIds: ["ace"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto AEN \u2192 AirTAC ACE\u3002" },
+  { brand: "Festo", pattern: /^DPZ/i, competitorSeries: "DPZ \u96D9\u8EF8\u6C23\u7F38", airtacSeriesIds: ["tn"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DPZ/DPZC \u2192 AirTAC TN\u3002" },
+  { brand: "Festo", pattern: /^SPZ/i, competitorSeries: "SPZ \u96D9\u687F\u6ED1\u53F0", airtacSeriesIds: ["stw"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto SPZ \u2192 AirTAC STW\u3002" },
+  { brand: "Festo", pattern: /^SLS\b|^SLS-/i, competitorSeries: "SLS \u6ED1\u53F0", airtacSeriesIds: ["hlh"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto SLS \u2192 AirTAC HLH\u3002" },
+  { brand: "Festo", pattern: /^HGW/i, competitorSeries: "HGW \u652F\u9EDE\u6C23\u722A", airtacSeriesIds: ["hfy"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto HGW \u2192 AirTAC HFY\u3002" },
+  { brand: "Festo", pattern: /^DHRS/i, competitorSeries: "DHRS 180\xB0\u6C23\u722A", airtacSeriesIds: ["hfr"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DHRS \u2192 AirTAC HFR\u3002" },
+  { brand: "Festo", pattern: /^CLR/i, competitorSeries: "CLR \u56DE\u8F49\u593E\u7DCA", airtacSeriesIds: ["qck"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto CLR \u2192 AirTAC QCK\u3002" },
+  { brand: "Festo", pattern: /^DGO/i, competitorSeries: "DGO \u7121\u687F\u6C23\u7F38", airtacSeriesIds: ["rms"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto DGO \u2192 AirTAC RMS\u3002" },
+  { brand: "Festo", pattern: /^SLM/i, competitorSeries: "SLM \u7121\u687F\u6ED1\u53F0", airtacSeriesIds: ["rmtl"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto SLM \u2192 AirTAC RMTL\u3002" },
+  { brand: "Festo", pattern: /^ADVUL/i, competitorSeries: "ADVUL \u5E36\u5C0E\u687F\u7DCA\u6E4A\u7F38", airtacSeriesIds: ["tacq"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto ADVUL \u2192 AirTAC TACQ\u3002" },
+  { brand: "Festo", pattern: /^ADVU|^ADN|^AEVC|^ADVC/i, competitorSeries: "ADVU/ADN \u7DCA\u6E4A\u6C23\u7F38", airtacSeriesIds: ["acq", "sda", "ace"], note: "\u516C\u53F8\u5C0D\u7167\u8868\uFF1AFesto ADVU \u2192 AirTAC ACP (\u578B\u9304\u8CC7\u6599\u672A\u6536\u9304 ACP\uFF0C\u4EE5 ACQ \u66FF\u4EE3\u4E26\u8A3B\u660E)\uFF1BADN(ISO21287) \u2192 ACQ/SDA\u3002" },
+  { brand: "Festo", pattern: /^DFM/i, competitorSeries: "DFM \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl", "tsai"], note: "Festo DFM \u5E36\u5C0E\u687F\u6C23\u7F38\u5C0D\u61C9 AirTAC TCL/TCM \u4E09\u8EF8\u7F38\u3002" },
   { brand: "Festo", pattern: /^SLT|^DGSL/i, competitorSeries: "SLT/DGSL \u8FF7\u4F60\u6ED1\u53F0", airtacSeriesIds: ["hlq", "hls", "hlf"], note: "Festo \u8FF7\u4F60\u6ED1\u53F0\u5C0D\u61C9 AirTAC HLQ/HLS \u7CBE\u5BC6\u6ED1\u53F0\u3002" },
   { brand: "Festo", pattern: /^HGP|^DHPS/i, competitorSeries: "HGP/DHPS \u5E73\u884C\u6C23\u722A", airtacSeriesIds: ["hfz", "hfk", "hfp"], note: "Festo \u5E73\u884C\u6C23\u722A\u5C0D\u61C9 AirTAC HFZ/HFK \u7CFB\u5217\u3002" },
   { brand: "Festo", pattern: /^DSM|^DRVS|^DRRD/i, competitorSeries: "DSM/DRVS \u64FA\u52D5\u6C23\u7F38", airtacSeriesIds: ["hrq", "hrs"], note: "Festo \u64FA\u52D5\u7F38\u5C0D\u61C9 AirTAC HRQ \u7CFB\u5217\u3002" },
@@ -33993,13 +33893,31 @@ var KNOWLEDGE_BASE = [
   { brand: "Festo", pattern: /^MS[4-9]|^FRC|^LFR/i, competitorSeries: "MS/FRC \u6C23\u6E90\u8655\u7406", airtacSeriesIds: ["GC", "GFC", "GFR", "GF", "GR"], note: "Festo MS/FRC \u7CFB\u5217 FRL \u5C0D\u61C9 AirTAC G \u7CFB\u5217\u6C23\u6E90\u8655\u7406(GFR/GC\u7B49)\u3002" },
   { brand: "Festo", pattern: /^U-\d|^AMTE/i, competitorSeries: "U \u6D88\u8072\u5668", airtacSeriesIds: ["BSL"], note: "Festo U \u7CFB\u5217\u6D88\u8072\u5668\u5C0D\u61C9 AirTAC BSL\u3002" },
   // --- Mindman (金器) ---
-  { brand: "Mindman", pattern: /^MCQV|^MCQA|^MCQI/i, competitorSeries: "MCQV/MCQA \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda"], note: "Mindman MCQ \u7CFB\u5217\u8584\u578B\u7F38\u5C0D\u61C9 AirTAC ACQ/SDA\u3002" },
-  { brand: "Mindman", pattern: /^MCMI|^MCMJ|^MCJA/i, competitorSeries: "MCMI \u8FF7\u4F60\u6C23\u7F38", airtacSeriesIds: ["mi", "ma", "mf"], note: "Mindman MCMI \u8FF7\u4F60\u7F38(ISO6432)\u5C0D\u61C9 AirTAC MI/MA\u3002" },
-  { brand: "Mindman", pattern: /^MCGB|^MCGA|^MCMA/i, competitorSeries: "MCGB/MCMA \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc", "se", "sai"], note: "Mindman \u6A19\u6E96\u6C23\u7F38\u5C0D\u61C9 AirTAC SC/SE \u7CFB\u5217\u3002" },
-  { brand: "Mindman", pattern: /^MCGS/i, competitorSeries: "MCGS \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl", "tcm"], note: "Mindman MCGS \u5E36\u5C0E\u687F\u7F38\u5C0D\u61C9 AirTAC TCL/TCM\u3002" },
-  { brand: "Mindman", pattern: /^MCHA|^MCHB/i, competitorSeries: "MCH \u6C23\u722A", airtacSeriesIds: ["hfz", "hfy", "hfp"], note: "Mindman \u6C23\u722A\u5C0D\u61C9 AirTAC HF \u7CFB\u5217\uFF0C\u4F9D\u958B\u9589\u5F62\u5F0F\u9078\u64C7\u3002" },
-  { brand: "Mindman", pattern: /^MVSC|^MVSD|^MVSE/i, competitorSeries: "MVSC \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300"], note: "Mindman MVSC \u96FB\u78C1\u95A5\u5C0D\u61C9 AirTAC 4V \u7CFB\u5217(MVSC-220\u21924V210 \u7B49)\u3002" },
-  { brand: "Mindman", pattern: /^MACP|^MAFR|^MACT/i, competitorSeries: "MACP \u6C23\u6E90\u8655\u7406", airtacSeriesIds: ["GFR", "GC", "GFC"], note: "Mindman \u6C23\u6E90\u8655\u7406(\u8ABF\u58D3\u904E\u6FFE\u5668\u7B49)\u5C0D\u61C9 AirTAC GFR/GC \u7CFB\u5217\u3002" },
+  { brand: "Mindman", pattern: /^MCQV2/i, competitorSeries: "MCQV2 \u6A19\u6E96\u6C23\u7F38(ISO15552)", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCQV2 \u2192 AirTAC SE\u3002" },
+  { brand: "Mindman", pattern: /^MCQI/i, competitorSeries: "MCQI2 \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCQI2 \u2192 AirTAC SI (\u578B\u9304\u672A\u6536\u9304 SI\uFF0C\u4EE5 SE/SAI \u66FF\u4EE3\u4E26\u8A3B\u660E)\u3002" },
+  { brand: "Mindman", pattern: /^MCQV(?!2)/i, competitorSeries: "MCQV \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sg"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCQV \u2192 AirTAC SGC (\u92C1\u7BA1\uFF0C\u578B\u9304 id: sg\uFF0C\u898F\u683C\u4EE3\u865F\u9078 SGC)\u3002" },
+  { brand: "Mindman", pattern: /^MCQA/i, competitorSeries: "MCQA \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCQA \u2192 AirTAC SC\u3002" },
+  { brand: "Mindman", pattern: /^MCJQ/i, competitorSeries: "MCJQ \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCJQ \u2192 AirTAC ACQ\u3002" },
+  { brand: "Mindman", pattern: /^MCJA/i, competitorSeries: "MCJA \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["sda"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCJA \u2192 AirTAC SDA\u3002\u683C\u5F0F MCJA-[\u52D5\u4F5C]-[\u7F38\u5F91]-[\u884C\u7A0B][M=\u9644\u78C1]\uFF1A\u4F8B MCJA-11-32-25M \u2192 SDA32x25S\u3002" },
+  { brand: "Mindman", pattern: /^MCJI/i, competitorSeries: "MCJI \u7DCA\u6E4A\u6C23\u7F38", airtacSeriesIds: ["ace"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCJI \u2192 AirTAC ACE\u3002" },
+  { brand: "Mindman", pattern: /^MCGI/i, competitorSeries: "MCGI \u5E36\u5C0E\u687F\u8584\u578B\u7F38", airtacSeriesIds: ["tacq"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCGI \u2192 AirTAC TACQ\u3002" },
+  { brand: "Mindman", pattern: /^MCMI/i, competitorSeries: "MCMI \u8FF7\u4F60\u6C23\u7F38(ISO6432)", airtacSeriesIds: ["mi"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCMI \u2192 AirTAC MI / MIC\u3002" },
+  { brand: "Mindman", pattern: /^MCMJP/i, competitorSeries: "MCMJP \u91DD\u578B\u6C23\u7F38", airtacSeriesIds: ["mpe", "mpg"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCMJP \u2192 AirTAC MPE / MPG\u3002" },
+  { brand: "Mindman", pattern: /^MCMJ(?!P)/i, competitorSeries: "MCMJ \u7B46\u578B\u6C23\u7F38", airtacSeriesIds: ["pb"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCMJ \u2192 AirTAC PB\u3002\u683C\u5F0F MCMJ-[\u52D5\u4F5C]-[\u7F38\u5F91]-[\u884C\u7A0B][M=\u9644\u78C1]\uFF1A\u4F8B MCMJ-11-16-50 \u2192 PB16x50\u3002" },
+  { brand: "Mindman", pattern: /^MCMA/i, competitorSeries: "MCMA \u8FF7\u4F60\u6C23\u7F38", airtacSeriesIds: ["ma"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCMA \u2192 AirTAC MA / MAC\u3002" },
+  { brand: "Mindman", pattern: /^MCMB/i, competitorSeries: "MCMB \u8FF7\u4F60\u6C23\u7F38", airtacSeriesIds: ["mf"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCMB \u2192 AirTAC MF / MFC\uFF1BMCMBR \u2192 MAR\u3002" },
+  { brand: "Mindman", pattern: /^MCCG/i, competitorSeries: "MCCG \u6C23\u7F38", airtacSeriesIds: ["mg"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCCG \u2192 AirTAC MG / MGC\u3002" },
+  { brand: "Mindman", pattern: /^MCDA/i, competitorSeries: "MCDA \u96D9\u8EF8\u6C23\u7F38", airtacSeriesIds: ["tn"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCDA \u2192 AirTAC TN\u3002" },
+  { brand: "Mindman", pattern: /^MCFA|^MCFB/i, competitorSeries: "MCFA/MCFB \u81EA\u7531\u5B89\u88DD\u6C23\u7F38", airtacSeriesIds: ["md", "mk", "mu"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCFA \u2192 AirTAC MD\uFF1BMCFA-K \u2192 MK\uFF1BMCFB \u2192 MU\u3002" },
+  { brand: "Mindman", pattern: /^MCSS|^MCSH/i, competitorSeries: "MCSS/MCSH \u6ED1\u53F0", airtacSeriesIds: ["hls", "hlh"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCSS \u2192 AirTAC HLS\uFF1BMCSH \u2192 HLH\u3002" },
+  { brand: "Mindman", pattern: /^MCRQ/i, competitorSeries: "MCRQ \u56DE\u8F49\u6C23\u7F38", airtacSeriesIds: ["hrq"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCRQ \u2192 AirTAC HRQ\u3002" },
+  { brand: "Mindman", pattern: /^MCGB|^MCGA/i, competitorSeries: "MCGB/MCGA \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc", "se", "sai"], note: "Mindman \u6A19\u6E96\u6C23\u7F38\u5C0D\u61C9 AirTAC SC/SE \u7CFB\u5217\u3002" },
+  { brand: "Mindman", pattern: /^MCGS/i, competitorSeries: "MCGS \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl"], note: "Mindman MCGS \u5E36\u5C0E\u687F\u7F38\u5C0D\u61C9 AirTAC TCL/TCM\u3002" },
+  { brand: "Mindman", pattern: /^MCH[ABCY]/i, competitorSeries: "MCH \u6C23\u722A", airtacSeriesIds: ["hfy", "hfp", "hfz", "hfr"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MCHA\u2192HFY\u3001MCHB\u2192HFP\u3001MCHC\u2192HFZ\u3001MCHY\u2192HFR\u3002" },
+  { brand: "Mindman", pattern: /^MVSC/i, competitorSeries: "MVSC \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300", "4V400", "3V100", "3V200", "3V300"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MVSC-180\u21924V100\u3001MVSC-220\u21924V200\u3001MVSC-300\u21924V300\u3001MVSC-460\u21924V400\uFF1B\u578B\u865F\u4E2D\u300C-3E1\u300D\u7B49 3 \u958B\u982D=\u4E09\u53E3\u21923V100/3V200/3V300\uFF0C\u300C-4E1\u300D=\u4E94\u53E3\u4E8C\u4F4D\u55AE\u96FB\u63A7(\u219210)\uFF0C\u300C-4E2\u300D=\u96D9\u96FB\u63A7(\u219220)\u3002" },
+  { brand: "Mindman", pattern: /^MVSY/i, competitorSeries: "MVSY \u96FB\u78C1\u95A5", airtacSeriesIds: ["7SV"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MVSY-156 \u2192 AirTAC 7V100\uFF1BMVSY-188 \u2192 7V200 (\u578B\u9304 id 7SV)\u3002" },
+  { brand: "Mindman", pattern: /^MVSN/i, competitorSeries: "MVSN \u96FB\u78C1\u95A5", airtacSeriesIds: ["4m"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMindman MVSN \u2192 AirTAC 4M\u3002" },
+  { brand: "Mindman", pattern: /^MACP|^MAFR|^MACT|^MAF\d|^MAL\d|^MAR\d/i, competitorSeries: "Mindman \u6C23\u6E90\u8655\u7406", airtacSeriesIds: ["GFR", "GC", "GFC", "GF", "GR", "GL"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1AMACT\u2192GC(\u4E09\u806F)\u3001MACP\u2192GFC(\u4E8C\u806F)\u3001MAFR\u2192GFR\u3001MAF\u2192GF\u3001MAR\u2192GR\u3001MAL\u2192GL\u3002" },
   // --- PISCO ---
   { brand: "PISCO", pattern: /^JSC/i, competitorSeries: "JSC \u8ABF\u901F\u95A5", airtacSeriesIds: ["PSL"], note: "PISCO JSC \u8ABF\u901F\u63A5\u982D\u5C0D\u61C9 AirTAC PSL \u7CFB\u5217\u3002" },
   { brand: "PISCO", pattern: /^P[CLBEUY]\d/i, competitorSeries: "PC/PL \u5FEB\u63D2\u63A5\u982D", airtacSeriesIds: ["PC", "PL", "PE", "PEG"], note: "PISCO \u5FEB\u63D2\u63A5\u982D\u547D\u540D\u8207 AirTAC \u5E7E\u4E4E\u76F8\u540C\uFF1APC\u76F4\u901A\u2192PC\u3001PL\u5F4E\u982D\u2192PL\u3001PE\u4E09\u901A/PU\u76F4\u901A(\u7BA1\u5C0D\u7BA1)/PY\u2192PE \u7CFB\u5217 spec \u9078\u9805\u3001\u6E1B\u5F91\u985E\u2192PEG\u3002" },
@@ -34007,8 +33925,18 @@ var KNOWLEDGE_BASE = [
   // --- CKD (常見，雖不在下拉清單也支援自動偵測) ---
   { brand: "CKD", pattern: /^SSD/i, competitorSeries: "SSD \u8584\u578B\u6C23\u7F38", airtacSeriesIds: ["acq", "sda"], note: "CKD SSD \u8584\u578B\u7F38\u5C0D\u61C9 AirTAC ACQ/SDA\u3002" },
   { brand: "CKD", pattern: /^CMK2|^SCM/i, competitorSeries: "CMK2/SCM \u6C23\u7F38", airtacSeriesIds: ["ma", "mi", "sc"], note: "CKD CMK2 \u5C0D\u61C9 AirTAC MA/MI\uFF1BSCM \u5C0D\u61C9 SC \u7CFB\u5217\u3002" },
-  { brand: "CKD", pattern: /^STG|^STS|^STL/i, competitorSeries: "STG \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl", "tcm"], note: "CKD STG \u5E36\u5C0E\u687F\u7F38\u5C0D\u61C9 AirTAC TCL/TCM\u3002" },
-  { brand: "CKD", pattern: /^4G[ABD]|^4K[AB]/i, competitorSeries: "4G/4K \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300", "7SV"], note: "CKD 4G/4KA \u96FB\u78C1\u95A5\u5C0D\u61C9 AirTAC 4V/7SV \u7CFB\u5217\u3002" }
+  { brand: "CKD", pattern: /^SCW/i, competitorSeries: "SCW \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["se", "sai"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD SCW \u2192 AirTAC SE / SI\u3002" },
+  { brand: "CKD", pattern: /^SCA2/i, competitorSeries: "SCA2 \u6A19\u6E96\u6C23\u7F38", airtacSeriesIds: ["sc", "jsi"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD SCA2 \u2192 AirTAC SC / JSI\u3002" },
+  { brand: "CKD", pattern: /^SCP/i, competitorSeries: "SCP \u7B46\u578B\u6C23\u7F38", airtacSeriesIds: ["pb"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD SCP*3 \u2192 AirTAC PB\u3002" },
+  { brand: "CKD", pattern: /^STR2/i, competitorSeries: "STR2 \u96D9\u8EF8\u6C23\u7F38", airtacSeriesIds: ["tr"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD STR2 \u2192 AirTAC TR\u3002" },
+  { brand: "CKD", pattern: /^SMG|^SMD2|^MDC2/i, competitorSeries: "SMG/SMD2/MDC2 \u6C23\u7F38", airtacSeriesIds: ["md", "mk", "mu"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD SMG \u2192 MD\u3001SMD2 \u2192 MK\u3001MDC2 \u2192 MU\u3002" },
+  { brand: "CKD", pattern: /^LC[RGM]/i, competitorSeries: "LCR/LCG/LCM \u6ED1\u53F0", airtacSeriesIds: ["hlq", "hls"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD LCR/LCG \u2192 AirTAC HLQ\uFF1BLCM \u2192 HLS\u3002" },
+  { brand: "CKD", pattern: /^GRC/i, competitorSeries: "GRC \u56DE\u8F49\u6C23\u7F38", airtacSeriesIds: ["hrq"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD GRC \u2192 AirTAC HRQ\u3002" },
+  { brand: "CKD", pattern: /^RCC2/i, competitorSeries: "RCC2 \u56DE\u8F49\u593E\u7DCA", airtacSeriesIds: ["qck"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD RCC2 \u2192 AirTAC QCK\u3002" },
+  { brand: "CKD", pattern: /^MRL2/i, competitorSeries: "MRL2 \u7121\u687F\u6C23\u7F38", airtacSeriesIds: ["rms"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD MRL2 \u2192 AirTAC RMS\u3002" },
+  { brand: "CKD", pattern: /^3G[ABD]/i, competitorSeries: "3G \u4E09\u53E3\u96FB\u78C1\u95A5", airtacSeriesIds: ["3V100", "3V200", "3V300"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD 3GA1~3 \u2192 AirTAC 3V100~3V300\u3002" },
+  { brand: "CKD", pattern: /^STG|^STS|^STL/i, competitorSeries: "STG \u5E36\u5C0E\u687F\u6C23\u7F38", airtacSeriesIds: ["tcl"], note: "CKD STG \u5E36\u5C0E\u687F\u7F38\u5C0D\u61C9 AirTAC TCL/TCM\u3002" },
+  { brand: "CKD", pattern: /^4G[ABD]|^4K[AB]/i, competitorSeries: "4G/4K \u96FB\u78C1\u95A5", airtacSeriesIds: ["4V100", "4V200", "4V300", "7SV"], note: "\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\uFF1ACKD 4GA1/4GA2/4GA3 \u2192 AirTAC 4V100/4V200/4V300 (\u7B2C 4 \u78BC 1=\u55AE\u96FB\u63A7\u219210, 2=\u96D9\u96FB\u63A7\u219220)\u3002" }
 ];
 function heuristicMatch(input, brand) {
   const tokens = input.split(/[\s,，、;；+＋\n\/]+/).map((t) => t.trim()).filter((t) => t.length >= 2);
@@ -34059,6 +33987,10 @@ function validateRecommendation(rec) {
     }
     const code = String(sel.code ?? "");
     const opt = (cat.options || []).find((o) => o.code === code);
+    if (!opt && isFreeValueCategory(cat) && /^\d+(\.\d+)?$/.test(code)) {
+      selections[sel.categoryId] = code;
+      continue;
+    }
     if (!opt) {
       const valid = (cat.options || []).map((o) => o.code === "" ? "(\u7A7A\u767D)" : o.code).join(", ");
       if (/stroke/i.test(cat.id) && /^\d+$/.test(code)) {
@@ -34080,7 +34012,11 @@ function validateRecommendation(rec) {
   }
   const serverGeneratedCode = generateOrderingCode(series, selections);
   const normalize = (s) => s.replace(/[\s\-–—]+/g, "").toUpperCase();
-  if (rec.fullOrderingCode && serverGeneratedCode && normalize(rec.fullOrderingCode) !== normalize(serverGeneratedCode)) {
+  const ai = normalize(rec.fullOrderingCode || "");
+  const server = normalize(serverGeneratedCode || "");
+  const aiIsPrefix = ai.length >= 3 && server.startsWith(ai);
+  const sameChars = ai.length > 0 && ai.split("").sort().join("") === server.split("").sort().join("");
+  if (rec.fullOrderingCode && serverGeneratedCode && ai !== server && !aiIsPrefix && !sameChars) {
     warnings.push(`AI \u7522\u751F\u7684\u8A02\u8CFC\u78BC\u300C${rec.fullOrderingCode}\u300D\u8207\u4F9D\u578B\u9304\u898F\u5247\u91CD\u5EFA\u7684\u300C${serverGeneratedCode}\u300D\u4E0D\u4E00\u81F4\uFF0C\u8ACB\u4EE5\u578B\u9304\u9A57\u8B49\u7248\u672C\u70BA\u6E96\u3002`);
   }
   return {
@@ -36602,34 +36538,55 @@ var company_crossref_default = [
 // src/server/companyCrossref.ts
 var entries = company_crossref_default;
 function cellTokens(cell) {
-  return cell.split(/[\/,，、\s]+/).map((t) => t.trim().split("~")[0]).map((t) => t.replace(/[^A-Za-z0-9-]/g, "").toUpperCase()).filter((t) => t.length >= 2);
+  return cell.split(/[\/,，、\s]+/).flatMap((t) => {
+    const r = t.trim().match(/^(.*?)(\d)~(\d)$/);
+    if (!r) return [t.trim().split("~")[0]];
+    const out = [];
+    for (let d = Number(r[2]); d <= Number(r[3]); d++) out.push(`${r[1]}${d}`);
+    return out;
+  }).map((t) => t.replace(/[^A-Za-z0-9*-]/g, "").toUpperCase()).filter((t) => t.length >= 2);
 }
 var alphaPrefix = (t) => t.match(/^[A-Z]+/)?.[0] || "";
 function matchCompanyTable(input, brand) {
-  const inputTokens = input.split(/[\s,，、;；+＋\n\/]+/).map((t) => t.trim().toUpperCase().replace(/[^A-Z0-9-]/g, "")).filter((t) => t.length >= 2);
-  if (inputTokens.length === 0) return [];
+  const baseTokens = input.split(/[\s,，、;；+＋\n\/]+/).map((t) => t.trim().toUpperCase().replace(/[^A-Z0-9-]/g, "")).filter((t) => t.length >= 2);
+  if (baseTokens.length === 0) return [];
+  const inputTokens = [...baseTokens];
+  for (const t of baseTokens) {
+    if (/^CD[A-Z0-9]/.test(t)) inputTokens.push("C" + t.slice(2));
+    if (/^MD[A-Z]\d?/.test(t)) inputTokens.push("M" + t.slice(2));
+  }
   const strong = [];
   const weak = [];
   for (const entry of entries) {
+    if (/自製/.test(entry.airtac)) continue;
     for (const [entryBrand, cell] of Object.entries(entry.competitors)) {
       if (brand && entryBrand.toLowerCase() !== brand.toLowerCase()) continue;
-      for (const token of cellTokens(cell)) {
-        const hitStrong = inputTokens.some((it) => it.startsWith(token));
+      let weakHit = null;
+      let strongHit = false;
+      for (const rawToken of cellTokens(cell)) {
+        const family = !rawToken.includes("*") && /[A-Z]\d0{2,}$/.test(rawToken) ? rawToken.replace(/(\d)0{2,}$/, "$1") : "";
+        const wildcard = rawToken.includes("*") || Boolean(family);
+        const token = family || (rawToken.includes("*") ? rawToken.split("*")[0] : rawToken);
+        if (token.length < 2 || wildcard && token.length < 3) continue;
+        const hitStrong = inputTokens.some((it) => it.startsWith(token) && (token.length > 2 || /\d/.test(it.charAt(2))));
         if (hitStrong) {
           strong.push({ entry, brand: entryBrand, matchedModel: token, strong: true });
+          strongHit = true;
           break;
         }
         const ap = alphaPrefix(token);
-        if (ap.length >= 2 && inputTokens.some((it) => it.startsWith(ap) && /\d/.test(it.charAt(ap.length)))) {
-          weak.push({ entry, brand: entryBrand, matchedModel: token, strong: false });
-          break;
+        if (!weakHit && !wildcard && ap.length >= 2 && inputTokens.some((it) => it.startsWith(ap) && /\d/.test(it.charAt(ap.length)))) {
+          weakHit = { entry, brand: entryBrand, matchedModel: token, strong: false };
         }
       }
+      if (!strongHit && weakHit) weak.push(weakHit);
     }
   }
+  const best = Math.max(0, ...strong.map((m) => m.matchedModel.length));
+  const strongKept = best >= 4 ? strong.filter((m) => m.matchedModel.length >= best - 1) : strong;
   const seen = /* @__PURE__ */ new Set();
   const out = [];
-  for (const m of [...strong, ...weak]) {
+  for (const m of strongKept.length > 0 ? strongKept : weak) {
     if (!seen.has(m.entry)) {
       seen.add(m.entry);
       out.push(m);
@@ -36645,15 +36602,55 @@ for (const s of defaultCatalog) {
     if (c.length >= 2 && !variantCodeToId.has(c)) variantCodeToId.set(c, s.id);
   }
 }
+var COMPANY_ALIASES = [
+  ["7MV", ["7SV", "7sv_base"]],
+  ["7MA", ["7sa"]],
+  ["7V", ["7SV"]],
+  ["7A", ["7sa"]],
+  ["TCM", ["tcl"]],
+  ["TCL", ["tcl"]],
+  ["SI", ["se", "sai"]],
+  ["SU", ["sai", "se"]],
+  ["ACP", ["acq"]],
+  ["ACQS", ["acq"]],
+  ["SDAS", ["sda"]],
+  ["MAL", ["mbl"]],
+  ["2KS", ["2KSA"]],
+  ["2KW", ["2KWA"]],
+  ["2KL", ["2KLA"]],
+  ["2S", ["2SA"]],
+  ["2W", ["2WA"]],
+  ["2L", ["2LA"]],
+  ["2V", ["2V"]],
+  ["2P", ["2P"]],
+  ["BFR", ["AFR-BFR"]],
+  ["BFC", ["AFC-BFC"]],
+  ["BC", ["AC-BC"]],
+  ["BF", ["AF-BF"]],
+  ["BR", ["AR-BR"]],
+  ["BL", ["AL-BL"]],
+  ["3FM", ["3f-3fm"]],
+  ["3F", ["3f-3fm"]],
+  ["GS", ["F-G-Gauge"]],
+  ["\u6CB9\u58D3\u7DE9\u885D\u5668", ["ACA", "ACJ", "ACJ-L"]]
+].sort((a, b) => b[0].length - a[0].length);
 function companyMatchCatalogIds(matches) {
   const ids = [];
   const add = (id) => {
     if (!ids.includes(id)) ids.push(id);
   };
   for (const m of matches) {
+    const whole = m.entry.airtac.trim();
+    const aliasWhole = COMPANY_ALIASES.find(([k]) => whole === k);
+    if (aliasWhole) aliasWhole[1].forEach(add);
     for (const raw of m.entry.airtac.split(/[\/,，、\s]+/)) {
       const token = raw.trim().split("~")[0].toUpperCase().replace(/[^A-Z0-9-]/g, "");
       if (token.length < 2) continue;
+      const alias = COMPANY_ALIASES.find(([k]) => token.startsWith(k));
+      if (alias) {
+        alias[1].forEach(add);
+        continue;
+      }
       const ap = alphaPrefix(token);
       if (variantCodeToId.has(token)) add(variantCodeToId.get(token));
       else if (ap.length >= 2 && variantCodeToId.has(ap)) add(variantCodeToId.get(ap));
@@ -36675,6 +36672,271 @@ function companyMatchesText(matches) {
     const extra = [m.entry.note && `\u5099\u8A3B: ${m.entry.note}`, m.entry.sensor && `\u642D\u914D\u611F\u6E2C\u5668: ${m.entry.sensor}`].filter(Boolean).join("\uFF1B");
     return `- [\u516C\u53F8\u5C0D\u7167\u8868/${m.entry.sheet}/${m.entry.section}] ${comps} \u2192 AirTAC\u300C${m.entry.airtac}\u300D${extra ? `\uFF08${extra}\uFF09` : ""}`;
   }).join("\n");
+}
+
+// src/server/competitorDecoders.ts
+var seriesById2 = new Map(defaultCatalog.map((s) => [s.id, s]));
+function keepValid(seriesId, sel) {
+  const s = seriesById2.get(seriesId);
+  const out = {};
+  if (!s) return out;
+  for (const [k, v] of Object.entries(sel)) {
+    if (v === void 0) continue;
+    const cat = s.categories.find((c) => c.id === k);
+    if (!cat) continue;
+    if (cat.options.some((o) => o.code === v) || /stroke/i.test(k) && /^\d+$/.test(v)) out[k] = v;
+  }
+  return out;
+}
+var SMC_VOLTAGE = {
+  "5": ["B", "DC24V"],
+  "6": ["F", "DC12V"],
+  "3": ["C", "AC110V"],
+  "4": ["A", "AC220V"],
+  "1": ["C", "AC100V (AirTAC \u4EE5 AC110V \u5C0D\u61C9\uFF0C\u8ACB\u78BA\u8A8D)"],
+  "2": ["A", "AC200V (AirTAC \u4EE5 AC220V \u5C0D\u61C9\uFF0C\u8ACB\u78BA\u8A8D)"]
+};
+var SMC_FUNCTION = {
+  "1": ["10", "\u4E8C\u4F4D\u55AE\u96FB\u63A7"],
+  "2": ["20", "\u4E8C\u4F4D\u96D9\u96FB\u63A7"],
+  "3": ["30C", "\u4E09\u4F4D\u4E2D\u4F4D\u5C01\u9589"],
+  "4": ["30E", "\u4E09\u4F4D\u4E2D\u4F4D\u6392\u6C23"],
+  "5": ["30P", "\u4E09\u4F4D\u4E2D\u4F4D\u4F9B\u58D3"]
+};
+var SMC_PORT_TO_AIRTAC = {
+  "M5": ["M5", "M5"],
+  "01": ["06", '1/8"'],
+  "02": ["08", '1/4"'],
+  "03": ["10", '3/8"'],
+  "04": ["15", '1/2"'],
+  "06": ["20", '3/4"'],
+  "10": ["25", '1"']
+};
+var SMC_THREAD = { "": ["", "Rc(PT)\u7259"], F: ["G", "G\u7259"], N: ["T", "NPT\u7259"], T: ["T", "NPTF\u7259(\u4EE5NPT\u5C0D\u61C9)"] };
+var decoders = [
+  // ---------- SMC SY 電磁閥 → AirTAC 7V (公司表 SY3/5/7/9*00 → 7V050/100/200/300) ----------
+  (m) => {
+    const r = m.match(/^SY([3579])([1-5])(\d{2})[A-Z]?-([0-9VSR])([A-Z]*)-(M5|0[1-3]|C(?:4|6|8|10|12))([FNT]?)/);
+    if (!r) return null;
+    const [, size, fn, mount, volt, , port, thr] = r;
+    const seriesCode = { "3": "05", "5": "1", "7": "2", "9": "3" }[size];
+    const [ctrl, fnText] = SMC_FUNCTION[fn];
+    const v = SMC_VOLTAGE[volt];
+    const quick = port.startsWith("C");
+    const portCode = quick ? port.slice(1).padStart(2, "0") : SMC_PORT_TO_AIRTAC[port]?.[0];
+    const facts = [
+      `SY${size}000 \u7CFB\u5217 \u2192 AirTAC 7V${seriesCode === "05" ? "050" : seriesCode + "00"} (\u516C\u53F8\u5C0D\u7167\u8868)`,
+      `\u7B2C2\u78BC ${fn} = ${fnText} \u2192 controlType ${ctrl}`,
+      `${mount === "20" ? "20 = \u672C\u9AD4\u76F4\u63A5\u914D\u7BA1" : `${mount} = \u5E95\u5EA7\u914D\u7BA1\u578B (\u9700\u53E6\u914D 7V \u5E95\u5EA7)`}`,
+      `\u96FB\u58D3\u78BC ${volt} = ${v ? v[1] : "\u672A\u77E5"}${v ? ` \u2192 ${v[0]}` : ""}`,
+      quick ? `\u53E3\u5F91 ${port} = \u03A6${portCode}\u5FEB\u63D2 \u2192 portConnType J + port ${portCode}` : `\u53E3\u5F91 ${port} = ${SMC_PORT_TO_AIRTAC[port]?.[1]} \u2192 port ${portCode}`,
+      `\u7259\u578B ${thr || "(\u7121)"} = ${SMC_THREAD[thr]?.[1]}`,
+      "SMC \u9644\u5C0E\u7DDA/\u63D2\u5EA7 (G/L/M \u7B49) \u2192 AirTAC \u7AEF\u5B50\u7DDA\u9577 050 (0.5m)"
+    ];
+    if (mount !== "20") return { family: `SMC SY${size}000 \u96FB\u78C1\u95A5 (\u5E95\u5EA7\u578B)`, facts };
+    return {
+      family: `SMC SY${size}000 \u96FB\u78C1\u95A5`,
+      facts,
+      target: {
+        seriesId: "7SV",
+        selections: keepValid("7SV", {
+          seriesCode,
+          controlType: ctrl,
+          portConnType: quick ? "J" : "",
+          port: portCode,
+          voltage: v?.[0],
+          leadLength: "050",
+          thread: SMC_THREAD[thr]?.[0]
+        })
+      }
+    };
+  },
+  // ---------- SMC VFS1000/2000/3000 → AirTAC 4V100/200/300 (公司表) ----------
+  (m) => {
+    const r = m.match(/^VFS([123])([1-5])\d{2}[A-Z]?-([0-9])([A-Z]*)-(M5|0[1-4])([FNT]?)/);
+    if (!r) return null;
+    const [, size, fn, volt, , port, thr] = r;
+    const seriesId = `4V${size}00`;
+    const [ctrl, fnText] = SMC_FUNCTION[fn];
+    const v = SMC_VOLTAGE[volt];
+    const p = SMC_PORT_TO_AIRTAC[port];
+    return {
+      family: `SMC VFS${size}000 \u96FB\u78C1\u95A5`,
+      facts: [
+        `VFS${size}000 \u2192 AirTAC ${seriesId} (\u516C\u53F8\u5C0D\u7167\u8868)`,
+        `\u7B2C2\u78BC ${fn} = ${fnText} \u2192 ${ctrl}`,
+        `\u96FB\u58D3\u78BC ${volt} = ${v ? v[1] : "\u672A\u77E5"}${v ? ` \u2192 ${v[0]}` : ""}`,
+        `\u53E3\u5F91 ${port} = ${p?.[1]} \u2192 ${p?.[0]}`
+      ],
+      target: { seriesId, selections: keepValid(seriesId, { controlType: ctrl, port: p?.[0], voltage: v?.[0], thread: SMC_THREAD[thr]?.[0] }) }
+    };
+  },
+  // ---------- SMC CQ2 / CDQ2 薄型氣缸 → AirTAC ACQ ----------
+  (m) => {
+    const r = m.match(/^C(D?)Q2(W?)([AB]?)(\d{2,3})-(\d{1,3})([DST]?)/);
+    if (!r) return null;
+    const [, d, w, mountLetter, bore, stroke, action] = r;
+    const series = w ? "ACQD" : action === "S" ? "ASQ" : action === "T" ? "ATQ" : "ACQ";
+    return {
+      family: "SMC CQ2 \u8584\u578B\u6C23\u7F38",
+      facts: [
+        `C${d ? "D" : ""}Q2 \u2192 AirTAC ACQ (\u516C\u53F8\u5C0D\u7167\u8868)\uFF1B${d ? "CD = \u9644\u78C1\u77F3 \u2192 S" : "\u7121 D = \u4E0D\u9644\u78C1\u77F3"}`,
+        `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}${w ? "\u3001W = \u96D9\u8EF8 \u2192 ACQD" : ""}${action === "S" ? "\u3001S = \u55AE\u52D5\u62BC\u51FA \u2192 ASQ" : action === "T" ? "\u3001T = \u55AE\u52D5\u5F15\u5165 \u2192 ATQ" : "\u3001\u5FA9\u52D5"}`,
+        mountLetter ? `\u5B89\u88DD ${mountLetter} = ${mountLetter === "B" ? "\u901A\u5B54\u57FA\u672C\u578B" : "\u5169\u7AEF\u87BA\u5B54\u578B"} \u2192 ACQ \u6A19\u6E96\u5B89\u88DD (\u7A7A\u767D)` : ""
+      ].filter(Boolean),
+      target: { seriesId: "acq", selections: keepValid("acq", { series, bore, stroke, magnet: d ? "S" : "", mounting_type: mountLetter ? "" : void 0 }) }
+    };
+  },
+  // ---------- SMC CJ2 / CDJ2 筆型氣缸 → AirTAC PB (公司表) ----------
+  (m) => {
+    const r = m.match(/^C(D?)J2([A-Z]?)(\d{1,2})-(\d{1,3})(?![0-9])/);
+    if (!r) return null;
+    const [, d, , bore, stroke] = r;
+    return {
+      family: "SMC CJ2 \u7B46\u578B\u6C23\u7F38",
+      facts: [`CJ2 \u2192 AirTAC PB (\u516C\u53F8\u5C0D\u7167\u8868)\uFF1B${d ? "CD = \u9644\u78C1\u77F3 \u2192 S" : "\u4E0D\u9644\u78C1\u77F3"}`, `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}`],
+      target: { seriesId: "pb", selections: keepValid("pb", { bore, stroke, magnet: d ? "S" : "" }) }
+    };
+  },
+  // ---------- SMC CM2 / CDM2 圓形氣缸 → AirTAC MF (公司表) ----------
+  (m) => {
+    const r = m.match(/^C(D?)M2([A-Z]{0,2})(\d{2})-(\d{1,4})/);
+    if (!r) return null;
+    const [, d, , bore, stroke] = r;
+    return {
+      family: "SMC CM2 \u5713\u5F62\u6C23\u7F38",
+      facts: [`CM2 \u2192 AirTAC MF (\u516C\u53F8\u5C0D\u7167\u8868\uFF0CMFC \u70BA\u7DE9\u885D\u53EF\u8ABF\u578B)\uFF1B${d ? "CD = \u9644\u78C1\u77F3 \u2192 S" : "\u4E0D\u9644\u78C1\u77F3"}`, `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}`],
+      target: { seriesId: "mf", selections: keepValid("mf", { bore, stroke, magnet: d ? "S" : "" }) }
+    };
+  },
+  // ---------- SMC MGP 三軸氣缸 → AirTAC TCL / TCM ----------
+  (m) => {
+    const r = m.match(/^MGP([MLA])(\d{2,3})-(\d{1,3})/);
+    if (!r) return null;
+    const [, b, bore, stroke] = r;
+    const bearing = b === "M" ? "M" : "L";
+    return {
+      family: "SMC MGP \u4E09\u8EF8\u6C23\u7F38",
+      facts: [`MGP${b} \u2192 AirTAC TC${bearing} (${b === "M" ? "\u6ED1\u52D5\u8EF8\u627F\u2192\u9285\u5957 M" : "\u6EFE\u73E0\u8EF8\u627F\u2192\u76F4\u7DDA\u8EF8\u627F L"}\uFF0C\u516C\u53F8\u5C0D\u7167\u8868)`, `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}\uFF1BSMC \u6A19\u914D\u78C1\u77F3 \u2192 S`],
+      target: { seriesId: "tcl", selections: keepValid("tcl", { bearing, bore, stroke, magnet: "S" }) }
+    };
+  },
+  // ---------- SMC MXS / MXQ 滑台 → AirTAC HLS / HLQ ----------
+  (m) => {
+    const r = m.match(/^MX([SQ])(L?)(\d{1,2})-(\d{1,3})/);
+    if (!r) return null;
+    const [, t, , bore, stroke] = r;
+    const seriesId = t === "S" ? "hls" : "hlq";
+    return {
+      family: `SMC MX${t} \u6ED1\u53F0`,
+      facts: [`MX${t} \u2192 AirTAC ${seriesId.toUpperCase()} (\u516C\u53F8\u5C0D\u7167\u8868)`, `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}`],
+      target: { seriesId, selections: keepValid(seriesId, { type: seriesId.toUpperCase(), bore, stroke, magnet: "S" }) }
+    };
+  },
+  // ---------- SMC CXS 雙軸氣缸 → AirTAC TR (公司表) ----------
+  (m) => {
+    const r = m.match(/^CXS([ML]?)(\d{1,2})-(\d{1,3})/);
+    if (!r) return null;
+    const [, , bore, stroke] = r;
+    return {
+      family: "SMC CXS \u96D9\u8EF8\u6C23\u7F38",
+      facts: ["CXS \u2192 AirTAC TR (\u516C\u53F8\u5C0D\u7167\u8868)", `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}`],
+      target: { seriesId: "tr", selections: keepValid("tr", { bore, stroke, magnet: "S" }) }
+    };
+  },
+  // ---------- SMC KQ2 快插接頭 → AirTAC PC / PL / PE 系列 ----------
+  (m) => {
+    const r = m.match(/^KQ2([HLTUYE])(\d{2})-(M5|0[1-4]|00)/);
+    if (!r) return null;
+    const [, shape, od, thr] = r;
+    const tube = String(Number(od));
+    if (shape === "H" && thr !== "00") {
+      return { family: "SMC KQ2H \u516C\u7259\u76F4\u901A", facts: [`KQ2H \u2192 AirTAC PC\uFF1B\u7BA1\u5F91 \u03A6${tube}\u3001\u7259 ${thr}`], target: { seriesId: "PC", selections: keepValid("PC", { spec: "PC", tube_od: tube, thread_spec: thr }) } };
+    }
+    if (shape === "L" && thr !== "00") {
+      return { family: "SMC KQ2L \u516C\u7259\u5F4E\u982D", facts: [`KQ2L \u2192 AirTAC PL\uFF1B\u7BA1\u5F91 \u03A6${tube}\u3001\u7259 ${thr}`], target: { seriesId: "PL", selections: keepValid("PL", { spec: "PL", tube_od: tube, thread_spec: thr }) } };
+    }
+    const spec = { T: "PE", U: "PU", Y: "PY", L: "PV", E: "PM" }[shape];
+    if (thr === "00" && spec) {
+      return { family: `SMC KQ2${shape} \u7BA1\u5C0D\u7BA1\u63A5\u982D`, facts: [`KQ2${shape}(\u7BA1\u5C0D\u7BA1) \u2192 AirTAC PE \u7CFB\u5217 spec ${spec}\uFF1B\u7BA1\u5F91 \u03A6${tube}`], target: { seriesId: "PE", selections: keepValid("PE", { spec, tube_od: tube }) } };
+    }
+    return null;
+  },
+  // ---------- SMC AS 附快插調速接頭 → AirTAC PSL ----------
+  (m) => {
+    const r = m.match(/^AS([1-4])\d{2}1F-(M5|0[1-4])-(\d{2})/);
+    if (!r) return null;
+    const [, , thr, od] = r;
+    const tube = String(Number(od));
+    return {
+      family: "SMC AS \u8ABF\u901F\u63A5\u982D (\u9644\u5FEB\u63D2)",
+      facts: [`AS\u20261F (\u5F4E\u982D\u9644\u5FEB\u63D2) \u2192 AirTAC PSL\uFF1B\u7259 ${thr}\u3001\u7BA1\u5F91 \u03A6${tube}`],
+      target: { seriesId: "PSL", selections: keepValid("PSL", { spec: "PSL", tube_od: tube, thread_spec: thr }) }
+    };
+  },
+  // ---------- SMC AW / AR / AF / AL / AC 氣源處理 → AirTAC GFR / GR / GF / GL / GC / GFC ----------
+  (m) => {
+    const r = m.match(/^A([WRFLC])(20|30|40)(A?)-(0[1-4]|06|10)([A-Z]*)/);
+    if (!r) return null;
+    const [, kind, size, a, port, opts] = r;
+    const seriesId = kind === "W" ? "GFR" : kind === "R" ? "GR" : kind === "F" ? "GF" : kind === "L" ? "GL" : a ? "GFC" : "GC";
+    const series = `${size}0`;
+    const p = SMC_PORT_TO_AIRTAC[port];
+    const sel = { series, port: p?.[0] };
+    const facts = [`A${kind}${size}${a} \u2192 AirTAC ${seriesId}${series} (\u516C\u53F8\u5C0D\u7167\u8868)`, `\u53E3\u5F91 ${port} = ${p?.[1]} \u2192 ${p?.[0]}`];
+    if (seriesId === "GFR" || seriesId === "GR") {
+      sel.bracket = opts.includes("B") ? "" : "J";
+      sel.gauge = opts.includes("G") ? "" : "N";
+      facts.push(`${opts.includes("B") ? "B = \u9644\u652F\u67B6 \u2192 \u7A7A\u767D" : "\u672A\u9644\u652F\u67B6 \u2192 J"}\uFF1B${opts.includes("G") ? "G = \u9644\u58D3\u529B\u8868 \u2192 \u7A7A\u767D" : "\u672A\u9644\u58D3\u529B\u8868 \u2192 N"}`);
+    }
+    return { family: `SMC A${kind} \u6C23\u6E90\u8655\u7406`, facts, target: { seriesId, selections: keepValid(seriesId, sel) } };
+  },
+  // ---------- Mindman MCJA / MCMJ / MCMI (格式 系列-動作-缸徑-行程[M]) ----------
+  (m) => {
+    const r = m.match(/^MC(JA|MJ|MI)-(\d{2})-(\d{1,3})-(\d{1,4})(M?)/);
+    if (!r) return null;
+    const [, t, action, bore, stroke, mag] = r;
+    const seriesId = t === "JA" ? "sda" : t === "MJ" ? "pb" : "mi";
+    if (action !== "11") return { family: `Mindman MC${t}`, facts: [`MC${t} \u2192 AirTAC ${seriesId.toUpperCase()} (\u516C\u53F8\u5C0D\u7167\u8868)\uFF1B\u52D5\u4F5C\u78BC ${action} \u975E\u5FA9\u52D5\uFF0C\u8ACB\u78BA\u8A8D`] };
+    return {
+      family: `Mindman MC${t}`,
+      facts: [`MC${t} \u2192 AirTAC ${seriesId.toUpperCase()} (\u516C\u53F8\u5C0D\u7167\u8868)`, `11 = \u5FA9\u52D5\u3001\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}\u3001${mag ? "M = \u9644\u78C1\u77F3 \u2192 S" : "\u4E0D\u9644\u78C1\u77F3"}`],
+      target: { seriesId, selections: keepValid(seriesId, { bore, stroke, magnet: mag ? "S" : "" }) }
+    };
+  },
+  // ---------- Festo DSNU → AirTAC MI / MIC ----------
+  (m) => {
+    const r = m.match(/^DSNU-(\d{1,2})-(\d{1,4})-(PPV|PPS|P)(-A)?/);
+    if (!r) return null;
+    const [, bore, stroke, cushion, a] = r;
+    const series = cushion === "P" ? "MI" : "MIC";
+    return {
+      family: "Festo DSNU \u5713\u5F62\u6C23\u7F38",
+      facts: [`DSNU \u2192 AirTAC MI (\u516C\u53F8\u5C0D\u7167\u8868)`, `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}\u3001${cushion === "P" ? "P = \u5F48\u6027\u7DE9\u885D \u2192 MI" : `${cushion} = \u53EF\u8ABF\u7DE9\u885D \u2192 MIC`}\u3001${a ? "A = \u9644\u78C1\u77F3 \u2192 S" : "\u4E0D\u9644\u78C1\u77F3"}`],
+      target: { seriesId: "mi", selections: keepValid("mi", { series, bore, stroke, magnet: a ? "S" : "" }) }
+    };
+  },
+  // ---------- CKD SSD2 薄型氣缸 → AirTAC ACQ (公司表) ----------
+  (m) => {
+    const r = m.match(/^SSD2?-(?:L-)?(\d{2,3})-(\d{1,3})(?![0-9])/);
+    if (!r) return null;
+    const [, bore, stroke] = r;
+    return {
+      family: "CKD SSD \u8584\u578B\u6C23\u7F38",
+      facts: ["SSD2 \u2192 AirTAC ACQ (\u516C\u53F8\u5C0D\u7167\u8868)", `\u7F38\u5F91 ${bore}\u3001\u884C\u7A0B ${stroke}`],
+      target: { seriesId: "acq", selections: keepValid("acq", { series: "ACQ", bore, stroke }) }
+    };
+  }
+];
+function decodeCompetitor(input) {
+  const raw = String(input || "").trim().toUpperCase();
+  if (!raw || /[+＋,，;；\n]/.test(raw)) return null;
+  const m = raw.replace(/\s+/g, "");
+  for (const d of decoders) {
+    const r = d(m);
+    if (r) return r;
+  }
+  return null;
 }
 
 // src/server/store.ts
@@ -36836,7 +37098,16 @@ function getAi() {
 }
 var MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 var CLASSIFIER_MODEL = () => process.env.GEMINI_CLASSIFIER_MODEL || "gemini-3.1-flash-lite";
-var FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-3-flash-preview"];
+var FALLBACK_MODELS = [
+  "gemini-3.1-flash-lite",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-3.8-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-flash-lite-latest",
+  "gemini-2.5-flash",
+  "gemini-3-flash-preview"
+];
 var catalogIndex = buildCatalogIndex();
 var catalogIndexJson = JSON.stringify(catalogIndex);
 var slimIndexJson = JSON.stringify(
@@ -36860,50 +37131,57 @@ function mentionedSeriesIds(text) {
 }
 var cache = /* @__PURE__ */ new Map();
 var modelCooldown = /* @__PURE__ */ new Map();
-var COOLDOWN_MS = 90 * 1e3;
+var COOLDOWN = { overloaded: 2e4, perMinute: 6e4, perDay: 30 * 6e4, gone: 6 * 60 * 6e4 };
 var isCoolingDown = (m) => (modelCooldown.get(m) || 0) > Date.now();
-async function generateWithRetry(params) {
+function classifyError(error) {
+  const msg = String(error?.message || "");
+  const low = msg.toLowerCase();
+  if (error?.status === 404 || low.includes("not found") || low.includes("no longer available")) return "gone";
+  if (error?.status === 429 || low.includes("429") || low.includes("quota") || low.includes("resource_exhausted")) {
+    if (/limit:\s*0\b/.test(msg) || /PerDay/i.test(msg)) return "perDay";
+    return "perMinute";
+  }
+  if (error?.status === 503 || error?.status === 500 || low.includes("503") || low.includes("high demand") || low.includes("overloaded") || low.includes("unavailable")) return "overloaded";
+  if (error?.name === "AbortError" || error?.name === "TimeoutError" || low.includes("aborted") || low.includes("timed out")) return "overloaded";
+  return "fatal";
+}
+async function generateWithRetry(params, opts = {}) {
   const ai = getAi();
+  const deadline = opts.deadline ?? Date.now() + 55e3;
+  const attemptTimeout = opts.attemptTimeoutMs ?? 25e3;
   const primary = params.model;
   const rawChain = [primary, ...FALLBACK_MODELS.filter((m) => m !== primary)];
   const modelChain = [...rawChain.filter((m) => !isCoolingDown(m)), ...rawChain.filter(isCoolingDown)];
   let lastError = null;
   for (const model of modelChain) {
-    let retries = 2;
-    let delay = 1500;
-    while (retries > 0) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const remaining = deadline - Date.now();
+      if (remaining < 2500) {
+        throw lastError || Object.assign(new Error("AI \u56DE\u61C9\u903E\u6642"), { status: 503 });
+      }
       try {
-        const config = /2\.5-flash/.test(model) ? { ...params.config, thinkingConfig: { thinkingBudget: 0 } } : params.config;
-        return await ai.models.generateContent({ ...params, model, config });
+        const baseConfig = /2\.5-flash/.test(model) ? { ...params.config, thinkingConfig: { thinkingBudget: 0 } } : params.config;
+        const config = { ...baseConfig, abortSignal: AbortSignal.timeout(Math.min(attemptTimeout, remaining - 500)) };
+        const resp = await ai.models.generateContent({ ...params, model, config });
+        if (model !== primary) console.log(`Served by fallback model ${model}`);
+        return resp;
       } catch (error) {
         lastError = error;
-        const errStr = String(error.message || "").toLowerCase();
-        const quotaOrGone = error.status === 429 || errStr.includes("429") || errStr.includes("quota") || error.status === 404 || errStr.includes("not found") || errStr.includes("no longer available");
-        const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
-        if (quotaOrGone) {
-          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
-          console.log(`Model ${model} unavailable (quota/404), cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
-          break;
-        }
-        if (overloaded && retries > 1) {
-          console.log(`Model ${model} busy (503). Retrying in ${delay}ms...`);
-          await new Promise((resolve) => setTimeout(resolve, delay));
-          delay += 3e3;
-          retries--;
+        const kind = classifyError(error);
+        if (kind === "fatal") throw error;
+        if (kind === "overloaded" && attempt === 0) {
+          await new Promise((r) => setTimeout(r, 1200));
           continue;
         }
-        if (overloaded) {
-          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
-          console.log(`Model ${model} still busy, cooling down ${COOLDOWN_MS / 1e3}s, falling back...`);
-          break;
-        }
-        throw error;
+        modelCooldown.set(model, Date.now() + COOLDOWN[kind]);
+        console.log(`Model ${model} ${kind}, cooling down ${COOLDOWN[kind] / 1e3}s, falling back...`);
+        break;
       }
     }
   }
   throw lastError || new Error("All Gemini models failed");
 }
-async function selectCandidateSeries(competitorModel, brand, heuristicIds, hints, customRules) {
+async function selectCandidateSeries(competitorModel, brand, heuristicIds, hints, customRules, deadline) {
   const prompt = `You are a pneumatic components classification expert for AirTAC (\u4E9E\u5FB7\u5BA2).
 A user provided a competitor's model (or an assembly of models): "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
@@ -36948,6 +37226,10 @@ Respond in JSON.`;
         required: ["competitorBrand", "productType", "candidateSeriesIds"]
       }
     }
+  }, {
+    // 第一階段只是挑候選：最多 18 秒，失敗就退回啟發式候選，把時間留給第二階段
+    deadline: Math.min(deadline ?? Infinity, Date.now() + 18e3),
+    attemptTimeoutMs: 12e3
   });
   if (!response || !response.text) return { ids: [] };
   try {
@@ -36968,6 +37250,7 @@ ${String(r.decode).slice(0, 6e3)}
 async function crossReference(reqBody) {
   try {
     const { competitorModel, brand, customRules, learnedRules, forceAI } = reqBody || {};
+    const deadline = Date.now() + 52e3;
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
     }
@@ -37046,9 +37329,21 @@ ${hints}`;
       if (lrText) hints = `${lrText}
 ${hints}`;
     }
+    const decoded = decodeCompetitor(competitorModel);
+    const decodedSeries = decoded?.target ? getSeriesDetails([decoded.target.seriesId])[0] : void 0;
+    if (decoded) {
+      const t = decoded.target;
+      const sel = t ? Object.entries(t.selections).map(([k, v]) => `${k}=${v === "" ? "(\u7A7A\u767D)" : v}`).join(", ") : "";
+      hints = `\u203B\u203B \u7A0B\u5F0F\u5DF2\u4F9D\u539F\u5EE0\u7DE8\u78BC\u898F\u5247\u7CBE\u78BA\u89E3\u6790\u6B64\u578B\u865F (\u78BA\u5B9A\u503C\uFF0C\u62C6\u89E3\u8207\u53C3\u6578\u5FC5\u9808\u4EE5\u6B64\u70BA\u6E96\uFF0C\u4E0D\u5F97\u81EA\u884C\u91CD\u65B0\u89E3\u8B80)\uFF1A${decoded.family}
+` + decoded.facts.map((f) => `- ${f}`).join("\n") + (t && decodedSeries ? `
+\u2192 AirTAC \u5C0D\u61C9 (\u516C\u53F8\u5C0D\u7167\u8868 + \u78BA\u5B9A\u53C3\u6578)\uFF1AseriesId\u300C${t.seriesId}\u300D\uFF0CselectedOptions \u5FC5\u9808\u5305\u542B ${sel}\uFF1B\u5176\u9918\u53C3\u6578\u518D\u4F9D\u898F\u683C\u5224\u65B7\u3002\u57FA\u6E96\u8A02\u8CFC\u78BC\uFF1A${generateOrderingCode(decodedSeries, t.selections)}` : "") + `
+
+${hints}`;
+    }
     const ruleSeriesIds = mentionedSeriesIds(customRules).filter(isValidSeriesId);
     let candidateIds = [];
     for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    if (decoded?.target && !candidateIds.includes(decoded.target.seriesId)) candidateIds.push(decoded.target.seriesId);
     if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const c of similarCorrections) {
@@ -37060,7 +37355,7 @@ ${hints}`;
     let classifierInfo = {};
     if (candidateIds.length < 2 || customRules) {
       try {
-        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules);
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules, deadline);
         for (const id of stage1.ids) {
           if (!candidateIds.includes(id)) candidateIds.push(id);
         }
@@ -37205,14 +37500,47 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
           required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation", "uncertainties"]
         }
       }
-    });
+    }, { deadline });
     if (!response || !response.text) {
       throw new Error("No response from AI");
     }
     const result = JSON.parse(response.text);
+    if (decoded?.target && decodedSeries && !customRules) {
+      const t = decoded.target;
+      const recs = Array.isArray(result.airtacRecommendations) ? result.airtacRecommendations : result.airtacRecommendations = [];
+      for (const rec of recs) {
+        if (rec.seriesId !== t.seriesId) continue;
+        const merged = {};
+        for (const o of rec.selectedOptions || []) merged[o.categoryId] = String(o.code ?? "");
+        const changed = Object.entries(t.selections).filter(([k, v]) => merged[k] !== v).map(([k]) => k);
+        Object.assign(merged, t.selections);
+        rec.selectedOptions = Object.entries(merged).map(([categoryId, code]) => ({ categoryId, code }));
+        rec.fullOrderingCode = generateOrderingCode(decodedSeries, merged);
+        if (changed.length) console.log(`Decoder corrected ${changed.join(",")} for ${competitorModel}`);
+      }
+      const idx = recs.findIndex((r) => r.seriesId === t.seriesId);
+      if (idx > 0) recs.unshift(...recs.splice(idx, 1));
+      if (idx < 0) {
+        recs.unshift({
+          baseModel: decodedSeries.name,
+          seriesId: t.seriesId,
+          fullOrderingCode: generateOrderingCode(decodedSeries, t.selections),
+          description: decodedSeries.name,
+          matchType: "\u76F4\u63A5\u66FF\u63DB",
+          matchPercentage: 90,
+          reasoningForOrderingCode: `\u4F9D\u516C\u53F8\u5C0D\u7167\u8868\u8207\u539F\u5EE0\u7DE8\u78BC\u898F\u5247\u7A0B\u5F0F\u89E3\u6790\uFF1A${decoded.facts.join("\uFF1B")}`,
+          selectedOptions: Object.entries(t.selections).map(([categoryId, code]) => ({ categoryId, code })),
+          configurableOptions: []
+        });
+      }
+    }
+    if (decoded) result.decoded = { family: decoded.family, facts: decoded.facts };
     if (Array.isArray(result.airtacRecommendations)) {
       for (const rec of result.airtacRecommendations) {
         rec.validation = validateRecommendation(rec);
+        if (rec.validation.catalogVerified && rec.validation.serverGeneratedCode) {
+          rec.fullOrderingCode = rec.validation.serverGeneratedCode;
+        }
       }
     }
     result.candidateSeries = candidateSeries.map((s) => ({

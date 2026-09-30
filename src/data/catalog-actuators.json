@@ -9125,7 +9125,7 @@
   "group": "TN系列",
   "code": "TN",
   "name": "TN系列 雙軸氣缸",
-  "format": "TN{bore}{stroke}{magnet}{thread}",
+  "format": "TN{bore}x{stroke}{magnet}{thread}",
   "categories": [
    {
     "id": "bore",
@@ -9246,7 +9246,7 @@
   "group": "TR系列",
   "code": "TR",
   "name": "TR系列 雙軸氣缸",
-  "format": "TR{bore}{stroke}{magnet}{thread}",
+  "format": "TR{bore}x{stroke}{magnet}{thread}",
   "categories": [
    {
     "id": "bore",

@@ -6,7 +6,7 @@
   "group": "插管-螺紋類",
   "code": "",
   "name": "PC系列 螺紋直通",
-  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+  "format": "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
   "categories": [
    {
     "id": "spec",
@@ -110,7 +110,7 @@
   "group": "插管-螺紋類(迷你)",
   "code": "",
   "name": "PC迷你系列 螺紋直通",
-  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}-{type_suffix}",
+  "format": "{spec}{tube_od}-{thread_spec}{color}{thread_type}-{type_suffix}",
   "categories": [
    {
     "id": "spec",
@@ -208,7 +208,7 @@
   "group": "插管-螺紋類",
   "code": "",
   "name": "PL系列 L型螺紋二通",
-  "format": "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+  "format": "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
   "categories": [
    {
     "id": "spec",
@@ -454,7 +454,7 @@
   "group": "全金屬類",
   "code": "",
   "name": "BPC系列 全金屬螺紋直通",
-  "format": "{spec} {tube_od} {thread_spec}{thread_type}",
+  "format": "{spec}{tube_od}-{thread_spec}{thread_type}",
   "categories": [
    {
     "id": "spec",
@@ -552,7 +552,7 @@
   "group": "全金屬類",
   "code": "BPM",
   "name": "BPM系列 全金屬穿板直通",
-  "format": "{code} {tube_od}",
+  "format": "{code}{tube_od}",
   "categories": [
    {
     "id": "code",
@@ -602,7 +602,7 @@
   "group": "插管-插管類",
   "code": "",
   "name": "PE系列 T型三通",
-  "format": "{spec} {tube_od}{color}",
+  "format": "{spec}{tube_od}{color}",
   "categories": [
    {
     "id": "spec",
@@ -694,7 +694,7 @@
   "group": "插管-插管類(減徑/多通)",
   "code": "",
   "name": "PEG系列 T型正減徑三通",
-  "format": "{spec} {tube_od_1}-{tube_od_2}{color}",
+  "format": "{spec}{tube_od_1}-{tube_od_2}{color}",
   "categories": [
    {
     "id": "spec",
@@ -1030,7 +1030,7 @@
   "group": "BSL/BSLM/BESL/PAL系列",
   "code": "",
   "name": "BSL系列 通用型消聲器",
-  "format": "{spec} {thread_spec}{color}",
+  "format": "{spec}-{thread_spec}{color}",
   "categories": [
    {
     "id": "spec",
@@ -1110,7 +1110,7 @@
   "group": "PPA管塞式",
   "code": "PPA",
   "name": "PPA系列 管塞式消聲器",
-  "format": "{code} {tube_od}",
+  "format": "{code}{tube_od}",
   "categories": [
    {
     "id": "code",
@@ -1230,7 +1230,7 @@
   "group": "PSL/PSS系列",
   "code": "",
   "name": "PSL系列 L型",
-  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+  "format": "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
   "categories": [
    {
     "id": "spec",
@@ -1348,7 +1348,7 @@
   "group": "PSA系列",
   "code": "PSA",
   "name": "PSA系列 直通型",
-  "format": "{code} {tube_od}{color}",
+  "format": "{code}{tube_od}{color}",
   "categories": [
    {
     "id": "code",
@@ -1412,7 +1412,7 @@
   "group": "PTL/PTS推鎖系列",
   "code": "",
   "name": "PTL系列 推鎖L型調速閥",
-  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+  "format": "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
   "categories": [
    {
     "id": "spec",
@@ -1530,7 +1530,7 @@
   "group": "PTA系列",
   "code": "PTA",
   "name": "PTA系列 直通型",
-  "format": "{code} {tube_od}{color}",
+  "format": "{code}{tube_od}{color}",
   "categories": [
    {
     "id": "code",
@@ -1594,7 +1594,7 @@
   "group": "PTL迷你系列",
   "code": "",
   "name": "PTL迷你系列 推鎖型調速閥",
-  "format": "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}-{type_suffix}",
+  "format": "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}-{type_suffix}",
   "categories": [
    {
     "id": "spec",
@@ -5137,11 +5137,11 @@
     "name": "行程",
     "options": [
      {
-      "code": "3",
+      "code": "03",
       "description": "3mm"
      },
      {
-      "code": "7",
+      "code": "07",
       "description": "7mm"
      },
      {
@@ -5261,7 +5261,7 @@
     "name": "行程",
     "options": [
      {
-      "code": "7",
+      "code": "07",
       "description": "7mm"
      },
      {

@@ -7,7 +7,7 @@
  * 型錄逐項驗證，防止幻覺型號流出。
  */
 import { defaultCatalog } from '../data/index';
-import { generateOrderingCode } from '../lib/orderingCode';
+import { generateOrderingCode, isFreeValueCategory } from '../lib/orderingCode';
 import type { CatalogSeries } from '../data/types';
 
 // ---------------------------------------------------------------------------
@@ -88,7 +88,7 @@ export interface KnowledgeEntry {
 export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   // --- SMC 氣缸 ---
   {
-    brand: 'SMC', pattern: /^C?D?Q2/i, competitorSeries: 'CQ2/CDQ2 薄型氣缸', airtacSeriesIds: ['acq', 'sda', 'acqd', 'acqj'],
+    brand: 'SMC', pattern: /^C?D?Q2/i, competitorSeries: 'CQ2/CDQ2 薄型氣缸', airtacSeriesIds: ['acq', 'sda'],
     note: 'SMC CQ2 薄型氣缸對應 AirTAC ACQ (優先) 或 SDA 系列，缸徑行程直接沿用。',
     decode: `SMC CQ2 訂購碼解碼 (格式: C(D)Q2[安裝型式][缸徑]-[行程][動作]+尾碼):
 - 開頭 CDQ2 = 內建磁石(可裝磁性開關)版本的 CQ2；CQ2 開頭若尾碼無磁石標記則無磁石
@@ -99,45 +99,60 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 - 常見尾碼: Z=附磁石(舊寫法), M9B等=隨附磁性開關型號
 → AirTAC ACQ 對應: 缸徑/行程直接沿用 (ACQ 缸徑範圍 12~100)；附磁石→磁石代碼 S；安裝以通孔為標準。CDQ2B40-30DZ → ACQ40X30S` },
   { brand: 'SMC', pattern: /^C?D?QS/i, competitorSeries: 'CQS 小型薄型氣缸', airtacSeriesIds: ['acq', 'sda', 'ace'], note: 'SMC CQS 小缸徑薄型氣缸對應 AirTAC ACQ 小缸徑或 ACE 緊湊型。' },
-  { brand: 'SMC', pattern: /^C?D?J2/i, competitorSeries: 'CJ2 針型氣缸(ISO6432)', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'SMC CJ2 迷你氣缸對應 AirTAC MI (不銹鋼迷你缸) 或 MA 系列。' },
-  { brand: 'SMC', pattern: /^C?D?M2/i, competitorSeries: 'CM2 圓形氣缸', airtacSeriesIds: ['ma', 'mi', 'mbl'], note: 'SMC CM2 圓形氣缸(20~40mm)對應 AirTAC MA/MI 不銹鋼迷你缸。' },
-  { brand: 'SMC', pattern: /^MB\d?/i, competitorSeries: 'MB 標準氣缸(ISO15552)', airtacSeriesIds: ['se', 'sai', 'sc'], note: 'SMC MB 標準氣缸對應 AirTAC SE 或 SAI (ISO15552) 系列。' },
+  { brand: 'SMC', pattern: /^C?D?J2|^C?D?J1/i, competitorSeries: 'CJ1/CJ2 筆型氣缸', airtacSeriesIds: ['pb', 'pbr'], note: '依公司對照表：SMC CJ1/CJ2 筆型不銹鋼氣缸 → AirTAC PB 系列 (CJ2R→PBR)。CD 開頭=附磁石→magnet S；缸徑 6/10/16 直接對應。不要對到 MI (MI 對應的是 SMC C85)。' },
+  { brand: 'SMC', pattern: /^C?D?M2/i, competitorSeries: 'CM2 圓形氣缸', airtacSeriesIds: ['mf', 'mbl'], note: '依公司對照表：SMC CM2 圓形氣缸(20~40mm) → AirTAC MF / MFC (緩衝可調) 或 MAL(鋁製，型錄以 MBL 表示)；CM2R→MAR。CD 開頭=附磁石→S。' },
+  { brand: 'SMC', pattern: /^C?D?85|^C85/i, competitorSeries: 'C85 迷你氣缸(ISO6432)', airtacSeriesIds: ['mi'], note: '依公司對照表：SMC C85 (ISO6432) → AirTAC MI / MIC (緩衝可調)。' },
+  { brand: 'SMC', pattern: /^C?D?G1/i, competitorSeries: 'CG1 圓形氣缸', airtacSeriesIds: ['mg'], note: '依公司對照表：SMC CG1 → AirTAC MG / MGC。' },
+  { brand: 'SMC', pattern: /^C?D?MB1/i, competitorSeries: 'MB1 標準氣缸(ISO15552)', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：SMC MB1 → AirTAC SE (ISO15552)。' },
+  { brand: 'SMC', pattern: /^C?D?MB\b|^C?D?MB[A-Z]?\d/i, competitorSeries: 'MB 標準氣缸', airtacSeriesIds: ['jsi', 'se'], note: '依公司對照表：SMC MB → AirTAC JSI。' },
+  { brand: 'SMC', pattern: /^C?P?9[56]/i, competitorSeries: 'C95/C96 標準氣缸(ISO15552)', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：SMC C95 → AirTAC SI (目前型錄資料未收錄 SI，暫以 SE/SAI 替代並在說明中註明)。' },
   { brand: 'SMC', pattern: /^C?D?A2/i, competitorSeries: 'CA2 標準氣缸', airtacSeriesIds: ['sc', 'se', 'sau'], note: 'SMC CA2 拉桿式標準氣缸對應 AirTAC SC 系列。' },
-  { brand: 'SMC', pattern: /^MGP/i, competitorSeries: 'MGP 帶導桿薄型氣缸', airtacSeriesIds: ['tcl', 'tcm', 'tclj', 'tcmj'], note: 'SMC MGP 三軸帶導桿氣缸對應 AirTAC TCL (直線軸承) / TCM (銅套軸承)。MGPL→TCL、MGPM→TCM。' },
-  { brand: 'SMC', pattern: /^CXS/i, competitorSeries: 'CXS 雙聯氣缸', airtacSeriesIds: ['tn', 'tr'], note: 'SMC CXS 雙聯氣缸對應 AirTAC TN 雙軸氣缸。' },
-  { brand: 'SMC', pattern: /^MXQ/i, competitorSeries: 'MXQ 氣動滑台', airtacSeriesIds: ['hlq', 'hlql', 'hls'], note: 'SMC MXQ 精密滑台對應 AirTAC HLQ (循環滾珠) 系列。' },
-  { brand: 'SMC', pattern: /^MXS/i, competitorSeries: 'MXS 氣動滑台', airtacSeriesIds: ['hls', 'hlsl', 'hlq'], note: 'SMC MXS 精密滑台對應 AirTAC HLS (滾柱型) 系列。' },
-  { brand: 'SMC', pattern: /^MHZ2?/i, competitorSeries: 'MHZ2 平行開閉氣爪', airtacSeriesIds: ['hfz', 'hfk', 'hfsz', 'hftz'], note: 'SMC MHZ2 平行氣爪對應 AirTAC HFZ (滾珠導軌平行氣爪)，MHZL2 長行程對應 HFKL。' },
+  { brand: 'SMC', pattern: /^MGP/i, competitorSeries: 'MGP 帶導桿薄型氣缸', airtacSeriesIds: ['tcl'], note: 'SMC MGP 三軸帶導桿氣缸對應 AirTAC TCL (直線軸承) / TCM (銅套軸承)。MGPL→TCL、MGPM→TCM。' },
+  { brand: 'SMC', pattern: /^CXS/i, competitorSeries: 'CXS 雙聯氣缸', airtacSeriesIds: ['tr', 'tn'], note: '依公司對照表：SMC CXS → AirTAC TR 雙軸氣缸 (CXSM 滑動軸承/CXSL 滾珠軸承皆先對 TR)。' },
+  { brand: 'SMC', pattern: /^MXH/i, competitorSeries: 'MXH 滑台', airtacSeriesIds: ['hlh'], note: '依公司對照表：SMC MXH → AirTAC HLH。' },
+  { brand: 'SMC', pattern: /^CXWM|^CXW/i, competitorSeries: 'CXW 雙桿滑台', airtacSeriesIds: ['stw'], note: '依公司對照表：SMC CXWM → AirTAC STW。' },
+  { brand: 'SMC', pattern: /^MXQ/i, competitorSeries: 'MXQ 氣動滑台', airtacSeriesIds: ['hlq', 'hls'], note: 'SMC MXQ 精密滑台對應 AirTAC HLQ (循環滾珠) 系列。' },
+  { brand: 'SMC', pattern: /^MXS/i, competitorSeries: 'MXS 氣動滑台', airtacSeriesIds: ['hls', 'hlq'], note: 'SMC MXS 精密滑台對應 AirTAC HLS (滾柱型) 系列。' },
+  { brand: 'SMC', pattern: /^MHZ2?/i, competitorSeries: 'MHZ2 平行開閉氣爪', airtacSeriesIds: ['hfz', 'hfk'], note: 'SMC MHZ2 平行氣爪對應 AirTAC HFZ (滾珠導軌平行氣爪)，MHZL2 長行程對應 HFKL。' },
   { brand: 'SMC', pattern: /^MHY2?/i, competitorSeries: 'MHY2 180°開閉氣爪', airtacSeriesIds: ['hfr'], note: 'SMC MHY2 180°開閉氣爪對應 AirTAC HFR 系列。' },
-  { brand: 'SMC', pattern: /^MHC2?/i, competitorSeries: 'MHC2 支點開閉氣爪', airtacSeriesIds: ['hfy', 'hfty'], note: 'SMC MHC2 支點開閉(Y型)氣爪對應 AirTAC HFY 系列。' },
-  { brand: 'SMC', pattern: /^MHS/i, competitorSeries: 'MHS 多爪氣爪', airtacSeriesIds: ['hfp', 'hfc'], note: 'SMC MHS 氣爪可比對 AirTAC HFP/HFC 平行開閉型氣爪。' },
+  { brand: 'SMC', pattern: /^MHC2?/i, competitorSeries: 'MHC2 支點開閉氣爪', airtacSeriesIds: ['hfy'], note: 'SMC MHC2 支點開閉(Y型)氣爪對應 AirTAC HFY 系列。' },
+  { brand: 'SMC', pattern: /^MHS/i, competitorSeries: 'MHS 三爪氣爪', airtacSeriesIds: ['hfc'], note: '依公司對照表：SMC MHS → AirTAC HFC。' },
   { brand: 'SMC', pattern: /^CRB|^MSQ|^CRQ/i, competitorSeries: 'CRB/MSQ 擺動氣缸', airtacSeriesIds: ['hrq', 'hrs'], note: 'SMC 擺動氣缸(葉片式CRB、齒條式MSQ)對應 AirTAC HRQ 回轉氣缸(齒條齒輪式)。' },
-  { brand: 'SMC', pattern: /^MK\d?/i, competitorSeries: 'MK 回轉夾緊氣缸', airtacSeriesIds: ['ack', 'ackd', 'qck', 'qdk'], note: 'SMC MK 回轉夾緊氣缸對應 AirTAC ACK 轉角缸或 QCK 系列。' },
-  { brand: 'SMC', pattern: /^RS[QDH]/i, competitorSeries: 'RSQ/RSD 阻擋氣缸', airtacSeriesIds: ['twq', 'twg', 'twh', 'twm'], note: 'SMC RSQ 阻擋氣缸對應 AirTAC TWQ/TWH 系列。' },
+  { brand: 'SMC', pattern: /^C?D?MK\d?/i, competitorSeries: 'MK 回轉夾緊氣缸', airtacSeriesIds: ['qck', 'qdk', 'ack'], note: '依公司對照表：SMC MK → AirTAC QCK。' },
+  { brand: 'SMC', pattern: /^CKG|^CKZ/i, competitorSeries: 'CKG/CKZ 夾緊氣缸', airtacSeriesIds: ['mck', 'jck'], note: '依公司對照表：SMC CKG1 → AirTAC MCK；CKZ3 → JCK。' },
+  { brand: 'SMC', pattern: /^RS[QDH]/i, competitorSeries: 'RSQ/RSD 阻擋氣缸', airtacSeriesIds: ['twq', 'twg', 'twh'], note: 'SMC RSQ 阻擋氣缸對應 AirTAC TWQ/TWH 系列。' },
   { brand: 'SMC', pattern: /^MY\d|^CY\d/i, competitorSeries: 'MY/CY 無桿氣缸', airtacSeriesIds: ['rmt', 'rmtl', 'rms', 'rmh'], note: 'SMC 機械/磁耦式無桿氣缸對應 AirTAC RMT (導桿型) / RMS (基本型) / RMH (滑軌型)。' },
-  { brand: 'SMC', pattern: /^CU\b|^CU\d/i, competitorSeries: 'CU 自由安裝氣缸', airtacSeriesIds: ['mu', 'msu', 'md'], note: 'SMC CU 自由安裝氣缸對應 AirTAC MU 系列。' },
+  { brand: 'SMC', pattern: /^C?D?U[KJ]?\d/i, competitorSeries: 'CU/CUK/CUJ 自由安裝氣缸', airtacSeriesIds: ['md', 'mk', 'mu'], note: '依公司對照表：SMC CU → AirTAC MD；CUK(不回轉) → MK；CUJ(迷你) → MU。' },
+  { brand: 'SMC', pattern: /^C?D?JP/i, competitorSeries: 'CJP 針型氣缸', airtacSeriesIds: ['mpe', 'mpg'], note: '依公司對照表：SMC CJP → AirTAC MPE；CJP2 → MPG。' },
   // --- SMC 閥類 ---
   {
-    brand: 'SMC', pattern: /^SY[3579]/i, competitorSeries: 'SY3000/5000/7000/9000 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '7SV', '6SV'],
-    note: 'SMC SY 系列五口電磁閥：SY3000→AirTAC 4V100/7SV、SY5000→4V200/6SV、SY7000→4V300。務必依下方解碼表逐位拆解。',
+    brand: 'SMC', pattern: /^SY[3579]/i, competitorSeries: 'SY3000/5000/7000/9000 電磁閥', airtacSeriesIds: ['7SV', '4V100', '4V200', '4V300'],
+    note: '依公司對照表：SMC SY 系列(插接式小型五口閥)首選 AirTAC 7V 系列 (型錄 id: 7SV)：SY3*00→7V050、SY5*00→7V100、SY7*00→7V200、SY9*00→7V300；底座式 SY5*40/SY7*40→7MV100/7MV200 (7V 閥+底座)。僅在客戶指定 DIN 插座式或需要較大流量時才改用 4V (4V100/200/300)，且需在說明中註明。務必依下方解碼表逐位拆解。',
     decode: `SMC SY 系列訂購碼逐位解碼 (格式: SY[系列][機能]20-[電壓][接線][燈/突波][手動]-[口徑][牙型])，此表來自 SMC 原廠型錄，具絕對權威性:
-- 第1碼 系列/閥體尺寸: 3=SY3000(M5口徑), 5=SY5000(1/8~1/4), 7=SY7000(1/4), 9=SY9000(1/4~3/8)
-- 第2碼 切換方式: 1=二位單電控, 2=二位雙電控, 3=三位中位封閉(closed center), 4=三位中位排氣(exhaust center), 5=三位中位供壓(pressure center)
-- 「20」= 單體式直接配管型 (底座式為其他代碼)
+- 第1碼 系列/閥體尺寸: 3=SY3000(M5), 5=SY5000(1/8), 7=SY7000(1/4), 9=SY9000(3/8)
+- 第2碼 切換方式: 1=二位單電控, 2=二位雙電控, 3=三位中位封閉, 4=三位中位排氣, 5=三位中位供壓
+- 第3~4碼: 20=單體直接配管型 (本體配管)；40=底座配管型 (需搭配底座)
 - 破折號後第1碼 = 額定電壓 (注意!! 這一碼是電壓、不是口徑): 5=DC24V, 6=DC12V, V=DC6V, S=DC5V, R=DC3V, 1=AC100V, 2=AC200V, 3=AC110V, 4=AC220V
-- 接線取出方式: G=導線出線式300mm, H=出線式600mm, L=L形插座式附導線, LN=L形不附導線, LO=L形不附插頭, M=M形插座式附導線, MN/MO=M形變體, D=DIN插座式, DO=DIN不附接線座, W開頭=M8插座式
+- 接線取出方式: G=導線出線式300mm, H=出線式600mm, L=L形插座式附導線(300mm), LN=L形不附導線, LO=L形不附插頭, M=M形插座式附導線(300mm), MN/MO=M形變體, D=DIN插座式, DO=DIN不附接線座, W開頭=M8插座式
 - 指示燈/突波保護(緊接在接線代碼後): 無記號=皆無, S=附突波保護, Z=附指示燈+突波保護, R=突波保護(無極性), U=指示燈+突波保護(無極性)
 - 手動操作: 無記號=非鎖定按鈕式, D=起子壓下旋轉鎖定式, E=手動壓下旋轉鎖定式
-- 第二個破折號後 = A·B口接管口徑: M5=M5×0.8(SY3000), 01=1/8"(SY5000), 02=1/4"(SY5000/SY7000), 03=3/8"(SY9000), C4=Φ4快插, C6=Φ6快插, C8=Φ8快插, C10=Φ10快插, C12=Φ12快插, N開頭=英制快插
+- 第二個破折號後 = A·B口接管口徑: M5=M5×0.8, 01=1/8", 02=1/4", 03=3/8", C4=Φ4快插, C6=Φ6快插, C8=Φ8快插, C10=Φ10快插, C12=Φ12快插, N開頭=英制快插
 - 牙型(緊接在口徑後): 無記號=Rc(PT牙), F=G牙, N=NPT牙, T=NPTF牙
-範例: SY5320-5LOZE-01 = SY5000系列 + 三位中位封閉(雙電控) + DC24V + L形插座不附插頭(LO) + 指示燈+突波保護(Z) + 手動旋轉鎖定(E) + 口徑1/8"(01) + Rc牙 → AirTAC 4V230C-06B (30C=三位中位封閉, 06=1/8", B=DC24V, DIN插座式與PT牙為空白代碼)。
-對應 AirTAC 4V 系列的轉換規則:
-- 機能: 1→10(二位單電控), 2→20(二位雙電控), 3→30C(中位封閉), 4→30E(中位排氣), 5→30P(中位壓力)
-- 口徑(4V200): 01(1/8")→06, 02(1/4")→08; (4V300): 02(1/4")→08, 03(3/8")→10; (4V100): M5→M5, 01(1/8)→06
-- 電壓: 5(DC24V)→B, 6(DC12V)→F, 1(AC100V)→C(AC110V最接近,需備註), 2(AC200V)→A(AC220V最接近,需備註), 3(AC110V)→C, 4(AC220V)→A
-- 接線: G/H/L/M(出線與插座附線類)→I(出線式), D(DIN插座)→空白(DIN插座式); SMC 快插接頭口徑(C4/C6等)AirTAC 4V無內建快插,需備註另配 PC 系列快插接頭
-- 牙型: 無記號(Rc)→空白(PT牙), F(G牙)→G, N(NPT)→T; 指示燈(Z/U): AirTAC DIN插座型標配指示燈,無獨立代碼,於備註說明即可` },
-  { brand: 'SMC', pattern: /^VF[35]|^VZ[35]/i, competitorSeries: 'VF/VZ 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300'], note: 'SMC VF/VZ 五口電磁閥對應 AirTAC 4V 系列，依口徑選 100/200/300。' },
+
+對應 AirTAC 7V 系列 (型錄 id 7SV，格式 7V{seriesCode}{controlType}{portConnType}-{port}{voltage}{leadLength}{thread}):
+- seriesCode: SY3→05, SY5→1, SY7→2, SY9→3
+- controlType: 1→10, 2→20, 3→30C, 4→30E, 5→30P
+- 口徑: M5→port M5；01(1/8")→06；02(1/4")→08；03(3/8")→10 (portConnType 空白=螺紋)
+- SMC 快插口徑 C4/C6/C8/C10 → portConnType=J (快插接頭型) + port 04/06/08/10 (7V 有內建快插，不需另配接頭)
+- 電壓: 5(DC24V)→B, 6(DC12V)→F, 3(AC110V)→C, 4(AC220V)→A, 1(AC100V)→C(最接近,需備註), 2(AC200V)→A(最接近,需備註)
+- 端子線長 leadLength: SMC 附導線 G/L/M(300mm)→050(0.5m)；H(600mm)→050 並備註；需長線→200(2.0m)。DIN 插座式(D)→7V 無 DIN，改推 4V 系列並說明
+- 牙型: 無記號(Rc)→空白(PT牙), F→G, N→T；指示燈/突波/手動鈕 AirTAC 無獨立代碼，於說明中註明即可
+範例: SY5120-5LZD-01 = SY5000 + 二位單電控 + 本體配管 + DC24V + L形插座附線 + 指示燈突波 + 手動旋轉鎖定 + 1/8" + Rc → AirTAC 7V110-06B050
+範例: SY3220-5LZ-M5 → 7V0520-M5B050；SY7320-5GZ-C8 → 7V230CJ-08B050 (C8 快插→J+08)
+若改用 4V 系列: 機能碼同上，口徑 4V100: M5/06；4V200: 06(1/8)/08(1/4)；4V300: 08/10；DIN(D)→terminal 空白，出線(G/H/L/M)→terminal I` },
+  { brand: 'SMC', pattern: /^VFS?[1-5]|^VZ[35]/i, competitorSeries: 'VF/VFS/VZ 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '4V400'], note: '依公司對照表：SMC VFS1000→4V100、VFS2000→4V200、VFS3000→4V300 (VF3000 同為 1/4~3/8 級距→4V300)。機能碼: 1=單電控→10, 2=雙電控→20, 3/4/5→30C/30E/30P；電壓 5=DC24V→B；口徑 01→06, 02→08, 03→10。' },
+  { brand: 'SMC', pattern: /^SYJ[357]/i, competitorSeries: 'SYJ 三口電磁閥', airtacSeriesIds: ['3V100', '3V200', '3V300'], note: '依公司對照表：SMC SYJ300→3V100、SYJ500→3V200、SYJ700→3V300。' },
+  { brand: 'SMC', pattern: /^VX3|^VT317/i, competitorSeries: 'VX31/VT317 三口閥', airtacSeriesIds: ['3V1', '3V3'], note: '依公司對照表：SMC VX31→3V1；VT317→3V3。' },
   { brand: 'SMC', pattern: /^VQ[Zz]?/i, competitorSeries: 'VQ 直動電磁閥', airtacSeriesIds: ['4V100', 'CPV10', 'CPV15', '7SV'], note: 'SMC VQ 小型電磁閥依尺寸對應 AirTAC CPV10/CPV15 微型閥或 4V100。' },
   {
     brand: 'SMC', pattern: /^VT3|^VV3|^VT0|^V100/i, competitorSeries: 'VT 三口電磁閥', airtacSeriesIds: ['3V1', '3V2', '3V2M', '3V100'],
@@ -148,8 +163,8 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 - 口徑: 01=1/8", 02=1/4"
 範例: VT307-5G1-01 = DC24V + 出線式帶燈 + 1/8"
 → AirTAC 3V2 對應: 電壓 5(DC24V)→B, 6(DC12V)→F, 1(AC100V)→C(最接近AC110V), 4(AC220V)→A; 口徑 01(1/8")→06, 02(1/4")→08; 出線式→I` },
-  { brand: 'SMC', pattern: /^VX2?\d/i, competitorSeries: 'VX 流體電磁閥', airtacSeriesIds: ['fluid-2v', 'fluid-2p', 'fluid-direct-nc', 'fluid-direct-no'], note: 'SMC VX 二口流體閥對應 AirTAC 2V (氣體) / 2P (塑膠) / 2SA·2WA (水氣油) 系列。' },
-  { brand: 'SMC', pattern: /^VXZ|^VXD/i, competitorSeries: 'VXZ/VXD 先導流體閥', airtacSeriesIds: ['fluid-pilot-nc', 'fluid-pilot-no', 'fluid-2j'], note: 'SMC 先導式流體閥對應 AirTAC 2SA/2WA 先導型或 2J 角座閥。' },
+  { brand: 'SMC', pattern: /^VX2?\d/i, competitorSeries: 'VX 流體電磁閥', airtacSeriesIds: ['2SA', '2KSA', '2WA', '2LA', '2V'], note: '依公司對照表：SMC VX2 → AirTAC 2S(常閉,型錄 2SA)/2KS(常開,2KSA)；VXE2→2W(2WA)；VCS2/VXH→2L(2LA)；VXP→2V；VDW→2P。' },
+  { brand: 'SMC', pattern: /^VXZ|^VXD/i, competitorSeries: 'VXZ/VXD 先導流體閥', airtacSeriesIds: ['2SA', '2KSA', '2J'], note: 'SMC 先導式流體閥對應 AirTAC 2SA/2WA 先導型或 2J 角座閥。' },
   // --- SMC 氣源處理/輔助 ---
   { brand: 'SMC', pattern: /^AC\d{2}/i, competitorSeries: 'AC FRL組合', airtacSeriesIds: ['GC', 'GAC', 'GFC', 'GAFC', 'AC-BC'], note: 'SMC AC 系列三聯件/二聯件對應 AirTAC GC (三聯) / GFC (二聯) 系列，口徑對齊。' },
   { brand: 'SMC', pattern: /^AW\d{2}/i, competitorSeries: 'AW 調壓過濾器', airtacSeriesIds: ['GFR', 'GAFR', 'AFR-BFR'], note: 'SMC AW 調壓過濾器(濾壓一體)對應 AirTAC GFR 系列。' },
@@ -159,8 +174,8 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'SMC', pattern: /^IR\d/i, competitorSeries: 'IR 精密調壓閥', airtacSeriesIds: ['GPR', 'GPFR'], note: 'SMC IR 精密減壓閥對應 AirTAC GPR 精密調壓閥。' },
   { brand: 'SMC', pattern: /^AFM|^AMG|^AFD/i, competitorSeries: 'AFM 油霧分離器', airtacSeriesIds: ['GPF'], note: 'SMC AFM/AFD 油霧分離器對應 AirTAC GPF 系列。' },
   {
-    brand: 'SMC', pattern: /^AS\d{3,4}/i, competitorSeries: 'AS 速度控制閥', airtacSeriesIds: ['PSL'],
-    note: 'SMC AS 調速接頭(如 AS2201F)對應 AirTAC PSL 系列 L 型調速閥。嚴禁輸出 PISCO 的 JSC。',
+    brand: 'SMC', pattern: /^AS\d{3,4}/i, competitorSeries: 'AS 速度控制閥', airtacSeriesIds: ['PSL', 'ASC'],
+    note: '分兩類，務必先判斷：(1) 型號帶 F (附快插) 的萬向/彎頭型調速接頭，如 AS1201F、AS2201F、AS2211F、AS3201F → AirTAC PSL (L 型調速接頭)；(2) 不帶快插的管路直通型 AS1000/AS2000/AS3000 (如 AS2000-02) → AirTAC ASC (公司對照表的 AS→ASC 指的是這一類)。嚴禁輸出 PISCO 的 JSC。',
     decode: `SMC AS 調速閥訂購碼解碼 (格式: AS[體型][口]0[節流方向][F]-[牙規]-[管徑]):
 - 體型/牙規等級: 1=M5, 2=1/8, 3=1/4, 4=3/8~1/2
 - 第3~4碼: 01=標準; 節流方向尾碼: 無/預設=排氣節流(meter-out), 1F前的數字2=排氣節流彎頭型
@@ -189,10 +204,22 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
 → AirTAC 對應: 磁簧式(A9□)→CMS 系列; 電子式(M9□)→DMS 系列 (2線/3線依型錄選項對應); 出線長依 AirTAC 選項選最接近` },
   { brand: 'SMC', pattern: /^T[USH]\d{4}|^TU\d/i, competitorSeries: 'TU 氣管', airtacSeriesIds: ['PU-Tube', 'UCS-Tube', 'PA-Tube', 'UWS98A', 'UN54D'], note: 'SMC TU 聚氨酯氣管對應 AirTAC US98A/UE95A PU管；捲管對應 UCS/UCE；尼龍管對應 PA12/PA6；阻燃管對應 UN54D/UWS98A。' },
   // --- Festo ---
-  { brand: 'Festo', pattern: /^DSNU|^ESNU/i, competitorSeries: 'DSNU 圓形氣缸(ISO6432)', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'Festo DSNU 圓形迷你缸對應 AirTAC MI/MA 系列(ISO6432)。' },
-  { brand: 'Festo', pattern: /^DSBC|^DNC/i, competitorSeries: 'DSBC/DNC 標準氣缸(ISO15552)', airtacSeriesIds: ['sai', 'se', 'sc'], note: 'Festo DSBC/DNC 標準缸對應 AirTAC SAI (ISO15552) 或 SE 系列。' },
-  { brand: 'Festo', pattern: /^ADVU|^ADN|^AEVC|^ADVC/i, competitorSeries: 'ADVU/ADN 緊湊氣缸', airtacSeriesIds: ['acq', 'sda', 'ace', 'act'], note: 'Festo ADVU/ADN 緊湊型氣缸對應 AirTAC ACQ/SDA 超薄缸。' },
-  { brand: 'Festo', pattern: /^DFM/i, competitorSeries: 'DFM 帶導桿氣缸', airtacSeriesIds: ['tcl', 'tcm', 'tsai'], note: 'Festo DFM 帶導桿氣缸對應 AirTAC TCL/TCM 三軸缸。' },
+  { brand: 'Festo', pattern: /^DSNU|^ESNU|^DSN\b|^DSN-/i, competitorSeries: 'DSNU 圓形氣缸(ISO6432)', airtacSeriesIds: ['mi'], note: '依公司對照表：Festo DSN/DSNU → AirTAC MI (PPV=兩端緩衝可調→MIC；A=附磁→S)。' },
+  { brand: 'Festo', pattern: /^DNC|^DNG/i, competitorSeries: 'DNC/DNCB/DNG 標準氣缸(ISO15552)', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：Festo DNC/DNCB/DNG → AirTAC SE (或 SI，型錄未收錄 SI 時以 SE 為準)。' },
+  { brand: 'Festo', pattern: /^DSBC/i, competitorSeries: 'DSBC 標準氣缸(ISO15552)', airtacSeriesIds: ['sai', 'se'], note: '依公司對照表：Festo DSBC → AirTAC SU (型錄資料未收錄 SU，暫以 SAI/SE 替代並務必在說明中註明)。' },
+  { brand: 'Festo', pattern: /^DSBG/i, competitorSeries: 'DSBG 標準氣缸', airtacSeriesIds: ['sc'], note: '依公司對照表：Festo DSBG → AirTAC SC。' },
+  { brand: 'Festo', pattern: /^AEN/i, competitorSeries: 'AEN 緊湊氣缸', airtacSeriesIds: ['ace'], note: '依公司對照表：Festo AEN → AirTAC ACE。' },
+  { brand: 'Festo', pattern: /^DPZ/i, competitorSeries: 'DPZ 雙軸氣缸', airtacSeriesIds: ['tn'], note: '依公司對照表：Festo DPZ/DPZC → AirTAC TN。' },
+  { brand: 'Festo', pattern: /^SPZ/i, competitorSeries: 'SPZ 雙桿滑台', airtacSeriesIds: ['stw'], note: '依公司對照表：Festo SPZ → AirTAC STW。' },
+  { brand: 'Festo', pattern: /^SLS\b|^SLS-/i, competitorSeries: 'SLS 滑台', airtacSeriesIds: ['hlh'], note: '依公司對照表：Festo SLS → AirTAC HLH。' },
+  { brand: 'Festo', pattern: /^HGW/i, competitorSeries: 'HGW 支點氣爪', airtacSeriesIds: ['hfy'], note: '依公司對照表：Festo HGW → AirTAC HFY。' },
+  { brand: 'Festo', pattern: /^DHRS/i, competitorSeries: 'DHRS 180°氣爪', airtacSeriesIds: ['hfr'], note: '依公司對照表：Festo DHRS → AirTAC HFR。' },
+  { brand: 'Festo', pattern: /^CLR/i, competitorSeries: 'CLR 回轉夾緊', airtacSeriesIds: ['qck'], note: '依公司對照表：Festo CLR → AirTAC QCK。' },
+  { brand: 'Festo', pattern: /^DGO/i, competitorSeries: 'DGO 無桿氣缸', airtacSeriesIds: ['rms'], note: '依公司對照表：Festo DGO → AirTAC RMS。' },
+  { brand: 'Festo', pattern: /^SLM/i, competitorSeries: 'SLM 無桿滑台', airtacSeriesIds: ['rmtl'], note: '依公司對照表：Festo SLM → AirTAC RMTL。' },
+  { brand: 'Festo', pattern: /^ADVUL/i, competitorSeries: 'ADVUL 帶導桿緊湊缸', airtacSeriesIds: ['tacq'], note: '依公司對照表：Festo ADVUL → AirTAC TACQ。' },
+  { brand: 'Festo', pattern: /^ADVU|^ADN|^AEVC|^ADVC/i, competitorSeries: 'ADVU/ADN 緊湊氣缸', airtacSeriesIds: ['acq', 'sda', 'ace'], note: '公司對照表：Festo ADVU → AirTAC ACP (型錄資料未收錄 ACP，以 ACQ 替代並註明)；ADN(ISO21287) → ACQ/SDA。' },
+  { brand: 'Festo', pattern: /^DFM/i, competitorSeries: 'DFM 帶導桿氣缸', airtacSeriesIds: ['tcl', 'tsai'], note: 'Festo DFM 帶導桿氣缸對應 AirTAC TCL/TCM 三軸缸。' },
   { brand: 'Festo', pattern: /^SLT|^DGSL/i, competitorSeries: 'SLT/DGSL 迷你滑台', airtacSeriesIds: ['hlq', 'hls', 'hlf'], note: 'Festo 迷你滑台對應 AirTAC HLQ/HLS 精密滑台。' },
   { brand: 'Festo', pattern: /^HGP|^DHPS/i, competitorSeries: 'HGP/DHPS 平行氣爪', airtacSeriesIds: ['hfz', 'hfk', 'hfp'], note: 'Festo 平行氣爪對應 AirTAC HFZ/HFK 系列。' },
   { brand: 'Festo', pattern: /^DSM|^DRVS|^DRRD/i, competitorSeries: 'DSM/DRVS 擺動氣缸', airtacSeriesIds: ['hrq', 'hrs'], note: 'Festo 擺動缸對應 AirTAC HRQ 系列。' },
@@ -203,13 +230,31 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   { brand: 'Festo', pattern: /^MS[4-9]|^FRC|^LFR/i, competitorSeries: 'MS/FRC 氣源處理', airtacSeriesIds: ['GC', 'GFC', 'GFR', 'GF', 'GR'], note: 'Festo MS/FRC 系列 FRL 對應 AirTAC G 系列氣源處理(GFR/GC等)。' },
   { brand: 'Festo', pattern: /^U-\d|^AMTE/i, competitorSeries: 'U 消聲器', airtacSeriesIds: ['BSL'], note: 'Festo U 系列消聲器對應 AirTAC BSL。' },
   // --- Mindman (金器) ---
-  { brand: 'Mindman', pattern: /^MCQV|^MCQA|^MCQI/i, competitorSeries: 'MCQV/MCQA 薄型氣缸', airtacSeriesIds: ['acq', 'sda'], note: 'Mindman MCQ 系列薄型缸對應 AirTAC ACQ/SDA。' },
-  { brand: 'Mindman', pattern: /^MCMI|^MCMJ|^MCJA/i, competitorSeries: 'MCMI 迷你氣缸', airtacSeriesIds: ['mi', 'ma', 'mf'], note: 'Mindman MCMI 迷你缸(ISO6432)對應 AirTAC MI/MA。' },
-  { brand: 'Mindman', pattern: /^MCGB|^MCGA|^MCMA/i, competitorSeries: 'MCGB/MCMA 標準氣缸', airtacSeriesIds: ['sc', 'se', 'sai'], note: 'Mindman 標準氣缸對應 AirTAC SC/SE 系列。' },
-  { brand: 'Mindman', pattern: /^MCGS/i, competitorSeries: 'MCGS 帶導桿氣缸', airtacSeriesIds: ['tcl', 'tcm'], note: 'Mindman MCGS 帶導桿缸對應 AirTAC TCL/TCM。' },
-  { brand: 'Mindman', pattern: /^MCHA|^MCHB/i, competitorSeries: 'MCH 氣爪', airtacSeriesIds: ['hfz', 'hfy', 'hfp'], note: 'Mindman 氣爪對應 AirTAC HF 系列，依開閉形式選擇。' },
-  { brand: 'Mindman', pattern: /^MVSC|^MVSD|^MVSE/i, competitorSeries: 'MVSC 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300'], note: 'Mindman MVSC 電磁閥對應 AirTAC 4V 系列(MVSC-220→4V210 等)。' },
-  { brand: 'Mindman', pattern: /^MACP|^MAFR|^MACT/i, competitorSeries: 'MACP 氣源處理', airtacSeriesIds: ['GFR', 'GC', 'GFC'], note: 'Mindman 氣源處理(調壓過濾器等)對應 AirTAC GFR/GC 系列。' },
+  { brand: 'Mindman', pattern: /^MCQV2/i, competitorSeries: 'MCQV2 標準氣缸(ISO15552)', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：Mindman MCQV2 → AirTAC SE。' },
+  { brand: 'Mindman', pattern: /^MCQI/i, competitorSeries: 'MCQI2 標準氣缸', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：Mindman MCQI2 → AirTAC SI (型錄未收錄 SI，以 SE/SAI 替代並註明)。' },
+  { brand: 'Mindman', pattern: /^MCQV(?!2)/i, competitorSeries: 'MCQV 標準氣缸', airtacSeriesIds: ['sg'], note: '依公司對照表：Mindman MCQV → AirTAC SGC (鋁管，型錄 id: sg，規格代號選 SGC)。' },
+  { brand: 'Mindman', pattern: /^MCQA/i, competitorSeries: 'MCQA 標準氣缸', airtacSeriesIds: ['sc'], note: '依公司對照表：Mindman MCQA → AirTAC SC。' },
+  { brand: 'Mindman', pattern: /^MCJQ/i, competitorSeries: 'MCJQ 薄型氣缸', airtacSeriesIds: ['acq'], note: '依公司對照表：Mindman MCJQ → AirTAC ACQ。' },
+  { brand: 'Mindman', pattern: /^MCJA/i, competitorSeries: 'MCJA 薄型氣缸', airtacSeriesIds: ['sda'], note: '依公司對照表：Mindman MCJA → AirTAC SDA。格式 MCJA-[動作]-[缸徑]-[行程][M=附磁]：例 MCJA-11-32-25M → SDA32x25S。' },
+  { brand: 'Mindman', pattern: /^MCJI/i, competitorSeries: 'MCJI 緊湊氣缸', airtacSeriesIds: ['ace'], note: '依公司對照表：Mindman MCJI → AirTAC ACE。' },
+  { brand: 'Mindman', pattern: /^MCGI/i, competitorSeries: 'MCGI 帶導桿薄型缸', airtacSeriesIds: ['tacq'], note: '依公司對照表：Mindman MCGI → AirTAC TACQ。' },
+  { brand: 'Mindman', pattern: /^MCMI/i, competitorSeries: 'MCMI 迷你氣缸(ISO6432)', airtacSeriesIds: ['mi'], note: '依公司對照表：Mindman MCMI → AirTAC MI / MIC。' },
+  { brand: 'Mindman', pattern: /^MCMJP/i, competitorSeries: 'MCMJP 針型氣缸', airtacSeriesIds: ['mpe', 'mpg'], note: '依公司對照表：Mindman MCMJP → AirTAC MPE / MPG。' },
+  { brand: 'Mindman', pattern: /^MCMJ(?!P)/i, competitorSeries: 'MCMJ 筆型氣缸', airtacSeriesIds: ['pb'], note: '依公司對照表：Mindman MCMJ → AirTAC PB。格式 MCMJ-[動作]-[缸徑]-[行程][M=附磁]：例 MCMJ-11-16-50 → PB16x50。' },
+  { brand: 'Mindman', pattern: /^MCMA/i, competitorSeries: 'MCMA 迷你氣缸', airtacSeriesIds: ['ma'], note: '依公司對照表：Mindman MCMA → AirTAC MA / MAC。' },
+  { brand: 'Mindman', pattern: /^MCMB/i, competitorSeries: 'MCMB 迷你氣缸', airtacSeriesIds: ['mf'], note: '依公司對照表：Mindman MCMB → AirTAC MF / MFC；MCMBR → MAR。' },
+  { brand: 'Mindman', pattern: /^MCCG/i, competitorSeries: 'MCCG 氣缸', airtacSeriesIds: ['mg'], note: '依公司對照表：Mindman MCCG → AirTAC MG / MGC。' },
+  { brand: 'Mindman', pattern: /^MCDA/i, competitorSeries: 'MCDA 雙軸氣缸', airtacSeriesIds: ['tn'], note: '依公司對照表：Mindman MCDA → AirTAC TN。' },
+  { brand: 'Mindman', pattern: /^MCFA|^MCFB/i, competitorSeries: 'MCFA/MCFB 自由安裝氣缸', airtacSeriesIds: ['md', 'mk', 'mu'], note: '依公司對照表：Mindman MCFA → AirTAC MD；MCFA-K → MK；MCFB → MU。' },
+  { brand: 'Mindman', pattern: /^MCSS|^MCSH/i, competitorSeries: 'MCSS/MCSH 滑台', airtacSeriesIds: ['hls', 'hlh'], note: '依公司對照表：Mindman MCSS → AirTAC HLS；MCSH → HLH。' },
+  { brand: 'Mindman', pattern: /^MCRQ/i, competitorSeries: 'MCRQ 回轉氣缸', airtacSeriesIds: ['hrq'], note: '依公司對照表：Mindman MCRQ → AirTAC HRQ。' },
+  { brand: 'Mindman', pattern: /^MCGB|^MCGA/i, competitorSeries: 'MCGB/MCGA 標準氣缸', airtacSeriesIds: ['sc', 'se', 'sai'], note: 'Mindman 標準氣缸對應 AirTAC SC/SE 系列。' },
+  { brand: 'Mindman', pattern: /^MCGS/i, competitorSeries: 'MCGS 帶導桿氣缸', airtacSeriesIds: ['tcl'], note: 'Mindman MCGS 帶導桿缸對應 AirTAC TCL/TCM。' },
+  { brand: 'Mindman', pattern: /^MCH[ABCY]/i, competitorSeries: 'MCH 氣爪', airtacSeriesIds: ['hfy', 'hfp', 'hfz', 'hfr'], note: '依公司對照表：Mindman MCHA→HFY、MCHB→HFP、MCHC→HFZ、MCHY→HFR。' },
+  { brand: 'Mindman', pattern: /^MVSC/i, competitorSeries: 'MVSC 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '4V400', '3V100', '3V200', '3V300'], note: '依公司對照表：Mindman MVSC-180→4V100、MVSC-220→4V200、MVSC-300→4V300、MVSC-460→4V400；型號中「-3E1」等 3 開頭=三口→3V100/3V200/3V300，「-4E1」=五口二位單電控(→10)，「-4E2」=雙電控(→20)。' },
+  { brand: 'Mindman', pattern: /^MVSY/i, competitorSeries: 'MVSY 電磁閥', airtacSeriesIds: ['7SV'], note: '依公司對照表：Mindman MVSY-156 → AirTAC 7V100；MVSY-188 → 7V200 (型錄 id 7SV)。' },
+  { brand: 'Mindman', pattern: /^MVSN/i, competitorSeries: 'MVSN 電磁閥', airtacSeriesIds: ['4m'], note: '依公司對照表：Mindman MVSN → AirTAC 4M。' },
+  { brand: 'Mindman', pattern: /^MACP|^MAFR|^MACT|^MAF\d|^MAL\d|^MAR\d/i, competitorSeries: 'Mindman 氣源處理', airtacSeriesIds: ['GFR', 'GC', 'GFC', 'GF', 'GR', 'GL'], note: '依公司對照表：MACT→GC(三聯)、MACP→GFC(二聯)、MAFR→GFR、MAF→GF、MAR→GR、MAL→GL。' },
   // --- PISCO ---
   { brand: 'PISCO', pattern: /^JSC/i, competitorSeries: 'JSC 調速閥', airtacSeriesIds: ['PSL'], note: 'PISCO JSC 調速接頭對應 AirTAC PSL 系列。' },
   { brand: 'PISCO', pattern: /^P[CLBEUY]\d/i, competitorSeries: 'PC/PL 快插接頭', airtacSeriesIds: ['PC', 'PL', 'PE', 'PEG'], note: 'PISCO 快插接頭命名與 AirTAC 幾乎相同：PC直通→PC、PL彎頭→PL、PE三通/PU直通(管對管)/PY→PE 系列 spec 選項、減徑類→PEG。' },
@@ -217,8 +262,18 @@ export const KNOWLEDGE_BASE: KnowledgeEntry[] = [
   // --- CKD (常見，雖不在下拉清單也支援自動偵測) ---
   { brand: 'CKD', pattern: /^SSD/i, competitorSeries: 'SSD 薄型氣缸', airtacSeriesIds: ['acq', 'sda'], note: 'CKD SSD 薄型缸對應 AirTAC ACQ/SDA。' },
   { brand: 'CKD', pattern: /^CMK2|^SCM/i, competitorSeries: 'CMK2/SCM 氣缸', airtacSeriesIds: ['ma', 'mi', 'sc'], note: 'CKD CMK2 對應 AirTAC MA/MI；SCM 對應 SC 系列。' },
-  { brand: 'CKD', pattern: /^STG|^STS|^STL/i, competitorSeries: 'STG 帶導桿氣缸', airtacSeriesIds: ['tcl', 'tcm'], note: 'CKD STG 帶導桿缸對應 AirTAC TCL/TCM。' },
-  { brand: 'CKD', pattern: /^4G[ABD]|^4K[AB]/i, competitorSeries: '4G/4K 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '7SV'], note: 'CKD 4G/4KA 電磁閥對應 AirTAC 4V/7SV 系列。' },
+  { brand: 'CKD', pattern: /^SCW/i, competitorSeries: 'SCW 標準氣缸', airtacSeriesIds: ['se', 'sai'], note: '依公司對照表：CKD SCW → AirTAC SE / SI。' },
+  { brand: 'CKD', pattern: /^SCA2/i, competitorSeries: 'SCA2 標準氣缸', airtacSeriesIds: ['sc', 'jsi'], note: '依公司對照表：CKD SCA2 → AirTAC SC / JSI。' },
+  { brand: 'CKD', pattern: /^SCP/i, competitorSeries: 'SCP 筆型氣缸', airtacSeriesIds: ['pb'], note: '依公司對照表：CKD SCP*3 → AirTAC PB。' },
+  { brand: 'CKD', pattern: /^STR2/i, competitorSeries: 'STR2 雙軸氣缸', airtacSeriesIds: ['tr'], note: '依公司對照表：CKD STR2 → AirTAC TR。' },
+  { brand: 'CKD', pattern: /^SMG|^SMD2|^MDC2/i, competitorSeries: 'SMG/SMD2/MDC2 氣缸', airtacSeriesIds: ['md', 'mk', 'mu'], note: '依公司對照表：CKD SMG → MD、SMD2 → MK、MDC2 → MU。' },
+  { brand: 'CKD', pattern: /^LC[RGM]/i, competitorSeries: 'LCR/LCG/LCM 滑台', airtacSeriesIds: ['hlq', 'hls'], note: '依公司對照表：CKD LCR/LCG → AirTAC HLQ；LCM → HLS。' },
+  { brand: 'CKD', pattern: /^GRC/i, competitorSeries: 'GRC 回轉氣缸', airtacSeriesIds: ['hrq'], note: '依公司對照表：CKD GRC → AirTAC HRQ。' },
+  { brand: 'CKD', pattern: /^RCC2/i, competitorSeries: 'RCC2 回轉夾緊', airtacSeriesIds: ['qck'], note: '依公司對照表：CKD RCC2 → AirTAC QCK。' },
+  { brand: 'CKD', pattern: /^MRL2/i, competitorSeries: 'MRL2 無桿氣缸', airtacSeriesIds: ['rms'], note: '依公司對照表：CKD MRL2 → AirTAC RMS。' },
+  { brand: 'CKD', pattern: /^3G[ABD]/i, competitorSeries: '3G 三口電磁閥', airtacSeriesIds: ['3V100', '3V200', '3V300'], note: '依公司對照表：CKD 3GA1~3 → AirTAC 3V100~3V300。' },
+  { brand: 'CKD', pattern: /^STG|^STS|^STL/i, competitorSeries: 'STG 帶導桿氣缸', airtacSeriesIds: ['tcl'], note: 'CKD STG 帶導桿缸對應 AirTAC TCL/TCM。' },
+  { brand: 'CKD', pattern: /^4G[ABD]|^4K[AB]/i, competitorSeries: '4G/4K 電磁閥', airtacSeriesIds: ['4V100', '4V200', '4V300', '7SV'], note: '依公司對照表：CKD 4GA1/4GA2/4GA3 → AirTAC 4V100/4V200/4V300 (第 4 碼 1=單電控→10, 2=雙電控→20)。' },
 ];
 
 /** 從輸入型號字串以啟發式(字首規則)找出可能的候選系列與提示。 */
@@ -313,6 +368,11 @@ export function validateRecommendation(rec: {
     }
     const code = String(sel.code ?? '');
     const opt = (cat.options || []).find(o => o.code === code);
+    // 自由數值類別 (無桿缸行程等)：任何數字都合法
+    if (!opt && isFreeValueCategory(cat) && /^\d+(\.\d+)?$/.test(code)) {
+      selections[sel.categoryId] = code;
+      continue;
+    }
     if (!opt) {
       const valid = (cat.options || []).map(o => (o.code === '' ? '(空白)' : o.code)).join(', ');
       if (/stroke/i.test(cat.id) && /^\d+$/.test(code)) {
@@ -341,7 +401,13 @@ export function validateRecommendation(rec: {
 
   // 比對 AI 給的訂購碼與伺服器重建的訂購碼 (忽略空白/大小寫差異)
   const normalize = (s: string) => s.replace(/[\s\-–—]+/g, '').toUpperCase();
-  if (rec.fullOrderingCode && serverGeneratedCode && normalize(rec.fullOrderingCode) !== normalize(serverGeneratedCode)) {
+  const ai = normalize(rec.fullOrderingCode || '');
+  const server = normalize(serverGeneratedCode || '');
+  // AI 只是省略了尾端的預設選項 (如 7V110-06B vs 7V110-06B050、GFR200-08 vs GFR20008F1) 不算矛盾
+  const aiIsPrefix = ai.length >= 3 && server.startsWith(ai);
+  // 字元完全相同只是順序不同 (如 TCMS20-50 vs TCM20-50S)：AI 只是把代碼寫錯位置，以型錄格式為準即可
+  const sameChars = ai.length > 0 && ai.split('').sort().join('') === server.split('').sort().join('');
+  if (rec.fullOrderingCode && serverGeneratedCode && ai !== server && !aiIsPrefix && !sameChars) {
     warnings.push(`AI 產生的訂購碼「${rec.fullOrderingCode}」與依型錄規則重建的「${serverGeneratedCode}」不一致，請以型錄驗證版本為準。`);
   }
 

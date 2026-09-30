@@ -57,6 +57,8 @@ export interface CrossReferenceResult {
   uncertainties?: string[];
   /** 團隊確認過的此型號對照 (完全相同型號命中參考資料庫) */
   teamCorrection?: { airtacCode: string; confirmedAt?: number };
+  /** 程式依原廠編碼規則確定性解析的結果 (常見系列) */
+  decoded?: { family: string; facts: string[] };
   /** 完全相同型號命中團隊參考資料庫，直接回答 (未呼叫 AI) */
   fromReference?: boolean;
   /** 這次分析參考到的「相近型號」團隊對照 */

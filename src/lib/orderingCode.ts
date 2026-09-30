@@ -20,3 +20,12 @@ export function generateOrderingCode(series: CatalogSeries, selections: Record<s
   if (code.endsWith('-')) code = code.slice(0, -1);
   return code;
 }
+
+/**
+ * 「自由數值」類別：型錄只放一個示意值 (如無桿缸行程「200=行程數值」)，實際可填任意數字。
+ * 驗證時不該把其他數值當成「非標準」，下拉選單也應直接開放輸入。
+ */
+export function isFreeValueCategory(cat: { options?: { description?: string }[] }): boolean {
+  const opts = cat.options || [];
+  return opts.length > 0 && opts.length <= 2 && opts.some(o => /數值/.test(o.description || ''));
+}

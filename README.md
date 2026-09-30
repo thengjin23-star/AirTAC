@@ -40,3 +40,14 @@ View your app in AI Studio: https://ai.studio/apps/f37d7481-3979-43d2-a6ff-1be1f
 - AI 分析、學習型錄、確認清單 / 參考資料庫 / 知識庫的讀寫都需要存取碼
 - 同事第一次操作時會跳出輸入框，輸入一次後該瀏覽器會記住
 - 不設定則維持開放（與舊版相同）
+
+## 匹配準確率評測（回歸測試）
+
+`eval/cases.json` 收錄 48 個真實競品型號與正確答案（依公司對照表），修改匹配邏輯、知識庫或型錄後可跑：
+
+```bash
+npx tsx scripts/eval-matching.ts            # 全部 (需 .env.local 的 GEMINI_API_KEY，約 60 次 Gemini 呼叫)
+npx tsx scripts/eval-matching.ts SY         # 只跑型號含 SY 的案例
+```
+
+會輸出「系列正確 / 系列+參數正確 / 型錄驗證通過」比例。發現 AI 對錯的型號時，把它與正確答案加進 `cases.json`，之後每次修改都能確認沒有退步。
