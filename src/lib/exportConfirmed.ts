@@ -13,7 +13,7 @@ const ZEBRA = 'F3F7FB';
 const thin = { style: 'thin' as const, color: { rgb: BORDER_C } };
 const allBorders = { top: thin, bottom: thin, left: thin, right: thin };
 
-const HEADERS = ['序號', '競品品牌', '競品型號', 'AirTAC 訂購碼', '產品描述', '匹配類型', '匹配度(%)', '備註', '確認時間'];
+const HEADERS = ['序號', '競品品牌', '競品型號', 'AirTAC 訂購碼', '產品描述', '匹配類型', '匹配度(%)', '備註', '確認人', '確認時間'];
 
 /** 匹配類型 → [字色, 底色] */
 function matchTypeColors(t: string): [string, string] {
@@ -92,6 +92,7 @@ export function buildConfirmedWorkbook(items: ConfirmedItem[]): XLSX.WorkBook {
         ? { v: it.matchPercentage, t: 'n', s: { ...center, font: { ...center.font, sz: 10, name: 'Consolas' } } }
         : { v: '', t: 's', s: center },
       { v: it.note || '', t: 's', s: { ...base, font: { sz: 9.5, name: 'Microsoft JhengHei', color: { rgb: '64748B' } } } },
+      { v: it.owner || '', t: 's', s: center },
       { v: new Date(it.confirmedAt).toLocaleString('zh-TW'), t: 's', s: { ...center, font: { sz: 9, name: 'Microsoft JhengHei', color: { rgb: '64748B' } } } },
     ]);
   });
@@ -103,7 +104,7 @@ export function buildConfirmedWorkbook(items: ConfirmedItem[]): XLSX.WorkBook {
   ];
   ws['!cols'] = [
     { wch: 6 }, { wch: 10 }, { wch: 24 }, { wch: 24 },
-    { wch: 34 }, { wch: 11 }, { wch: 10 }, { wch: 28 }, { wch: 18 },
+    { wch: 34 }, { wch: 11 }, { wch: 10 }, { wch: 28 }, { wch: 10 }, { wch: 18 },
   ];
   ws['!rows'] = [{ hpt: 30 }, { hpt: 16 }, { hpt: 22 }, ...items.map(() => ({ hpt: 20 }))];
   ws['!autofilter'] = { ref: `A3:${XLSX.utils.encode_col(HEADERS.length - 1)}${aoa.length}` } as any;

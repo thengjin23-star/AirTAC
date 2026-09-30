@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Download, Trash2, ClipboardList, Copy, Check, AlertTriangle, Cloud, HardDrive } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Download, Trash2, ClipboardList, Copy, Check, AlertTriangle, Cloud, HardDrive, UserRound } from 'lucide-react';
 import type { ConfirmedItem } from '../types';
 import { exportConfirmedExcel } from '../lib/exportConfirmed';
 
@@ -8,22 +8,38 @@ const MATCH_TYPE_BADGE: Record<string, string> = {
   '相似替代': 'bg-amber-50 text-amber-700 border-amber-200',
 };
 
-/** 確認清單：所有經人工確認的對照項目，支援編輯備註/訂購碼、刪除與匯出 Excel */
-export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }: {
+/**
+ * 確認清單：所有經人工確認的對照項目，支援編輯備註/訂購碼、刪除與匯出 Excel。
+ * 雲端共用時全公司共用同一份資料，因此預設只顯示「我的」，清空/匯出也只針對目前顯示的項目，
+ * 避免一鍵清掉同事的清單。
+ */
+export function ConfirmedList({ items: allItems, onUpdate, onRemove, onClear, cloudMode, userName, onUserNameChange }: {
   items: ConfirmedItem[];
   onUpdate: (id: string, patch: Partial<ConfirmedItem>) => void;
   onRemove: (id: string) => void;
-  onClear: () => void;
+  onClear: (ids: string[]) => void;
   cloudMode?: boolean;
+  userName: string;
+  onUserNameChange: (name: string) => void;
 }) {
   const [copiedAll, setCopiedAll] = useState(false);
+  const [scope, setScope] = useState<'mine' | 'all'>('mine');
+  const me = userName.trim();
+  const showAll = cloudMode && scope === 'all';
+
+  // 未標記確認人的舊資料視為「我的」，避免升級後清單突然消失
+  const items = useMemo(
+    () => (showAll ? allItems : allItems.filter(it => !it.owner || it.owner === me)),
+    [allItems, showAll, me],
+  );
 
   const updateItem = onUpdate;
   const removeItem = onRemove;
 
   const clearAll = () => {
-    if (window.confirm(`確定要清空全部 ${items.length} 筆確認清單嗎？此動作無法復原。`)) {
-      onClear();
+    const label = showAll ? '全公司' : '我的';
+    if (window.confirm(`確定要清空${label} ${items.length} 筆確認清單嗎？此動作無法復原。`)) {
+      onClear(items.map(it => it.id));
     }
   };
 
@@ -38,8 +54,36 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
     }).catch(() => {});
   };
 
+  const userBar = cloudMode && (
+    <div className="mb-4 bg-white rounded-2xl shadow-sm border border-slate-200 px-5 py-3 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
+      <label className="flex items-center gap-2 text-sm text-slate-600">
+        <UserRound className="w-4 h-4 text-[#005a9c]" />
+        確認人
+        <input
+          value={userName}
+          onChange={(e) => onUserNameChange(e.target.value)}
+          placeholder="輸入你的名字（區分同事的清單）"
+          className="border border-slate-200 rounded-lg px-2.5 py-1.5 text-sm w-56 focus:border-[#005a9c] focus:ring-1 focus:ring-[#005a9c]/30 outline-none"
+        />
+      </label>
+      <div className="bg-slate-100 rounded-lg p-0.5 flex text-sm self-start sm:self-auto">
+        {([['mine', '我的'], ['all', '全公司']] as const).map(([k, label]) => (
+          <button
+            key={k}
+            onClick={() => setScope(k)}
+            className={`px-3 py-1 rounded-md transition-colors ${scope === k ? 'bg-white text-[#005a9c] shadow-sm font-medium' : 'text-slate-500 hover:text-slate-700'}`}
+          >
+            {label}{k === 'all' ? ` (${allItems.length})` : ''}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+
   if (items.length === 0) {
     return (
+      <div>
+      {userBar}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-12 text-center">
         <div className="bg-slate-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <ClipboardList className="w-8 h-8 text-slate-400" />
@@ -49,10 +93,13 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
           到「型號自動匹配」分頁分析競品型號後，檢查 AI 給的訂購碼（可直接修改），按「確認並加入清單」，確認過的項目就會集中到這裡，最後一次匯出 Excel。
         </p>
       </div>
+      </div>
     );
   }
 
   return (
+    <div>
+    {userBar}
     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
       <div className="p-5 border-b border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center space-x-3">
@@ -60,7 +107,7 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
             <ClipboardList className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-slate-800">對照確認清單 ({items.length})</h2>
+            <h2 className="text-lg font-semibold text-slate-800">對照確認清單{showAll ? '（全公司）' : ''} ({items.length})</h2>
             <p className="text-slate-500 text-sm mt-0.5">已人工確認的對照結果，可在此繼續修改訂購碼與備註</p>
           </div>
         </div>
@@ -99,7 +146,7 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
                 <td className="px-4 py-3 text-slate-400 tabular-nums">{idx + 1}</td>
                 <td className="px-4 py-3">
                   <div className="font-mono text-slate-700 break-all">{it.competitorModel}</div>
-                  <div className="text-xs text-slate-400 mt-0.5">{it.brand}</div>
+                  <div className="text-xs text-slate-400 mt-0.5">{it.brand}{showAll && it.owner ? ` · ${it.owner}` : ''}</div>
                 </td>
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-1">
@@ -143,11 +190,12 @@ export function ConfirmedList({ items, onUpdate, onRemove, onClear, cloudMode }:
 
       <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100 text-xs text-slate-400 flex items-center gap-1.5">
         {cloudMode ? (
-          <><Cloud className="w-3.5 h-3.5 text-[#005a9c]" /> <span className="text-[#005a9c] font-medium">雲端共用模式</span>：全公司共用同一份清單，跨裝置同步。</>
+          <><Cloud className="w-3.5 h-3.5 text-[#005a9c]" /> <span className="text-[#005a9c] font-medium">雲端共用模式</span>：跨裝置同步；清空與匯出只作用在目前顯示的項目。</>
         ) : (
           <><HardDrive className="w-3.5 h-3.5" /> 本機模式：清單只存在此瀏覽器，換裝置不會同步；重要清單請匯出 Excel。</>
         )}
       </div>
+    </div>
     </div>
   );
 }

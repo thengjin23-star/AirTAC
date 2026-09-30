@@ -16,7 +16,7 @@ import {
   validateRecommendation,
 } from "./crossref";
 import { matchCompanyTable, companyMatchCatalogIds, companyMatchesText } from "./companyCrossref";
-import { get as storeGet, isConfigured as storeConfigured, normalizeModel } from "./store";
+import { get as storeGet, isConfigured as storeConfigured, normalizeModel, ensureCorrectionsMigrated, findSimilarCorrections } from "./store";
 
 // 延遲初始化，確保 dotenv (server.ts) 或平台注入的環境變數已就緒
 let aiClient: GoogleGenAI | null = null;
@@ -220,23 +220,61 @@ function learnedRulesText(rules: LearnedRule[]): string {
 /** 執行完整的兩階段交叉比對，回傳 HTTP 狀態碼與 JSON body。 */
 export async function crossReference(reqBody: any): Promise<CrossReferenceOutcome> {
   try {
-    const { competitorModel, brand, customRules, learnedRules } = reqBody || {};
+    const { competitorModel, brand, customRules, learnedRules, forceAI } = reqBody || {};
 
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
     }
 
-    // 自我學習：查團隊過去確認/修正過的對照 (最高權威，高於公司表)
+    // 自我學習 / 參考資料庫：
+    //   1. 完全相同的競品型號 → 團隊確認過的答案 (最高權威)
+    //   2. 沒有完全相同 → 找「相近型號」的過去對照，當作公司慣例提示給 AI
+    // 鍵只用正規化型號 (不含品牌)，否則自動偵測廠牌時永遠查不到。
     let teamCorrection: any = null;
+    let similarCorrections: any[] = [];
     if (storeConfigured()) {
       try {
-        teamCorrection = await storeGet('corrections', normalizeModel(competitorModel, brand));
+        await ensureCorrectionsMigrated();
+        teamCorrection = await storeGet('corrections', normalizeModel(competitorModel));
+        if (!teamCorrection) similarCorrections = await findSimilarCorrections(competitorModel);
       } catch (e: any) { console.error('correction lookup failed:', e.message || e); }
     }
 
-    // cache key 需包含自訂規則、知識庫規則與團隊修正的「內容」
-    const rulesHash = (customRules || (Array.isArray(learnedRules) && learnedRules.length > 0) || teamCorrection)
-      ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || '')).digest("hex").slice(0, 12)
+    // 完全相同的型號團隊已確認過 → 直接回答，不呼叫 AI (秒回、不耗額度)。
+    // 使用者有下自訂規則、或按了「改用 AI 重新分析」(forceAI) 時才走完整 AI 流程。
+    if (teamCorrection?.airtacCode && !customRules && !forceAI) {
+      const seriesOk = Boolean(teamCorrection.seriesId && isValidSeriesId(teamCorrection.seriesId));
+      const when = teamCorrection.updatedAt ? new Date(teamCorrection.updatedAt).toLocaleDateString('zh-TW') : '';
+      return {
+        status: 200,
+        body: {
+          competitorBrand: teamCorrection.brand || brand || '（團隊資料庫）',
+          competitorSpecs: [],
+          airtacRecommendations: [{
+            baseModel: teamCorrection.seriesId || teamCorrection.airtacCode,
+            seriesId: seriesOk ? teamCorrection.seriesId : '',
+            fullOrderingCode: teamCorrection.airtacCode,
+            description: teamCorrection.description || '團隊確認的對照型號',
+            matchType: '直接替換',
+            matchPercentage: 100,
+            reasoningForOrderingCode: `團隊${when ? `於 ${when} ` : ''}確認過此對照${teamCorrection.note ? `（備註：${teamCorrection.note}）` : ''}，直接採用。`,
+            selectedOptions: [],
+            configurableOptions: [],
+            fromTeamCorrection: true,
+            validation: { catalogVerified: true, seriesFound: seriesOk, warnings: [] },
+          }],
+          explanation: '此競品型號已在團隊參考資料庫中，直接採用過去確認的對照（未呼叫 AI，節省時間與額度）。若規格有變或想比較其他方案，可按「改用 AI 重新分析」。',
+          uncertainties: [],
+          teamCorrection: { airtacCode: teamCorrection.airtacCode, confirmedAt: teamCorrection.updatedAt },
+          fromReference: true,
+        },
+      };
+    }
+
+    // cache key 需包含自訂規則、知識庫規則與團隊修正/相近對照的「內容」
+    const refSig = JSON.stringify([teamCorrection?.updatedAt || '', similarCorrections.map(c => `${c.key}@${c.updatedAt}`)]);
+    const rulesHash = (customRules || (Array.isArray(learnedRules) && learnedRules.length > 0) || teamCorrection || similarCorrections.length > 0)
+      ? crypto.createHash("sha1").update(String(customRules || '') + JSON.stringify(learnedRules || []) + refSig).digest("hex").slice(0, 12)
       : "none";
     const cacheKey = `${brand || 'auto'}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
     // 有自訂規則時一律重新分析 (使用者正在調整指示，不吃舊快取，避免「鬼打牆」)
@@ -258,6 +296,13 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
         + `\n除非使用者的自訂規則另有指示，否則請直接以此對照為主要推薦。\n\n${hints}`;
     }
 
+    // 參考資料庫中的相近型號對照 → 公司慣例提示 (非本型號答案，用來推斷慣用系列與選項)
+    if (similarCorrections.length > 0) {
+      const lines = similarCorrections.map(c =>
+        `- 「${c.competitorModel}」→「${c.airtacCode}」${c.seriesId ? ` (系列 ${c.seriesId})` : ''}${c.note ? `，備註：${c.note}` : ''}`);
+      hints = `※ 團隊參考資料庫中「相近型號」的過去對照 (不是本型號的答案；請用來推斷本公司慣用的對應系列、選項與寫法，並與本型號逐段比對差異)：\n${lines.join('\n')}\n\n${hints}`;
+    }
+
     // 公司對照表命中 → 權威提示 + 候選系列 (優先於一般業界知識)
     const companyMatches = matchCompanyTable(competitorModel, brand);
     const companyIds = companyMatchCatalogIds(companyMatches);
@@ -275,11 +320,14 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     // 讓「請改用 XX 系列」這類指示真的能生效，而非被鎖在既有候選裡)
     const ruleSeriesIds = mentionedSeriesIds(customRules).filter(isValidSeriesId);
 
-    // 候選組裝順序 = 使用者指定 → 團隊修正 → 公司對照表 → 啟發式 (放最前面者最不會被 slice 掉)
+    // 候選組裝順序 = 使用者指定 → 團隊修正 → 公司對照表 → 相近型號對照 → 啟發式 (放最前面者最不會被 slice 掉)
     let candidateIds: string[] = [];
     for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    for (const c of similarCorrections) {
+      if (c.seriesId && isValidSeriesId(c.seriesId) && !candidateIds.includes(c.seriesId)) candidateIds.push(c.seriesId);
+    }
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
@@ -373,6 +421,7 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
               required: ["competitorModelDisassembly", "airtacRuleMapping"]
             },
             competitorBrand: { type: Type.STRING, description: "競爭對手的品牌" },
+            productType: { type: Type.STRING, description: "產品種類的繁體中文簡述 (如: 五口電磁閥、薄型氣缸+磁性開關)" },
             competitorSpecs: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
@@ -451,8 +500,17 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
       name: s.name,
       group: s.group,
     }));
+    // 第一階段被跳過時沒有分類結果，改用第二階段回傳的 productType
     if (classifierInfo.productType) {
       result.productType = classifierInfo.productType;
+    }
+    // 透明化：這次參考了哪些團隊過去的相近對照
+    if (similarCorrections.length > 0) {
+      result.referenceMatches = similarCorrections.map(c => ({
+        competitorModel: c.competitorModel,
+        airtacCode: c.airtacCode,
+        seriesId: c.seriesId || undefined,
+      }));
     }
     // 標示並「確定性地」採用團隊過去的確認：若 AI 沒有輸出相同的訂購碼，
     // 由伺服器把團隊確認的對照直接放到推薦第一筆 (自我學習=權威，不依賴 AI 意願)。

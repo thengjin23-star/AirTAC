@@ -16,7 +16,8 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
   const [rows, setRows] = useState<BatchRow[]>([]);
   const [running, setRunning] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const cancelRef = useRef(false);
+  // 每次開始/停止都遞增；迴圈發現 id 變了就結束 (舊版用布林旗標，停止後再開始會讓舊迴圈復活、重複打 API)
+  const runIdRef = useRef(0);
 
   const parseInput = (): BatchRow[] => {
     const seen = new Set<string>();
@@ -43,50 +44,59 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
       }));
   };
 
-  const processRow = async (row: BatchRow): Promise<BatchRow> => {
+  const processRow = async (row: BatchRow, forceAI = false): Promise<BatchRow> => {
     try {
-      const result = await analyzeModel(row.model, row.brand, customRules);
+      const result = await analyzeModel(row.model, row.brand, customRules, { forceAI });
       return { ...row, status: 'done', result, error: undefined };
     } catch (e: any) {
       return { ...row, status: 'error', error: e.message || '未知錯誤' };
     }
   };
 
+  const runRows = async (queue: BatchRow[]) => {
+    const runId = ++runIdRef.current;
+    setRunning(true);
+    for (const row of queue) {
+      if (runIdRef.current !== runId) return;
+      setRows(prev => prev.map(r => (r.id === row.id ? { ...r, status: 'running', error: undefined } : r)));
+      const finished = await processRow(row);
+      setRows(prev => prev.map(r => (r.id === row.id ? finished : r)));
+      if (finished.status === 'done') onDone?.(finished);
+      if (runIdRef.current !== runId) return;
+      // 每筆之間短暫間隔，避免免費方案 rate limit；失敗(多半是額度)時多等一下
+      await new Promise(r => setTimeout(r, finished.status === 'error' ? 3000 : 800));
+    }
+    if (runIdRef.current === runId) setRunning(false);
+  };
+
   const start = async () => {
     const newRows = parseInput();
     if (newRows.length === 0) return;
     setRows(newRows);
-    setRunning(true);
-    cancelRef.current = false;
-
-    for (const row of newRows) {
-      if (cancelRef.current) break;
-      setRows(prev => prev.map(r => (r.id === row.id ? { ...r, status: 'running' } : r)));
-      const finished = await processRow(row);
-      setRows(prev => prev.map(r => (r.id === row.id ? finished : r)));
-      if (finished.status === 'done') onDone?.(finished);
-      // 每筆之間短暫間隔，避免免費方案 rate limit；失敗(多半是額度)時多等一下
-      if (!cancelRef.current) await new Promise(r => setTimeout(r, finished.status === 'error' ? 3000 : 800));
-    }
-    setRunning(false);
+    setExpandedId(null);
+    await runRows(newRows);
   };
+
+  /** 從上次停止的地方繼續 (只跑尚未完成的列) */
+  const resume = () => runRows(rows.filter(r => r.status === 'pending'));
 
   const stop = () => {
-    cancelRef.current = true;
+    runIdRef.current++;
     setRunning(false);
-    setRows(prev => prev.map(r => (r.status === 'running' || r.status === 'pending' ? { ...r, status: r.status === 'running' ? r.status : 'pending' } : r)));
+    // 正在跑的那一筆請求會自行完成並寫回結果；尚未開始的維持「等待中」，可按「繼續」
   };
 
-  const retryRow = async (rowId: string) => {
+  const retryRow = async (rowId: string, forceAI = false) => {
     const row = rows.find(r => r.id === rowId);
     if (!row || running) return;
     setRows(prev => prev.map(r => (r.id === rowId ? { ...r, status: 'running', error: undefined } : r)));
-    const finished = await processRow(row);
+    const finished = await processRow(row, forceAI);
     setRows(prev => prev.map(r => (r.id === rowId ? finished : r)));
     if (finished.status === 'done') onDone?.(finished);
   };
 
   const doneCount = rows.filter(r => r.status === 'done').length;
+  const pendingCount = rows.filter(r => r.status === 'pending').length;
   const errorCount = rows.filter(r => r.status === 'error').length;
   const totalCount = rows.length;
   const progress = totalCount > 0 ? Math.round(((doneCount + errorCount) / totalCount) * 100) : 0;
@@ -127,6 +137,15 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
                 <Square className="w-4 h-4 mr-2" /> 停止
               </button>
             ) : (
+              <div className="flex items-center gap-2">
+              {pendingCount > 0 && rows.length > 0 && (
+                <button
+                  onClick={resume}
+                  className="px-4 py-2.5 rounded-xl bg-white text-[#005a9c] border border-[#005a9c]/30 font-medium hover:bg-blue-50 transition-colors flex items-center shadow-sm"
+                >
+                  <Play className="w-4 h-4 mr-2" /> 繼續未完成 ({pendingCount})
+                </button>
+              )}
               <button
                 onClick={start}
                 disabled={!input.trim()}
@@ -134,6 +153,7 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
               >
                 <Play className="w-4 h-4 mr-2" /> 開始批量分析
               </button>
+              </div>
             )}
           </div>
         </div>
@@ -194,6 +214,7 @@ export function BatchPanel({ brand, customRules, onAddToList, isConfirmed, onDon
                         result={row.result}
                         onAddToList={onAddToList}
                         isConfirmed={isConfirmed}
+                        onReanalyze={running ? undefined : () => retryRow(row.id, true)}
                         compact
                       />
                     </div>

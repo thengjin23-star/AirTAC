@@ -115,11 +115,11 @@ export function ReferenceDB() {
     if (!parsed) return;
     setImporting(true);
     setProgress({ done: 0, total: parsed.total });
-    const { ok, fail } = await importCorrections(parsed.rows, (done, total) => setProgress({ done, total }));
+    const { ok, fail, error } = await importCorrections(parsed.rows, (done, total) => setProgress({ done, total }));
     setImporting(false);
     setParsed(null);
     if (fileRef.current) fileRef.current.value = '';
-    setMsg({ kind: fail === 0 ? 'ok' : 'err', text: `匯入完成：成功 ${ok} 筆${fail ? `，失敗 ${fail} 筆` : ''}。` });
+    setMsg({ kind: fail === 0 ? 'ok' : 'err', text: `匯入完成：成功 ${ok} 筆${fail ? `，失敗 ${fail} 筆${error ? `（${error}）` : ''}` : ''}。同一競品型號重複時以最後一筆為準。` });
     reload();
   };
 
@@ -245,7 +245,7 @@ export function ReferenceDB() {
                 ? <span className="inline-flex items-center gap-0.5 text-xs text-[#005a9c] font-medium"><Cloud className="w-3.5 h-3.5" />雲端共用</span>
                 : <span className="inline-flex items-center gap-0.5 text-xs text-slate-400"><HardDrive className="w-3.5 h-3.5" />本機模式</span>}
             </h2>
-            <p className="text-slate-500 text-xs mt-0.5">分析時競品型號命中這裡就直接採用（最高權威），跳過 AI 重算</p>
+            <p className="text-slate-500 text-xs mt-0.5">分析時競品型號完全命中就直接採用（秒回、不耗 AI 額度）；相近型號則作為 AI 的參考</p>
           </div>
           <div className="flex items-center gap-2">
             <div className="relative">

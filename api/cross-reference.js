@@ -33803,6 +33803,22 @@ var defaultCatalog = rawCatalogs.map((series) => {
   };
 });
 
+// src/lib/orderingCode.ts
+function generateOrderingCode(series, selections) {
+  let code = series.format || series.orderCodeFormat || "";
+  const hasCodeCategory = (series.categories || []).some((c) => c.id === "code");
+  if (!hasCodeCategory) {
+    code = code.replace("{code}", series.code !== void 0 ? series.code : series.id || "");
+  }
+  for (const cat of series.categories || []) {
+    const val = selections[cat.id];
+    code = code.replace(`{${cat.id}}`, val !== void 0 ? val : cat.options?.[0]?.code || "");
+  }
+  code = code.replace(/\s+/g, " ").replace(/-\s*-/g, "-").replace(/\s+-/g, "-").replace(/-\s+/g, "-").trim();
+  if (code.endsWith("-")) code = code.slice(0, -1);
+  return code;
+}
+
 // src/server/crossref.ts
 var seriesById = /* @__PURE__ */ new Map();
 for (const s of defaultCatalog) {
@@ -34023,20 +34039,6 @@ ${e.decode}
     return text;
   }).join("\n");
 }
-function generateOrderingCode(series, selections) {
-  let code = series.format || series.orderCodeFormat || "";
-  const hasCodeCategory = (series.categories || []).some((c) => c.id === "code");
-  if (!hasCodeCategory) {
-    code = code.replace("{code}", series.code !== void 0 ? series.code : series.id || "");
-  }
-  for (const cat of series.categories || []) {
-    const val = selections[cat.id];
-    code = code.replace(`{${cat.id}}`, val !== void 0 ? val : cat.options?.[0]?.code || "");
-  }
-  code = code.replace(/\s+/g, " ").replace(/-\s*-/g, "-").replace(/\s+-/g, "-").replace(/-\s+/g, "-").trim();
-  if (code.endsWith("-")) code = code.slice(0, -1);
-  return code;
-}
 var NO_MATCH_RE = /無(直接)?對應/;
 function validateRecommendation(rec) {
   const warnings = [];
@@ -34055,13 +34057,26 @@ function validateRecommendation(rec) {
       warnings.push(`\u53C3\u6578\u300C${sel.categoryId}\u300D\u4E0D\u5B58\u5728\u65BC ${series.name} \u7684\u578B\u9304\u5B9A\u7FA9\u4E2D\u3002`);
       continue;
     }
-    const opt = (cat.options || []).find((o) => o.code === sel.code);
+    const code = String(sel.code ?? "");
+    const opt = (cat.options || []).find((o) => o.code === code);
     if (!opt) {
       const valid = (cat.options || []).map((o) => o.code === "" ? "(\u7A7A\u767D)" : o.code).join(", ");
-      warnings.push(`\u300C${cat.name}\u300D\u4EE3\u78BC\u300C${sel.code === "" ? "(\u7A7A\u767D)" : sel.code}\u300D\u4E0D\u5728\u578B\u9304\u5408\u6CD5\u9078\u9805\u5167 (\u53EF\u9078: ${valid})\u3002`);
+      if (/stroke/i.test(cat.id) && /^\d+$/.test(code)) {
+        warnings.push(`\u300C${cat.name}\u300D${code} \u4E0D\u662F\u578B\u9304\u6A19\u6E96\u884C\u7A0B (\u6A19\u6E96: ${valid})\uFF1B\u4E9E\u5FB7\u5BA2\u591A\u53EF\u8A02\u88FD\u975E\u6A19\u6E96\u884C\u7A0B\uFF0C\u8ACB\u8207\u696D\u52D9\u78BA\u8A8D\u4EA4\u671F\u3002`);
+      } else {
+        warnings.push(`\u300C${cat.name}\u300D\u4EE3\u78BC\u300C${code === "" ? "(\u7A7A\u767D)" : code}\u300D\u4E0D\u5728\u578B\u9304\u5408\u6CD5\u9078\u9805\u5167 (\u53EF\u9078: ${valid})\u3002`);
+      }
+      selections[sel.categoryId] = code;
       continue;
     }
-    selections[sel.categoryId] = sel.code;
+    selections[sel.categoryId] = code;
+  }
+  const KEY_PARAMS = /^(bore|stroke|size|port|port_size|diameter|tube)$/i;
+  for (const cat of series.categories || []) {
+    if (KEY_PARAMS.test(cat.id) && selections[cat.id] === void 0 && (cat.options || []).length > 1) {
+      const def = cat.options[0]?.code;
+      warnings.push(`\u672A\u6307\u5B9A\u300C${cat.name}\u300D\uFF0C\u66AB\u7528\u9810\u8A2D\u503C\u300C${def === "" ? "(\u7A7A\u767D)" : def}\u300D\uFF0C\u8ACB\u4F9D\u5BE6\u969B\u898F\u683C\u4FEE\u6539\u3002`);
+    }
   }
   const serverGeneratedCode = generateOrderingCode(series, selections);
   const normalize = (s) => s.replace(/[\s\-–—]+/g, "").toUpperCase();
@@ -36712,10 +36727,96 @@ async function get(kind, field) {
   if (useMemory()) return memory[kind].get(field) ?? null;
   return null;
 }
-function normalizeModel(model, brand) {
-  const m = String(model || "").toUpperCase().replace(/[\s\-–—_]+/g, "");
-  const b = String(brand || "").toUpperCase().replace(/\s+/g, "");
-  return b && b !== "AUTO" ? `${b}::${m}` : m;
+function normalizeModel(model) {
+  return String(model || "").toUpperCase().replace(/[\s\-–—_]+/g, "");
+}
+async function putMany(kind, entries2) {
+  if (entries2.length === 0) return;
+  if (useRedis()) {
+    const args = ["HSET", KEYS[kind]];
+    for (const [f, v] of entries2) args.push(f, JSON.stringify(v));
+    await redis(args);
+    return;
+  }
+  if (useMemory()) for (const [f, v] of entries2) memory[kind].set(f, v);
+}
+var META_KEY = "airtac:meta";
+var migrationDone = false;
+async function ensureCorrectionsMigrated() {
+  if (migrationDone || !isConfigured()) return;
+  try {
+    if (useRedis()) {
+      if (await redis(["HGET", META_KEY, "corrections_v2"])) {
+        migrationDone = true;
+        return;
+      }
+      const flat = await redis(["HGETALL", KEYS.corrections]) || [];
+      const current = /* @__PURE__ */ new Map();
+      for (let i = 0; i < flat.length; i += 2) {
+        try {
+          current.set(flat[i], JSON.parse(flat[i + 1]));
+        } catch (e) {
+        }
+      }
+      const writes = [];
+      const deletes = [];
+      for (const [field, val] of current) {
+        if (!field.includes("::")) continue;
+        const newKey = normalizeModel(val?.competitorModel || field.split("::").pop() || "");
+        deletes.push(field);
+        if (!newKey) continue;
+        const existing = current.get(newKey) || writes.find((w) => w[0] === newKey)?.[1];
+        if (existing && (existing.updatedAt || 0) > (val.updatedAt || 0)) continue;
+        const idx = writes.findIndex((w) => w[0] === newKey);
+        if (idx >= 0) writes.splice(idx, 1);
+        writes.push([newKey, { ...val, key: newKey }]);
+      }
+      if (writes.length) await putMany("corrections", writes);
+      if (deletes.length) await redis(["HDEL", KEYS.corrections, ...deletes]);
+      await redis(["HSET", META_KEY, "corrections_v2", String(Date.now())]);
+      if (writes.length || deletes.length) console.log(`corrections migrated: ${writes.length} rewritten, ${deletes.length} legacy keys removed`);
+    } else if (useMemory()) {
+      for (const [field, val] of Array.from(memory.corrections.entries())) {
+        if (!field.includes("::")) continue;
+        memory.corrections.delete(field);
+        const newKey = normalizeModel(val?.competitorModel || "");
+        if (newKey) memory.corrections.set(newKey, { ...val, key: newKey });
+      }
+    }
+    migrationDone = true;
+  } catch (e) {
+    console.error("corrections migration failed:", e?.message || e);
+  }
+}
+async function findSimilarCorrections(model, max = 6) {
+  const key = normalizeModel(model);
+  const prefix = (key.match(/^[A-Z0-9]+/)?.[0] || "").slice(0, 3);
+  if (prefix.length < 2) return [];
+  const pool = [];
+  if (useRedis()) {
+    let cursor = "0";
+    let iter = 0;
+    do {
+      const res = await redis(["HSCAN", KEYS.corrections, cursor, "MATCH", `${prefix}*`, "COUNT", 1e3]);
+      cursor = String(res?.[0] ?? "0");
+      const flat = res?.[1] || [];
+      for (let i = 1; i < flat.length; i += 2) {
+        try {
+          pool.push(JSON.parse(flat[i]));
+        } catch (e) {
+        }
+      }
+      iter++;
+    } while (cursor !== "0" && iter < 6 && pool.length < 500);
+  } else if (useMemory()) {
+    for (const [f, v] of memory.corrections) if (f.startsWith(prefix)) pool.push(v);
+  }
+  const common = (a, b) => {
+    let i = 0;
+    while (i < a.length && i < b.length && a[i] === b[i]) i++;
+    return i;
+  };
+  return pool.map((v) => ({ v, k: normalizeModel(v?.competitorModel || v?.key || "") })).filter(({ k }) => k && k !== key).map(({ v, k }) => ({ v, score: common(k, key) })).filter(({ score }) => score >= 3).sort((a, b) => b.score - a.score || (b.v.updatedAt || 0) - (a.v.updatedAt || 0)).slice(0, max).map(({ v }) => v);
 }
 
 // src/server/crossReferenceService.ts
@@ -36866,19 +36967,51 @@ ${String(r.decode).slice(0, 6e3)}
 }
 async function crossReference(reqBody) {
   try {
-    const { competitorModel, brand, customRules, learnedRules } = reqBody || {};
+    const { competitorModel, brand, customRules, learnedRules, forceAI } = reqBody || {};
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
     }
     let teamCorrection = null;
+    let similarCorrections = [];
     if (isConfigured()) {
       try {
-        teamCorrection = await get("corrections", normalizeModel(competitorModel, brand));
+        await ensureCorrectionsMigrated();
+        teamCorrection = await get("corrections", normalizeModel(competitorModel));
+        if (!teamCorrection) similarCorrections = await findSimilarCorrections(competitorModel);
       } catch (e) {
         console.error("correction lookup failed:", e.message || e);
       }
     }
-    const rulesHash = customRules || Array.isArray(learnedRules) && learnedRules.length > 0 || teamCorrection ? crypto.createHash("sha1").update(String(customRules || "") + JSON.stringify(learnedRules || []) + JSON.stringify(teamCorrection?.updatedAt || "")).digest("hex").slice(0, 12) : "none";
+    if (teamCorrection?.airtacCode && !customRules && !forceAI) {
+      const seriesOk = Boolean(teamCorrection.seriesId && isValidSeriesId(teamCorrection.seriesId));
+      const when = teamCorrection.updatedAt ? new Date(teamCorrection.updatedAt).toLocaleDateString("zh-TW") : "";
+      return {
+        status: 200,
+        body: {
+          competitorBrand: teamCorrection.brand || brand || "\uFF08\u5718\u968A\u8CC7\u6599\u5EAB\uFF09",
+          competitorSpecs: [],
+          airtacRecommendations: [{
+            baseModel: teamCorrection.seriesId || teamCorrection.airtacCode,
+            seriesId: seriesOk ? teamCorrection.seriesId : "",
+            fullOrderingCode: teamCorrection.airtacCode,
+            description: teamCorrection.description || "\u5718\u968A\u78BA\u8A8D\u7684\u5C0D\u7167\u578B\u865F",
+            matchType: "\u76F4\u63A5\u66FF\u63DB",
+            matchPercentage: 100,
+            reasoningForOrderingCode: `\u5718\u968A${when ? `\u65BC ${when} ` : ""}\u78BA\u8A8D\u904E\u6B64\u5C0D\u7167${teamCorrection.note ? `\uFF08\u5099\u8A3B\uFF1A${teamCorrection.note}\uFF09` : ""}\uFF0C\u76F4\u63A5\u63A1\u7528\u3002`,
+            selectedOptions: [],
+            configurableOptions: [],
+            fromTeamCorrection: true,
+            validation: { catalogVerified: true, seriesFound: seriesOk, warnings: [] }
+          }],
+          explanation: "\u6B64\u7AF6\u54C1\u578B\u865F\u5DF2\u5728\u5718\u968A\u53C3\u8003\u8CC7\u6599\u5EAB\u4E2D\uFF0C\u76F4\u63A5\u63A1\u7528\u904E\u53BB\u78BA\u8A8D\u7684\u5C0D\u7167\uFF08\u672A\u547C\u53EB AI\uFF0C\u7BC0\u7701\u6642\u9593\u8207\u984D\u5EA6\uFF09\u3002\u82E5\u898F\u683C\u6709\u8B8A\u6216\u60F3\u6BD4\u8F03\u5176\u4ED6\u65B9\u6848\uFF0C\u53EF\u6309\u300C\u6539\u7528 AI \u91CD\u65B0\u5206\u6790\u300D\u3002",
+          uncertainties: [],
+          teamCorrection: { airtacCode: teamCorrection.airtacCode, confirmedAt: teamCorrection.updatedAt },
+          fromReference: true
+        }
+      };
+    }
+    const refSig = JSON.stringify([teamCorrection?.updatedAt || "", similarCorrections.map((c) => `${c.key}@${c.updatedAt}`)]);
+    const rulesHash = customRules || Array.isArray(learnedRules) && learnedRules.length > 0 || teamCorrection || similarCorrections.length > 0 ? crypto.createHash("sha1").update(String(customRules || "") + JSON.stringify(learnedRules || []) + refSig).digest("hex").slice(0, 12) : "none";
     const cacheKey = `${brand || "auto"}-${competitorModel.trim().toUpperCase()}-${rulesHash}`;
     if (!customRules && cache.has(cacheKey)) {
       console.log(`Cache hit for ${cacheKey}`);
@@ -36890,6 +37023,13 @@ async function crossReference(reqBody) {
       hints = `\u203B\u203B \u5718\u968A\u5DF2\u78BA\u8A8D\u904E\u6B64\u7AF6\u54C1\u578B\u865F\u7684\u5C0D\u7167 (\u6700\u9AD8\u6B0A\u5A01\uFF0C\u512A\u5148\u65BC\u4E00\u5207\u5176\u4ED6\u4F86\u6E90)\uFF1A
 \u7AF6\u54C1\u300C${competitorModel}\u300D\u2192 AirTAC\u300C${teamCorrection.airtacCode}\u300D${teamCorrection.seriesId ? ` (\u7CFB\u5217 ${teamCorrection.seriesId})` : ""}${teamCorrection.description ? `\uFF0C${teamCorrection.description}` : ""}${teamCorrection.note ? `\u3002\u5099\u8A3B\uFF1A${teamCorrection.note}` : ""}
 \u9664\u975E\u4F7F\u7528\u8005\u7684\u81EA\u8A02\u898F\u5247\u53E6\u6709\u6307\u793A\uFF0C\u5426\u5247\u8ACB\u76F4\u63A5\u4EE5\u6B64\u5C0D\u7167\u70BA\u4E3B\u8981\u63A8\u85A6\u3002
+
+${hints}`;
+    }
+    if (similarCorrections.length > 0) {
+      const lines = similarCorrections.map((c) => `- \u300C${c.competitorModel}\u300D\u2192\u300C${c.airtacCode}\u300D${c.seriesId ? ` (\u7CFB\u5217 ${c.seriesId})` : ""}${c.note ? `\uFF0C\u5099\u8A3B\uFF1A${c.note}` : ""}`);
+      hints = `\u203B \u5718\u968A\u53C3\u8003\u8CC7\u6599\u5EAB\u4E2D\u300C\u76F8\u8FD1\u578B\u865F\u300D\u7684\u904E\u53BB\u5C0D\u7167 (\u4E0D\u662F\u672C\u578B\u865F\u7684\u7B54\u6848\uFF1B\u8ACB\u7528\u4F86\u63A8\u65B7\u672C\u516C\u53F8\u6163\u7528\u7684\u5C0D\u61C9\u7CFB\u5217\u3001\u9078\u9805\u8207\u5BEB\u6CD5\uFF0C\u4E26\u8207\u672C\u578B\u865F\u9010\u6BB5\u6BD4\u5C0D\u5DEE\u7570)\uFF1A
+${lines.join("\n")}
 
 ${hints}`;
     }
@@ -36911,6 +37051,9 @@ ${hints}`;
     for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    for (const c of similarCorrections) {
+      if (c.seriesId && isValidSeriesId(c.seriesId) && !candidateIds.includes(c.seriesId)) candidateIds.push(c.seriesId);
+    }
     for (const id of heuristic.candidateIds) {
       if (!candidateIds.includes(id)) candidateIds.push(id);
     }
@@ -37004,6 +37147,7 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
               required: ["competitorModelDisassembly", "airtacRuleMapping"]
             },
             competitorBrand: { type: Type.STRING, description: "\u7AF6\u722D\u5C0D\u624B\u7684\u54C1\u724C" },
+            productType: { type: Type.STRING, description: "\u7522\u54C1\u7A2E\u985E\u7684\u7E41\u9AD4\u4E2D\u6587\u7C21\u8FF0 (\u5982: \u4E94\u53E3\u96FB\u78C1\u95A5\u3001\u8584\u578B\u6C23\u7F38+\u78C1\u6027\u958B\u95DC)" },
             competitorSpecs: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
@@ -37080,6 +37224,13 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
     if (classifierInfo.productType) {
       result.productType = classifierInfo.productType;
     }
+    if (similarCorrections.length > 0) {
+      result.referenceMatches = similarCorrections.map((c) => ({
+        competitorModel: c.competitorModel,
+        airtacCode: c.airtacCode,
+        seriesId: c.seriesId || void 0
+      }));
+    }
     if (teamCorrection && teamCorrection.airtacCode && !customRules) {
       result.teamCorrection = {
         airtacCode: teamCorrection.airtacCode,
@@ -37137,12 +37288,36 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
   }
 }
 
+// src/server/access.ts
+import crypto2 from "crypto";
+function headerValue(headers, name) {
+  if (!headers) return void 0;
+  const v = typeof headers.get === "function" ? headers.get(name) : headers[name] ?? headers[name.toLowerCase()];
+  return Array.isArray(v) ? v[0] : v;
+}
+function safeEqual(a, b) {
+  const ha = crypto2.createHash("sha256").update(a).digest();
+  const hb = crypto2.createHash("sha256").update(b).digest();
+  return crypto2.timingSafeEqual(ha, hb);
+}
+function checkAccess(headers) {
+  const expected = process.env.ACCESS_TOKEN;
+  if (!expected) return true;
+  const got = headerValue(headers, "x-access-token");
+  return typeof got === "string" && got.length > 0 && safeEqual(got, expected);
+}
+var ACCESS_DENIED = {
+  status: 401,
+  body: { error: "\u9700\u8981\u5718\u968A\u5B58\u53D6\u78BC\u624D\u80FD\u4F7F\u7528 (\u8ACB\u5411\u7BA1\u7406\u8005\u7D22\u53D6)", needToken: true }
+};
+
 // src/server/vercelHandlers/cross-reference.ts
 async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed\uFF0C\u8ACB\u4F7F\u7528 POST" });
   }
+  if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
   let body = req.body;
   if (typeof body === "string") {
     try {

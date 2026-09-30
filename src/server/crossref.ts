@@ -7,6 +7,7 @@
  * 型錄逐項驗證，防止幻覺型號流出。
  */
 import { defaultCatalog } from '../data/index';
+import { generateOrderingCode } from '../lib/orderingCode';
 import type { CatalogSeries } from '../data/types';
 
 // ---------------------------------------------------------------------------
@@ -274,26 +275,8 @@ export interface RecommendationValidation {
   serverGeneratedCode?: string;
 }
 
-/** 依型錄 format 模板 + 選項組合出訂購碼 (與前端訂購碼產生器邏輯一致)。 */
-export function generateOrderingCode(series: CatalogSeries, selections: Record<string, string>): string {
-  let code = series.format || series.orderCodeFormat || '';
-  const hasCodeCategory = (series.categories || []).some(c => c.id === 'code');
-  if (!hasCodeCategory) {
-    code = code.replace('{code}', series.code !== undefined ? series.code : (series.id || ''));
-  }
-  for (const cat of series.categories || []) {
-    const val = selections[cat.id];
-    code = code.replace(`{${cat.id}}`, val !== undefined ? val : (cat.options?.[0]?.code || ''));
-  }
-  code = code
-    .replace(/\s+/g, ' ')
-    .replace(/-\s*-/g, '-')
-    .replace(/\s+-/g, '-')
-    .replace(/-\s+/g, '-')
-    .trim();
-  if (code.endsWith('-')) code = code.slice(0, -1);
-  return code;
-}
+// 訂購碼產生器與前端共用同一份實作，避免兩邊邏輯漂移
+export { generateOrderingCode };
 
 const NO_MATCH_RE = /無(直接)?對應/;
 
@@ -328,13 +311,30 @@ export function validateRecommendation(rec: {
       warnings.push(`參數「${sel.categoryId}」不存在於 ${series.name} 的型錄定義中。`);
       continue;
     }
-    const opt = (cat.options || []).find(o => o.code === sel.code);
+    const code = String(sel.code ?? '');
+    const opt = (cat.options || []).find(o => o.code === code);
     if (!opt) {
       const valid = (cat.options || []).map(o => (o.code === '' ? '(空白)' : o.code)).join(', ');
-      warnings.push(`「${cat.name}」代碼「${sel.code === '' ? '(空白)' : sel.code}」不在型錄合法選項內 (可選: ${valid})。`);
+      if (/stroke/i.test(cat.id) && /^\d+$/.test(code)) {
+        warnings.push(`「${cat.name}」${code} 不是型錄標準行程 (標準: ${valid})；亞德客多可訂製非標準行程，請與業務確認交期。`);
+      } else {
+        warnings.push(`「${cat.name}」代碼「${code === '' ? '(空白)' : code}」不在型錄合法選項內 (可選: ${valid})。`);
+      }
+      // 保留 AI 給的代碼，不要默默換成第一個選項 —— 否則訂購碼規格會被偷換
+      // (例如非標準行程 120 變成 25) 而且看起來還像「驗證過」的樣子。
+      selections[sel.categoryId] = code;
       continue;
     }
-    selections[sel.categoryId] = sel.code;
+    selections[sel.categoryId] = code;
+  }
+
+  // 關鍵尺寸參數沒給就會套用第一個選項 (如缸徑 6mm)，必須提醒
+  const KEY_PARAMS = /^(bore|stroke|size|port|port_size|diameter|tube)$/i;
+  for (const cat of series.categories || []) {
+    if (KEY_PARAMS.test(cat.id) && selections[cat.id] === undefined && (cat.options || []).length > 1) {
+      const def = cat.options[0]?.code;
+      warnings.push(`未指定「${cat.name}」，暫用預設值「${def === '' ? '(空白)' : def}」，請依實際規格修改。`);
+    }
   }
 
   const serverGeneratedCode = generateOrderingCode(series, selections);

@@ -55,6 +55,12 @@ export interface CrossReferenceResult {
   productType?: string;
   /** AI 無法確定、需人工核對的事項 */
   uncertainties?: string[];
+  /** 團隊確認過的此型號對照 (完全相同型號命中參考資料庫) */
+  teamCorrection?: { airtacCode: string; confirmedAt?: number };
+  /** 完全相同型號命中團隊參考資料庫，直接回答 (未呼叫 AI) */
+  fromReference?: boolean;
+  /** 這次分析參考到的「相近型號」團隊對照 */
+  referenceMatches?: { competitorModel: string; airtacCode: string; seriesId?: string }[];
 }
 
 /** 已確認的對照項目 (確認清單，localStorage 持久化) */
@@ -70,6 +76,8 @@ export interface ConfirmedItem {
   confirmedAt: number;
   /** 最終採用的亞德客系列 id（含人工改選後的系列），供雲端學習與回溯 */
   seriesId?: string;
+  /** 確認人 (雲端共用時用來區分「我的 / 全部」) */
+  owner?: string;
 }
 
 /** 批量分析的單列狀態 */

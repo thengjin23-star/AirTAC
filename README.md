@@ -31,3 +31,12 @@ View your app in AI Studio: https://ai.studio/apps/f37d7481-3979-43d2-a6ff-1be1f
 
 沒設定時 app 仍可正常使用，只是每個人各自存本機。頁面頂端的**雲端狀態橫幅**會即時顯示目前是共用還是本機，並提供「重新檢查」與設定步驟。
 本機開發若想測試共用功能，可在 `.env.local` 設 `LOCAL_MEMORY_STORE=1`（單一程序記憶體後端）。
+
+## 團隊存取碼（選填，強烈建議）
+
+網站部署在公開網址，任何拿到網址的人都能使用 AI 分析（耗用 Gemini 額度），甚至清空團隊資料庫。
+在 Vercel → Settings → Environment Variables 新增 `ACCESS_TOKEN`（任意一串只有同事知道的字），Redeploy 後：
+
+- AI 分析、學習型錄、確認清單 / 參考資料庫 / 知識庫的讀寫都需要存取碼
+- 同事第一次操作時會跳出輸入框，輸入一次後該瀏覽器會記住
+- 不設定則維持開放（與舊版相同）
