@@ -10,12 +10,15 @@
  * GEMINI_API_KEY，否則會回傳「尚未設定 GEMINI_API_KEY」的錯誤。
  */
 import { crossReference } from "../crossReferenceService";
+import { checkAccess, ACCESS_DENIED } from "../access";
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed，請使用 POST" });
   }
+
+  if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
 
   // Vercel 已自動解析 JSON body；若 Content-Type 不對則可能是字串
   let body = req.body;

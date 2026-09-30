@@ -118,9 +118,105 @@ export async function selfTest(): Promise<{ ok: boolean; backend: 'redis' | 'mem
   }
 }
 
-/** 正規化競品型號作為 correction 的鍵 (去空白/破折號、轉大寫)。 */
-export function normalizeModel(model: string, brand?: string): string {
-  const m = String(model || '').toUpperCase().replace(/[\s\-–—_]+/g, '');
-  const b = String(brand || '').toUpperCase().replace(/\s+/g, '');
-  return b && b !== 'AUTO' ? `${b}::${m}` : m;
+/**
+ * 正規化競品型號作為 correction 的鍵 (去空白/破折號/底線、轉大寫)。
+ * 刻意「不含品牌」：品牌字串來源不一致 (自動偵測時請求沒有品牌、AI 回 "SMC (日本)"、
+ * Excel 寫 "smc")，放進鍵會造成存得進去卻永遠查不到。品牌另存在資料欄位內。
+ */
+export function normalizeModel(model: string): string {
+  return String(model || '').toUpperCase().replace(/[\s\-–—_]+/g, '');
+}
+
+/** 一次寫入多筆 (field → value)。單一 HSET 命令，避免上千次往返。 */
+export async function putMany(kind: StoreKind, entries: [string, any][]): Promise<void> {
+  if (entries.length === 0) return;
+  if (useRedis()) {
+    const args: (string | number)[] = ['HSET', KEYS[kind]];
+    for (const [f, v] of entries) args.push(f, JSON.stringify(v));
+    await redis(args);
+    return;
+  }
+  if (useMemory()) for (const [f, v] of entries) memory[kind].set(f, v);
+}
+
+/**
+ * 一次性遷移：舊版 corrections 的鍵是「品牌::型號」，改成只有型號。
+ * 以 airtac:meta 的旗標記錄已完成，之後每個 serverless 實例只多一次 HGET。
+ */
+const META_KEY = 'airtac:meta';
+let migrationDone = false;
+export async function ensureCorrectionsMigrated(): Promise<void> {
+  if (migrationDone || !isConfigured()) return;
+  try {
+    if (useRedis()) {
+      if (await redis(['HGET', META_KEY, 'corrections_v2'])) { migrationDone = true; return; }
+      const flat: string[] = (await redis(['HGETALL', KEYS.corrections])) || [];
+      const current = new Map<string, any>();
+      for (let i = 0; i < flat.length; i += 2) {
+        try { current.set(flat[i], JSON.parse(flat[i + 1])); } catch (e) { /* skip bad */ }
+      }
+      const writes: [string, any][] = [];
+      const deletes: string[] = [];
+      for (const [field, val] of current) {
+        if (!field.includes('::')) continue;
+        const newKey = normalizeModel(val?.competitorModel || field.split('::').pop() || '');
+        deletes.push(field);
+        if (!newKey) continue;
+        const existing = current.get(newKey) || writes.find(w => w[0] === newKey)?.[1];
+        if (existing && (existing.updatedAt || 0) > (val.updatedAt || 0)) continue; // 保留較新的
+        const idx = writes.findIndex(w => w[0] === newKey);
+        if (idx >= 0) writes.splice(idx, 1);
+        writes.push([newKey, { ...val, key: newKey }]);
+      }
+      if (writes.length) await putMany('corrections', writes);
+      if (deletes.length) await redis(['HDEL', KEYS.corrections, ...deletes]);
+      await redis(['HSET', META_KEY, 'corrections_v2', String(Date.now())]);
+      if (writes.length || deletes.length) console.log(`corrections migrated: ${writes.length} rewritten, ${deletes.length} legacy keys removed`);
+    } else if (useMemory()) {
+      for (const [field, val] of Array.from(memory.corrections.entries())) {
+        if (!field.includes('::')) continue;
+        memory.corrections.delete(field);
+        const newKey = normalizeModel(val?.competitorModel || '');
+        if (newKey) memory.corrections.set(newKey, { ...val, key: newKey });
+      }
+    }
+    migrationDone = true;
+  } catch (e: any) {
+    console.error('corrections migration failed:', e?.message || e);
+  }
+}
+
+/**
+ * 找「相近型號」的過去對照：以正規化鍵的英數字首 (3 碼) 做 HSCAN MATCH，
+ * 再依與輸入的共同字首長度排序。讓參考資料庫越大，AI 越能學到公司慣用的對應。
+ */
+export async function findSimilarCorrections(model: string, max = 6): Promise<any[]> {
+  const key = normalizeModel(model);
+  const prefix = (key.match(/^[A-Z0-9]+/)?.[0] || '').slice(0, 3);
+  if (prefix.length < 2) return [];
+  const pool: any[] = [];
+  if (useRedis()) {
+    let cursor = '0';
+    let iter = 0;
+    do {
+      const res = await redis(['HSCAN', KEYS.corrections, cursor, 'MATCH', `${prefix}*`, 'COUNT', 1000]);
+      cursor = String(res?.[0] ?? '0');
+      const flat: string[] = res?.[1] || [];
+      for (let i = 1; i < flat.length; i += 2) {
+        try { pool.push(JSON.parse(flat[i])); } catch (e) { /* skip */ }
+      }
+      iter++;
+    } while (cursor !== '0' && iter < 6 && pool.length < 500);
+  } else if (useMemory()) {
+    for (const [f, v] of memory.corrections) if (f.startsWith(prefix)) pool.push(v);
+  }
+  const common = (a: string, b: string) => { let i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++; return i; };
+  return pool
+    .map(v => ({ v, k: normalizeModel(v?.competitorModel || v?.key || '') }))
+    .filter(({ k }) => k && k !== key)
+    .map(({ v, k }) => ({ v, score: common(k, key) }))
+    .filter(({ score }) => score >= 3)
+    .sort((a, b) => b.score - a.score || (b.v.updatedAt || 0) - (a.v.updatedAt || 0))
+    .slice(0, max)
+    .map(({ v }) => v);
 }

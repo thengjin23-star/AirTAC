@@ -7,6 +7,6 @@ import { handleStore } from '../storeService';
 export default async function handler(req: any, res: any) {
   const url = new URL(req.url, 'http://localhost');
   const query: any = Object.fromEntries(url.searchParams.entries());
-  const { status, body } = await handleStore(req.method || 'GET', query, req.body);
+  const { status, body } = await handleStore(req.method || 'GET', query, req.body, req.headers);
   return res.status(status).json(body);
 }

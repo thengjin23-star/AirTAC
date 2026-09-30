@@ -33979,12 +33979,36 @@ Respond in JSON. All descriptive text in Traditional Chinese.`;
   }
 }
 
+// src/server/access.ts
+import crypto from "crypto";
+function headerValue(headers, name) {
+  if (!headers) return void 0;
+  const v = typeof headers.get === "function" ? headers.get(name) : headers[name] ?? headers[name.toLowerCase()];
+  return Array.isArray(v) ? v[0] : v;
+}
+function safeEqual(a, b) {
+  const ha = crypto.createHash("sha256").update(a).digest();
+  const hb = crypto.createHash("sha256").update(b).digest();
+  return crypto.timingSafeEqual(ha, hb);
+}
+function checkAccess(headers) {
+  const expected = process.env.ACCESS_TOKEN;
+  if (!expected) return true;
+  const got = headerValue(headers, "x-access-token");
+  return typeof got === "string" && got.length > 0 && safeEqual(got, expected);
+}
+var ACCESS_DENIED = {
+  status: 401,
+  body: { error: "\u9700\u8981\u5718\u968A\u5B58\u53D6\u78BC\u624D\u80FD\u4F7F\u7528 (\u8ACB\u5411\u7BA1\u7406\u8005\u7D22\u53D6)", needToken: true }
+};
+
 // src/server/vercelHandlers/learn-catalog.ts
 async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed\uFF0C\u8ACB\u4F7F\u7528 POST" });
   }
+  if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
   let body = req.body;
   if (typeof body === "string") {
     try {

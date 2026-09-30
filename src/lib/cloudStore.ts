@@ -8,25 +8,31 @@
  * 每次寫入同時更新 localStorage 作為離線快取。
  */
 
+import { apiFetch } from './http';
+
 export type StoreKind = 'confirmed' | 'rules';
 
 let cloudConfigured: boolean | null = null;
+let probing: Promise<boolean> | null = null;
 
-/** 探測雲端是否設定 (結果快取)。 */
+/** 探測雲端是否設定 (結果快取；同時多個呼叫共用同一個請求)。 */
 export async function isCloudConfigured(): Promise<boolean> {
   if (cloudConfigured !== null) return cloudConfigured;
-  try {
-    const r = await fetch('/api/store?kind=status');
-    const j = await r.json();
-    cloudConfigured = Boolean(j.configured);
-  } catch (e) {
-    cloudConfigured = false;
+  if (!probing) {
+    probing = (async () => {
+      try {
+        const r = await apiFetch('/api/store?kind=status');
+        const j = await r.json();
+        cloudConfigured = Boolean(j.configured);
+      } catch (e) {
+        cloudConfigured = false;
+      } finally {
+        probing = null;
+      }
+      return cloudConfigured;
+    })();
   }
-  return cloudConfigured;
-}
-
-export function cloudBackendLabel(): boolean {
-  return cloudConfigured === true;
+  return probing;
 }
 
 /** 清掉探測快取，強制下次重新向後端確認 (供「重新檢查」按鈕使用)。 */
@@ -34,28 +40,10 @@ export function resetCloudProbe() {
   cloudConfigured = null;
 }
 
-export interface CloudStatus {
-  configured: boolean;
-  backend: 'redis' | 'memory' | 'none';
-}
-
-/** 取得雲端狀態 (是否設定 + 後端種類)，同時更新探測快取。 */
-export async function fetchCloudStatus(): Promise<CloudStatus> {
-  try {
-    const r = await fetch('/api/store?kind=status');
-    const j = await r.json();
-    cloudConfigured = Boolean(j.configured);
-    return { configured: cloudConfigured, backend: j.backend || 'none' };
-  } catch (e) {
-    cloudConfigured = false;
-    return { configured: false, backend: 'none' };
-  }
-}
-
 /** 端到端連線自我測試：請後端實際寫入→讀回→刪除一筆探測資料，確認真的能共用。 */
 export async function cloudSelfTest(): Promise<{ configured: boolean; ok: boolean; backend: string; error?: string }> {
   try {
-    const r = await fetch('/api/store?selftest=1');
+    const r = await apiFetch('/api/store?selftest=1');
     const j = await r.json();
     if (typeof j.configured === 'boolean') cloudConfigured = j.configured;
     return { configured: Boolean(j.configured), ok: Boolean(j.ok), backend: j.backend || 'none', error: j.error };
@@ -84,7 +72,7 @@ function writeLocal(kind: StoreKind, items: any[]) {
 export async function loadItems<T = any>(kind: StoreKind): Promise<{ items: T[]; cloud: boolean }> {
   if (await isCloudConfigured()) {
     try {
-      const r = await fetch(`/api/store?kind=${kind}`);
+      const r = await apiFetch(`/api/store?kind=${kind}`);
       const j = await r.json();
       if (j.configured && Array.isArray(j.items)) {
         writeLocal(kind, j.items); // 同步到本機快取
@@ -103,7 +91,7 @@ export async function putItem(kind: StoreKind, item: any): Promise<void> {
   writeLocal(kind, local);
   if (await isCloudConfigured()) {
     try {
-      await fetch(`/api/store?kind=${kind}`, {
+      await apiFetch(`/api/store?kind=${kind}`, {
         method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(item),
       });
     } catch (e) {}
@@ -114,7 +102,7 @@ export async function putItem(kind: StoreKind, item: any): Promise<void> {
 export async function deleteItem(kind: StoreKind, id: string): Promise<void> {
   writeLocal(kind, readLocal(kind).filter((x: any) => x.id !== id));
   if (await isCloudConfigured()) {
-    try { await fetch(`/api/store?kind=${kind}&id=${encodeURIComponent(id)}`, { method: 'DELETE' }); } catch (e) {}
+    try { await apiFetch(`/api/store?kind=${kind}&id=${encodeURIComponent(id)}`, { method: 'DELETE' }); } catch (e) {}
   }
 }
 
@@ -122,7 +110,7 @@ export async function deleteItem(kind: StoreKind, id: string): Promise<void> {
 export async function clearItems(kind: StoreKind): Promise<void> {
   writeLocal(kind, []);
   if (await isCloudConfigured()) {
-    try { await fetch(`/api/store?kind=${kind}&clear=true`, { method: 'DELETE' }); } catch (e) {}
+    try { await apiFetch(`/api/store?kind=${kind}&clear=true`, { method: 'DELETE' }); } catch (e) {}
   }
 }
 
@@ -144,7 +132,7 @@ export async function saveCorrection(correction: {
 }): Promise<void> {
   if (!(await isCloudConfigured())) return; // 本機模式不做自我學習 (無共用意義)
   try {
-    await fetch('/api/store?kind=corrections', {
+    await apiFetch('/api/store?kind=corrections', {
       method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(correction),
     });
   } catch (e) {}
@@ -154,7 +142,7 @@ export async function saveCorrection(correction: {
 export async function loadCorrections(): Promise<{ items: CorrectionRow[]; cloud: boolean }> {
   if (await isCloudConfigured()) {
     try {
-      const r = await fetch('/api/store?kind=corrections');
+      const r = await apiFetch('/api/store?kind=corrections');
       const j = await r.json();
       if (j.configured && Array.isArray(j.items)) return { items: j.items, cloud: true };
     } catch (e) { /* 退回空 */ }
@@ -165,37 +153,41 @@ export async function loadCorrections(): Promise<{ items: CorrectionRow[]; cloud
 /** 刪除參考資料庫中的一筆 (以正規化後的 key)。 */
 export async function deleteCorrection(key: string): Promise<void> {
   if (!(await isCloudConfigured())) return;
-  try { await fetch(`/api/store?kind=corrections&id=${encodeURIComponent(key)}`, { method: 'DELETE' }); } catch (e) {}
+  try { await apiFetch(`/api/store?kind=corrections&id=${encodeURIComponent(key)}`, { method: 'DELETE' }); } catch (e) {}
 }
 
 /** 清空整個參考資料庫。 */
 export async function clearCorrections(): Promise<void> {
   if (!(await isCloudConfigured())) return;
-  try { await fetch('/api/store?kind=corrections&clear=true', { method: 'DELETE' }); } catch (e) {}
+  try { await apiFetch('/api/store?kind=corrections&clear=true', { method: 'DELETE' }); } catch (e) {}
 }
 
 /**
- * 批次匯入歷史對照 (逐筆寫入雲端 corrections)。回傳成功/失敗筆數。
- * onProgress 供 UI 顯示進度。
+ * 批次匯入歷史對照：每 200 筆一個請求寫入雲端 corrections (伺服器端一次 HSET)。
+ * onProgress 供 UI 顯示進度。回傳成功/略過/失敗筆數。
  */
 export async function importCorrections(
   rows: CorrectionRow[],
   onProgress?: (done: number, total: number) => void,
-): Promise<{ ok: number; fail: number }> {
-  if (!(await isCloudConfigured())) return { ok: 0, fail: rows.length };
+): Promise<{ ok: number; fail: number; error?: string }> {
+  if (!(await isCloudConfigured())) return { ok: 0, fail: rows.length, error: '未連接團隊雲端' };
+  const CHUNK = 200;
   let ok = 0, fail = 0;
-  const CONCURRENCY = 5;
-  for (let i = 0; i < rows.length; i += CONCURRENCY) {
-    const batch = rows.slice(i, i + CONCURRENCY);
-    await Promise.all(batch.map(async row => {
-      try {
-        const r = await fetch('/api/store?kind=corrections', {
-          method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(row),
-        });
-        if (r.ok) ok++; else fail++;
-      } catch (e) { fail++; }
-    }));
-    onProgress?.(Math.min(i + CONCURRENCY, rows.length), rows.length);
+  let error: string | undefined;
+  for (let i = 0; i < rows.length; i += CHUNK) {
+    const chunk = rows.slice(i, i + CHUNK);
+    try {
+      const r = await apiFetch('/api/store?kind=corrections&bulk=1', {
+        method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(chunk),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok) { ok += j.written ?? chunk.length; fail += j.skipped ?? 0; }
+      else { fail += chunk.length; error = j.error || `HTTP ${r.status}`; }
+    } catch (e: any) {
+      fail += chunk.length;
+      error = e?.message || String(e);
+    }
+    onProgress?.(Math.min(i + CHUNK, rows.length), rows.length);
   }
-  return { ok, fail };
+  return { ok, fail, error };
 }

@@ -14,10 +14,12 @@ import { KnowledgeBase } from './components/KnowledgeBase';
 import { ReferenceDB } from './components/ReferenceDB';
 import { CloudStatusBanner } from './components/CloudStatusBanner';
 import { analyzeModel } from './lib/api';
-import { loadItems, putItem, deleteItem, clearItems, saveCorrection } from './lib/cloudStore';
+import { loadItems, putItem, deleteItem, saveCorrection } from './lib/cloudStore';
+import { defaultCatalog } from './data/index';
 
 const HISTORY_KEY = 'airtac_search_history_v1';
 const CONFIRMED_KEY = 'airtac_confirmed_list_v1';
+const USER_KEY = 'airtac_user_name';
 const MAX_HISTORY = 15;
 
 const LOADING_STAGES = [
@@ -54,20 +56,28 @@ export default function App() {
   const [history, setHistory] = useState<SearchHistoryItem[]>(() => loadJson(HISTORY_KEY, [] as SearchHistoryItem[]));
   const [confirmedItems, setConfirmedItems] = useState<ConfirmedItem[]>(() => loadJson(CONFIRMED_KEY, [] as ConfirmedItem[]));
   const [cloudMode, setCloudMode] = useState(false);
+  const [userName, setUserName] = useState<string>(() => { try { return localStorage.getItem(USER_KEY) || ''; } catch (e) { return ''; } });
+  const [resultKey, setResultKey] = useState(0);
   const stageTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch (e) {}
   }, [history]);
 
-  // 確認清單：雲端優先載入 (未設定雲端則等同讀 localStorage)。
-  // cloudMode 由 CloudStatusBanner 的端到端自我測試決定 (較 isCloudConfigured 更嚴謹)。
   useEffect(() => {
-    (async () => {
-      const { items } = await loadItems<ConfirmedItem>('confirmed');
-      if (items && items.length) setConfirmedItems(items);
-    })();
-  }, []);
+    try { localStorage.setItem(USER_KEY, userName); } catch (e) {}
+  }, [userName]);
+
+  // 確認清單：雲端優先載入 (未設定雲端則等同讀 localStorage)。
+  // 雲端模式下以雲端為準 —— 即使雲端是空的也要覆蓋本機舊快取，否則會看到早已被刪除的項目。
+  // cloudMode 由 CloudStatusBanner 的端到端自我測試決定 (較 isCloudConfigured 更嚴謹)。
+  const reloadConfirmed = async () => {
+    const { items, cloud } = await loadItems<ConfirmedItem>('confirmed');
+    if (cloud || items.length) setConfirmedItems(items.sort((a, b) => a.confirmedAt - b.confirmedAt));
+  };
+  useEffect(() => { reloadConfirmed(); }, []);
+  // 切到確認清單分頁時重新同步，才看得到同事剛加入的項目
+  useEffect(() => { if (activeTab === 'confirmed') reloadConfirmed(); }, [activeTab]);
 
   useEffect(() => () => { if (stageTimerRef.current) clearInterval(stageTimerRef.current); }, []);
 
@@ -86,13 +96,17 @@ export default function App() {
   };
 
   /** 加入確認清單 (供單筆與批量的 MatchResult 共用) — 同步雲端 + 觸發自我學習 */
-  const addToConfirmedList = (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'> & { seriesId?: string }) => {
-    // 同一個競品型號 + 同一個訂購碼 視為重複，不重覆加入
-    if (confirmedItems.some(p => p.competitorModel === item.competitorModel && p.airtacCode === item.airtacCode)) return;
+  const me = userName.trim();
+  const isMine = (it: ConfirmedItem) => !it.owner || it.owner === me;
+
+  const addToConfirmedList = (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'>) => {
+    // 同一人、同一個競品型號 + 同一個訂購碼 視為重複 (同事確認過的不影響自己加入)
+    if (confirmedItems.some(p => isMine(p) && p.competitorModel === item.competitorModel && p.airtacCode === item.airtacCode)) return;
     const full: ConfirmedItem = {
       ...item,
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       confirmedAt: Date.now(),
+      owner: me || undefined,
     };
     setConfirmedItems(prev => [...prev, full]);
     putItem('confirmed', full);
@@ -101,14 +115,16 @@ export default function App() {
       competitorModel: item.competitorModel,
       brand: item.brand,
       airtacCode: item.airtacCode,
-      seriesId: (item as any).seriesId,
+      seriesId: item.seriesId,
       description: item.description,
       note: item.note,
     });
   };
 
+  const myCount = confirmedItems.filter(isMine).length;
+
   const isConfirmed = (competitorModel: string, code: string) =>
-    confirmedItems.some(p => p.competitorModel === competitorModel && p.airtacCode === code);
+    confirmedItems.some(p => isMine(p) && p.competitorModel === competitorModel && p.airtacCode === code);
 
   // 確認清單的雲端同步操作 (傳給 ConfirmedList)
   const updateConfirmed = (id: string, patch: Partial<ConfirmedItem>) => {
@@ -123,9 +139,11 @@ export default function App() {
     setConfirmedItems(prev => prev.filter(it => it.id !== id));
     deleteItem('confirmed', id);
   };
-  const clearConfirmed = () => {
-    setConfirmedItems([]);
-    clearItems('confirmed');
+  /** 只清掉指定的項目 (雲端共用時不能一鍵清掉全公司的清單) */
+  const clearConfirmed = (ids: string[]) => {
+    const drop = new Set(ids);
+    setConfirmedItems(prev => prev.filter(it => !drop.has(it.id)));
+    ids.forEach(id => deleteItem('confirmed', id));
   };
 
   const restoreHistory = (item: SearchHistoryItem) => {
@@ -134,12 +152,18 @@ export default function App() {
     setSelectedBrand(item.brand || 'auto');
     setSearchedModel(item.model);
     setResult(item.result);
+    setResultKey(k => k + 1); // 重建推薦卡，避免沿用上一筆結果的下拉選擇/系列切換狀態
     setError(null);
   };
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!modelInput.trim()) return;
+    runSearch(modelInput.trim(), selectedBrand, false);
+  };
+
+  /** forceAI: 參考資料庫已有答案時，使用者仍要求 AI 重新分析 */
+  const runSearch = async (queryModel: string, queryBrand: string, forceAI: boolean) => {
+    if (!queryModel) return;
 
     setIsLoading(true);
     setError(null);
@@ -150,13 +174,11 @@ export default function App() {
       setLoadingStage(s => Math.min(s + 1, LOADING_STAGES.length - 1));
     }, 6000);
 
-    const queryModel = modelInput.trim();
-    const queryBrand = selectedBrand;
-
     try {
-      const data = await analyzeModel(queryModel, queryBrand, customRules);
+      const data = await analyzeModel(queryModel, queryBrand, customRules, { forceAI });
       setSearchedModel(queryModel);
       setResult(data);
+      setResultKey(k => k + 1);
       pushHistory(queryModel, queryBrand, data);
     } catch (err: any) {
       setError(err.message || '發生未知的錯誤。');
@@ -200,7 +222,7 @@ export default function App() {
           <div className="flex space-x-1 overflow-x-auto">
             {([
               { key: 'match', icon: Repeat, label: '型號自動匹配' },
-              { key: 'confirmed', icon: ClipboardList, label: `確認清單${confirmedItems.length > 0 ? ` (${confirmedItems.length})` : ''}` },
+              { key: 'confirmed', icon: ClipboardList, label: `確認清單${myCount > 0 ? ` (${myCount})` : ''}` },
               { key: 'reference', icon: Database, label: '參考資料庫' },
               { key: 'knowledge', icon: BookOpen, label: '對手知識庫' },
               { key: 'database', icon: Layers, label: '產品資料庫' },
@@ -226,7 +248,7 @@ export default function App() {
         {activeTab === 'database' && <ProductDatabase />}
         {activeTab === 'reference' && <ReferenceDB />}
         {activeTab === 'knowledge' && <KnowledgeBase />}
-        {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} onUpdate={updateConfirmed} onRemove={removeConfirmed} onClear={clearConfirmed} cloudMode={cloudMode} />}
+        {activeTab === 'confirmed' && <ConfirmedList items={confirmedItems} onUpdate={updateConfirmed} onRemove={removeConfirmed} onClear={clearConfirmed} cloudMode={cloudMode} userName={userName} onUserNameChange={setUserName} />}
         {activeTab === 'match' && (
           <>
             {/* 單筆 / 批量 模式切換 */}
@@ -471,7 +493,7 @@ export default function App() {
                           </li>
                         ))}
                       </ol>
-                      <p className="text-xs text-slate-400 mt-6">兩階段分析通常需要 15~30 秒，系統會先從 294 個系列中篩選候選，再進行精確比對。</p>
+                      <p className="text-xs text-slate-400 mt-6">兩階段分析通常需要 15~30 秒，系統會先從 {defaultCatalog.length} 個系列中篩選候選，再進行精確比對。</p>
                     </div>
                   </div>
                 )}
@@ -480,8 +502,10 @@ export default function App() {
                 {result && !isLoading && (
                   <div className="lg:col-span-8 lg:pl-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <MatchResult
+                      key={resultKey}
                       model={searchedModel}
                       result={result}
+                      onReanalyze={() => runSearch(searchedModel, selectedBrand, true)}
                       onAddToList={addToConfirmedList}
                       isConfirmed={isConfirmed}
                     />

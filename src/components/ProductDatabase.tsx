@@ -2,8 +2,19 @@ import React, { useMemo, useState } from 'react';
 import { Download, Trash2, Settings, Copy, Check, Code2, Search, RotateCcw, FileText } from 'lucide-react';
 import { CatalogSeries, defaultCatalog } from '../data/index';
 import * as XLSX from 'xlsx';
+import { generateOrderingCode as buildOrderingCode } from '../lib/orderingCode';
 
-const STORAGE_KEY = 'airtac_catalogs_v32';
+// v33 起只存使用者改過的系列；舊版 (v32 以前) 存的是整份型錄快照，會蓋掉型錄更新，故不再讀取並清除
+const STORAGE_KEY = 'airtac_catalogs_v33';
+const DEFAULT_CATS_JSON = new Map(defaultCatalog.map(s => [s.id, JSON.stringify(s.categories)]));
+try {
+  if (typeof window !== 'undefined' && window.localStorage) {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('airtac_catalogs_') && k !== STORAGE_KEY) localStorage.removeItem(k);
+    }
+  }
+} catch (e) { /* ignore */ }
 
 export function ProductDatabase() {
   const [catalogs, setCatalogs] = useState<CatalogSeries[]>(() => {
@@ -158,31 +169,7 @@ export function ProductDatabase() {
     setCatalogs(defaultCatalog.filter(Boolean));
   };
 
-  const generateOrderingCode = () => {
-    if (!selectedSeries) return '';
-    let code = selectedSeries.format || selectedSeries.orderCodeFormat || '';
-
-    // Check if there is a category with id 'code'. If not, replace {code} with series code
-    const hasCodeCategory = selectedSeries.categories.some(c => c.id === 'code');
-    if (!hasCodeCategory) {
-      code = code.replace('{code}', selectedSeries.code !== undefined ? selectedSeries.code : (selectedSeries.id || ''));
-    }
-
-    selectedSeries.categories.forEach(cat => {
-      const val = selections[cat.id];
-      code = code.replace(`{${cat.id}}`, val !== undefined ? val : (cat.options?.[0]?.code || ''));
-    });
-
-    // Clean up formatting
-    code = code.replace(/\s+/g, ' ')
-               .replace(/-\s*-/g, '-')
-               .replace(/\s+-/g, '-')
-               .replace(/-\s+/g, '-')
-               .trim();
-    if (code.endsWith('-')) code = code.slice(0, -1);
-
-    return code;
-  };
+  const generateOrderingCode = () => (selectedSeries ? buildOrderingCode(selectedSeries, selections) : '');
 
   const handleSelectionChange = (categoryId: string, value: string) => {
     setSelections(prev => ({
@@ -191,34 +178,15 @@ export function ProductDatabase() {
     }));
   };
 
+  // 只保存「使用者實際改過」的系列 (以前整份型錄都存進瀏覽器，之後型錄更新會被舊資料蓋掉)
   React.useEffect(() => {
     try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(catalogs));
-      }
+      if (typeof window === 'undefined' || !window.localStorage) return;
+      const edited = catalogs.filter(c => c && JSON.stringify(c.categories) !== DEFAULT_CATS_JSON.get(c.id));
+      if (edited.length === 0) localStorage.removeItem(STORAGE_KEY);
+      else localStorage.setItem(STORAGE_KEY, JSON.stringify(edited.map(c => ({ id: c.id, categories: c.categories }))));
     } catch (e) {
-      console.warn('Failed to save catalogs to localStorage:', e);
-      // Self-healing: Clean up older airtac keys to free up space
-      try {
-        if (typeof window !== 'undefined' && window.localStorage) {
-          const keysToRemove: string[] = [];
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key && key.startsWith('airtac_catalogs_') && key !== STORAGE_KEY) {
-              keysToRemove.push(key);
-            }
-          }
-          keysToRemove.forEach(k => {
-            try {
-              localStorage.removeItem(k);
-            } catch (err) {}
-          });
-          // Try saving one more time after cleanup
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(catalogs));
-        }
-      } catch (retryError) {
-        console.error('Retry saving after cleanup also failed:', retryError);
-      }
+      console.warn('Failed to save catalog edits to localStorage:', e);
     }
   }, [catalogs]);
 

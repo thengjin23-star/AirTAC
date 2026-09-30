@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users, Repeat } from 'lucide-react';
+import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users, Repeat, History, Zap, Sparkles } from 'lucide-react';
 import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem, CandidateSeriesSummary } from '../types';
-import { defaultCatalog } from '../data/index';
+import { defaultCatalog, CatalogSeries } from '../data/index';
 import { generateOrderingCode } from '../lib/orderingCode';
 
 export function CopyButton({ text, className = '' }: { text: string; className?: string }) {
@@ -36,6 +36,23 @@ function MatchBar({ percentage }: { percentage: number }) {
   );
 }
 
+const CUSTOM = '__custom__';
+
+/**
+ * 找出系列的「行程可調」切換方式：某個類別裡有描述含「行程可調 / 行程調整」的選項，
+ * 例如 規格代號 SC↔SCJ、MA↔MAJ，或 TCL/HGS 的 空白↔J。
+ */
+function adjustableInfo(s?: CatalogSeries) {
+  if (!s) return null;
+  for (const cat of s.categories || []) {
+    const adj = (cat.options || []).filter(o => /行程可調|行程調整/.test(o.description || ''));
+    if (adj.length > 0 && adj.length < (cat.options || []).length) {
+      return { cat, adjCodes: new Set(adj.map(o => o.code)) };
+    }
+  }
+  return null;
+}
+
 /** 單張推薦卡：訂購碼可編輯、確認後加入清單 */
 function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAddToList, isConfirmed }: {
   rec: AirtacRecommendation;
@@ -60,19 +77,25 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
   );
   const canConfigure = Boolean(series && (series.categories || []).length > 0 && (series.format || series.orderCodeFormat));
 
-  // 該系列的預設選項：未切換時沿用 AI 的選擇，切換後全用該系列第一個選項
+  // 該系列的預設選項：未切換時沿用 AI 的選擇 (即使是型錄外的值，例如非標準行程，也保留並標示為自訂)，
+  // 切換後全用該系列第一個選項
   const defaultSelectionsFor = (s: typeof series, useAI: boolean): Record<string, string> => {
     const sel: Record<string, string> = {};
     if (s) for (const cat of s.categories || []) {
       const fromAI = useAI ? (rec.selectedOptions || []).find(o => o.categoryId === cat.id) : undefined;
-      sel[cat.id] = fromAI && (cat.options || []).some(op => op.code === fromAI.code) ? fromAI.code : (cat.options?.[0]?.code || '');
+      sel[cat.id] = fromAI ? String(fromAI.code ?? '') : (cat.options?.[0]?.code || '');
     }
     return sel;
   };
   const initialSelections = useMemo(() => defaultSelectionsFor(series, !switched), [series, switched]);
+  const customFor = (s: typeof series, sel: Record<string, string>) =>
+    new Set((s?.categories || []).filter(c => !(c.options || []).some(o => o.code === sel[c.id])).map(c => c.id));
 
+  // 團隊確認/沒有給選項的推薦：下拉只會拼出預設值 (錯的訂購碼)，因此一開始用手動模式顯示原本的訂購碼
+  const hasAISelections = (rec.selectedOptions || []).length > 0 && !rec.fromTeamCorrection;
   const [selections, setSelections] = useState<Record<string, string>>(initialSelections);
-  const [mode, setMode] = useState<'config' | 'manual'>(canConfigure ? 'config' : 'manual');
+  const [customCats, setCustomCats] = useState<Set<string>>(() => customFor(series, initialSelections));
+  const [mode, setMode] = useState<'config' | 'manual'>(canConfigure && hasAISelections ? 'config' : 'manual');
   const [editedCode, setEditedCode] = useState(suggestedCode);
   const [justAdded, setJustAdded] = useState(false);
 
@@ -83,11 +106,36 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
     const cfg = Boolean(s && (s.categories || []).length > 0 && (s.format || s.orderCodeFormat));
     const sel = defaultSelectionsFor(s, id === rec.seriesId);
     setSelections(sel);
-    setMode(cfg ? 'config' : 'manual');
+    setCustomCats(customFor(s, sel));
+    setMode(cfg && (id !== rec.seriesId || hasAISelections) ? 'config' : 'manual');
     if (s && cfg) setEditedCode(generateOrderingCode(s, sel));
   };
 
   const configCode = series ? generateOrderingCode(series, selections) : '';
+  const adjustable = useMemo(() => adjustableInfo(series), [series]);
+  const adjustableOn = Boolean(adjustable && adjustable.adjCodes.has(selections[adjustable.cat.id]));
+  const toggleAdjustable = () => {
+    if (!adjustable) return;
+    const { cat, adjCodes } = adjustable;
+    const cur = selections[cat.id] ?? '';
+    const opts = cat.options || [];
+    let next: string | undefined;
+    if (adjustableOn) {
+      // SCJ → SC、MACJ → MAC、J → 空白
+      next = opts.find(o => !adjCodes.has(o.code) && o.code === cur.replace(/J$/, ''))?.code
+        ?? opts.find(o => !adjCodes.has(o.code))?.code;
+    } else {
+      // SC → SCJ、SCD → SCJ、MAC → MACJ、空白 → J
+      next = opts.find(o => adjCodes.has(o.code) && (o.code === `${cur}J` || o.code === `${cur.replace(/D$/, '')}J`))?.code
+        ?? opts.find(o => adjCodes.has(o.code))?.code;
+    }
+    if (next !== undefined) {
+      setSelections(prev => ({ ...prev, [cat.id]: next! }));
+      setCustomCats(prev => { const n = new Set(prev); n.delete(cat.id); return n; });
+    }
+  };
+  // 有「調整行程(mm)」類別的系列 (SE/SAI/SG)：開啟可調型時提醒要選調整長度
+  const strokeAdjCat = series?.categories?.find(c => /調整行程/.test(c.name));
   const effectiveCode = mode === 'config' && canConfigure ? configCode : editedCode;
   const confirmed = isConfirmed(effectiveCode) || justAdded;
   const codeModified = switched || (mode === 'config'
@@ -144,7 +192,7 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
                 {configCode}
               </span>
               {codeModified && (
-                <button onClick={() => setSelections(initialSelections)} className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100" title="還原為 AI 建議的參數組合">
+                <button onClick={() => { setSelections(initialSelections); setCustomCats(customFor(series, initialSelections)); }} className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100" title="還原為 AI 建議的參數組合">
                   <RotateCcw className="w-4 h-4" />
                 </button>
               )}
@@ -211,44 +259,83 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
         {/* 下拉配置 / 手動輸入 切換 */}
         {!isNoMatch && canConfigure && (
           <div className="mb-4">
-            <div className="flex items-center gap-1 mb-3">
+            <div className="flex items-center flex-wrap gap-1 mb-3">
               <button
                 onClick={() => setMode('config')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center ${mode === 'config' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors flex items-center ${mode === 'config' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
               >
                 <SlidersHorizontal className="w-3.5 h-3.5 mr-1" /> 下拉配置
               </button>
               <button
                 onClick={() => { setEditedCode(effectiveCode); setMode('manual'); }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center ${mode === 'manual' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors flex items-center ${mode === 'manual' ? 'bg-[#005a9c] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-700'}`}
               >
                 <PencilLine className="w-3.5 h-3.5 mr-1" /> 手動輸入
               </button>
+              {mode === 'config' && adjustable && (
+                <button
+                  onClick={toggleAdjustable}
+                  className={`ml-1 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors border flex items-center gap-1.5 ${adjustableOn ? 'bg-amber-50 text-amber-800 border-amber-300' : 'bg-white text-slate-500 border-slate-200 hover:border-amber-300 hover:text-amber-700'}`}
+                  title={`切換「${adjustable.cat.name}」為行程可調型 / 標準型`}
+                >
+                  <span className={`w-7 h-4 rounded-full relative transition-colors ${adjustableOn ? 'bg-amber-500' : 'bg-slate-300'}`}>
+                    <span className={`absolute top-0.5 w-3 h-3 rounded-full bg-white transition-all ${adjustableOn ? 'left-3.5' : 'left-0.5'}`} />
+                  </span>
+                  行程可調型 (J)
+                </button>
+              )}
               {series && (
                 <span className="text-[11px] text-slate-400 ml-2 font-mono hidden sm:inline">格式: {series.format || series.orderCodeFormat}</span>
               )}
             </div>
+            {mode === 'config' && adjustableOn && strokeAdjCat && !selections[strokeAdjCat.id] && (
+              <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-1.5 mb-3 flex items-center">
+                <AlertTriangle className="w-3.5 h-3.5 mr-1" />行程可調型請在「{strokeAdjCat.name}」選擇可調長度。
+              </p>
+            )}
             {mode === 'config' && (
               <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 bg-slate-50/70 rounded-xl border border-slate-100 p-3">
                 {(series!.categories || []).map(cat => {
                   const aiChoice = (rec.selectedOptions || []).find(o => o.categoryId === cat.id)?.code;
                   const changed = aiChoice !== undefined && selections[cat.id] !== aiChoice;
+                  const isCustom = customCats.has(cat.id);
+                  const needsAdjLen = adjustableOn && strokeAdjCat?.id === cat.id && !selections[cat.id];
                   return (
                     <div key={cat.id}>
                       <label className={`block text-xs font-medium mb-1 ${changed ? 'text-amber-600' : 'text-slate-500'}`}>
                         {cat.name}{changed && ' ✏️'}
                       </label>
                       <select
-                        className="w-full bg-white border border-slate-200 text-slate-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-[#005a9c] focus:ring-1 focus:ring-[#005a9c]"
-                        value={selections[cat.id] ?? (cat.options?.[0]?.code || '')}
-                        onChange={(e) => setSelections(prev => ({ ...prev, [cat.id]: e.target.value }))}
+                        className={`w-full bg-white border text-slate-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-[#005a9c] focus:ring-1 focus:ring-[#005a9c] ${needsAdjLen ? 'border-amber-400' : 'border-slate-200'}`}
+                        value={isCustom ? CUSTOM : (selections[cat.id] ?? (cat.options?.[0]?.code || ''))}
+                        onChange={(e) => {
+                          const v = e.target.value;
+                          if (v === CUSTOM) {
+                            setCustomCats(prev => new Set(prev).add(cat.id));
+                          } else {
+                            setCustomCats(prev => { const n = new Set(prev); n.delete(cat.id); return n; });
+                            setSelections(prev => ({ ...prev, [cat.id]: v }));
+                          }
+                        }}
                       >
                         {(cat.options || []).map((opt, idx) => (
                           <option key={idx} value={opt.code}>
                             {opt.code === '' ? '(空白)' : opt.code} - {opt.description}
                           </option>
                         ))}
+                        <option value={CUSTOM}>✏️ 自訂值（型錄外，如非標準行程）</option>
                       </select>
+                      {isCustom && (
+                        <input
+                          autoFocus
+                          onFocus={(e) => e.target.select()}
+                          value={selections[cat.id] ?? ''}
+                          onChange={(e) => setSelections(prev => ({ ...prev, [cat.id]: e.target.value.trim() }))}
+                          placeholder="輸入代碼"
+                          className="mt-1 w-full bg-amber-50/60 border border-amber-300 rounded-lg px-2 py-1 text-xs font-mono focus:outline-none focus:ring-1 focus:ring-amber-400"
+                          title="型錄外的代碼 (例如非標準行程)，請與業務確認可否訂製"
+                        />
+                      )}
                     </div>
                   );
                 })}
@@ -349,7 +436,7 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
           <div className="flex justify-end pt-2 border-t border-slate-100">
             <button
               onClick={handleAdd}
-              disabled={confirmed || !editedCode.trim()}
+              disabled={confirmed || !effectiveCode.trim()}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center shadow-sm ${
                 confirmed
                   ? 'bg-green-50 text-green-700 border border-green-200 cursor-default'
@@ -366,15 +453,33 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
 }
 
 /** 完整比對結果視圖 (單筆與批量共用) */
-export function MatchResult({ model, result, onAddToList, isConfirmed, compact = false }: {
+export function MatchResult({ model, result, onAddToList, isConfirmed, onReanalyze, compact = false }: {
   model: string;
   result: CrossReferenceResult;
   onAddToList: (item: Omit<ConfirmedItem, 'id' | 'confirmedAt'>) => void;
   isConfirmed: (competitorModel: string, code: string) => boolean;
+  /** 參考資料庫直接命中時，讓使用者要求 AI 重新分析 */
+  onReanalyze?: () => void;
   compact?: boolean;
 }) {
   return (
     <div className="space-y-5">
+      {result.fromReference && (
+        <div className="bg-violet-50 border border-violet-200 rounded-2xl px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="text-sm text-violet-800 flex items-start gap-2">
+            <Zap className="w-4 h-4 mt-0.5 shrink-0" />
+            <span><b>團隊參考資料庫直接命中</b>：此型號過去已確認過，直接採用（未呼叫 AI，秒回且不耗額度）。</span>
+          </div>
+          {onReanalyze && (
+            <button
+              onClick={onReanalyze}
+              className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-lg bg-white border border-violet-200 text-violet-700 hover:bg-violet-100 flex items-center gap-1 self-start sm:self-auto"
+            >
+              <Sparkles className="w-3.5 h-3.5" /> 改用 AI 重新分析
+            </button>
+          )}
+        </div>
+      )}
       {/* 競品分析 */}
       <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
@@ -403,6 +508,21 @@ export function MatchResult({ model, result, onAddToList, isConfirmed, compact =
                 <span key={cs.id} className="text-xs bg-white text-slate-600 px-2 py-1 rounded-md border border-slate-200" title={cs.name}>
                   <span className="font-mono font-semibold text-[#005a9c]">{cs.code || cs.id}</span>
                   <span className="text-slate-400 ml-1">{cs.group}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {result.referenceMatches && result.referenceMatches.length > 0 && (
+          <div className="mb-4 bg-violet-50/60 p-3 rounded-xl border border-violet-100">
+            <h4 className="text-xs font-bold tracking-wider text-violet-700 mb-2 flex items-center">
+              <History className="w-3.5 h-3.5 mr-1" /> 參考了團隊資料庫中 {result.referenceMatches.length} 筆相近型號的過去對照
+            </h4>
+            <div className="flex flex-wrap gap-1.5">
+              {result.referenceMatches.map((m, i) => (
+                <span key={i} className="text-xs bg-white text-slate-600 px-2 py-1 rounded-md border border-violet-100 font-mono">
+                  {m.competitorModel} <span className="text-slate-400">→</span> <span className="text-violet-700 font-semibold">{m.airtacCode}</span>
                 </span>
               ))}
             </div>
@@ -484,7 +604,7 @@ export function MatchResult({ model, result, onAddToList, isConfirmed, compact =
         <div className="p-5 space-y-4">
           {result.airtacRecommendations.map((rec, idx) => (
             <RecCard
-              key={idx}
+              key={`${idx}-${rec.seriesId || ''}-${rec.fullOrderingCode || rec.baseModel}`}
               rec={rec}
               competitorModel={model}
               competitorBrand={result.competitorBrand}

@@ -8,6 +8,7 @@ import { createServer as createViteServer } from "vite";
 import { crossReference } from "./src/server/crossReferenceService";
 import { learnCatalog } from "./src/server/learnCatalogService";
 import { handleStore } from "./src/server/storeService";
+import { checkAccess, ACCESS_DENIED } from "./src/server/access";
 
 async function startServer() {
   const app = express();
@@ -18,19 +19,21 @@ async function startServer() {
 
   // API route for cross-referencing (核心邏輯在 crossReferenceService，與 Vercel Function 共用)
   app.post("/api/cross-reference", async (req, res) => {
+    if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
     const { status, body } = await crossReference(req.body);
     res.status(status).json(body);
   });
 
   // 學習對手型錄：解析訂購碼說明頁 → 回傳逐位解碼表
   app.post("/api/learn-catalog", async (req, res) => {
+    if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
     const { status, body } = await learnCatalog(req.body);
     res.status(status).json(body);
   });
 
   // 團隊共用儲存 (確認清單 / 知識庫 / 自我學習修正)
   app.all("/api/store", async (req, res) => {
-    const { status, body } = await handleStore(req.method, req.query, req.body);
+    const { status, body } = await handleStore(req.method, req.query, req.body, req.headers);
     res.status(status).json(body);
   });
 

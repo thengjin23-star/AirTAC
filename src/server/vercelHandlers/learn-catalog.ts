@@ -3,12 +3,15 @@
  * 修改後執行 npm run build:api 重新產生 bundle。
  */
 import { learnCatalog } from "../learnCatalogService";
+import { checkAccess, ACCESS_DENIED } from "../access";
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed，請使用 POST" });
   }
+
+  if (!checkAccess(req.headers)) return res.status(ACCESS_DENIED.status).json(ACCESS_DENIED.body);
 
   let body = req.body;
   if (typeof body === "string") {

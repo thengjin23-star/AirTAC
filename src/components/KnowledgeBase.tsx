@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BookOpen, Upload, Loader2, Trash2, Save, X, FileDown, FileUp, Sparkles, Image as ImageIcon, AlertTriangle, Cloud, HardDrive } from 'lucide-react';
 import { LearnedRule, loadLearnedRules, saveLearnedRules } from '../lib/learnedRules';
 import { isCloudConfigured, loadItems, putItem, deleteItem } from '../lib/cloudStore';
+import { apiFetch } from '../lib/http';
 
 /**
  * 對手知識庫：上傳競品型錄的「訂購碼說明頁」(圖片或文字)，
@@ -67,7 +68,7 @@ export function KnowledgeBase() {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 120000);
-      const resp = await fetch('/api/learn-catalog', {
+      const resp = await apiFetch('/api/learn-catalog', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
