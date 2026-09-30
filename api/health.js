@@ -2475,7 +2475,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V100\u7CFB\u5217",
     name: "4V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 1 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V1{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2558,7 +2558,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V200\u7CFB\u5217",
     name: "4V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 2 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V2{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2633,7 +2633,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V300\u7CFB\u5217",
     name: "4V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 3 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V3{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2708,7 +2708,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "4V400\u7CFB\u5217",
     name: "4V400\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    orderCodeFormat: "4V 4 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "4V4{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -2779,7 +2779,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
     group: "6SV\u7CFB\u5217",
     name: "6SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F)",
-    orderCodeFormat: "6SV {seriesCode} {controlType} {port} {voltage} {terminal} {leadLength} {thread}",
+    orderCodeFormat: "6SV{seriesCode}{controlType}-{port}{voltage}{terminal}{leadLength}{thread}",
     categories: [
       {
         id: "seriesCode",
@@ -2929,9 +2929,9 @@ var catalog_solenoid_valves_default = [
     id: "7SV",
     category: "\u63A7\u5236\u5143\u4EF6",
     superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    group: "7SV\u7CFB\u5217",
-    name: "7SV\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D, \u5148\u5C0E\u5F0F, \u63D2\u63A5\u5F0F\u63A5\u96FB)",
-    orderCodeFormat: "7V {seriesCode} {controlType} {portConnType} {port} {voltage} {leadLength} {thread}",
+    group: "7V\u7CFB\u5217",
+    name: "7V\u7CFB\u5217 \u96FB\u78C1\u95A5 (7V050/7V100/7V200/7V300\uFF0C\u4E94\u53E3\u4E8C\u4F4D/\u4E09\u4F4D\uFF0C\u63D2\u63A5\u5F0F\uFF1B\u5C0D\u61C9 SMC SY3000/5000/7000/9000)",
+    orderCodeFormat: "7V{seriesCode}{controlType}{portConnType}-{port}{voltage}{leadLength}{thread}",
     note: "7V/7SV\u70BA\u540C\u6B3E\u7522\u54C1\u5728\u4E0D\u540C\u578B\u9304\u4E2D\u7684\u6A19\u793A,\u8A02\u8CFC\u78BC\u7D50\u69CB\u76F8\u540C",
     categories: [
       {
@@ -3075,7 +3075,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V100\u7CFB\u5217",
     name: "3V100\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 1 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V1{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3154,7 +3154,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V200\u7CFB\u5217",
     name: "3V200\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 2 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V2{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3232,7 +3232,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V300\u7CFB\u5217",
     name: "3V300\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D)",
-    orderCodeFormat: "3V 3 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+    orderCodeFormat: "3V3{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
     categories: [
       {
         id: "seriesCode",
@@ -3310,7 +3310,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V1\u7CFB\u5217",
     name: "3V1\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F\u5E38\u9589\u578B)",
-    orderCodeFormat: "3V1 {port} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V1-{port}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -3359,7 +3359,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V2\u7CFB\u5217",
     name: "3V2\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-    orderCodeFormat: "3V2 {port} {initialState} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V2{port}{initialState}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -3491,7 +3491,7 @@ var catalog_solenoid_valves_default = [
     superGroup: "\u96FB\u78C1\u95A5(\u4E09\u53E3\u4E8C\u4F4D)",
     group: "3V3\u7CFB\u5217",
     name: "3V3\u7CFB\u5217 \u96FB\u78C1\u95A5 (\u4E09\u53E3\u4E8C\u4F4D, \u76F4\u52D5\u5F0F, \u5E38\u9589/\u5E38\u958B\u53EF\u9078)",
-    orderCodeFormat: "3V3 {port} {initialState} {voltage} {terminal} {thread}",
+    orderCodeFormat: "3V3{port}{initialState}{voltage}{terminal}{thread}",
     categories: [
       {
         id: "port",
@@ -5842,9 +5842,9 @@ var catalog_solenoid_valves_default = [
     id: "7sv_base",
     category: "\u63A7\u5236\u5143\u4EF6",
     superGroup: "\u96FB\u78C1\u95A5\u5E95\u5EA7\u548C\u914D\u4EF6",
-    group: "7SV\u7CFB\u5217\u5E95\u5EA7",
+    group: "7V\u7CFB\u5217\u5E95\u5EA7",
     code: "7SV",
-    name: "7SV\u7CFB\u5217\u7528\u5E95\u5EA7",
+    name: "7V\u7CFB\u5217\u7528\u5E95\u5EA7",
     categories: [
       {
         id: "code",
@@ -7882,137 +7882,6 @@ var catalog_solenoid_valves_default = [
     ],
     note: "\u7AEF\u5B50\u7DDA\u9577\u91DD\u5C0D\u63D2\u5EA7\u5F0F\uFF0C\u53EF\u90780.5m/2m\u7AEF\u5B50\u7DDA\uFF1B\u51FA\u7DDA\u5F0F\u548CM8\u51FA\u7DDA\u5F0F\u7684\u51FA\u7DDA\u9577\u5EA6\u70BA0.5m\u3002",
     sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.23"
-  },
-  {
-    id: "7V",
-    category: "\u63A7\u5236\u5143\u4EF6",
-    superGroup: "\u96FB\u78C1\u95A5(\u4E94\u53E3\u4E8C\u4F4D\u3001\u4E94\u53E3\u4E09\u4F4D)",
-    group: "7V\u7CFB\u5217",
-    code: "",
-    name: "7V\u7CFB\u5217\u96FB\u78C1\u95A5",
-    format: "7V{series}{control}{port}{voltage}{electrical}{length}{thread}",
-    categories: [
-      {
-        id: "series",
-        name: "\u7CFB\u5217\u4EE3\u865F",
-        options: [
-          {
-            code: "2",
-            description: "200\u7CFB\u5217"
-          }
-        ]
-      },
-      {
-        id: "control",
-        name: "\u96FB\u63A7\u65B9\u5F0F",
-        options: [
-          {
-            code: "10",
-            description: "\u96D9\u4F4D\u7F6E\u55AE\u96FB\u63A7"
-          },
-          {
-            code: "20",
-            description: "\u96D9\u4F4D\u7F6E\u96D9\u96FB\u63A7"
-          },
-          {
-            code: "30C",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u5C01\u9589\u578B"
-          },
-          {
-            code: "30E",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u6392\u6C23\u578B"
-          },
-          {
-            code: "30P",
-            description: "\u4E09\u4F4D\u7F6E\u96D9\u96FB\u63A7\u4E2D\u4F4D\u58D3\u529B\u578B"
-          }
-        ]
-      },
-      {
-        id: "port",
-        name: "\u63A5\u7BA1\u53E3\u5F91",
-        options: [
-          {
-            code: "08",
-            description: "M5, PT1/8, PT1/4, PT3/8"
-          }
-        ]
-      },
-      {
-        id: "voltage",
-        name: "\u6A19\u6E96\u96FB\u58D3",
-        options: [
-          {
-            code: "A",
-            description: "AC220V"
-          },
-          {
-            code: "B",
-            description: "DC24V"
-          },
-          {
-            code: "C",
-            description: "AC110V"
-          },
-          {
-            code: "F",
-            description: "DC12V"
-          }
-        ]
-      },
-      {
-        id: "electrical",
-        name: "\u63A5\u96FB\u65B9\u5F0F",
-        options: [
-          {
-            code: "",
-            description: "\u87BA\u7D0B\u63A5\u7BA1"
-          },
-          {
-            code: "J",
-            description: "\u5FEB\u63D2\u63A5\u982D"
-          }
-        ]
-      },
-      {
-        id: "length",
-        name: "\u7AEF\u5B50\u7DDA\u9577",
-        options: [
-          {
-            code: "",
-            description: "\u7121\u6B64\u4EE3\u78BC"
-          },
-          {
-            code: "050",
-            description: "0.5m"
-          },
-          {
-            code: "200",
-            description: "2.0m"
-          }
-        ]
-      },
-      {
-        id: "thread",
-        name: "\u7259\u578B\u4EE3\u78BC",
-        options: [
-          {
-            code: "",
-            description: "\u7121\u6B64\u4EE3\u78BC"
-          },
-          {
-            code: "G",
-            description: "G\u7259"
-          },
-          {
-            code: "T",
-            description: "NPT\u7259"
-          }
-        ]
-      }
-    ],
-    note: "\u5FEB\u63D2\u63A5\u982D\u578B\u96FB\u78C1\u95A5\u5E95\u5EA7\u70BA\u7121\u7259\u578B",
-    sourceFile: "\u63A7\u5236\u5143\u4EF6\u578B\u9304 P.92"
   },
   {
     id: "3A100",
@@ -18983,7 +18852,7 @@ var catalog_actuators_default = [
     group: "TN\u7CFB\u5217",
     code: "TN",
     name: "TN\u7CFB\u5217 \u96D9\u8EF8\u6C23\u7F38",
-    format: "TN{bore}{stroke}{magnet}{thread}",
+    format: "TN{bore}x{stroke}{magnet}{thread}",
     categories: [
       {
         id: "bore",
@@ -19104,7 +18973,7 @@ var catalog_actuators_default = [
     group: "TR\u7CFB\u5217",
     code: "TR",
     name: "TR\u7CFB\u5217 \u96D9\u8EF8\u6C23\u7F38",
-    format: "TR{bore}{stroke}{magnet}{thread}",
+    format: "TR{bore}x{stroke}{magnet}{thread}",
     categories: [
       {
         id: "bore",
@@ -28124,7 +27993,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
     code: "",
     name: "PC\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28228,7 +28097,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E(\u8FF7\u4F60)",
     code: "",
     name: "PC\u8FF7\u4F60\u7CFB\u5217 \u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}-{type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}-{type_suffix}",
     categories: [
       {
         id: "spec",
@@ -28326,7 +28195,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u87BA\u7D0B\u985E",
     code: "",
     name: "PL\u7CFB\u5217 L\u578B\u87BA\u7D0B\u4E8C\u901A",
-    format: "{spec} {tube_od} {thread_spec}{color}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{color}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28572,7 +28441,7 @@ var catalog_auxiliary_default = [
     group: "\u5168\u91D1\u5C6C\u985E",
     code: "",
     name: "BPC\u7CFB\u5217 \u5168\u91D1\u5C6C\u87BA\u7D0B\u76F4\u901A",
-    format: "{spec} {tube_od} {thread_spec}{thread_type}",
+    format: "{spec}{tube_od}-{thread_spec}{thread_type}",
     categories: [
       {
         id: "spec",
@@ -28670,7 +28539,7 @@ var catalog_auxiliary_default = [
     group: "\u5168\u91D1\u5C6C\u985E",
     code: "BPM",
     name: "BPM\u7CFB\u5217 \u5168\u91D1\u5C6C\u7A7F\u677F\u76F4\u901A",
-    format: "{code} {tube_od}",
+    format: "{code}{tube_od}",
     categories: [
       {
         id: "code",
@@ -28720,7 +28589,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E",
     code: "",
     name: "PE\u7CFB\u5217 T\u578B\u4E09\u901A",
-    format: "{spec} {tube_od}{color}",
+    format: "{spec}{tube_od}{color}",
     categories: [
       {
         id: "spec",
@@ -28812,7 +28681,7 @@ var catalog_auxiliary_default = [
     group: "\u63D2\u7BA1-\u63D2\u7BA1\u985E(\u6E1B\u5F91/\u591A\u901A)",
     code: "",
     name: "PEG\u7CFB\u5217 T\u578B\u6B63\u6E1B\u5F91\u4E09\u901A",
-    format: "{spec} {tube_od_1}-{tube_od_2}{color}",
+    format: "{spec}{tube_od_1}-{tube_od_2}{color}",
     categories: [
       {
         id: "spec",
@@ -29148,7 +29017,7 @@ var catalog_auxiliary_default = [
     group: "BSL/BSLM/BESL/PAL\u7CFB\u5217",
     code: "",
     name: "BSL\u7CFB\u5217 \u901A\u7528\u578B\u6D88\u8072\u5668",
-    format: "{spec} {thread_spec}{color}",
+    format: "{spec}-{thread_spec}{color}",
     categories: [
       {
         id: "spec",
@@ -29228,7 +29097,7 @@ var catalog_auxiliary_default = [
     group: "PPA\u7BA1\u585E\u5F0F",
     code: "PPA",
     name: "PPA\u7CFB\u5217 \u7BA1\u585E\u5F0F\u6D88\u8072\u5668",
-    format: "{code} {tube_od}",
+    format: "{code}{tube_od}",
     categories: [
       {
         id: "code",
@@ -29348,7 +29217,7 @@ var catalog_auxiliary_default = [
     group: "PSL/PSS\u7CFB\u5217",
     code: "",
     name: "PSL\u7CFB\u5217 L\u578B",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
     categories: [
       {
         id: "spec",
@@ -29466,7 +29335,7 @@ var catalog_auxiliary_default = [
     group: "PSA\u7CFB\u5217",
     code: "PSA",
     name: "PSA\u7CFB\u5217 \u76F4\u901A\u578B",
-    format: "{code} {tube_od}{color}",
+    format: "{code}{tube_od}{color}",
     categories: [
       {
         id: "code",
@@ -29530,7 +29399,7 @@ var catalog_auxiliary_default = [
     group: "PTL/PTS\u63A8\u9396\u7CFB\u5217",
     code: "",
     name: "PTL\u7CFB\u5217 \u63A8\u9396L\u578B\u8ABF\u901F\u95A5",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}",
     categories: [
       {
         id: "spec",
@@ -29648,7 +29517,7 @@ var catalog_auxiliary_default = [
     group: "PTA\u7CFB\u5217",
     code: "PTA",
     name: "PTA\u7CFB\u5217 \u76F4\u901A\u578B",
-    format: "{code} {tube_od}{color}",
+    format: "{code}{tube_od}{color}",
     categories: [
       {
         id: "code",
@@ -29712,7 +29581,7 @@ var catalog_auxiliary_default = [
     group: "PTL\u8FF7\u4F60\u7CFB\u5217",
     code: "",
     name: "PTL\u8FF7\u4F60\u7CFB\u5217 \u63A8\u9396\u578B\u8ABF\u901F\u95A5",
-    format: "{spec} {tube_od} {thread_spec} {throttle_type}{color}{thread_type_suffix}-{type_suffix}",
+    format: "{spec}{tube_od}-{thread_spec}{throttle_type}{color}{thread_type_suffix}-{type_suffix}",
     categories: [
       {
         id: "spec",
@@ -33255,11 +33124,11 @@ var catalog_auxiliary_default = [
         name: "\u884C\u7A0B",
         options: [
           {
-            code: "3",
+            code: "03",
             description: "3mm"
           },
           {
-            code: "7",
+            code: "07",
             description: "7mm"
           },
           {
@@ -33379,7 +33248,7 @@ var catalog_auxiliary_default = [
         name: "\u884C\u7A0B",
         options: [
           {
-            code: "7",
+            code: "07",
             description: "7mm"
           },
           {

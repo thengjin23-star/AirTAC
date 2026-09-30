@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Search, Info, Lightbulb, CheckCircle2, Activity, Copy, Check, ShieldCheck, AlertTriangle, Layers, RotateCcw, ListPlus, ArrowRight, SlidersHorizontal, PencilLine, Users, Repeat, History, Zap, Sparkles } from 'lucide-react';
 import type { CrossReferenceResult, AirtacRecommendation, ConfirmedItem, CandidateSeriesSummary } from '../types';
 import { defaultCatalog, CatalogSeries } from '../data/index';
-import { generateOrderingCode } from '../lib/orderingCode';
+import { generateOrderingCode, isFreeValueCategory } from '../lib/orderingCode';
 
 export function CopyButton({ text, className = '' }: { text: string; className?: string }) {
   const [copied, setCopied] = useState(false);
@@ -88,8 +88,9 @@ function RecCard({ rec, competitorModel, competitorBrand, candidateSeries, onAdd
     return sel;
   };
   const initialSelections = useMemo(() => defaultSelectionsFor(series, !switched), [series, switched]);
+  // 需要直接輸入的類別：選到的值不在型錄選項內 (如非標準行程)，或本身就是自由數值 (無桿缸行程)
   const customFor = (s: typeof series, sel: Record<string, string>) =>
-    new Set((s?.categories || []).filter(c => !(c.options || []).some(o => o.code === sel[c.id])).map(c => c.id));
+    new Set((s?.categories || []).filter(c => isFreeValueCategory(c) || !(c.options || []).some(o => o.code === sel[c.id])).map(c => c.id));
 
   // 團隊確認/沒有給選項的推薦：下拉只會拼出預設值 (錯的訂購碼)，因此一開始用手動模式顯示原本的訂購碼
   const hasAISelections = (rec.selectedOptions || []).length > 0 && !rec.fromTeamCorrection;
@@ -511,6 +512,19 @@ export function MatchResult({ model, result, onAddToList, isConfirmed, onReanaly
                 </span>
               ))}
             </div>
+          </div>
+        )}
+
+        {result.decoded && result.decoded.facts.length > 0 && (
+          <div className="mb-4 bg-emerald-50/60 p-3 rounded-xl border border-emerald-100">
+            <h4 className="text-xs font-bold tracking-wider text-emerald-700 mb-1.5 flex items-center">
+              <ShieldCheck className="w-3.5 h-3.5 mr-1" /> 型號精確解析：{result.decoded.family}（依原廠編碼規則，確定值）
+            </h4>
+            <ul className="space-y-0.5">
+              {result.decoded.facts.map((f, i) => (
+                <li key={i} className="text-xs text-emerald-900 leading-relaxed flex items-start"><span className="text-emerald-500 mr-1.5">›</span>{f}</li>
+              ))}
+            </ul>
           </div>
         )}
 

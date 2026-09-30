@@ -5,7 +5,7 @@
   "superGroup": "電磁閥(五口二位、五口三位)",
   "group": "4V100系列",
   "name": "4V100系列 電磁閥 (五口二位、五口三位)",
-  "orderCodeFormat": "4V 1 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "4V1{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -88,7 +88,7 @@
   "superGroup": "電磁閥(五口二位、五口三位)",
   "group": "4V200系列",
   "name": "4V200系列 電磁閥 (五口二位、五口三位)",
-  "orderCodeFormat": "4V 2 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "4V2{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -163,7 +163,7 @@
   "superGroup": "電磁閥(五口二位、五口三位)",
   "group": "4V300系列",
   "name": "4V300系列 電磁閥 (五口二位、五口三位)",
-  "orderCodeFormat": "4V 3 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "4V3{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -238,7 +238,7 @@
   "superGroup": "電磁閥(五口二位、五口三位)",
   "group": "4V400系列",
   "name": "4V400系列 電磁閥 (五口二位、五口三位)",
-  "orderCodeFormat": "4V 4 {controlType} {port} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "4V4{controlType}-{port}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -309,7 +309,7 @@
   "superGroup": "電磁閥(五口二位、五口三位)",
   "group": "6SV系列",
   "name": "6SV系列 電磁閥 (五口二位、五口三位, 先導式)",
-  "orderCodeFormat": "6SV {seriesCode} {controlType} {port} {voltage} {terminal} {leadLength} {thread}",
+  "orderCodeFormat": "6SV{seriesCode}{controlType}-{port}{voltage}{terminal}{leadLength}{thread}",
   "categories": [
    {
     "id": "seriesCode",
@@ -459,9 +459,9 @@
   "id": "7SV",
   "category": "控制元件",
   "superGroup": "電磁閥(五口二位、五口三位)",
-  "group": "7SV系列",
-  "name": "7SV系列 電磁閥 (五口二位、五口三位, 先導式, 插接式接電)",
-  "orderCodeFormat": "7V {seriesCode} {controlType} {portConnType} {port} {voltage} {leadLength} {thread}",
+  "group": "7V系列",
+  "name": "7V系列 電磁閥 (7V050/7V100/7V200/7V300，五口二位/三位，插接式；對應 SMC SY3000/5000/7000/9000)",
+  "orderCodeFormat": "7V{seriesCode}{controlType}{portConnType}-{port}{voltage}{leadLength}{thread}",
   "note": "7V/7SV為同款產品在不同型錄中的標示,訂購碼結構相同",
   "categories": [
    {
@@ -605,7 +605,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V100系列",
   "name": "3V100系列 電磁閥 (三口二位)",
-  "orderCodeFormat": "3V 1 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "3V1{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -684,7 +684,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V200系列",
   "name": "3V200系列 電磁閥 (三口二位)",
-  "orderCodeFormat": "3V 2 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "3V2{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -762,7 +762,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V300系列",
   "name": "3V300系列 電磁閥 (三口二位)",
-  "orderCodeFormat": "3V 3 {controlType} {port} {initialState} {voltage} {terminal} {thread} - {pilotType}",
+  "orderCodeFormat": "3V3{controlType}-{port}{initialState}{voltage}{terminal}{thread}-{pilotType}",
   "categories": [
    {
     "id": "seriesCode",
@@ -840,7 +840,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V1系列",
   "name": "3V1系列 電磁閥 (三口二位, 直動式常閉型)",
-  "orderCodeFormat": "3V1 {port} {voltage} {terminal} {thread}",
+  "orderCodeFormat": "3V1-{port}{voltage}{terminal}{thread}",
   "categories": [
    {
     "id": "port",
@@ -889,7 +889,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V2系列",
   "name": "3V2系列 電磁閥 (三口二位, 直動式, 常閉/常開可選)",
-  "orderCodeFormat": "3V2 {port} {initialState} {voltage} {terminal} {thread}",
+  "orderCodeFormat": "3V2{port}{initialState}{voltage}{terminal}{thread}",
   "categories": [
    {
     "id": "port",
@@ -1021,7 +1021,7 @@
   "superGroup": "電磁閥(三口二位)",
   "group": "3V3系列",
   "name": "3V3系列 電磁閥 (三口二位, 直動式, 常閉/常開可選)",
-  "orderCodeFormat": "3V3 {port} {initialState} {voltage} {terminal} {thread}",
+  "orderCodeFormat": "3V3{port}{initialState}{voltage}{terminal}{thread}",
   "categories": [
    {
     "id": "port",
@@ -3372,9 +3372,9 @@
   "id": "7sv_base",
   "category": "控制元件",
   "superGroup": "電磁閥底座和配件",
-  "group": "7SV系列底座",
+  "group": "7V系列底座",
   "code": "7SV",
-  "name": "7SV系列用底座",
+  "name": "7V系列用底座",
   "categories": [
    {
     "id": "code",
@@ -5412,137 +5412,6 @@
   ],
   "note": "端子線長針對插座式，可選0.5m/2m端子線；出線式和M8出線式的出線長度為0.5m。",
   "sourceFile": "控制元件型錄 P.23"
- },
- {
-  "id": "7V",
-  "category": "控制元件",
-  "superGroup": "電磁閥(五口二位、五口三位)",
-  "group": "7V系列",
-  "code": "",
-  "name": "7V系列電磁閥",
-  "format": "7V{series}{control}{port}{voltage}{electrical}{length}{thread}",
-  "categories": [
-   {
-    "id": "series",
-    "name": "系列代號",
-    "options": [
-     {
-      "code": "2",
-      "description": "200系列"
-     }
-    ]
-   },
-   {
-    "id": "control",
-    "name": "電控方式",
-    "options": [
-     {
-      "code": "10",
-      "description": "雙位置單電控"
-     },
-     {
-      "code": "20",
-      "description": "雙位置雙電控"
-     },
-     {
-      "code": "30C",
-      "description": "三位置雙電控中位封閉型"
-     },
-     {
-      "code": "30E",
-      "description": "三位置雙電控中位排氣型"
-     },
-     {
-      "code": "30P",
-      "description": "三位置雙電控中位壓力型"
-     }
-    ]
-   },
-   {
-    "id": "port",
-    "name": "接管口徑",
-    "options": [
-     {
-      "code": "08",
-      "description": "M5, PT1/8, PT1/4, PT3/8"
-     }
-    ]
-   },
-   {
-    "id": "voltage",
-    "name": "標準電壓",
-    "options": [
-     {
-      "code": "A",
-      "description": "AC220V"
-     },
-     {
-      "code": "B",
-      "description": "DC24V"
-     },
-     {
-      "code": "C",
-      "description": "AC110V"
-     },
-     {
-      "code": "F",
-      "description": "DC12V"
-     }
-    ]
-   },
-   {
-    "id": "electrical",
-    "name": "接電方式",
-    "options": [
-     {
-      "code": "",
-      "description": "螺紋接管"
-     },
-     {
-      "code": "J",
-      "description": "快插接頭"
-     }
-    ]
-   },
-   {
-    "id": "length",
-    "name": "端子線長",
-    "options": [
-     {
-      "code": "",
-      "description": "無此代碼"
-     },
-     {
-      "code": "050",
-      "description": "0.5m"
-     },
-     {
-      "code": "200",
-      "description": "2.0m"
-     }
-    ]
-   },
-   {
-    "id": "thread",
-    "name": "牙型代碼",
-    "options": [
-     {
-      "code": "",
-      "description": "無此代碼"
-     },
-     {
-      "code": "G",
-      "description": "G牙"
-     },
-     {
-      "code": "T",
-      "description": "NPT牙"
-     }
-    ]
-   }
-  ],
-  "note": "快插接頭型電磁閥底座為無牙型",
-  "sourceFile": "控制元件型錄 P.92"
  },
  {
   "id": "3A100",

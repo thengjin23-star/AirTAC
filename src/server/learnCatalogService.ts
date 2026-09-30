@@ -56,7 +56,7 @@ Respond in JSON. All descriptive text in Traditional Chinese.`;
     }
 
     const response = await generateWithRetry({
-      model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+      model: process.env.GEMINI_MODEL || "gemini-3.1-flash-lite",
       contents: [{ role: 'user', parts }],
       config: {
         responseMimeType: "application/json",
@@ -72,7 +72,7 @@ Respond in JSON. All descriptive text in Traditional Chinese.`;
           required: ["brand", "seriesName", "pattern", "productType", "decode"]
         }
       }
-    });
+    }, { attemptTimeoutMs: 45_000, deadline: Date.now() + 55_000 });
 
     if (!response || !response.text) {
       throw new Error("No response from AI");

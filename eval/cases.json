@@ -1,0 +1,497 @@
+[
+ {
+  "input": "CDQ2B32-50DZ",
+  "brand": "SMC",
+  "series": [
+   "acq"
+  ],
+  "must": [
+   "ACQ32X50S"
+  ],
+  "why": "CQ2→ACQ；CD=附磁"
+ },
+ {
+  "input": "CQ2B40-30D",
+  "brand": "SMC",
+  "series": [
+   "acq"
+  ],
+  "must": [
+   "ACQ40X30"
+  ],
+  "mustNot": [
+   "ACQ40X30S"
+  ],
+  "why": "無 D 前綴=不附磁"
+ },
+ {
+  "input": "CDJ2B16-100",
+  "brand": "SMC",
+  "series": [
+   "pb"
+  ],
+  "must": [
+   "PB16X100S"
+  ],
+  "why": "公司表 CJ2→PB"
+ },
+ {
+  "input": "CJ2B10-50",
+  "series": [
+   "pb"
+  ],
+  "must": [
+   "PB10X50"
+  ],
+  "mustNot": [
+   "PB10X50S"
+  ]
+ },
+ {
+  "input": "CDM2B25-100",
+  "brand": "SMC",
+  "series": [
+   "mf",
+   "mbl"
+  ],
+  "must": [
+   "25X100S"
+  ],
+  "why": "公司表 CM2→MF/MFC/MAL"
+ },
+ {
+  "input": "MGPM20-50",
+  "brand": "SMC",
+  "series": [
+   "tcl"
+  ],
+  "must": [
+   "TCM20",
+   "50"
+  ],
+  "why": "MGPM(滑動軸承)→TCM"
+ },
+ {
+  "input": "MGPL16-30",
+  "series": [
+   "tcl"
+  ],
+  "must": [
+   "TCL16",
+   "30"
+  ],
+  "why": "MGPL(滾珠軸承)→TCL"
+ },
+ {
+  "input": "MXS16-50",
+  "brand": "SMC",
+  "series": [
+   "hls"
+  ],
+  "must": [
+   "HLS16X50"
+  ]
+ },
+ {
+  "input": "MXQ12-30",
+  "series": [
+   "hlq"
+  ],
+  "must": [
+   "12X30"
+  ]
+ },
+ {
+  "input": "CXSM10-20",
+  "brand": "SMC",
+  "series": [
+   "tr"
+  ],
+  "must": [
+   "TR10X20"
+  ],
+  "why": "公司表 CXS→TR"
+ },
+ {
+  "input": "MHZ2-16D",
+  "brand": "SMC",
+  "series": [
+   "hfz"
+  ],
+  "must": [
+   "HFZ16"
+  ]
+ },
+ {
+  "input": "MHC2-16D",
+  "series": [
+   "hfy"
+  ],
+  "must": [
+   "HFY16"
+  ]
+ },
+ {
+  "input": "MSQB10A",
+  "brand": "SMC",
+  "series": [
+   "hrq"
+  ],
+  "must": [
+   "HRQ10"
+  ]
+ },
+ {
+  "input": "CA2B50-100",
+  "brand": "SMC",
+  "series": [
+   "sc"
+  ],
+  "must": [
+   "SC50X100"
+  ]
+ },
+ {
+  "input": "MB1B32-100",
+  "brand": "SMC",
+  "series": [
+   "se",
+   "sai"
+  ],
+  "must": [
+   "32X100"
+  ],
+  "why": "公司表 MB1→SE；公司表註記 SE 台灣不販售、可用 SI 替代 (型錄無 SI)，SAI 亦可接受"
+ },
+ {
+  "input": "CY3B20-300",
+  "brand": "SMC",
+  "series": [
+   "rms"
+  ],
+  "must": [
+   "RMS20X300"
+  ]
+ },
+ {
+  "input": "SY5120-5LZD-01",
+  "brand": "SMC",
+  "series": [
+   "7SV"
+  ],
+  "must": [
+   "7V110",
+   "06",
+   "B"
+  ],
+  "why": "公司表 SY5*00→7V100；1/8=06；5=DC24V"
+ },
+ {
+  "input": "SY3120-5LZD-M5",
+  "series": [
+   "7SV"
+  ],
+  "must": [
+   "7V0510",
+   "M5",
+   "B"
+  ],
+  "why": "SY3*00→7V050"
+ },
+ {
+  "input": "SY7220-5LZD-02",
+  "brand": "SMC",
+  "series": [
+   "7SV"
+  ],
+  "must": [
+   "7V220",
+   "08",
+   "B"
+  ],
+  "why": "SY7*00→7V200；雙電控；1/4=08"
+ },
+ {
+  "input": "VFS2100-5FZ-02",
+  "brand": "SMC",
+  "series": [
+   "4V200"
+  ],
+  "must": [
+   "4V210",
+   "08",
+   "B"
+  ],
+  "why": "公司表 VFS2000→4V200"
+ },
+ {
+  "input": "VT307-5G-01",
+  "brand": "SMC",
+  "series": [
+   "3V2"
+  ],
+  "must": [
+   "3V2",
+   "06"
+  ],
+  "why": "公司表 VT307→3V2"
+ },
+ {
+  "input": "AW20-02BG",
+  "brand": "SMC",
+  "series": [
+   "GFR"
+  ],
+  "must": [
+   "GFR20008"
+  ]
+ },
+ {
+  "input": "AC20-02",
+  "brand": "SMC",
+  "series": [
+   "GC"
+  ],
+  "must": [
+   "GC20008"
+  ],
+  "why": "AC20(三聯)→GC；AC20A→GFC"
+ },
+ {
+  "input": "AF30-03",
+  "brand": "SMC",
+  "series": [
+   "GF"
+  ],
+  "must": [
+   "GF30010"
+  ]
+ },
+ {
+  "input": "AR20-02",
+  "series": [
+   "GR"
+  ],
+  "must": [
+   "GR20008"
+  ]
+ },
+ {
+  "input": "KQ2H06-01S",
+  "brand": "SMC",
+  "series": [
+   "PC"
+  ],
+  "must": [
+   "PC601"
+  ]
+ },
+ {
+  "input": "KQ2L08-02S",
+  "brand": "SMC",
+  "series": [
+   "PL"
+  ],
+  "must": [
+   "PL802"
+  ]
+ },
+ {
+  "input": "KQ2T10-00",
+  "series": [
+   "PE"
+  ],
+  "must": [
+   "PE10"
+  ]
+ },
+ {
+  "input": "AS2201F-01-06SA",
+  "brand": "SMC",
+  "series": [
+   "PSL"
+  ],
+  "must": [
+   "PSL601"
+  ]
+ },
+ {
+  "input": "RB1007",
+  "brand": "SMC",
+  "series": [
+   "ACA",
+   "ACJ"
+  ],
+  "must": [
+   "1007"
+  ]
+ },
+ {
+  "input": "D-M9B",
+  "brand": "SMC",
+  "series": [
+   "cms",
+   "dms",
+   "ems"
+  ]
+ },
+ {
+  "input": "MCJA-11-32-25",
+  "brand": "Mindman",
+  "series": [
+   "sda"
+  ],
+  "must": [
+   "32X25"
+  ],
+  "why": "公司表 MCJA→SDA"
+ },
+ {
+  "input": "MCMJ-11-16-50",
+  "brand": "Mindman",
+  "series": [
+   "pb"
+  ],
+  "must": [
+   "16X50"
+  ],
+  "why": "公司表 MCMJ→PB"
+ },
+ {
+  "input": "MVSC-220-4E1",
+  "brand": "Mindman",
+  "series": [
+   "4V200"
+  ],
+  "must": [
+   "4V210"
+  ],
+  "why": "公司表 MVSC-220→4V200"
+ },
+ {
+  "input": "DSNU-20-100-PPV-A",
+  "brand": "Festo",
+  "series": [
+   "mi"
+  ],
+  "must": [
+   "20X100"
+  ],
+  "why": "公司表 DSNU→MI"
+ },
+ {
+  "input": "SSD2-32-50",
+  "brand": "CKD",
+  "series": [
+   "acq"
+  ],
+  "must": [
+   "ACQ32X50"
+  ],
+  "why": "公司表 SSD2→ACQ"
+ },
+ {
+  "input": "MHY2-16D",
+  "brand": "SMC",
+  "series": [
+   "hfr"
+  ],
+  "why": "公司表 MHY2→HFR"
+ },
+ {
+  "input": "MHS3-16D",
+  "brand": "SMC",
+  "series": [
+   "hfc"
+  ],
+  "why": "公司表 MHS→HFC"
+ },
+ {
+  "input": "MXH10-20",
+  "brand": "SMC",
+  "series": [
+   "hlh"
+  ],
+  "why": "公司表 MXH→HLH"
+ },
+ {
+  "input": "CU20-30D",
+  "brand": "SMC",
+  "series": [
+   "md"
+  ],
+  "why": "公司表 CU→MD"
+ },
+ {
+  "input": "RSQB20-15DM",
+  "brand": "SMC",
+  "series": [
+   "twq",
+   "twh",
+   "twg"
+  ],
+  "why": "公司表 RS→TW 系列"
+ },
+ {
+  "input": "SYJ5120-5LZ-01",
+  "brand": "SMC",
+  "series": [
+   "3V200"
+  ],
+  "why": "公司表 SYJ500→3V200"
+ },
+ {
+  "input": "VFS3100-5FZ-03",
+  "brand": "SMC",
+  "series": [
+   "4V300"
+  ],
+  "must": [
+   "4V310",
+   "10",
+   "B"
+  ],
+  "why": "公司表 VFS3000→4V300"
+ },
+ {
+  "input": "MCQV2-11-32-100",
+  "brand": "Mindman",
+  "series": [
+   "se",
+   "sai"
+  ],
+  "why": "公司表 MCQV2→SE；公司表註記 SE 台灣不販售、可用 SI 替代 (型錄無 SI)，SAI 亦可接受"
+ },
+ {
+  "input": "MVSY-156-4E1",
+  "brand": "Mindman",
+  "series": [
+   "7SV"
+  ],
+  "why": "公司表 MVSY-156→7V100"
+ },
+ {
+  "input": "4GA219-C6-E2",
+  "brand": "CKD",
+  "series": [
+   "4V200"
+  ],
+  "why": "公司表 4GA2→4V200"
+ },
+ {
+  "input": "STG-M-20-50",
+  "brand": "CKD",
+  "series": [
+   "tcl"
+  ],
+  "why": "公司表 STG-M→TCM"
+ },
+ {
+  "input": "DPZ-10-20-P-A",
+  "brand": "Festo",
+  "series": [
+   "tn"
+  ],
+  "why": "公司表 DPZ→TN"
+ }
+]

@@ -16,6 +16,8 @@ import {
   validateRecommendation,
 } from "./crossref";
 import { matchCompanyTable, companyMatchCatalogIds, companyMatchesText } from "./companyCrossref";
+import { decodeCompetitor } from "./competitorDecoders";
+import { generateOrderingCode } from "../lib/orderingCode";
 import { get as storeGet, isConfigured as storeConfigured, normalizeModel, ensureCorrectionsMigrated, findSimilarCorrections } from "./store";
 
 // 延遲初始化，確保 dotenv (server.ts) 或平台注入的環境變數已就緒
@@ -42,8 +44,13 @@ function getAi(): GoogleGenAI {
 // 付費帳號建議把 GEMINI_MODEL 設成 gemini-2.5-flash 或 gemini-3.1-pro-preview。
 const MATCH_MODEL = () => process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 const CLASSIFIER_MODEL = () => process.env.GEMINI_CLASSIFIER_MODEL || "gemini-3.1-flash-lite";
-// 額度耗盡或模型過載時的自動降級順序 (preview 模型常態性過載，放在最後)
-const FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash", "gemini-3-flash-preview"];
+// 額度耗盡或模型過載時的自動降級順序。每個模型的免費額度是分開計算的，
+// 所以多放幾個新世代 flash 當備援，某一個過載/額度用完時整體仍能回應。
+// (gemini-2.5-flash 免費僅 20 次/日、gemini-3-flash-preview 每分鐘 5 次，放最後)
+const FALLBACK_MODELS = [
+  "gemini-3.1-flash-lite", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.8-flash",
+  "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-3-flash-preview",
+];
 
 // 型錄壓縮索引只需建一次
 const catalogIndex = buildCatalogIndex();
@@ -78,62 +85,75 @@ function mentionedSeriesIds(text?: string): string[] {
 // 簡易記憶體快取 (serverless 環境僅在同一實例存活期間有效，屬於加分而非必要)
 const cache = new Map<string, string>();
 
-// 模型冷卻表：某模型剛因額度/過載失敗時記下到期時間，冷卻期內的請求直接跳過它，
-// 避免每次都重付「先試已知失效的主模型 → 失敗 → 才降級」的時間代價。
+// 模型冷卻表：某模型剛失敗時記下到期時間，冷卻期內的請求改用其他模型，
+// 避免每次都重付「先試已知失效的模型 → 失敗 → 才降級」的時間代價。
+// 冷卻長短依失敗原因：過載 (503) 通常幾秒就恢復 → 短；每分鐘額度 → 1 分鐘；每日額度 → 30 分鐘。
 const modelCooldown = new Map<string, number>();
-const COOLDOWN_MS = 90 * 1000;
+const COOLDOWN = { overloaded: 20_000, perMinute: 60_000, perDay: 30 * 60_000, gone: 6 * 60 * 60_000 };
 const isCoolingDown = (m: string) => (modelCooldown.get(m) || 0) > Date.now();
 
+function classifyError(error: any): 'overloaded' | 'perMinute' | 'perDay' | 'gone' | 'fatal' {
+  const msg = String(error?.message || "");
+  const low = msg.toLowerCase();
+  if (error?.status === 404 || low.includes("not found") || low.includes("no longer available")) return 'gone';
+  if (error?.status === 429 || low.includes("429") || low.includes("quota") || low.includes("resource_exhausted")) {
+    // 免費方案的 429 會寫明是哪一種額度；limit: 0 代表此模型沒有免費額度
+    if (/limit:\s*0\b/.test(msg) || /PerDay/i.test(msg)) return 'perDay';
+    return 'perMinute';
+  }
+  if (error?.status === 503 || error?.status === 500 || low.includes("503") || low.includes("high demand") || low.includes("overloaded") || low.includes("unavailable")) return 'overloaded';
+  // 單次呼叫逾時 (我們主動中止) 視同過載：換下一個模型
+  if (error?.name === 'AbortError' || error?.name === 'TimeoutError' || low.includes("aborted") || low.includes("timed out")) return 'overloaded';
+  return 'fatal';
+}
+
 /**
- * 對 Gemini 的呼叫加上 503/429 重試，且在該模型額度耗盡 (429 quota)、
- * 持續過載 (503) 或不存在 (404) 時自動降級到備援模型。
- * 近期失敗過的模型 (冷卻中) 會被排到鏈尾，讓請求優先打健康的模型。
+ * 對 Gemini 的呼叫加上重試與自動降級：
+ * - 過載 (503)：同一模型短暫重試一次，仍失敗就換下一個模型
+ * - 額度 (429) / 模型不存在 (404)：直接換下一個模型
+ * 冷卻中的模型排到鏈尾 (仍保留為最終備援，以防全部冷卻)。
  */
-export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]["generateContent"]>[0]) {
+export async function generateWithRetry(
+  params: Parameters<GoogleGenAI["models"]["generateContent"]>[0],
+  opts: { deadline?: number; attemptTimeoutMs?: number } = {},
+) {
   const ai = getAi();
+  // Vercel 函式 60 秒就會被砍：每次呼叫設逾時，整體不超過 deadline。
+  // (過載時 Google 有時要等 1~3 分鐘才回 503，不設逾時使用者會乾等)
+  const deadline = opts.deadline ?? Date.now() + 55_000;
+  const attemptTimeout = opts.attemptTimeoutMs ?? 25_000;
   const primary = (params as any).model as string;
   const rawChain = [primary, ...FALLBACK_MODELS.filter(m => m !== primary)];
-  // 健康的模型排前面、冷卻中的排後面 (但仍保留為最終備援，以防全部冷卻)
   const modelChain = [...rawChain.filter(m => !isCoolingDown(m)), ...rawChain.filter(isCoolingDown)];
   let lastError: any = null;
 
   for (const model of modelChain) {
-    let retries = 2;
-    let delay = 1500;
-    while (retries > 0) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const remaining = deadline - Date.now();
+      if (remaining < 2_500) {
+        throw lastError || Object.assign(new Error("AI 回應逾時"), { status: 503 });
+      }
       try {
         // 2.5 系列 flash 預設會先「思考」，關閉可大幅縮短回應時間；
         // 我們已提供解碼表 + 型錄資料 + 事後驗證，不依賴模型長考。
-        const config = /2\.5-flash/.test(model)
+        const baseConfig = /2\.5-flash/.test(model)
           ? { ...(params as any).config, thinkingConfig: { thinkingBudget: 0 } }
           : (params as any).config;
-        return await ai.models.generateContent({ ...(params as any), model, config });
+        const config = { ...baseConfig, abortSignal: AbortSignal.timeout(Math.min(attemptTimeout, remaining - 500)) };
+        const resp = await ai.models.generateContent({ ...(params as any), model, config });
+        if (model !== primary) console.log(`Served by fallback model ${model}`);
+        return resp;
       } catch (error: any) {
         lastError = error;
-        const errStr = String(error.message || "").toLowerCase();
-        const quotaOrGone = error.status === 429 || errStr.includes("429") || errStr.includes("quota")
-          || error.status === 404 || errStr.includes("not found") || errStr.includes("no longer available");
-        const overloaded = error.status === 503 || errStr.includes("503") || errStr.includes("high demand") || errStr.includes("overloaded");
-
-        if (quotaOrGone) {
-          // 額度為 0 或模型不可用：重試同一模型沒有意義，直接換下一個並設冷卻
-          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
-          console.log(`Model ${model} unavailable (quota/404), cooling down ${COOLDOWN_MS / 1000}s, falling back...`);
-          break;
-        }
-        if (overloaded && retries > 1) {
-          console.log(`Model ${model} busy (503). Retrying in ${delay}ms...`);
-          await new Promise(resolve => setTimeout(resolve, delay));
-          delay += 3000;
-          retries--;
+        const kind = classifyError(error);
+        if (kind === 'fatal') throw error;
+        if (kind === 'overloaded' && attempt === 0) {
+          await new Promise(r => setTimeout(r, 1200));
           continue;
         }
-        if (overloaded) {
-          modelCooldown.set(model, Date.now() + COOLDOWN_MS);
-          console.log(`Model ${model} still busy, cooling down ${COOLDOWN_MS / 1000}s, falling back...`);
-          break;
-        }
-        throw error;
+        modelCooldown.set(model, Date.now() + COOLDOWN[kind]);
+        console.log(`Model ${model} ${kind}, cooling down ${COOLDOWN[kind] / 1000}s, falling back...`);
+        break;
       }
     }
   }
@@ -144,7 +164,7 @@ export async function generateWithRetry(params: Parameters<GoogleGenAI["models"]
  * 第一階段：用壓縮索引 + 知識庫讓模型挑出候選系列。
  * 回傳合法的系列 id 陣列 (已過濾不存在的 id)。
  */
-async function selectCandidateSeries(competitorModel: string, brand: string | undefined, heuristicIds: string[], hints: string, customRules?: string): Promise<{ ids: string[]; brandGuess?: string; productType?: string }> {
+async function selectCandidateSeries(competitorModel: string, brand: string | undefined, heuristicIds: string[], hints: string, customRules?: string, deadline?: number): Promise<{ ids: string[]; brandGuess?: string; productType?: string }> {
   const prompt = `You are a pneumatic components classification expert for AirTAC (亞德客).
 A user provided a competitor's model (or an assembly of models): "${competitorModel}"${brand ? ` from brand "${brand}"` : ""}.
 
@@ -182,6 +202,10 @@ Respond in JSON.`;
         required: ["competitorBrand", "productType", "candidateSeriesIds"]
       }
     }
+  }, {
+    // 第一階段只是挑候選：最多 18 秒，失敗就退回啟發式候選，把時間留給第二階段
+    deadline: Math.min(deadline ?? Infinity, Date.now() + 18_000),
+    attemptTimeoutMs: 12_000,
   });
 
   if (!response || !response.text) return { ids: [] };
@@ -221,6 +245,8 @@ function learnedRulesText(rules: LearnedRule[]): string {
 export async function crossReference(reqBody: any): Promise<CrossReferenceOutcome> {
   try {
     const { competitorModel, brand, customRules, learnedRules, forceAI } = reqBody || {};
+    // 整個分析的時間預算 (Vercel 函式上限 60 秒，留餘裕給驗證與回應)
+    const deadline = Date.now() + 52_000;
 
     if (!competitorModel) {
       return { status: 400, body: { error: "competitorModel is required" } };
@@ -316,6 +342,18 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
       if (lrText) hints = `${lrText}\n${hints}`;
     }
 
+    // 常見系列的確定性解碼 (缸徑/行程/磁石/口徑/電壓/機能由程式精確拆出，不靠 AI 讀位數)
+    const decoded = decodeCompetitor(competitorModel);
+    const decodedSeries = decoded?.target ? getSeriesDetails([decoded.target.seriesId])[0] : undefined;
+    if (decoded) {
+      const t = decoded.target;
+      const sel = t ? Object.entries(t.selections).map(([k, v]) => `${k}=${v === '' ? '(空白)' : v}`).join(', ') : '';
+      hints = `※※ 程式已依原廠編碼規則精確解析此型號 (確定值，拆解與參數必須以此為準，不得自行重新解讀)：${decoded.family}\n`
+        + decoded.facts.map(f => `- ${f}`).join('\n')
+        + (t && decodedSeries ? `\n→ AirTAC 對應 (公司對照表 + 確定參數)：seriesId「${t.seriesId}」，selectedOptions 必須包含 ${sel}；其餘參數再依規格判斷。基準訂購碼：${generateOrderingCode(decodedSeries, t.selections)}` : '')
+        + `\n\n${hints}`;
+    }
+
     // 使用者自訂規則裡明確點到的 AirTAC 系列 → 強制帶進候選 (最高優先，
     // 讓「請改用 XX 系列」這類指示真的能生效，而非被鎖在既有候選裡)
     const ruleSeriesIds = mentionedSeriesIds(customRules).filter(isValidSeriesId);
@@ -323,6 +361,7 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     // 候選組裝順序 = 使用者指定 → 團隊修正 → 公司對照表 → 相近型號對照 → 啟發式 (放最前面者最不會被 slice 掉)
     let candidateIds: string[] = [];
     for (const id of ruleSeriesIds) if (!candidateIds.includes(id)) candidateIds.push(id);
+    if (decoded?.target && !candidateIds.includes(decoded.target.seriesId)) candidateIds.push(decoded.target.seriesId);
     if (teamCorrection?.seriesId && isValidSeriesId(teamCorrection.seriesId) && !candidateIds.includes(teamCorrection.seriesId)) candidateIds.push(teamCorrection.seriesId);
     for (const id of companyIds) if (!candidateIds.includes(id)) candidateIds.push(id);
     for (const c of similarCorrections) {
@@ -338,7 +377,7 @@ export async function crossReference(reqBody: any): Promise<CrossReferenceOutcom
     // 讓使用者的指示能左右「候選系列」的挑選 (這是之前鬼打牆的主因)。
     if (candidateIds.length < 2 || customRules) {
       try {
-        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules);
+        const stage1 = await selectCandidateSeries(competitorModel, brand, candidateIds, hints, customRules, deadline);
         for (const id of stage1.ids) {
           if (!candidateIds.includes(id)) candidateIds.push(id);
         }
@@ -479,7 +518,7 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
           required: ["preAnalysis", "competitorBrand", "competitorSpecs", "airtacRecommendations", "explanation", "uncertainties"]
         }
       }
-    });
+    }, { deadline });
 
     if (!response || !response.text) {
       throw new Error("No response from AI");
@@ -487,10 +526,48 @@ Return JSON matching the schema. ALL text output MUST be accurate Traditional Ch
 
     const result = JSON.parse(response.text);
 
+    // ---------- 確定性解碼校正：同系列推薦的已知參數以程式解析為準 ----------
+    // (有自訂規則時尊重使用者，不覆寫)
+    if (decoded?.target && decodedSeries && !customRules) {
+      const t = decoded.target;
+      const recs: any[] = Array.isArray(result.airtacRecommendations) ? result.airtacRecommendations : (result.airtacRecommendations = []);
+      for (const rec of recs) {
+        if (rec.seriesId !== t.seriesId) continue;
+        const merged: Record<string, string> = {};
+        for (const o of rec.selectedOptions || []) merged[o.categoryId] = String(o.code ?? '');
+        const changed = Object.entries(t.selections).filter(([k, v]) => merged[k] !== v).map(([k]) => k);
+        Object.assign(merged, t.selections);
+        rec.selectedOptions = Object.entries(merged).map(([categoryId, code]) => ({ categoryId, code }));
+        rec.fullOrderingCode = generateOrderingCode(decodedSeries, merged);
+        if (changed.length) console.log(`Decoder corrected ${changed.join(',')} for ${competitorModel}`);
+      }
+      // 公司對照表的系列排第一；AI 完全沒選到時補上一筆由解碼產生的推薦
+      const idx = recs.findIndex(r => r.seriesId === t.seriesId);
+      if (idx > 0) recs.unshift(...recs.splice(idx, 1));
+      if (idx < 0) {
+        recs.unshift({
+          baseModel: decodedSeries.name,
+          seriesId: t.seriesId,
+          fullOrderingCode: generateOrderingCode(decodedSeries, t.selections),
+          description: decodedSeries.name,
+          matchType: '直接替換',
+          matchPercentage: 90,
+          reasoningForOrderingCode: `依公司對照表與原廠編碼規則程式解析：${decoded.facts.join('；')}`,
+          selectedOptions: Object.entries(t.selections).map(([categoryId, code]) => ({ categoryId, code })),
+          configurableOptions: [],
+        });
+      }
+    }
+    if (decoded) result.decoded = { family: decoded.family, facts: decoded.facts };
+
     // ---------- 型錄驗證：檢查每筆推薦的系列與選項代碼 ----------
     if (Array.isArray(result.airtacRecommendations)) {
       for (const rec of result.airtacRecommendations) {
         rec.validation = validateRecommendation(rec);
+        // 驗證通過時一律顯示依型錄格式重建的完整訂購碼 (與下拉配置一致，且補上 AI 省略的預設碼)
+        if (rec.validation.catalogVerified && rec.validation.serverGeneratedCode) {
+          rec.fullOrderingCode = rec.validation.serverGeneratedCode;
+        }
       }
     }
     // 附上候選系列摘要供前端顯示 (透明化 AI 的比對範圍)
